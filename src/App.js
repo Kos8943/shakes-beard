@@ -1,10 +1,12 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
+import ShakesBeardNavbar from './components/ShakesBeardNavbar'
+import { BrowserRouter as Router, Route, Link, Switch } from 'react-router-dom'
 
 function App() {
   return (
     <>
+    <ShakesBeardNavbar />
       <div>
       Hello
       </div>
