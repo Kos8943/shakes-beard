@@ -1,15 +1,21 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { useState, useEffect } from 'react'
+import MyNavbar from './components/MyNavbar'
+import MyFooter from './components/MyFooter'
+
 
 function App() {
   return (
     <>
-      <div>
-      Hello
-      </div>
+   
+      <MyNavbar />
+      <main role="main" className="flex-shrink-0">
+          
+      </main>
+      <MyFooter />
+     
+     
     </>
-  );
+  )
 }
 
-export default App;
+export default App
