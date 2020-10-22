@@ -2,6 +2,10 @@ import React, { useState, useEffect } from 'react'
 import MyNavbar from './components/MyNavbar'
 import MyFooter from './components/MyFooter'
 
+import React from 'react';
+import './App.css';
+import ShakesBeardNavbar from './components/ShakesBeardNavbar'
+import { BrowserRouter as Router, Route, Link, Switch } from 'react-router-dom'
 
 function App() {
   return (
@@ -14,6 +18,10 @@ function App() {
       <MyFooter />
      
      
+    <ShakesBeardNavbar />
+      <div>
+      Hello
+      </div>
     </>
   )
 }
