@@ -8,7 +8,7 @@ function Cards(props) {
     <>
       {/*  style="width: 18rem;" */}
       <div className="card">
-        <img src="./card01" className="card-img-top" alt="..." />
+        <img src={require('./card01.jpg')} className="card-img-top" alt="..." />
         <div className="card-body">
           <h5 className="card-title">Sculptor Barber</h5>
           <p className="card-text">提供男士理髮、染髮、護髮等服務</p>

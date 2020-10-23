@@ -1,5 +1,5 @@
 import React from 'react'
-import { Navbar, Nav, NavDropdown } from 'react-bootstrap'
+import { Nav } from 'react-bootstrap'
 import '../../styles/custom.scss'
 
 function CatesAside(props) {
@@ -17,6 +17,7 @@ function CatesAside(props) {
       <aside>
         {/*  defaultActiveKey="/home"  */}
         <Nav className="flex-column">
+          <h3>分類</h3>
           <Nav.Link href="#">特價優惠</Nav.Link>
           <Nav.Link eventKey="link-1">服務分類</Nav.Link>
           <Nav.Link eventKey="link-2">活動分類</Nav.Link>
