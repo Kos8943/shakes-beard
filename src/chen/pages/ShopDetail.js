@@ -5,8 +5,8 @@ import Breadcrumb from '../components/Breadcrumb'
 import CatesAside from '../components/CatesAside'
 import Search from '../components/Search'
 
-function ShopList(props) {
-  console.log('Shoplist', props)
+function ShopDetail(props) {
+  console.log('ShopDetail', props)
   return (
     <>
       <Breadcrumb />
@@ -31,4 +31,4 @@ function ShopList(props) {
   )
 }
 
-export default ShopList
+export default ShopDetail

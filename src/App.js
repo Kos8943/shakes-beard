@@ -9,6 +9,9 @@ import { BrowserRouter as Router, Route, Link, Switch } from 'react-router-dom'
 import HomePage from './chad/HomePage'
 import Project from './hsuan/Project'
 import Cart from './kos/pages/Cart'
+import ShopList from './chen/pages/ShopList'
+import ShopDetail from './chen/pages/ShopDetail'
+import NotFoundPage from './chen/pages/NotFoundPage'
 
 function App() {
   return (
@@ -28,6 +31,12 @@ function App() {
             </Route>
             <Route path="/cart">
               <Cart />
+            </Route>
+            <Route path="/shoplist">
+              <ShopList />
+            </Route>
+            <Route path="/shopdetail">
+              <ShopDetail />
             </Route>
           </div>
         </Switch>
