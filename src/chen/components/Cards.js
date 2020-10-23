@@ -1,6 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
-import '../styles/custom.css'
+import '../../styles/custom.scss'
 
 function Cards(props) {
   console.log('Cards', props)

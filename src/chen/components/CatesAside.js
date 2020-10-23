@@ -1,6 +1,6 @@
 import React from 'react'
 import { Navbar, Nav, NavDropdown } from 'react-bootstrap'
-import '../styles/custom.css'
+import '../../styles/custom.scss'
 
 function CatesAside(props) {
   console.log('CatesAside', props)

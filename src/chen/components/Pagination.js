@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react'
 // import '../styles/pagination.css'
-import '../styles/custom.css'
+import '../../styles/custom.scss'
 import { Link } from 'react-router-dom'
 // import { FaCaretRight } from 'react-icons/fa'
 //  className Question extends React.Component {
