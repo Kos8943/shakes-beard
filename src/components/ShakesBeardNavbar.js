@@ -1,4 +1,5 @@
 import React from 'react'
+import Cart from '../icon/shopping-cart.svg'
 
 import {
   Container,
@@ -28,7 +29,7 @@ function ShakesBeardNavbar() {
       <Nav.Link href="#link" className="navBarFontSize">我的帳戶</Nav.Link>
       <div className="loginCartArea">
       <button className="loginBtn">登入</button>
-      <button><img src="../icon/cart.png"/></button>
+      <button className="cartBtn"><img src={Cart} style={{width:"30px", height:'30px'}}/></button>
       </div>
       
     </Nav>

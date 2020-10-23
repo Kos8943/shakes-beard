@@ -2,10 +2,23 @@
 // $secondary:     yellow;
 
 // Import Bootstrap and its default variables
-@import '~bootstrap/scss/bootstrap.scss';
+@import "~bootstrap/scss/bootstrap.scss";
 
 // 其它要導入覆蓋掉原本的預設bootstrap樣式要放在這下面
 
+main {
+  min-height: 90vh;
+}
+
+.footer {
+  background-color: #595452;
+  height: 200px;
+  width: 100%;
+  color:#f8f8f8;
+  font-size: 16px;
+  
+ 
+}
 .navBarcolor {
     background-color: #595452;
     padding-left: 17.5%;
@@ -32,5 +45,21 @@
 
 .loginCartArea {
     margin-top: -10px;
+}
+
+.svg-area img{
+    height: 3%;
+    width: 3%;
+    margin-right: 10px;
+   
+
+}
+.svg-area{
+    width: 100%;
+
+}
+.cartBtn {
+    background-color: #595452;
+    border: 0;
 }
 
