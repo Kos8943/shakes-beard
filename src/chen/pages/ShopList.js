@@ -1,12 +1,12 @@
-import React, { useState, useEffect } from 'react'
-import { Link, Switch, useParams, Redirect } from 'react-router-dom'
+import React from 'react'
 import Breadcrumb from '../components/Breadcrumb'
 import Pagination from '../components/Pagination'
 import CatesAside from '../components/CatesAside'
 import Cards from '../components/Cards'
 import Sorts from '../components/Sorts'
 import Search from '../components/Search'
-// import Carousel from '../components/Carousel'
+import Cates from '../components/Cates'
+import Banner from '../components/Banner'
 
 function ShopList(props) {
   console.log('Shoplist', props)
@@ -19,33 +19,39 @@ function ShopList(props) {
         <div className="row">
           <div className="col-3">
             <Search />
-          </div>
-          <div className="col-9"></div>
-        </div>
-        <div className="row">
-          <div className="col-3"></div>
-          <div className="col-9">
-            <Sorts />
-          </div>
-        </div>
-        <div className="row">
-          <div className="col-3">
             <CatesAside />
           </div>
-          <div className="col-9 cardGroup">
-            <Cards />
-            <Cards />
-            <Cards />
+          <div className="col-9">
+            <Banner />
+            <Cates />
+            <Sorts />
+            <div className="cardGroup">
+              <Cards />
+              <Cards />
+              <Cards />
+            </div>
+            <div className="cardGroup">
+              <Cards />
+              <Cards />
+              <Cards />
+            </div>
           </div>
         </div>
-        <div className="row">
+        {/* <div className="row">
+          <div className="col-3"></div>
+          <div className="col-9">
+            <Cates />
+            <Sorts />
+          </div>
+        </div> */}
+        {/* <div className="row">
           <div className="col-3"></div>
           <div className="col-9 cardGroup">
             <Cards />
             <Cards />
             <Cards />
           </div>
-        </div>
+        </div> */}
         <Pagination />
       </div>
     </>

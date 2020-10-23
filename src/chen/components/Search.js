@@ -12,7 +12,7 @@ function Search(props) {
   return (
     <>
       <Form>
-        <Form.Group controlId="searcyForm">
+        <Form.Group controlId="searchForm">
           <Form.Control type="text" placeholder="..." />
         </Form.Group>
       </Form>
