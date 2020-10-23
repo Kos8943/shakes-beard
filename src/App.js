@@ -4,29 +4,29 @@ import './App.css';
 import ShakesBeardNavbar from './components/ShakesBeardNavbar'
 import { BrowserRouter as Router, Route, Link, Switch } from 'react-router-dom'
 import Project from './hsuan/Project'
+import Cart from './kos/pages/Cart'
+
 function App() {
   return (
-    <>
-<<<<<<< HEAD
     <Router>
-    <ShakesBeardNavbar />
-       <Switch>
+    <>
+   <ShakesBeardNavbar />
+      <main role="main">
+        <Switch>
+          <div className="footerFix">
+            {/* 網頁內容跟Router放在這 */}
             <Route exact path="/Project">
               <Project />
             </Route>
-          </Switch>
-         </Router>
-      
-=======
-   
-   <ShakesBeardNavbar />
-      <main role="main">
-      <h1>123</h1>
+            <Route path="/cart">
+              <Cart />
+            </Route>
+          </div>
+        </Switch>
       <MyFooter />
       </main>
-     
->>>>>>> 5bbc006f83f764a26525d76e533d057d378701b2
     </>
+    </Router>
   )
 }
 
