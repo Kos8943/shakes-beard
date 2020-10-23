@@ -1,6 +1,7 @@
 import React from "react";
 import "./Project.css";
 import search from './icon/search.svg';
+import original from './icon/original.jpg';
 import {
   Container,
   Row,
@@ -29,11 +30,14 @@ function Project() {
           <div className="searchicon">
            <img src={search}></img></div>
            </div>
+           <div className="original">
+           <img src={original}></img></div>
         
         <div class="col-md-3">
         <div className="sort">
           <h3>分類</h3>
         </div></div>
+        
         
 
 
