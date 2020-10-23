@@ -3,6 +3,8 @@ import CartCss from '../styles/CartCss.scss'
 
 function Cart() { 
     const abc = window.screen.width
+    const itemStyle = ["經典黑", "123", "123"]
+    
 
     if(abc < 376) {
         return (
@@ -34,7 +36,12 @@ function Cart() {
                 </div>
                 <div className="cartItem d-flex">
                     <img src=""></img>
-                    <div>123</div>
+                    <div className="itemName my-auto">Ritmo di vita 陀飛輪袖扣</div>
+                    <select>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                    </select>
 
                 </div>
             </>
