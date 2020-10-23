@@ -5,9 +5,7 @@
 @import "~bootstrap/scss/bootstrap.scss";
 
 // 其它要導入覆蓋掉原本的預設bootstrap樣式要放在這下面
-body{
-    font-family: 'PingFang';
-}
+
 main {
   min-height: 90vh;
 }
@@ -18,7 +16,6 @@ main {
   width: 100%;
   color:#f8f8f8;
   font-size: 16px;
- 
 }
 
 .footerFix {
@@ -71,3 +68,59 @@ main {
     border: 0;
 }
 
+main > .container {
+    padding: 60px 10px 0;
+    /* background-color: #fffffd; */
+  }
+  
+  .page-link {
+    background-color: #44494a;
+    color: #ffffff;
+    font-family: Adobe clean;
+    margin: 0.5px;
+    border: none;
+  }
+  
+  .page-item.active .page-link {
+    background-color: #a69981;
+  }
+  
+  .pagination {
+    margin: 12px;
+  }
+  
+  .card {
+    width: 20rem;
+    min-height: 15rem;
+    margin: 5px;
+  }
+  
+  .cardGroup {
+    display: inline-flex;
+  }
+  
+  .card-body .btn {
+    background-color: #2d3b72;
+    border: none;
+    margin: 6px 6px 0 0;
+  }
+  
+  .flex-column a {
+    color: #232d2f;
+  }
+  
+  .flex-column a.active {
+    color: #007bff;
+  }
+  
+  .sorts {
+    /* border: 1px solid  #2D3B72; */
+    border: 1px solid #a69981;
+    background-color: #fffffd;
+  }
+  
+  #searcyForm{
+    width: 70%;
+    border: 1px solid #a69981;
+  }
+  
