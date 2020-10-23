@@ -1,4 +1,5 @@
 import React from 'react'
+import '../chad/styles/custom.scss';
 import bannerimg1 from './imgs/輪播圖1.jpg'
 import bannerimg2 from './imgs/輪播圖2.jpg'
 import bannerimg3 from './imgs/輪播圖3.jpg'
@@ -51,12 +52,18 @@ function HomePage() {
     </Carousel>
     
 {/* 品牌故事 */}     
-
-        <h2>品牌故事</h2>
-        <p>Shakes Beard 的設計發想有著濃厚的紳士風格，以男仕用品為Logo及設計，
-並以「莎士比亞」為諧音，呈現出別具風格的活潑樣貌。
-Shakes Beard 發展出一種專屬北德貴族品味的學院風，代表著注重品質的堅持，
-又融合了英國的優雅經典，讓時尚商品能夠成為永恆的精品。</p>
+        <div className="story-area w-100 h-100">
+         <h2 className="story-title">品牌故事</h2>
+            <div className="story-text-area w-50  d-flex justify-content-center">
+                <p className="story-text">
+                    Shakes Beard 的設計發想有著濃厚的紳士風格，以男仕用品為Logo及設計，<br/>
+                    並以「莎士比亞」為諧音，呈現出別具風格的活潑樣貌。<br/>
+                   Shakes Beard 發展出一種北德貴族品味的學院風，代表著注重品質的堅持，<br/>
+                    又融合了英國的優雅經典，讓時尚商品能夠成為永恆的精品。
+                </p>
+            </div>
+        </div>
+        
       </>
     )
   }
