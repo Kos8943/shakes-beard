@@ -1,8 +1,11 @@
 import React, { useState, useEffect } from 'react'
-import MyFooter from './components/MyFooter'
 import './App.css';
 import ShakesBeardNavbar from './components/ShakesBeardNavbar'
+import MyFooter from './components/MyFooter'
 import { BrowserRouter as Router, Route, Link, Switch } from 'react-router-dom'
+
+//以下import個人頁面
+import HomePage from './chad/HomePage'
 
 function App() {
   return (
@@ -10,7 +13,7 @@ function App() {
    
    <ShakesBeardNavbar />
       <main role="main">
-      <h1>123</h1>
+      <HomePage />
       <MyFooter />
       </main>
      
