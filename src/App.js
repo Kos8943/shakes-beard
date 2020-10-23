@@ -3,18 +3,26 @@ import MyFooter from './components/MyFooter'
 import './App.css';
 import ShakesBeardNavbar from './components/ShakesBeardNavbar'
 import { BrowserRouter as Router, Route, Link, Switch } from 'react-router-dom'
+import Cart from './kos/pages/Cart'
 
 function App() {
   return (
+    <Router>
     <>
-   
    <ShakesBeardNavbar />
       <main role="main">
-      <h1>123</h1>
+        <Switch>
+          <div className="footerFix">
+            {/* 網頁內容跟Router放在這 */}
+            <Route path="/cart">
+              <Cart />
+            </Route>
+          </div>
+        </Switch>
       <MyFooter />
       </main>
-     
     </>
+    </Router>
   )
 }
 
