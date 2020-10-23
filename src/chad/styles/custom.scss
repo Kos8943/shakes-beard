@@ -1,3 +1,4 @@
+//故事
 .story-area{
     margin: 15px auto;
 }
@@ -12,7 +13,51 @@
  .story-text{
      min-width: 82%;
      font-size:1.4rem ;
-    //  word-break:normal;
+     white-space:pre-wrap;
      margin-bottom: 0;
     
  }
+
+ //禮物
+
+ .gift-area{
+     padding-left: 17.5%;
+     padding-right: 17.5%;
+     position: relative;
+ }
+
+ .gift-text-area{
+     position: absolute;
+     right:22%;
+     bottom: 30%;
+     background-color: hsla(228, 43%, 31%, 0.70);
+     border-radius: 4px;
+     width: 20vw;
+     height: 20vh;
+     color:#F8F8F8;
+     text-align: center;
+ }
+
+ .gift-text{
+    word-break: keep-all;
+    font-size: 1.1rem;
+ }
+
+ .giftBtn {
+    display: inline-block;
+    padding: 12px 40px;
+    border-radius: 4px;
+    border:0px ;
+    background:hsla(228, 43%, 31%, 0.70);
+    font: 20px PingFang;
+    color: #ffffff;
+    position: absolute;
+    right:28%;
+    bottom: 10%;
+
+    
+}
+.giftBtn:hover{  
+    background: hsla(228, 43%, 31%, 1.0);
+   
+}

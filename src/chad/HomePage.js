@@ -3,7 +3,8 @@ import '../chad/styles/custom.scss';
 import bannerimg1 from './imgs/輪播圖1.jpg'
 import bannerimg2 from './imgs/輪播圖2.jpg'
 import bannerimg3 from './imgs/輪播圖3.jpg'
-import {Carousel} from 'react-bootstrap'
+import {Button, Carousel} from 'react-bootstrap'
+import giftimg from './imgs/禮物盒.jpg'
 
 function HomePage() {
     return (
@@ -64,8 +65,29 @@ function HomePage() {
             </div>
         </div>
         
+        
+{/* 禮物盒 */}
+
+            <div className="gift-area">
+                <img
+                    className="gift-img w-100 h-100"
+                    src={giftimg}                
+                />
+                <div className="gift-text-area">
+
+                <h2 className="gift-title py-3">訂製專屬禮盒</h2>
+                <p className="gift-text">您可以在網頁上設計專屬的禮物盒，即時預覽您的設計，達成最佳的個性化送禮服務。</p>
+                
+                </div>
+                <button class="giftBtn">開始製作</button>
+            </div>
+
+
+
+
       </>
     )
   }
-  
+
+
   export default HomePage
