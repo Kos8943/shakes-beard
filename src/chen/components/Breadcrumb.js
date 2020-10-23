@@ -16,7 +16,7 @@ function Breadcrumb(props) {
     case '/shopdetail':
       path = '商家頁面'
       break
-    case '/appointment':
+    case '/reservation':
       path = '預約服務'
       break
     case '/map':
@@ -32,6 +32,9 @@ function Breadcrumb(props) {
         <ol className="breadcrumb">
           <li className="breadcrumb-item">
             <Link to="/">首頁</Link>
+          </li>
+          <li className="breadcrumb-item">
+            <Link to="#">商家預約</Link>
           </li>
           <li className="breadcrumb-item active" aria-current="page">
             {path}
