@@ -1,0 +1,19 @@
+.form-group{
+  margin-top: 80px;
+  width: 20vw;
+  padding-left: 10%;
+  
+}
+.sort{
+  padding-left: 140px;
+  font-size:small;
+  margin-top: 10px;
+}
+.menu{
+  width: 20vw;
+}
+
+#product-menu{
+  padding-left: 20%;
+  margin-bottom: auto;
+}
