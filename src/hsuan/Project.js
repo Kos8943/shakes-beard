@@ -18,8 +18,8 @@ import { NavLink } from "react-router-dom";
 function Project() {
   return (
     <>
-      <Container>
-        <div className="form-group">
+     <Row>
+    <Col md={4}><div className="form-group">
           <input
             type="email"
             className="form-control"
@@ -29,7 +29,11 @@ function Project() {
           ></input>
           <div className="searchicon">
            <img src={search}></img></div>
-           </div>
+           </div></Col>
+    <Col md={{ span: 4, offset: 4 }}>{`md={{ span: 4, offset: 4 }}`}</Col>
+  </Row>
+      <Container>
+        
            <div className="original">
            <img src={original}></img></div>
         
