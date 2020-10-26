@@ -12,9 +12,11 @@ main {
 
 .footer {
   background-color: #595452;
-  height: 200px;
+  height: 12.5rem;
   width: 100%;
   color:#f8f8f8;
+  font-size: 1rem;
+ 
   font-size: 16px;
 }
 
@@ -55,7 +57,7 @@ main {
 .svg-area img{
     height: 3%;
     width: 3%;
-    margin-right: 10px;
+    margin-right: 0.625rem;
    
 
 }
@@ -124,3 +126,11 @@ main > .container {
     border: 1px solid #a69981;
   }
   
+  .cates-item a {
+    color: #6c757d;
+  }
+  
+  .cates {
+    background-color: #fffffd;
+    width: 50%;
+  }

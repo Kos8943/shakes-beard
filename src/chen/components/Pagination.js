@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react'
+import React from 'react'
 // import '../styles/pagination.css'
 import '../../styles/custom.scss'
 import { Link } from 'react-router-dom'
@@ -18,8 +18,8 @@ function Pagination(props) {
           <li className="page-item">
             <Link
               className="page-link"
-              href="#"
-              tabindex="-1"
+              to="#"
+              tabIndex="-1"
               aria-disabled="true"
             >
               Previous
@@ -27,33 +27,33 @@ function Pagination(props) {
           </li>
           {/* for、click-active-disabled */}
           <li className="page-item">
-            <Link className="page-link" href="#">
+            <Link className="page-link" to="#">
               1
             </Link>
           </li>
 
           <li className="page-item active">
-            <Link className="page-link" href="#">
+            <Link className="page-link" to="#">
               2
             </Link>
           </li>
           <li className="page-item">
-            <Link className="page-link" href="#">
+            <Link className="page-link" to="#">
               3
             </Link>
           </li>
           <li className="page-item">
-            <Link className="page-link" href="#">
+            <Link className="page-link" to="#">
               4
             </Link>
           </li>
           <li className="page-item">
-            <Link className="page-link" href="#">
+            <Link className="page-link" to="#">
               5
             </Link>
           </li>
           <li className="page-item">
-            <Link className="page-link" href="#">
+            <Link className="page-link" to="#">
               Next
             </Link>
           </li>

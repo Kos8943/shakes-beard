@@ -12,6 +12,7 @@ import Cart from './kos/pages/Cart'
 import ShopList from './chen/pages/ShopList'
 import ShopDetail from './chen/pages/ShopDetail'
 import NotFoundPage from './chen/pages/NotFoundPage'
+import GiftBox from './zihyu/GiftBox'
 
 function App() {
   return (
@@ -37,6 +38,9 @@ function App() {
             </Route>
             <Route path="/shopdetail">
               <ShopDetail />
+            </Route>
+            <Route path="/giftBox">
+              <GiftBox />
             </Route>
           </div>
         </Switch>
