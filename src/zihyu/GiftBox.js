@@ -8,9 +8,9 @@ class Game extends React.Component
     const MyString = 'Hello';
     
     return (
-      <div className="game">
-        <div className="game-board">
-        <div className="status"> {MyString} <br/></div>
+      <div className="contain">
+        <div className="background">
+          <div className="status"> {MyString} <br/></div>
         </div>
       </div>
     );
