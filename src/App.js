@@ -13,6 +13,7 @@ import ShopList from './chen/pages/ShopList'
 import ShopDetail from './chen/pages/ShopDetail'
 import NotFoundPage from './chen/pages/NotFoundPage'
 import GiftBox from './zihyu/GiftBox'
+import LognIn from './yen/LognIn'
 
 function App() {
   return (
@@ -41,6 +42,9 @@ function App() {
             </Route>
             <Route path="/giftBox">
               <GiftBox />
+            </Route>
+            <Route path="/LognIn">
+              <LognIn />
             </Route>
           </div>
         </Switch>
