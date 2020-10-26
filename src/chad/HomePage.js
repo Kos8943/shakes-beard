@@ -8,10 +8,18 @@ import giftimg from './imgs/禮物盒.jpg'
 import hot1 from './imgs/hot/hot1.jpg'
 import hot2 from './imgs/hot/hot2.jpeg'
 import hot3 from './imgs/hot/hot3.jpg'
+import heromovie from './hero/heromovie.mp4'
 
 function HomePage() {
     return (
       <>
+ {/* Hero Page*/}     
+                <video  loop="true" autoplay="autoplay"  muted="true" src={heromovie} className="heropage"></video>
+                <div className="hero-text-area">
+                    <h1 className="hero-text">WELCOME TO<br/>SHAKES BEARD</h1>
+                </div>
+          
+
 {/* 輪播牆 */}
 
     <Carousel>
