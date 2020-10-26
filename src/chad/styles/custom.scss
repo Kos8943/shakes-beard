@@ -15,7 +15,7 @@
      font-size:1.4rem ;
      white-space:pre-wrap;
      margin-bottom: 0;
-    
+    line-height: 30px;
  }
 
  //禮物
@@ -32,15 +32,17 @@
      bottom: 30%;
      background-color: hsla(228, 43%, 31%, 0.70);
      border-radius: 4px;
-     width: 20vw;
-     height: 20vh;
+     width: 20%;
+     height: 30%;
      color:#F8F8F8;
      text-align: center;
+     line-height: 30px;
  }
 
  .gift-text{
     word-break: keep-all;
     font-size: 1.1rem;
+    text-overflow: clip;
  }
 
  .giftBtn {
@@ -60,4 +62,30 @@
 .giftBtn:hover{  
     background: hsla(228, 43%, 31%, 1.0);
    
+}
+
+//熱門
+.hot-title, .hot-text{
+    text-align: center;
+    
+}
+.hot-text{
+    word-break: keep-all;
+    font-size: 1.4rem;
+    line-height: 30px;
+    width: 30%;
+}
+#cardborder{
+    border-style:none;
+}
+
+#cardbody{
+    margin-left: 25%;
+}
+#price{
+    margin-left: 15%;
+}
+#buy{
+    margin-left: 10%;
+    border-radius: 4px;
 }
