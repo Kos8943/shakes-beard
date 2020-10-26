@@ -9,9 +9,10 @@ class Game extends React.Component
     
     return (
       <div className="contain">
-        <div className="background">
-          <div className="status"> {MyString} <br/></div>
-        </div>
+
+        <div className="background"></div>
+        <div className="background2"></div>
+        <div className="status"> {MyString} <br/></div>
       </div>
     );
   }

@@ -1,6 +1,16 @@
 .background {
-  background-image: url("../image/backgroung.jpg");
-  width: auto;
+  background-image: url("../image/background.jpg");
+  width: 1200px;
   height: 713.17px;
-  background-attachment: scroll;
+  z-index: 1;
+  position: absolute;
+}
+
+.background2 {
+  background-color: white;
+  opacity: 0.3;
+  width: 1200px;
+  height: 713.17px;
+  z-index: 2;
+  position: absolute;
 }
