@@ -8,9 +8,7 @@ import InfoSection from '../components/InfoSection'
 import Description from '../components/Description'
 import Recommend from '../components/Recommend'
 
-import { Tabs,Tab } from 'react-bootstrap'
-
-function ShopList(props) {
+function ShopDetail(props) {
   console.log('ShopDetail', props)
   return (
     <>
@@ -47,4 +45,4 @@ function ShopList(props) {
   )
 }
 
-export default ShopList
+export default ShopDetail
