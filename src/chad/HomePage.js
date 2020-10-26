@@ -3,8 +3,11 @@ import '../chad/styles/custom.scss';
 import bannerimg1 from './imgs/輪播圖1.jpg'
 import bannerimg2 from './imgs/輪播圖2.jpg'
 import bannerimg3 from './imgs/輪播圖3.jpg'
-import {Button, Carousel} from 'react-bootstrap'
+import {Button, Carousel, Card} from 'react-bootstrap'
 import giftimg from './imgs/禮物盒.jpg'
+import hot1 from './imgs/hot/hot1.jpg'
+import hot2 from './imgs/hot/hot2.jpeg'
+import hot3 from './imgs/hot/hot3.jpg'
 
 function HomePage() {
     return (
@@ -83,6 +86,49 @@ function HomePage() {
             </div>
 
 
+{/* 熱門商品*/}
+
+            <div className="hot-area w-100 h-100 ">
+               
+                <div className="hot-text-area">
+                <h2 className="hot-title py-3">熱門商品</h2>
+                        <p className="hot-text mx-auto">
+                                精湛工藝呈現出迷人魅力。繁複的製作工序沒有令我們對工藝的要求卻步；反令我們力臻極佳品質。
+                        </p>
+                </div>
+                <div className="hot-card-area d-flex justify-content-center">
+                                    <Card id="cardborder" style={{ width: '20rem' }}>
+                    <Card.Img variant="top" src={hot1} />
+                    <Card.Body id="cardbody">
+                        <Card.Title>機械質感袖扣</Card.Title>
+                        <Card.Text id="price">
+                        NT$1200
+                        </Card.Text>
+                        <Button variant="primary" id="buy">立即購買</Button>
+                    </Card.Body>
+                    </Card>
+                    <Card id="cardborder" style={{ width: '20rem' }}>
+                    <Card.Img variant="top" src={hot2} />
+                    <Card.Body id="cardbody">
+                        <Card.Title>質男嚴選毛刷</Card.Title>
+                        <Card.Text id="price">
+                        NT$1200
+                        </Card.Text>
+                        <Button variant="primary" id="buy">立即購買</Button>
+                    </Card.Body>
+                    </Card>
+                    <Card id="cardborder" style={{ width: '20rem' }}>
+                    <Card.Img variant="top" src={hot3} />
+                    <Card.Body id="cardbody">
+                        <Card.Title>純銀刮鬍刀架</Card.Title>
+                        <Card.Text id="price">
+                        NT$1200
+                        </Card.Text>
+                        <Button variant="primary" id="buy">立即購買</Button>
+                    </Card.Body>
+                    </Card>
+                    </div>
+             </div>
 
 
       </>
