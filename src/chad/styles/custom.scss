@@ -1,6 +1,26 @@
+//Hero page
+.heropage{
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+.hero-text-area{
+    position: absolute;
+    width: 30%;
+    top:50%;
+    left:37%;
+}
+.hero-text{
+    color:white;
+    letter-spacing: .5rem;
+    line-height: 6.5rem;
+}
+
+
 //故事
 .story-area{
     margin: 15px auto;
+    
 }
 .story-title{
    text-align: center;
@@ -54,7 +74,7 @@
     font: 20px PingFang;
     color: #ffffff;
     position: absolute;
-    right:28%;
+    right:26.5%;
     bottom: 10%;
 
     
