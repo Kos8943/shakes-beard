@@ -1,7 +1,7 @@
 .contain {
   min-height: 73.6vh;
   background-image: url("../image/background.jpg");
-  background-size: Cover;
+  background-size: cover;
 }
 
 .background_white {
@@ -100,4 +100,3 @@
   display: flex;
   justify-content: center;
 }
-

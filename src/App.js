@@ -28,6 +28,9 @@ function App() {
         <HomePage />
         </Route>
        
+        <Route path="/giftBox">
+              <GiftBox />
+            </Route>
         
         <Route path="/lognin">
               <LognIn />
@@ -46,9 +49,7 @@ function App() {
             <Route path="/shopdetail">
               <ShopDetail />
             </Route>
-            <Route path="/giftBox">
-              <GiftBox />
-            </Route>
+
             
            
           </div>
