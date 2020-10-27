@@ -14,6 +14,7 @@ import ShopDetail from './chen/pages/ShopDetail'
 import NotFoundPage from './chen/pages/NotFoundPage'
 import GiftBox from './zihyu/GiftBox'
 import LognIn from './yen/LognIn'
+import Payment from './kos/pages/Payment'
 
 function App() {
   return (
@@ -26,6 +27,11 @@ function App() {
         <Route exact path="/">
         <HomePage />
         </Route>
+       
+        
+        <Route path="/lognin">
+              <LognIn />
+            </Route>
           <div className="footerFix">
             {/* 網頁內容跟Router放在這 */}
             <Route exact path="/Project">
@@ -43,9 +49,8 @@ function App() {
             <Route path="/giftBox">
               <GiftBox />
             </Route>
-            <Route path="/LognIn">
-              <LognIn />
-            </Route>
+            
+           
           </div>
         </Switch>
       <MyFooter />
