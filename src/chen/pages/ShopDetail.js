@@ -4,6 +4,9 @@ import Breadcrumb from '../components/Breadcrumb'
 // import Pagination from '../components/Pagination'
 import CatesAside from '../components/CatesAside'
 import Search from '../components/Search'
+import InfoSection from '../components/InfoSection'
+import Description from '../components/Description'
+import Recommend from '../components/Recommend'
 
 function ShopDetail(props) {
   console.log('ShopDetail', props)
@@ -23,9 +26,20 @@ function ShopDetail(props) {
           <div className="col-3">
             <CatesAside />
           </div>
-          <div className="col-9 cardGroup">{/* 詳細內容 */}</div>
+          {/* cardGroup */}
+          <div className="col-9 cardGroup">
+            <InfoSection/>
+          </div>
         </div>
-        {/* <Pagination /> */}
+        <div className="row">
+          <div className="col-3"></div>
+          <div className="col-9">
+              {/* <Services/> */}
+              <Description/>
+              <Description/>
+              <Recommend/>
+          </div>
+        </div>
       </div>
     </>
   )
