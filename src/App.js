@@ -11,6 +11,7 @@ import Project from './hsuan/Project'
 import Cart from './kos/pages/Cart'
 import ShopList from './chen/pages/ShopList'
 import ShopDetail from './chen/pages/ShopDetail'
+import Reservation from './chen/pages/Reservation'
 import NotFoundPage from './chen/pages/NotFoundPage'
 import GiftBox from './zihyu/GiftBox'
 import LognIn from './yen/LognIn'
@@ -49,8 +50,9 @@ function App() {
             <Route path="/shopdetail">
               <ShopDetail />
             </Route>
-
-            
+            <Route path="/reservation">
+              <Reservation />
+            </Route>
            
           </div>
         </Switch>
