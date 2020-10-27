@@ -19,8 +19,12 @@ function Project() {
   return (
     <>
      <Row>
-    <Col md={4}><div className="form-group">
-          <input
+   
+  </Row>
+      <Container>
+      <Row>
+    <Col><div className="form-group">
+     <input
             type="email"
             className="form-control"
             id="exampleInputEmail1"
@@ -28,25 +32,19 @@ function Project() {
             placeholder="搜尋商品"
           ></input>
           <div className="searchicon">
-           <img src={search}></img></div>
-           </div></Col>
-    <Col md={{ span: 4, offset: 4 }}>{`md={{ span: 4, offset: 4 }}`}</Col>
-  </Row>
-      <Container>
-        
-           <div className="original">
-           <img src={original}></img></div>
-        
-        <div class="col-md-3">
+           <img src={search}></img></div></div>
+           <div class="col-md-3">
         <div className="sort">
           <h3>分類</h3>
-        </div></div>
-        
-        
-
-
-    
-      </Container>
+        </div></div></Col>
+    <Col></Col>
+           <Col xs={6} md={4}>
+           <div className="original">
+           <img src={original}></img></div>
+    </Col>
+  </Row>
+           
+    </Container>
       <div class="container ui-state-disabled">
         <div class="col-md-3">
           <ul id="product-menu">
