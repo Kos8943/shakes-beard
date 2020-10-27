@@ -156,31 +156,29 @@ function HomePage() {
 
 {/* 地圖 */}
 
-        <div className="map-area w-100 d-flex justify-content-center">
-        <div className="map-row row w-100">
-                <div className="map-top-area d-flex justify-content-center w-75 mb-5">
-                    <div className="top-img-area">
-                    <img className="w-75" src={map1}/>
-                    </div>
+        
+       
+                <div className="map-top-area d-flex justify-content-center py-5">         
+                    <div className="">
+                        <img className="w-75" src={map1}/>
+                    </div>       
                 <div className="top-text-area">
-                    <span className="map-top-text">改變生活，雕塑你的生活風格。</span>
-                    <Button variant="primary" id="mapBtn">立即預約</Button>
+                    <p className="map-top-text">改變生活，雕塑你的生活風格。</p>                  
                 </div>
                 </div>
 
                 
-                <div className="map-down-area d-flex mb-5 justify-content-center w-75">  
-                    
-                    <div  className="down-text-area">
-                    <span className="map-down-text">我們為您挑選了優質的店家，提供最高品質的服務，讓您煥然一新。 </span>  
-                    </div>
-                    <div className="down-img-area">
-                    <img className="w-75" src={map2}/>
-                    </div>
-                    
+                <div className="map-down-area d-flex justify-content-center pb-5">       
+                <div className="down-text-area">             
+                    <p className="map-down-text">我們為您挑選了優質的店家，提供最高品質的服務，讓您煥然一新。 </p>    
+                    <Button variant="primary" id="mapBtn">立即預約</Button> 
+                    </div>   
+                              
+                    <img className="down-img" src={map2}/>   
+                               
                 </div>
-        </div>        
-        </div>
+         
+       
        
 
 

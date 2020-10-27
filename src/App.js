@@ -11,6 +11,7 @@ import Project from './hsuan/Project'
 import Cart from './kos/pages/Cart'
 import ShopList from './chen/pages/ShopList'
 import ShopDetail from './chen/pages/ShopDetail'
+import Reservation from './chen/pages/Reservation'
 import NotFoundPage from './chen/pages/NotFoundPage'
 import GiftBox from './zihyu/GiftBox'
 import LognIn from './yen/LognIn'
@@ -27,6 +28,14 @@ function App() {
         <Route exact path="/">
         <HomePage />
         </Route>
+       
+        <Route path="/giftBox">
+              <GiftBox />
+            </Route>
+        
+        <Route path="/lognin">
+              <LognIn />
+            </Route>
           <div className="footerFix">
             {/* 網頁內容跟Router放在這 */}
             <Route exact path="/Project">
@@ -41,15 +50,10 @@ function App() {
             <Route path="/shopdetail">
               <ShopDetail />
             </Route>
-            <Route path="/giftBox">
-              <GiftBox />
+            <Route path="/reservation">
+              <Reservation />
             </Route>
-            <Route path="/LognIn">
-              <LognIn />
-            </Route>
-            <Route path="/payment">
-              <Payment />
-            </Route>
+           
           </div>
         </Switch>
       <MyFooter />

@@ -1,7 +1,8 @@
 import React from 'react'
 import './Style/GiftBoxCSS.css';
+import razor from './image/razor.png'
 
-class Game extends React.Component
+class Gift extends React.Component
 {
   render()
   {
@@ -9,28 +10,29 @@ class Game extends React.Component
     
     return (
       <div className="contain">
-
-        <div className="background"></div>
-        <div className="background_white"></div>
-        <div className="blueBox">
-          <div className="whiteBox">
-            <div className="line-top">
-              <div className="line-under">
+        <div className="background_white">
+      
+          <div className="blueBox">
+            <div className="whiteBox">
+              <div className="line-top">
+                <div className="line-under"></div>
                 <div className="title">客製化修容禮盒</div>
-                  <div className="line-under">
-                    <div className="line-top2"></div>
-                  </div>
-              </div>
-              
-            </div>
-            
-          </div>
-        </div>
-        
+                <div className="line-under"></div>
+                <div className="line-top2"></div>
+                <div className="subtitle">FOR  THE  MAN  IN  YOUR  LIFE.</div>
+                <div className="line-middle"></div>
+                <div className="thirdTitle">獨家客製化禮盒，傳遞最真摯的心意</div>
+                <div className="btn"><button className="startButton">開始製作</button></div>
+                <div className="img_razor"><img alt="razor" src={razor} /></div>
 
-        
-        <div className="status"> {MyString} <br/></div>
-      </div>
+              </div>
+            </div>
+          </div> 
+
+        </div> 
+
+      </div>     
+      
     );
   }
 }
@@ -38,7 +40,7 @@ class Game extends React.Component
 function GiftBox(props)
 {
   return (
-    <Game />
+    <Gift />
   )
 }
 

@@ -2,6 +2,13 @@ import React from "react";
 import "./Project.css";
 import search from './icon/search.svg';
 import original from './icon/original.jpg';
+// import Breadcrumb from './component/Breadcrumb'
+import Pagination from './component/Pagination'
+import CatesAside from './component/CatesAside'
+import Cards from './component/Cards'
+import Sorts from './component/Sorts'
+import Cates from './component/Cates'
+import Banner from './component/Banner'
 import {
   Container,
   Row,
@@ -45,79 +52,34 @@ function Project() {
   </Row>
            
     </Container>
-      <div class="container ui-state-disabled">
-        <div class="col-md-3">
-          <ul id="product-menu">
-            <li class="ui-state-disabled1">
-              <div>優惠推薦</div>
-            </li>
-        
-
-            <ul>
-              <li class="ui-state-disabled">
-                <div>本月優惠</div>
-              </li>
-              <li>
-                <div>免運專區</div>
-              </li>
-            </ul>
-          
-
-          <li class="ui-state-disabled">
-            <div>頭髮造型</div>
-          </li>
-          <ul>
-            <li class="ui-state-disabled">
-              <div>髮蠟</div>
-            </li>
-            <li>
-              <div>梳子</div>
-            </li>
-          </ul>
-          <li class="ui-state-disabled">
-            <div>刮鬍修容</div>
-          </li>
-          <ul>
-            <li class="ui-state-disabled">
-              <div>刮鬍刀</div>
-            </li>
-            <li>
-              <div>刮鬍刷</div>
-            </li>
-            <li>
-              <div>直立架</div>
-            </li>
-          </ul>
-          <li class="ui-state-disabled">
-            <div>服飾配件</div>
-          </li>
-          <ul>
-            <li class="ui-state-disabled">
-              <div>帽子</div>
-            </li>
-            <li>
-              <div>墨鏡</div>
-            </li>
-            <li>
-              <div>領帶/領結</div>
-            </li>
-            <li>
-              <div>領帶夾</div>
-            </li>
-            <li>
-              <div>口袋巾</div>
-            </li>
-            <li>
-              <div>袖扣</div>
-            </li>
-            <li>
-              <div>皮帶</div>
-            </li>
-            <li>
-              <div>鈔票夾</div>
-            </li>
-          </ul>
-        </ul></div>
+     
+           {/* <Carousel /> */}
+      <div className="container">
+        <div className="row">
+          <div className="col-3">
+            <CatesAside />
+          </div>
+          <div className="col-9">
+            <Banner />
+            <Cates />
+            {/* <Sorts /> */}
+            <div className="cardGroup">
+             
+            </div>
+            <div className="cardGroup">
+             
+            </div>
+          </div>
+        </div>
+        {/* <div className="row">
+          <div className="col-3"></div>
+          <div className="col-9 cardGroup">
+            <Cards />
+            <Cards />
+            <Cards />
+          </div>
+        </div> */}
+        <Pagination />
       </div>
     </>
   );
