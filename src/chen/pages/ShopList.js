@@ -4,7 +4,6 @@ import Pagination from '../components/Pagination'
 import CatesAside from '../components/CatesAside'
 import Cards from '../components/Cards'
 import Sorts from '../components/Sorts'
-import Search from '../components/Search'
 import Cates from '../components/Cates'
 import Banner from '../components/Banner'
 
@@ -18,7 +17,6 @@ function ShopList(props) {
       <div className="container">
         <div className="row">
           <div className="col-3">
-            <Search />
             <CatesAside />
           </div>
           <div className="col-9">

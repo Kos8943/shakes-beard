@@ -97,7 +97,8 @@ main > .container {
   display: inline-flex;
 }
 
-.card-body .btn {
+.card-body .btn,
+.media-body > .btn {
   background-color: #2d3b72;
   border: none;
   margin: 6px 6px 0 0;
@@ -117,7 +118,7 @@ main > .container {
   background-color: #fffffd;
 }
 
-#searcyForm {
+#searchForm {
   width: 70%;
   border: 1px solid #a69981;
 }
