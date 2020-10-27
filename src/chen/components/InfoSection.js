@@ -1,7 +1,7 @@
 import React from 'react'
 import { Dropdown } from 'react-bootstrap'
-import '../../styles/custom.scss'
 import { Link } from 'react-router-dom'
+import '../styles/shops.scss'
 
 function InfoSection(props) {
   console.log('InfoSection', props)

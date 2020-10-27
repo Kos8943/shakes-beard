@@ -1,7 +1,6 @@
 import React from 'react'
-// import '../styles/pagination.css'
-import '../../styles/custom.scss'
 import { Link } from 'react-router-dom'
+import '../styles/shops.scss'
 // import { FaCaretRight } from 'react-icons/fa'
 //  className Question extends React.Component {
 //   render() {
