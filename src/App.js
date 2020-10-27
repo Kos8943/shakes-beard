@@ -21,8 +21,9 @@ function App() {
   return (
     <Router>
     <>
-   <ShakesBeardNavbar />
+   
       <main role="main">
+      <ShakesBeardNavbar />
       
         <Switch>
         <Route exact path="/">
@@ -43,6 +44,9 @@ function App() {
             </Route>
             <Route path="/cart">
               <Cart />
+            </Route>
+            <Route path="/payment">
+              <Payment />
             </Route>
             <Route path="/shoplist">
               <ShopList />

@@ -83,10 +83,10 @@ function Cart() {
                             <div>優惠代碼：</div>
                             <div>折扣：</div>
                             <div>運費：</div>
-                            <div>總價：</div>
+                            <div>總計：</div>
                         </div>
 
-                        <div className="priceArea font">
+                        <div className="priceArea font priceColor">
                             <div><input></input></div>
                             <div>NT$ -150</div>
                             <div>NT$ 150</div>
