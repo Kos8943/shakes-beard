@@ -4,7 +4,6 @@ import Pagination from '../components/Pagination'
 import CatesAside from '../components/CatesAside'
 import Cards from '../components/Cards'
 import Sorts from '../components/Sorts'
-import Search from '../components/Search'
 import Cates from '../components/Cates'
 import Banner from '../components/Banner'
 
@@ -18,13 +17,12 @@ function ShopList(props) {
       <div className="container">
         <div className="row">
           <div className="col-3">
-            <Search />
             <CatesAside />
           </div>
           <div className="col-9">
             <Banner />
             <Cates />
-            <Sorts />
+            {/* <Sorts /> */}
             <div className="cardGroup">
               <Cards />
               <Cards />
@@ -37,13 +35,6 @@ function ShopList(props) {
             </div>
           </div>
         </div>
-        {/* <div className="row">
-          <div className="col-3"></div>
-          <div className="col-9">
-            <Cates />
-            <Sorts />
-          </div>
-        </div> */}
         {/* <div className="row">
           <div className="col-3"></div>
           <div className="col-9 cardGroup">
