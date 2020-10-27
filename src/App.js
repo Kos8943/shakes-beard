@@ -27,6 +27,11 @@ function App() {
         <Route exact path="/">
         <HomePage />
         </Route>
+
+        <Route path="/giftBox">
+           <GiftBox />
+        </Route>
+
           <div className="footerFix">
             {/* 網頁內容跟Router放在這 */}
             <Route exact path="/Project">

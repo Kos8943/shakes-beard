@@ -1,17 +1,15 @@
-.background {
+.contain {
+  min-height: 73.6vh;
   background-image: url("../image/background.jpg");
-  width: 1200px;
-  height: 713.17px;
-  z-index: 1;
-  position: absolute;
+  background-size: Cover;
 }
 
 .background_white {
   background-color: rgba(89, 84, 82, 0.66);
-  width: 1200px;
-  height: 713.17px;
-  z-index: 2;
-  position: absolute;
+  min-height: 73.6vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .blueBox {
