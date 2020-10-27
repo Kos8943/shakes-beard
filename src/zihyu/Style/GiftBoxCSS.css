@@ -7,8 +7,7 @@
 }
 
 .background_white {
-  background-color: white;
-  opacity: 0.3;
+  background-color: rgba(89, 84, 82, 0.66);
   width: 1200px;
   height: 713.17px;
   z-index: 2;
@@ -17,8 +16,8 @@
 
 .blueBox {
   background-color: #2d3b72;
-  width: 633px;
-  height: 605px;
+  width: 633.73px;
+  height: 605.71px;
   z-index: 3;
   position: absolute;
   margin: 50px auto;
@@ -29,8 +28,8 @@
 
 .whiteBox {
   background-color: white;
-  width: 621px;
-  height: 592px;
+  width: 621.87px;
+  height: 593px;
   z-index: 4;
   position: absolute;
   display: flex;
@@ -41,27 +40,65 @@
   width: 78%;
   height: 1px;
   border-top: solid #2d3b72 3px;
-  margin: 96px auto;
+  margin: 95px auto 0px;
 }
 
 .line-under {
   width: 100%;
-  height: 1px;
   border-top: solid #2d3b72 1px;
-  margin: 2px auto;
+  margin: 2px auto 0px;
 }
 
 .title {
   color: #2d3b72;
   font-family: PingFang;
   font-size: 32px;
-  margin: 32px 0;
+  margin: 12px auto;
   text-align: center;
 }
 
 .line-top2 {
   width: 100%;
-  height: 1px;
   border-top: solid #2d3b72 3px;
-  margin: 2px auto;
+  margin: 2px auto 0px;
+}
+
+.subtitle {
+  color: #2d3b72;
+  font-family: Roboto;
+  font-size: 17px;
+  margin: 62px auto 55px;
+  text-align: center;
+  letter-spacing: 2px;
+}
+
+.line-middle {
+  width: 61%;
+  border-top: solid #2d3b72 1px;
+  margin: 0 auto;
+}
+
+.thirdTitle {
+  color: #2d3b72;
+  font-family: PingFang;
+  font-size: 17px;
+  margin: 51px auto 50px;
+  text-align: center;
+}
+
+.startButton {
+  background-color: #2d3b72;
+  border-radius: 4px;
+  width: 220px;
+  height: 70px;
+  border: none;
+  font-size: 26px;
+  color: white;
+  font-family: PingFang;
+}
+
+.btn {
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
 }
