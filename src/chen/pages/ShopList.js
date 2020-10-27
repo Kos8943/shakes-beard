@@ -22,7 +22,7 @@ function ShopList(props) {
           <div className="col-9">
             <Banner />
             <Cates />
-            <Sorts />
+            {/* <Sorts /> */}
             <div className="cardGroup">
               <Cards />
               <Cards />
@@ -35,13 +35,6 @@ function ShopList(props) {
             </div>
           </div>
         </div>
-        {/* <div className="row">
-          <div className="col-3"></div>
-          <div className="col-9">
-            <Cates />
-            <Sorts />
-          </div>
-        </div> */}
         {/* <div className="row">
           <div className="col-3"></div>
           <div className="col-9 cardGroup">

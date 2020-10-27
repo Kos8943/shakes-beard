@@ -9,6 +9,11 @@ import hot1 from './imgs/hot/hot1.jpg'
 import hot2 from './imgs/hot/hot2.jpeg'
 import hot3 from './imgs/hot/hot3.jpg'
 import heromovie from './hero/heromovie.mp4'
+import hotpage from './imgs/熱銷.jpg'
+import map1 from './imgs/map1.jpg'
+import map2 from './imgs/map2.jpg'
+
+
 
 function HomePage() {
     return (
@@ -65,9 +70,9 @@ function HomePage() {
     
 {/* 品牌故事 */}     
         <div className="story-area w-100 h-100">
-         <h2 className="story-title">品牌故事</h2>
+         <h2 className="story-title pb-3">品牌故事</h2>
             <div className="story-text-area w-50  d-flex justify-content-center">
-                <p className="story-text">
+                <p className="story-text pb-2">
                     Shakes Beard 的設計發想有著濃厚的紳士風格，以男仕用品為Logo及設計，<br/>
                     並以「莎士比亞」為諧音，呈現出別具風格的活潑樣貌。<br/>
                    Shakes Beard 發展出一種北德貴族品味的學院風，代表著注重品質的堅持，<br/>
@@ -99,9 +104,8 @@ function HomePage() {
             <div className="hot-area w-100 h-100 ">
                
                 <div className="hot-text-area">
-                <h2 className="hot-title py-3">熱門商品</h2>
-                        <p className="hot-text mx-auto">
-                                精湛工藝呈現出迷人魅力。繁複的製作工序沒有令我們對工藝的要求卻步；反令我們力臻極佳品質。
+                <h2 className="hot-title py-4">熱門商品</h2>
+                        <p className="hot-text mx-auto">精湛工藝呈現出迷人魅力。繁複的製作工序沒有令我們對工藝的要求卻步；反令我們力臻極佳品質。
                         </p>
                 </div>
                 <div className="hot-card-area d-flex justify-content-center">
@@ -137,6 +141,47 @@ function HomePage() {
                     </Card>
                     </div>
              </div>
+
+{/* 熱銷單品 */}
+
+            <div className="gift-area">
+                <img
+                    className="top-img w-100 h-100 my-3"
+                    src={hotpage}              
+                />            
+                <p className="top-text">用我們獨有的工藝技術，為不甘平凡的您，點綴出更獨特的風格。</p>
+
+                <button class="topBtn">所有系列</button>
+            </div>
+
+{/* 地圖 */}
+
+        <div className="map-area w-100 d-flex justify-content-center">
+        <div className="map-row row w-100">
+                <div className="map-top-area d-flex justify-content-center w-75 mb-5">
+                    <div className="top-img-area">
+                    <img className="w-75" src={map1}/>
+                    </div>
+                <div className="top-text-area">
+                    <span className="map-top-text">改變生活，雕塑你的生活風格。</span>
+                    <Button variant="primary" id="mapBtn">立即預約</Button>
+                </div>
+                </div>
+
+                
+                <div className="map-down-area d-flex mb-5 justify-content-center w-75">  
+                    
+                    <div  className="down-text-area">
+                    <span className="map-down-text">我們為您挑選了優質的店家，提供最高品質的服務，讓您煥然一新。 </span>  
+                    </div>
+                    <div className="down-img-area">
+                    <img className="w-75" src={map2}/>
+                    </div>
+                    
+                </div>
+        </div>        
+        </div>
+       
 
 
       </>
