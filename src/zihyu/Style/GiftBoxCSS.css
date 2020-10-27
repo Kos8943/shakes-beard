@@ -38,7 +38,7 @@
 }
 
 .line-top {
-  width: 50%;
+  width: 78%;
   height: 1px;
   border-top: solid #2d3b72 3px;
   margin: 96px auto;
@@ -48,5 +48,20 @@
   width: 100%;
   height: 1px;
   border-top: solid #2d3b72 1px;
+  margin: 2px auto;
+}
+
+.title {
+  color: #2d3b72;
+  font-family: PingFang;
+  font-size: 32px;
+  margin: 32px 0;
+  text-align: center;
+}
+
+.line-top2 {
+  width: 100%;
+  height: 1px;
+  border-top: solid #2d3b72 3px;
   margin: 2px auto;
 }

@@ -15,7 +15,13 @@ class Game extends React.Component
         <div className="blueBox">
           <div className="whiteBox">
             <div className="line-top">
-              <div className="line-under"></div>
+              <div className="line-under">
+                <div className="title">客製化修容禮盒</div>
+                  <div className="line-under">
+                    <div className="line-top2"></div>
+                  </div>
+              </div>
+              
             </div>
             
           </div>
