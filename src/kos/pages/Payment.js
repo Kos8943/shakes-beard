@@ -1,21 +1,24 @@
 import React, { useState, useEffect } from 'react'
-import CartCss from '../styles/CartCss.scss'
-import Delete from '../icon/delete.svg'
 import cuf1 from '../img/1-3.jpg'
+import CartCss from '../styles/CartCss.scss'
+import PayCss from '../styles/PayCss.scss'
+import Delete from '../icon/delete.svg'
 
-function Cart() { 
-        return (
-            <>
-                <div className="cartArea">
-                    <h2 className="d-flex justify-content-center">購物車</h2>
+
+
+function Payment() {
+    return (
+        <>
+           <div className="cartArea">
+                    <h2 className="d-flex justify-content-center">送出訂單</h2>
                     <div className="cartStep d-flex justify-content-center">
                     <div className="d-flex align-items-start flex-column">
-                        <div className="cartStepCircle thisStep">1</div>
+                        <div className="cartStepCircle otherStep">1</div>
                         <div className="cartStepFont">購物車</div>
                     </div>
                     <div className="cartStepLine"></div>
                     <div>
-                        <div className="cartStepCircle otherStep">2</div>
+                        <div className="cartStepCircle thisStep">2</div>
                         <div className="cartStepFont">送出訂單</div>   
                     </div>
                     <div className="cartStepLine"></div>
@@ -24,7 +27,11 @@ function Cart() {
                         <div className="cartStepFont">完成訂單</div>
                     </div>   
                     </div>
-                </div>
+            </div>
+
+            <div className="PayCard">
+                <h3 className="d-flex justify-content-center">你的訂單</h3>
+
                 <div>
                     <div className="cartItem d-flex">
                         <img className="itemImg" src={cuf1}></img>
@@ -99,9 +106,10 @@ function Cart() {
                     </div>
                     
                 </div>
-                
-            </>
-        )   
+
+            </div>         
+        </>
+    )
 }
 
-export default Cart
+export default Payment

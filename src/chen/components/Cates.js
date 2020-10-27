@@ -2,6 +2,7 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 // 1015 match/history/location
 // product/:id? withRouter,useParams
+import { Dropdown } from 'react-bootstrap'
 
 function Cates(props) {
   console.log('Cates', props)
@@ -41,6 +42,17 @@ function Cates(props) {
             sth
           </li>
         </ol>
+
+        <Dropdown className="d-flex justify-content-end mb-2">
+          <Dropdown.Toggle id="dropdown-basic" className="sorts" variant="">
+            排序方式
+          </Dropdown.Toggle>
+          <Dropdown.Menu>
+            <Dropdown.Item href="#/action-1">價格高低</Dropdown.Item>
+            <Dropdown.Item href="#/action-2">最新上架</Dropdown.Item>
+            <Dropdown.Item href="#/action-3">熱門排行</Dropdown.Item>
+          </Dropdown.Menu>
+        </Dropdown>
       </nav>
     </>
   )

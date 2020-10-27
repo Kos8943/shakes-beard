@@ -1,5 +1,5 @@
 import React from 'react'
-import { Nav } from 'react-bootstrap'
+import { Nav,Form,InputGroup } from 'react-bootstrap'
 import '../../styles/custom.scss'
 
 function CatesAside(props) {
@@ -15,7 +15,27 @@ function CatesAside(props) {
         </ul> 
       */}
       <aside>
-        {/*  defaultActiveKey="/home"  */}
+          <Form.Group controlId="searchForm">
+            <Form.Row>
+              <Form.Control type="text"></Form.Control>
+              <Form.Label className="d-flex align-items-center">
+                <a className="text-muted" href="#">
+                  <svg xmlns="https://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#a69981" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" focusable="false" role="img"><title>Search</title><circle cx="10.5" cy="10.5" r="7.5"></circle><line x1="21" y1="21" x2="15.8" y2="15.8"></line></svg>
+                </a>
+              </Form.Label>
+            </Form.Row>
+          {/* 
+            <InputGroup className="mb-2">
+              <Form.Control type="text"></Form.Control>
+              <InputGroup.Append>
+                <InputGroup.Text>
+                  <a className="text-muted" href="#">
+                    <svg xmlns="https://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#a69981" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" focusable="false" role="img"><title>Search</title><circle cx="10.5" cy="10.5" r="7.5"></circle><line x1="21" y1="21" x2="15.8" y2="15.8"></line></svg>
+                  </a>
+                </InputGroup.Text>
+              </InputGroup.Append>
+            </InputGroup> */}
+        </Form.Group>
         <Nav className="flex-column">
           <h3>分類</h3>
           <Nav.Link href="#">特價優惠</Nav.Link>
