@@ -14,10 +14,10 @@ function InfoSection(props) {
         {/* card-body、card-title、card-text、card-link */}
          <div className="info">
             <h4 className="">Sculptor Barber</h4>
-            <Link to="#">
+            <Link to="#" className="card-link">
               男士理髮廳
             </Link>
-             <Link to="#">
+             <Link to="#" className="card-link">
               台北市大安區
             </Link>
             <p className="mt-3">電話:  02-27375832</p>
@@ -37,7 +37,7 @@ function InfoSection(props) {
                  </Dropdown.Menu>
                  17:00 - 21:00
                  </Dropdown>
-            <p>簡介:<br/>台灣男仕barbershop 第一品牌，創業六年以來，以美麗的理髮廳空間與台灣男仕理容文化薪傳聞名。</p>
+            <p>商家簡介:<br/>台灣男仕barbershop 第一品牌，創業六年以來，以美麗的理髮廳空間與台灣男仕理容文化薪傳聞名。</p>
             <p>提供服務:</p>
             <div className="d-flex">
               <div className="test3">
