@@ -8,7 +8,7 @@
     position: absolute;
     width: 30%;
     top:50%;
-    left:37.5%;
+    left:40%;
 }
 .hero-text{
     color:white;
@@ -63,6 +63,7 @@
     word-break: keep-all;
     font-size: 1.1rem;
     text-overflow: clip;
+    line-height: 30px;
  }
 
  .giftBtn {
@@ -122,7 +123,7 @@
     position: absolute;
     top:10%;
     right:23%;
-    line-height: 30px;
+    line-height: 40px;
     
 } 
 
@@ -131,6 +132,7 @@
 }
 
 .topBtn {
+    margin-top:1%;
     display: inline-block;
     padding: 12px 40px;
     border-radius: 4px;
@@ -150,32 +152,34 @@
 }
 
 //地圖
-.map-area{
-    margin-left: 14.5%;
-     margin-top: 2%;
-}
-.map-row{
-    font-size:1.625rem ;
-    word-break: keep-all;
-  
-}
-.top-text-area, .down-text-area{
-    width: 15%;
-}
-
-.down-img-area{
-   margin-left:20%
-}
-.down-text-area{
-margin-left:20%;
-margin-top: 8%;
+.map-top-area{
+    padding-right: 14%;
 }
 .top-text-area{
-    margin-right:16%;
-    margin-top: 8%;
+    margin: auto 0;
+    width: 10%;   
+    word-break: keep-all;
+    font-size: 1.625rem;
+    line-height: 40px;
 }
+.map-down-text{
+    
+    width: 23%;
+    word-break: keep-all;
+    font-size: 1.625rem;
+    line-height: 40px;
+}
+.down-text-area{
+    padding-left: 23%;
+    margin-top:5%;
+    width: 50%;
+
+}
+
+
 #mapBtn{
-    margin-top:20%;
+    
+    margin-top: 4%;
     display: inline-block;
     padding: 12px 40px;
     border-radius: 4px;
@@ -187,4 +191,9 @@ margin-top: 8%;
 
 #mapBtn:hover{  
     background: hsla(228, 43%, 31%, 0.7);
+}
+
+.down-img{
+    width: 30%;
+    margin-right: 15%;
 }
