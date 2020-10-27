@@ -45,6 +45,9 @@ function App() {
             <Route path="/cart">
               <Cart />
             </Route>
+            <Route path="/payment">
+              <Payment />
+            </Route>
             <Route path="/shoplist">
               <ShopList />
             </Route>
