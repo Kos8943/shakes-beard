@@ -20,8 +20,9 @@ function App() {
   return (
     <Router>
     <>
-   <ShakesBeardNavbar />
+   
       <main role="main">
+      <ShakesBeardNavbar />
       
         <Switch>
         <Route exact path="/">
