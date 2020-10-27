@@ -1,17 +1,32 @@
 import React from 'react'
 import '../../styles/custom.scss'
+import { Link } from 'react-router-dom'
+import { Media } from 'react-bootstrap'
 
 function Description(props) {
-  console.log('Services', props)
+  console.log('Description', props)
   return (
     <>
-          <div className="card-img-left testImg mt-5">
-            <img src={require('../components/card01.jpg')} className="card-img" alt="..." />
-          </div>
-           <div className="card-body d-flex flex-column align-items-start">
-            <strong className="d-inline-block mb-2">World</strong>
-            <p className="card-text mb-auto">This is a wider card with supporting text below as a natural lead-in to additional content.</p>
-          </div>
+      <Media className="mb-3">
+        <img
+          width={200}
+          className="mr-3"
+          src={require('../components/card01.jpg')} 
+          alt="Generic placeholder"
+        />
+        <Media.Body>
+          <h5>男仕理髮</h5>
+          <p>
+            Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque
+            ante sollicitudin commodo. Cras purus odio, vestibulum in vulputate at,
+            tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla.
+            Donec lacinia congue felis in faucibus.
+          </p>
+          <Link to="#" className="btn btn-primary">
+            立即預約
+          </Link>
+        </Media.Body>
+      </Media>
     </>
   )
 }
