@@ -18,6 +18,7 @@ import map2 from './imgs/map2.jpg'
 function HomePage() {
     return (
       <>
+      <body className="body">
  {/* Hero Page*/}     
                 <video  loop="true" autoplay="autoplay"  muted="true" src={heromovie} className="heropage"></video>
                 <div className="hero-text-area">
@@ -178,9 +179,8 @@ function HomePage() {
                                
                 </div>
          
-       
-       
-
+             
+</body>
 
       </>
     )
