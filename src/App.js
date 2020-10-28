@@ -15,7 +15,6 @@ import ShopDetail from './chen/pages/ShopDetail'
 import Reservation from './chen/pages/Reservation'
 import NotFoundPage from './chen/pages/NotFoundPage'
 import GiftBox from './zihyu/GiftBox'
-import GiftBox_1 from './zihyu/GiftBox_1.js'
 import LognIn from './yen/LognIn'
 import Payment from './kos/pages/Payment'
 
@@ -33,14 +32,9 @@ function App() {
         <Route exact path="/homepage">
         <HomePage />
         </Route>
-
         <Route path="/giftBox">
               <GiftBox />
-        </Route>
-        <Route path="/giftBox_1">
-              <GiftBox_1 />
-        </Route>
-
+            </Route>
         <Route path="/lognin">
               <LognIn />
             </Route>
