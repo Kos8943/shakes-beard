@@ -8,7 +8,7 @@ import giftimg from './imgs/禮物盒.jpg'
 import hot1 from './imgs/hot/hot1.jpg'
 import hot2 from './imgs/hot/hot2.jpeg'
 import hot3 from './imgs/hot/hot3.jpg'
-import heromovie from './hero/heromovie.mp4'
+
 import hotpage from './imgs/熱銷.jpg'
 import map1 from './imgs/map1.jpg'
 import map2 from './imgs/map2.jpg'
@@ -19,13 +19,7 @@ function HomePage() {
     return (
       <>
       <body className="body">
- {/* Hero Page*/}     
-                <video  loop="true" autoplay="autoplay"  muted="true" src={heromovie} className="heropage"></video>
-                <div className="hero-text-area">
-                    <h1 className="hero-text">WELCOME TO<br/>SHAKES BEARD</h1>
-                </div>
-          
-
+ 
 {/* 輪播牆 */}
 
     <Carousel>

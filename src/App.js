@@ -24,12 +24,10 @@ function App() {
    
       <main role="main">
       <ShakesBeardNavbar />
-      
         <Switch>
         <Route exact path="/">
         <HomePage />
         </Route>
-       
         <Route path="/giftBox">
               <GiftBox />
             </Route>
