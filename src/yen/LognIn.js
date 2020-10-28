@@ -6,29 +6,21 @@ function LognIn(props) {
    
     return (
       <>
-      <div className="logninArea">
+      <div className="area">
         <div className="bgc">
-          <div className="logninCard d-flex flex-row">
+          <div className="logninArea">
 
-
-
-
-
-
-
-
-
-
-
+            
           </div>
-        </div>       
-      </div>
-       
-        
+        </div>     
+      </div> 
+     
+      
+
       </>
        
     )
-  
+      
   }
 
 
