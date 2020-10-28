@@ -1,6 +1,6 @@
 import React from 'react'
 import Cart from '../icon/shopping-cart.svg'
-import Logo from '../icon/logo1.svg'
+import Logo from '../icon/logo2.svg'
 
 import {
   Container,
