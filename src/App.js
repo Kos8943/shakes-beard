@@ -3,6 +3,7 @@ import './App.css';
 import ShakesBeardNavbar from './components/ShakesBeardNavbar'
 import MyFooter from './components/MyFooter'
 import { BrowserRouter as Router, Route, Link, Switch } from 'react-router-dom'
+import HeroPage from './chad/HeroPage'
 
 
 //以下import個人頁面
@@ -26,6 +27,9 @@ function App() {
       <ShakesBeardNavbar />
         <Switch>
         <Route exact path="/">
+        <HeroPage />
+        </Route>
+        <Route exact path="/homepage">
         <HomePage />
         </Route>
         <Route path="/giftBox">
