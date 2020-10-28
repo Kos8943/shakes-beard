@@ -16,17 +16,22 @@ import NotFoundPage from './chen/pages/NotFoundPage'
 import GiftBox from './zihyu/GiftBox'
 import LognIn from './yen/LognIn'
 import Payment from './kos/pages/Payment'
+import HeroPage from './chad/HeroPage'
 
 function App() {
   return (
     <Router>
     <>
-   
+    
       <main role="main">
+     
       <ShakesBeardNavbar />
       
         <Switch>
         <Route exact path="/">
+        <HeroPage />
+        </Route>
+        <Route path="/homepage">
         <HomePage />
         </Route>
        
