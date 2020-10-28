@@ -3,6 +3,7 @@ import './App.css';
 import ShakesBeardNavbar from './components/ShakesBeardNavbar'
 import MyFooter from './components/MyFooter'
 import { BrowserRouter as Router, Route, Link, Switch } from 'react-router-dom'
+import HeroPage from './chad/HeroPage'
 
 
 //以下import個人頁面
@@ -11,8 +12,10 @@ import Project from './hsuan/Project'
 import Cart from './kos/pages/Cart'
 import ShopList from './chen/pages/ShopList'
 import ShopDetail from './chen/pages/ShopDetail'
+import Reservation from './chen/pages/Reservation'
 import NotFoundPage from './chen/pages/NotFoundPage'
 import GiftBox from './zihyu/GiftBox'
+import GiftBox_1 from './zihyu/GiftBox_1'
 import LognIn from './yen/LognIn'
 import Payment from './kos/pages/Payment'
 
@@ -20,15 +23,19 @@ function App() {
   return (
     <Router>
     <>
-   <ShakesBeardNavbar />
+   
       <main role="main">
-      
+      <ShakesBeardNavbar />
         <Switch>
         <Route exact path="/">
+        <HeroPage />
+        </Route>
+        <Route exact path="/homepage">
         <HomePage />
         </Route>
-       
-        
+        <Route path="/GiftBox">
+              <GiftBox />
+            </Route>
         <Route path="/lognin">
               <LognIn />
             </Route>
@@ -40,16 +47,18 @@ function App() {
             <Route path="/cart">
               <Cart />
             </Route>
+            <Route path="/payment">
+              <Payment />
+            </Route>
             <Route path="/shoplist">
               <ShopList />
             </Route>
             <Route path="/shopdetail">
               <ShopDetail />
             </Route>
-            <Route path="/giftBox">
-              <GiftBox />
+            <Route path="/reservation">
+              <Reservation />
             </Route>
-            
            
           </div>
         </Switch>

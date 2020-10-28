@@ -71,98 +71,19 @@ main > .container {
   /* background-color: #fffffd; */
 }
 
-.page-link {
-  background-color: #44494a;
-  color: #ffffff;
-  font-family: Adobe clean;
-  margin: 0.5px;
-  border: none;
+.logo {
+  position: absolute;
+  width: 150px;
+  height: 150px;
+  top: -18px;
+  left: 45.5%;
+  z-index: 1;
 }
 
-.page-item.active .page-link {
-  background-color: #a69981;
+.logoset {
+  position: relative;
 }
 
-.pagination {
-  margin: 12px;
-}
-
-.card {
-  width: 20rem;
-  min-height: 15rem;
-  margin: 5px;
-}
-
-.cardGroup {
-  display: inline-flex;
-}
-
-.card-body .btn,
-.media-body > .btn {
-  background-color: #2d3b72;
-  border: none;
-  margin: 6px 6px 0 0;
-}
-
-.flex-column a {
-  color: #232d2f;
-}
-
-.flex-column a.active {
-  color: #007bff;
-}
-
-.sorts {
-  /* border: 1px solid  #2D3B72; */
-  border: 1px solid #a69981;
-  background-color: #fffffd;
-}
-
-#searchForm {
-  width: 70%;
-  border: 1px solid #a69981;
-}
-
-.cates-item a {
-  color: #6c757d;
-}
-
-.cates {
-  background-color: #fffffd;
-  width: 50%;
-}
-
-.info {
-  margin-left: 10px;
-}
-
-.test1 {
-  background-color: #6c757d;
-  width: 400px;
-  height: 300px;
-}
-
-.test2 {
-  background-color: #6c757d;
-  width: 80px;
-  height: 80px;
-  margin-left: 10px;
-}
-
-.test3 {
-  background-color: #6c757d;
-  width: 50px;
-  height: 50px;
-  margin: 0px 10px 10px 0px;
-  color: #fffffd;
-  text-align: center;
-}
-
-.testImg {
-  width: 200px;
-  /* height: 200px; */
-}
-
-.recommend {
-  width: 15rem;
+.logoFont {
+  display: none;
 }

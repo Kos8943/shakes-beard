@@ -19,7 +19,7 @@ function Payment() {
                     <div className="cartStepLine"></div>
                     <div>
                         <div className="cartStepCircle thisStep">2</div>
-                        <div className="cartStepFont">送出訂單</div>   
+                        <div className="cartStepFont">付款方式</div>   
                     </div>
                     <div className="cartStepLine"></div>
                     <div>
@@ -35,79 +35,126 @@ function Payment() {
                 <div>
                     <div className="cartItem d-flex">
                         <img className="itemImg" src={cuf1}></img>
-                        <div className="itemName my-auto">Ritmo di vita 陀飛輪袖扣</div>
-                        <select className="selectHigh">
-                            <option value="1">經典黑</option>
-                            <option value="2">2</option>
-                            <option value="3">3</option>
-                        </select>
-                        <select className="selectHigh">
-                            <option value="1">1</option>
-                            <option value="2">2</option>
-                            <option value="3">3</option>
-                        </select>
-                        <span className="unitPrice">NT$1,441</span>
-                        <span className="subtotal ">NT$2,882</span>
-                        <img src={Delete} className="deleteIcon"></img>
-                    </div>
-
-                    <div className="cartItem d-flex">
-                        <img className="itemImg" src={cuf1}></img>
-                        <div className="itemName my-auto">Ritmo di vita 陀飛輪袖扣</div>
-                        <select className="selectHigh">
-                            <option value="1">經典黑</option>
-                            <option value="2">2</option>
-                            <option value="3">3</option>
-                        </select>
-                        <select className="selectHigh">
-                            <option value="1">1</option>
-                            <option value="2">2</option>
-                            <option value="3">3</option>
-                        </select>
+                        <div className="itemName my-auto">Ritmo di vita 陀飛輪袖扣</div>       
+                        <span className="productTpye">經典黑</span>
+                        <span className="amount">1</span>
                         <span className="unitPrice">NT$1,441</span>
                         <span className="subtotal">NT$2,882</span>
-                        <img src={Delete} className="deleteIcon"></img>
                     </div>
                     <div className="cartItem d-flex">
                         <img className="itemImg" src={cuf1}></img>
-                        <div className="itemName my-auto">Ritmo di vita 陀飛輪袖扣</div>
-                        <select className="selectHigh">
-                            <option value="1">經典黑</option>
-                            <option value="2">2</option>
-                            <option value="3">3</option>
-                        </select>
-                        <select className="selectHigh">
-                            <option value="1">1</option>
-                            <option value="2">2</option>
-                            <option value="3">3</option>
-                        </select>
+                        <div className="itemName my-auto">Ritmo di vita 陀飛輪袖扣</div>       
+                        <span className="productTpye">經典黑</span>
+                        <span className="amount">1</span>
                         <span className="unitPrice">NT$1,441</span>
                         <span className="subtotal">NT$2,882</span>
-                        <img src={Delete} className="deleteIcon"></img>
+                    </div>
+                    <div className="cartItem d-flex">
+                        <img className="itemImg" src={cuf1}></img>
+                        <div className="itemName my-auto">Ritmo di vita 陀飛輪袖扣</div>       
+                        <span className="productTpye">經典黑</span>
+                        <span className="amount">1</span>
+                        <span className="unitPrice">NT$1,441</span>
+                        <span className="subtotal">NT$2,882</span>
                     </div>
                     <div className="priceArea ml-auto d-flex">
                         <div className="priceArea font">
-                            <div>優惠代碼：</div>
                             <div>折扣：</div>
                             <div>運費：</div>
-                            <div>總價：</div>
+                            <div>總計：</div>
                         </div>
-
                         <div className="priceArea font">
-                            <div><input></input></div>
                             <div>NT$ -150</div>
                             <div>NT$ 150</div>
                             <div>NT$ 8,796</div>
-                        </div>
-                        
-                    </div>
-                    <div className="sumitBtn ml-auto">
-                        <button>送出訂單</button>
-                    </div>
-                    
+                        </div> 
+                    </div>             
                 </div>
 
-            </div>         
+                <hr />
+
+                <div className="recipient">
+                    <h3 className="d-flex justify-content-center">收件人資訊</h3>
+                        <form>
+                            <p>收件人：</p>
+                            <input placeholder="王大明" className="inputStyle"></input>
+                            <p>手機：</p>
+                            <input placeholder="0912123456" className="inputStyle"></input>
+                            <p>市話：</p>
+                            <input placeholder="02-12345678" className="inputStyle"></input>
+                            <p>地址：</p>
+                            <select className="addressSelect">
+                                <option value="台北市">台北市</option>
+                                <option value="新北市">新北市</option>
+                                <option value="桃園市">桃園市</option>
+                            </select>
+                            <select className="addressSelect">
+                                <option value="大安區">大安區</option>
+                                <option value="中正區">中正區</option>
+                                <option value="內湖區">內湖區</option>
+                            </select>
+                            <input className="address"></input>
+                            <h3 className="d-flex justify-content-center">發票</h3>
+                            <div className="d-flex justify-content-around">
+                                <div className="radioDiv d-flex">
+                                    <input type="radio" className="radio"></input>
+                                    <div>個人電子發票</div>
+                                </div>
+                                <div className="radioDiv d-flex">
+                                    <input type="radio" className="radio"></input>
+                                    <div>捐贈發票</div>
+                                </div>
+                                <div className="radioDiv d-flex">
+                                    <input type="radio" className="radio"></input>
+                                    <div>公司戶電子發票</div>
+                                </div>
+                                <div className="radioDiv d-flex">
+                                    <input type="radio" className="radio"></input>
+                                    <div>手機載具</div>
+                                </div>
+                            </div>
+                            <hr />
+
+                            <h3 className="d-flex justify-content-center">付款方式</h3>
+                            <select className="paymentSelect">
+                                <option value="信用卡">信用卡</option>
+                                <option value="貨到付款">貨到付款</option>
+                                <option value="歐富寶">歐富寶</option>
+                                <option value="PayPal">PayPal</option>
+                            </select>
+                            <div className="d-flex creditCardArea">
+                                <div className="creditCardNumber">
+                                    <p>信用卡卡號：</p>
+                                    <input></input>
+                                    <span>-</span>
+                                    <input></input>
+                                    <span>-</span>
+                                    <input></input>
+                                    <span>-</span>
+                                    <input></input>
+                                    <div className="d-flex ">
+                                        <div className="creditCardDate">
+                                            <p>有效期限：</p>
+                                            <input></input>
+                                            <span>年</span>
+                                            <input></input>
+                                            <span>月</span>
+                                        </div>
+                                        <div className="creditCardDate1">
+                                            <p>卡背後3碼：</p>
+                                            <input></input>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div className="creditCardImg">123</div>
+
+                            </div>
+                        </form>
+                </div>
+            </div>  
+            <div className="paymentBtn m-auto">
+                <button>確定送出</button>
+            </div>    
         </>
     )
 }

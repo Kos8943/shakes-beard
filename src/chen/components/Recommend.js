@@ -1,5 +1,5 @@
 import React from 'react'
-import '../../styles/custom.scss'
+import '../styles/shops.scss'
 
 function Recommend(props) {
   console.log('Recommend', props)

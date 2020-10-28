@@ -6,19 +6,21 @@ function LognIn(props) {
    
     return (
       <>
-      <div className="logninArea">
-        <div className="bgc">1</div>
+      <div className="area">
+        <div className="bgc">
+          <div className="logninArea">
+
+            
+          </div>
+        </div>     
+      </div> 
      
-       
+      
 
-
-        </div>
-       
-        
       </>
        
     )
-  
+      
   }
 
 

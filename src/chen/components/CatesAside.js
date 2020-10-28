@@ -1,6 +1,6 @@
 import React from 'react'
 import { Nav,Form,InputGroup } from 'react-bootstrap'
-import '../../styles/custom.scss'
+import '../styles/shops.scss'
 
 function CatesAside(props) {
   console.log('CatesAside', props)
