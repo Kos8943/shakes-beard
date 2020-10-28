@@ -12,13 +12,18 @@
 }
 .hero-text-area{
     position: absolute;
-    width: 30%;
-    left:35%;
-    top:50%;
+    width: 100%;
+    top: 50%;
+    padding-left: 36%;
+
    
     
 }
 .hero-text{
+    
+    text-overflow: clip;
+    width: 38%;
+    height: 10%;
     font-family: PingFang;
     font-size: 2rem;
     text-align: center;
