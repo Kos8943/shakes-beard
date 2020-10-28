@@ -1,6 +1,6 @@
 import React from 'react'
 import './Style/GiftBoxCSS.css';
-import razor from './image/razor.png'
+
 
 class Gift extends React.Component
 {
@@ -22,8 +22,8 @@ class Gift extends React.Component
                 <div className="subtitle">FOR  THE  MAN  IN  YOUR  LIFE.</div>
                 <div className="line-middle"></div>
                 <div className="thirdTitle">獨家客製化禮盒，傳遞最真摯的心意</div>
-                <div className="btn"><button className="startButton">開始製作</button></div>
-                <div className="img_razor"><img alt="razor" src={razor} /></div>
+                <div className="btn" href='/giftBox_1' ><button className="startButton">開始製作</button></div>
+
 
               </div>
             </div>

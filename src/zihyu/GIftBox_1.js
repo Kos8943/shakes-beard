@@ -1,7 +1,7 @@
-// import React from 'react'
-// import './Style/GiftBoxCSS.css';
+import React from 'react'
+import './Style/GiftBoxCSS.css';
 
-class Gift extends React.Component
+class Gift_1 extends React.Component
 {
   render()
   {
@@ -15,14 +15,12 @@ class Gift extends React.Component
             <div className="whiteBox">
               <div className="line-top">
                 <div className="line-under"></div>
-                <div className="title">客製化修容禮盒</div>
+                <div className="title">123456</div>
                 <div className="line-under"></div>
                 <div className="line-top2"></div>
                 <div className="subtitle">FOR  THE  MAN  IN  YOUR  LIFE.</div>
                 <div className="line-middle"></div>
                 <div className="thirdTitle">獨家客製化禮盒，傳遞最真摯的心意</div>
-                <div className="btn"><button className="startButton">開始製作</button></div>
-              
 
               </div>
             </div>
@@ -36,11 +34,11 @@ class Gift extends React.Component
   }
 }
 
-function GiftBox(props)
+function GiftBox_1(props)
 {
   return (
-    <Gift />
+    <Gift_1 />
   )
 }
 
-export default GiftBox
+export default GiftBox_1
