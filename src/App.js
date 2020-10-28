@@ -33,7 +33,7 @@ function App() {
         <Route exact path="/homepage">
         <HomePage />
         </Route>
-        <Route path="/giftBox">
+        <Route path="/GiftBox">
               <GiftBox />
             </Route>
         <Route path="/lognin">
