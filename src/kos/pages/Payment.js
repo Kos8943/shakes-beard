@@ -122,12 +122,39 @@ function Payment() {
                                 <option value="歐富寶">歐富寶</option>
                                 <option value="PayPal">PayPal</option>
                             </select>
-                            <p>信用卡卡號：</p>
+                            <div className="d-flex creditCardArea">
+                                <div className="creditCardNumber">
+                                    <p>信用卡卡號：</p>
+                                    <input></input>
+                                    <span>-</span>
+                                    <input></input>
+                                    <span>-</span>
+                                    <input></input>
+                                    <span>-</span>
+                                    <input></input>
+                                    <div className="d-flex ">
+                                        <div className="creditCardDate">
+                                            <p>有效期限：</p>
+                                            <input></input>
+                                            <span>年</span>
+                                            <input></input>
+                                            <span>月</span>
+                                        </div>
+                                        <div className="creditCardDate1">
+                                            <p>卡背後3碼：</p>
+                                            <input></input>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div className="creditCardImg">123</div>
+
+                            </div>
                         </form>
                 </div>
-
-
-            </div>         
+            </div>  
+            <div className="paymentBtn m-auto">
+                <button>確定送出</button>
+            </div>    
         </>
     )
 }
