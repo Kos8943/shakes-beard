@@ -67,7 +67,12 @@ hr {
 }
 
 .radio {
-    height: 24px;
-    width: 24px;
-    background-color: #2D3B72;
+    height: 20px;
+    width: 20px;
+    background: #2D3B72;
 }
+
+label {
+    font-size: 1rem;
+}
+

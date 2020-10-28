@@ -96,21 +96,21 @@ function Payment() {
                             <input className="address"></input>
                             <h3 className="d-flex justify-content-center">發票</h3>
                             <div className="d-flex justify-content-around">
-                                <div>
+                                <div className="radioDiv d-flex">
                                     <input type="radio" className="radio"></input>
-                                    <label>個人電子發票</label>
+                                    <div>個人電子發票</div>
                                 </div>
-                                <div>
-                                    <input type="radio"></input>
-                                    <label>捐贈發票</label>
+                                <div className="radioDiv d-flex">
+                                    <input type="radio" className="radio"></input>
+                                    <div>捐贈發票</div>
                                 </div>
-                                <div>
-                                    <input type="radio"></input>
-                                    <label>公司戶電子發票</label>
+                                <div className="radioDiv d-flex">
+                                    <input type="radio" className="radio"></input>
+                                    <div>公司戶電子發票</div>
                                 </div>
-                                <div>
-                                    <input type="radio"></input>
-                                    <label>手機載具</label>
+                                <div className="radioDiv d-flex">
+                                    <input type="radio" className="radio"></input>
+                                    <div>手機載具</div>
                                 </div>
                             </div>
                         </form>
