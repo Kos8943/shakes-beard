@@ -1,7 +1,7 @@
 import React from 'react'
-import '../../styles/custom.scss'
 import { Link } from 'react-router-dom'
 import { Media } from 'react-bootstrap'
+import '../styles/shops.scss'
 
 function Description(props) {
   console.log('Description', props)
