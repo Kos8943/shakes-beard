@@ -27,10 +27,14 @@ function ShakesBeardNavbar() {
       <Navbar.Brand href="#home">logo</Navbar.Brand>
       <Nav.Link href="#link" className="navBarFontSize">商家預約</Nav.Link>
       <Nav.Link href="#link" className="navBarFontSize">我的帳戶</Nav.Link>
-      <div className="loginCartArea">
-      <button className="loginBtn">登入</button>
-      <button className="cartBtn"><img src={Cart} style={{width:"30px", height:'30px'}}/></button>
+      <div className="loginCartArea d-flex">
+      {/* <div className="loginCartArea"> */}
+      {/* <button className="loginBtn" href="lognin">登入</button>
+      <button className="cartBtn"><img src={Cart} style={{width:"30px", height:'30px'}}/></button> */}
+      <Nav.Link href="lognin" className="navBarFontSize" >登入</Nav.Link>
+      <Nav.Link href="lognin" className="navBarFontSize" ><img src={Cart} style={{width:"30px", height:'30px'}}/></Nav.Link>
       </div>
+      {/* </div> */}
       
     </Nav>
   </Navbar.Collapse>
