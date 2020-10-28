@@ -32,7 +32,7 @@ function ShakesBeardNavbar() {
       {/* <button className="loginBtn" href="lognin">登入</button>
       <button className="cartBtn"><img src={Cart} style={{width:"30px", height:'30px'}}/></button> */}
       <Nav.Link href="lognin" className="navBarFontSize" >登入</Nav.Link>
-      <Nav.Link href="lognin" className="navBarFontSize" ><img src={Cart} style={{width:"30px", height:'30px'}}/></Nav.Link>
+      <Nav.Link href="" className="navBarFontSize" ><img src={Cart} style={{width:"30px", height:'30px'}}/></Nav.Link>
       </div>
       {/* </div> */}
       
