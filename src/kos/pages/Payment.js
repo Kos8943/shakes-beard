@@ -83,12 +83,12 @@ function Payment() {
                             <p>市話：</p>
                             <input placeholder="02-12345678" className="inputStyle"></input>
                             <p>地址：</p>
-                            <select>
+                            <select className="addressSelect">
                                 <option value="台北市">台北市</option>
                                 <option value="新北市">新北市</option>
                                 <option value="桃園市">桃園市</option>
                             </select>
-                            <select>
+                            <select className="addressSelect">
                                 <option value="大安區">大安區</option>
                                 <option value="中正區">中正區</option>
                                 <option value="內湖區">內湖區</option>
@@ -113,6 +113,16 @@ function Payment() {
                                     <div>手機載具</div>
                                 </div>
                             </div>
+                            <hr />
+
+                            <h3 className="d-flex justify-content-center">付款方式</h3>
+                            <select className="paymentSelect">
+                                <option value="信用卡">信用卡</option>
+                                <option value="貨到付款">貨到付款</option>
+                                <option value="歐富寶">歐富寶</option>
+                                <option value="PayPal">PayPal</option>
+                            </select>
+                            <p>信用卡卡號：</p>
                         </form>
                 </div>
 
