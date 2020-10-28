@@ -1,4 +1,5 @@
-import React from 'react'
+import React from 'react';
+import original from '../icon/original.jpg';
 import { Carousel } from 'react-bootstrap'
 // import background from './card01.jpg'
 
@@ -8,11 +9,10 @@ function Banner(props) {
     <>
       <Carousel>
         <Carousel.Item>
+        <div className="original">
+           </div>
           {/* src="holder.js/800x400?text=First slide&bg=373940" */}
-          <img
-            className="d-block w-100"
-            src={require('./carousel01.jpg')}
-            alt="First slide"
+          <img src={original}
           />
           <Carousel.Caption>
             <h3>First slide label</h3>

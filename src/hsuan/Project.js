@@ -1,7 +1,7 @@
 import React from "react";
 import "./Project.css";
 import search from './icon/search.svg';
-import original from './icon/original.jpg';
+// import original from './icon/original.jpg';
 // import Breadcrumb from './component/Breadcrumb'
 import Pagination from './component/Pagination'
 import CatesAside from './component/CatesAside'
@@ -30,7 +30,7 @@ function Project() {
   </Row>
       <Container>
       <Row>
-    <Col><div className="form-group">
+    {/* <Col><div className="form-group">
      <input
             type="email"
             className="form-control"
@@ -43,12 +43,12 @@ function Project() {
            <div class="col-md-3">
         <div className="sort">
           <h3>分類</h3>
-        </div></div></Col>
+        </div></div></Col> */}
     <Col></Col>
-           <Col xs={6} md={4}>
+           {/* <Col xs={6} md={4}>
            <div className="original">
            <img src={original}></img></div>
-    </Col>
+    </Col> */}
   </Row>
            
     </Container>
