@@ -1,0 +1,204 @@
+.body{
+    font-family: PingFang;
+}
+//Hero page
+.heropage{
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+.hero-text-area{
+    position: absolute;
+    width: 30%;
+    top:50%;
+    left:40%;
+}
+.hero-text{
+    color:white;
+    letter-spacing: .5rem;
+    line-height: 6.5rem;
+}
+
+
+//故事
+.story-area{
+    margin: 15px auto;
+    
+}
+.story-title{
+   text-align: center;
+}
+
+.story-text-area{
+    margin:0 auto;
+ }
+
+ .story-text{
+     min-width: 82%;
+     font-size:1.4rem ;
+     white-space:pre-wrap;
+     margin-bottom: 0;
+    line-height: 40px;
+ }
+
+ //禮物
+
+ .gift-area{
+     padding-left: 17.5%;
+     padding-right: 17.5%;
+     position: relative;
+ }
+
+ .gift-text-area{
+     position: absolute;
+     right:22%;
+     bottom: 30%;
+     background-color: hsla(228, 43%, 31%, 0.70);
+     border-radius: 4px;
+     width: 20%;
+     height: 30%;
+     color:#F8F8F8;
+     text-align: center;
+     line-height: 30px;
+ }
+
+ .gift-text{
+    word-break: keep-all;
+    font-size: 1.1rem;
+    text-overflow: clip;
+    line-height: 30px;
+ }
+
+ .giftBtn {
+    display: inline-block;
+    padding: 12px 40px;
+    border-radius: 4px;
+    border:0px ;
+    background:hsla(228, 43%, 31%, 0.70);
+    font: 20px PingFang;
+    color: #ffffff;
+    position: absolute;
+    right:28%;
+    bottom: 10%;
+
+    
+}
+.giftBtn:hover{  
+    background: hsla(228, 43%, 31%, 1.0);
+   
+}
+
+//熱門
+.hot-title, .hot-text{
+    text-align: center;
+    
+}
+.hot-text{
+    word-break: keep-all;
+    font-size: 1.4rem;
+    line-height: 40px;
+    width: 30%;
+}
+#cardborder{
+    border-style:none;
+}
+
+#cardbody{
+    margin-left: 25%;
+}
+#price{
+    margin-left: 15%;
+}
+#buy{
+    margin-left: 3%;
+    border-radius: 4px;
+    width: 120px;
+    height: 50px;
+    padding-top:5%
+    
+}
+
+//熱銷
+
+.top-text{
+    word-break: keep-all;
+    font-size: 1.4rem;
+    text-overflow: clip;
+    width: 15%;
+    position: absolute;
+    top:10%;
+    right:23%;
+    line-height: 40px;
+    
+} 
+
+.top-img{
+    position: relative;
+}
+
+.topBtn {
+    margin-top:1%;
+    display: inline-block;
+    padding: 12px 40px;
+    border-radius: 4px;
+    border:0px ;
+    background:hsla(228, 43%, 31%, 1.0);
+    font: 20px PingFang;
+    color: #ffffff;
+    position: absolute;
+    right:28%;
+    top: 26%;
+
+    
+}
+.topBtn:hover{  
+    background: hsla(228, 43%, 31%, 0.7);
+   
+}
+
+//地圖
+.map-top-area{
+    padding-right: 14%;
+}
+.top-text-area{
+    margin: auto 0;
+    width: 10%;   
+    word-break: keep-all;
+    font-size: 1.625rem;
+    line-height: 40px;
+}
+.map-down-text{
+    
+    width: 23%;
+    word-break: keep-all;
+    font-size: 1.625rem;
+    line-height: 40px;
+}
+.down-text-area{
+    padding-left: 23%;
+    margin-top:5%;
+    width: 50%;
+
+}
+
+
+#mapBtn{
+    
+    margin-top: 4%;
+    display: inline-block;
+    padding: 12px 40px;
+    border-radius: 4px;
+    border:0px ;
+    background:hsla(228, 43%, 31%, 1.0);
+    font: 20px PingFang;
+    color: #ffffff; 
+}
+
+#mapBtn:hover{  
+    background: hsla(228, 43%, 31%, 0.7);
+}
+
+.down-img{
+    width: 30%;
+    margin-right: 15%;
+}

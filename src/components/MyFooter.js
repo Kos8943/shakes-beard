@@ -1,4 +1,10 @@
 import React, { useState, useEffect } from 'react'
+import ig from '../icon/instagram.svg';
+import fb from '../icon/facebook.svg';
+import twitter from '../icon/twitter.svg';
+import QRcode from '../icon/qrcode.png';
+import line from '../icon/line.svg';
+
 
 function MyFooter(props) {
   return (
@@ -8,21 +14,23 @@ function MyFooter(props) {
         
 
         <div className="footerlink d-flex justify-content-around">
-          <span className="text-muted ">聯絡我們</span>
-          <span className="text-muted ">隱私權政策</span>
-          <span className="text-muted ">著作權聲明</span>
-          <span className="text-muted ">廣告合作</span> 
+          <span className="text-white">聯絡我們</span>
+          <span className="text-white ">隱私權政策</span>
+          <span className="text-white ">著作權聲明</span>
+          <span className="text-white ">廣告合作</span> 
           </div>
-          <div className="contact-area">
-          <div className="svg-area d-flex justify-content-center p-3">
-            <a href="#"><img src=""></img></a>
-            <a>fb</a>
-            <a>tw</a>
+          
+          <div className="svg-area pt-4 d-flex justify-content-center">
+            <img src={ig}></img>
+            <img src={fb}></img>
+            <img src={twitter}></img>      
+            <img src={line}></img>      
             </div>
-            <span className="d-flex justify-content-center">Copyright © 2020 Shakes Beard Inc.</span>
-          </div>       
+            <span className="d-flex justify-content-center mt-4">Copyright © 2020 Shakes Beard Inc.</span>
+               
         
         </div>
+        
       </footer>
     </>
   )
