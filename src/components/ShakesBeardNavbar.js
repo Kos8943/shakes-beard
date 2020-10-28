@@ -1,5 +1,6 @@
 import React from 'react'
 import Cart from '../icon/shopping-cart.svg'
+import Logo from '../icon/logo1.svg'
 
 import {
   Container,
@@ -17,14 +18,15 @@ import { NavLink } from 'react-router-dom'
 function ShakesBeardNavbar() {
   return (
     <>
-     <Navbar expand="lg" className="navBarcolor" >
+     <Navbar expand="lg" className="navBarcolor logoset" >
   <Navbar.Toggle aria-controls="basic-navbar-nav"  />
   <Navbar.Collapse id="basic-navbar-nav">
     <Nav  className="navbarFlex d-flex justify-content-between">
       <Nav.Link href="#home" className="navBarFontSize">首頁</Nav.Link>
       <Nav.Link href="#link" className="navBarFontSize">產品列表</Nav.Link>
       <Nav.Link href="giftBox" className="navBarFontSize">客製化禮盒</Nav.Link>
-      <Navbar.Brand href="#home">logo</Navbar.Brand>
+      <Navbar.Brand href="#home" className="logoFont">logo</Navbar.Brand>
+      <img src={Logo} className="logo"></img>
       <Nav.Link href="#link" className="navBarFontSize">商家預約</Nav.Link>
       <Nav.Link href="#link" className="navBarFontSize">我的帳戶</Nav.Link>
       <div className="loginCartArea d-flex">

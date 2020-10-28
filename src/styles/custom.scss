@@ -70,3 +70,20 @@ main > .container {
   padding: 60px 10px 0;
   /* background-color: #fffffd; */
 }
+
+.logo {
+  position: absolute;
+  width: 125px;
+  height: 125px;
+  top: -20px;
+  left: 46.15%;
+  z-index: 1;
+}
+
+.logoset {
+  position: relative;
+}
+
+.logoFont {
+  display: none;
+}
