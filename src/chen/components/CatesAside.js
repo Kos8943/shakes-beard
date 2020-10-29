@@ -37,11 +37,12 @@ function CatesAside(props) {
             </InputGroup> */}
         </Form.Group>
         <Nav className="flex-column">
-          <h3>分類</h3>
-          <Nav.Link href="#">特價優惠</Nav.Link>
-          <Nav.Link eventKey="link-1">服務分類</Nav.Link>
-          <Nav.Link eventKey="link-2">活動分類</Nav.Link>
-          <Nav.Link eventKey="link-3">地區分類</Nav.Link>
+          <Nav.Link href="#">全部服務</Nav.Link>
+          <Nav.Link href="/shopdetail/">特價優惠</Nav.Link>
+          <Nav.Link href="/shopdetail/" eventKey="link-1">男士理髮</Nav.Link>
+          <Nav.Link href="/shopdetail/" eventKey="link-2">男士修容</Nav.Link>
+          <Nav.Link href="/shopdetail/" eventKey="link-3">男士造型</Nav.Link>
+          <Nav.Link href="/shopdetail/" eventKey="link-4">商家位置</Nav.Link>
         </Nav>
       </aside>
     </>
