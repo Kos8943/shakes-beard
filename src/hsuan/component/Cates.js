@@ -26,34 +26,38 @@ function Cates(props) {
 
   return (
     <>
-      <nav aria-label="breadcrumb">
-        <ol className="breadcrumb cates">
+    <div className="sorting d-flex">
+      <nav aria-label="breadcrumb cates">
+        <ol className="breadcrumb">
           <li className="breadcrumb-item cates-item">
             <Link to="#">全部</Link>
           </li>
           <li className="breadcrumb-item cates-item">
-            <Link to="#">特價優惠</Link>
+            <Link to="#">服飾配件</Link>
           </li>
           {/* 變數
           <li className="breadcrumb-item active" aria-current="page">
             {path}
           </li> */}
           <li className="breadcrumb-item active" aria-current="page">
-            sth
+            領帶/領結
           </li>
         </ol>
-
-        <Dropdown className="d-flex justify-content-end mb-2">
-          <Dropdown.Toggle id="dropdown-basic" className="sorts" variant="">
-            排序方式
-          </Dropdown.Toggle>
-          <Dropdown.Menu>
-            <Dropdown.Item href="#/action-1">價格高低</Dropdown.Item>
-            <Dropdown.Item href="#/action-2">最新上架</Dropdown.Item>
-            <Dropdown.Item href="#/action-3">熱門排行</Dropdown.Item>
-          </Dropdown.Menu>
-        </Dropdown>
       </nav>
+
+    <div className="col d-flex justify-content-end align-items-center">
+      <Dropdown>
+        <Dropdown.Toggle id="dropdown-basic" className="sorts d-flex align-items-center" variant="">
+          排序方式
+        </Dropdown.Toggle>
+        <Dropdown.Menu>
+          <Dropdown.Item href="#/action-1">價格高低</Dropdown.Item>
+          <Dropdown.Item href="#/action-2">最新上架</Dropdown.Item>
+          <Dropdown.Item href="#/action-3">熱門排行</Dropdown.Item>
+        </Dropdown.Menu>
+      </Dropdown>
+    </div>
+    </div>
     </>
   )
 }

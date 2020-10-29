@@ -2,7 +2,7 @@
   background-color: #44494a;
   color: #ffffff;
   font-family: Adobe clean;
-  margin: 0.5px;
+  margin: 1px;
   border: none;
 }
 
@@ -10,8 +10,8 @@
   background-color: #a69981;
 }
 
-.page-item{
-    margin: 2px;
+.page-item {
+  margin: 2px;
 }
 
 .pagination {
@@ -32,7 +32,6 @@
 .media-body > .btn {
   background-color: #2d3b72;
   border: none;
-  margin: 6px 6px 0 0;
   display: inline;
 }
 
@@ -59,10 +58,10 @@
   color: #6c757d;
 }
 
-.cates {
-  background-color: #fffffd;
-  width: 50%;
-}
+// .cates {
+//   background-color: #fffffd;
+//   width: 50%;
+// }
 
 .info {
   margin-left: 10px;
@@ -81,14 +80,14 @@
   margin-left: 10px;
 }
 
-.test3 {
-  background-color: #6c757d;
-  width: 50px;
-  height: 50px;
-  margin: 0px 10px 10px 0px;
-  color: #fffffd;
-  text-align: center;
-}
+// .test3 {
+//   background-color: #6c757d;
+//   width: 50px;
+//   height: 50px;
+//   margin: 0px 10px 10px 0px;
+//   color: #fffffd;
+//   text-align: center;
+// }
 
 .testImg {
   width: 200px;
@@ -97,4 +96,8 @@
 
 .recommend {
   width: 15rem;
+}
+
+.breadcrumb {
+  background-color: transparent;
 }

@@ -1,23 +1,34 @@
-import React from 'react'
-import { Dropdown } from 'react-bootstrap'
+import React from 'react';
+// import Radium from 'radium';
+import { OverlayTrigger,Button,Tooltip, } from 'react-bootstrap'
 
 function Sorts(props) {
   console.log('Sorts', props)
+  
+  
   return (
     <>
-      {/* <h5>排序方式</h5> */}
-      <Dropdown>
-        {/*  variant="success"  */}
-        <Dropdown.Toggle id="dropdown-basic" className="sorts" variant="">
-          排序方式
-        </Dropdown.Toggle>
-
-        <Dropdown.Menu>
-          <Dropdown.Item href="#/action-1">價格高低</Dropdown.Item>
-          <Dropdown.Item href="#/action-2">最新上架</Dropdown.Item>
-          <Dropdown.Item href="#/action-3">熱門排行</Dropdown.Item>
-        </Dropdown.Menu>
-      </Dropdown>
+     render(
+  <OverlayTrigger
+    placement="bottom"
+    overlay={<Tooltip id="button-tooltip-2">Check out this avatar</Tooltip>}
+  >
+    {({ ref, ...triggerHandler }) => (
+      <Button
+        variant="light"
+        {...triggerHandler}
+        className="d-inline-flex align-items-center"
+      >
+        <Tooltip
+          ref={ref}
+          roundedCircle
+          src="holder.js/20x20?text=J&bg=28a745&fg=FFF"
+        />
+        <span className="ml-1">Hover to see</span>
+      </Button>
+    )}
+  </OverlayTrigger>,
+);
     </>
   )
 }

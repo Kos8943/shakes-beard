@@ -1,7 +1,9 @@
 import React from 'react'
-import './Style/GiftBoxCSS_1.css';
+import './Style/BudgetCSS.css';
+import img from './image/box.png';
+class Budget_1 extends React.Component
 
-class Gift_1 extends React.Component
+
 {
   render()
   {
@@ -17,8 +19,7 @@ class Gift_1 extends React.Component
                   <div className="title">選擇預算</div>
                   <div className="line-under"></div>
                   <div className="line-top2"></div>
-                  <div className="img"><img src=""></img></div>
-
+                  <img src={img} />
                   <div className="btn" href='/giftBox_1' ><button className="startButton">下一步</button></div>
                 </div>
               </div>
@@ -32,11 +33,11 @@ class Gift_1 extends React.Component
   }
 }
 
-function GiftBox_1(props)
+function Budget(props)
 {
   return (
-    <Gift_1 />
+    <Budget_1 />
   )
 }
 
-export default GiftBox_1
+export default Budget

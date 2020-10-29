@@ -57,7 +57,7 @@ function Project() {
       <div className="container">
         <div className="row">
           <div className="col-3">
-            <CatesAside />
+            <Cards/>
           </div>
           <div className="col-9">
             <Banner />

@@ -1,3 +1,18 @@
+@media (max-width:576px) {
+    html {
+        font-size: 16px;
+    }
+    .cartArea {
+        margin-top: 40px;
+        width: 100%;
+    }
+}
+//以下是1920的css
+@media (min-width: 1200px) {
+html {
+    font-size: 16px;
+}
+
 .cartArea {
     margin-top: 80px;
     width: 100%;
@@ -124,6 +139,8 @@
     color: #fff;
     line-height: 70px;
 }
+}
+//以上是1920的CSS
 
-//以上是購物車的CSS
+
 
