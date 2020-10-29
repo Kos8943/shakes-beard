@@ -15,7 +15,7 @@ import {
 } from 'react-bootstrap'
 import { NavLink } from 'react-router-dom'
 
-function ShakesBeardNavbar() {
+function ShakesBeardNavbar(props) {
   return (
     <>
      <Navbar expand="lg" className="navBarcolor logoset" >
@@ -26,7 +26,7 @@ function ShakesBeardNavbar() {
       <Nav.Link href="#link" className="navBarFontSize">產品列表</Nav.Link>
       <Nav.Link href="budget" className="navBarFontSize">客製化禮盒</Nav.Link>
       <Navbar.Brand href="#home" className="logoFont">logo</Navbar.Brand>
-      <img src={Logo} className="logo"></img>
+      <Nav.Link ><img src={Logo} className="logo"></img></Nav.Link>
       <Nav.Link href="#link" className="navBarFontSize">商家預約</Nav.Link>
       <Nav.Link href="#link" className="navBarFontSize">我的帳戶</Nav.Link>
       <div className="loginCartArea d-flex">
@@ -34,7 +34,7 @@ function ShakesBeardNavbar() {
       {/* <button className="loginBtn" href="lognin">登入</button>
       <button className="cartBtn"><img src={Cart} style={{width:"30px", height:'30px'}}/></button> */}
       <Nav.Link href="lognin" className="navBarFontSize" >登入</Nav.Link>
-      <Nav.Link href="" className="navBarFontSize" ><img src={Cart} style={{width:"30px", height:'30px'}}/></Nav.Link>
+      <Nav.Link as={NavLink} to="/cart" className="navBarFontSize" ><img src={Cart} style={{width:"30px", height:'30px'}}/></Nav.Link>
       </div>
       {/* </div> */}
       

@@ -1,5 +1,5 @@
 import React from 'react'
-import { Dropdown } from 'react-bootstrap'
+import { Dropdown,Badge } from 'react-bootstrap'
 import { Link } from 'react-router-dom'
 import '../styles/shops.scss'
 
@@ -7,12 +7,12 @@ function InfoSection(props) {
   console.log('InfoSection', props)
   return (
     <>
-      <div className="test1"></div>
+      <div className="test1 col"></div>
         {/* <div className="test2"></div>
         <div className="test2"></div>
         <div className="test2"></div> */}
         {/* card-body、card-title、card-text、card-link */}
-         <div className="info">
+         <div className="info col">
             <h4 className="">Sculptor Barber</h4>
             <Link to="#" className="card-link">
               男士理髮廳
@@ -40,15 +40,15 @@ function InfoSection(props) {
             <p>商家簡介:<br/>台灣男仕barbershop 第一品牌，創業六年以來，以美麗的理髮廳空間與台灣男仕理容文化薪傳聞名。</p>
             <p>提供服務:</p>
             <div className="d-flex">
-              <div className="test3">
-                理髮
-              </div>
-              <div className="test3">
-                修護
-              </div>
-              <div className="test3">
-                造型
-              </div>
+              <h5>
+                <Badge pill variant="secondary">理髮</Badge>
+              </h5>
+              <h5>
+                <Badge pill variant="secondary">修護</Badge>
+              </h5>
+              <h5>
+                <Badge pill variant="secondary">造型</Badge>
+              </h5>
             </div>
           </div>
     </>

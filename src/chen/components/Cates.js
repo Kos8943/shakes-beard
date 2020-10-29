@@ -30,7 +30,7 @@ function Cates(props) {
       <nav aria-label="breadcrumb cates">
         <ol className="breadcrumb">
           <li className="breadcrumb-item cates-item">
-            <Link to="#">全部</Link>
+            <Link to="#">全服務部</Link>
           </li>
           <li className="breadcrumb-item cates-item">
             <Link to="#">特價優惠</Link>
@@ -52,7 +52,7 @@ function Cates(props) {
         </Dropdown.Toggle>
         <Dropdown.Menu>
           <Dropdown.Item href="#/action-1">價格高低</Dropdown.Item>
-          <Dropdown.Item href="#/action-2">最新上架</Dropdown.Item>
+          <Dropdown.Item href="#/action-2">近期活動</Dropdown.Item>
           <Dropdown.Item href="#/action-3">熱門排行</Dropdown.Item>
         </Dropdown.Menu>
       </Dropdown>
