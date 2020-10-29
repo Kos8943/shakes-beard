@@ -28,6 +28,7 @@ ul{
   /* margin-top: 1rem; */
   border-top: 1px solid #a69981;
   width:10rem;
+  margin-left:rem;
 }
 .searchicon{
   width: 1.5rem;
@@ -73,9 +74,10 @@ ul{
  }
  h3{
   letter-spacing:10px;
-  margin: 2rem;
+  margin-left: 1rem;
  }
  #searchForm{
   margin-top:23%;
+  margin-left: 10%;
   
  }
