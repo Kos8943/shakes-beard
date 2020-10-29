@@ -21,7 +21,7 @@ function HomePage() {
       <body className="body">
  
 {/* 輪播牆 */}
-
+<div className="carosel-div">
     <Carousel>
         <Carousel.Item>
                 <img
@@ -62,7 +62,7 @@ function HomePage() {
                 </Carousel.Caption>
         </Carousel.Item>
     </Carousel>
-    
+    </div>
 {/* 品牌故事 */}     
         <div className="story-area w-100 h-100">
          <h2 className="story-title pb-3">品牌故事</h2>

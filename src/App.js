@@ -57,9 +57,9 @@ function App() {
        {/* 網頁內容跟Router放在這 */}
        <Route exact path="/Project">
       <ShakesBeardNavbar/>
-      <div className="footerFix">
+     
         <Project />
-        </div>
+       
         <MyFooter /> 
       </Route>
       <Route path="/cart">
