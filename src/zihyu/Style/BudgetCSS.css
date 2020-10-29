@@ -63,6 +63,11 @@
   margin: 2px auto 0px;
 }
 
+img {
+  height: 165px;
+  margin-top: 50px;
+}
+
 .startButton {
   background-color: #2d3b72;
   border-radius: 4px;
