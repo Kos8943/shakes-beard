@@ -25,7 +25,7 @@ function App() {
     <>
    
       <main role="main">
-      <ShakesBeardNavbar />
+      <ShakesBeardNavbar/>
         <Switch>
         <Route exact path="/">
         <HeroPage />
