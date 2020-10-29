@@ -1,111 +1,117 @@
-
-.area {
-  background-color: lightblue;
+.bag {
+  // background-color: #595452;
   min-height: 73.6vh;
   background-image: url("../img/bg-img1.jpg");
   background-repeat: no-repeat;
   background-size: cover;
-  border: 2px solid springgreen;
-  
+  // border: 3px solid red;
+  background-origin: border-box;
+  padding: 1px;
 }
 
-.bgc {
-    min-height: 73.6vh;
-    background-color: rgba(89, 84, 82, 0.66);
-    border: 2px solid red;
-  
+.bagw {
+  min-height: 73.6vh;
+  background-color: rgba(89, 84, 82, 0.66);
+  background-origin: border-box;
+  padding-top: 10px;
+  margin: -1px;
+  // margin: -50px;
+  // border: 2px solid red;
 }
 
+// 1920
 
-// 1920  
-
-.logninArea{
-  width:44.16vw;
+.logninArea {
+  width: 44.16vw;
   // width:848px;
   // height: 578px;
-  height:53vh;
+  height: 53vh;
   background-color: rgba(255, 255, 255, 0.75);
   border: radius 4px;
-  margin:10vh auto;
-  border: 2px solid saddlebrown;
-  
+  margin: 10vh auto;
+  // border: 2px solid saddlebrown;
 }
 
-.lognTittle{
+.lognTittle {
   font-size: 1.63rem;
   font-weight: bold;
-  text-align:center;
+  text-align: center;
   margin: 10px;
   // border: 1px solid black;
-
 }
 
-.area1{
+.area1 {
   width: 22.0833vw;
   height: 34.722vh;
   // border: 1px solid hotpink;
-  border-right:0.5px solid #232D2F ;
-
+  border-right: 0.5px solid #232d2f;
 }
 
-.logn{
-
+.logn {
 }
 
-
-.area2{
+.area2 {
   width: 22.0833vw;
   height: 34.722vh;
   // border: 1px solid steelblue;
-  border-right:0.5px solid #232D2F ;
+  border-left: 0.5px solid #232d2f;
 }
 
-
-
-.lognText{
+.lognText {
   font-size: 1.5rem;
 }
 
-
-
-.logninInput{
+.logninInput {
   background-color: #898584;
-  border:1.3px solid #6B7496;
+  border: 1.3px solid #6b7496;
   width: 15.9vw;
   height: 5.74vh;
   border-radius: 4px;
-
 }
 
-.checkButton{
-  background-color:#2D3B72;
+.checkButton {
+  background-color: #2d3b72;
   border: none;
-  color: #FFFFFF;
+  color: #ffffff;
   // width: 9.38rem;
   width: 7.8vw;
   height: 4.259vh;
   font-size: 1.5rem;
   font-weight: bold;
-  
+  border-radius: 4px;
+
 }
 
-.lognButton{
+.lognButton {
   width: 15.9vw;
   height: 5.74vh;
   border-radius: 4px;
+  text-align: left;
 }
 
-.facebook{
-  background-color: #7783A1;
-
+.facebook {
+  background-color: #7783a1;
 }
 
-.twitter{
-  background-color: #64BED9;
-
+.twitter {
+  background-color: #64bed9;
 }
 
-.google{
-  background-color: #E8E9E8;
+.google {
+  background-color: #e8e9e8;
+}
 
+.lognIcon {
+  width: 1.3354vw;
+}
+
+.newLogn {
+  background-color: #f25d50;
+  border: none;
+  color: #ffffff;
+  width: 7.8vw;
+  height: 4.259vh;
+  font-size: 1.5rem;
+  font-weight: bold;
+  border-radius: 4px;
 }
