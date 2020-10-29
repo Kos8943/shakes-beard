@@ -2,7 +2,11 @@
     font-family: PingFang;
 }
 //Hero page
-
+@media (max-width:576px){
+html{
+    font-size: 5px;
+}
+}
 .heropage{
     width: 100%;
     height: 100%;
