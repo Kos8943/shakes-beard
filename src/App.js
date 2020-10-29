@@ -14,11 +14,6 @@ import ShopList from './chen/pages/ShopList'
 import ShopDetail from './chen/pages/ShopDetail'
 import Reservation from './chen/pages/Reservation'
 import NotFoundPage from './chen/pages/NotFoundPage'
-<<<<<<< HEAD
-// import GiftBox from './zihyu/GiftBox'
-=======
-import GiftBox from './zihyu/GiftBox'
->>>>>>> 2cb29cd8e96b5ce2bda8807b2e30153526fead70
 import GiftBox_1 from './zihyu/GiftBox_1'
 import LognIn from './yen/LognIn'
 import Payment from './kos/pages/Payment'
