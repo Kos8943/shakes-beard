@@ -1,3 +1,4 @@
+
 .area {
   background-color: lightblue;
   min-height: 73.6vh;
@@ -6,19 +7,13 @@
   background-size: cover;
   border: 2px solid springgreen;
   
-
- 
-  
 }
 
 .bgc {
     min-height: 73.6vh;
     background-color: rgba(89, 84, 82, 0.66);
     border: 2px solid red;
-   
-    
   
-
 }
 
 
@@ -32,6 +27,85 @@
   background-color: rgba(255, 255, 255, 0.75);
   border: radius 4px;
   margin:10vh auto;
-  border: 2px solid saddlebrown;;
+  border: 2px solid saddlebrown;
+  
+}
+
+.lognTittle{
+  font-size: 1.63rem;
+  font-weight: bold;
+  text-align:center;
+  margin: 10px;
+  // border: 1px solid black;
+
+}
+
+.area1{
+  width: 22.0833vw;
+  height: 34.722vh;
+  // border: 1px solid hotpink;
+  border-right:0.5px solid #232D2F ;
+
+}
+
+.logn{
+
+}
+
+
+.area2{
+  width: 22.0833vw;
+  height: 34.722vh;
+  // border: 1px solid steelblue;
+  border-right:0.5px solid #232D2F ;
+}
+
+
+
+.lognText{
+  font-size: 1.5rem;
+}
+
+
+
+.logninInput{
+  background-color: #898584;
+  border:1.3px solid #6B7496;
+  width: 15.9vw;
+  height: 5.74vh;
+  border-radius: 4px;
+
+}
+
+.checkButton{
+  background-color:#2D3B72;
+  border: none;
+  color: #FFFFFF;
+  // width: 9.38rem;
+  width: 7.8vw;
+  height: 4.259vh;
+  font-size: 1.5rem;
+  font-weight: bold;
+  
+}
+
+.lognButton{
+  width: 15.9vw;
+  height: 5.74vh;
+  border-radius: 4px;
+}
+
+.facebook{
+  background-color: #7783A1;
+
+}
+
+.twitter{
+  background-color: #64BED9;
+
+}
+
+.google{
+  background-color: #E8E9E8;
 
 }
