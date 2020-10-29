@@ -17,7 +17,7 @@ function CatesAside(props) {
       <aside>
         <Form.Group controlId="searchForm">
           <Form.Row>
-            <InputGroup className="mb-3">
+            <InputGroup classNam="mb-3">
               <Form.Control  type="text" placeholder="搜尋產品"></Form.Control>
             </InputGroup>
             <Form.Label className="d-flex align-items-center">
@@ -35,9 +35,9 @@ function CatesAside(props) {
         
         {/* <Nav className="flex-column"> */}
         <h3>分類</h3>
-        <div class="container ui-state-disabled">
+        <div className="container ui-state-disabled">
           <ul id="product-menu">
-            <li class="ui-state-disabled1">
+            <li className="ui-state-disabled1">
               <div>優惠推薦</div>
 
               <ul>
@@ -46,7 +46,7 @@ function CatesAside(props) {
               </ul>
             </li>
 
-            <li class="ui-state-disabled">
+            <li className="ui-state-disabled">
               <div>頭髮造型</div>
 
               <ul>
@@ -55,7 +55,7 @@ function CatesAside(props) {
                 <div>梳子</div>
               </ul>
             </li>
-            <li class="ui-state-disabled">
+            <li className="ui-state-disabled">
               <div>刮鬍修容</div>
               <ul>
                 <div>刮鬍刀</div>
@@ -63,7 +63,7 @@ function CatesAside(props) {
                 <div>直立架</div>
               </ul>{" "}
             </li>
-            <li class="ui-state-disabled">
+            <li className="ui-state-disabled">
               <div>服飾配件</div>
               <ul>
                 <div>帽子</div>
