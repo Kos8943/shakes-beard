@@ -14,7 +14,7 @@ import ShopList from './chen/pages/ShopList'
 import ShopDetail from './chen/pages/ShopDetail'
 import Reservation from './chen/pages/Reservation'
 import NotFoundPage from './chen/pages/NotFoundPage'
-import Budget from './zihyu/Budget'
+import ChooseRazor from './zihyu/ChooseRazor'
 import LognIn from './yen/LognIn'
 import Payment from './kos/pages/Payment'
 
@@ -41,10 +41,10 @@ function App() {
   <HomePage />
   <MyFooter /> 
   </Route>
-  <Route path="/budget">
+  <Route path="/chooserazor">
   <ShakesBeardNavbar/>
   
-    <Budget />
+    <ChooseRazor />
    
     <MyFooter /> 
   </Route>

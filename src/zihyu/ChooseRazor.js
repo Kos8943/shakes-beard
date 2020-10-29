@@ -18,8 +18,7 @@ class Choose01 extends React.Component
                   <div className="title">選擇刮鬍刀</div>
                   <div className="line-under"></div>
                   <div className="line-top2"></div>
-                  <img className="boxImg" src={img} />
-                  <div className="btn" href='/giftBox_1' ><button className="startButton">下一步</button></div>
+                  <div className="btn" href=''><button className="startButton">下一步</button></div>
                 </div>
               </div>
           </div> 
