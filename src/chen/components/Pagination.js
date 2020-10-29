@@ -1,6 +1,6 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
 import '../styles/shops.scss'
+import { Link } from 'react-router-dom'
 // import { FaCaretRight } from 'react-icons/fa'
 //  className Question extends React.Component {
 //   render() {
@@ -21,7 +21,7 @@ function Pagination(props) {
               tabIndex="-1"
               aria-disabled="true"
             >
-              Previous
+              上一頁
             </Link>
           </li>
           {/* for、click-active-disabled */}
@@ -53,7 +53,7 @@ function Pagination(props) {
           </li>
           <li className="page-item">
             <Link className="page-link" to="#">
-              Next
+              下一頁
             </Link>
           </li>
         </ul>
