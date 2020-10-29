@@ -127,3 +127,13 @@
 
 //以上是購物車的CSS
 
+
+
+@media (max-width: 576px) {
+    .cartItem {
+        width: 100%;
+        height: 130px;
+        background-color: #faf;
+        padding: .5rem;
+    }
+}
