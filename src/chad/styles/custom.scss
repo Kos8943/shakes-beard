@@ -1,229 +1,219 @@
-.body{
-    font-family: PingFang;
+.body {
+  font-family: PingFang;
+}
+
+.navbar {
+  //   display: none !important;
 }
 //Hero page
 
-
-
-
-.heropage{
-    width: 100%;
-    height: 100%;
-    position: relative;
-    
-
+.heropage {
+  width: 100%;
+  height: 100%;
+  position: relative;
 }
-.hero-text-area{
-    position: absolute;
-    width: 100%;
-    top: 50%;
-    padding-left: 39%;
+.hero-text-area {
+  width: 30%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.hero-text {
+  text-overflow: clip;
+  width: 100%;
+  height: 10%;
+  font-family: PingFang;
+  font-size: 2rem;
+  text-align: center;
+  color: white;
+  letter-spacing: 0.5rem;
+  line-height: 6.5rem;
+  display: block;
+  border: 1px solid white;
+  text-decoration: none;
+  border-radius: 4px;
+  padding: 0 30px;
+}
+.hero-text:hover {
+  color: #b9e3ff;
+  text-decoration: none;
+  border-color: #b9e3ff;
+  border-radius: 4px;
+}
 
-   
-    
-}
-.hero-text{
-    
-    text-overflow: clip;
-    width: 38%;
-    height: 10%;
-    font-family: PingFang;
-    font-size: 2rem;
-    text-align: center;
-    color:white;
-    letter-spacing: .5rem;
-    line-height: 6.5rem;
-    display: block;
-    border: 1px solid white;
-    text-decoration: none;
-    border-radius: 4px;
-}
-.hero-text:hover{
-    color:#B9E3FF;
-    text-decoration: none;
-    border-color: #B9E3FF;
-    border-radius: 4px;
+@media (max-width: 700px) {
+  .hero-text {
+    font-size: 12px;
+  }
 }
 
 //故事
-.story-area{
-    margin: 15px auto;
-    
+.story-area {
+  margin: 15px auto;
 }
-.story-title{
-   text-align: center;
+.story-title {
+  text-align: center;
 }
 
-.story-text-area{
-    margin:0 auto;
- }
-
- .story-text{
-     min-width: 82%;
-     font-size:1.4rem ;
-     white-space:pre-wrap;
-     margin-bottom: 0;
-    line-height: 40px;
- }
-
- //禮物
-
- .gift-area{
-     padding-left: 17.5%;
-     padding-right: 17.5%;
-     position: relative;
- }
-
- .gift-text-area{
-     position: absolute;
-     right:22%;
-     bottom: 30%;
-     background-color: hsla(228, 43%, 31%, 0.70);
-     border-radius: 4px;
-     width: 20%;
-     height: 30%;
-     color:#F8F8F8;
-     text-align: center;
-     line-height: 30px;
- }
-
- .gift-text{
-    word-break: keep-all;
-    font-size: 1.1rem;
-    text-overflow: clip;
-    line-height: 30px;
- }
-
- .giftBtn {
-    display: inline-block;
-    padding: 12px 40px;
-    border-radius: 4px;
-    border:0px ;
-    background:hsla(228, 43%, 31%, 0.70);
-    font: 20px PingFang;
-    color: #ffffff;
-    position: absolute;
-    right:28%;
-    bottom: 10%;
-
-    
+.story-text-area {
+  margin: 0 auto;
 }
-.giftBtn:hover{  
-    background: hsla(228, 43%, 31%, 1.0);
-   
+
+.story-text {
+  min-width: 82%;
+  font-size: 1.4rem;
+  white-space: pre-wrap;
+  margin-bottom: 0;
+  line-height: 40px;
+}
+
+//禮物
+
+.gift-area {
+  padding-left: 17.5%;
+  padding-right: 17.5%;
+  position: relative;
+}
+
+.gift-text-area {
+  position: absolute;
+  right: 22%;
+  bottom: 30%;
+  background-color: hsla(228, 43%, 31%, 0.7);
+  border-radius: 4px;
+  width: 20%;
+  height: 30%;
+  color: #f8f8f8;
+  text-align: center;
+  line-height: 30px;
+}
+
+.gift-text {
+  word-break: keep-all;
+  font-size: 1.1rem;
+  text-overflow: clip;
+  line-height: 30px;
+}
+
+.giftBtn {
+  display: inline-block;
+  padding: 12px 40px;
+  border-radius: 4px;
+  border: 0px;
+  background: hsla(228, 43%, 31%, 0.7);
+  font: 20px PingFang;
+  color: #ffffff;
+  position: absolute;
+  right: 28%;
+  bottom: 10%;
+}
+.giftBtn:hover {
+  background: hsla(228, 43%, 31%, 1);
 }
 
 //熱門
-.hot-title, .hot-text{
-    text-align: center;
-    
+.hot-title,
+.hot-text {
+  text-align: center;
 }
-.hot-text{
-    word-break: keep-all;
-    font-size: 1.4rem;
-    line-height: 40px;
-    width: 30%;
+.hot-text {
+  word-break: keep-all;
+  font-size: 1.4rem;
+  line-height: 40px;
+  width: 30%;
 }
-#cardborder{
-    border-style:none;
+#cardborder {
+  border-style: none;
 }
 
-#cardbody{
-    margin-left: 25%;
+#cardbody {
+  margin-left: 25%;
 }
-#price{
-    margin-left: 15%;
+#price {
+  margin-left: 15%;
 }
-#buy{
-    margin-left: 3%;
-    border-radius: 4px;
-    width: 120px;
-    height: 50px;
-    padding-top:5%
-    
+#buy {
+  margin-left: 3%;
+  border-radius: 4px;
+  width: 120px;
+  height: 50px;
+  padding-top: 5%;
 }
 
 //熱銷
 
-.top-text{
-    word-break: keep-all;
-    font-size: 1.4rem;
-    text-overflow: clip;
-    width: 15%;
-    position: absolute;
-    top:10%;
-    right:23%;
-    line-height: 40px;
-    
-} 
+.top-text {
+  word-break: keep-all;
+  font-size: 1.4rem;
+  text-overflow: clip;
+  width: 15%;
+  position: absolute;
+  top: 10%;
+  right: 23%;
+  line-height: 40px;
+}
 
-.top-img{
-    position: relative;
+.top-img {
+  position: relative;
 }
 
 .topBtn {
-    margin-top:1%;
-    display: inline-block;
-    padding: 12px 40px;
-    border-radius: 4px;
-    border:0px ;
-    background:hsla(228, 43%, 31%, 1.0);
-    font: 20px PingFang;
-    color: #ffffff;
-    position: absolute;
-    right:28%;
-    top: 26%;
-
-    
+  margin-top: 1%;
+  display: inline-block;
+  padding: 12px 40px;
+  border-radius: 4px;
+  border: 0px;
+  background: hsla(228, 43%, 31%, 1);
+  font: 20px PingFang;
+  color: #ffffff;
+  position: absolute;
+  right: 28%;
+  top: 26%;
 }
-.topBtn:hover{  
-    background: hsla(228, 43%, 31%, 0.7);
-   
+.topBtn:hover {
+  background: hsla(228, 43%, 31%, 0.7);
 }
 
 //地圖
-.map-top-area{
-    padding-right: 14%;
+.map-top-area {
+  padding-right: 14%;
 }
-.top-text-area{
-    margin: auto 0;
-    width: 10%;   
-    word-break: keep-all;
-    font-size: 1.625rem;
-    line-height: 40px;
+.top-text-area {
+  margin: auto 0;
+  width: 10%;
+  word-break: keep-all;
+  font-size: 1.625rem;
+  line-height: 40px;
 }
-.map-down-text{
-    
-    width: 23%;
-    word-break: keep-all;
-    font-size: 1.625rem;
-    line-height: 40px;
+.map-down-text {
+  width: 23%;
+  word-break: keep-all;
+  font-size: 1.625rem;
+  line-height: 40px;
 }
-.down-text-area{
-    padding-left: 23%;
-    margin-top:5%;
-    width: 50%;
-
+.down-text-area {
+  padding-left: 23%;
+  margin-top: 5%;
+  width: 50%;
 }
 
-
-#mapBtn{
-    
-    margin-top: 4%;
-    display: inline-block;
-    padding: 12px 40px;
-    border-radius: 4px;
-    border:0px ;
-    background:hsla(228, 43%, 31%, 1.0);
-    font: 20px PingFang;
-    color: #ffffff; 
+#mapBtn {
+  margin-top: 4%;
+  display: inline-block;
+  padding: 12px 40px;
+  border-radius: 4px;
+  border: 0px;
+  background: hsla(228, 43%, 31%, 1);
+  font: 20px PingFang;
+  color: #ffffff;
 }
 
-#mapBtn:hover{  
-    background: hsla(228, 43%, 31%, 0.7);
+#mapBtn:hover {
+  background: hsla(228, 43%, 31%, 0.7);
 }
 
-.down-img{
-    width: 30%;
-    margin-right: 15%;
+.down-img {
+  width: 30%;
+  margin-right: 15%;
 }
