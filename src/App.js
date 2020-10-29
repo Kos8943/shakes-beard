@@ -18,6 +18,7 @@ import Budget from './zihyu/Budget'
 import LognIn from './yen/LognIn'
 import Payment from './kos/pages/Payment'
 
+
 function App() {
   return (
     <Router>
@@ -32,8 +33,13 @@ function App() {
         <Route exact path="/homepage">
         <HomePage />
         </Route>
+<<<<<<< HEAD
         <Route path="/budget">
           <Budget />
+=======
+        <Route path="/GiftBox_1">
+          <GiftBox_1 />
+>>>>>>> a2652ebd88b9308211cbba7f50acc9e0822be585
         </Route>
         <Route path="/lognin">
               <LognIn />

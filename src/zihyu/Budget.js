@@ -1,7 +1,12 @@
 import React from 'react'
 import './Style/GiftBoxCSS_1.css';
 
+<<<<<<< HEAD:src/zihyu/Budget.js
 class Budget_1 extends React.Component
+=======
+
+class Gift_1 extends React.Component
+>>>>>>> a2652ebd88b9308211cbba7f50acc9e0822be585:src/zihyu/GIftBox_1.js
 {
   render()
   {
