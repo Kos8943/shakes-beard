@@ -16,13 +16,18 @@
 }
 
 #product-menu{
-  /* padding-left: 20%; */
-  margin-bottom: auto;
+  padding-left: 10%;
+  /* margin: 2rem; */
   
 }
+ul{
+  padding-left: 5%;
+  line-height: 2rem;
+}
 .ui-state-disabled1{
-  margin-top: 1rem;
+  /* margin-top: 1rem; */
   border-top: 1px solid #a69981;
+  width:10rem;
 }
 .searchicon{
   width: 1.5rem;
@@ -40,4 +45,37 @@
   width:100%;
   height: 100%;
      
+ }
+ .carousel-item{
+  margin-top:10%;
+ }
+ .Form.Control{
+   width: 400px;
+ }
+ .text-muted{
+   color:#a69981 ;
+   position: absolute;
+    z-index: 1;
+    text-indent: 135px ;
+    margin-top : 30%;
+    /* vertical-align: middle; */
+    cursor: pointer;
+    top: 0;
+    left: 8px;
+    content: '';
+    display:block;
+    width: 16px;
+    height: 16px;
+    background: no-repeat;
+ }
+ .searchFont{
+   color:#a69981 ;
+ }
+ h3{
+  letter-spacing:10px;
+  margin: 2rem;
+ }
+ #searchForm{
+  margin-top:23%;
+  
  }

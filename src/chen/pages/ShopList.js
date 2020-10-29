@@ -3,9 +3,9 @@ import Breadcrumb from '../components/Breadcrumb'
 import Pagination from '../components/Pagination'
 import CatesAside from '../components/CatesAside'
 import Cards from '../components/Cards'
-import Sorts from '../components/Sorts'
 import Cates from '../components/Cates'
 import Banner from '../components/Banner'
+// import Sorts from '../components/Sorts'
 
 function ShopList(props) {
   console.log('Shoplist', props)
@@ -13,7 +13,7 @@ function ShopList(props) {
     <>
       <Breadcrumb />
       {/* <Carousel /> */}
-      <h3>商家列表</h3>
+      {/* <h3>商家列表</h3> */}
       <div className="container">
         <div className="row">
           <div className="col-3">
@@ -23,18 +23,26 @@ function ShopList(props) {
             <Banner />
             <Cates />
             {/* <Sorts /> */}
-            <div className="cardGroup">
+            <div className="cardGroup d-flex justify-content-center">
               <Cards />
               <Cards />
               <Cards />
             </div>
-            <div className="cardGroup">
+            <div className="cardGroup d-flex justify-content-center">
               <Cards />
               <Cards />
               <Cards />
             </div>
+          <Pagination />
           </div>
         </div>
+        {/* <div className="row">
+          <div className="col-3"></div>
+          <div className="col-9">
+            <Cates />
+            <Sorts />
+          </div>
+        </div> */}
         {/* <div className="row">
           <div className="col-3"></div>
           <div className="col-9 cardGroup">
@@ -43,7 +51,6 @@ function ShopList(props) {
             <Cards />
           </div>
         </div> */}
-        <Pagination />
       </div>
     </>
   )
