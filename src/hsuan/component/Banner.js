@@ -1,11 +1,12 @@
 import React from "react";
-import original from "../icon/original.jpg";
 import { Carousel } from "react-bootstrap";
+import "../Project.css";
+import search from '../icon/search.svg';
 // import background from './card01.jpg'
 
 function Banner(props) {
   console.log("Banner", props);
-  return (
+   return (
     <>
       <Carousel>
         <Carousel.Item>
@@ -26,7 +27,7 @@ function Banner(props) {
         <Carousel.Item>
           <img
             className="d-block w-100"
-            src={require("../icon/horizontal1.jpg")}
+            src={require("../icon/horizontal4.jpg")}
             alt="Third slide"
           />
 
@@ -54,6 +55,7 @@ function Banner(props) {
             className="d-block w-100"
             src={require("../icon/horizontal5.jpg")}
             alt="Third slide"
+            
           />
 
           <Carousel.Caption>
@@ -63,9 +65,9 @@ function Banner(props) {
             </p>
           </Carousel.Caption>
         </Carousel.Item>
-      </Carousel>
+        </Carousel>
     </>
   );
-}
+};
 
-export default Banner;
+export default Banner ;
