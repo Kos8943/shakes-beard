@@ -52,45 +52,15 @@
 }
 
 .line-under {
-  width: 150%;
+  width: 450px;
   border-top: solid #2d3b72 1px;
   margin: 15px auto 0px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
 }
 
 .line-top2 {
   width: 100%;
   border-top: solid #2d3b72 3px;
   margin: 2px auto 0px;
-  position: absolute;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.subtitle {
-  color: #2d3b72;
-  font-family: Roboto;
-  font-size: 17px;
-  margin: 62px auto 55px;
-  text-align: center;
-  letter-spacing: 2px;
-}
-
-.line-middle {
-  width: 61%;
-  border-top: solid #2d3b72 1px;
-  margin: 0 auto;
-}
-
-.thirdTitle {
-  color: #2d3b72;
-  font-family: PingFang;
-  font-size: 17px;
-  margin: 51px auto 50px;
-  text-align: center;
 }
 
 .startButton {
