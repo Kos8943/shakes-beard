@@ -4,6 +4,7 @@
   background-image: url("../img/bg-img1.jpg");
   background-repeat: no-repeat;
   background-size: cover;
+  border: 2px solid springgreen;
   
 
  
@@ -13,6 +14,7 @@
 .bgc {
     min-height: 73.6vh;
     background-color: rgba(89, 84, 82, 0.66);
+    border: 2px solid red;
    
     
   
@@ -29,6 +31,7 @@
   height:53vh;
   background-color: rgba(255, 255, 255, 0.75);
   border: radius 4px;
-  margin:0 auto;
+  margin:10vh auto;
+  border: 2px solid saddlebrown;;
 
 }
