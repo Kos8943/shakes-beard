@@ -24,7 +24,7 @@ function ShakesBeardNavbar(props) {
     <Nav  className="navbarFlex d-flex justify-content-between">
       <Nav.Link href="#home" className="navBarFontSize">首頁</Nav.Link>
       <Nav.Link href="#link" className="navBarFontSize">產品列表</Nav.Link>
-      <Nav.Link href="giftBox_1" className="navBarFontSize">客製化禮盒</Nav.Link>
+      <Nav.Link href="budget" className="navBarFontSize">客製化禮盒</Nav.Link>
       <Navbar.Brand href="#home" className="logoFont">logo</Navbar.Brand>
       <Nav.Link ><img src={Logo} className="logo"></img></Nav.Link>
       <Nav.Link href="#link" className="navBarFontSize">商家預約</Nav.Link>

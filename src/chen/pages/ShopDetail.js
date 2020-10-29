@@ -14,7 +14,7 @@ function ShopDetail(props) {
     <>
       <Breadcrumb />
       {/* <Carousel /> */}
-      <h3>商家頁面</h3>
+      {/* <h3>商家頁面</h3> */}
       <div className="container">
         <div className="row">
           <div className="col-3">
@@ -33,6 +33,7 @@ function ShopDetail(props) {
               <Description/>
               <strong className="d-inline-block my-2">注意事項</strong>
               <p className="card-text mb-auto">This is a wider card with supporting text below as a natural lead-in to additional content.</p>
+              {/* map */}
               <Recommend/>
           </div>
         </div>

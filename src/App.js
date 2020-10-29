@@ -14,9 +14,10 @@ import ShopList from './chen/pages/ShopList'
 import ShopDetail from './chen/pages/ShopDetail'
 import Reservation from './chen/pages/Reservation'
 import NotFoundPage from './chen/pages/NotFoundPage'
-import GiftBox_1 from './zihyu/GiftBox_1'
+import Budget from './zihyu/Budget'
 import LognIn from './yen/LognIn'
 import Payment from './kos/pages/Payment'
+
 
 function App() {
   return (
@@ -32,8 +33,8 @@ function App() {
         <Route exact path="/homepage">
         <HomePage />
         </Route>
-        <Route path="/giftBox_1">
-          <GiftBox_1 />
+        <Route path="/budget">
+          <Budget />
         </Route>
         <Route path="/lognin">
               <LognIn />
