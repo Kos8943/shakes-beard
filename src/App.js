@@ -18,6 +18,7 @@ import GiftBox_1 from './zihyu/GiftBox_1'
 import LognIn from './yen/LognIn'
 import Payment from './kos/pages/Payment'
 
+
 function App() {
   return (
     <Router>
@@ -32,7 +33,7 @@ function App() {
         <Route exact path="/homepage">
         <HomePage />
         </Route>
-        <Route path="/giftBox_1">
+        <Route path="/GiftBox_1">
           <GiftBox_1 />
         </Route>
         <Route path="/lognin">
