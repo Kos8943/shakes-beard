@@ -20,51 +20,101 @@ import Payment from './kos/pages/Payment'
 
 function App() {
   return (
-    <Router>
+    
     <>
+    <body className="body">
+
+<Router>
+
+
+
+
+  <Switch>
+  <Route exact path="/">
+  <HeroPage />
+
+  </Route>
+  
+  <Route exact path="/homepage">
+  <ShakesBeardNavbar/>
+  <HomePage />
+  <MyFooter /> 
+  </Route>
+  <Route path="/giftBox_1">
+  <ShakesBeardNavbar/>
+  
+    <GiftBox_1 />
    
-      <main role="main">
+    <MyFooter /> 
+  </Route>
+  <Route path="/lognin">
+  <ShakesBeardNavbar/>
+        <LognIn />
+        <MyFooter /> 
+      </Route>
+      <main>
+       {/* 網頁內容跟Router放在這 */}
+       <Route exact path="/Project">
       <ShakesBeardNavbar/>
-        <Switch>
-        <Route exact path="/">
-        <HeroPage />
-        </Route>
-        <Route exact path="/homepage">
-        <HomePage />
-        </Route>
-        <Route path="/giftBox_1">
-          <GiftBox_1 />
-        </Route>
-        <Route path="/lognin">
-              <LognIn />
-            </Route>
-          <div className="footerFix">
-            {/* 網頁內容跟Router放在這 */}
-            <Route exact path="/Project">
-              <Project />
-            </Route>
-            <Route path="/cart">
-              <Cart />
-            </Route>
-            <Route path="/payment">
-              <Payment />
-            </Route>
-            <Route path="/shoplist">
-              <ShopList />
-            </Route>
-            <Route path="/shopdetail">
-              <ShopDetail />
-            </Route>
-            <Route path="/reservation">
-              <Reservation />
-            </Route>
-           
-          </div>
-        </Switch>
-      <MyFooter />
+      <div className="footerFix">
+        <Project />
+        </div>
+        <MyFooter /> 
+      </Route>
+      <Route path="/cart">
+      <ShakesBeardNavbar/>
+      <div className="footerFix">
+        <Cart />
+        </div>
+        <MyFooter /> 
+      </Route>
+      <Route path="/payment">
+      <ShakesBeardNavbar/>
+      <div className="footerFix">
+        <Payment />
+        </div>
+        <MyFooter /> 
+      </Route>
+      <Route path="/shoplist">   
+      <ShakesBeardNavbar/>
+      <div className="footerFix">
+        <ShopList />
+        </div>
+        <MyFooter /> 
+      </Route>
+      <Route path="/shopdetail">
+      <ShakesBeardNavbar/>
+      <div className="footerFix">
+        <ShopDetail />
+        </div>
+        <MyFooter /> 
+      </Route>
+      <Route path="/reservation">
+      <ShakesBeardNavbar/>
+      <div className="footerFix">
+        <Reservation />
+        </div>
+        <MyFooter /> 
+      </Route>
       </main>
+  </Switch>
+{/* <MyFooter /> */}
+
+{/* 輪播牆 */}
+
+</Router>
+
+
+
+
+
+
+
+
+</body>
+      
     </>
-    </Router>
+  
   )
 }
 
