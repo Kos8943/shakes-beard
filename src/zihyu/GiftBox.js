@@ -1,5 +1,5 @@
-import React from 'react'
-import './Style/GiftBoxCSS.css';
+// import React from 'react'
+// import './Style/GiftBoxCSS.css';
 
 
 class Gift extends React.Component
