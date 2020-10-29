@@ -6,6 +6,19 @@
 
 // 其它要導入覆蓋掉原本的預設bootstrap樣式要放在這下面
 
+@media(max-width:576px){
+  .navbarFlex{
+    height: 300px !important; 
+    
+  }
+  .logo{
+    display: none;
+  }
+  .navBarcolor{
+    padding-left: 5% !important; 
+  }
+ 
+}
 
 
 
@@ -33,11 +46,14 @@ main {
   background-color: #595452;
   padding-left: 17.5%;
   padding-right: 17.5%;
+
 }
 .navbarFlex {
   width: 100%;
-  height: 50px;
+ 
 }
+
+
 
 .loginBtn {
   background-color: #f8f8f8;
@@ -58,8 +74,8 @@ main {
 }
 
 .svg-area img {
-  height: 3%;
-  width: 3%;
+  height: 30px;
+  width: 30px;
   margin-right: 0.625rem;
 }
 .svg-area {
@@ -82,9 +98,13 @@ main > .container {
   z-index: 1;
   margin-top: -25px;
 }
+.navbarFlex{
+  height: 50px;
+}
 
 .logoset {
   // position: relative;
+ 
 }
 
 .logoFont {
