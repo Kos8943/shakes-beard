@@ -33,14 +33,14 @@ function Cates(props) {
             <Link to="#">全部</Link>
           </li>
           <li className="breadcrumb-item cates-item">
-            <Link to="#">特價優惠</Link>
+            <Link to="#">服飾配件</Link>
           </li>
           {/* 變數
           <li className="breadcrumb-item active" aria-current="page">
             {path}
           </li> */}
           <li className="breadcrumb-item active" aria-current="page">
-            sth
+            領帶/領結
           </li>
         </ol>
       </nav>

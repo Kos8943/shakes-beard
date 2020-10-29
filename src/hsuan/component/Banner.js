@@ -17,8 +17,8 @@ function Banner(props) {
           />
 
           <Carousel.Caption>
-            <h3>Second slide label</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            {/* <h3>Second slide label</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p> */}
           </Carousel.Caption>
           {/* src="holder.js/800x400?text=First slide&bg=373940" */}
 
@@ -32,8 +32,8 @@ function Banner(props) {
           />
 
           <Carousel.Caption>
-            <h3>Second slide label</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            {/* <h3>Second slide label</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p> */}
           </Carousel.Caption>
         </Carousel.Item>
         <Carousel.Item>
@@ -44,10 +44,10 @@ function Banner(props) {
           />
 
           <Carousel.Caption>
-            <h3>Third slide label</h3>
+            {/* <h3>Third slide label</h3>
             <p>
               Praesent commodo cursus magna, vel scelerisque nisl consectetur.
-            </p>
+            </p> */}
           </Carousel.Caption>
         </Carousel.Item>
         <Carousel.Item>
@@ -59,10 +59,10 @@ function Banner(props) {
           />
 
           <Carousel.Caption>
-            <h3>Third slide label</h3>
+            {/* <h3>Third slide label</h3>
             <p>
               Praesent commodo cursus magna, vel scelerisque nisl consectetur.
-            </p>
+            </p> */}
           </Carousel.Caption>
         </Carousel.Item>
         </Carousel>
