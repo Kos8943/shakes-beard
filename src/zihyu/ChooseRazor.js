@@ -1,7 +1,6 @@
 import React from 'react'
-import './Style/BudgetCSS.css';
-import img from './image/box.png';
-class Budget_1 extends React.Component
+import './Style/ChooseRazorCSS.css';
+class Choose01 extends React.Component
 
 
 {
@@ -15,8 +14,8 @@ class Budget_1 extends React.Component
       
           <div className="blueBox">
               <div className="whiteBox">
-                <div className="step">Step.1
-                  <div className="title">選擇預算</div>
+                <div className="step">Step.2
+                  <div className="title">選擇刮鬍刀</div>
                   <div className="line-under"></div>
                   <div className="line-top2"></div>
                   <img className="boxImg" src={img} />
@@ -33,11 +32,11 @@ class Budget_1 extends React.Component
   }
 }
 
-function Budget(props)
+function ChooseRazor(props)
 {
   return (
-    <Budget_1 />
+    <Choose01 />
   )
 }
 
-export default Budget
+export default ChooseRazor
