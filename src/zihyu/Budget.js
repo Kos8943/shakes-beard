@@ -1,7 +1,7 @@
 import React from 'react'
 import './Style/GiftBoxCSS_1.css';
 
-class Gift_1 extends React.Component
+class Budget_1 extends React.Component
 {
   render()
   {
@@ -32,11 +32,11 @@ class Gift_1 extends React.Component
   }
 }
 
-function GiftBox_1(props)
+function Budget(props)
 {
   return (
-    <Gift_1 />
+    <Budget_1 />
   )
 }
 
-export default GiftBox_1
+export default Budget
