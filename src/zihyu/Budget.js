@@ -15,11 +15,11 @@ class Budget_1 extends React.Component
       
           <div className="blueBox">
               <div className="whiteBox">
-                <div className="step">step.1
+                <div className="step">Step.1
                   <div className="title">選擇預算</div>
                   <div className="line-under"></div>
                   <div className="line-top2"></div>
-                  <img className="li" src={img} />
+                  <img className="boxImg" src={img} />
                   <div className="btn" href='/giftBox_1' ><button className="startButton">下一步</button></div>
                 </div>
               </div>
