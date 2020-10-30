@@ -45,10 +45,10 @@ function Project() {
           <h3>分類</h3>
         </div></div></Col> */}
     <Col></Col>
-           {/* <Col xs={6} md={4}>
-           <div className="original">
-           <img src={original}></img></div>
-    </Col> */}
+           <Col xs={6} md={4}>
+           {/* <div className="original">
+           <img src={original}></img></div> */}
+    </Col>
   </Row>
            
     </Container>
@@ -57,7 +57,7 @@ function Project() {
       <div className="container">
         <div className="row">
           <div className="col-3">
-            <Cards/>
+            <CatesAside/>
           </div>
           <div className="col-9">
             <Banner />
