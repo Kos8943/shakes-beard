@@ -1,6 +1,6 @@
 import React from 'react'
 import './Style/ChooseRazorCSS.css';
-class Choose01 extends React.Component
+class Class_ChooseRazor extends React.Component
 
 
 {
@@ -15,10 +15,10 @@ class Choose01 extends React.Component
           <div className="blueBox">
               <div className="whiteBox">
                 <div className="step">Step.2
-                  <div className="title">選擇刮鬍刀</div>
-                  <div className="line-under"></div>
-                  <div className="line-top2"></div>
-                  <div className="btn" href=''><button className="startButton">下一步</button></div>
+                  <div className="Title2">選擇刮鬍刀</div>
+                  <div className="lineTop"></div>
+                  <div className="lineDown"></div>
+                  
                 </div>
               </div>
           </div> 
@@ -31,11 +31,11 @@ class Choose01 extends React.Component
   }
 }
 
-function ChooseRazor(props)
+function Func_ChooseRazor(props)
 {
   return (
-    <Choose01 />
+    <Class_ChooseRazor />
   )
 }
 
-export default ChooseRazor
+export default Func_ChooseRazor

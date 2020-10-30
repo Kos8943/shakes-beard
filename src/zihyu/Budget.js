@@ -14,12 +14,12 @@ class Class_Budget extends React.Component
           <div className="blueBox">
               <div className="whiteBox">
                 <div className="step">Step.1
-                  <div className="budgetTitle">選擇預算</div>
-                  <div className="budget_lineTop"></div>
-                  <div className="budget_lineDown"></div>
+                  <div className="Title2">選擇預算</div>
+                  <div className="lineTop"></div>
+                  <div className="lineDown"></div>
                   <img className="budget_boxImg" src={img} />
-                  
-                  <a className="bigBtn" href="/Path_Budget"><button className="startButton">下一步</button></a>
+
+                  <a className="bigBtn" href="/Path_ChooseRazor"><button className="startButton">下一步</button></a>
                 </div>
               </div>
           </div> 

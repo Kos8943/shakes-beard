@@ -1,4 +1,4 @@
-/* .contain {
+.contain {
   min-height: 78vh;
   background-image: url("../image/background.jpg");
   background-size: cover;
@@ -42,7 +42,7 @@
   align-items: center;
 }
 
-.title {
+.Title2 {
   color: #2d3b72;
   font-family: PingFang;
   font-size: 26px;
@@ -51,19 +51,19 @@
   justify-content: center;
 }
 
-.line-under {
+.lineTop {
   width: 450px;
   border-top: solid #2d3b72 1px;
   margin: 15px auto 0px;
 }
 
-.line-top2 {
+.lineDown {
   width: 100%;
   border-top: solid #2d3b72 3px;
   margin: 2px auto 0px;
 }
 
-.boxImg {
+/* .boxImg {
   height: 165px;
   margin-top: 50px;
 }
