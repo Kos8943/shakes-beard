@@ -1,7 +1,7 @@
 import React from 'react'
 import './Style/BudgetCSS.css';
 import img from './image/box.png';
-class Budget_1 extends React.Component
+class Class_Budget extends React.Component
 
 
 {
@@ -20,7 +20,7 @@ class Budget_1 extends React.Component
                   <div className="line-under"></div>
                   <div className="line-top2"></div>
                   <img className="boxImg" src={img} />
-                  <div className="btn" href='/giftBox_1' ><button className="startButton">下一步</button></div>
+                  <div className="btn" href='' ><button className="startButton">下一步</button></div>
                 </div>
               </div>
           </div> 
@@ -33,11 +33,11 @@ class Budget_1 extends React.Component
   }
 }
 
-function Budget(props)
+function Func_Budget(props)
 {
   return (
-    <Budget_1 />
+    <Class_Budget />
   )
 }
 
-export default Budget
+export default Func_Budget
