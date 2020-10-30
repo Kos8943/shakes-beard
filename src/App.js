@@ -16,6 +16,7 @@ import ShopDetail from './chen/pages/ShopDetail'
 import Reservation from './chen/pages/Reservation'
 import NotFoundPage from './chen/pages/NotFoundPage'
 import Func_GiftBox from './zihyu/GiftBox'
+import Func_Budget from './zihyu/Budget'
 import LognIn from './yen/LognIn'
 import Payment from './kos/pages/Payment'
 
@@ -34,9 +35,14 @@ function App() {
         <Route exact path="/homepage">
         <HomePage />
         </Route>
+        
         <Route path="/Path_GiftBox">
         <Func_GiftBox />
         </Route>
+        <Route path="/Path_Budget">
+        <Func_Budget />
+        </Route>
+
         <Route path="/lognin">
               <LognIn />
             </Route>
