@@ -14,7 +14,7 @@ function Cards(props) {
             alt="Third slide"
           /> */}
           
-      <div className="card">
+      <div className="hsuanproduct">
         <img src={require('../icon/tie-01.jpg')} className="card-img-top" alt="..." />
         
       </div>
