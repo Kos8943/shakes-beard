@@ -81,7 +81,7 @@ function HomePage() {
 
             <div className="gift-area">
                 <img
-                    className="gift-img w-100 h-100"
+                    className="gift-img"
                     src={giftimg}                
                 />
                 <div className="gift-text-area">
