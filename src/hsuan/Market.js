@@ -52,11 +52,11 @@ function Market() {
              
       </Container>
        
-             {/* <Carousel /> */}
+             {/* <Carousel /> */}<Cates />
         <div className="container">
           <div className="row">
             <div className="col-3">
-            {/* <Cates /> */}
+            
               <Cards />
              
             </div>
