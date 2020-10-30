@@ -9,113 +9,67 @@ import HeroPage from './chad/HeroPage'
 //以下import個人頁面
 import HomePage from './chad/HomePage'
 import Project from './hsuan/Project'
+import Market from './hsuan/Market'
 import Cart from './kos/pages/Cart'
 import ShopList from './chen/pages/ShopList'
 import ShopDetail from './chen/pages/ShopDetail'
 import Reservation from './chen/pages/Reservation'
 import NotFoundPage from './chen/pages/NotFoundPage'
-import ChooseRazor from './zihyu/ChooseRazor'
+import Budget from './zihyu/Budget'
 import LognIn from './yen/LognIn'
 import Payment from './kos/pages/Payment'
 
 
 function App() {
   return (
-    
+    <Router>
     <>
-    <body className="body">
-
-<Router>
-
-
-
-
-  <Switch>
-  <Route exact path="/">
-  <HeroPage />
-
-  </Route>
-  
-  <Route exact path="/homepage">
-  <ShakesBeardNavbar/>
-  <HomePage />
-  <MyFooter /> 
-  </Route>
-  <Route path="/chooserazor">
-  <ShakesBeardNavbar/>
-  
-    <ChooseRazor />
    
-    <MyFooter /> 
-  </Route>
-  <Route path="/lognin">
-  <ShakesBeardNavbar/>
-        <LognIn />
-        <MyFooter /> 
-      </Route>
-      <main>
-       {/* 網頁內容跟Router放在這 */}
-       <Route exact path="/Project">
+      <main role="main">
       <ShakesBeardNavbar/>
-     
-        <Project />
-       
-        <MyFooter /> 
-      </Route>
-      <Route path="/cart">
-      <ShakesBeardNavbar/>
-      <div className="footerFix">
-        <Cart />
-        </div>
-        <MyFooter /> 
-      </Route>
-      <Route path="/payment">
-      <ShakesBeardNavbar/>
-      <div className="footerFix">
-        <Payment />
-        </div>
-        <MyFooter /> 
-      </Route>
-      <Route path="/shoplist">   
-      <ShakesBeardNavbar/>
-      <div className="footerFix">
-        <ShopList />
-        </div>
-        <MyFooter /> 
-      </Route>
-      <Route path="/shopdetail">
-      <ShakesBeardNavbar/>
-      <div className="footerFix">
-        <ShopDetail />
-        </div>
-        <MyFooter /> 
-      </Route>
-      <Route path="/reservation">
-      <ShakesBeardNavbar/>
-      <div className="footerFix">
-        <Reservation />
-        </div>
-        <MyFooter /> 
-      </Route>
+        <Switch>
+        <Route exact path="/">
+        <HeroPage />
+        </Route>
+        <Route exact path="/homepage">
+        <HomePage />
+        </Route>
+        <Route path="/budget">
+          <Budget />
+        </Route>
+        <Route path="/lognin">
+              <LognIn />
+            </Route>
+          <div className="footerFix">
+            {/* 網頁內容跟Router放在這 */}
+            <Route exact path="/Project">
+              <Project />
+            </Route>
+            <Route exact path="/Market">
+              <Market />
+            </Route>
+            <Route path="/cart">
+              <Cart />
+            </Route>
+            <Route path="/payment">
+              <Payment />
+            </Route>
+            <Route path="/shoplist">
+              <ShopList />
+            </Route>
+            <Route path="/shopdetail">
+              <ShopDetail />
+            </Route>
+            <Route path="/reservation">
+              <Reservation />
+            </Route>
+           
+          </div>
+        </Switch>
+      <MyFooter />
       </main>
-  </Switch>
-{/* <MyFooter /> */}
-
-{/* 輪播牆 */}
-
-</Router>
-
-
-
-
-
-
-
-
-</body>
-      
     </>
-  
+    </Router>
   )
 }
 

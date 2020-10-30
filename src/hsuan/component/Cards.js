@@ -8,11 +8,11 @@ function Cards(props) {
   return (
     <>
       {/*  style="width: 18rem;" src="./card01" */}
-      <img
+      {/* <img
             className="d-block w-100"
             src={require("../icon/horizontal2.jpg")}
             alt="Third slide"
-          />
+          /> */}
       <div className="card">
         <img src={require('../icon/tie-01.jpg')} className="card-img-top" alt="..." />
         <div className="card-body">
