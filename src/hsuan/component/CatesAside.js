@@ -34,13 +34,13 @@ function CatesAside(props) {
          </Form.Group>
         
         {/* <Nav className="flex-column"> */}
-        <h3>分類</h3>
+        <div className="hsuanh3"><h3>分類</h3></div>
         <div className="container ui-state-disabled">
           <ul id="product-menu">
             <li className="ui-state-disabled1">
               <div>優惠推薦</div>
 
-              <ul>
+              <ul className="hsuanul">
                 <div>本月優惠</div>
                 <div>免運專區</div>
               </ul>
@@ -49,7 +49,7 @@ function CatesAside(props) {
             <li className="ui-state-disabled">
               <div>頭髮造型</div>
 
-              <ul>
+              <ul className="hsuanul">
                 <div>髮蠟</div>
 
                 <div>梳子</div>
@@ -57,15 +57,15 @@ function CatesAside(props) {
             </li>
             <li className="ui-state-disabled">
               <div>刮鬍修容</div>
-              <ul>
+              <ul className="hsuanul">
                 <div>刮鬍刀</div>
                 <div>刮鬍刷</div>
                 <div>直立架</div>
-              </ul>{" "}
+              </ul>
             </li>
             <li className="ui-state-disabled">
               <div>服飾配件</div>
-              <ul>
+              <ul className="hsuanul">
                 <div>帽子</div>
 
                 <div>墨鏡</div>
