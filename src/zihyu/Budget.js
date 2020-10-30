@@ -7,8 +7,6 @@ class Class_Budget extends React.Component
 {
   render()
   {
-    const MyString = 'Hello';
-    
     return (
       <div className="contain">
         <div className="background_white">
@@ -20,7 +18,7 @@ class Class_Budget extends React.Component
                   <div className="line-under"></div>
                   <div className="line-top2"></div>
                   <img className="boxImg" src={img} />
-                  <div className="btn" href='' ><button className="startButton">下一步</button></div>
+                  <div className="bigBtn" href='' ><button className="startButton">下一步</button></div>
                 </div>
               </div>
           </div> 

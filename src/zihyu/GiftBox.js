@@ -1,5 +1,6 @@
 import React from 'react'
 import './Style/GiftBoxCSS.css';
+import { Button } from 'react-bootstrap'
 
 
 class Class_Gift extends React.Component
@@ -22,7 +23,12 @@ class Class_Gift extends React.Component
                 <div className="subtitle">FOR  THE  MAN  IN  YOUR  LIFE.</div>
                 <div className="line-middle"></div>
                 <div className="thirdTitle">獨家客製化禮盒，傳遞最真摯的心意</div>
-                <div className="btn" href='/giftBox_1' ><button className="startButton">開始製作</button></div>
+                
+                {/* <a className="btn" href="/Path_Budget">
+                  <Button className="startButton">開始製作</Button>
+                </a> */}
+
+                <a className="bigBtn" href="/Path_Budget"><button className="startButton">開始製作</button></a>
 
 
               </div>
