@@ -13,24 +13,27 @@ function Cards(props) {
             src={require("../icon/horizontal2.jpg")}
             alt="Third slide"
           /> */}
+          <div className="col-9">
+          <nav aria-label="breadcrumb cates">
+        <ol className="breadcrumb">
+          <li className="breadcrumb-item cates-item">
+            <Link to="#">全部</Link>
+          </li>
+          <li className="breadcrumb-item cates-item">
+            <Link to="#">服飾配件</Link>
+          </li>
+          {/* 變數
+          <li className="breadcrumb-item active" aria-current="page">
+            {path}
+          </li> */}
+          <li className="breadcrumb-item active" aria-current="page">
+            領帶/領結
+          </li>
+        </ol>
+      </nav></div>
       <div className="card">
         <img src={require('../icon/tie-01.jpg')} className="card-img-top" alt="..." />
-        <div className="card-body">
-          <h5 className="card-title">Sculptor Barber</h5>
-          <Link to="#" className="card-link">
-            男士理髮廳
-          </Link>
-          <Link to="#" className="card-link">
-            台北市大安區
-          </Link>
-          <p className="card-text ">提供男士理髮、染髮、護髮等服務</p>
-          <Link to="#" className="btn btn-primary">
-            詳細內容
-          </Link>
-          {/* <Link to="#" className="btn btn-primary">
-            立即預約
-          </Link> */}
-        </div>
+        
       </div>
     </>
   )
