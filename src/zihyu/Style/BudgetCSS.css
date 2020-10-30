@@ -32,7 +32,6 @@
   display: flex;
   justify-content: center;
 }
-
 .step {
   color: #2d3b72;
   font-family: PingFang;
@@ -42,7 +41,7 @@
   align-items: center;
 }
 
-.title {
+.budgetTitle {
   color: #2d3b72;
   font-family: PingFang;
   font-size: 26px;
@@ -51,19 +50,18 @@
   justify-content: center;
 }
 
-.line-under {
+.budget_lineTop {
   width: 450px;
   border-top: solid #2d3b72 1px;
   margin: 15px auto 0px;
 }
-
-.line-top2 {
+.budget_lineDown {
   width: 100%;
   border-top: solid #2d3b72 3px;
   margin: 2px auto 0px;
 }
 
-.boxImg {
+.budget_boxImg {
   height: 165px;
   margin-top: 50px;
 }

@@ -1,6 +1,6 @@
 import React from 'react'
 import './Style/GiftBoxCSS.css';
-import { Button } from 'react-bootstrap'
+// import { Button } from 'react-bootstrap'
 
 
 class Class_Gift extends React.Component
