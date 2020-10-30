@@ -1,6 +1,5 @@
 import React from "react";
 import "./Project.css";
-import tie from '../icon/tie-01.jpg';
 // import original from './icon/original.jpg';
 // import Breadcrumb from './component/Breadcrumb'
 import Pagination from './component/Pagination'
@@ -53,16 +52,18 @@ function Market() {
              
       </Container>
        
-             {/* <Carousel /> */}
+             {/* <Carousel /> */}<Cates />
         <div className="container">
           <div className="row">
             <div className="col-3">
+            
               <Cards />
+             
             </div>
             <div className="col-9">
-              <Banner />
-              <Cards/>
-              {/* <Sorts /> */}
+              {/* <Banner /> */}
+              {/* <Cards /> */}
+              
               <div className="cardGroup">
                
               </div>
@@ -79,7 +80,7 @@ function Market() {
               <Cards />
             </div>
           </div> */}
-          <Pagination />
+          {/* <Pagination /> */}
         </div>
       </>
     );

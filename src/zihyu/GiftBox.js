@@ -1,8 +1,8 @@
-// import React from 'react'
-// import './Style/GiftBoxCSS.css';
+import React from 'react'
+import './Style/GiftBoxCSS.css';
 
 
-class Gift extends React.Component
+class Class_Gift extends React.Component
 {
   render()
   {
@@ -37,11 +37,11 @@ class Gift extends React.Component
   }
 }
 
-function GiftBox(props)
+function Func_GiftBox(props)
 {
   return (
-    <Gift />
+    <Class_Gift />
   )
 }
 
-export default GiftBox
+export default Func_GiftBox

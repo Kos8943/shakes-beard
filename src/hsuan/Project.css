@@ -47,8 +47,8 @@ ul{
   height: 100%;
      
  }
- .carousel-item{
-  /* margin-top:10%;  CLASS NAME和首頁的輪播一樣 前毅先註解掉*/ 
+ .carousel{
+  margin-top:10%; 
  }
  .Form.Control{
    width: 400px;
