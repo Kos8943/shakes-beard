@@ -80,10 +80,12 @@
 }
 .story-title {
   text-align: center;
+  padding-bottom: 15px;
 }
 
 .story-text-area {
   margin: 0 auto;
+  width: 51%;
 }
 
 .story-text {
@@ -92,9 +94,40 @@
   white-space: pre-wrap;
   margin-bottom: 0;
   line-height: 40px;
+  text-align: center;
 }
 
+//故事 手機板
+@media (max-width: 700px) {
 
+  .story-area {
+    margin: 15px auto;
+   
+  }
+  .story-title {
+    text-align: center;
+    font-size: 1.5rem;
+    padding-bottom: 5px;
+  }
+  
+  .story-text-area {
+    margin: 0 auto;
+    width: 80%;   
+   
+  }
+  
+  .story-text {
+    font-size: 1.0rem;
+    white-space: pre-wrap;
+    margin-bottom: 0;
+    line-height: 28px;
+    text-align: justify;
+  }
+  #story-text2{
+    display: none;
+  }
+  
+}
 
 
 //禮物
