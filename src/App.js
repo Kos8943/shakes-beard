@@ -17,6 +17,7 @@ import Reservation from './chen/pages/Reservation'
 import NotFoundPage from './chen/pages/NotFoundPage'
 import Func_GiftBox from './zihyu/GiftBox'
 import Func_Budget from './zihyu/Budget'
+import Func_ChooseRazor from './zihyu/ChooseRazor'
 import LognIn from './yen/LognIn'
 import Payment from './kos/pages/Payment'
 
@@ -41,6 +42,9 @@ function App() {
         </Route>
         <Route path="/Path_Budget">
         <Func_Budget />
+        </Route>        
+        <Route path="/Path_ChooseRazor">
+        <Func_ChooseRazor />
         </Route>
 
         <Route path="/lognin">
