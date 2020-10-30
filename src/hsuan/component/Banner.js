@@ -8,7 +8,7 @@ function Banner(props) {
   console.log("Banner", props);
    return (
     <>
-      <Carousel>
+      <Carousel className="hsuancarousel">
         <Carousel.Item>
           <img
             className="d-block w-100"
