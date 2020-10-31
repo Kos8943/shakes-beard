@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react'
-import LognInCss from './styles/LognInCss.scss'
+import LogInCss from './styles/LogInCss.scss'
 import SignUp from "./SignUp"
 import facebook from './img/facebook.svg'
 import twitter from './img/twitter.svg'
@@ -31,6 +31,7 @@ function LogIn(props) {
                       <div className="password">
                         <input className="logInInput" type="password"></input>
                       </div> 
+                      <div className="forgotPassword">忘記密碼</div>
                     </div>
 
                 

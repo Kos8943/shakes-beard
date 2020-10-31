@@ -20,7 +20,7 @@ function LogIn(props) {
 
                 <div className="signUpText">姓名</div>
                 <div className="d-flex justify-content-center">
-                  <input className="signUpInput" type="email"></input>
+                  <input className="signUpInput" type="text"></input>
                 </div>
 
                 <div className="signUpText">信箱</div>
@@ -29,15 +29,15 @@ function LogIn(props) {
                 </div>
                 <div className="signUpText">手機</div>
                 <div className="d-flex justify-content-center">
-                  <input className="signUpInput" type="email"></input>
+                  <input className="signUpInput" type="phone"></input>
                 </div>
                 <div className="signUpText">密碼</div>
                 <div className="d-flex justify-content-center">
-                  <input className="signUpInput" type="email"></input>
+                  <input className="signUpInput" type="password"></input>
                 </div>
                 <div className="signUpText">確認密碼</div>
                 <div className="d-flex justify-content-center">
-                  <input className="signUpInput" type="email"></input>
+                  <input className="signUpInput" type="password"></input>
                 </div>
 
               </div>
