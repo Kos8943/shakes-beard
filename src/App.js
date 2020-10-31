@@ -20,6 +20,7 @@ import Func_GiftBox from "./zihyu/GiftBox";
 import Func_Budget from "./zihyu/Budget";
 import Func_ChooseRazor from "./zihyu/ChooseRazor";
 import LogIn from "./yen/LogIn";
+import SignUp from "./yen/SignUp";
 import Payment from "./kos/pages/Payment";
 
 
@@ -66,6 +67,12 @@ function App() {
             <Route path="/login">
               <ShakesBeardNavbar />
               <LogIn />
+              <MyFooter />
+            </Route>
+
+            <Route path="/signup">
+              <ShakesBeardNavbar />
+              <SignUp />
               <MyFooter />
             </Route>
 

@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import LognInCss from './styles/LognInCss.scss'
+import SignUp from "./SignUp"
 import facebook from './img/facebook.svg'
 import twitter from './img/twitter.svg'
 import google from './img/google.svg'
