@@ -65,12 +65,12 @@ function HomePage() {
     </div>
 {/* 品牌故事 */}     
         <div className="story-area w-100 h-100">
-         <h2 className="story-title pb-3">品牌故事</h2>
-            <div className="story-text-area w-50  d-flex justify-content-center">
+         <h2 className="story-title">品牌故事</h2>
+            <div className="story-text-area">
                 <p className="story-text pb-2">
-                    Shakes Beard 的設計發想有著濃厚的紳士風格，以男仕用品為Logo及設計，<br/>
-                    並以「莎士比亞」為諧音，呈現出別具風格的活潑樣貌。<br/>
-                   Shakes Beard 發展出一種北德貴族品味的學院風，代表著注重品質的堅持，<br/>
+                    Shakes Beard 的設計發想有著濃厚的紳士風格，以男仕用品為Logo及設計，
+                    並以「莎士比亞」為諧音，呈現出別具風格的活潑樣貌。</p>
+                    <p className="story-text pb-2" id="story-text2"> Shakes Beard 發展出一種北德貴族品味的學院風，代表著注重品質的堅持，
                     又融合了英國的優雅經典，讓時尚商品能夠成為永恆的精品。
                 </p>
             </div>
@@ -81,7 +81,7 @@ function HomePage() {
 
             <div className="gift-area">
                 <img
-                    className="gift-img w-100 h-100"
+                    className="gift-img"
                     src={giftimg}                
                 />
                 <div className="gift-text-area">

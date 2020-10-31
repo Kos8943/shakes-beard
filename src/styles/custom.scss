@@ -6,22 +6,6 @@
 
 // 其它要導入覆蓋掉原本的預設bootstrap樣式要放在這下面
 
-@media(max-width:576px){
-  .navbarFlex{
-    height: 300px !important; 
-    
-  }
-  .logo{
-    display: none;
-  }
-  .navBarcolor{
-    padding-left: 5% !important; 
-  }
- 
-}
-
-
-
 main {
   min-height: 90vh;
 }
@@ -109,4 +93,18 @@ main > .container {
 
 .logoFont {
   display: none;
+}
+
+@media(max-width:576px){
+  .navbarFlex{
+    height: 300px !important; 
+    
+  }
+  .logo{
+    display: none;
+  }
+  .navBarcolor{
+    padding-left: 5% !important; 
+  }
+ 
 }

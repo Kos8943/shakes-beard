@@ -1,12 +1,12 @@
-import React, { useState, useEffect } from 'react'
-import './App.css';
-import ShakesBeardNavbar from './components/ShakesBeardNavbar'
-import MyFooter from './components/MyFooter'
-import { BrowserRouter as Router, Route, Link, Switch } from 'react-router-dom'
-import HeroPage from './chad/HeroPage'
-
+import React, { useState, useEffect } from "react";
+import "./App.css";
+import ShakesBeardNavbar from "./components/ShakesBeardNavbar";
+import MyFooter from "./components/MyFooter";
+import { BrowserRouter as Router, Route, Link, Switch } from "react-router-dom";
+import HeroPage from "./chad/HeroPage";
 
 //以下import個人頁面
+
 import HomePage from './chad/HomePage'
 import Project from './hsuan/Project'
 import Project1 from './hsuan/Project1'
@@ -21,9 +21,25 @@ import LognIn from './yen/LognIn'
 import Payment from './kos/pages/Payment'
 
 
+import HomePage from "./chad/HomePage";
+import Project from "./hsuan/Project";
+import Market from "./hsuan/Market";
+import Cart from "./kos/pages/Cart";
+import ShopList from "./chen/pages/ShopList";
+import ShopDetail from "./chen/pages/ShopDetail";
+import Reservation from "./chen/pages/Reservation";
+import NotFoundPage from "./chen/pages/NotFoundPage";
+import Func_GiftBox from "./zihyu/GiftBox";
+import Func_Budget from "./zihyu/Budget";
+import Func_ChooseRazor from "./zihyu/ChooseRazor";
+import LognIn from "./yen/LognIn";
+import Payment from "./kos/pages/Payment";
+
+
 function App() {
   return (
     <Router>
+
     <>
    
       <main role="main">
@@ -51,30 +67,104 @@ function App() {
             </Route>
             <Route exact path="/Market">
               <Market />
+
+      <>
+        <main role="main">
+          <Switch>
+            <Route exact path="/">
+              <HeroPage />
+
             </Route>
-            <Route path="/cart">
-              <Cart />
+            
+            <Route exact path="/homepage">
+              <ShakesBeardNavbar />
+              <HomePage />
+              <MyFooter />
             </Route>
-            <Route path="/payment">
-              <Payment />
+
+            <Route path="/Path_GiftBox">
+              <ShakesBeardNavbar />
+              <Func_GiftBox />
+              <MyFooter />
             </Route>
-            <Route path="/shoplist">
-              <ShopList />
+
+            <Route path="/Path_Budget">
+              <ShakesBeardNavbar />
+              <Func_Budget />
+              <MyFooter />
             </Route>
-            <Route path="/shopdetail">
-              <ShopDetail />
+
+            <Route path="/Path_ChooseRazor">
+            <ShakesBeardNavbar />
+              <Func_ChooseRazor />
+              <MyFooter />
             </Route>
-            <Route path="/reservation">
-              <Reservation />
+
+            <Route path="/lognin">
+              <ShakesBeardNavbar />
+              <LognIn />
+              <MyFooter />
             </Route>
+
+            
+              <Route exact path="/Project">
+                <ShakesBeardNavbar />
+                <div className="footerFix">
+                  <Project />
+                </div>
+                <MyFooter />
+              </Route>
+
+              <Route exact path="/Market">
+                <ShakesBeardNavbar />
+                <div className="footerFix">
+                  <Market />
+                </div>
+                <MyFooter />
+              </Route>
+
+              <Route path="/cart">
+                <ShakesBeardNavbar />
+                <div className="footerFix">
+                  <Cart />
+                </div>
+                <MyFooter />
+              </Route>
+
+              <Route path="/payment">
+                <ShakesBeardNavbar />
+                <div className="footerFix">
+                  <Payment />
+                </div>
+                <MyFooter />
+              </Route>
+
+              <Route path="/shoplist">
+                <ShakesBeardNavbar />
+                <div className="footerFix">
+                  <ShopList />
+                </div>
+                <MyFooter />
+              </Route>
+
+              <Route path="/shopdetail">
+                <ShakesBeardNavbar />
+                <div className="footerFix">
+                  <ShopDetail />
+                </div>
+                <MyFooter />
+              </Route>
+
+              <Route path="/reservation">
+                <Reservation />
+              </Route>
+
            
-          </div>
-        </Switch>
-      <MyFooter />
-      </main>
-    </>
+          </Switch>
+        </main>
+      </>
     </Router>
-  )
+  );
 }
 
-export default App
+export default App;
