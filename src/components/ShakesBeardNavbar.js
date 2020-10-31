@@ -33,7 +33,7 @@ function ShakesBeardNavbar(props) {
       {/* <div className="loginCartArea"> */}
       {/* <button className="loginBtn" href="lognin">登入</button>
       <button className="cartBtn"><img src={Cart} style={{width:"30px", height:'30px'}}/></button> */}
-      <Nav.Link as={NavLink} to="/lognin" className="navBarFontSize" >登入</Nav.Link>
+      <Nav.Link as={NavLink} to="/login" className="navBarFontSize" >登入</Nav.Link>
       <Nav.Link as={NavLink} to="/cart" className="navBarFontSize" ><img src={Cart} style={{width:"30px", height:'30px'}}/></Nav.Link>
       </div>
       {/* </div> */}
