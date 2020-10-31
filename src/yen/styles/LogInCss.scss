@@ -54,8 +54,6 @@ html {
   margin-top: 38px;
 }
 
-
-
 .area2 {
   width: 22.0833vw;
   height: 34.722vh;
@@ -66,7 +64,8 @@ html {
 
 .logText {
   font-size: 1.5rem;
-  margin-left: 55px;
+  // margin-left: 4rem;
+  // border: 1px solid #232d2f;
 }
 
 .logInInput {
@@ -75,10 +74,6 @@ html {
   width: 15.9vw;
   height: 5.74vh;
   border-radius: 4px;
-}
-
-.forgotPassword{
-  margin-left: 55px;
 }
 
 
@@ -90,7 +85,6 @@ html {
 }
 
 .account{
-  // border: 1.3px solid #6b7496;
   text-align: center;
   margin-bottom: 33px;
 }
@@ -104,30 +98,6 @@ html {
 }
 
 
-.buttonArea .checkButton{
-  // border: 1px solid tomato;
-  margin-top: 56px;
-}
-
-.buttonArea .singUpButton{
-  // border: 1px solid tomato;
-  margin-top:50px;
-}
-
-
-
-.checkButton {
-  background-color: #2d3b72;
-  border: none;
-  color: #ffffff;
-  // width: 9.38rem;
-  width: 7.8vw;
-  height: 4.259vh;
-  font-size: 1.5rem;
-  font-weight: bold;
-  border-radius: 4px;
-  
-}
 
 .otherAccount{
   // border: 1px solid hotpink;
@@ -144,7 +114,6 @@ html {
   text-align: left;
   border: 1.3px solid #6b7496;
   
-
 }
 
 .facebook {
@@ -166,6 +135,19 @@ html {
   
 }
 
+
+.checkButton {
+  background-color: #2d3b72;
+  border: none;
+  color: #ffffff;
+  width: 7.8vw;
+  height: 4.259vh;
+  font-size: 1.5rem;
+  font-weight: bold;
+  border-radius: 4px;
+  
+}
+
 .singUpButton {
   background-color: #f25d50;
   border: none;
@@ -176,5 +158,4 @@ html {
   font-weight: bold;
   border-radius: 4px;
   
-
 }
