@@ -1,0 +1,81 @@
+html {
+  font-size: 16px;
+}
+
+
+.bagimg {
+  // background-color: #595452;
+  min-height: 73.6vh;
+  background-image: url("../img/bg-img1.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  // border: 3px solid red;
+  background-origin: border-box;
+  padding: 1px;
+}
+
+.bagimg2 {
+  min-height: 73.6vh;
+  background-color: rgba(89, 84, 82, 0.66);
+  background-origin: border-box;
+  padding-top: 10px;
+  margin: -1px;
+  // margin: -50px;
+  // border: 2px solid red;
+}
+
+.signUpArea {
+  width: 44.6vw;
+  // width:848px;
+  // height: 578px;
+  height: 60.2vh;
+  background-color: rgba(255, 255, 255, 0.75);
+  border: radius 4px;
+  margin: 8vh auto;
+  // border: 2px solid saddlebrown;
+}
+
+.logTittle {
+  font-size: 1.63rem;
+  font-weight: bold;
+  text-align: center;
+  // border: 1px solid black;
+  padding-top: 45px;
+}
+
+.area {
+  // width: 22.0833vw;
+  // height: 34.722vh;
+  // border: 1px solid hotpink;
+  
+}
+
+
+.signUpInput {
+  background-color: #898584;
+  border: 1.3px solid #6b7496;
+  width: 15.9vw;
+  height: 3.4vh;
+  border-radius: 4px;
+}
+
+.signUpText{
+  font-size: 1.5rem;
+  margin-left: 17rem;
+  margin-top: 10px;
+}
+
+
+
+
+
+.singUpButton {
+  background-color: #f25d50;
+  border: none;
+  color: #ffffff;
+  width: 7.8vw;
+  height: 4.259vh;
+  font-size: 1.5rem;
+  font-weight: bold;
+  border-radius: 4px;
+}
