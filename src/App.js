@@ -9,6 +9,7 @@ import HeroPage from './chad/HeroPage'
 //以下import個人頁面
 import HomePage from './chad/HomePage'
 import Project from './hsuan/Project'
+import Project1 from './hsuan/Project1'
 import Market from './hsuan/Market'
 import Cart from './kos/pages/Cart'
 import ShopList from './chen/pages/ShopList'
@@ -44,6 +45,9 @@ function App() {
             {/* 網頁內容跟Router放在這 */}
             <Route exact path="/Project">
               <Project />
+            </Route>
+            <Route exact path="/Project1">
+              <Project1 />
             </Route>
             <Route exact path="/Market">
               <Market />

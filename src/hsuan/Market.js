@@ -6,7 +6,7 @@ import Pagination from './component/Pagination'
 import CatesAside from './component/CatesAside'
 import Cards from './component/Cards'
 import Sorts from './component/Sorts'
-import Cates from './component/Cates'
+// import Cates from './component/Cates'
 import Banner from './component/Banner'
 import {
   Container,
@@ -52,18 +52,18 @@ function Market() {
              
       </Container>
        
-             {/* <Carousel /> */}<Cates />
+             {/* <Carousel /> */}
         <div className="container">
           <div className="row">
             <div className="col-3">
             
-              <Cards />
+             
              
             </div>
             <div className="col-9">
               {/* <Banner /> */}
               {/* <Cards /> */}
-              
+               <Cards />
               <div className="cardGroup">
                
               </div>
