@@ -3,12 +3,12 @@ import MemberUpdateCss from './styles/MemberUpdateCss.scss'
 import MemberOption from './components/MemberOption'
 
 
-function App(props) {
+function MemberUpdate(props) {
   return <>
 
   <MemberOption />
-   
+   111
   </>
 }
 
-export default App
+export default MemberUpdate

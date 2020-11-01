@@ -3,7 +3,7 @@ import SignUpCss from './styles/SignUpCss.scss'
 
 
 
-function LogIn(props) {
+function SignUp(props) {
    
     return (
       <>
@@ -61,4 +61,4 @@ function LogIn(props) {
 
 
 
-export default LogIn
+export default SignUp
