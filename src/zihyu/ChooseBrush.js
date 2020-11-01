@@ -1,5 +1,5 @@
 import React from 'react'
-import './Style/ChooseRazorCSS.css';
+import './Style/ChooseBrushCSS.css';
 import { Button } from 'react-bootstrap'
 class Class_ChooseBrush extends React.Component
 

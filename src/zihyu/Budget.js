@@ -18,9 +18,9 @@ class Class_Budget extends React.Component
                   <div className="Title2">選擇預算</div>
                   <div className="lineTop"></div>
                   <div className="lineDown"></div>
-                  <img className="budget_boxImg" src={img} />
+                  <div><img className="budget_boxImg" src={img} /></div>
 
-                  <Button className="startButton" onClick=
+                  <div><Button className="startButton" onClick=
                   {     //React程式區間語法 (開始)
                     () =>
                     {
@@ -28,7 +28,7 @@ class Class_Budget extends React.Component
                     }
                   }     //React程式區間語法 (結束)
                 
-                > 下一步 </Button>
+                  > 下一步 </Button></div>
                 </div>
               </div>
           </div> 

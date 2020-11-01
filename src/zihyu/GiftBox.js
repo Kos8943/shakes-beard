@@ -25,7 +25,8 @@ class Class_Gift extends React.Component
                 <div className="thirdTitle">獨家客製化禮盒，傳遞最真摯的心意</div>
                 
 
-                <Button className="startButton" onClick=
+                <div style= {{margin: '0 auto', width: '220px'}}
+                ><Button className="startButton" onClick=
                 {     //React程式區間語法 (開始)
                   () =>
                   {
@@ -33,7 +34,7 @@ class Class_Gift extends React.Component
                   }
                 }     //React程式區間語法 (結束)
               
-              > 開始製作 </Button>
+              > 開始製作 </Button></div>
 
 
               </div>

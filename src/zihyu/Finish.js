@@ -1,7 +1,6 @@
 import React from 'react'
-import './Style/BudgetCSS.css';
-import img from './image/box.png';
-import { Button } from 'react-bootstrap'
+import './Style/FinishCSS.css';
+import img from './image/openbox.png';
 class Class_Finish extends React.Component
 
 
@@ -18,15 +17,17 @@ class Class_Finish extends React.Component
                   <div className="Title2">訂購完成</div>
                   <div className="lineTop"></div>
                   <div className="lineDown"></div>
-                  <img className="budget_boxImg" src={img} />
+                  <div><img className="openbox_Img" src={img} /></div>
+                  <div className="Finish_test">謝謝您的訂購！禮盒已加入購物車</div>
 
+                  
                 </div>
               </div>
           </div> 
 
         </div> 
 
-      </div>     
+      </div>   
       
     );
   }

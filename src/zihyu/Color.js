@@ -1,5 +1,5 @@
 import React from 'react'
-import './Style/ChooseRazorCSS.css';
+import './Style/ColorCSS.css';
 import { Button } from 'react-bootstrap'
 class Class_Color extends React.Component
 
