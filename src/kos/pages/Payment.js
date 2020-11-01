@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react'
-import cuf1 from '../img/1-3.jpg'
+import Cuf1 from '../img/1-3.jpg'
 import CartCss from '../styles/CartCss.scss'
 import PayCss from '../styles/PayCss.scss'
 import Delete from '../icon/delete.svg'
@@ -33,8 +33,16 @@ function Payment() {
                 <h3 className="d-flex justify-content-center">你的訂單</h3>
 
                 <div>
-                    <div className="cartItem d-flex">
-                        <img className="itemImg" src={cuf1}></img>
+                    <div className="cartItem d-xl-flex">
+                        <img className="itemImg" src={Cuf1}></img>
+                        <div className="itemName my-auto">Ritmo di vita 陀飛輪袖扣</div>       
+                        <span className="productTpye">經典黑</span>
+                        <span className="amount">1</span>
+                        <span className="unitPrice">NT$1,441</span>
+                        <span className="subtotal">NT$2,882</span>
+                    </div>
+                    {/* <div className="cartItem d-flex">
+                        <img className="itemImg" src={Cuf1}></img>
                         <div className="itemName my-auto">Ritmo di vita 陀飛輪袖扣</div>       
                         <span className="productTpye">經典黑</span>
                         <span className="amount">1</span>
@@ -42,28 +50,36 @@ function Payment() {
                         <span className="subtotal">NT$2,882</span>
                     </div>
                     <div className="cartItem d-flex">
-                        <img className="itemImg" src={cuf1}></img>
+                        <img className="itemImg" src={Cuf1}></img>
                         <div className="itemName my-auto">Ritmo di vita 陀飛輪袖扣</div>       
                         <span className="productTpye">經典黑</span>
                         <span className="amount">1</span>
                         <span className="unitPrice">NT$1,441</span>
                         <span className="subtotal">NT$2,882</span>
+                    </div> */}
+
+                    <div className="cartItemPhone">
+                        <img className="itemImg" src={Cuf1}></img>
+                        <div className="itemName">Ritmo di vita 陀飛輪袖扣</div>
+                        <div className="KosProjectType">經典黑</div>
+                        <div className="PaymentunitPrice">NT$1,441</div>
+                
+                            <div className="PaymentQty">X1</div>
+                            <div className="PaymentSubtotal">NT$2,882</div>
+                    
+                   
+                            
+                        
+                        {/* <img src={Delete} className="deleteIcon"></img> */}
                     </div>
-                    <div className="cartItem d-flex">
-                        <img className="itemImg" src={cuf1}></img>
-                        <div className="itemName my-auto">Ritmo di vita 陀飛輪袖扣</div>       
-                        <span className="productTpye">經典黑</span>
-                        <span className="amount">1</span>
-                        <span className="unitPrice">NT$1,441</span>
-                        <span className="subtotal">NT$2,882</span>
-                    </div>
+
                     <div className="priceArea ml-auto d-flex">
                         <div className="priceArea font">
                             <div>折扣：</div>
                             <div>運費：</div>
                             <div>總計：</div>
                         </div>
-                        <div className="priceArea font">
+                        <div className="priceArea font totalPrice">
                             <div>NT$ -150</div>
                             <div>NT$ 150</div>
                             <div>NT$ 8,796</div>
@@ -93,25 +109,13 @@ function Payment() {
                                 <option value="中正區">中正區</option>
                                 <option value="內湖區">內湖區</option>
                             </select>
-                            <input className="address"></input>
+                            <input className="address DisplayBlock"></input>
                             <h3 className="d-flex justify-content-center">發票</h3>
-                            <div className="d-flex justify-content-around">
-                                <div className="radioDiv d-flex">
-                                    <input type="radio" className="radio"></input>
-                                    <div>個人電子發票</div>
-                                </div>
-                                <div className="radioDiv d-flex">
-                                    <input type="radio" className="radio"></input>
-                                    <div>捐贈發票</div>
-                                </div>
-                                <div className="radioDiv d-flex">
-                                    <input type="radio" className="radio"></input>
-                                    <div>公司戶電子發票</div>
-                                </div>
-                                <div className="radioDiv d-flex">
-                                    <input type="radio" className="radio"></input>
-                                    <div>手機載具</div>
-                                </div>
+                            <div className="">
+                                    <label className="col-6 col-xl-3 LabelFont"><input type="radio" className="radio"></input>個人電子發票</label>
+                                    <label className="col-6 col-xl-3 LabelFont"><input type="radio" className="radio"></input>捐贈發票</label>
+                                    <label className="col-6 col-xl-3 LabelFont pr-1"><input type="radio" className="radio"></input>公司戶電子發票</label>
+                                    <label className="col-6 col-xl-3 LabelFont"><input type="radio" className="radio"></input>手機載具</label>
                             </div>
                             <hr />
 
@@ -125,14 +129,37 @@ function Payment() {
                             <div className="d-flex creditCardArea">
                                 <div className="creditCardNumber">
                                     <p>信用卡卡號：</p>
-                                    <input></input>
-                                    <span>-</span>
-                                    <input></input>
-                                    <span>-</span>
-                                    <input></input>
-                                    <span>-</span>
-                                    <input></input>
-                                    <div className="d-flex ">
+                                    <div className="PhoneDisplayNone">
+                                        <input></input>
+                                        <span>-</span>
+                                        <input></input>
+                                        <span>-</span>
+                                        <input></input>
+                                        <span>-</span>
+                                        <input></input>
+                                    </div>
+                                        {/* 手機板卡號 */}
+                                        <input className="PhoneCreditCardInput webDisplay"></input>
+                                        <div className="webDisplay">
+                                            <div className="d-flex ">
+                                                <div className="PhoneCreditCardDate">
+                                                    <p>有效期限：</p>
+                                                    <input></input>
+                                                    <span>年</span>
+                                                    <input></input>
+                                                    <span>月</span>
+                                                </div>
+                                                    
+                                                <div className="PhoneCreditCardDate1">
+                                                    <p>卡背後3碼：</p>
+                                                    <input></input>
+                                                </div>
+                                            </div>
+                                        </div>
+                                       
+                                        {/* 手機板卡號 */}
+         
+                                    <div className="d-xl-flex PhoneDisplayNone">
                                         <div className="creditCardDate">
                                             <p>有效期限：</p>
                                             <input></input>
@@ -146,14 +173,14 @@ function Payment() {
                                         </div>
                                     </div>
                                 </div>
-                                <div className="creditCardImg">123</div>
+                                <div className="creditCardImg PhoneDisplayNone">123</div>
 
                             </div>
                         </form>
                 </div>
             </div>  
-            <div className="paymentBtn m-auto">
-                <button>確定送出</button>
+            <div className="paymentBtn mx-auto">
+                <button className="SumitButton">確定送出</button>
             </div>    
         </>
     )
