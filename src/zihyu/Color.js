@@ -1,7 +1,7 @@
 import React from 'react'
 import './Style/ChooseRazorCSS.css';
 import { Button } from 'react-bootstrap'
-class Class_ChooseStand extends React.Component
+class Class_Color extends React.Component
 
 
 {
@@ -16,8 +16,8 @@ class Class_ChooseStand extends React.Component
       
           <div className="blueBox">
               <div className="whiteBox">
-                <div className="step">Step.4
-                  <div className="Title2">選擇修容架</div>
+                <div className="step">Step.5
+                  <div className="Title2">選擇顏色</div>
                   <div className="lineTop"></div>
                   <div className="lineDown"></div>
 
@@ -25,7 +25,7 @@ class Class_ChooseStand extends React.Component
                     {     //React程式區間語法 (開始)
                       () =>
                       {
-                        window.open("/Path_ChooseBrush", '_self');
+                        window.open("/Path_ChooseStand", '_self');
                       }
                     }     //React程式區間語法 (結束)
                   
@@ -35,11 +35,11 @@ class Class_ChooseStand extends React.Component
                   {     //React程式區間語法 (開始)
                     () =>
                     {
-                      window.open("/Path_Color", '_self');
+                      window.open("/Path_Finish", '_self');
                     }
                   }     //React程式區間語法 (結束)
                 
-                > 下一步 </Button>
+                > 完成 </Button>
 
                   
                 </div>
@@ -57,11 +57,11 @@ class Class_ChooseStand extends React.Component
   }
 }
 
-function Func_ChooseStand(props)
+function Func_Color(props)
 {
   return (
-    <Class_ChooseStand />
+    <Class_Color />
   )
 }
 
-export default Func_ChooseStand
+export default Func_Color
