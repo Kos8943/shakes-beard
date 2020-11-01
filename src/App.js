@@ -21,7 +21,8 @@ import NotFoundPage from "./chen/pages/NotFoundPage";
 import Func_GiftBox from "./zihyu/GiftBox";
 import Func_Budget from "./zihyu/Budget";
 import Func_ChooseRazor from "./zihyu/ChooseRazor";
-import LognIn from "./yen/LognIn";
+import LogIn from "./yen/LogIn";
+import SignUp from "./yen/SignUp";
 import Payment from "./kos/pages/Payment";
 
 
@@ -65,9 +66,15 @@ function App() {
               <MyFooter />
             </Route>
 
-            <Route path="/lognin">
+            <Route path="/login">
               <ShakesBeardNavbar />
-              <LognIn />
+              <LogIn />
+              <MyFooter />
+            </Route>
+
+            <Route path="/signup">
+              <ShakesBeardNavbar />
+              <SignUp />
               <MyFooter />
             </Route>
            
@@ -95,7 +102,7 @@ function App() {
 
               <Route path="/cart">
                 <ShakesBeardNavbar />
-                <div className="footerFix">
+                <div className="footerFix KosPadding">
                   <Cart />
                 </div>
                 <MyFooter />

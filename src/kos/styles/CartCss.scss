@@ -4,6 +4,10 @@ html {
     font-size: 16px;
 }
 
+.cartItemPhone {
+    display: none;
+}
+
 .cartArea {
     margin-top: 80px;
     width: 100%;
@@ -141,6 +145,14 @@ html {
         font-size: 12px;
     }
 
+    .cartItemPhone {
+        display: block;
+    }
+
+    .cartItem {
+        display: none;
+    }
+
     .cartArea {
         margin-top: 30px;
         width: 100%;
@@ -159,7 +171,7 @@ html {
 
     .cartStepFont {
         width: 100%;
-        font-size: 1.25rem;
+        font-size: 1rem;
         margin-bottom: 30px;
     }
 
@@ -170,17 +182,72 @@ html {
         margin-top:35px ;
     }
 
-    .cartItem {
+    .cartItemPhone {
         width: 100%;
-        height: 30vh;
-        border: 1px solid #2D3B72;
-        padding: .5rem;
+        height: 22vh;
+        // border: 1px solid #2D3B72;
+        padding: .7rem;
+        background-color: #f8f8f8;
     }
 
     .itemImg{
-        height: 40%;
-        width: 30%;
+        height: 55%;
+        width: 25%;
         margin-right: 3%;
         float: left;
+    }
+
+    .itemName {
+        font-size: 1rem;
+    }
+
+    .KosProjectType {
+        font-size: 1rem;
+    }
+
+    .unitPrice {
+        margin-right: auto;
+        margin-bottom: 30px;
+        font-size: 1.1rem;
+    }
+
+    .counterArea {
+        width: 100%;
+    }
+
+    .subtotal {
+        margin: 0 0 0 auto;
+        padding-top: 5px;
+        font-size: 1.1rem;
+        color: #2D3B72;
+    }
+
+    .cartMinus {
+        border: 1px solid #2D3B72;
+        font-size: 1.5rem;
+        width: 11%;
+        text-align: center;
+    }
+
+    .cartQty {
+        border: 1px solid #2D3B72;
+        padding-top: 3px;
+        font-size: 1.3rem;
+        width: 30%;
+        text-align: center;
+    }
+
+    .cartAdd {
+        border: 1px solid #2D3B72;
+        font-size: 1.5rem;
+        width: 11%;
+        text-align: center;
+    }
+
+    .CartTarsh {
+        margin-left: 3%;
+        padding-top: 8px;
+        width: 7%;
+        height: 7%;
     }
 }
