@@ -3,12 +3,14 @@ import ReactDOM from 'react-dom';
 import './index.scss';
 import App from './App';
 import Sid from './Sid';
+import Script from 'react-load-script';
 import * as serviceWorker from './serviceWorker';
 
 ReactDOM.render(
   <React.StrictMode>
     <App />
     <Sid />
+    <Script />
   </React.StrictMode>,
   document.getElementById('root')
 );

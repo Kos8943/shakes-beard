@@ -5,6 +5,8 @@ import MyFooter from "./components/MyFooter";
 import { BrowserRouter as Router, Route, Link, Switch } from "react-router-dom";
 import HeroPage from "./chad/HeroPage";
 import Sid from "./Sid";
+
+
 //以下import個人頁面
 
 import HomePage from "./chad/HomePage";
@@ -31,7 +33,7 @@ function App() {
 
     <>
    
-     
+   
 
       
         <main role="main">
@@ -76,9 +78,14 @@ function App() {
               <SignUp />
               <MyFooter />
             </Route>
+           
+            <Route path="/Project1">
+              <ShakesBeardNavbar />
+              <Project1 />
+              <MyFooter />
+            </Route>
 
-            
-              <Route exact path="/Project">
+             <Route exact path="/Project">
                 <ShakesBeardNavbar />
                 <div className="footerFix">
                   <Project />
@@ -96,7 +103,7 @@ function App() {
 
               <Route path="/cart">
                 <ShakesBeardNavbar />
-                <div className="footerFix">
+                <div className="footerFix KosPadding">
                   <Cart />
                 </div>
                 <MyFooter />
