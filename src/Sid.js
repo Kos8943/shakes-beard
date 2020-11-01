@@ -4,7 +4,7 @@ class Sid extends React.Component {
   render() {
     return(
       <div>
-       我是一個組件
+      
       </div>
     );
   }
