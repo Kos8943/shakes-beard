@@ -62,7 +62,7 @@ function Cart() {
                         
                         {/* <img src={Delete} className="deleteIcon"></img> */}
                     </div>
-                    {/* <div className="priceArea ml-auto d-flex">
+                    <div className="priceArea ml-auto d-flex">
                         <div className="priceArea font">
                             <div>優惠代碼：</div>
                             <div>折扣：</div>
@@ -70,7 +70,7 @@ function Cart() {
                             <div>總計：</div>
                         </div>
 
-                        <div className="priceArea font priceColor">
+                        <div className="priceArea font totalPrice priceColor">
                             <div><input></input></div>
                             <div>NT$ -150</div>
                             <div>NT$ 150</div>
@@ -80,7 +80,7 @@ function Cart() {
                     </div>
                     <div className="sumitBtn ml-auto">
                         <button>送出訂單</button>
-                    </div> */}
+                    </div>
                     
                 </div>
                 

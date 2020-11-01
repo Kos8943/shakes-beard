@@ -147,6 +147,7 @@ html {
 
     .cartItemPhone {
         display: block;
+        margin-bottom: 10px;
     }
 
     .cartItem {
@@ -249,5 +250,40 @@ html {
         padding-top: 8px;
         width: 7%;
         height: 7%;
+    }
+
+    .priceArea {
+        width: 100%;
+        margin: 1% 0;
+        padding: 0 4% 0 0;
+    
+    }
+
+    .priceArea.font {
+        width: 50%;
+        font-size: .9rem;
+        text-align: left;
+    }
+
+    .priceArea.font.totalPrice {
+        width: 50%;
+        font-size: .9rem;
+        text-align: right;
+    }
+
+    .sumitBtn {
+        width: 100%;
+        margin: 2% 0;
+    }
+    
+    .sumitBtn button {
+        width: 100%;
+        height: 50%;
+        background-color: #F25D50;
+        border: 0;
+        border-radius: 4px;
+        font-size: 1.25rem;
+        color: #fff;
+        line-height: 40px;
     }
 }
