@@ -111,7 +111,7 @@ function App() {
 
               <Route path="/payment">
                 <ShakesBeardNavbar />
-                <div className="footerFix">
+                <div className="footerFix KosPadding">
                   <Payment />
                 </div>
                 <MyFooter />
