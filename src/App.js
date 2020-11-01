@@ -25,6 +25,7 @@ import LogIn from "./yen/LogIn";
 import SignUp from "./yen/SignUp";
 import MemberUpdate from "./yen/MemberUpdate";
 import Payment from "./kos/pages/Payment";
+import Paycomplete from './kos/pages/Paycomplete'
 
 
 function App() {
@@ -113,6 +114,14 @@ function App() {
                 <ShakesBeardNavbar />
                 <div className="footerFix KosPadding">
                   <Payment />
+                </div>
+                <MyFooter />
+              </Route>
+
+              <Route path="/paycomplete">
+                <ShakesBeardNavbar />
+                <div className="footerFix KosPadding">
+                  <Paycomplete />
                 </div>
                 <MyFooter />
               </Route>
