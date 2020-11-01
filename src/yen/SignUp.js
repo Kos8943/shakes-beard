@@ -3,7 +3,7 @@ import SignUpCss from './styles/SignUpCss.scss'
 
 
 
-function LogIn(props) {
+function SignUp(props) {
    
     return (
       <>
@@ -16,9 +16,9 @@ function LogIn(props) {
                 註冊新帳號
               </div>
 
-              <div className="area d-flex flex-column">
+              <div className="area ">
 
-                <div className="signUpText">姓名</div>
+                <div className="signUpText ">姓名</div>
                 <div className="d-flex justify-content-center">
                   <input className="signUpInput" type="text"></input>
                 </div>
@@ -42,9 +42,9 @@ function LogIn(props) {
 
               </div>
 
-              <div className="buttonArea d-flex justify-content-center">
-                <a href="" className="singUpButton d-flex justify-content-center">完成</a>
-              </div>
+             
+              <a href="" className="singUpButton d-flex justify-content-center align-items-center">完成</a>
+              
                
             </div>
 
@@ -61,4 +61,4 @@ function LogIn(props) {
 
 
 
-export default LogIn
+export default SignUp

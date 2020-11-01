@@ -43,12 +43,6 @@ html {
   padding-top: 45px;
 }
 
-.area {
-  // width: 22.0833vw;
-  // height: 34.722vh;
-  // border: 1px solid hotpink;
-  
-}
 
 
 .signUpInput {
@@ -61,12 +55,20 @@ html {
 
 .signUpText{
   font-size: 1.5rem;
-  margin-left: 17rem;
+  // margin-left: 17rem;
   margin-top: 10px;
+  // border: 1px solid black;
+  // padding-left: 17rem;
+  // text-align: center;
+
 }
 
 
-
+.area{
+  // border: 1px solid black;
+  width: 15.9vw;
+  margin: 0 auto;
+}
 
 
 .singUpButton {
@@ -78,4 +80,7 @@ html {
   font-size: 1.5rem;
   font-weight: bold;
   border-radius: 4px;
+  margin: 1.5rem auto;
 }
+
+
