@@ -2,7 +2,7 @@ import React from 'react'
 import MemberUpdateCss from '../styles/MemberUpdateCss.scss'
 import MemberUpdate from '../MemberUpdate'
 
-function App(props) {
+function MemberOption(props) {
   return <>
   <div className="container-fluid">
     <div className="row justify-content-between">
@@ -33,4 +33,4 @@ function App(props) {
   </>
 }
 
-export default App
+export default MemberOption
