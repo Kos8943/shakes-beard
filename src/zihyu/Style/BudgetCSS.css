@@ -75,6 +75,8 @@
   font-size: 26px;
   color: white;
   font-family: PingFang;
+  justify-content: center;
+  align-items: center;
 }
 
 .btn {
