@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from 'react'
 import CartCss from '../styles/CartCss.scss'
 import Delete from '../icon/delete.svg'
-import cuf1 from '../img/1-3.jpg'
+import Cuf1 from '../img/1-3.jpg'
+import Trash from '../icon/trash.svg'
 
 function Cart() { 
         return (
@@ -28,8 +29,8 @@ function Cart() {
                 
                 <div>
 
-                    <div className="cartItem d-flex">
-                        <img className="itemImg" src={cuf1}></img>
+                    <div className="cartItem d-xl-flex">
+                        <img className="itemImg" src={Cuf1}></img>
                         <div className="itemName my-auto">Ritmo di vita 陀飛輪袖扣</div>
                         <select className="selectHigh">
                             <option value="1">經典黑</option>
@@ -45,24 +46,23 @@ function Cart() {
                         <span className="subtotal">NT$2,882</span>
                         <img src={Delete} className="deleteIcon"></img>
                     </div>
-                    <div className="cartItem d-flex">
-                        <img className="itemImg" src={cuf1}></img>
-                        <div className="itemName my-auto">Ritmo di vita 陀飛輪袖扣</div>
-                        <select className="selectHigh">
-                            <option value="1">經典黑</option>
-                            <option value="2">2</option>
-                            <option value="3">3</option>
-                        </select>
-                        <select className="selectHigh">
-                            <option value="1">1</option>
-                            <option value="2">2</option>
-                            <option value="3">3</option>
-                        </select>
-                        <span className="unitPrice">NT$1,441</span>
-                        <span className="subtotal">NT$2,882</span>
-                        <img src={Delete} className="deleteIcon"></img>
+
+                    <div className="cartItemPhone">
+                        <img className="itemImg" src={Cuf1}></img>
+                        <div className="itemName">Ritmo di vita 陀飛輪袖扣</div>
+                        <div className="KosProjectType">經典黑</div>
+                        <div className="unitPrice">NT$1,441</div>
+                        <div className="d-flex counterArea">
+                            <div className="cartMinus">-</div>
+                            <div className="cartQty">1</div>
+                            <div className="cartAdd">+</div>
+                            <img src={Trash} className="CartTarsh"></img>
+                            <div className="subtotal">NT$2,882</div>
+                        </div>
+                        
+                        {/* <img src={Delete} className="deleteIcon"></img> */}
                     </div>
-                    <div className="priceArea ml-auto d-flex">
+                    {/* <div className="priceArea ml-auto d-flex">
                         <div className="priceArea font">
                             <div>優惠代碼：</div>
                             <div>折扣：</div>
@@ -80,7 +80,7 @@ function Cart() {
                     </div>
                     <div className="sumitBtn ml-auto">
                         <button>送出訂單</button>
-                    </div>
+                    </div> */}
                     
                 </div>
                 
