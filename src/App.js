@@ -21,6 +21,8 @@ import NotFoundPage from "./chen/pages/NotFoundPage";
 import Func_GiftBox from "./zihyu/GiftBox";
 import Func_Budget from "./zihyu/Budget";
 import Func_ChooseRazor from "./zihyu/ChooseRazor";
+import Func_ChooseBrush from "./zihyu/ChooseBrush";
+import Func_ChooseStand from "./zihyu/ChooseStand";
 import LogIn from "./yen/LogIn";
 import SignUp from "./yen/SignUp";
 import MemberUpdate from "./yen/MemberUpdate";
@@ -64,6 +66,18 @@ function App() {
             <Route path="/Path_ChooseRazor">
             <ShakesBeardNavbar />
               <Func_ChooseRazor />
+              <MyFooter />
+            </Route>
+
+            <Route path="/Path_ChooseBrush">
+            <ShakesBeardNavbar />
+              <Func_ChooseBrush />
+              <MyFooter />
+            </Route>
+
+            <Route path="/Path_ChooseStand">
+            <ShakesBeardNavbar />
+              <Func_ChooseStand />
               <MyFooter />
             </Route>
 
