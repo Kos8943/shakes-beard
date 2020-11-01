@@ -23,6 +23,8 @@ import Func_Budget from "./zihyu/Budget";
 import Func_ChooseRazor from "./zihyu/ChooseRazor";
 import Func_ChooseBrush from "./zihyu/ChooseBrush";
 import Func_ChooseStand from "./zihyu/ChooseStand";
+import Func_Color from "./zihyu/Color";
+import Func_Finish from "./zihyu/Finish";
 import LogIn from "./yen/LogIn";
 import SignUp from "./yen/SignUp";
 import MemberUpdate from "./yen/MemberUpdate";
@@ -79,6 +81,18 @@ function App() {
             <Route path="/Path_ChooseStand">
             <ShakesBeardNavbar />
               <Func_ChooseStand />
+              <MyFooter />
+            </Route>
+
+            <Route path="/Path_Color">
+            <ShakesBeardNavbar />
+              <Func_Color />
+              <MyFooter />
+            </Route>
+
+            <Route path="/Path_Finish">
+            <ShakesBeardNavbar />
+              <Func_Finish />
               <MyFooter />
             </Route>
 
