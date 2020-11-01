@@ -21,6 +21,7 @@ import Func_Budget from "./zihyu/Budget";
 import Func_ChooseRazor from "./zihyu/ChooseRazor";
 import LogIn from "./yen/LogIn";
 import SignUp from "./yen/SignUp";
+import MemberUpdate from "./yen/MemberUpdate";
 import Payment from "./kos/pages/Payment";
 
 
@@ -121,6 +122,14 @@ function App() {
                 <ShakesBeardNavbar />
                 <div className="footerFix">
                   <ShopDetail />
+                </div>
+                <MyFooter />
+              </Route>
+
+              <Route path="/memberupdate">
+                <ShakesBeardNavbar />
+                <div className="footerFix">
+                  <MemberUpdate />
                 </div>
                 <MyFooter />
               </Route>
