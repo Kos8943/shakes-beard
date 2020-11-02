@@ -95,3 +95,14 @@
   justify-content: center;
   align-items: center;
 }
+
+
+.Img_Left
+{
+  position: absolute;
+  z-index: 4;
+  left: -15px;
+  bottom: 95px;
+  height: 372px;
+  transform: rotate(-10deg);
+}

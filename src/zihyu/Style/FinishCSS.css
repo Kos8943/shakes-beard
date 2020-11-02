@@ -35,7 +35,7 @@
 
 .step {
   color: #2d3b72;
-  font-family: PingFang;
+  font-family: Roboto;
   font-size: 17px;
   margin: 39px auto 0px;
   text-align: center;
@@ -54,7 +54,7 @@
 .lineTop {
   width: 450px;
   border-top: solid #2d3b72 1px;
-  margin: 15px auto 0px;
+  margin: 10px auto 0px;
 }
 
 .lineDown {
@@ -65,6 +65,16 @@
 
 .openbox_Img
 {
-  height: 375px;
+  height: 372px;
 
+}
+
+.Finish_test
+{
+  color: #2d3b72;
+  font-family: PingFang;
+  font-size: 20px;
+  text-align: center;
+  display: flex;
+  justify-content: center;
 }

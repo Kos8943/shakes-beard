@@ -1,18 +1,19 @@
 import React from 'react'
 import './Style/GiftBoxCSS.css';
 import { Button } from 'react-bootstrap'
-
+import img from './image/razor.png';
 
 class Class_Gift extends React.Component
 {
   render()
-  {
-    const MyString = 'Hello';
-    
+  {   
     return (
+      <>
       <div className="contain">
         <div className="background_white">
       
+        <div><img className="Img_Left" src={img} /></div>
+                
           <div className="blueBox">
             <div className="whiteBox">
               <div className="line-top">
@@ -23,6 +24,7 @@ class Class_Gift extends React.Component
                 <div className="subtitle">FOR  THE  MAN  IN  YOUR  LIFE.</div>
                 <div className="line-middle"></div>
                 <div className="thirdTitle">獨家客製化禮盒，傳遞最真摯的心意</div>
+
                 
 
                 <div style= {{margin: '0 auto', width: '220px'}}
@@ -44,8 +46,9 @@ class Class_Gift extends React.Component
         </div> 
 
       </div>     
-      
+      </>
     );
+    
   }
 }
 
