@@ -11,7 +11,7 @@ function Banner(props) {
           {/* src="holder.js/800x400?text=First slide&bg=373940" */}
           <img
             className="d-block w-100"
-            src={require('./carousel01.jpg')}
+            src={require('../img/carousel01.jpg')}
             alt="First slide"
           />
           <Carousel.Caption>
@@ -22,7 +22,7 @@ function Banner(props) {
         <Carousel.Item>
           <img
             className="d-block w-100"
-            src={require('./carousel01.jpg')}
+            src={require('../img/carousel01.jpg')}
             alt="Third slide"
           />
 
@@ -34,7 +34,7 @@ function Banner(props) {
         <Carousel.Item>
           <img
             className="d-block w-100"
-            src={require('./carousel01.jpg')}
+            src={require('../img/carousel01.jpg')}
             alt="Third slide"
           />
 

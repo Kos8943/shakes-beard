@@ -11,8 +11,7 @@ function Description(props) {
         <img
           width={200}
           className="mr-3"
-          src={require('../components/card01.jpg')} 
-          alt="Generic placeholder"
+          src={require('../img/card01.jpg')} 
         />
         <Media.Body>
           <h5>男仕理髮</h5>

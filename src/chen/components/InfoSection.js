@@ -10,8 +10,7 @@ function InfoSection(props) {
           <img
             width={350}
             className="col-sm-12 col-md-6 mt-3"
-            src={require('../components/card01.jpg')} 
-            alt="Generic placeholder"
+            src={require('../img/card01.jpg')} 
           />
           {/* <div className="test2"></div>
           <div className="test2"></div>

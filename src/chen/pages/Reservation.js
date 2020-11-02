@@ -11,14 +11,14 @@ function Reservation(props) {
       {/* <Carousel /> */}
       <div className="container mb-5">
         <div className="py-5 text-center">
-          <img className="d-block mx-auto mb-4" src={require('../components/card01.jpg')} alt="" width="72" height="72"/>
+          <img className="d-block mx-auto mb-4" src={require('../img/card01.jpg')} alt="" width="72" height="72"/>
           <h2>預約商家服務</h2>
           <p className="lead">簡單幾步驟，輕鬆預約ShakeBeard特約商家提供的多樣服務。</p>
         </div>
         <h4 className="my-3">一、確認預約項目</h4>
         <div className="row">
           <div className="card">
-              <img src={require('../components/card01.jpg')} className="card-img-top" alt="..." />
+              <img src={require('../img/card01.jpg')} className="card-img-top" alt="..." />
               <div className="card-body">
                 <h5 className="card-title">Sculptor Barber</h5>
                 <Link to="#" className="card-link">

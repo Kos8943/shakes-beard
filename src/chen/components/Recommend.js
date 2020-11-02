@@ -10,7 +10,7 @@ function Recommend(props) {
           <div className="d-flex mb-5 scrollRight">
               <div class="card recommend">
                 <div className="card-img">
-                  <img src={require('../components/card01.jpg')} className="card-img-top" alt="..." />
+                  <img src={require('../img/card01.jpg')} className="card-img-top" alt="..." />
                 </div>
                 <div class="card-body d-flex flex-column align-items-start">
                   <p>
@@ -22,7 +22,7 @@ function Recommend(props) {
               </div>
               <div class="card recommend">
                 <div className="card-img">
-                  <img src={require('../components/card01.jpg')} className="card-img-top" alt="..." />
+                  <img src={require('../img/card01.jpg')} className="card-img-top" alt="..." />
                 </div>
                 <div class="card-body d-flex flex-column align-items-start">
                   <p>
@@ -34,7 +34,7 @@ function Recommend(props) {
               </div>
               <div class="card recommend">
                 <div className="card-img">
-                  <img src={require('../components/card01.jpg')} className="card-img-top" alt="..." />
+                  <img src={require('../img/card01.jpg')} className="card-img-top" alt="..." />
                 </div>
                 <div class="card-body d-flex flex-column align-items-start">
                   <p>
@@ -48,7 +48,7 @@ function Recommend(props) {
               </div>
               <div class="card recommend">
                 <div className="card-img">
-                  <img src={require('../components/card01.jpg')} className="card-img-top" alt="..." />
+                  <img src={require('../img/card01.jpg')} className="card-img-top" alt="..." />
                 </div>
                 <div class="card-body d-flex flex-column align-items-start">
                   <p>

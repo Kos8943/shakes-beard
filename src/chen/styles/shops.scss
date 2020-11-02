@@ -71,7 +71,7 @@
       display: inline-block;
       color: white;
       text-align: center;
-      padding: 14px;
+      padding: 14px;  
       text-decoration: none;
     }
   }
@@ -82,8 +82,9 @@
     flex-direction: row;
   }
 
+  .breadcrumb-item a,
   .cates-item a {
-    color: #6c757d;
+    color: #44494a;
   }
   
   .sorts{
