@@ -22,9 +22,9 @@ function Description(props) {
             tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla.
             Donec lacinia congue felis in faucibus.
           </p>
-          <Link to="#" className="btn btn-primary">
+          {/* <Link to="#" className="btn btn-primary">
             立即預約
-          </Link>
+          </Link> */}
         </Media.Body>
       </Media>
     </>

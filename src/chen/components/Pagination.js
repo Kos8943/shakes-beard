@@ -12,7 +12,7 @@ function Pagination(props) {
   console.log('Pagination', props)
   return (
     <>
-      <nav aria-label="Page navigation example">
+      <nav aria-label="Page navigation example" className="page">
         <ul className="pagination justify-content-center">
           <li className="page-item">
             <Link
@@ -24,7 +24,6 @@ function Pagination(props) {
               上一頁
             </Link>
           </li>
-          {/* for、click-active-disabled */}
           <li className="page-item">
             <Link className="page-link" to="#">
               1

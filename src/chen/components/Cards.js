@@ -1,29 +1,28 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
+import { Badge } from 'react-bootstrap'  
 import '../styles/shops.scss'
 
 function Cards(props) {
   console.log('Cards', props)
   return (
     <>
-      {/*  style="width: 18rem;" src="./card01" */}
-      <div className="card">
-        <img src={require('./card01.jpg')} className="card-img-top" alt="..." />
-        <div className="card-body">
-          <h5 className="card-title">Sculptor Barber</h5>
-          <Link to="#" className="card-link">
+      <div className="card col-12 col-sm-6 col-md-6 col-lg-4 p-0 mb-3">
+        <Link to="#" className="todetail">
+          <img src={require('./card01.jpg')} className="card-img-top" alt="..." />
+        </Link>
+        <div className="card-body p-2">
+          <h5 className="card-title">Sculptor Barber</h5> 
+          <Badge pill variant="secondary">
             男士理髮廳
-          </Link>
-          <Link to="#" className="card-link">
+          </Badge>
+          <Badge pill variant="secondary">
             台北市大安區
-          </Link>
-          <p className="card-text ">提供男士理髮、染髮、護髮等服務</p>
-          <Link to="#" className="btn btn-primary">
+          </Badge>
+          <p className="card-text mb-2">提供男士理髮、染髮、護髮等服務</p>
+          <Link to="#" className="linktodetail">
             詳細內容
           </Link>
-          {/* <Link to="#" className="btn btn-primary">
-            立即預約
-          </Link> */}
         </div>
       </div>
     </>
