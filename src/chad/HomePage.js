@@ -177,7 +177,7 @@ function HomePage() {
 
             <div className="gift-area">
                 <img
-                    className="top-img w-100 h-100 my-3"
+                    className="top-img my-3"
                     src={hotpage}              
                 />            
                 <p className="top-text">用我們獨有的工藝技術，為不甘平凡的您，點綴出更獨特的風格。</p>
