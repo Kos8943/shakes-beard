@@ -50,7 +50,7 @@
     height: 18%;
     width: 45%;
     position: absolute;
-    top: 28%;
+    top: 20%;
     left: 50%;
     transform: translate(-50%, -50%);
   }
@@ -178,32 +178,42 @@
 .giftBtn:hover {
   background: hsla(228, 43%, 31%, 1);
 }
+
 //禮物 手機板
 @media(max-width: 700px) {
 
   
   .gift-area {
-    padding-left: 17.5%;
-    padding-right: 17.5%;
+  
+   
     position: relative;
+    
   }
- 
+  .gift-img{
+
+    width: 450px;
+    height:300px;
+  }
+  .gift-title{
+    font-size: 1rem;
+  
+  }
   .gift-text-area {
     position: absolute;
-    right: 22%;
-    bottom: 30%;
+    right: 8%;
+    bottom: 40%;
     background-color: hsla(228, 43%, 31%, 0.7);
     border-radius: 4px;
-    width: 20%;
-    height: 30%;
+    width: 50%;
+    height: 50%;
     color: #f8f8f8;
     text-align: center;
-    line-height: 30px;
+    line-height: 10px;
   }
   
   .gift-text {
     word-break: keep-all;
-    font-size: 1.1rem;
+    font-size: 0.5rem;
     text-overflow: clip;
     line-height: 30px;
   }
@@ -214,10 +224,10 @@
     border-radius: 4px;
     border: 0px;
     background: hsla(228, 43%, 31%, 0.7);
-    font: 20px PingFang;
+    font: 16px PingFang;
     color: #ffffff;
     position: absolute;
-    right: 28%;
+    right: 15%;
     bottom: 10%;
   }
   .giftBtn:hover {

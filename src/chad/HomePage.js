@@ -79,7 +79,7 @@ function HomePage() {
         
 {/* 禮物盒 */}
 
-            <div className="gift-area">
+            <div className="gift-area d-flex justify-content-center">
                 <img
                     className="gift-img"
                     src={giftimg}                
