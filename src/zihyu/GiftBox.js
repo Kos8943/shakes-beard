@@ -1,6 +1,6 @@
 import React from 'react'
 import './Style/GiftBoxCSS.css';
-// import { Button } from 'react-bootstrap'
+import { Button } from 'react-bootstrap'
 
 
 class Class_Gift extends React.Component
@@ -24,11 +24,17 @@ class Class_Gift extends React.Component
                 <div className="line-middle"></div>
                 <div className="thirdTitle">獨家客製化禮盒，傳遞最真摯的心意</div>
                 
-                {/* <a className="btn" href="/Path_Budget">
-                  <Button className="startButton">開始製作</Button>
-                </a> */}
 
-                <a className="bigBtn" href="/Path_Budget"><button className="startButton">開始製作</button></a>
+                <div style= {{margin: '0 auto', width: '220px'}}
+                ><Button className="startButton" onClick=
+                {     //React程式區間語法 (開始)
+                  () =>
+                  {
+                    window.open("/Path_Budget", '_self');
+                  }
+                }     //React程式區間語法 (結束)
+              
+              > 開始製作 </Button></div>
 
 
               </div>

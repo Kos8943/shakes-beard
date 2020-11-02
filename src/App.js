@@ -21,6 +21,10 @@ import NotFoundPage from "./chen/pages/NotFoundPage";
 import Func_GiftBox from "./zihyu/GiftBox";
 import Func_Budget from "./zihyu/Budget";
 import Func_ChooseRazor from "./zihyu/ChooseRazor";
+import Func_ChooseBrush from "./zihyu/ChooseBrush";
+import Func_ChooseStand from "./zihyu/ChooseStand";
+import Func_Color from "./zihyu/Color";
+import Func_Finish from "./zihyu/Finish";
 import LogIn from "./yen/LogIn";
 import SignUp from "./yen/SignUp";
 import MemberUpdate from "./yen/MemberUpdate";
@@ -28,6 +32,7 @@ import PasswordUpdate from "./yen/PasswordUpdate";
 import PreferenceSetting from "./yen/PreferenceSetting";
 import FavoritesList from "./yen/FavoritesList";
 import Payment from "./kos/pages/Payment";
+import Paycomplete from './kos/pages/Paycomplete'
 
 
 function App() {
@@ -67,6 +72,30 @@ function App() {
             <Route path="/Path_ChooseRazor">
             <ShakesBeardNavbar />
               <Func_ChooseRazor />
+              <MyFooter />
+            </Route>
+
+            <Route path="/Path_ChooseBrush">
+            <ShakesBeardNavbar />
+              <Func_ChooseBrush />
+              <MyFooter />
+            </Route>
+
+            <Route path="/Path_ChooseStand">
+            <ShakesBeardNavbar />
+              <Func_ChooseStand />
+              <MyFooter />
+            </Route>
+
+            <Route path="/Path_Color">
+            <ShakesBeardNavbar />
+              <Func_Color />
+              <MyFooter />
+            </Route>
+
+            <Route path="/Path_Finish">
+            <ShakesBeardNavbar />
+              <Func_Finish />
               <MyFooter />
             </Route>
 
@@ -114,8 +143,16 @@ function App() {
 
               <Route path="/payment">
                 <ShakesBeardNavbar />
-                <div className="footerFix">
+                <div className="footerFix KosPadding">
                   <Payment />
+                </div>
+                <MyFooter />
+              </Route>
+
+              <Route path="/paycomplete">
+                <ShakesBeardNavbar />
+                <div className="footerFix KosPadding">
+                  <Paycomplete />
                 </div>
                 <MyFooter />
               </Route>

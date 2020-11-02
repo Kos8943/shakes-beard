@@ -1,6 +1,7 @@
 import React from 'react'
 import './Style/BudgetCSS.css';
 import img from './image/box.png';
+import { Button } from 'react-bootstrap'
 class Class_Budget extends React.Component
 
 
@@ -17,9 +18,17 @@ class Class_Budget extends React.Component
                   <div className="Title2">選擇預算</div>
                   <div className="lineTop"></div>
                   <div className="lineDown"></div>
-                  <img className="budget_boxImg" src={img} />
+                  <div><img className="budget_boxImg" src={img} /></div>
 
-                  <a className="bigBtn" href="/Path_ChooseRazor"><button className="startButton">下一步</button></a>
+                  <div><Button className="startButton" onClick=
+                  {     //React程式區間語法 (開始)
+                    () =>
+                    {
+                      window.open("/Path_ChooseRazor", '_self');
+                    }
+                  }     //React程式區間語法 (結束)
+                
+                  > 下一步 </Button></div>
                 </div>
               </div>
           </div> 

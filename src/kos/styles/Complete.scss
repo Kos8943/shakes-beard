@@ -1,0 +1,60 @@
+
+.payComplete h4{
+    margin-bottom: 25px;
+}
+
+.payComplete p{
+    margin-bottom: 5px;
+}
+
+.checkList {
+    margin-left: 1%;
+}
+
+.checkList h4{
+    margin-bottom: 20px;
+}
+.checkList p {
+    margin-bottom: 5px;
+}
+
+.checkOrder {
+    width: 20%;
+    height: 80px;
+    border-radius: 4px;
+    // background-color: #2D3B72;
+    margin: auto 0;
+}
+
+.checkOrderButton {
+    width: 100%;
+    height: 100%;
+    border: 0;
+    background-color: #2D3B72;
+    border-radius: 4px;
+    color: #f8f8f8;
+}
+
+@media (max-width:576px) {
+
+    .checkList {
+        margin-left: -2%;
+    }
+
+    .checkOrder {
+        width: 35%;
+        height: 60px;
+        border-radius: 4px;
+        // background-color: #2D3B72;
+        margin: auto 0;
+    }
+    
+    .checkOrderButton {
+        width: 100%;
+        height: 100%;
+        border: 0;
+        background-color: #2D3B72;
+        border-radius: 4px;
+        color: #f8f8f8;
+    }
+}
