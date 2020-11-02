@@ -101,8 +101,7 @@
 {
   position: absolute;
   z-index: 4;
-  left: -15px;
-  bottom: 95px;
   height: 372px;
-  transform: rotate(-10deg);
+  /* transform: rotate(-10deg); */
+  transform: translate(-500px, -10px);
 }
