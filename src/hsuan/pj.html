@@ -1,11 +1,15 @@
+<html lang="ja"><head>
+    
+		<script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'UA-167950083-6');
+	</script>
+<style>
 @charset "UTF-8";
-/*!
- * Bootstrap Reboot v4.1.3 (https://getbootstrap.com/)
- * Copyright 2011-2018 The Bootstrap Authors
- * Copyright 2011-2018 Twitter, Inc.
- * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
- * Forked from Normalize.css, licensed MIT (https://github.com/necolas/normalize.css/blob/master/LICENSE.md)
- */
+
 *,
 *::before,
 *::after {
@@ -13,31 +17,819 @@
 }
 
 html {
-  font-family: 'PingFang' ;
+  font-family: sans-serif;
   line-height: 1.15;
   -webkit-text-size-adjust: 100%;
   -ms-text-size-adjust: 100%;
-  -ms-overflow-style: scrollbar;
+  /* -ms-overflow-style: scrollbar; */
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
 
 @-ms-viewport {
   width: device-width;
 }
-.HsuanBread{
-font-size: 1rem;  
-font-family: 'PingFang';
-color: black;
+
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #212529;
+  text-align: left;
+  background-color: #fff;
 }
-.HsuanBread a {
+
+[tabindex="-1"]:focus {
+  outline: 0 !important;
+}
+
+hr {
+  box-sizing: content-box;
+  height: 0;
+  overflow: visible;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  margin-top: 0;
+  margin-bottom: 0.5rem;
+}
+
+p {
+  margin-top: 0;
+  margin-bottom: 1rem;
+}
+
+abbr[title],
+abbr[data-original-title] {
+  text-decoration: underline;
+  -webkit-text-decoration: underline dotted;
+  text-decoration: underline dotted;
+  cursor: help;
+  border-bottom: 0;
+}
+
+address {
+  margin-bottom: 1rem;
+  font-style: normal;
+  line-height: inherit;
+}
+
+ol,
+ul,
+dl {
+  margin-top: 0;
+  margin-bottom: 1rem;
+}
+
+ol ol,
+ul ul,
+ol ul,
+ul ol {
+  margin-bottom: 0;
+}
+
+dt {
+  font-weight: 700;
+}
+
+dd {
+  margin-bottom: .5rem;
+  margin-left: 0;
+}
+
+blockquote {
+  margin: 0 0 1rem;
+}
+
+dfn {
+  font-style: italic;
+}
+
+b,
+strong {
+  font-weight: bolder;
+}
+
+small {
+  font-size: 80%;
+}
+
+sub,
+sup {
+  position: relative;
+  font-size: 75%;
+  line-height: 0;
+  vertical-align: baseline;
+}
+
+sub {
+  bottom: -.25em;
+}
+
+sup {
+  top: -.5em;
+}
+
+
+
+pre,
+code,
+kbd,
+samp {
+  font-family: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+  font-size: 1em;
+}
+
+pre {
+  margin-top: 0;
+  margin-bottom: 1rem;
+  overflow: auto;
+  -ms-overflow-style: scrollbar;
+}
+
+figure {
+  margin: 0 0 1rem;
+}
+
+img {
+  vertical-align: middle;
+  border-style: none;
+}
+
+svg {
+  overflow: hidden;
+  vertical-align: middle;
+}
+
+table {
+  border-collapse: collapse;
+}
+
+caption {
+  padding-top: 0.75rem;
+  padding-bottom: 0.75rem;
+  color: #6c757d;
+  text-align: left;
+  caption-side: bottom;
+}
+
+th {
+  text-align: inherit;
+}
+
+label {
+  display: inline-block;
+  margin-bottom: 0.5rem;
+}
+
+button {
+  border-radius: 0;
+}
+
+button:focus {
+  outline: 1px dotted;
+  outline: 5px auto -webkit-focus-ring-color;
+}
+
+input,
+button,
+select,
+optgroup,
+textarea {
+  margin: 0;
+  font-family: inherit;
+  font-size: inherit;
+  line-height: inherit;
+}
+
+button,
+input {
+  overflow: visible;
+}
+
+button,
+select {
+  text-transform: none;
+}
+
+button,
+html [type="button"],
+[type="reset"],
+[type="submit"] {
+  -webkit-appearance: button;
+}
+
+button::-moz-focus-inner,
+[type="button"]::-moz-focus-inner,
+[type="reset"]::-moz-focus-inner,
+[type="submit"]::-moz-focus-inner {
+  padding: 0;
+  border-style: none;
+}
+
+input[type="radio"],
+input[type="checkbox"] {
+  box-sizing: border-box;
+  padding: 0;
+}
+
+input[type="date"],
+input[type="time"],
+input[type="datetime-local"],
+input[type="month"] {
+  -webkit-appearance: listbox;
+}
+
+textarea {
+  overflow: auto;
+  resize: vertical;
+}
+
+fieldset {
+  min-width: 0;
+  padding: 0;
+  margin: 0;
+  border: 0;
+}
+
+legend {
+  display: block;
+  width: 100%;
+  max-width: 100%;
+  padding: 0;
+  margin-bottom: .5rem;
+  font-size: 1.5rem;
+  line-height: inherit;
+  color: inherit;
+  white-space: normal;
+}
+
+progress {
+  vertical-align: baseline;
+}
+
+[type="number"]::-webkit-inner-spin-button,
+[type="number"]::-webkit-outer-spin-button {
+  height: auto;
+}
+
+[type="search"] {
+  outline-offset: -2px;
+  -webkit-appearance: none;
+}
+
+[type="search"]::-webkit-search-cancel-button,
+[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+
+::-webkit-file-upload-button {
+  font: inherit;
+  -webkit-appearance: button;
+}
+
+output {
+  display: inline-block;
+}
+
+summary {
+  display: list-item;
+  cursor: pointer;
+}
+
+template {
+  display: none;
+}
+
+[hidden] {
+  display: none !important;
+}
+#__bs_notify__ {
+  top: auto !important;
+  bottom: 0;
+}
+
+::-moz-selection {
+  background-color: rgba(80, 98, 160, 0.4);
+}
+
+::selection {
+  background-color: rgba(80, 98, 160, 0.4);
+}
+
+html {
+  font-size: 62.5%;
+  height: 100%;
+}
+
+body {
+  font-family: "Hiragino Kaku Gothic ProN", "ヒラギノ角ゴ ProN W3", "Hiragino Kaku Gothic Pro", "ヒラギノ角ゴ Pro W3", "游ゴシック体", "Yu Gothic", YuGothic, "Segoe UI", "メイリオ", Meiryo, "ＭＳ Ｐゴシック", sans-serif;
+  font-weight: 300;
+  line-height: 1.5;
+  color: #333;
+  background-color: #fff;
+  font-size: 1.6rem;
+  height: 100%;
+}
+
+@media screen and (max-width: 559px) {
+  body {
+    font-size: 1.4rem;
+  }
+}
+
+ 
+ul, li {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+dl, dt, dd {
+  margin: 0;
+  padding: 0;
+  font-style: normal;
+}
+
+p {
+  text-align: inherit;
+  line-height: 1.85;
+}
+
+em {
+  font-style: normal;
+  font-weight: bold;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+*:focus {
+  outline: none;
+}
+
+h1, h2, h3, h4, h5 {
+  margin: 0;
+  padding: 0;
+  font-weight: inherit;
+  font-size: inherit;
+}
+
+/* Slider */
+.slick-slider {
+  position: relative;
+  display: block;
+  box-sizing: border-box;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  touch-action: pan-y;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.slick-list {
+  position: relative;
+  overflow: hidden;
+  display: block;
+  margin: 0;
+  padding: 0;
+}
+
+.slick-list:focus {
+  outline: none;
+}
+
+.slick-list.dragging {
+  cursor: pointer;
+  cursor: hand;
+}
+
+.slick-slider .slick-track,
+.slick-slider .slick-list {
+  transform: translate3d(0, 0, 0);
+}
+
+.slick-track {
+  position: relative;
+  left: 0;
+  top: 0;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.slick-track:before, .slick-track:after {
+  content: "";
+  display: table;
+}
+
+.slick-track:after {
+  clear: both;
+}
+
+.slick-loading .slick-track {
+  visibility: hidden;
+}
+
+.slick-slide {
+  float: left;
+  height: 100%;
+  min-height: 1px;
+  display: none;
+}
+
+[dir="rtl"] .slick-slide {
+  float: right;
+}
+
+.slick-slide img {
+  display: block;
+}
+
+.slick-slide.slick-loading img {
+  display: none;
+}
+
+.slick-slide.dragging img {
+  pointer-events: none;
+}
+
+.slick-initialized .slick-slide {
+  display: block;
+}
+
+.slick-loading .slick-slide {
+  visibility: hidden;
+}
+
+.slick-vertical .slick-slide {
+  display: block;
+  height: auto;
+  border: 1px solid transparent;
+}
+
+.slick-arrow.slick-hidden {
+  display: none;
+}
+
+/* Slider */
+.slick-loading .slick-list {
+  background: #fff url("../img/ajax-loader.gif?qu9ew7us") center center no-repeat;
+}
+
+/* Icons */
+@font-face {
+  font-family: "slick";
+  src: url(../font/slick.eot);
+  src: url(../font/slick.eot?#iefix) format("embedded-opentype"), url(../font/slick.woff) format("woff"), url(../font/slick.ttf) format("truetype"), url(../font/slick.svg#slick) format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* Arrows */
+.slick-prev,
+.slick-next {
+  position: absolute;
+  display: block;
+  height: 20px;
+  width: 20px;
+  line-height: 0px;
+  font-size: 0px;
+  cursor: pointer;
+  background: transparent;
+  color: transparent;
+  top: 50%;
+  transform: translate(0, -50%);
+  padding: 0;
+  border: none;
+  outline: none;
+}
+
+.slick-prev:hover, .slick-prev:focus,
+.slick-next:hover,
+.slick-next:focus {
+  outline: none;
+  background: transparent;
+  color: transparent;
+}
+
+.slick-prev:hover:before, .slick-prev:focus:before,
+.slick-next:hover:before,
+.slick-next:focus:before {
+  opacity: 1;
+}
+
+.slick-prev.slick-disabled:before,
+.slick-next.slick-disabled:before {
+  opacity: 0.25;
+}
+
+.slick-prev:before,
+.slick-next:before {
+  font-family: "slick";
+  font-size: 20px;
+  line-height: 1;
+  color: white;
+  opacity: 0.75;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.slick-prev {
+  left: -25px;
+}
+
+[dir="rtl"] .slick-prev {
+  left: auto;
+  right: -25px;
+}
+
+.slick-prev:before {
+  content: "←";
+}
+
+[dir="rtl"] .slick-prev:before {
+  content: "→";
+}
+
+.slick-next {
+  right: -25px;
+}
+
+[dir="rtl"] .slick-next {
+  left: -25px;
+  right: auto;
+}
+
+.slick-next:before {
+  content: "→";
+}
+
+[dir="rtl"] .slick-next:before {
+  content: "←";
+}
+
+/* Dots */
+.slick-dotted.slick-slider {
+  margin-bottom: 30px;
+}
+
+.slick-dots {
+  position: absolute;
+  bottom: -25px;
+  list-style: none;
+  display: block;
+  text-align: center;
+  padding: 0;
+  margin: 0;
+  width: 100%;
+}
+
+.slick-dots li {
+  position: relative;
+  display: inline-block;
+  height: 20px;
+  width: 20px;
+  margin: 0 5px;
+  padding: 0;
+  cursor: pointer;
+}
+
+.slick-dots li button {
+  border: 0;
+  background: transparent;
+  display: block;
+  height: 20px;
+  width: 20px;
+  outline: none;
+  line-height: 0px;
+  font-size: 0px;
+  color: transparent;
+  padding: 5px;
+  cursor: pointer;
+}
+
+.slick-dots li button:hover, .slick-dots li button:focus {
+  outline: none;
+}
+
+.slick-dots li button:hover:before, .slick-dots li button:focus:before {
+  opacity: 1;
+}
+
+.slick-dots li button:before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  content: "•";
+  width: 20px;
+  height: 20px;
+  font-family: "slick";
+  font-size: 6px;
+  line-height: 20px;
+  text-align: center;
+  color: black;
+  opacity: 0.25;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.slick-dots li.slick-active button:before {
+  color: black;
+  opacity: 0.75;
+}
+
+/*
+ * ニューモーフィズム
+ * <a href="#" class="ButtonA"><span>MORE</span></a>
+ */
+.ButtonA {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 46px;
+  width: 175px;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 22px;
+  background-color: transparent;
+  font-family: 'Oswald', sans-serif;
+  font-weight: 300;
+  color: inherit;
+  font-size: 15px;
+  letter-spacing: 0.15em;
+  transition: 0.3s box-shadow;
+}
+
+.ButtonA:before {
+  box-shadow: 7px 7px 14px rgba(201, 177, 181, 0.3), -7px -7px 14px white;
+}
+
+.ButtonA:after {
+  box-shadow: inset 4px 4px 8px rgba(201, 177, 181, 0.3), inset -4px -4px 8px white;
+}
+
+.ButtonA > span:before, .ButtonA > span:after {
+  background-color: #b59da1;
+}
+
+.ButtonA:before {
+  content: '';
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  border-radius: 22px;
+  transition: 0.3s opacity;
+  opacity: 1;
+}
+
+.ButtonA:after {
+  content: '';
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  border-radius: 22px;
+  transition: opacity 0.3s , box-shadow 0.3s;
+  opacity: 0;
+  mix-blend-mode: multiply;
+}
+
+.ButtonA > span {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.ButtonA > span:before, .ButtonA > span:after {
+  content: '';
+  display: block;
+  position: absolute;
+  height: 1px;
+  width: 10px;
+  top: 50%;
+  left: 20px;
+  transform-origin: 100% 50%;
+}
+
+.ButtonA > span:before {
+  transform: rotate(-50deg);
+}
+
+.ButtonA > span:after {
+  transform: rotate(50deg);
+}
+
+a.ButtonA {
   color: inherit;
   text-decoration: none;
 }
 
-.HsuanBread a:hover {
-  text-decoration: underline;
+@media screen and (min-width: 960px) {
+  .ButtonA:hover {
+    cursor: pointer;
+  }
+  .ButtonA:hover:before {
+    opacity: 0;
+  }
+  .ButtonA:hover:after {
+    opacity: 1;
+  }
 }
 
+@media screen and (max-width: 959px) {
+  .ButtonA:active:before {
+    opacity: 0;
+  }
+  .ButtonA:active:after {
+    opacity: 1;
+  }
+}
+
+@media screen and (max-width: 559px) {
+  .ButtonA {
+    height: 40px;
+    width: 150px;
+    border-radius: 20px;
+    font-size: 13px;
+  }
+  .ButtonA:before {
+    border-radius: 20px;
+  }
+  .ButtonA:after {
+    border-radius: 20px;
+  }
+  .ButtonA > span:before, .ButtonA > span:after {
+    width: 7px;
+    left: 10px;
+  }
+}
+
+.ButtonA--l {
+  width: 244px;
+  letter-spacing: 0.075em;
+}
+
+.ButtonA--l > span {
+  padding-left: 1em;
+}
+
+.ButtonA--l > span:before, .ButtonA--l > span:after {
+  left: 10px;
+}
+
+.ButtonA--lilac {
+  background: #FCF6F3;
+}
+
+.ButtonA--ext i:before {
+  content: '';
+  display: block;
+  position: absolute;
+  right: 20px;
+  top: 50%;
+  width: 17px;
+  height: 15px;
+  background: url(../img/ico_external.svg) center center/contain no-repeat;
+  transform: translateY(-50%);
+}
+
+@media screen and (max-width: 959px) {
+  .ButtonA--ext > span {
+    top: -1px;
+  }
+  .ButtonA--ext > span:before, .ButtonA--ext > span:after {
+    width: 7px;
+    left: 10px;
+  }
+  .ButtonA--ext i:before {
+    right: 10px;
+    width: 15px;
+    height: 12px;
+  }
+}
+
+/*
+<section class="PageTitle">
+	<p class="en">COMPANY</p>
+	<h1 class="ja">会社概要</h1>
+</section>
+ */
 .PageTitle {
   position: relative;
   padding: 132px 0 46px;
@@ -51,7 +843,7 @@ color: black;
 .PageTitle:before {
   content: '';
   display: block;
-  background: rgba(185, 41, 41, 0.5);
+  background: rgba(255, 255, 255, 0.5);
   position: absolute;
   left: 0;
   bottom: 0;
@@ -61,7 +853,59 @@ color: black;
   z-index: -1;
 }
 
+.PageTitle .en {
+  font-family: 'Cormorant', sans-serif;
+  font-size: 80px;
+  line-height: 1;
+  color: #b59da1;
+}
 
+.PageTitle .en:after {
+  content: '';
+  display: block;
+  width: 64px;
+  height: 1px;
+  margin: 18px auto 26px;
+  background: #b59da1;
+}
+
+.PageTitle .ja {
+  font-family: "Shuei Mincho M", serif;
+  font-size: 20px;
+  line-height: 1;
+  letter-spacing: 0.125em;
+  color: #b59da1;
+}
+
+.is-color-beige .PageTitle .en {
+  color: #af9f8d;
+}
+
+.is-color-beige .PageTitle:after {
+  background: #af9f8d;
+}
+
+.is-color-beige .PageTitle .ja {
+  color: #af9f8d;
+}
+
+@media screen and (max-width: 559px) {
+  .PageTitle {
+    padding: 62px 0 52px;
+  }
+  .PageTitle:before {
+    width: 62.5%;
+  }
+  .PageTitle .en {
+    font-size: 54px;
+  }
+  .PageTitle .en:after {
+    width: 54px;
+  }
+  .PageTitle .ja {
+    font-size: 17px;
+  }
+}
 
 .Scroller {
   display: flex;
@@ -215,7 +1059,7 @@ color: black;
  */
 .TitleA {
   color: inherit;
-  font-family: 'PingFang' , sans-serif;
+  font-family: 'Cormorant', sans-serif;
   font-size: 40px;
   line-height: 1;
 }
@@ -226,20 +1070,128 @@ color: black;
   }
 }
 
+.Breadcrumb {
+  padding-top: 40px;
+  padding-bottom: 40px;
+  position: relative;
+  z-index: 2;
+  color: #b59da1;
+}
+
+.Breadcrumb a {
+  color: #b59da1;
+}
+
+.Breadcrumb .Breadcrumb__list li:before, .Breadcrumb .Breadcrumb__list li:after {
+  background-color: #b59da1;
+}
 
 @media screen and (max-width: 959px) {
-  .HsuanBread {
+  .Breadcrumb {
     padding-top: 20px;
     padding-bottom: 20px;
   }
 }
 
+.Breadcrumb__container {
+  position: relative;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+  max-width: 1200px;
+}
+
+@media screen and (min-width: 960px) and (max-width: 1279px) {
+  .Breadcrumb__container {
+    max-width: initial;
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+}
+
+@media screen and (min-width: 560px) and (max-width: 959px) {
+  .Breadcrumb__container {
+    max-width: initial;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+}
+
+@media screen and (max-width: 559px) {
+  .Breadcrumb__container {
+    max-width: initial;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+}
+
+.Breadcrumb__list {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.Breadcrumb__list li {
+  position: relative;
+  padding-right: 40px;
+  color: inherit;
+  font-size: 13px;
+}
+
+.Breadcrumb__list li a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.Breadcrumb__list li a:hover {
+  text-decoration: underline;
+}
+
+.Breadcrumb__list li:before, .Breadcrumb__list li:after {
+  content: '';
+  display: block;
+  position: absolute;
+  height: 1px;
+  width: 8px;
+  top: 50%;
+  right: 15px;
+  transform-origin: 100% 50%;
+}
+
+.Breadcrumb__list li:before {
+  transform: rotate(-50deg);
+}
+
+.Breadcrumb__list li:after {
+  transform: rotate(50deg);
+}
+
+.Breadcrumb__list li:last-child {
+  padding-right: 0;
+}
+
+.Breadcrumb__list li:last-child:before, .Breadcrumb__list li:last-child:after {
+  display: none;
+}
+
+@media screen and (max-width: 559px) {
+  .Breadcrumb__list {
+    display: flex;
+    white-space: nowrap;
+    overflow-x: auto;
+    overflow-y: hidden;
+    -webkit-overflow-scrolling: touch;
+    -ms-overflow-style: -ms-autohiding-scrollbar;
+  }
+}
+
+
 
 
 .PgaeWraper {
   position: relative;
-  background-color:#595452;
-  /* color: #b11515; */
+  background-color: #fcfafb;
+  color: #b59da1;
 }
 
 .PgaeWraper:before {
@@ -250,14 +1202,14 @@ color: black;
   height: 100%;
   top: 0;
   right: 0;
-  /* background-color:#2d3b72 ; */
+  background-color: #f8f3f5;
 }
 
 .PgaeWrapper__inner {
   position: relative;
 }
 
-/* .SectionTile {
+.SectionTile {
   position: relative;
   padding-top: 80px;
   padding-bottom: 80px;
@@ -269,7 +1221,7 @@ color: black;
 
 .SectionTile .TitleA:last-child {
   margin-bottom: 0;
-} */
+}
 
 @media screen and (max-width: 559px) {
   .SectionTile {
@@ -329,25 +1281,25 @@ color: black;
     margin-bottom: 0;
   }
 }
-/* 禮盒標語 */
+
 .brand-BrandCardItems {
-  color: #f8f8f8;
+  color: #b59da1;
 }
 
 .brand-BrandCardItems a {
   color: #b59da1;
 }
-/* 禮盒hover */
+
 .brand-BrandCardItems .brand-BrandCardItems__card:before {
-    box-shadow: 7px 7px 1px rgba(201, 177, 181, 0.055), -2px -2px 7px #A69981;;
+  box-shadow: 7px 7px 7px rgba(201, 177, 181, 0.3), -7px -7px 7px white;
 }
 
 .brand-BrandCardItems .brand-BrandCardItems__card:after {
-    box-shadow: inset 4px 4px 8px rgba(71, 62, 64, 0.973), inset -4px -5px 8px #595452;
+  box-shadow: inset 4px 4px 8px rgba(201, 177, 181, 0.3), inset -4px -4px 8px white;
 }
 
 .brand-BrandCardItems .brand-BrandCardItems__inner {
-  background-color: #f8f8f8;
+  background-color: #fcfafb;
 }
 
 .brand-BrandCardItems__items {
@@ -491,9 +1443,9 @@ color: black;
   left: 0;
   -o-object-fit: cover;
      object-fit: cover;
-    font-family: 'PingFang' ;
+  font-family: 'object-fit: cover;';
 }
-/* 禮盒標題字型 */
+
 .brand-BrandCardItems__title {
   display: flex;
   align-items: center;
@@ -504,7 +1456,7 @@ color: black;
   width: 100%;
   height: 100%;
   padding-left: 25px;
-  font-family: 'PingFang' ;
+  font-family: 'Cormorant', sans-serif;
   font-size: 30px;
   line-height: 1;
 }
@@ -522,13 +1474,13 @@ color: black;
     font-size: 20px;
   }
 }
-/* 禮盒標語字形 */
+
 .brand-BrandCardItems__body {
   text-align: center;
   padding-top: 20px;
   padding-bottom: 20px;
   color: inherit;
-  font-family: 'PingFang';
+  font-family: "Shuei Mincho M", serif;
   font-size: 13px;
   letter-spacing: 0.05em;
   line-height: 1.8;
@@ -543,19 +1495,20 @@ color: black;
 }
 
 .brand-ProductItems {
-  color: #f8f8f8;
+  color: #b59da1;
 }
-/* 禮盒顏色 */
+
 .brand-ProductItems a {
-  color: #2d3b72;
- }
-/* 商品hover */
+  color: #b59da1;
+  text-decoration: none;
+}
+
 .brand-ProductItems .brand-ProductItems__image:before {
-  box-shadow: 7px 7px 1px rgba(201, 177, 181, 0.055), -2px -2px 7px #A69981;
+  box-shadow: 7px 7px 7px rgba(201, 177, 181, 0.3), -7px -7px 7px white;
 }
 
 .brand-ProductItems .brand-ProductItems__image:after {
-  box-shadow: inset 4px 4px 8px rgba(71, 62, 64, 0.973), inset -4px -5px 8px #595452;
+  box-shadow: inset 4px 4px 8px rgba(201, 177, 181, 0.3), inset -4px -4px 8px white;
 }
 
 .brand-ProductItems__items {
@@ -650,7 +1603,7 @@ color: black;
   position: relative;
   width: 100%;
 }
-/* 種類位置 */
+
 .brand-ProductItems__image ._image:before {
   content: '';
   display: block;
@@ -665,7 +1618,7 @@ color: black;
   left: 0;
   -o-object-fit: cover;
      object-fit: cover;
-  font-family: 'PingFang' ;
+  font-family: 'object-fit: cover;';
 }
 
 @media screen and (min-width: 960px) {
@@ -688,7 +1641,7 @@ color: black;
     opacity: 1;
   }
 }
-/* 種類說明位置 */
+
 .brand-ProductItems__body {
   text-align: center;
   padding-top: 30px;
@@ -696,7 +1649,7 @@ color: black;
 }
 
 .brand-ProductItems__body ._no {
-  font-family: 'PingFang' ;
+  font-family: 'EB Garamond', serif;
   font-size: 12px;
   letter-spacing: 0.05em;
   margin-bottom: 8px;
@@ -712,16 +1665,16 @@ color: black;
 .brand-ProductItems__body ._no ._code {
   font-size: 14px;
 }
-/* 種類字體 */
+
 .brand-ProductItems__body ._name {
-  font-family: 'PingFang';
+  font-family: "Shuei Mincho M", serif;
   font-size: 15px;
   letter-spacing: 0.05em;
   margin-bottom: 8px;
 }
-/* 說明字體 */
+
 .brand-ProductItems__body ._price {
-  font-family: 'PingFang';
+  font-family: 'EB Garamond', serif;
   font-size: 14px;
   letter-spacing: 0.05em;
 }
@@ -740,23 +1693,19 @@ color: black;
     font-size: 14px;
   }
 }
-/* brand shakesbeard */
+
 .brand-SectionCover {
   padding-top: 80px;
   padding-bottom: 40px;
-  color:  #595452;
+  color: #b59da1;
 }
-._text2  {
-    color:  #f8f8f8;
-    padding-bottom: 60px;
-  }
 
 .brand-SectionCover .brand-SectionCover__title ._card:before {
-  background-color: #a69981;
+  background-color: #e6d9db;
 }
 
 .brand-SectionCover .brand-SectionCover__title ._title1:after {
-  background-color: #595452;
+  background-color: #b59da1;
 }
 
 .brand-SectionCover__main {
@@ -821,7 +1770,7 @@ color: black;
   left: -13px;
   top: 13px;
 }
-/* shakesbeard card */
+
 .brand-SectionCover__title ._wrap {
   position: relative;
   height: 100%;
@@ -835,7 +1784,7 @@ color: black;
 
 .brand-SectionCover__title ._title1 {
   position: relative;
-  font-family: 'PingFang';
+  font-family: 'Cormorant', sans-serif;
   font-size: 15px;
   line-height: 1;
   letter-spacing: 0.075em;
@@ -858,7 +1807,7 @@ color: black;
   align-items: flex-end;
   justify-content: flex-start;
   flex-wrap: wrap;
-  font-family: 'PingFang';
+  font-family: 'Cormorant', sans-serif;
   font-size: 65px;
   line-height: 1;
 }
@@ -968,14 +1917,14 @@ color: black;
 }
 
 .brand-SectionCover__body ._text1 {
-  font-family: 'PingFang' ;
+  font-family: "Shuei Mincho M", serif;
   font-size: 22px;
   line-height: 2;
   margin-bottom: 30px;
 }
 
 .brand-SectionCover__body ._text2 {
-  font-family: 'PingFang' ;
+  font-family: "Shuei Mincho M", serif;
   font-size: 15px;
   line-height: 2.75;
   text-align: justify;
@@ -1031,17 +1980,17 @@ color: black;
   padding-top: 0;
 }
 
-/* .brand-SectionProductDetail {
+.brand-SectionProductDetail {
   padding-top: 80px;
-  color: #fc042d;
+  color: #b59da1;
 }
 
 .brand-SectionProductDetail a {
-  color: #e91337;
+  color: #b59da1;
   text-decoration: none;
-} */
+}
 
-/* .brand-SectionProductDetail .brand-SectionProductDetail__slider {
+.brand-SectionProductDetail .brand-SectionProductDetail__slider {
   box-shadow: 30px 30px 60px rgba(156, 138, 142, 0.3);
 }
 
@@ -1060,7 +2009,7 @@ color: black;
   align-items: flex-start;
   justify-content: space-between;
   flex-direction: row-reverse;
-} */
+}
 
 @media screen and (max-width: 959px) {
   .brand-SectionProductDetail__layout {
@@ -1103,7 +2052,7 @@ color: black;
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
-  font-family: 'PingFang' ;
+  font-family: 'object-fit: cover;';
 }
 
 @media screen and (max-width: 959px) {
@@ -1167,7 +2116,7 @@ color: black;
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
-  font-family: 'PingFang' ;
+  font-family: 'object-fit: cover;';
 }
 
 @media screen and (min-width: 1280px) {
@@ -1271,7 +2220,7 @@ color: black;
   justify-content: flex-start;
   position: relative;
   margin-bottom: 10px;
-  font-family: 'PingFang' ;
+  font-family: 'Cormorant', sans-serif;
   font-size: 20px;
   line-height: 1;
   letter-spacing: 0.075em;
@@ -1318,7 +2267,7 @@ color: black;
 
 .brand-SectionProductDetail__heading ._title {
   margin-bottom: 60px;
-  font-family: 'PingFang' ;
+  font-family: "Shuei Mincho M", serif;
   font-size: 20px;
   line-height: 2;
   letter-spacing: 0.1em;
@@ -1364,7 +2313,7 @@ color: black;
   width: 108px;
   flex-shrink: 0;
   padding-right: 20px;
-  font-family: 'PingFang' ;
+  font-family: 'Cormorant', sans-serif;
   font-size: 15px;
   letter-spacing: 0.05em;
   line-height: 20px;
@@ -1398,7 +2347,9 @@ color: black;
   justify-content: center;
 }
 
-
+.brand-SectionProductDetail__external .ButtonA {
+  background: #F8F3F5;
+}
 
 @media screen and (min-width: 960px) {
   .brand-SectionProductDetail__external {
@@ -1430,7 +2381,12 @@ color: black;
   .brand-SectionProductDetail__external li:nth-child(n+3) {
     margin-top: 25px;
   }
-  
+  .brand-SectionProductDetail__external .ButtonA {
+    height: 34px;
+    width: 136px;
+    border-radius: 17px;
+    font-size: 13px;
+  }
 }
 
 @media screen and (min-width: 560px) and (max-width: 959px) {
@@ -1610,7 +2566,7 @@ color: black;
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
-  font-family: 'PingFang' ;
+  font-family: 'object-fit: cover;';
 }
 
 .top-BrandTile.top-BrandTile--lilac .top-BrandTile__photo ._inner {
@@ -1666,7 +2622,7 @@ color: black;
 .top-BrandTile__body ._inner {
   position: relative;
   width: 100%;
-  font-family: 'PingFang';
+  font-family: 'Cormorant', sans-serif;
   color: #b59da1;
 }
 
@@ -1707,11 +2663,11 @@ color: black;
   line-height: 2.75;
   margin-bottom: 70px;
   text-align: justify;
-  font-family: 'PingFang';
+  font-family: "Shuei Mincho M", serif;
 }
 
 .top-BrandTile__body ._inner ._title_ja {
-  font-family: 'PingFang' ;
+  font-family: "Shuei Mincho M", serif;
   margin-bottom: 35px;
   font-size: 24px;
   letter-spacing: 0.125em;
@@ -1719,13 +2675,16 @@ color: black;
 }
 
 .top-BrandTile__body ._inner ._text_ja {
-  font-family: 'PingFang' ;
+  font-family: "Shuei Mincho M", serif;
   margin-bottom: 70px;
   font-size: 15px;
   letter-spacing: 0.1em;
   line-height: 3.33;
 }
 
+.top-BrandTile__body ._inner .ButtonA {
+  margin-left: 0;
+}
 
 .top-BrandTile.top-BrandTile--lilac .top-BrandTile__body ._inner {
   color: #b59da1;
@@ -1735,7 +2694,13 @@ color: black;
   background-color: #b59da1;
 }
 
+.top-BrandTile.top-BrandTile--lilac .top-BrandTile__body ._inner .ButtonA {
+  color: #b59da1;
+}
 
+.top-BrandTile.top-BrandTile--lilac .top-BrandTile__body ._inner .ButtonA span:before, .top-BrandTile.top-BrandTile--lilac .top-BrandTile__body ._inner .ButtonA span:after {
+  background-color: #b59da1;
+}
 
 .top-BrandTile.top-BrandTile--beige .top-BrandTile__body ._inner {
   color: #af9f8d;
@@ -1745,7 +2710,13 @@ color: black;
   background-color: #af9f8d;
 }
 
+.top-BrandTile.top-BrandTile--beige .top-BrandTile__body ._inner .ButtonA {
+  color: #af9f8d;
+}
 
+.top-BrandTile.top-BrandTile--beige .top-BrandTile__body ._inner .ButtonA span:before, .top-BrandTile.top-BrandTile--beige .top-BrandTile__body ._inner .ButtonA span:after {
+  background-color: #af9f8d;
+}
 
 @media screen and (min-width: 960px) {
   .top-BrandTile__body ._inner ._text {
@@ -1772,7 +2743,10 @@ color: black;
     padding-top: 45px;
     padding-bottom: 150px;
   }
- 
+  .top-BrandTile__body ._inner .ButtonA {
+    margin-left: auto;
+    margin-right: auto;
+  }
   .top-BrandTile.top-BrandTile--lilac .top-BrandTile__body {
     background-color: #f8f3f5;
   }
@@ -1804,7 +2778,7 @@ color: black;
     line-height: 2.2;
   }
   .top-BrandTile__body ._inner ._title_ja {
-    font-family: 'PingFang' ;
+    font-family: "Shuei Mincho M", serif;
     margin-bottom: 20px;
     font-size: 20px;
     line-height: 1.8;
@@ -1948,7 +2922,7 @@ color: black;
      object-fit: cover;
   -o-object-position: center right;
      object-position: center right;
-  font-family: 'PingFang' ;
+  font-family: 'object-fit: cover; object-position: center right;';
 }
 
 @media screen and (min-width: 960px) {
@@ -2013,7 +2987,7 @@ color: black;
   left: 0;
   right: 0;
   text-align: center;
-  font-family: 'PingFang' ;
+  font-family: 'Cormorant', sans-serif;
   color: #ffffff;
   font-size: 30.5vw;
   line-height: 1;
@@ -2106,7 +3080,7 @@ color: black;
 
 .top-MainVisualCover__copy ._text1 {
   color: #b59da1;
-  font-family: 'PingFang' ;
+  font-family: 'Cormorant', sans-serif;
   font-size: 80px;
   line-height: 1.1;
   margin-bottom: 40px;
@@ -2121,7 +3095,7 @@ color: black;
 }
 
 .top-MainVisualCover__copy ._text2 {
-  font-family: 'PingFang' ;
+  font-family: "Shuei Mincho M", serif;
   color: #b59da1;
   font-size: 14px;
   letter-spacing: 0.05em;
@@ -2201,7 +3175,7 @@ color: black;
 }
 
 .top-MainVisualCover__navi ._navi ul li {
-  font-family: 'PingFang' ;
+  font-family: 'Cormorant', sans-serif;
   font-size: 16px;
   letter-spacing: 0.1em;
   margin-bottom: 20px;
@@ -2251,17 +3225,6 @@ body.is-color-beige a {
   color: #af9f8d;
 }
 
-body.is-color-beige .header-Main {
-  color: #af9f8d;
-}
-
-body.is-color-beige .header-Main a {
-  color: #af9f8d;
-}
-
-body.is-color-beige .header-Main .header-Main__right:before {
-  background-color: #af9f8d;
-}
 
 body.is-color-beige .PgaeWraper {
   background-color: #fdfcfa;
@@ -2285,7 +3248,7 @@ body.is-color-beige .Breadcrumb .Breadcrumb__list li:before, body.is-color-beige
 }
 
 body.is-color-beige .brand-SectionCover {
-  color: #af8d8d;
+  color: #af9f8d;
 }
 
 body.is-color-beige .brand-SectionCover .brand-SectionCover__title ._card:before {
@@ -2296,7 +3259,7 @@ body.is-color-beige .brand-SectionCover .brand-SectionCover__title ._title1:afte
   background-color: #af9f8d;
 }
 
-/* body.is-color-beige .brand-SectionProductDetail {
+body.is-color-beige .brand-SectionProductDetail {
   color: #af9f8d;
 }
 
@@ -2314,7 +3277,7 @@ body.is-color-beige .brand-SectionProductDetail .brand-SectionProductDetail__thu
 
 body.is-color-beige .brand-SectionProductDetail .brand-SectionProductDetail__thums ._item:after {
   box-shadow: inset 4px 4px 8px rgba(201, 193, 177, 0.3), inset -4px -4px 8px white;
-} */
+}
 
 body.is-color-beige .brand-ProductItems {
   color: #af9f8d;
@@ -2353,19 +3316,7 @@ body.is-color-beige .brand-BrandCardItems .brand-BrandCardItems__inner {
   background-color: #fdfcfa;
 }
 
-body.is-color-beige .footer-Main {
-  background-color: #af9f8d;
-}
 
-body.is-color-beige .footer-Main .footer-Main__navi1 ul li span {
-  background-color: #af9f8d;
-}
-
-/* @media screen and (max-width: 959px) {
-  body.is-color-beige .footer-Main .footer-Main__navi2 ._title {
-    color: #e4800d;
-  }
-} */
 
 /*************************
  *  レイアウト
@@ -2541,7 +3492,7 @@ body.is-color-beige .footer-Main .footer-Main__navi1 ul li span {
 .companyMessage__title {
   margin-bottom: 50px;
   text-align: center;
-  font-family: 'PingFang' ;
+  font-family: 'Cormorant', sans-serif;
   font-size: 30px;
   color: #B59DA1;
 }
@@ -2554,7 +3505,7 @@ body.is-color-beige .footer-Main .footer-Main__navi1 ul li span {
 }
 
 .companyMessage__body {
-  font-family: 'PingFang';
+  font-family: "Shuei Mincho M", serif;
 }
 
 .companyMessage__body p {
@@ -2588,7 +3539,7 @@ body.is-color-beige .footer-Main .footer-Main__navi1 ul li span {
 .companyOutline__title {
   margin-bottom: 65px;
   text-align: center;
-  font-family: 'PingFang' ;
+  font-family: 'Cormorant', sans-serif;
   font-size: 30px;
   color: #B59DA1;
 }
@@ -2601,7 +3552,7 @@ body.is-color-beige .footer-Main .footer-Main__navi1 ul li span {
 }
 
 .companyOutline__body {
-  font-family: 'PingFang';
+  font-family: "Shuei Mincho M", serif;
 }
 
 .companyOutline__body table {
@@ -2667,7 +3618,7 @@ body.is-color-beige .footer-Main .footer-Main__navi1 ul li span {
 .companyAccess__title {
   margin-bottom: 80px;
   text-align: center;
-  font-family: 'PingFang';
+  font-family: 'Cormorant', sans-serif;
   font-size: 30px;
   color: #B59DA1;
 }
@@ -2814,6 +3765,17 @@ body.is-color-beige .footer-Main .footer-Main__navi1 ul li span {
   }
 }
 
+.contactForm button {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  border: none;
+  outline: none;
+}
+
+.contactForm button:focus {
+  border: none;
+}
 
 .contactForm label {
   position: relative;
@@ -2990,7 +3952,7 @@ body.is-color-beige .footer-Main .footer-Main__navi1 ul li span {
 .contactForm__title {
   margin-bottom: 70px;
   text-align: center;
-  font-family: 'PingFang';
+  font-family: 'Cormorant', sans-serif;
   font-size: 30px;
   color: #af9f8d;
 }
@@ -3014,7 +3976,7 @@ body.is-color-beige .footer-Main .footer-Main__navi1 ul li span {
   align-items: center;
   font-size: 20px;
   color: #CDBDAB;
-  font-family: 'PingFang' ;
+  font-family: "Shuei Mincho M", serif;
 }
 
 .contactForm__nav li span {
@@ -3074,7 +4036,7 @@ body.is-color-beige .footer-Main .footer-Main__navi1 ul li span {
   font-size: 15px;
   line-height: 2.4;
   letter-spacing: 0.125em;
-  font-family: 'PingFang';
+  font-family: "Shuei Mincho M", serif;
   color: #AF9F8D;
 }
 
@@ -3201,14 +4163,14 @@ body.is-color-beige .footer-Main .footer-Main__navi1 ul li span {
   font-size: 14px;
 }
 
-/* @media screen and (min-width: 960px) {
+@media screen and (min-width: 960px) {
   .contactForm__submit > * + * {
     margin-left: 26px;
   }
   .contactForm__submit > * + button {
     margin-right: 0;
   }
-} */
+}
 
 @media screen and (max-width: 559px) {
   .contactForm__submit {
@@ -3256,7 +4218,7 @@ body.is-color-beige .footer-Main .footer-Main__navi1 ul li span {
   margin-bottom: 85px;
   line-height: 1;
   font-size: 149px;
-  font-family: 'PingFang' ;
+  font-family: 'Cormorant', sans-serif;
 }
 
 .contactForm__complete ._lead {
@@ -3298,7 +4260,7 @@ body.is-color-beige .footer-Main .footer-Main__navi1 ul li span {
 }
 
 .contactForm__tel ._title span {
-  font-family: 'PingFang';
+  font-family: "Shuei Mincho M", serif;
   display: inline-block;
   padding: 0 35px;
   font-size: 20px;
@@ -3407,81 +4369,8 @@ body.is-color-beige .footer-Main .footer-Main__navi1 ul li span {
   }
 }
 
-/*************************
- *  ヘッダー
- **************************/
-body.page-top .header-Spacer {
-  height: 0;
-}
 
-@media (min-width: 1600px) {
-  body.page-top .header-Main.is-top .header-Main__left.header-Main__left {
-    left: calc(50% - 750px);
-  }
-}
 
-@media screen and (min-width: 960px) {
-  body.page-top .header-Main.is-top {
-    position: absolute;
-    height: 150px;
-  }
-  body.page-top .header-Main.is-top .header-Main__left {
-    height: 150px;
-    left: 80px;
-    transition: transform 0.3s;
-  }
-  body.page-top .header-Main.is-top .header-Main__left a._name ._name-1 {
-    font-size: 35px;
-  }
-  body.page-top .header-Main.is-top .header-Main__left a._name ._name-2 {
-    font-size: 17px;
-  }
-  body.page-top .header-Main.is-middle .header-Main__left {
-    transition: transform 0.3s;
-  }
-}
-
-@media screen and (max-width: 959px) {
-  body.page-top .header-Main.is-top {
-    background-color: rgba(255, 255, 255, 0);
-  }
-  body.page-top .header-Main.is-top .header-Main__left {
-    opacity: 0;
-  }
-}
-
-/*************************
- *  ヘッダーナビ
- **************************/
-@media screen and (min-width: 960px) {
-  body.page-top .header-Main.is-top .header-Main__right {
-    opacity: 0;
-    transform: translateY(-100%);
-  }
-  body.page-top .header-Main.is-middle .header-Main__right {
-    transform: translateY(0);
-  }
-}
-
-@media screen and (max-width: 959px) {
-  body.page-top .header-Main.is-top .header-Main__right {
-    opacity: 0;
-  }
-}
-
-/*************************
- *  ヘッダーナビ詳細
- **************************/
-@media screen and (max-width: 959px) {
-  body.page-top .header-Main.is-top .header-NaviButton span:nth-child(1),
-  body.page-top .header-Main.is-top .header-NaviButton span:nth-child(2),
-  body.page-top .header-Main.is-top .header-NaviButton span:nth-child(3) {
-    background-color: #ffffff;
-  }
-  body.page-top .header-Main.is-top.is-navi_opened .header-Main__left {
-    opacity: 1;
-  }
-}
 
 .anchor {
   display: block;
@@ -3549,3 +4438,160 @@ body.page-top .header-Spacer {
 .break_line {
   display: inline-block;
 }
+</style></head>
+<body class="page-brand typesquare_option" style="opacity: 1;">
+<!-- svg symbol start -->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 23 23" id="SvgSymbol">
+<symbol viewBox="0 0 23 23" id="icon_instagram">
+	<path d="M17.07,23H5.93A5.94,5.94,0,0,1,0,17.07V5.93A5.94,5.94,0,0,1,5.93,0H17.07A5.94,5.94,0,0,1,23,5.93V17.07A5.94,5.94,0,0,1,17.07,23ZM5.93,1.78A4.15,4.15,0,0,0,1.78,5.93V17.07a4.15,4.15,0,0,0,4.15,4.15H17.07a4.15,4.15,0,0,0,4.15-4.15V5.93a4.15,4.15,0,0,0-4.15-4.15Z"></path><path d="M11.5,17A5.49,5.49,0,1,1,17,11.5,5.49,5.49,0,0,1,11.5,17Zm0-9.21a3.72,3.72,0,1,0,3.72,3.72A3.73,3.73,0,0,0,11.5,7.78Z"></path><circle cx="17.53" cy="5.42" r="1.4"></circle>
+</symbol>
+</svg>
+<!-- svg symbol end -->
+
+
+			<section class="top-BrandTile top-BrandTile--lilac brandItem" data-index="1">
+				<div class="top-BrandTile__bg is-animated" data-anime="addClass" data-anime-trigger=".top-BrandTile[data-index=&quot;1&quot;]" data-anime-delay="0">
+				</div>
+				<div class="top-BrandTile__photo finished" data-anime="fadeInRight" data-anime-trigger=".top-BrandTile[data-index=&quot;1&quot;]" data-anime-delay="1.25" >
+					<div class="_inner">
+						<img src="/assets/img/brand_polepole.jpg" alt=""></img>
+					</div>
+				</div>
+				<div class="top-BrandTile__body">
+					<h2 class="_inner">
+						<div class="_title1 finished" data-anime="fadeInUp" data-anime-trigger=".top-BrandTile[data-index=&quot;1&quot;]" data-anime-delay="1.75" >BRAND</div>
+						<div class="_title2 finished" data-anime="fadeInRight" data-anime-trigger=".top-BrandTile[data-index=&quot;1&quot;]" data-anime-delay="2.05" >Pole Pole</div>
+						<div class="_text typesquare_option finished" data-anime="fadeInUp" data-anime-trigger=".top-BrandTile[data-index=&quot;1&quot;]" data-anime-delay="2.35" >
+							姫路レザーを贅沢に使用し、日本生産にこだわり、<br class="pc">熟練の職人により生み出された特別なカバンをラインアップ。<br class="pc">時代を問わずカジュアルなスタイリングにマッチする<br class="pc">アイテムをコンセプトにしたブランドです。
+						</div>
+						<a href="/brand/pole_pole.php" class="ButtonA finished" data-anime="fadeIn" data-anime-trigger=".top-BrandTile[data-index=&quot;1&quot;]" data-anime-delay="2.9" ><span>MORE</span></a>
+					</h2>
+				</div>
+			</section>
+
+			<section class="top-BrandTile top-BrandTile--beige brandItem" data-index="2">
+				<div class="top-BrandTile__bg is-animated" data-anime="addClass" data-anime-trigger=".top-BrandTile[data-index=&quot;2&quot;]" data-anime-delay="0">
+				</div>
+				<div class="top-BrandTile__photo finished" data-anime="fadeInRight" data-anime-trigger=".top-BrandTile[data-index=&quot;2&quot;]" data-anime-delay="1.25" >
+					<div class="_inner">
+						<img src="/assets/img/brand_amotion.jpg" alt=""></img>
+					</div>
+				</div>
+				<div class="top-BrandTile__body">
+					<h2 class="_inner">
+						<div class="_title1 finished" data-anime="fadeInUp" data-anime-trigger=".top-BrandTile[data-index=&quot;2&quot;]" data-anime-delay="1.75" >BRAND</div>
+						<div class="_title2 finished" data-anime="fadeInRight" data-anime-trigger=".top-BrandTile[data-index=&quot;2&quot;]" data-anime-delay="2.05" >A.motion</div>
+						<div class="_text typesquare_option finished" data-anime="fadeInUp" data-anime-trigger=".top-BrandTile[data-index=&quot;2&quot;]" data-anime-delay="2.35" >
+							合わせやすい本革バック、合成皮革バックや、<br class="pc">パーティー＆フォーマルバックなどをラインアップ。<br class="pc">冠婚葬祭や参観日などイベントのお供にもお使いいただける<br class="pc">幅広いアイテムを取り揃えております。
+						</div>
+						<a href="/brand/a.motion.php" class="ButtonA finished" data-anime="fadeIn" data-anime-trigger=".top-BrandTile[data-index=&quot;2&quot;]" data-anime-delay="2.9" ><span>MORE</span></a>
+					</h2>
+				</div>
+			</section>
+
+			<section class="top-BrandTile top-BrandTile--lilac brandItem" data-index="3">
+				<div class="top-BrandTile__bg is-animated" data-anime="addClass" data-anime-trigger=".top-BrandTile[data-index=&quot;3&quot;]" data-anime-delay="0">
+				</div>
+				<div class="top-BrandTile__photo finished" data-anime="fadeInRight" data-anime-trigger=".top-BrandTile[data-index=&quot;3&quot;]" data-anime-delay="1.25" >
+					<div class="_inner">
+						<img src="/assets/img/brand_amotionJP.jpg" alt=""></img>
+					</div>
+				</div>
+				<div class="top-BrandTile__body">
+					<h2 class="_inner">
+						<div class="_title1 finished" data-anime="fadeInUp" data-anime-trigger=".top-BrandTile[data-index=&quot;3&quot;]" data-anime-delay="1.75" >BRAND</div>
+						<div class="_title2 finished" data-anime="fadeInRight" data-anime-trigger=".top-BrandTile[data-index=&quot;3&quot;]" data-anime-delay="2.05" >A.motion<span class="_s">made in Japan</span></div>
+						<div class="_text typesquare_option finished" data-anime="fadeInUp" data-anime-trigger=".top-BrandTile[data-index=&quot;3&quot;]" data-anime-delay="2.35" >
+							上質な本革にこだわって風合いを大切にした、<br class="pc">日本国内の熟練の職人によってのみ生み出されるブランド。<br class="pc">革本来の上品で自然な柔らかさを生かす事を意識し、<br class="pc">普遍的なデザインと機能性を追求しています。
+						</div>
+						<a href="/brand/a.motion_ja.php" class="ButtonA finished" data-anime="fadeIn" data-anime-trigger=".top-BrandTile[data-index=&quot;3&quot;]" data-anime-delay="2.9" ><span>MORE</span></a>
+					</h2>
+				</div>
+			</section>
+
+			<section class="top-BrandTile top-BrandTile--beige brandItem" data-index="4">
+				<div class="top-BrandTile__bg is-animated" data-anime="addClass" data-anime-trigger=".top-BrandTile[data-index=&quot;4&quot;]" data-anime-delay="0">
+				</div>
+				<div class="top-BrandTile__photo finished" data-anime="fadeInRight" data-anime-trigger=".top-BrandTile[data-index=&quot;4&quot;]" data-anime-delay="1.25" >
+					<div class="_inner">
+						<img src="/assets/img/brand_bemoved.jpg" alt=""></img>
+					</div>
+				</div>
+				<div class="top-BrandTile__body">
+					<h2 class="_inner">
+						<div class="_title1 finished" data-anime="fadeInUp" data-anime-trigger=".top-BrandTile[data-index=&quot;4&quot;]" data-anime-delay="1.75" >BRAND</div>
+						<div class="_title2 finished" data-anime="fadeInRight" data-anime-trigger=".top-BrandTile[data-index=&quot;4&quot;]" data-anime-delay="2.05" >Be moved</div>
+						<div class="_text typesquare_option finished" data-anime="fadeInUp" data-anime-trigger=".top-BrandTile[data-index=&quot;4&quot;]" data-anime-delay="2.35" >
+							厳選した素材を用い、デザインパーツにこだわり、<br class="pc">シンプルな中にも個性あるデザインが特徴です。<br class="pc">年齢やシーンにとわられない、現代のライフスタイルに合った<br class="pc">アイテムを取り揃えたブランドです。
+						</div>
+						<a href="/brand/be_moved.php" class="ButtonA finished" data-anime="fadeIn" data-anime-trigger=".top-BrandTile[data-index=&quot;4&quot;]" data-anime-delay="2.9" ><span>MORE</span></a>
+					</h2>
+				</div>
+			</section>
+
+			<section class="top-BrandTile top-BrandTile--lilac brandItem" data-index="5">
+				<div class="top-BrandTile__bg" data-anime="addClass" data-anime-trigger=".top-BrandTile[data-index=&quot;5&quot;]" data-anime-delay="0">
+				</div>
+				<div class="top-BrandTile__photo" data-anime="fadeInRight" data-anime-trigger=".top-BrandTile[data-index=&quot;5&quot;]" data-anime-delay="1.25" >
+					<div class="_inner">
+						<img src="./icon/horizontal21.jpg" alt=""></img>
+					</div>
+				</div>
+				<div class="top-BrandTile__body">
+					<h2 class="_inner">
+						<div class="_title1" data-anime="fadeInUp" data-anime-trigger=".top-BrandTile[data-index=&quot;5&quot;]" data-anime-delay="1.75" >BRAND</div>
+						<div class="_title2" data-anime="fadeInRight" data-anime-trigger=".top-BrandTile[data-index=&quot;5&quot;]" data-anime-delay="2.05" >b.v</div>
+						<div class="_text typesquare_option" data-anime="fadeInUp" data-anime-trigger=".top-BrandTile[data-index=&quot;5&quot;]" data-anime-delay="2.35" >
+							ベジタブルタンニン鞣しの本革にこだわり、<br class="pc">素材感を生かすデザインに限定したブランドです。<br class="pc">使えば使うほど味が出る、カジュアルなスタイリングに<br class="pc">フィットするアイテムを提案しております。
+						</div>
+						<a href="/brand/b.v.php" class="ButtonA" data-anime="fadeIn" data-anime-trigger=".top-BrandTile[data-index=&quot;5&quot;]" data-anime-delay="2.9" ><span>MORE</span></a>
+					</h2>
+				</div>
+			</section>
+
+			<section class="top-BrandTile top-BrandTile--beige brandItem" data-index="6">
+				<div class="top-BrandTile__bg" data-anime="addClass" data-anime-trigger=".top-BrandTile[data-index=&quot;6&quot;]" data-anime-delay="0">
+				</div>
+				<div class="top-BrandTile__photo" data-anime="fadeInRight" data-anime-trigger=".top-BrandTile[data-index=&quot;6&quot;]" data-anime-delay="1.25" >
+					<div class="_inner">
+						<img src="/assets/img/brand_NIVAL.jpg" alt=""></img>
+					</div>
+				</div>
+				<div class="top-BrandTile__body">
+					<h2 class="_inner">
+						<div class="_title1" data-anime="fadeInUp" data-anime-trigger=".top-BrandTile[data-index=&quot;6&quot;]" data-anime-delay="1.75" >BRAND</div>
+						<div class="_title2" data-anime="fadeInRight" data-anime-trigger=".top-BrandTile[data-index=&quot;6&quot;]" data-anime-delay="2.05" >NIVAL</div>
+						<div class="_text typesquare_option" data-anime="fadeInUp" data-anime-trigger=".top-BrandTile[data-index=&quot;6&quot;]" data-anime-delay="2.35" >
+							日常の様々なシーンでの使いやすさを重視し、<br class="pc">異素材を組み合わせたカジュアルなスタイリング。<br class="pc">機能性だけでなく、先進的なデザインも取り入れ<br class="pc">上品なたたずまいも大切にしているブランドです。
+						</div>
+						<a href="/brand/nival.php" class="ButtonA" data-anime="fadeIn" data-anime-trigger=".top-BrandTile[data-index=&quot;6&quot;]" data-anime-delay="2.9" ><span>MORE</span></a>
+					</h2>
+				</div>
+			</section>
+
+			<section class="top-BrandTile top-BrandTile--lilac brandItem" data-index="7">
+				<div class="top-BrandTile__bg" data-anime="addClass" data-anime-trigger=".top-BrandTile[data-index=&quot;7&quot;]" data-anime-delay="0">
+				</div>
+				<div class="top-BrandTile__photo" data-anime="fadeInRight" data-anime-trigger=".top-BrandTile[data-index=&quot;7&quot;]" data-anime-delay="1.25" >
+					<div class="_inner">
+						<img src="/assets/img/brand_SIMBOLO.jpg" alt=""></img>
+					</div>
+				</div>
+				<div class="top-BrandTile__body">
+					<h2 class="_inner">
+						<div class="_title1" data-anime="fadeInUp" data-anime-trigger=".top-BrandTile[data-index=&quot;7&quot;]" data-anime-delay="1.75" >BRAND</div>
+						<div class="_title2" data-anime="fadeInRight" data-anime-trigger=".top-BrandTile[data-index=&quot;7&quot;]" data-anime-delay="2.05" >SIMBOLO</div>
+						<div class="_text typesquare_option" data-anime="fadeInUp" data-anime-trigger=".top-BrandTile[data-index=&quot;7&quot;]" data-anime-delay="2.35" >
+							本格レザーをふんだんに使用したシンプルなデザイン。<br class="pc">長く愛され続けるレザーバッグを作ることを大切に、<br class="pc">老若男女に幅広く受け入れられるものづくりを<br class="pc">コンセプトにアイテムを提案しております。
+						</div>
+						<a href="/brand/simbolo.php" class="ButtonA" data-anime="fadeIn" data-anime-trigger=".top-BrandTile[data-index=&quot;7&quot;]" data-anime-delay="2.9" ><span>MORE</span></a>
+					</h2>
+				</div>
+			</section>
+		</div>
+</div></div><!-- end PageWraper -->
+
+</main>
+
+
+</body></html>

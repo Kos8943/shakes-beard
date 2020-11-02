@@ -10,9 +10,9 @@ import Sid from "./Sid";
 //以下import個人頁面
 
 import HomePage from "./chad/HomePage";
-import Project from "./hsuan/Project";
+import Product from "./hsuan/pages/Product";
 import Market from "./hsuan/Market";
-import Project1 from './hsuan/Project1'
+import Project1 from './hsuan/pages/Project1'
 import Cart from "./kos/pages/Cart";
 import ShopList from "./chen/pages/ShopList";
 import ShopDetail from "./chen/pages/ShopDetail";
@@ -119,10 +119,10 @@ function App() {
               <MyFooter />
             </Route>
 
-             <Route exact path="/Project">
+             <Route exact path="/Product">
                 <ShakesBeardNavbar />
                 <div className="footerFix">
-                  <Project />
+                  <Product />
                 </div>
                 <MyFooter />
               </Route>
