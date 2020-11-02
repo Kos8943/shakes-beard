@@ -189,9 +189,9 @@ function HomePage() {
 
         
        
-                <div className="map-top-area d-flex justify-content-center py-5">         
-                    <div className="">
-                        <img className="w-75" src={map1}/>
+                <div className="map-top-area py-5">         
+                    <div className="map-top-img-area">
+                        <img className="map-top-img" src={map1}/>
                     </div>       
                 <div className="top-text-area">
                     <p className="map-top-text">改變生活，雕塑你的生活風格。</p>                  
@@ -199,13 +199,14 @@ function HomePage() {
                 </div>
 
                 
-                <div className="map-down-area d-flex justify-content-center pb-5">       
+                <div className="map-down-area pb-5">       
                 <div className="down-text-area">             
                     <p className="map-down-text">我們為您挑選了優質的店家，提供最高品質的服務，讓您煥然一新。 </p>    
                     <Button variant="primary" id="mapBtn">立即預約</Button> 
                     </div>   
-                              
+                      <div className="map-down-img-area">  
                     <img className="down-img" src={map2}/>   
+                    </div>   
                                
                 </div>
          
