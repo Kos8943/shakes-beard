@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react'
 import LogInCss from './styles/LogInCss.scss'
-import SignUp from "./SignUp"
 import facebook from './img/facebook.svg'
 import twitter from './img/twitter.svg'
 import google from './img/google.svg'
@@ -14,11 +13,13 @@ function LogIn(props) {
           <div className="bagimg2">
             
             <div className="logInArea">
-              <div className="logTittle">登入</div>
+              <div className="loginTittle">登入</div>
 
-              <div className="d-flex justify-content-center">
+              <div className="loginArea  d-flex justify-content-center">
 
-                <div className="area1">
+
+
+                <div className="logInArea1 loginWeb">
 
                   
                     <div className="log">
@@ -44,7 +45,7 @@ function LogIn(props) {
                   
                 </div>
 
-                <div className="area2">
+                <div className="logInArea2 loginWeb">
 
                   <div className="otherAccount">
                     <a href=""><button className="otherLogButton facebook"> <div className="d-flex justify-content-around align-items-center"><img src={facebook} className="lognIcon "></img>使用Facebook登入<div></div></div></button></a>
@@ -64,9 +65,9 @@ function LogIn(props) {
 
               <div className="d-flex justify-content-around ">
                   
-                <a href=""><button className="checkButton">登入</button></a>
+                <a href=""><button className="loginCheckButton loginWeb">登入</button></a>
                    
-                <a href=""><button className="singUpButton d-flex justify-content-center align-items-center">註冊帳號</button></a>
+                <a href=""><button className="loginSingUpButton loginWeb">註冊帳號</button></a>
                       
               </div>
 

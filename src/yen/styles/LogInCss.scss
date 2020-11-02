@@ -3,6 +3,8 @@ html {
 }
 
 
+
+
 .bagimg {
   // background-color: #595452;
   min-height: 73.6vh;
@@ -37,15 +39,19 @@ html {
   // border: 2px solid saddlebrown;
 }
 
-.logTittle {
+.loginTittle {
   font-size: 1.63rem;
   font-weight: bold;
   text-align: center;
   // border: 1px solid black;
   padding-top: 45px;
 }
+.loginArea{
+    // border: 2px solid saddlebrown;
 
-.area1 {
+  }
+
+.logInArea1 {
   width: 22.0833vw;
   height: 34.722vh;
   // border: 1px solid hotpink;
@@ -53,7 +59,7 @@ html {
   margin-top: 38px;
 }
 
-.area2 {
+.logInArea2 {
   width: 22.0833vw;
   height: 34.722vh;
   // border: 1px solid steelblue;
@@ -125,7 +131,7 @@ html {
   width: 1.3354vw;
 }
 
-.checkButton {
+.loginCheckButton {
   background-color: #2d3b72;
   border: none;
   color: #ffffff;
@@ -134,9 +140,11 @@ html {
   font-size: 1.5rem;
   font-weight: bold;
   border-radius: 4px;
+  border: 1px solid steelblue;
+
 }
 
-.singUpButton {
+.loginSingUpButton {
   background-color: #f25d50;
   border: none;
   color: #ffffff;
@@ -145,27 +153,24 @@ html {
   font-size: 1.5rem;
   font-weight: bold;
   border-radius: 4px;
-}
+  // border: px solid steelblue;
 
+}
+  
 //手機
 //以下是576PX以下的CSS
-@media (max-width: 576px) {
+@media (max-width: 1400px) {
   html {
     font-size: 12px;
   }
 
 
-  .logInArea {
-    width: 80vw;
-    // width:848px;
-    // height: 578px;
-    height: 60.2vh;
-    background-color: rgba(255, 255, 255, 0.75);
-    border: radius 4px;
-    margin: 8vh auto;
-    // border: 2px solid saddlebrown;
+  .loginWeb{
+    display: none;
   }
+
   
+
 
 
 
