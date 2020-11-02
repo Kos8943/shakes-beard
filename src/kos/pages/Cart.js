@@ -22,7 +22,7 @@ function Cart() {
                     <div className="cartStepLine"></div>
                     <div>
                         <div className="cartStepCircle otherStep">3</div>
-                        <div className="cartStepFont">完成訂單</div>
+                        <div className="cartStepFont">訂單完成</div>
                     </div>   
                     </div>
                 </div>

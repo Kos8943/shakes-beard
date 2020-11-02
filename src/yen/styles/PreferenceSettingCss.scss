@@ -33,7 +33,12 @@
   margin-left: 55px;
 }
 
+.tittle2{
+  font-size:1.25rem;
+  margin-left: -60px;
+  margin-top: -2px;
 
+}
 
 .updateArea {
   // border: 1px solid red;
@@ -45,12 +50,21 @@
   margin: 5px 0 10px 0;
 }
 
-.birthday{
+.cardNum{
+  width: 6rem;
+  margin: 5px 15px 10px 0;
+}
+
+.cardDate{
   margin: 5px 5px 10px 0;
 }
 
-.birthdayText{
+.cardDateText{
   margin: 5px 5px 10px 0;
+}
+
+.electronic{
+  margin-left: 5px;
 }
 
 .memberCheck {
