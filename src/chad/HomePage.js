@@ -99,11 +99,11 @@ function HomePage() {
             <div className="hot-area w-100 h-100 ">
                
                 <div className="hot-text-area">
-                <h2 className="hot-title py-4">熱門商品</h2>
+                <h2 className="hot-title py-3">熱門商品</h2>
                         <p className="hot-text mx-auto">精湛工藝呈現出迷人魅力。繁複的製作工序沒有令我們對工藝的要求卻步；反令我們力臻極佳品質。
                         </p>
                 </div>
-                <div className="hot-card-area d-flex justify-content-center">
+                <div className="hot-card-area">
                                     <Card id="cardborder" style={{ width: '20rem' }}>
                     <Card.Img variant="top" src={hot1} />
                     <Card.Body id="cardbody">
@@ -135,13 +135,49 @@ function HomePage() {
                     </Card.Body>
                     </Card>
                     </div>
+
+ {/* 熱銷手機板 */}
+                    <div className="hot-card-area-mobile">
+                    <Card id="cardborder" style={{ width: '20rem' }}>
+                    <Carousel>
+                                        <Carousel.Item>
+                                            <img
+                                            className="d-block w-100"
+                                            src={hot1}
+                                            alt="First slide"
+                                            />
+                                        </Carousel.Item>
+                                        <Carousel.Item>
+                                            <img
+                                            className="d-block w-100"
+                                            src={hot2}
+                                            alt="Third slide"
+                                            />          
+                                        </Carousel.Item>
+                                        <Carousel.Item>
+                                            <img
+                                            className="d-block w-100"
+                                            src={hot3}
+                                            alt="Third slide"
+                                            />                                 
+                                        </Carousel.Item>
+                        </Carousel>
+                        <Card.Body id="card-body-mobile">
+                            <Card.Title>質男嚴選毛刷</Card.Title>
+                            <Card.Text>
+                           NT$1000
+                            </Card.Text>
+                            <Button variant="primary" id="buy">立即購買</Button>
+                        </Card.Body>
+                    </Card>
+                    </div>
              </div>
 
 {/* 熱銷單品 */}
 
             <div className="gift-area">
                 <img
-                    className="top-img w-100 h-100 my-3"
+                    className="top-img my-3"
                     src={hotpage}              
                 />            
                 <p className="top-text">用我們獨有的工藝技術，為不甘平凡的您，點綴出更獨特的風格。</p>
