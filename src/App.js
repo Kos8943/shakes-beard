@@ -21,10 +21,20 @@ import NotFoundPage from "./chen/pages/NotFoundPage";
 import Func_GiftBox from "./zihyu/GiftBox";
 import Func_Budget from "./zihyu/Budget";
 import Func_ChooseRazor from "./zihyu/ChooseRazor";
+import Func_ChooseBrush from "./zihyu/ChooseBrush";
+import Func_ChooseStand from "./zihyu/ChooseStand";
+import Func_Color from "./zihyu/Color";
+import Func_Finish from "./zihyu/Finish";
 import LogIn from "./yen/LogIn";
 import SignUp from "./yen/SignUp";
 import MemberUpdate from "./yen/MemberUpdate";
+import PasswordUpdate from "./yen/PasswordUpdate";
+import PreferenceSetting from "./yen/PreferenceSetting";
+import FavoritesList from "./yen/FavoritesList";
 import Payment from "./kos/pages/Payment";
+import Paycomplete from './kos/pages/Paycomplete'
+import orderCheck from './kos/pages/OrderCheck'
+import OrderCheck from "./kos/pages/OrderCheck";
 
 
 function App() {
@@ -64,6 +74,30 @@ function App() {
             <Route path="/Path_ChooseRazor">
             <ShakesBeardNavbar />
               <Func_ChooseRazor />
+              <MyFooter />
+            </Route>
+
+            <Route path="/Path_ChooseBrush">
+            <ShakesBeardNavbar />
+              <Func_ChooseBrush />
+              <MyFooter />
+            </Route>
+
+            <Route path="/Path_ChooseStand">
+            <ShakesBeardNavbar />
+              <Func_ChooseStand />
+              <MyFooter />
+            </Route>
+
+            <Route path="/Path_Color">
+            <ShakesBeardNavbar />
+              <Func_Color />
+              <MyFooter />
+            </Route>
+
+            <Route path="/Path_Finish">
+            <ShakesBeardNavbar />
+              <Func_Finish />
               <MyFooter />
             </Route>
 
@@ -117,6 +151,22 @@ function App() {
                 <MyFooter />
               </Route>
 
+              <Route path="/paycomplete">
+                <ShakesBeardNavbar />
+                <div className="footerFix KosPadding">
+                  <Paycomplete />
+                </div>
+                <MyFooter />
+              </Route>
+
+              <Route path="/ordercheck">
+                <ShakesBeardNavbar />
+                <div className="footerFix KosPadding">
+                  <OrderCheck />
+                </div>
+                <MyFooter />
+              </Route>
+
               <Route path="/shoplist">
                 <ShakesBeardNavbar />
                 <div className="footerFix">
@@ -137,6 +187,30 @@ function App() {
                 <ShakesBeardNavbar />
                 <div className="footerFix">
                   <MemberUpdate />
+                </div>
+                <MyFooter />
+              </Route>
+
+              <Route path="/passwordupdate">
+                <ShakesBeardNavbar />
+                <div className="footerFix">
+                  <PasswordUpdate />
+                </div>
+                <MyFooter />
+              </Route>
+
+              <Route path="/preferencesetting">
+                <ShakesBeardNavbar />
+                <div className="footerFix">
+                  <PreferenceSetting />
+                </div>
+                <MyFooter />
+              </Route>
+
+              <Route path="/favoriteslist">
+                <ShakesBeardNavbar />
+                <div className="footerFix">
+                  <FavoritesList />
                 </div>
                 <MyFooter />
               </Route>

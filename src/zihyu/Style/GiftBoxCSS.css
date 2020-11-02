@@ -92,10 +92,6 @@
   font-size: 26px;
   color: white;
   font-family: PingFang;
-}
-
-.bigBtn {
-  margin: 0 auto;
-  display: flex;
   justify-content: center;
+  align-items: center;
 }

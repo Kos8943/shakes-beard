@@ -72,6 +72,8 @@
   font-size: 26px;
   color: white;
   font-family: PingFang;
+  justify-content: center;
+  align-items: center;
 }
 
 .backButton {
@@ -83,40 +85,6 @@
   font-size: 26px;
   color: #2d3b72;
   font-family: PingFang;
-}
-
-.btn {
-  margin: 0 auto;
-  display: flex;
   justify-content: center;
-}
-
-.hayy {
-  -webkit-appearance: button;
-  -webkit-writing-mode: horizontal-tb !important;
-  text-rendering: auto;
-  color: black;
-  border-radius: 4px;
-  width: 220px;
-  height: 70px;
-  border: 3px solid #2d3b72;
-  font-size: 26px;
-  color: #2d3b72;
-  font-family: PingFang;
-  background-color: pink;
-
-  letter-spacing: normal;
-  word-spacing: normal;
-  text-transform: none;
-  text-indent: 0px;
-  text-shadow: none;
-  display: inline-block;
-  text-align: center;
-  align-items: flex-start;
-  cursor: default;
-  box-sizing: border-box;
-  margin: 0em;
-  border-width: 1px;
-  border-color: rgb(216, 216, 216) rgb(209, 209, 209) rgb(186, 186, 186);
-  border-image: initial;
+  align-items: center;
 }

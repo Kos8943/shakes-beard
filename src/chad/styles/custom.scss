@@ -50,7 +50,7 @@
     height: 18%;
     width: 45%;
     position: absolute;
-    top: 28%;
+    top: 20%;
     left: 50%;
     transform: translate(-50%, -50%);
   }
@@ -63,15 +63,13 @@
     text-align: center;
     color: white;
     letter-spacing: 0.3rem;
-    line-height: 1.3rem;
+    line-height: 1.5rem;
     display: block;
     border: 1px solid white;
     text-decoration: none;
     border-radius: 4px;
-    padding: 8px 15px 8px 15px;
+    padding: 12px 15px 8px 15px;
   }
-  
-  
 }
 
 //故事
@@ -99,36 +97,31 @@
 
 //故事 手機板
 @media (max-width: 700px) {
-
   .story-area {
     margin: 15px auto;
-   
   }
   .story-title {
     text-align: center;
     font-size: 1.5rem;
     padding-bottom: 5px;
   }
-  
+
   .story-text-area {
     margin: 0 auto;
-    width: 80%;   
-   
+    width: 80%;
   }
-  
+
   .story-text {
-    font-size: 1.0rem;
+    font-size: 1rem;
     white-space: pre-wrap;
     margin-bottom: 0;
     line-height: 28px;
     text-align: justify;
   }
-  #story-text2{
+  #story-text2 {
     display: none;
   }
-  
 }
-
 
 //禮物
 
@@ -138,10 +131,9 @@
   position: relative;
 }
 
-.gift-img{
+.gift-img {
   width: 100%;
   height: 100%;
-
 }
 .gift-text-area {
   position: absolute;
@@ -172,52 +164,55 @@
   font: 20px PingFang;
   color: #ffffff;
   position: absolute;
-  right: 28%;
+  right: 27%;
   bottom: 10%;
 }
 .giftBtn:hover {
   background: hsla(228, 43%, 31%, 1);
 }
-//禮物 手機板
-@media(max-width: 700px) {
 
-  
+//禮物 手機板
+@media (max-width: 700px) {
   .gift-area {
-    padding-left: 17.5%;
-    padding-right: 17.5%;
     position: relative;
   }
- 
+  .gift-img {
+    width: 450px;
+    height: 300px;
+  }
+  .gift-title {
+    font-size: 1rem;
+  }
   .gift-text-area {
     position: absolute;
-    right: 22%;
-    bottom: 30%;
+    right: 8%;
+    bottom: 40%;
     background-color: hsla(228, 43%, 31%, 0.7);
     border-radius: 4px;
-    width: 20%;
-    height: 30%;
+    width: 50%;
+    height: 50%;
     color: #f8f8f8;
     text-align: center;
-    line-height: 30px;
+    line-height: 10px;
   }
-  
+
   .gift-text {
     word-break: keep-all;
-    font-size: 1.1rem;
+    font-size: 0.5rem;
     text-overflow: clip;
     line-height: 30px;
   }
-  
+
   .giftBtn {
     display: inline-block;
     padding: 12px 40px;
     border-radius: 4px;
     border: 0px;
     background: hsla(228, 43%, 31%, 0.7);
-    font: 20px PingFang;
+    font: 16px PingFang;
     color: #ffffff;
     position: absolute;
-    right: 28%;
+    right: 15%;
     bottom: 10%;
   }
   .giftBtn:hover {
@@ -225,9 +220,11 @@
   }
 }
 
-
-
 //熱門
+
+.hot-card-area-mobile {
+  display: none;
+}
 .hot-title,
 .hot-text {
   text-align: center;
@@ -241,7 +238,10 @@
 #cardborder {
   border-style: none;
 }
-
+.hot-card-area {
+  display: flex;
+  justify-content: center;
+}
 #cardbody {
   margin-left: 25%;
 }
@@ -253,7 +253,38 @@
   border-radius: 4px;
   width: 120px;
   height: 50px;
-  padding-top: 5%;
+  padding-top: 3%;
+}
+
+//熱門 手機板
+@media (max-width: 700px) {
+  .hot-card-area-mobile {
+    display: flex;
+    justify-content: center;
+  }
+
+  .hot-title,
+  .hot-text {
+    text-align: center;
+  }
+  .hot-title {
+    font-size: 1.5rem;
+  }
+  .hot-text {
+    word-break: keep-all;
+    font-size: 12px;
+    line-height: 30px;
+    width: 60%;
+  }
+  .hot-card-area {
+    display: none;
+  }
+  #card-body-mobile {
+    text-align: center;
+    #buy {
+      font-size: 16px;
+    }
+  }
 }
 
 //熱銷
@@ -271,10 +302,12 @@
 
 .top-img {
   position: relative;
+  width: 100%;
+  height: 100%;
 }
 
 .topBtn {
-  margin-top: 1%;
+  margin-top: 2%;
   display: inline-block;
   padding: 12px 40px;
   border-radius: 4px;
@@ -283,20 +316,74 @@
   font: 20px PingFang;
   color: #ffffff;
   position: absolute;
-  right: 28%;
+  right: 26%;
   top: 26%;
 }
 .topBtn:hover {
   background: hsla(228, 43%, 31%, 0.7);
 }
 
+//熱銷 手機板
+@media (max-width: 700px) {
+  .top-text {
+    word-break: keep-all;
+    font-size: 12px;
+    text-overflow: clip;
+    width: 15%;
+    position: absolute;
+    top: 10%;
+    right: 23%;
+    line-height: 25px;
+  }
+  .gift-area {
+    width: 100%;
+    padding: 0px;
+  }
+  .top-img {
+    width: 450px;
+    height: 300px;
+    position: relative;
+  }
+
+  .topBtn {
+    width: 144px;
+    height: 46.4px;
+    margin-top: 3%;
+    display: inline-block;
+    padding: 12px 40px;
+    border-radius: 4px;
+    border: 0px;
+    background: hsla(228, 43%, 31%, 1);
+    font: 16px PingFang;
+    color: #ffffff;
+    position: absolute;
+    right: 4%;
+    top: 35%;
+  }
+  .topBtn:hover {
+    background: hsla(228, 43%, 31%, 0.7);
+  }
+}
+
 //地圖
-.map-top-area {
-  padding-right: 14%;
+.map-top-area,.map-down-area {
+  display: flex;
+  justify-content: center;
+}
+.map-top-img-area {
+  width: 600px;
+}
+.map-top-img {
+  width: 80%;
+}
+
+.down-img {
+  width: 60%;
+  margin-right: 15%;
 }
 .top-text-area {
   margin: auto 0;
-  width: 10%;
+  width: 20%;
   word-break: keep-all;
   font-size: 1.625rem;
   line-height: 40px;
@@ -328,7 +415,57 @@
   background: hsla(228, 43%, 31%, 0.7);
 }
 
-.down-img {
-  width: 30%;
-  margin-right: 15%;
+//地圖 手機板
+@media (max-width: 700px) {
+  .map-top-img-area {
+    width: 200px;
+    height: 150px;
+  }
+  .map-top-img {
+    width: 100%;
+  }
+  .top-text-area {
+    font-size: 0.8rem;
+    width: 40%;
+    word-break: keep-all;
+  }
+  .map-down-text {
+    word-break: keep-all;
+    line-height: 30px;
+    font-size: 12px;
+    text-align: center;
+  }
+  .map-top-text {
+    text-align: center;
+   
+  }
+  .down-text-area {
+    width: 50%;
+    padding-left:20px;
+    margin-top:0px;
+  }
+
+  #mapBtn {
+    margin-top: 3%;
+    display: inline-block;
+    padding: 12px 40px;
+    border-radius: 4px;
+    border: 0px;
+    background: hsla(228, 43%, 31%, 1);
+    font: 16px PingFang;
+    color: #ffffff;
+    width: 144px;
+  }
+
+  #mapBtn:hover {
+    background: hsla(228, 43%, 31%, 0.7);
+  }
+  .map-down-img-area{
+    width: 250px;
+    height: 150px;
+    padding-right: 25px;
+  }
+  .down-img {
+    width: 100%;
+  }
 }
