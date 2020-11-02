@@ -238,6 +238,10 @@
 
 
 //熱門
+
+.hot-card-area-mobile{
+  display:none
+}
 .hot-title,
 .hot-text {
   text-align: center;
@@ -251,7 +255,10 @@
 #cardborder {
   border-style: none;
 }
-
+.hot-card-area{
+  display: flex;
+  justify-content: center;
+}
 #cardbody {
   margin-left: 25%;
 }
@@ -263,7 +270,36 @@
   border-radius: 4px;
   width: 120px;
   height: 50px;
-  padding-top: 5%;
+  padding-top: 3%;
+}
+
+//熱門 手機板
+@media(max-width:700px){
+.hot-card-area-mobile{
+  display: flex;
+  justify-content: center;
+}
+
+.hot-title,
+.hot-text {
+  text-align: center;
+}
+.hot-title{
+  font-size: 1.5rem;
+}
+.hot-text {
+  word-break: keep-all;
+  font-size: 12px;
+  line-height: 30px;
+  width: 60%;
+}
+.hot-card-area{
+  display: none;
+}
+#card-body-mobile{
+  text-align: center;
+
+}
 }
 
 //熱銷
@@ -299,6 +335,9 @@
 .topBtn:hover {
   background: hsla(228, 43%, 31%, 0.7);
 }
+
+
+
 
 //地圖
 .map-top-area {
