@@ -13,11 +13,9 @@ function Cards(props) {
         </Link>
         <div className="card-body p-2">
           <h5 className="card-title mb-1">Sculptor Barber</h5> 
-          <div>
             <Badge pill variant="secondary">
               男士理髮廳
             </Badge>
-          </div>
             <Badge pill variant="secondary">
               台北市大安區
             </Badge>
