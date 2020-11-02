@@ -24,6 +24,9 @@ import Func_ChooseRazor from "./zihyu/ChooseRazor";
 import LogIn from "./yen/LogIn";
 import SignUp from "./yen/SignUp";
 import MemberUpdate from "./yen/MemberUpdate";
+import PasswordUpdate from "./yen/PasswordUpdate";
+import PreferenceSetting from "./yen/PreferenceSetting";
+import FavoritesList from "./yen/FavoritesList";
 import Payment from "./kos/pages/Payment";
 
 
@@ -137,6 +140,30 @@ function App() {
                 <ShakesBeardNavbar />
                 <div className="footerFix">
                   <MemberUpdate />
+                </div>
+                <MyFooter />
+              </Route>
+
+              <Route path="/passwordupdate">
+                <ShakesBeardNavbar />
+                <div className="footerFix">
+                  <PasswordUpdate />
+                </div>
+                <MyFooter />
+              </Route>
+
+              <Route path="/preferencesetting">
+                <ShakesBeardNavbar />
+                <div className="footerFix">
+                  <PreferenceSetting />
+                </div>
+                <MyFooter />
+              </Route>
+
+              <Route path="/favoriteslist">
+                <ShakesBeardNavbar />
+                <div className="footerFix">
+                  <FavoritesList />
                 </div>
                 <MyFooter />
               </Route>

@@ -34,7 +34,6 @@
 }
 
 
-
 .updateArea {
   // border: 1px solid red;
   padding-left: 170px;
@@ -45,12 +44,21 @@
   margin: 5px 0 10px 0;
 }
 
-.birthday{
+.cardNum{
+  width: 6rem;
+  margin: 5px 15px 10px 0;
+}
+
+.cardDate{
   margin: 5px 5px 10px 0;
 }
 
-.birthdayText{
+.cardDateText{
   margin: 5px 5px 10px 0;
+}
+
+.electronic{
+  margin-left: 5px;
 }
 
 .memberCheck {
@@ -63,6 +71,7 @@
   font-weight: bold;
   border-radius: 4px;
   margin: 0 10px 0 140px;
+  
 }
 
 .memberCancle {
@@ -75,3 +84,39 @@
   font-weight: bold;
   border-radius: 4px;
 }
+
+.favItem {
+  width: 100%;
+  height: 130px;
+  background-color: #f8f8f8;
+  padding: .5rem;
+  margin: 0 0 10px 0;
+  // border: 1px solid red;
+  
+}
+
+.favImg{
+  height: 100%;
+  // background-color: #ccc;
+  // border: 1px solid red;
+}
+
+
+.favItemName{
+  margin: 0 25px;
+  // border: 1px solid red;
+  width: 25rem;
+}
+
+.favselectHigh {
+  height: 25px;
+  border-radius: 4px;
+  margin: 0 30px;
+  border-color: #2D3B72;
+}
+
+.favPrice{
+  margin: 0 25px;
+}
+
+
