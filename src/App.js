@@ -33,6 +33,8 @@ import PreferenceSetting from "./yen/PreferenceSetting";
 import FavoritesList from "./yen/FavoritesList";
 import Payment from "./kos/pages/Payment";
 import Paycomplete from './kos/pages/Paycomplete'
+import orderCheck from './kos/pages/OrderCheck'
+import OrderCheck from "./kos/pages/OrderCheck";
 
 
 function App() {
@@ -153,6 +155,14 @@ function App() {
                 <ShakesBeardNavbar />
                 <div className="footerFix KosPadding">
                   <Paycomplete />
+                </div>
+                <MyFooter />
+              </Route>
+
+              <Route path="/ordercheck">
+                <ShakesBeardNavbar />
+                <div className="footerFix KosPadding">
+                  <OrderCheck />
                 </div>
                 <MyFooter />
               </Route>
