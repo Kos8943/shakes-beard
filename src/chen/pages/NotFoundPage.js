@@ -1,9 +1,10 @@
 import React, { useState, useEffect } from 'react'
+import { withRouter, useHistory } from 'react-router-dom';
 import { Button } from 'react-bootstrap'
 import '../styles/errors.scss'
-import { withRouter, useHistory } from 'react-router-dom';
 
 function NotFoundPage(props) {
+  console.log('NotFoundPage',props)
   return (
     <>
       <div className="container noPageFound">
@@ -35,7 +36,7 @@ function NotFoundPage(props) {
             <p className="mb-0">我要做禮物盒</p>
             <Button
               className="linkPage"
-              onClick={() => props.history.push('/giftBox')}>
+              onClick={() => props.history.push('/Path_GiftBox')}>
               客製化禮物盒
             </Button>
           </div>
