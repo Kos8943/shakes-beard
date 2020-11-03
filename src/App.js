@@ -12,7 +12,8 @@ import Sid from "./Sid";
 import HomePage from "./chad/HomePage";
 import Product from "./hsuan/pages/Product";
 import Market from "./hsuan/Market";
-import Project1 from './hsuan/pages/Project1'
+import Project1 from "./hsuan/pages/Project1";
+import Project from "./hsuan/Project";
 import Cart from "./kos/pages/Cart";
 import ShopList from "./chen/pages/ShopList";
 import ShopDetail from "./chen/pages/ShopDetail";
@@ -119,6 +120,12 @@ function App() {
               <MyFooter />
             </Route>
 
+            <Route path="/Project">
+              <ShakesBeardNavbar />
+              <Project />
+              <MyFooter />
+            </Route>
+            
              <Route exact path="/Product">
                 <ShakesBeardNavbar />
                 <div className="footerFix">

@@ -7,16 +7,6 @@ import "animate.css";
 import anime from "react-anime";
 import ReactCSSTransitionGroup from "react-addons-css-transition-group";
 
-// import search from "./icon/search.svg";
-// import icon from "../icon/logo1.svg";
-// import original from './icon/original.jpg';
-// import Breadcrumb from './component/Breadcrumb'
-// import Pagination from "./component/Pagination";
-// import CatesAside from "./component/CatesAside";
-// import Cards from "./component/Cards";
-// import Sorts from "./component/Sorts";
-// import Cates from "./component/Cates";
-// import Banner from "./component/Banner";
 
 import { Container, Row, Breadcrumb } from "react-bootstrap";
 import { NavLink } from "react-router-dom";
@@ -38,17 +28,7 @@ function Project1() {
 
       <div className="PgaeWraper">
         <div className="AllBread">
-          <Breadcrumb className="HsuanBread">
-            <Breadcrumb.Item href="#">首頁</Breadcrumb.Item>
-            <Breadcrumb.Item href="https://getbootstrap.com/docs/4.0/components/breadcrumb/">
-              服飾配件
-            </Breadcrumb.Item>
-            <Breadcrumb.Item href="https://getbootstrap.com/docs/4.0/components/breadcrumb/">
-              領帶/領結
-            </Breadcrumb.Item>
-            <Breadcrumb.Item active>Data</Breadcrumb.Item>
-          </Breadcrumb>
-        </div>
+       </div>
         {/* <section className="SectionTile brand-SectionCover">
           <div className="SectionTile__container">
             <div
@@ -56,7 +36,7 @@ function Project1() {
               data-anime="fadeInRight"
               data-anime-trigger=".brand-SectionCover__main">
               <img
-                src={require("./icon/bathroom.jpg")}
+                src={require("../icon/bathroom.jpg")}
                 className="card-img-top"
                 alt="..."
               ></img>
@@ -80,13 +60,12 @@ function Project1() {
                   </div>
                 </div>
               </div>
+              
               <div className="brand-SectionCover__body">
-                <div
-                  className="_text2 typesquare_option finished"
+                <div className="_text2 typesquare_option finished"
                   data-anime="fadeInRight"
                   data-anime-trigger=".brand-SectionCover__main"
-                  data-anime-delay="0.9"
-                >
+                  data-anime-delay="0.9">
                   精湛工藝呈現出迷人魅力。繁複的製作工序沒有令我們對工藝的要求卻步；
                   <br></br>
                   反令我們力臻極佳品質。
@@ -96,7 +75,16 @@ function Project1() {
           </div>
         </section> */}
         <Script />
-
+        <Breadcrumb className="HsuanBread">
+            <Breadcrumb.Item href="#">首頁</Breadcrumb.Item>
+            <Breadcrumb.Item href="https://getbootstrap.com/docs/4.0/components/breadcrumb/">
+              服飾配件
+            </Breadcrumb.Item>
+            <Breadcrumb.Item href="https://getbootstrap.com/docs/4.0/components/breadcrumb/">
+              領帶/領結
+            </Breadcrumb.Item>
+            <Breadcrumb.Item active>Data</Breadcrumb.Item>
+          </Breadcrumb>
         <section className="SectionTile brand-SectionProduct">
           <div className="SectionTile__container">
             <div className="brand-ProductItems">
