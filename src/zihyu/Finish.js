@@ -1,5 +1,6 @@
 import React from 'react'
 import './Style/FinishCSS.css';
+import './Style/CommonCSS.css';
 import img from './image/openbox.png';
 class Class_Finish extends React.Component
 

@@ -1,6 +1,8 @@
 import React from 'react'
 import './Style/ChooseRazorCSS.css';
+import './Style/CommonCSS.css';
 import { Button } from 'react-bootstrap'
+
 class Class_ChooseRazor extends React.Component
 
 

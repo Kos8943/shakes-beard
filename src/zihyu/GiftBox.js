@@ -1,5 +1,6 @@
 import React from 'react'
 import './Style/GiftBoxCSS.css';
+import './Style/CommonCSS.css';
 import { Button } from 'react-bootstrap'
 import img from './image/razor.png';
 

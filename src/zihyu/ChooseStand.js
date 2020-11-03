@@ -1,5 +1,6 @@
 import React from 'react'
 import './Style/ChooseStandCSS.css';
+import './Style/CommonCSS.css';
 import { Button } from 'react-bootstrap'
 import img_1 from './image/razor.png';
 import img_2 from './image/razor.png';
