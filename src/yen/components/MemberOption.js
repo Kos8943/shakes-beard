@@ -4,8 +4,8 @@ import MemberUpdate from '../MemberUpdate'
 
 function MemberOption(props) {
   return <>
-  <div className="container-fluid">
-    <div className="row justify-content-between">
+  {/* <div className="container-fluid">
+    <div className="row justify-content-between"> */}
 
         <div className="leftArea col-2 d-flex flex-column">
             <div className="userName">王大明</div>
@@ -18,17 +18,17 @@ function MemberOption(props) {
         </div>
 
 
-        <div className="rightArea col-9">
+        {/* <div className="rightArea col-9">
             <div className="optionTittle">資料修改</div>
             <div className="decLine"></div>
             <div className="">
                 {}
             </div>
-        </div>
+        </div> */}
 
 
-    </div>
-  </div>
+    {/* </div>
+  </div> */}
       
   </>
 }
