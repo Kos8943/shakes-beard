@@ -6,7 +6,7 @@ function Banner(props) {
   console.log('Banner', props)
   return (
     <>
-      <Carousel>
+      <Carousel className="banner">
         <Carousel.Item>
           {/* src="holder.js/800x400?text=First slide&bg=373940" */}
           <img
