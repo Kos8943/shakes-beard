@@ -8,7 +8,6 @@ import giftimg from './imgs/禮物盒.jpg'
 import hot1 from './imgs/hot/hot1.jpg'
 import hot2 from './imgs/hot/hot2.jpeg'
 import hot3 from './imgs/hot/hot3.jpg'
-
 import hotpage from './imgs/熱銷.jpg'
 import map1 from './imgs/map1.jpg'
 import map2 from './imgs/map2.jpg'
@@ -111,7 +110,7 @@ function HomePage() {
                         <Card.Text id="price">
                         NT$1200
                         </Card.Text>
-                        <Button variant="primary" id="buy">立即購買</Button>
+                        <Button variant="primary" id="chadbuy">立即購買</Button>
                     </Card.Body>
                     </Card>
                     <Card id="cardborder" style={{ width: '20rem' }}>
@@ -121,7 +120,7 @@ function HomePage() {
                         <Card.Text id="price">
                         NT$1200
                         </Card.Text>
-                        <Button variant="primary" id="buy">立即購買</Button>
+                        <Button variant="primary" id="chadbuy">立即購買</Button>
                     </Card.Body>
                     </Card>
                     <Card id="cardborder" style={{ width: '20rem' }}>
@@ -131,12 +130,12 @@ function HomePage() {
                         <Card.Text id="price">
                         NT$1200
                         </Card.Text>
-                        <Button variant="primary" id="buy">立即購買</Button>
+                        <Button variant="primary" id="chadbuy">立即購買</Button>
                     </Card.Body>
                     </Card>
                     </div>
 
- {/* 熱銷手機板 */}
+ {/* 熱們商品手機板 */}
                     <div className="hot-card-area-mobile">
                     <Card id="cardborder" style={{ width: '20rem' }}>
                     <Carousel>
@@ -167,7 +166,7 @@ function HomePage() {
                             <Card.Text>
                            NT$1000
                             </Card.Text>
-                            <Button variant="primary" id="buy">立即購買</Button>
+                            <Button variant="primary" id="chadbuy">立即購買</Button>
                         </Card.Body>
                     </Card>
                     </div>

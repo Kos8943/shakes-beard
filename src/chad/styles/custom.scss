@@ -10,7 +10,7 @@
   position: relative;
 }
 .hero-text-area {
-  width: 30%;
+  width: 28%;
   position: absolute;
   top: 50%;
   left: 50%;
@@ -164,7 +164,7 @@
   font: 20px PingFang;
   color: #ffffff;
   position: absolute;
-  right: 26%;
+  right: 28%;
   bottom: 10%;
 }
 .giftBtn:hover {
@@ -177,7 +177,7 @@
     position: relative;
   }
   .gift-img {
-    width: 450px;
+    width: 414px;
     height: 300px;
   }
   .gift-title {
@@ -248,12 +248,16 @@
 #price {
   margin-left: 15%;
 }
-#buy {
+#chadbuy {
   margin-left: 3%;
   border-radius: 4px;
   width: 120px;
   height: 50px;
   padding-top: 3%;
+  background: hsla(228, 43%, 31%, 1);
+}
+#chadbuy:hover{
+  background: hsla(228, 43%, 31%, 0.7)
 }
 
 //熱門 手機板
@@ -281,8 +285,12 @@
   }
   #card-body-mobile {
     text-align: center;
-    #buy {
+    #chadbuy {
       font-size: 16px;
+      background: hsla(228, 43%, 31%, 1);
+    }
+    #chadbuy:hover{
+      background: hsla(228, 43%, 31%, 0.7)
     }
   }
 }
@@ -316,7 +324,7 @@
   font: 20px PingFang;
   color: #ffffff;
   position: absolute;
-  right: 26%;
+  right: 28%;
   top: 26%;
 }
 .topBtn:hover {
@@ -340,7 +348,7 @@
     padding: 0px;
   }
   .top-img {
-    width: 450px;
+    width: 414px;
     height: 300px;
     position: relative;
   }

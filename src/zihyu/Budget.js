@@ -1,5 +1,6 @@
 import React from 'react'
 import './Style/BudgetCSS.css';
+import './Style/CommonCSS.css';
 import img from './image/box.png';
 import { Button } from 'react-bootstrap'
 

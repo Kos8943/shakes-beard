@@ -1,7 +1,9 @@
 import React from 'react'
 import './Style/GiftBoxCSS.css';
+import './Style/CommonCSS.css';
 import { Button } from 'react-bootstrap'
-import img from './image/razor.png';
+import img_Left from './image/razor.png';
+import img_Right from './image/standBrush.png';
 
 class Class_Gift extends React.Component
 {
@@ -12,7 +14,8 @@ class Class_Gift extends React.Component
       <div className="contain">
         <div className="background_white">
       
-        <div><img className="Img_Left" src={img} /></div>
+        <div><img className="Img_Left" src={img_Left} /></div>
+        <div><img className="Img_Right" src={img_Right} /></div>
                 
           <div className="blueBox">
             <div className="whiteBox">
