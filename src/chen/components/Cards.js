@@ -7,7 +7,7 @@ function Cards(props) {
   console.log('Cards', props)
   return (
     <>
-      <div className="card col-12 col-sm-6 col-md-6 col-lg-4 p-0 mb-3">
+      <div className="shopcard col-12 col-sm-6 col-md-6 col-lg-4 p-0 mb-3">
         <Link to="#" className="todetail">
           <img src={require('../img/card01.jpg')} className="card-img-top" alt="..." />
         </Link>
