@@ -13,10 +13,32 @@ import map1 from './imgs/map1.jpg'
 import map2 from './imgs/map2.jpg'
 
 
+//animation
+import { bounceInLeft,} from 'react-animations'
+import Radium, {StyleRoot} from 'radium';
+import "animate.css/animate.min.css"
+import ScrollAnimation from 'react-animate-on-scroll'
 
-function HomePage() {
+
+
+
+
+
+
+const styles = {
+    bounceInLeft: {
+      animation: 'x 2s',
+      animationName: Radium.keyframes(bounceInLeft, 'bounceInLeft')
+    }
+  }
+
+
+
+class HomePage extends React.Component {
+    render(){
     return (
-      <>
+      
+    <>
       <body className="body">
  
 {/* 輪播牆 */}
@@ -63,6 +85,8 @@ function HomePage() {
     </Carousel>
     </div>
 {/* 品牌故事 */}     
+<ScrollAnimation animateIn='bounceInRight'
+  animateOut='bounceOutLeft'>
         <div className="story-area w-100 h-100">
          <h2 className="story-title">品牌故事</h2>
             <div className="story-text-area">
@@ -74,6 +98,7 @@ function HomePage() {
                 </p>
             </div>
         </div>
+        </ScrollAnimation>
         
         
 {/* 禮物盒 */}
@@ -96,12 +121,14 @@ function HomePage() {
 {/* 熱門商品*/}
 
             <div className="hot-area w-100 h-100 ">
-               
-                <div className="hot-text-area">
+            <ScrollAnimation animateIn='flipInY'
+                            animateOut='flipOutY'>
+                <div className="hot-text-area"  style={styles.bounceInLeft}>
                 <h2 className="hot-title py-3">熱門商品</h2>
                         <p className="hot-text mx-auto">精湛工藝呈現出迷人魅力。繁複的製作工序沒有令我們對工藝的要求卻步；反令我們力臻極佳品質。
                         </p>
                 </div>
+                </ScrollAnimation>
                 <div className="hot-card-area">
                                     <Card id="cardborder" style={{ width: '20rem' }}>
                     <Card.Img variant="top" src={hot1} />
@@ -188,32 +215,46 @@ function HomePage() {
 
         
        
-                <div className="map-top-area py-5">         
+                <div className="map-top-area py-5">   
+                <ScrollAnimation animateIn='bounceInLeft'
+  animateOut='bounceOutLeft'>    
                     <div className="map-top-img-area">
                         <img className="map-top-img" src={map1}/>
-                    </div>       
+                    </div>   
+                    </ScrollAnimation>      
                 <div className="top-text-area">
-                    <p className="map-top-text">改變生活，雕塑你的生活風格。</p>                  
+                <ScrollAnimation animateIn='bounceInRight'
+                                animateOut='bounceOutRight'> 
+                    <p className="map-top-text">改變生活，雕塑你的生活風格。</p>    
+                    </ScrollAnimation>               
                 </div>
                 </div>
 
                 
                 <div className="map-down-area pb-5">       
-                <div className="down-text-area">             
-                    <p className="map-down-text">我們為您挑選了優質的店家，提供最高品質的服務，讓您煥然一新。 </p>    
+                <div className="down-text-area">  
+                <ScrollAnimation animateIn='bounceInLeft'
+                 animateOut='bounceOutLeft'>             
+                    <p className="map-down-text">我們為您挑選了優質的店家，提供最高品質的服務，讓您煥然一新。 </p>   
+                   
                     <Button variant="primary" id="mapBtn">立即預約</Button> 
+                    </ScrollAnimation>  
                     </div>   
+                    <ScrollAnimation animateIn='bounceInRight'
+                                animateOut='bounceOutRight'> 
                       <div className="map-down-img-area">  
                     <img className="down-img" src={map2}/>   
                     </div>   
+                    </ScrollAnimation> 
                                
                 </div>
          
              
 </body>
-
-      </>
+        </>
+      
     )
+    }
   }
 
 
