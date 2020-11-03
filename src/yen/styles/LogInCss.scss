@@ -2,9 +2,6 @@ html {
   font-size: 16px;
 }
 
-
-
-
 .bagimg {
   // background-color: #595452;
   min-height: 73.6vh;
@@ -28,7 +25,7 @@ html {
 
 // 1920
 
-.logInArea {
+.loginCard {
   width: 44.6vw;
   // width:848px;
   // height: 578px;
@@ -37,6 +34,7 @@ html {
   border: radius 4px;
   margin: 8vh auto;
   // border: 2px solid saddlebrown;
+  // display: none;
 }
 
 .loginTittle {
@@ -46,20 +44,17 @@ html {
   // border: 1px solid black;
   padding-top: 45px;
 }
-.loginArea{
-    // border: 2px solid saddlebrown;
 
-  }
-
-.logInArea1 {
+.loginArea1 {
   width: 22.0833vw;
   height: 34.722vh;
   // border: 1px solid hotpink;
   border-right: 0.5px solid #232d2f;
   margin-top: 38px;
+  padding-left: 65px;
 }
 
-.logInArea2 {
+.loginArea2 {
   width: 22.0833vw;
   height: 34.722vh;
   // border: 1px solid steelblue;
@@ -68,35 +63,18 @@ html {
 }
 
 .logText {
-  font-size: 1.5rem;
+  font-size: 1.25rem;
   // margin-left: 4rem;
   // border: 1px solid #232d2f;
+  margin-top: 33px;
 }
 
-.logInInput {
+.loginInput {
   background-color: #898584;
   border: 1.3px solid #6b7496;
   width: 15.9vw;
   height: 5.74vh;
   border-radius: 4px;
-}
-
-.log {
-  // border: 1px solid tomato;
-  margin-top: 33px;
-  // text-align: center
-}
-
-.account {
-  text-align: center;
-  margin-bottom: 33px;
-}
-
-.password {
-  // margin-left: 90px;
-  // border: 1px solid steelblue;
-  // margin-top: 33px;
-  text-align: center;
 }
 
 .otherAccount {
@@ -133,15 +111,13 @@ html {
 
 .loginCheckButton {
   background-color: #2d3b72;
-  border: none;
   color: #ffffff;
   width: 7.8vw;
   height: 4.259vh;
   font-size: 1.5rem;
   font-weight: bold;
   border-radius: 4px;
-  border: 1px solid steelblue;
-
+  // border: 1px solid steelblue;
 }
 
 .loginSingUpButton {
@@ -153,10 +129,18 @@ html {
   font-size: 1.5rem;
   font-weight: bold;
   border-radius: 4px;
-  // border: px solid steelblue;
-
+  // border: 1px solid steelblue;
 }
-  
+
+.loginWeb {
+  display: flex;
+  justify-content: center;
+}
+
+.loginMobile {
+  display: none;
+}
+
 //手機
 //以下是576PX以下的CSS
 @media (max-width: 1400px) {
@@ -164,23 +148,114 @@ html {
     font-size: 12px;
   }
 
+  .loginMobile {
+    display: block;
+  }
 
-  .loginWeb{
+  .loginWeb {
+    display: block;
+  
+  }
+  .loginWebNone{
     display: none;
   }
 
+
+  .bagimg2 {
+    height: 100%;
+  }
+
+  .loginCard {
+    width: 80vw;
+    height: 100%;
+    padding: 0 55px;
+    margin: 2vh auto;
+  }
+
+  .loginTittle {
+    padding-top: 30px;
+  }
+
+  .loginArea1 {
+    // border: 1px solid steelblue;
+    border-right: none;
+    border-bottom: 1px solid #232d2f;
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    margin-top: 0;
+  }
+
+  .logText {
+    margin-bottom: 15px;
+    // border: 1px solid steelblue;
+    margin-top: 15px;
+
+  }
+
+  .loginInput {
+    width: 100%;
+  }
+
+  .loginCheckButton {
+    width: 15vw;
+    height: 4.259vh;
+    margin: 15px auto;
+  }
+
+  .loginArea2 {
+    // border: 1px solid steelblue;
+    border-left: none;
+    width: 100%;
+    height: 100%;
+    padding:0;
+    margin-top: 15px;
+  }
+
+
+  .otherAccount {
+    // border: 1px solid hotpink;
+    text-align: center; 
+    display:flex;
+    flex-direction: column;
+    margin: 0;
+  }
+
+
+  .otherLogButton {
+    width: 100%;
+    height: 5.74vh;
+  }
+
+  .lognIcon {
+    width: 4vw;
+  }
+
+  .facebook {
+    margin-bottom: 20px;
+  }
   
+  .twitter {
+    margin-bottom: 20px;
+  }
+ 
+  .google {
+    background-color: #e8e9e8;
+    margin-bottom: 20px;
+  }
 
+  .loginSingUpButton {
+    color: #000;
+    font-weight: normal;
+    width: 100%;
+    height: 5.74vh;
+    font-size: 1rem;
+    border-radius: 4px;
+    margin-bottom: 20px;
+    // border: 1px solid steelblue;
+  }
 
-
-
-
-
-
-
-
-
-
+  
 
 
 
