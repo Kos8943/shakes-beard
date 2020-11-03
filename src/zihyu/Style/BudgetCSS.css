@@ -2,3 +2,11 @@
   height: 165px;
   margin-top: 50px;
 }
+.ramgeNumber {
+  color: #2d3b72;
+  font-family: PingFang;
+  font-size: 16px;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+}
