@@ -219,6 +219,13 @@ function App() {
                 <Reservation />
               </Route>
 
+              <Route path="*">
+                <ShakesBeardNavbar />
+                  <div className="footerFix">
+                    <NotFoundPage />
+                  </div>
+                <MyFooter />
+              </Route>
            
           </Switch>
         </main>
