@@ -27,7 +27,7 @@ function ShakesBeardNavbar(props) {
       <Nav.Link href="Path_GiftBox" className="navBarFontSize">客製化禮盒</Nav.Link>
       <Navbar.Brand href="#home" className="logoFont">logo</Navbar.Brand>
       <Nav.Link ><img src={Logo} className="logo"></img></Nav.Link>
-      <Nav.Link href="#link" className="navBarFontSize">商家預約</Nav.Link>
+      <Nav.Link href="ShopList" className="navBarFontSize">商家預約</Nav.Link>
       <Nav.Link href="#link" className="navBarFontSize">我的帳戶</Nav.Link>
       <div className="loginCartArea d-flex">
       {/* <div className="loginCartArea"> */}
