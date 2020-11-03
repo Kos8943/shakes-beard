@@ -254,6 +254,10 @@
   width: 120px;
   height: 50px;
   padding-top: 3%;
+  background: hsla(228, 43%, 31%, 1);
+}
+#chadbuy:hover{
+  background: hsla(228, 43%, 31%, 0.7)
 }
 
 //熱門 手機板
@@ -281,8 +285,12 @@
   }
   #card-body-mobile {
     text-align: center;
-    #buy {
+    #chadbuy {
       font-size: 16px;
+      background: hsla(228, 43%, 31%, 1);
+    }
+    #chadbuy:hover{
+      background: hsla(228, 43%, 31%, 0.7)
     }
   }
 }

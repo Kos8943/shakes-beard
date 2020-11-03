@@ -166,7 +166,7 @@ function HomePage() {
                             <Card.Text>
                            NT$1000
                             </Card.Text>
-                            <Button variant="primary" id="buy">立即購買</Button>
+                            <Button variant="primary" id="chadbuy">立即購買</Button>
                         </Card.Body>
                     </Card>
                     </div>
