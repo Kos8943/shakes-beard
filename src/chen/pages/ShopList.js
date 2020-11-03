@@ -24,8 +24,6 @@ function ShopList(props) {
               <Cards />
               <Cards />
               <Cards />
-            {/* </div>
-            <div className="cardGroup"> */}
               <Cards />
               <Cards />
               <Cards />
