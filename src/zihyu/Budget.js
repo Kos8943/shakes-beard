@@ -44,9 +44,9 @@ class Class_Budget extends React.Component
 
                   <Step></Step>
 
-                  <div className="ramgeNumber">小於<br/>3000元</div>
-                  <div className="ramgeNumber">3000元~4000元</div>
-                  <div className="ramgeNumber">大於<br/>4000元</div>
+                  <div className="ramge3000">小於<br/>3000元</div>
+                  <div className="ramge3000to4000">3000元~4000元</div>
+                  <div className="ramge4000">大於<br/>4000元</div>
                   
                   <div><Button className="startButton" onClick=
                   {     //React程式區間語法 (開始)

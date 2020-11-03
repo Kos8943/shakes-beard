@@ -1,4 +1,23 @@
-.budget_boxImg {
-  height: 165px;
-  margin-top: 50px;
+.color_boxImg {
+  height: 192px;
+  margin-top: 20px;
+}
+
+.color_button {
+  background-color: #a76f56;
+  border: #d3b7ab solid 4px;
+  width: 34px;
+  height: 34px;
+  color: white;
+  display: inline-block;
+  margin: 4px 2px;
+  border-radius: 50%;
+}
+.message_card {
+  color: #2d3b72;
+  font-family: PingFang;
+  font-size: 17px;
+  text-align: center;
+  display: flex;
+  justify-content: center;
 }
