@@ -23,6 +23,8 @@ function InfoSection(props) {
              <Link to="#" className="card-link">
               台北市大安區
             </Link>
+            <p className="mt-3">商家編號: 
+            <span>ST001</span></p>
             <p className="mt-3">電話:  02-27375832</p>
             <p>地址:  106台北市大安區敦化南路二段265巷6號2樓</p>
             <div className="">
