@@ -30,6 +30,7 @@ class Class_Color extends React.Component
                   <div className="message_card">留言小卡內容：</div>
                   <input className="message"></input>
 
+                  <div className="Grid">
                   <Button className="backButton" onClick=
                     {     //React程式區間語法 (開始)
                       () =>
@@ -49,7 +50,7 @@ class Class_Color extends React.Component
                   }     //React程式區間語法 (結束)
                 
                 > 完成 </Button>
-
+                </div>
                   
                 </div>
               </div>
