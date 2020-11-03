@@ -1,15 +1,3 @@
-.lineTop {
-  width: 450px;
-  border-top: solid #2d3b72 1px;
-  margin: 15px auto 0px;
-}
-
-.lineDown {
-  width: 450px;
-  border-top: solid #2d3b72 3px;
-  margin: 2px auto 0px;
-}
-
 .Grid {
   display: flex;
   flex-wrap: wrap;

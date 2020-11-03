@@ -52,6 +52,12 @@
   position: absolute;
   z-index: 4;
   height: 372px;
-  /* transform: rotate(-10deg); */
-  transform: translate(-500px, -10px);
+  transform: translate(-450px, -25px) rotate(-8deg);
+}
+
+.Img_Right {
+  position: absolute;
+  z-index: 4;
+  height: 445.8px;
+  transform: translate(80px, -100px);
 }

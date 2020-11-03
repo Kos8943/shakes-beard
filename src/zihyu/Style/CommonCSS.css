@@ -16,7 +16,7 @@
   background-color: #2d3b72;
   width: 633.73px;
   height: 605.71px;
-  z-index: 3;
+  z-index: 1;
   position: absolute;
   display: flex;
   justify-content: center;
@@ -27,7 +27,7 @@
   background-color: white;
   width: 621.87px;
   height: 593px;
-  z-index: 4;
+  z-index: 1;
   position: absolute;
   display: flex;
   justify-content: center;
@@ -75,4 +75,16 @@
   text-align: center;
   display: flex;
   justify-content: center;
+}
+
+.lineTop {
+  width: 450px;
+  border-top: solid #2d3b72 1px;
+  margin: 15px auto 0px;
+}
+
+.lineDown {
+  width: 100%;
+  border-top: solid #2d3b72 3px;
+  margin: 2px auto 0px;
 }

@@ -1,16 +1,12 @@
-.lineTop {
-  width: 450px;
-  border-top: solid #2d3b72 1px;
-  margin: 15px auto 0px;
-}
-
-.lineDown {
-  width: 100%;
-  border-top: solid #2d3b72 3px;
-  margin: 2px auto 0px;
-}
-
 .budget_boxImg {
   height: 165px;
   margin-top: 50px;
+}
+.ramgeNumber {
+  color: #2d3b72;
+  font-family: PingFang;
+  font-size: 16px;
+  text-align: center;
+  display: flex;
+  justify-content: center;
 }
