@@ -18,7 +18,9 @@ class HeroPage extends React.Component{
             
                 <div className="bgimg">
                     <video  loop="true" autoplay="autoplay"  muted="true" src={heromovie} className="heropage d-flex justify-content-center"></video>
+                   
                    <div className="hero-text-area" style={styles.fadeIn}>
+                  
                         <a className="hero-text" href='/homepage'>WELCOME TO SHAKES BEARD</a>
                         </div>
                     

@@ -28,7 +28,7 @@ function Product() {
    
    <>
 	
-     
+      <h1 className="animate__animated animate__bounce">An animated element</h1>
       <ReactCSSTransitionGroup />
       
       <Sid />
@@ -48,7 +48,6 @@ function Product() {
           <section
             className="top-BrandTile top-BrandTile--lilac brandItem"
             data-index="1">
-			
 			{/* 圖片後面的方塊顏色 */}
             {/* <div className="top-BrandTile__bg is-animated"
               data-anime="addClass"
@@ -59,7 +58,7 @@ function Product() {
               data-anime-trigger='.top-BrandTile[data-index="1"]'
               data-anime-delay="1.25" >
               <div className="_inner">
-                <img src={require("../icon/24K.png")}
+                <img src={require("../icon/horizontal5.jpg")}
                   className="card-img-top"
                   alt="..."></img>
               </div>
@@ -73,7 +72,7 @@ function Product() {
                   刮鬍修容
                 </div>
 				{/* more的按鈕效果 */}
-                <a href="http://localhost:3000/project1"
+                <a href="/brand/pole_pole.php"
                   className="ButtonA finished"
                   data-anime="fadeIn"
                   data-anime-trigger='.top-BrandTile[data-index="1"]'
@@ -88,12 +87,12 @@ function Product() {
             className="top-BrandTile top-BrandTile--beige brandItem"
             data-index="2"
           >
-            {/* <div
+            <div
               className="top-BrandTile__bg is-animated"
               data-anime="addClass"
               data-anime-trigger='.top-BrandTile[data-index="2"]'
               data-anime-delay="0"
-            ></div> */}
+            ></div>
             <div
               className="top-BrandTile__photo finished"
               data-anime="fadeInRight"
@@ -102,7 +101,7 @@ function Product() {
             >
               <div className="_inner">
                 <img
-                  src={require("../icon/3.jpg")}
+                  src={require("../icon/horizontal4.jpg")}
                   className="card-img-top"
                   alt="..."
                 ></img>
@@ -118,7 +117,7 @@ function Product() {
                   頭髮造型
                 </div>
                 <a
-                 href="http://localhost:3000/project1"
+                  href="/brand/a.motion.php"
                   className="ButtonA finished"
                   data-anime="fadeIn"
                   data-anime-trigger='.top-BrandTile[data-index="2"]'
@@ -134,12 +133,12 @@ function Product() {
             className="top-BrandTile top-BrandTile--lilac brandItem"
             data-index="3"
           >
-            {/* <div
+            <div
               className="top-BrandTile__bg is-animated"
               data-anime="addClass"
               data-anime-trigger='.top-BrandTile[data-index="3"]'
               data-anime-delay="0"
-            ></div> */}
+            ></div>
             <div
               className="top-BrandTile__photo finished"
               data-anime="fadeInRight"
@@ -148,7 +147,7 @@ function Product() {
             >
               <div className="_inner">
                 <img
-                  src={require("../icon/horizontal.jpg")}
+                  src={require("../icon/horizontal3.jpg")}
                   className="card-img-top"
                   alt="..."
                 ></img>
@@ -165,10 +164,10 @@ function Product() {
                   沐浴清潔
                 </div>
                 <a
-                 href="http://localhost:3000/project1"
+                  href="/brand/a.motion_ja.php"
                   className="ButtonA finished"
                   data-anime="fadeIn"
-                  data-anime-trigger='.top-BrandTile'
+                  data-anime-trigger='.top-BrandTile[data-index="3"]'
                   data-anime-delay="2.9"
                 >
                   <span>MORE</span>
@@ -181,12 +180,12 @@ function Product() {
             className="top-BrandTile top-BrandTile--beige brandItem"
             data-index="4"
           >
-            {/* <div
+            <div
               className="top-BrandTile__bg is-animated"
               data-anime="addClass"
               data-anime-trigger='.top-BrandTile[data-index="4"]'
               data-anime-delay="0"
-            ></div> */}
+            ></div>
             <div
               className="top-BrandTile__photo finished"
               data-anime="fadeInRight"
@@ -212,7 +211,7 @@ function Product() {
                   紳士香氛
                 </div>
                 <a
-                 href="http://localhost:3000/project1"
+                  href="/brand/be_moved.php"
                   className="ButtonA finished"
                   data-anime="fadeIn"
                   data-anime-trigger='.top-BrandTile[data-index="4"]'
@@ -242,7 +241,7 @@ function Product() {
             >
               <div className="_inner">
                 <img
-                  src={require("../icon/1-5.jpg")}
+                  src={require("../icon/horizontal1.jpg")}
                   className="card-img-top"
                   alt="..."
                 ></img>
@@ -256,10 +255,10 @@ function Product() {
                   data-anime-trigger='.top-BrandTile[data-index="5"]'
                   data-anime-delay="2.05"
                 >
-                  服飾配件
+                  育鬍滋養
                 </div>
                 <a
-                 href="http://localhost:3000/project1"
+                  href="/brand/b.v.php"
                   className="ButtonA"
                   data-anime="fadeIn"
                   data-anime-trigger='.top-BrandTile[data-index="5"]'
@@ -289,7 +288,7 @@ function Product() {
             >
               <div className="_inner">
                 <img
-                  src={require("../icon/horizontal2.jpg")}
+                  src={require("../icon/horizontal.jpg")}
                   className="card-img-top"
                   alt="..."
                 ></img>
@@ -306,7 +305,7 @@ function Product() {
                   精選優惠
                 </div>
                 <a
-                 href="http://localhost:3000/project1"
+                  href="/brand/nival.php"
                   className="ButtonA"
                   data-anime="fadeIn"
                   data-anime-trigger='.top-BrandTile[data-index="6"]'

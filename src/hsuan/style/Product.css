@@ -1,6 +1,11 @@
-
 @charset "UTF-8";
-
+/*!
+ * Bootstrap Reboot v4.1.3 (https://getbootstrap.com/)
+ * Copyright 2011-2018 The Bootstrap Authors
+ * Copyright 2011-2018 Twitter, Inc.
+ * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
+ * Forked from Normalize.css, licensed MIT (https://github.com/necolas/normalize.css/blob/master/LICENSE.md)
+ */
 *,
 *::before,
 *::after {
@@ -8,11 +13,11 @@
 }
 
 html {
-  font-family: 'PingFang' ; 
+  font-family: sans-serif;
   line-height: 1.15;
   -webkit-text-size-adjust: 100%;
   -ms-text-size-adjust: 100%;
-  /* -ms-overflow-style: scrollbar; */
+  -ms-overflow-style: scrollbar;
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
 
@@ -23,7 +28,7 @@ html {
 
 body {
   margin: 0;
-  font-family: 'PingFang' ; 
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   font-size: 1rem;
   font-weight: 400;
   line-height: 1.5;
@@ -32,10 +37,10 @@ body {
   background-color: #fff;
 }
 
-
 [tabindex="-1"]:focus {
   outline: 0 !important;
 }
+
 
 hr {
   box-sizing: content-box;
@@ -124,13 +129,37 @@ sup {
   top: -.5em;
 }
 
+a {
+  color: #007bff;
+  text-decoration: none;
+  background-color: transparent;
+  -webkit-text-decoration-skip: objects;
+}
 
+a:hover {
+  color: #0056b3;
+  text-decoration: underline;
+}
+
+a:not([href]):not([tabindex]) {
+  color: inherit;
+  text-decoration: none;
+}
+
+a:not([href]):not([tabindex]):hover, a:not([href]):not([tabindex]):focus {
+  color: inherit;
+  text-decoration: none;
+}
+
+a:not([href]):not([tabindex]):focus {
+  outline: 0;
+}
 
 pre,
 code,
 kbd,
 samp {
-  font-family: 'PingFang' ;
+  font-family: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
   font-size: 1em;
 }
 
@@ -182,7 +211,7 @@ button {
 
 button:focus {
   outline: 1px dotted;
-  outline: 5px auto ;
+  outline: 5px auto -webkit-focus-ring-color;
 }
 
 input,
@@ -191,7 +220,7 @@ select,
 optgroup,
 textarea {
   margin: 0;
-  font-family: 'PingFang'  inherit;
+  font-family: inherit;
   font-size: inherit;
   line-height: inherit;
 }
@@ -317,7 +346,7 @@ html {
 }
 
 body {
-  font-family: 'PingFang' ; 
+  font-family: "Hiragino Kaku Gothic ProN", "ヒラギノ角ゴ ProN W3", "Hiragino Kaku Gothic Pro", "ヒラギノ角ゴ Pro W3", "游ゴシック体", "Yu Gothic", YuGothic, "Segoe UI", "メイリオ", Meiryo, "ＭＳ Ｐゴシック", sans-serif;
   font-weight: 300;
   line-height: 1.5;
   color: #333;
@@ -332,7 +361,19 @@ body {
   }
 }
 
- 
+a {
+  text-decoration: underline;
+}
+
+a:link, a:visited {
+  color: #1c7ae3;
+}
+
+a:hover, a:active {
+  text-decoration: none;
+  color: #77afee;
+}
+
 ul, li {
   list-style: none;
   padding: 0;
@@ -469,10 +510,7 @@ h1, h2, h3, h4, h5 {
   display: none;
 }
 
-/* Slider */
-/* .slick-loading .slick-list {
-  background: #fff url("../img/ajax-loader.gif?qu9ew7us") center center no-repeat;
-} */
+
 
 
 
@@ -516,7 +554,7 @@ h1, h2, h3, h4, h5 {
 
 .slick-prev:before,
 .slick-next:before {
-  font-family: 'PingFang' ;
+  font-family: "slick";
   font-size: 20px;
   line-height: 1;
   color: white;
@@ -614,7 +652,7 @@ h1, h2, h3, h4, h5 {
   content: "•";
   width: 20px;
   height: 20px;
-  font-family: 'PingFang' ; 
+  font-family: "slick";
   font-size: 6px;
   line-height: 20px;
   text-align: center;
@@ -630,7 +668,6 @@ h1, h2, h3, h4, h5 {
 }
 
 /*
- * ニューモーフィズム
  * <a href="#" class="ButtonA"><span>MORE</span></a>
  */
 .ButtonA {
@@ -642,9 +679,9 @@ h1, h2, h3, h4, h5 {
   width: 175px;
   margin-left: auto;
   margin-right: auto;
-  border-radius: 22px;
+  border-radius: 2px;
   background-color: transparent;
-  font-family: 'PingFang' ; 
+  font-family: 'Oswald', sans-serif;
   font-weight: 300;
   color: inherit;
   font-size: 15px;
@@ -653,15 +690,16 @@ h1, h2, h3, h4, h5 {
 }
 
 .ButtonA:before {
-  box-shadow: 7px 7px 14px rgba(201, 177, 181, 0.3), -7px -7px 14px white;
+  box-shadow: 7px 7px 14px rgba(201, 177, 181, 0.3), -7px -7px 14px rgb(116, 100, 100);
 }
 
 .ButtonA:after {
-  box-shadow: inset 4px 4px 8px rgba(201, 177, 181, 0.3), inset -4px -4px 8px white;
+  box-shadow: inset 4px 4px 8px rgba(201, 177, 181, 0.062), inset -4px -4px 12px #A69981
+  ;
 }
 
 .ButtonA > span:before, .ButtonA > span:after {
-  background-color: #b59da1;
+  background-color: #595452;
 }
 
 .ButtonA:before {
@@ -672,7 +710,7 @@ h1, h2, h3, h4, h5 {
   height: 100%;
   top: 0;
   left: 0;
-  border-radius: 22px;
+  border-radius: 2px;
   transition: 0.3s opacity;
   opacity: 1;
 }
@@ -685,7 +723,7 @@ h1, h2, h3, h4, h5 {
   height: 100%;
   top: 0;
   left: 0;
-  border-radius: 22px;
+  border-radius: 2px;
   transition: opacity 0.3s , box-shadow 0.3s;
   opacity: 0;
   mix-blend-mode: multiply;
@@ -750,14 +788,14 @@ a.ButtonA {
   .ButtonA {
     height: 40px;
     width: 150px;
-    border-radius: 20px;
+    border-radius: 2px;
     font-size: 13px;
   }
   .ButtonA:before {
-    border-radius: 20px;
+    border-radius: 2px;
   }
   .ButtonA:after {
-    border-radius: 20px;
+    border-radius: 2px;
   }
   .ButtonA > span:before, .ButtonA > span:after {
     width: 7px;
@@ -779,7 +817,7 @@ a.ButtonA {
 }
 
 .ButtonA--lilac {
-  background: #FCF6F3;
+  background: #ffffff;
 }
 
 .ButtonA--ext i:before {
@@ -790,7 +828,6 @@ a.ButtonA {
   top: 50%;
   width: 17px;
   height: 15px;
-  /* background: url(../img/ico_external.svg) center center/contain no-repeat; */
   transform: translateY(-50%);
 }
 
@@ -839,10 +876,10 @@ a.ButtonA {
 }
 
 .PageTitle .en {
-  font-family: 'PingFang' ;
+  font-family: 'PingFang';
   font-size: 80px;
   line-height: 1;
-  color: #b59da1;
+  color: #595452;
 }
 
 .PageTitle .en:after {
@@ -851,27 +888,27 @@ a.ButtonA {
   width: 64px;
   height: 1px;
   margin: 18px auto 26px;
-  background: #b59da1;
+  background: #595452;
 }
-/* 說明文字 */
+
 .PageTitle .ja {
-  font-family: 'PingFang' ; 
-  font-size: 16px;
+  font-family: 'PingFang';
+  font-size: 20px;
   line-height: 1;
   letter-spacing: 0.125em;
-  color: #A69981;
+  color: #595452;
 }
 
 .is-color-beige .PageTitle .en {
-  color: #af9f8d;
+  color: #A69981;
 }
 
 .is-color-beige .PageTitle:after {
-  background: #af9f8d;
+  background: #A69981;
 }
 
 .is-color-beige .PageTitle .ja {
-  color: #af9f8d;
+  color: #A69981;
 }
 
 @media screen and (max-width: 559px) {
@@ -904,14 +941,14 @@ a.ButtonA {
 .Scroller span {
   height: 100%;
   width: 1px;
-  background-color: #b59da1;
+  background-color: #595452;
   margin: 0 6px;
 }
 
 .Scroller:before, .Scroller:after {
   content: '';
   display: block;
-  background-color: #b59da1;
+  background-color: #595452;
   width: 8px;
   height: 8px;
   border-radius: 4px;
@@ -919,15 +956,6 @@ a.ButtonA {
   opacity: 0;
 }
 
-.Scroller:before {
-  -webkit-animation: anime-scroller 6s 0s infinite ease-in-out;
-          animation: anime-scroller 6s 0s infinite ease-in-out;
-}
-
-.Scroller:after {
-  -webkit-animation: anime-scroller 6s 3s infinite ease-in-out;
-          animation: anime-scroller 6s 3s infinite ease-in-out;
-}
 
 @media screen and (max-width: 959px) {
   .Scroller {
@@ -1044,7 +1072,7 @@ a.ButtonA {
  */
 .TitleA {
   color: inherit;
-  font-family: 'PingFang' ;
+  font-family: 'PingFang';
   font-size: 40px;
   line-height: 1;
 }
@@ -1055,20 +1083,20 @@ a.ButtonA {
   }
 }
 
-/* .Breadcrumb {
+.Breadcrumb {
   padding-top: 40px;
   padding-bottom: 40px;
   position: relative;
   z-index: 2;
-  color: #b59da1;
+  color: #595452;
 }
 
 .Breadcrumb a {
-  color: #b59da1;
+  color: #595452;
 }
 
 .Breadcrumb .Breadcrumb__list li:before, .Breadcrumb .Breadcrumb__list li:after {
-  background-color: #b59da1;
+  background-color: #595452;
 }
 
 @media screen and (max-width: 959px) {
@@ -1169,65 +1197,11 @@ a.ButtonA {
     -ms-overflow-style: -ms-autohiding-scrollbar;
   }
 }
- */
- @media screen and (max-width: 959px) {
-  .AllBread {
-    padding-top: 20px;
-    padding-bottom: 20px;
-  }
-}
-
-.AllBread {
-  position: relative;
-  margin-left: auto;
-  margin-right: auto;
-  width: 100%;
-  max-width: 1200px;
-}
-
-@media screen and (min-width: 960px) and (max-width: 1279px) {
-  .AllBread {
-    max-width: initial;
-    padding-left: 40px;
-    padding-right: 40px;
-  }
-}
-
-@media screen and (min-width: 560px) and (max-width: 959px) {
-  .AllBread{
-    max-width: initial;
-    padding-left: 20px;
-    padding-right: 20px;
-  }
-}
-
-@media screen and (max-width: 559px) {
-  .AllBread {
-    max-width: initial;
-    padding-left: 20px;
-    padding-right: 20px;
-  }
-}
-
-.HsuanBread{
-font-size: 1rem;  
-font-family: 'PingFang';
-color: black;
-}
-.HsuanBread a {
-  color: inherit;
-  text-decoration: none;
-}
-
-.HsuanBread a:hover {
-  text-decoration: underline;
-}
-
 
 .PgaeWraper {
   position: relative;
-  background-color: #fcfafb;
-  color: #b59da1;
+  background-color: f8f8f8;
+  color: #595452;
 }
 
 .PgaeWraper:before {
@@ -1238,7 +1212,7 @@ color: black;
   height: 100%;
   top: 0;
   right: 0;
-  background-color: #f8f3f5;
+  background-color: #ffffff;
 }
 
 .PgaeWrapper__inner {
@@ -1319,11 +1293,11 @@ color: black;
 }
 
 .brand-BrandCardItems {
-  color: #b59da1;
+  color: #595452;
 }
 
 .brand-BrandCardItems a {
-  color: #b59da1;
+  color: #595452;
 }
 
 .brand-BrandCardItems .brand-BrandCardItems__card:before {
@@ -1335,7 +1309,7 @@ color: black;
 }
 
 .brand-BrandCardItems .brand-BrandCardItems__inner {
-  background-color: #fcfafb;
+  background-color: #f8f8f8;
 }
 
 .brand-BrandCardItems__items {
@@ -1479,8 +1453,7 @@ color: black;
   left: 0;
   -o-object-fit: cover;
      object-fit: cover;
-  font-family: 'PingFang' ; 
-  object-fit: cover;
+  font-family: 'object-fit: cover;';
 }
 
 .brand-BrandCardItems__title {
@@ -1493,7 +1466,7 @@ color: black;
   width: 100%;
   height: 100%;
   padding-left: 25px;
-  font-family: 'PingFang' ;
+  font-family: 'PingFang';
   font-size: 30px;
   line-height: 1;
 }
@@ -1517,7 +1490,7 @@ color: black;
   padding-top: 20px;
   padding-bottom: 20px;
   color: inherit;
-  font-family: 'PingFang' ; 
+  font-family: 'PingFang';
   font-size: 13px;
   letter-spacing: 0.05em;
   line-height: 1.8;
@@ -1532,11 +1505,11 @@ color: black;
 }
 
 .brand-ProductItems {
-  color: #b59da1;
+  color: #595452;
 }
 
 .brand-ProductItems a {
-  color: #b59da1;
+  color: #595452;
   text-decoration: none;
 }
 
@@ -1655,8 +1628,7 @@ color: black;
   left: 0;
   -o-object-fit: cover;
      object-fit: cover;
-  font-family: 'PingFang' ;
-   object-fit: cover;
+  font-family: 'object-fit: cover;';
 }
 
 @media screen and (min-width: 960px) {
@@ -1687,7 +1659,7 @@ color: black;
 }
 
 .brand-ProductItems__body ._no {
-  font-family: 'PingFang' ; 
+  font-family: 'EB Garamond', serif;
   font-size: 12px;
   letter-spacing: 0.05em;
   margin-bottom: 8px;
@@ -1705,14 +1677,14 @@ color: black;
 }
 
 .brand-ProductItems__body ._name {
-  font-family: 'PingFang' ; 
+  font-family: 'PingFang';
   font-size: 15px;
   letter-spacing: 0.05em;
   margin-bottom: 8px;
 }
 
 .brand-ProductItems__body ._price {
-  font-family: 'PingFang' ; 
+  font-family: 'EB Garamond', serif;
   font-size: 14px;
   letter-spacing: 0.05em;
 }
@@ -1735,7 +1707,7 @@ color: black;
 .brand-SectionCover {
   padding-top: 80px;
   padding-bottom: 40px;
-  color: #b59da1;
+  color: #595452;
 }
 
 .brand-SectionCover .brand-SectionCover__title ._card:before {
@@ -1743,7 +1715,7 @@ color: black;
 }
 
 .brand-SectionCover .brand-SectionCover__title ._title1:after {
-  background-color: #b59da1;
+  background-color: #595452;
 }
 
 .brand-SectionCover__main {
@@ -1822,7 +1794,7 @@ color: black;
 
 .brand-SectionCover__title ._title1 {
   position: relative;
-  font-family: 'PingFang' ;
+  font-family: 'PingFang';
   font-size: 15px;
   line-height: 1;
   letter-spacing: 0.075em;
@@ -1845,7 +1817,7 @@ color: black;
   align-items: flex-end;
   justify-content: flex-start;
   flex-wrap: wrap;
-  font-family: 'PingFang' ;
+  font-family: 'PingFang';
   font-size: 65px;
   line-height: 1;
 }
@@ -1955,14 +1927,14 @@ color: black;
 }
 
 .brand-SectionCover__body ._text1 {
-  font-family: 'PingFang' ; 
+  font-family: 'PingFang';
   font-size: 22px;
   line-height: 2;
   margin-bottom: 30px;
 }
 
 .brand-SectionCover__body ._text2 {
-  font-family: 'PingFang' ; 
+  font-family: 'PingFang';
   font-size: 15px;
   line-height: 2.75;
   text-align: justify;
@@ -2020,11 +1992,11 @@ color: black;
 
 .brand-SectionProductDetail {
   padding-top: 80px;
-  color: #b59da1;
+  color: #595452;
 }
 
 .brand-SectionProductDetail a {
-  color: #b59da1;
+  color: #595452;
   text-decoration: none;
 }
 
@@ -2090,8 +2062,7 @@ color: black;
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
-  font-family: 'PingFang' ;
-   object-fit: cover;
+  font-family: 'object-fit: cover;';
 }
 
 @media screen and (max-width: 959px) {
@@ -2155,7 +2126,7 @@ color: black;
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
-  font-family: 'PingFang' ; object-fit: cover;
+  font-family: 'object-fit: cover;';
 }
 
 @media screen and (min-width: 1280px) {
@@ -2259,7 +2230,7 @@ color: black;
   justify-content: flex-start;
   position: relative;
   margin-bottom: 10px;
-  font-family: 'PingFang' ;
+  font-family: 'PingFang';
   font-size: 20px;
   line-height: 1;
   letter-spacing: 0.075em;
@@ -2279,7 +2250,7 @@ color: black;
   height: 1px;
   left: 0;
   bottom: 0;
-  background-color: #b59da1;
+  background-color: #595452;
 }
 
 .brand-SectionProductDetail__heading ._name {
@@ -2306,7 +2277,7 @@ color: black;
 
 .brand-SectionProductDetail__heading ._title {
   margin-bottom: 60px;
-  font-family: 'PingFang' ; 
+  font-family: 'PingFang';
   font-size: 20px;
   line-height: 2;
   letter-spacing: 0.1em;
@@ -2352,7 +2323,7 @@ color: black;
   width: 108px;
   flex-shrink: 0;
   padding-right: 20px;
-  font-family: 'PingFang' ;
+  font-family: 'PingFang';
   font-size: 15px;
   letter-spacing: 0.05em;
   line-height: 20px;
@@ -2387,7 +2358,7 @@ color: black;
 }
 
 .brand-SectionProductDetail__external .ButtonA {
-  background: #F8F3F5;
+  background: #ffffff;
 }
 
 @media screen and (min-width: 960px) {
@@ -2470,15 +2441,15 @@ color: black;
   width: 100%;
   height: 1166px;
   position: relative;
-  background-color: #f8f3f5;
+  background-color: #ffffff;
 }
 
 .top-BrandTile.top-BrandTile--lilac {
-  background-color: #f8f8f8;
+  background-color: #ffffff;
 }
 
 .top-BrandTile.top-BrandTile--beige {
-  background-color: #fcf6f3;
+  background-color: #ffffff;
 }
 
 .top-BrandTile.top-BrandTile--lilac + .top-BrandTile.top-BrandTile--beige:before {
@@ -2488,7 +2459,7 @@ color: black;
   width: 100%;
   height: 200px;
   top: -100px;
-  background-image: linear-gradient(to bottom, #f8f3f5 0%, #fcf6f3 100%);
+  background-image: linear-gradient(to bottom, #ffffff 0%, #ffffff 100%);
 }
 
 .top-BrandTile.top-BrandTile--beige + .top-BrandTile.top-BrandTile--lilac:before {
@@ -2498,7 +2469,7 @@ color: black;
   width: 100%;
   height: 200px;
   top: -100px;
-  background-image: linear-gradient(to bottom, #fcf6f3 0%, #f8f3f5 100%);
+  background-image: linear-gradient(to bottom, #ffffff 0%, #ffffff 100%);
 }
 
 @media screen and (max-width: 959px) {
@@ -2605,7 +2576,7 @@ color: black;
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
-  font-family: 'PingFang' ; object-fit: cover;
+  font-family: 'object-fit: cover;';
 }
 
 .top-BrandTile.top-BrandTile--lilac .top-BrandTile__photo ._inner {
@@ -2661,8 +2632,8 @@ color: black;
 .top-BrandTile__body ._inner {
   position: relative;
   width: 100%;
-  font-family: 'PingFang' ;
-  color: #b59da1;
+  font-family: 'PingFang';
+  color: #595452;
 }
 
 .top-BrandTile__body ._inner ._title1 {
@@ -2682,7 +2653,7 @@ color: black;
   height: 1px;
   left: 0;
   bottom: 0;
-  background-color: #b59da1;
+  background-color: #595452;
 }
 
 .top-BrandTile__body ._inner ._title2 {
@@ -2702,11 +2673,11 @@ color: black;
   line-height: 2.75;
   margin-bottom: 70px;
   text-align: justify;
-  font-family: 'PingFang' ; 
+  font-family: 'PingFang';
 }
 
 .top-BrandTile__body ._inner ._title_ja {
-  font-family: 'PingFang' ; 
+  font-family: 'PingFang';
   margin-bottom: 35px;
   font-size: 24px;
   letter-spacing: 0.125em;
@@ -2714,7 +2685,7 @@ color: black;
 }
 
 .top-BrandTile__body ._inner ._text_ja {
-  font-family: 'PingFang' ; 
+  font-family: 'PingFang';
   margin-bottom: 70px;
   font-size: 15px;
   letter-spacing: 0.1em;
@@ -2724,37 +2695,37 @@ color: black;
 .top-BrandTile__body ._inner .ButtonA {
   margin-left: 0;
 }
-
+/* 育鬍滋養 */
 .top-BrandTile.top-BrandTile--lilac .top-BrandTile__body ._inner {
-  color: #b59da1;
+  color: #595452;
 }
 
 .top-BrandTile.top-BrandTile--lilac .top-BrandTile__body ._inner ._title1:after {
-  background-color: #b59da1;
+  background-color: #595452;
 }
-
+/* 靠左的more按鈕 */
 .top-BrandTile.top-BrandTile--lilac .top-BrandTile__body ._inner .ButtonA {
-  color: #b59da1;
+  color: #595452;
 }
 
 .top-BrandTile.top-BrandTile--lilac .top-BrandTile__body ._inner .ButtonA span:before, .top-BrandTile.top-BrandTile--lilac .top-BrandTile__body ._inner .ButtonA span:after {
-  background-color: #b59da1;
+  background-color: #595452;
 }
 
 .top-BrandTile.top-BrandTile--beige .top-BrandTile__body ._inner {
-  color: #af9f8d;
+  color: #A69981;
 }
 
 .top-BrandTile.top-BrandTile--beige .top-BrandTile__body ._inner ._title1:after {
-  background-color: #af9f8d;
+  background-color: #A69981;
 }
-
+/* 靠右的more按鈕 */
 .top-BrandTile.top-BrandTile--beige .top-BrandTile__body ._inner .ButtonA {
-  color: #af9f8d;
+  color: #A69981;
 }
 
 .top-BrandTile.top-BrandTile--beige .top-BrandTile__body ._inner .ButtonA span:before, .top-BrandTile.top-BrandTile--beige .top-BrandTile__body ._inner .ButtonA span:after {
-  background-color: #af9f8d;
+  background-color: #A69981;
 }
 
 @media screen and (min-width: 960px) {
@@ -2787,10 +2758,10 @@ color: black;
     margin-right: auto;
   }
   .top-BrandTile.top-BrandTile--lilac .top-BrandTile__body {
-    background-color: #f8f3f5;
+    background-color: #ffffff;
   }
   .top-BrandTile.top-BrandTile--beige .top-BrandTile__body {
-    background-color: #fcf6f3;
+    background-color: #ffffff;
   }
 }
 
@@ -2817,7 +2788,7 @@ color: black;
     line-height: 2.2;
   }
   .top-BrandTile__body ._inner ._title_ja {
-    font-family: 'PingFang' ; 
+    font-family: 'PingFang';
     margin-bottom: 20px;
     font-size: 20px;
     line-height: 1.8;
@@ -2834,7 +2805,7 @@ color: black;
   height: 100%;
   position: relative;
   overflow: hidden;
-  background-color: #f8f3f5;
+  background-color: #ffffff;
 }
 
 @media screen\0 {
@@ -2961,9 +2932,7 @@ color: black;
      object-fit: cover;
   -o-object-position: center right;
      object-position: center right;
-  font-family: 'PingFang' ;
-  object-fit: cover; 
-  object-position: center right;
+  font-family: 'object-fit: cover; object-position: center right;';
 }
 
 @media screen and (min-width: 960px) {
@@ -2987,7 +2956,7 @@ color: black;
   height: calc(100% - 280px);
   top: 150px;
   right: 0;
-  background-color: #fcfafb;
+  background-color: f8f8f8;
 }
 
 @media (min-width: 1600px) {
@@ -3028,7 +2997,7 @@ color: black;
   left: 0;
   right: 0;
   text-align: center;
-  font-family: 'PingFang' ;
+  font-family: 'PingFang';
   color: #ffffff;
   font-size: 30.5vw;
   line-height: 1;
@@ -3079,7 +3048,7 @@ color: black;
     content: '';
     position: absolute;
     display: block;
-    background-color: #f8f3f5;
+    background-color: #ffffff;
     top: 0;
     right: 0;
     width: 37.53846%;
@@ -3098,7 +3067,7 @@ color: black;
     content: '';
     position: absolute;
     display: block;
-    background-color: #f8f3f5;
+    background-color: #ffffff;
     top: 0;
     right: 0;
     width: 37.53846%;
@@ -3120,8 +3089,8 @@ color: black;
 }
 
 .top-MainVisualCover__copy ._text1 {
-  color: #b59da1;
-  font-family: 'PingFang' ;
+  color: #595452;
+  font-family: 'PingFang';
   font-size: 80px;
   line-height: 1.1;
   margin-bottom: 40px;
@@ -3136,8 +3105,8 @@ color: black;
 }
 
 .top-MainVisualCover__copy ._text2 {
-  font-family: 'PingFang' ; 
-  color: #b59da1;
+  font-family: 'PingFang';
+  color: #595452;
   font-size: 14px;
   letter-spacing: 0.05em;
   line-height: 2.75;
@@ -3203,7 +3172,7 @@ color: black;
 .top-MainVisualCover__navi ._sns ul li svg {
   height: 23px;
   width: 23px;
-  fill: #b59da1;
+  fill: #595452;
 }
 
 .top-MainVisualCover__navi ._sns ul li:last-child {
@@ -3211,12 +3180,12 @@ color: black;
 }
 
 .top-MainVisualCover__navi ._sns ul li a {
-  color: #b59da1;
+  color: #595452;
   text-decoration: none;
 }
 
 .top-MainVisualCover__navi ._navi ul li {
-  font-family: 'PingFang' ;
+  font-family: 'PingFang';
   font-size: 16px;
   letter-spacing: 0.1em;
   margin-bottom: 20px;
@@ -3228,7 +3197,7 @@ color: black;
 }
 
 .top-MainVisualCover__navi ._navi ul li a {
-  color: #b59da1;
+  color: #595452;
   text-decoration: none;
 }
 
@@ -3259,37 +3228,48 @@ body main {
 }
 
 body.is-color-beige {
-  color: #af9f8d;
+  color: #A69981;
 }
 
 body.is-color-beige a {
-  color: #af9f8d;
+  color: #A69981;
 }
 
+body.is-color-beige .header-Main {
+  color: #A69981;
+}
+
+body.is-color-beige .header-Main a {
+  color: #A69981;
+}
+
+body.is-color-beige .header-Main .header-Main__right:before {
+  background-color: #A69981;
+}
 
 body.is-color-beige .PgaeWraper {
   background-color: #fdfcfa;
-  color: #af9f8d;
+  color: #A69981;
 }
 
 body.is-color-beige .PgaeWraper:before {
-  background-color: #fcf6f3;
+  background-color: #ffffff;
 }
 
 body.is-color-beige .Breadcrumb {
-  color: #af9f8d;
+  color: #A69981;
 }
 
 body.is-color-beige .Breadcrumb a {
-  color: #af9f8d;
+  color: #A69981;
 }
 
 body.is-color-beige .Breadcrumb .Breadcrumb__list li:before, body.is-color-beige .Breadcrumb .Breadcrumb__list li:after {
-  background-color: #af9f8d;
+  background-color: #A69981;
 }
 
 body.is-color-beige .brand-SectionCover {
-  color: #af9f8d;
+  color: #A69981;
 }
 
 body.is-color-beige .brand-SectionCover .brand-SectionCover__title ._card:before {
@@ -3297,15 +3277,15 @@ body.is-color-beige .brand-SectionCover .brand-SectionCover__title ._card:before
 }
 
 body.is-color-beige .brand-SectionCover .brand-SectionCover__title ._title1:after {
-  background-color: #af9f8d;
+  background-color: #A69981;
 }
 
 body.is-color-beige .brand-SectionProductDetail {
-  color: #af9f8d;
+  color: #A69981;
 }
 
 body.is-color-beige .brand-SectionProductDetail a {
-  color: #af9f8d;
+  color: #A69981;
 }
 
 body.is-color-beige .brand-SectionProductDetail .brand-SectionProductDetail__slider {
@@ -3321,11 +3301,11 @@ body.is-color-beige .brand-SectionProductDetail .brand-SectionProductDetail__thu
 }
 
 body.is-color-beige .brand-ProductItems {
-  color: #af9f8d;
+  color: #A69981;
 }
 
 body.is-color-beige .brand-ProductItems a {
-  color: #af9f8d;
+  color: #A69981;
   text-decoration: none;
 }
 
@@ -3338,11 +3318,11 @@ body.is-color-beige .brand-ProductItems .brand-ProductItems__image:after {
 }
 
 body.is-color-beige .brand-BrandCardItems {
-  color: #af9f8d;
+  color: #A69981;
 }
 
 body.is-color-beige .brand-BrandCardItems a {
-  color: #af9f8d;
+  color: #A69981;
 }
 
 body.is-color-beige .brand-BrandCardItems .brand-BrandCardItems__card:before {
@@ -3357,7 +3337,19 @@ body.is-color-beige .brand-BrandCardItems .brand-BrandCardItems__inner {
   background-color: #fdfcfa;
 }
 
+body.is-color-beige .footer-Main {
+  background-color: #A69981;
+}
 
+body.is-color-beige .footer-Main .footer-Main__navi1 ul li span {
+  background-color: #A69981;
+}
+
+@media screen and (max-width: 959px) {
+  body.is-color-beige .footer-Main .footer-Main__navi2 ._title {
+    color: #e7dfd6;
+  }
+}
 
 /*************************
  *  レイアウト
@@ -3367,13 +3359,13 @@ body.is-color-beige .brand-BrandCardItems .brand-BrandCardItems__inner {
     content: '';
     display: block;
     height: 180px;
-    background-color: #f8f3f5;
+    background-color: #ffffff;
   }
   .is-color-beige .brandItems:after {
     content: '';
     display: block;
     height: 180px;
-    background-color: #fcf6f3;
+    background-color: #ffffff;
   }
 }
 
@@ -3533,9 +3525,9 @@ body.is-color-beige .brand-BrandCardItems .brand-BrandCardItems__inner {
 .companyMessage__title {
   margin-bottom: 50px;
   text-align: center;
-  font-family: 'PingFang' ;
+  font-family: 'PingFang';
   font-size: 30px;
-  color: #B59DA1;
+  color: #595452;
 }
 
 @media screen and (max-width: 559px) {
@@ -3546,7 +3538,7 @@ body.is-color-beige .brand-BrandCardItems .brand-BrandCardItems__inner {
 }
 
 .companyMessage__body {
-  font-family: 'PingFang' ; 
+  font-family: 'PingFang';
 }
 
 .companyMessage__body p {
@@ -3555,7 +3547,7 @@ body.is-color-beige .brand-BrandCardItems .brand-BrandCardItems__inner {
   line-height: 3;
   letter-spacing: 0.100em;
   text-align: justify;
-  color: #B59DA1;
+  color: #595452;
 }
 
 .companyMessage__body .sign {
@@ -3580,9 +3572,9 @@ body.is-color-beige .brand-BrandCardItems .brand-BrandCardItems__inner {
 .companyOutline__title {
   margin-bottom: 65px;
   text-align: center;
-  font-family: 'PingFang' ;
+  font-family: 'PingFang';
   font-size: 30px;
-  color: #B59DA1;
+  color: #595452;
 }
 
 @media screen and (max-width: 559px) {
@@ -3593,7 +3585,7 @@ body.is-color-beige .brand-BrandCardItems .brand-BrandCardItems__inner {
 }
 
 .companyOutline__body {
-  font-family: 'PingFang' ; 
+  font-family: 'PingFang';
 }
 
 .companyOutline__body table {
@@ -3613,7 +3605,7 @@ body.is-color-beige .brand-BrandCardItems .brand-BrandCardItems__inner {
   font-size: 15px;
   line-height: 1.95;
   letter-spacing: 0.125em;
-  color: #B59DA1;
+  color: #595452;
 }
 
 .companyOutline__body th {
@@ -3659,9 +3651,9 @@ body.is-color-beige .brand-BrandCardItems .brand-BrandCardItems__inner {
 .companyAccess__title {
   margin-bottom: 80px;
   text-align: center;
-  font-family: 'PingFang' ;
+  font-family: 'PingFang';
   font-size: 30px;
-  color: #B59DA1;
+  color: #595452;
 }
 
 @media screen and (max-width: 559px) {
@@ -3900,7 +3892,7 @@ body.is-color-beige .brand-BrandCardItems .brand-BrandCardItems__inner {
 }
 
 .contactForm label._radioLabel input[type=radio]:checked + span {
-  border: 2px solid #AF9F8D;
+  border: 2px solid #A69981;
 }
 
 .contactForm label._radioLabel input[type=radio]:checked + span:before {
@@ -3914,7 +3906,7 @@ body.is-color-beige .brand-BrandCardItems .brand-BrandCardItems__inner {
   width: 10px;
   height: 10px;
   border-radius: 50%;
-  background-color: #AF9F8D;
+  background-color: #A69981;
 }
 
 .contactForm label._checkLabel {
@@ -3949,7 +3941,7 @@ body.is-color-beige .brand-BrandCardItems .brand-BrandCardItems__inner {
 }
 
 .contactForm input[type=checkbox]:checked + label._checkLabel span {
-  background-color: #AF9F8D;
+  background-color: #A69981;
 }
 
 .contactForm input[type=checkbox] {
@@ -3993,9 +3985,9 @@ body.is-color-beige .brand-BrandCardItems .brand-BrandCardItems__inner {
 .contactForm__title {
   margin-bottom: 70px;
   text-align: center;
-  font-family: 'PingFang' ;
+  font-family: 'PingFang';
   font-size: 30px;
-  color: #af9f8d;
+  color: #A69981;
 }
 
 @media screen and (max-width: 559px) {
@@ -4017,7 +4009,7 @@ body.is-color-beige .brand-BrandCardItems .brand-BrandCardItems__inner {
   align-items: center;
   font-size: 20px;
   color: #CDBDAB;
-  font-family: 'PingFang' ; 
+  font-family: 'PingFang';
 }
 
 .contactForm__nav li span {
@@ -4077,12 +4069,12 @@ body.is-color-beige .brand-BrandCardItems .brand-BrandCardItems__inner {
   font-size: 15px;
   line-height: 2.4;
   letter-spacing: 0.125em;
-  font-family: 'PingFang' ; 
-  color: #AF9F8D;
+  font-family: 'PingFang';
+  color: #A69981;
 }
 
 .contactForm__lead .required {
-  color: #9c27c0;
+  color: #C0272D;
 }
 
 @media screen and (max-width: 559px) {
@@ -4114,7 +4106,7 @@ body.is-color-beige .brand-BrandCardItems .brand-BrandCardItems__inner {
 
 .contactForm__formInputs dt .required {
   font-size: 14px;
-  color: #c07127;
+  color: #C0272D;
   vertical-align: text-top;
 }
 
@@ -4174,7 +4166,7 @@ body.is-color-beige .brand-BrandCardItems .brand-BrandCardItems__inner {
 }
 
 .contactForm__agree a:link, .contactForm__agree a:visited {
-  color: #AF9F8D;
+  color: #A69981;
 }
 
 .contactForm__agree a:hover, .contactForm__agree a:active {
@@ -4200,7 +4192,7 @@ body.is-color-beige .brand-BrandCardItems .brand-BrandCardItems__inner {
 }
 
 .contactForm__submit a.back {
-  color: #AF9F8D;
+  color: #A69981;
   font-size: 14px;
 }
 
@@ -4259,7 +4251,7 @@ body.is-color-beige .brand-BrandCardItems .brand-BrandCardItems__inner {
   margin-bottom: 85px;
   line-height: 1;
   font-size: 149px;
-  font-family: 'PingFang' ;
+  font-family: 'PingFang';
 }
 
 .contactForm__complete ._lead {
@@ -4301,7 +4293,7 @@ body.is-color-beige .brand-BrandCardItems .brand-BrandCardItems__inner {
 }
 
 .contactForm__tel ._title span {
-  font-family: 'PingFang' ; 
+  font-family: 'PingFang';
   display: inline-block;
   padding: 0 35px;
   font-size: 20px;
@@ -4410,13 +4402,105 @@ body.is-color-beige .brand-BrandCardItems .brand-BrandCardItems__inner {
   }
 }
 
+/*************************
+ *  ヘッダー
+ **************************/
+body.page-top .header-Spacer {
+  height: 0;
+}
+
+@media (min-width: 1600px) {
+  body.page-top .header-Main.is-top .header-Main__left.header-Main__left {
+    left: calc(50% - 750px);
+  }
+}
+
+@media screen and (min-width: 960px) {
+  body.page-top .header-Main.is-top {
+    position: absolute;
+    height: 150px;
+  }
+  body.page-top .header-Main.is-top .header-Main__left {
+    height: 150px;
+    left: 80px;
+    transition: transform 0.3s;
+  }
+  body.page-top .header-Main.is-top .header-Main__left a._name ._name-1 {
+    font-size: 35px;
+  }
+  body.page-top .header-Main.is-top .header-Main__left a._name ._name-2 {
+    font-size: 17px;
+  }
+  body.page-top .header-Main.is-middle .header-Main__left {
+    transition: transform 0.3s;
+  }
+}
+
+@media screen and (max-width: 959px) {
+  body.page-top .header-Main.is-top {
+    background-color: rgba(255, 255, 255, 0);
+  }
+  body.page-top .header-Main.is-top .header-Main__left {
+    opacity: 0;
+  }
+}
+
+/*************************
+ *  ヘッダーナビ
+ **************************/
+@media screen and (min-width: 960px) {
+  body.page-top .header-Main.is-top .header-Main__right {
+    opacity: 0;
+    transform: translateY(-100%);
+  }
+  body.page-top .header-Main.is-middle .header-Main__right {
+    transform: translateY(0);
+  }
+}
+
+@media screen and (max-width: 959px) {
+  body.page-top .header-Main.is-top .header-Main__right {
+    opacity: 0;
+  }
+}
 
 
+@media screen and (max-width: 959px) {
+  body.page-top .header-Main.is-top .header-NaviButton span:nth-child(1),
+  body.page-top .header-Main.is-top .header-NaviButton span:nth-child(2),
+  body.page-top .header-Main.is-top .header-NaviButton span:nth-child(3) {
+    background-color: #ffffff;
+  }
+  body.page-top .header-Main.is-top.is-navi_opened .header-Main__left {
+    opacity: 1;
+  }
+}
+
+.anchor {
+  display: block;
+  position: relative;
+  top: -110px;
+  height: 0px;
+}
 
 @media screen and (max-width: 559px) {
   .anchor {
     top: -16vw;
   }
+}
+
+.replace {
+  position: absolute;
+  overflow: hidden;
+  height: 1px;
+  width: 1px;
+  top: 50%;
+  padding: 0;
+  margin: 0 auto;
+  clip: rect(1px 1px 1px 1px);
+  clip: rect(1px, 1px, 1px, 1px);
+  -webkit-clip-path: inset(0px 0px 99.9% 99.9%);
+  clip-path: inset(0px 0px 99.9% 99.9%);
 }
 
 @media screen and (min-width: 560px) {
@@ -4458,29 +4542,112 @@ body.is-color-beige .brand-BrandCardItems .brand-BrandCardItems__inner {
 .break_line {
   display: inline-block;
 }
-				
-/* .en-finished{
-  opacity: 1; visibility: inherit;
-} 
-.ja .typesquare_option{
-opacity: 1; visibility: inherit;
+.ml6 .text-wrapper {
+  position: relative;
+  display: inline-block;
+  padding-top: 0.2em;
+  padding-right: 0.05em;
+  padding-bottom: 0.1em;
+  overflow: hidden;
 }
-.top-BrandTile__photo{
-  opacity: 1; visibility: inherit; transform: translate(0px, 0px);
+.ml6 .text-wrapper {
+  position: relative;
+  display: inline-block;
+  padding-top: 0.2em;
+  padding-right: 0.05em;
+  padding-bottom: 0.1em;
+  overflow: hidden;
 }
-._title1{
-  opacity: 1; visibility: inherit; transform: translate(0px, 0px);
+.PgaeWraper {
+  position: relative;
+  background-color:#f8f8f8;
+  /* color: #b11515; */
 }
 
-._title2{
- opacity: 1; visibility: inherit; transform: translate(0px, 0px);
+
+.PgaeWraper:before {
+  content: '';
+  display: block;
+  position: absolute;
+  width: 37.5%;
+  height: 100%;
+  top: 0;
+  right: 0;
+  background-color:#f8f8f8;
 }
-._text .typesquare_option{
-  opacity: 1; visibility: inherit; transform: translate(0px, 0px);
+
+.PgaeWrapper__inner {
+  position: relative;
 }
-.ButtonA{
-  opacity: 1; visibility: inherit;
+.SectionTile {
+  position: relative;
+  padding-top: 80px;
+  padding-bottom: 80px;
 }
-.top-BrandTile__photo{
-  opacity: 1; visibility: inherit; transform: translate(0px, 0px);
+
+.SectionTile .TitleA {
+  margin-bottom: 40px;
+}
+
+.SectionTile .TitleA:last-child {
+  margin-bottom: 0;
 } */
+
+@media screen and (max-width: 559px) {
+  .SectionTile {
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
+  .Breadcrumb + .SectionTile {
+    padding-top: 40px;
+  }
+}
+
+.SectionTile__container {
+  position: relative;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+  max-width: 1200px;
+}
+
+@media screen and (min-width: 960px) and (max-width: 1279px) {
+  .SectionTile__container {
+    max-width: initial;
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+}
+
+@media screen and (min-width: 560px) and (max-width: 959px) {
+  .SectionTile__container {
+    max-width: initial;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+}
+
+@media screen and (max-width: 559px) {
+  .SectionTile__container {
+    max-width: initial;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+}
+
+.SectionTile__block {
+  margin-bottom: 80px;
+}
+
+.SectionTile__block:last-child {
+  margin-bottom: 0;
+}
+
+@media screen and (max-width: 559px) {
+  .SectionTile__block {
+    margin-bottom: 40px;
+  }
+  .SectionTile__block:last-child {
+    margin-bottom: 0;
+  }
+}
