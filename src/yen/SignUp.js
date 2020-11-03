@@ -12,7 +12,7 @@ function SignUp(props) {
             
             <div className="signUpArea">
 
-              <div className="logTittle">
+              <div className="signTittle">
                 註冊新帳號
               </div>
 
@@ -27,25 +27,26 @@ function SignUp(props) {
                 <div className="d-flex justify-content-center">
                   <input className="signUpInput" type="email"></input>
                 </div>
+
                 <div className="signUpText">手機</div>
                 <div className="d-flex justify-content-center">
                   <input className="signUpInput" type="phone"></input>
                 </div>
+
                 <div className="signUpText">密碼</div>
                 <div className="d-flex justify-content-center">
                   <input className="signUpInput" type="password"></input>
                 </div>
+
                 <div className="signUpText">確認密碼</div>
                 <div className="d-flex justify-content-center">
                   <input className="signUpInput" type="password"></input>
                 </div>
 
               </div>
-
-             
+              
               <a href="" className="singUpButton d-flex justify-content-center align-items-center">完成</a>
               
-               
             </div>
 
           </div>
