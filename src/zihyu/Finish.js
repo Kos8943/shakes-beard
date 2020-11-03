@@ -19,7 +19,7 @@ class Class_Finish extends React.Component
                   <div className="lineTop"></div>
                   <div className="lineDown"></div>
                   <div><img className="openbox_Img" src={img} /></div>
-                  <div className="Finish_test">謝謝您的訂購！禮盒已加入購物車</div>
+                  <div className="Finish_text">謝謝您的訂購！禮盒已加入購物車</div>
 
                   
                 </div>
