@@ -22,11 +22,11 @@ class Class_Color extends React.Component
                   <div className="lineDown"></div>
 
                   <div><img className="color_boxImg" src={img_box} /></div>
-                  <button className="color_button"></button>
-                  <button className="color_button"></button>
-                  <button className="color_button"></button>
-                  <button className="color_button"></button>
-                  <button className="color_button"></button>
+                  <button className="color_button1"></button>
+                  <button className="color_button2"></button>
+                  <button className="color_button3"></button>
+                  <button className="color_button4"></button>
+                  <button className="color_button5"></button>
                   <div className="message_card">留言小卡內容：</div>
                   <input className="message"></input>
 
