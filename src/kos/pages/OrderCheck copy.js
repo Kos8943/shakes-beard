@@ -57,7 +57,7 @@ function OrderCheck(props) {
   const display = (
     <>
       <div className="cartItem d-xl-flex">
-                        <img className="itemImg" srt={img}></img>
+                        <img className="itemImg" src=""></img>
                         <div className="itemName my-auto">{name}</div>
                         <select className="selectHigh">
                             <option value="1">{type}</option>

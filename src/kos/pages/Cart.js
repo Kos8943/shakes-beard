@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import CartCss from '../styles/CartCss.scss'
 import Delete from '../icon/delete.svg'
-import Cuf1 from '../img/1-3.jpg'
+// import Cuf1 from '../img/1-3.jpg'
 import Trash from '../icon/trash.svg'
 import WebCartCard from '../components/WebCartCard'
 import PhoneCartCard from '../components/PhoneCartCard'

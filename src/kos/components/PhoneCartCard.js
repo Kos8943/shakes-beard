@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react'
-import Cuf1 from '../img/1-3.jpg'
+// import Cuf1 from '../img/1-3.jpg'
 import Trash from '../icon/trash.svg'
 
 function PhoneCartCard(props) {
@@ -8,7 +8,7 @@ function PhoneCartCard(props) {
     return (
         
          <>
-            <div className="cartItemPhone">
+            {/* <div className="cartItemPhone">
                         <img className="itemImg" src={Cuf1}></img>
                         <div className="itemName">Ritmo di vita 陀飛輪袖扣</div>
                         <div className="KosProjectType">經典黑</div>
@@ -21,8 +21,8 @@ function PhoneCartCard(props) {
                             <div className="subtotal">NT$2,882</div>
                         </div>
                         
-                        {/* <img src={Delete} className="deleteIcon"></img> */}
-            </div>
+                        <img src={Delete} className="deleteIcon"></img>
+            </div> */}
         </>
     )
 }
