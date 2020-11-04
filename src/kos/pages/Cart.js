@@ -3,8 +3,9 @@ import CartCss from '../styles/CartCss.scss'
 import Delete from '../icon/delete.svg'
 import Cuf1 from '../img/1-3.jpg'
 import Trash from '../icon/trash.svg'
+import WebCartCard from '../components/WebCartCard'
 
-function Cart() { 
+function Cart(props) { 
         return (
             <>
                 <div className="cartArea">
@@ -28,8 +29,8 @@ function Cart() {
                 </div>
                 
                 <div>
-
-                    <div className="cartItem d-xl-flex">
+                    <WebCartCard />
+                    {/* <div className="cartItem d-xl-flex">
                         <img className="itemImg" src={Cuf1}></img>
                         <div className="itemName my-auto">Ritmo di vita 陀飛輪袖扣</div>
                         <select className="selectHigh">
@@ -45,7 +46,7 @@ function Cart() {
                         <span className="unitPrice">NT$1,441</span>
                         <span className="subtotal">NT$2,882</span>
                         <img src={Delete} className="deleteIcon"></img>
-                    </div>
+                    </div> */}
 
                     <div className="cartItemPhone">
                         <img className="itemImg" src={Cuf1}></img>
