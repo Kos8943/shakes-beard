@@ -5,7 +5,7 @@ import CatesAside from '../components/CatesAside'
 import Cards from '../components/Cards'
 import Cates from '../components/Cates'
 import Banner from '../components/Banner'
-import { Link } from 'react-router-dom'
+import '../styles/shops.scss'
 
 function ShopList(props) {
   console.log('Shoplist', props)
@@ -18,7 +18,7 @@ function ShopList(props) {
             <CatesAside />
           </div>
           <div className="col-12 col-sm-12 col-md-9 col-lg-10">
-            <Banner />
+            {/* <Banner /> */}
             <Cates />
             <div className="cardGroup">
               <Cards />

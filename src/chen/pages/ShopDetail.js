@@ -6,24 +6,25 @@ import InfoSection from '../components/InfoSection'
 import Description from '../components/Description'
 import Recommend from '../components/Recommend'
 import { Table,Tabs,Tab } from 'react-bootstrap'  
+import '../styles/shops.scss'
 
 function ShopDetail(props) {
   console.log('ShopDetail', props)
   return (
     <>
       <Breadcrumb />
-      <div className="container">
+      <div className="container shopdetail">
         <div className="row">
-          <div className="col-12 col-sm-12 col-md-3 col-lg-3">
+          <div className="col-12 col-sm-12 col-md-3 col-lg-2">
             <CatesAside />
           </div>
-          <div className="cardGroup mb-5 col-12 col-sm-12 col-md-9 col-lg-9">
+          <div className="cardGroup mb-5 col-12 col-sm-12 col-md-9 col-lg-10">
             <InfoSection/>
           </div>
         </div>
         <div className="row">
-          <div className="col-12 col-sm-12 col-md-3 col-lg-3"></div>
-          <div className="col-12 col-sm-12 col-md-9 col-lg-9">
+          <div className="col-12 col-sm-12 col-md-3 col-lg-2"></div>
+          <div className="col-12 col-sm-12 col-md-9 col-lg-10">
               <Description/>
               <Description/>
               <strong className="d-inline-block my-2">注意事項</strong>
