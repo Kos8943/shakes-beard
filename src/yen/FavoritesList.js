@@ -1,7 +1,7 @@
 import React from 'react'
 import FavoritesListCss from './styles/FavoritesListCss.scss'
 import Delete from '../kos/icon/delete.svg'
-import Cuf1 from '../kos/img/1-3.jpg'
+// import Cuf1 from '../kos/img/1-3.jpg'
 import Trash from '../kos/icon/trash.svg'
 
 function FavoritesList(props) {
@@ -28,7 +28,7 @@ function FavoritesList(props) {
             <div className="favupdateArea">
                 <div className="favItem d-flex align-items-center ">
 
-                    <img className="favImg" src={Cuf1}></img>
+                    <img className="favImg" src="./imgs/1-3.jpg"></img>
                     <div className="favItemName">Ritmo di vita 陀飛輪袖扣</div>
                     <select className="favselectHigh">
                         <option value="1">經典黑</option>

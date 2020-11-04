@@ -5,7 +5,7 @@ import MyFooter from "./components/MyFooter";
 import { BrowserRouter as Router, Route, Link, Switch } from "react-router-dom";
 import HeroPage from "./chad/HeroPage";
 import Sid from "./Sid";
-
+import ScrollUp from 'react-scroll-up'
 
 //以下import個人頁面
 
@@ -17,7 +17,9 @@ import Project from "./hsuan/Project";
 import Cart from "./kos/pages/Cart";
 import ShopList from "./chen/pages/ShopList";
 import ShopDetail from "./chen/pages/ShopDetail";
-import Reservation from "./chen/pages/Reservation";
+import ReservationMake from "./chen/pages/ReservationMake";
+import ReservationPerson from "./chen/pages/ReservationPerson";
+import ReservationCheck from "./chen/pages/ReservationCheck";
 import NotFoundPage from "./chen/pages/NotFoundPage";
 import Func_GiftBox from "./zihyu/GiftBox";
 import Func_Budget from "./zihyu/Budget";
@@ -36,6 +38,8 @@ import Payment from "./kos/pages/Payment";
 import Paycomplete from './kos/pages/Paycomplete'
 import orderCheck from './kos/pages/OrderCheck'
 import OrderCheck from "./kos/pages/OrderCheck";
+import TopArrow from "./icon/top-arrow.jpg"
+
 
 
 function App() {
@@ -44,10 +48,13 @@ function App() {
 
     <>
    
-   
+    
 
       
         <main role="main">
+        <ScrollUp showUnder={150}>
+          <img src={TopArrow} class="scrolltotop d-lg-block d-none"></img>
+        </ScrollUp>
           <Switch>
             <Route exact path="/">
               <HeroPage />
@@ -222,8 +229,28 @@ function App() {
                 <MyFooter />
               </Route>
 
-              <Route path="/reservation">
-                <Reservation />
+              <Route path="/reservationmake">
+                <ShakesBeardNavbar />
+                <div className="footerFix">
+                  <ReservationMake />
+                </div>
+                <MyFooter />
+              </Route>
+
+              <Route path="/reservationperson">
+                <ShakesBeardNavbar />
+                <div className="footerFix">
+                  <ReservationPerson />
+                </div>
+                <MyFooter />
+              </Route>
+
+              <Route path="/reservationcheck">
+                <ShakesBeardNavbar />
+                <div className="footerFix">
+                  <ReservationCheck />
+                </div>
+                <MyFooter />
               </Route>
 
               <Route path="*">

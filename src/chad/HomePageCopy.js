@@ -34,7 +34,7 @@ function HomePageCopy() {
     return (
       <>
       
-      <body className="body">
+      <div className="body">
 
       <Router>
 
@@ -94,7 +94,7 @@ function HomePageCopy() {
 
  
  
-</body>
+</div>
 
       </>
     )
