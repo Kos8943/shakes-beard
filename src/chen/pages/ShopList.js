@@ -18,7 +18,7 @@ function ShopList(props) {
             <CatesAside />
           </div>
           <div className="col-12 col-sm-12 col-md-9 col-lg-10">
-            <Banner />
+            {/* <Banner /> */}
             <Cates />
             <div className="cardGroup">
               <Cards />
