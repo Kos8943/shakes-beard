@@ -97,26 +97,21 @@
 
 .favImg{
   height: 100%;
-  // background-color: #ccc;
+  background-color: #ccc;
   // border: 1px solid red;
 }
 
 
 .favItemName{
-  margin: 0 25px;
+  margin: 0 0 0 20px ;
   // border: 1px solid red;
-  width: 25rem;
+  width: 20rem;
+  text-align: left;
 }
 
-.favselectHigh {
-  height: 25px;
-  border-radius: 4px;
-  margin: 0 30px;
-  border-color: #2D3B72;
-}
 
 .favPrice{
-  margin: 0 25px;
+  margin: 0 50px 0 25px;
 }
 
 

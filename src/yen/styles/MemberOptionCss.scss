@@ -2,10 +2,6 @@
   font-size: 16px;
 }
 
-.thisPage{
-  color: #f25d50;
-}
-
 .leftArea {
   //   border: 1px solid red;
   margin-top: 120px;
@@ -30,12 +26,22 @@
 .option {
   margin-bottom: 40px;
   font-size: 1.25rem;
+  cursor: pointer
+}
+
+// .option:hover{
+//   color: #f25d50;
+// }
+
+.thisPage{
+  color: #f25d50;
 }
 
 .optionTittle {
   font-size: 2rem;
   margin-left: 55px;
 }
+
 
 .updateArea {
   // border: 1px solid red;
@@ -45,6 +51,14 @@
 .updateInput {
   width: 19.1875rem;
   margin: 5px 0 10px 0;
+}
+
+.birthday{
+  margin: 5px 5px 10px 0;
+}
+
+.birthdayText{
+  margin: 5px 5px 10px 0;
 }
 
 .memberCheck {
@@ -69,3 +83,4 @@
   font-weight: bold;
   border-radius: 4px;
 }
+

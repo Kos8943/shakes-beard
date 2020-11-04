@@ -29,11 +29,9 @@ import Func_Color from "./zihyu/Color";
 import Func_Finish from "./zihyu/Finish";
 import LogIn from "./yen/LogIn";
 import SignUp from "./yen/SignUp";
-import MemberUpdate from "./yen/MemberUpdate";
-import PasswordUpdate from "./yen/PasswordUpdate";
+import MemberOption from "./yen/MemberOption";
 import PreferenceSetting from "./yen/PreferenceSetting";
 import FavoritesList from "./yen/FavoritesList";
-import MemberOption from "./yen/MemberOption";
 import Payment from "./kos/pages/Payment";
 import Paycomplete from './kos/pages/Paycomplete'
 import orderCheck from './kos/pages/OrderCheck'
@@ -197,21 +195,6 @@ function App() {
               <MyFooter />
             </Route>
 
-            <Route path="/memberupdate">
-              <ShakesBeardNavbar />
-              <div className="footerFix">
-                <MemberUpdate />
-              </div>
-              <MyFooter />
-            </Route>
-
-            <Route path="/passwordupdate">
-              <ShakesBeardNavbar />
-              <div className="footerFix">
-                <PasswordUpdate />
-              </div>
-              <MyFooter />
-            </Route>
 
             <Route path="/preferencesetting">
               <ShakesBeardNavbar />
