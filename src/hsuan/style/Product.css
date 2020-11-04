@@ -2586,11 +2586,11 @@ a.ButtonA {
 }
 /* 商品圖片陰影 */
 .top-BrandTile.top-BrandTile--lilac .top-BrandTile__photo ._inner {
-  box-shadow: 70px 105px 60px rgba(156, 138, 142, 0.089);
+  box-shadow: 70px 90px 30px rgba(156, 138, 142, 0.089);
 }
 
 .top-BrandTile.top-BrandTile--beige .top-BrandTile__photo ._inner {
-  box-shadow: 70px 105px 60px rgba(170, 160, 149, 0.3);
+  box-shadow: 70px 90px 30px rgba(156, 138, 142, 0.089);
 }
 
 @media screen and (min-width: 960px) {

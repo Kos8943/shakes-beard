@@ -78,10 +78,10 @@ function Project1() {
         <Script />
         <Breadcrumb className="HsuanBread">
             <Breadcrumb.Item href="#">首頁</Breadcrumb.Item>
-            <Breadcrumb.Item href="https://getbootstrap.com/docs/4.0/components/breadcrumb/">
+            <Breadcrumb.Item href="http://localhost:3000/project1">
               服飾配件
             </Breadcrumb.Item>
-            <Breadcrumb.Item href="https://getbootstrap.com/docs/4.0/components/breadcrumb/">
+            <Breadcrumb.Item href="http://localhost:3000/project1">
               領帶/領結
             </Breadcrumb.Item>
             <Breadcrumb.Item active>Data</Breadcrumb.Item>
