@@ -93,6 +93,10 @@
       justify-content: end;
   }
 
+  .sorts>.dropdown>button{
+    margin-top: 0;
+  }
+
   .sort {
     border: 1px solid #a69981;
     background-color: #fffffd;
@@ -101,6 +105,13 @@
   // 商家列表: 商家卡片
   .shopcard {
     margin-top: 15px;
+    margin-bottom: 15px;
+    margin-right: 3px;
+    // box-shadow: 5px 5px 0 rgba(0,0,0,0.2);
+  }
+
+  .shopcard>.card-img-top{
+    border-radius: 0;
   }
 
   .cardGroup {
@@ -135,6 +146,10 @@
     margin: 12px;
   }  
 
+  .page-item>a:link, .page-item>a:visited {
+    color: #ffffff;
+  }
+
   
   // 商家詳細: 預約按鈕
   .goReserve {
@@ -147,6 +162,11 @@
 
   .goReserve:hover {
     background-color: #007bff;
+    color: white;
+  }
+
+  .goReserve:link, 
+  .goReserve:visited{
     color: white;
   }
 

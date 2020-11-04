@@ -1,5 +1,4 @@
 import React from 'react'
-import '../styles/shops.scss'
 import { Badge } from 'react-bootstrap'
 
 function Recommend(props) {

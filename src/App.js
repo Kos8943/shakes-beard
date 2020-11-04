@@ -17,7 +17,9 @@ import Project from "./hsuan/Project";
 import Cart from "./kos/pages/Cart";
 import ShopList from "./chen/pages/ShopList";
 import ShopDetail from "./chen/pages/ShopDetail";
-import Reservation from "./chen/pages/Reservation";
+import ReservationMake from "./chen/pages/ReservationMake";
+import ReservationPerson from "./chen/pages/ReservationPerson";
+import ReservationCheck from "./chen/pages/ReservationCheck";
 import NotFoundPage from "./chen/pages/NotFoundPage";
 import Func_GiftBox from "./zihyu/GiftBox";
 import Func_Budget from "./zihyu/Budget";
@@ -222,8 +224,28 @@ function App() {
                 <MyFooter />
               </Route>
 
-              <Route path="/reservation">
-                <Reservation />
+              <Route path="/reservationmake">
+                <ShakesBeardNavbar />
+                <div className="footerFix">
+                  <ReservationMake />
+                </div>
+                <MyFooter />
+              </Route>
+
+              <Route path="/reservationperson">
+                <ShakesBeardNavbar />
+                <div className="footerFix">
+                  <ReservationPerson />
+                </div>
+                <MyFooter />
+              </Route>
+
+              <Route path="/reservationcheck">
+                <ShakesBeardNavbar />
+                <div className="footerFix">
+                  <ReservationCheck />
+                </div>
+                <MyFooter />
               </Route>
 
               <Route path="*">
