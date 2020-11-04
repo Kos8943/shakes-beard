@@ -2,12 +2,14 @@ import React from 'react'
 import './Style/ChooseStandCSS.css';
 import './Style/CommonCSS.css';
 import { Button } from 'react-bootstrap'
-import img_1 from './image/razor.png';
-import img_2 from './image/razor.png';
-import img_3 from './image/razor.png';
-import img_4 from './image/razor.png';
-import img_5 from './image/razor.png';
-import img_6 from './image/razor.png';
+import img_stand01 from './image/stand01.jpg';
+import img_stand02 from './image/stand02.jpg';
+import img_stand03 from './image/stand03.jpg';
+import img_stand04 from './image/stand04.jpg';
+import img_stand05 from './image/stand05.jpg';
+import img_stand06 from './image/stand06.jpg';
+
+
 
 class Class_ChooseStand extends React.Component
 {
@@ -27,37 +29,37 @@ class Class_ChooseStand extends React.Component
                   <div className="Grid">
                   
                     <div className="Item">
-                      <div><img className="ItemImg" src={img_1} /></div>
+                      <div><img className="ItemImg" src={img_stand01} /></div>
                       <div>皇家刮鬍刀</div>
                       <div>NT$ 1580</div>
                     </div>
 
                     <div className="Item">
-                      <div><img className="ItemImg" src={img_2} /></div>
+                      <div><img className="ItemImg" src={img_stand02} /></div>
                       <div>皇家刮鬍刀</div>
                       <div>NT$ 1580</div>
                     </div>
 
                     <div className="Item">
-                      <div><img className="ItemImg" src={img_3} /></div>
+                      <div><img className="ItemImg" src={img_stand03} /></div>
                       <div>皇家刮鬍刀</div>
                       <div>NT$ 1580</div>
                     </div>
                   
                     <div className="Item">
-                      <div><img className="ItemImg" src={img_4} /></div>
+                      <div><img className="ItemImg" src={img_stand04} /></div>
                       <div>皇家刮鬍刀</div>
                       <div>NT$ 1580</div>
                     </div>
 
                     <div className="Item">
-                      <div><img className="ItemImg" src={img_5} /></div>
+                      <div><img className="ItemImg" src={img_stand05} /></div>
                       <div>皇家刮鬍刀</div>
                       <div>NT$ 1580</div>
                     </div>
                     
                     <div className="Item">
-                      <div><img className="ItemImg" src={img_6} /></div>
+                      <div><img className="ItemImg" src={img_stand06} /></div>
                       <div className="Grid">
                         <div>⊙</div>
                         <div>皇家刮鬍刀</div>
