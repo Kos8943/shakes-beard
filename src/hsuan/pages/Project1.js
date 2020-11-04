@@ -95,7 +95,8 @@ function Project1() {
                   className="brand-ProductItems__item finished"
                   data-anime="fadeInUp"
                   data-anime-trigger=".brand-ProductItems"
-                  data-anime-delay="0"><ScrollAnimation animateIn='fadeIn' >
+                  data-anime-delay="0">
+                  <ScrollAnimation animateIn='fadeIn' >
                   <div className="brand-ProductItems__card">
                     <a href="../product/1" className="brand-ProductItems__image">
                        <div className="_image">

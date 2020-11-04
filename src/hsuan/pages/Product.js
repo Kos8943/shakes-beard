@@ -78,7 +78,7 @@ class Product extends React.Component {
                   data-anime-delay="2.05">
                   刮鬍修容
                 </div></ScrollAnimation>
-				{/* more的按鈕效果 */}
+				         {/* more的按鈕效果 */}
                 <a href="http://localhost:3000/project1"
                   className="ButtonA finished"
                   data-anime="fadeIn"
@@ -100,7 +100,7 @@ class Product extends React.Component {
               data-anime="addClass"
               data-anime-trigger='.top-BrandTile[data-index="2"]'
               data-anime-delay="0"
-            ></div> */}>
+            ></div> */}
             <div
               className="top-BrandTile__photo finished"
               data-anime="fadeInRight"
