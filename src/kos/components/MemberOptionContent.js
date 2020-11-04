@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react'
-import MemberOption from '../../yen/components/MemberOption'
+import MemberOption from '../../yen/MemberOption'
 
 function MemberOptionContent () {
     return(

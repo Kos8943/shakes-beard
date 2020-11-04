@@ -1,6 +1,6 @@
 import React from 'react'
-import MemberUpdateCss from './styles/MemberUpdateCss.scss'
-import MemberOption from './components/MemberOption'
+import MemberDataUpdateCss from './styles/MemberDataUpdateCss.scss'
+import MemberOption from './MemberOption'
 
 function MemberUpdate(props) {
     

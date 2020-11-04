@@ -1,13 +1,13 @@
 import React from 'react'
 
-function MemberDataTable2(props) {
-  return <>
+function MemberDataUpdateTable(props) {
+    return <>
         <div className="rightArea col-9">
             <div className="optionTittle">{props.title}</div>
             <div className="decLine"></div>
             <div className="updateArea">
-            <div>
-                    <div>會員帳號222</div>
+                <div>
+                    <div>會員帳號</div>
                     <input type="text" disabled="disabled" className="updateInput" value="xxx@gmail.com" ></input>
                     <div>姓名</div>
                     <input type="text" className="updateInput" value="王大明"></input>
@@ -34,17 +34,17 @@ function MemberDataTable2(props) {
                             <option>大安區</option>
                         </select>
                     </div>
-                    <input type="text" className="updateInput"></input> 
+                    <input type="text" className="updateInput"></input>
                 </div>
                 <button className="memberCheck">完成</button>
                 <button className="memberCancle">取消</button>
             </div>
         </div>
 
-  </>
+    </>
 }
 
-export default MemberDataTable2
+export default MemberDataUpdateTable
 
 
 

@@ -34,6 +34,7 @@ import MemberUpdate from "./yen/MemberUpdate";
 import PasswordUpdate from "./yen/PasswordUpdate";
 import PreferenceSetting from "./yen/PreferenceSetting";
 import FavoritesList from "./yen/FavoritesList";
+import MemberOption from "./yen/MemberOption";
 import Payment from "./kos/pages/Payment";
 import Paycomplete from './kos/pages/Paycomplete'
 import orderCheck from './kos/pages/OrderCheck'
@@ -46,21 +47,21 @@ function App() {
   return (
     <Router>
 
-    <>
-   
-    
+      <>
 
-      
+
+
+
         <main role="main">
-        <ScrollUp showUnder={150}>
-          <img src={TopArrow} class="scrolltotop d-lg-block d-none"></img>
-        </ScrollUp>
+          <ScrollUp showUnder={150}>
+            <img src={TopArrow} class="scrolltotop d-lg-block d-none"></img>
+          </ScrollUp>
           <Switch>
             <Route exact path="/">
               <HeroPage />
 
             </Route>
-            
+
             <Route exact path="/homepage">
               <ShakesBeardNavbar />
               <HomePage />
@@ -80,31 +81,31 @@ function App() {
             </Route>
 
             <Route path="/Path_ChooseRazor">
-            <ShakesBeardNavbar />
+              <ShakesBeardNavbar />
               <Func_ChooseRazor />
               <MyFooter />
             </Route>
 
             <Route path="/Path_ChooseBrush">
-            <ShakesBeardNavbar />
+              <ShakesBeardNavbar />
               <Func_ChooseBrush />
               <MyFooter />
             </Route>
 
             <Route path="/Path_ChooseStand">
-            <ShakesBeardNavbar />
+              <ShakesBeardNavbar />
               <Func_ChooseStand />
               <MyFooter />
             </Route>
 
             <Route path="/Path_Color">
-            <ShakesBeardNavbar />
+              <ShakesBeardNavbar />
               <Func_Color />
               <MyFooter />
             </Route>
 
             <Route path="/Path_Finish">
-            <ShakesBeardNavbar />
+              <ShakesBeardNavbar />
               <Func_Finish />
               <MyFooter />
             </Route>
@@ -120,7 +121,7 @@ function App() {
               <SignUp />
               <MyFooter />
             </Route>
-           
+
             <Route path="/Project1">
               <ShakesBeardNavbar />
               <Project1 />
@@ -132,139 +133,155 @@ function App() {
               <Project />
               <MyFooter />
             </Route>
-            
-             <Route exact path="/Product">
-                <ShakesBeardNavbar />
-                <div className="footerFix">
-                  <Product />
-                </div>
-                <MyFooter />
-              </Route>
 
-              <Route exact path="/Market">
-                <ShakesBeardNavbar />
-                <div className="footerFix">
-                  <Market />
-                </div>
-                <MyFooter />
-              </Route>
+            <Route exact path="/Product">
+              <ShakesBeardNavbar />
+              <div className="footerFix">
+                <Product />
+              </div>
+              <MyFooter />
+            </Route>
 
-              <Route path="/cart">
-                <ShakesBeardNavbar />
-                <div className="footerFix KosPadding">
-                  <Cart />
-                </div>
-                <MyFooter />
-              </Route>
+            <Route exact path="/Market">
+              <ShakesBeardNavbar />
+              <div className="footerFix">
+                <Market />
+              </div>
+              <MyFooter />
+            </Route>
 
-              <Route path="/payment">
-                <ShakesBeardNavbar />
-                <div className="footerFix KosPadding">
-                  <Payment />
-                </div>
-                <MyFooter />
-              </Route>
+            <Route path="/cart">
+              <ShakesBeardNavbar />
+              <div className="footerFix KosPadding">
+                <Cart />
+              </div>
+              <MyFooter />
+            </Route>
 
-              <Route path="/paycomplete">
-                <ShakesBeardNavbar />
-                <div className="footerFix KosPadding">
-                  <Paycomplete />
-                </div>
-                <MyFooter />
-              </Route>
+            <Route path="/payment">
+              <ShakesBeardNavbar />
+              <div className="footerFix KosPadding">
+                <Payment />
+              </div>
+              <MyFooter />
+            </Route>
 
-              <Route path="/ordercheck">
-                <ShakesBeardNavbar />
-                <div className="footerFix KosPadding">
-                  <OrderCheck />
-                </div>
-                <MyFooter />
-              </Route>
+            <Route path="/paycomplete">
+              <ShakesBeardNavbar />
+              <div className="footerFix KosPadding">
+                <Paycomplete />
+              </div>
+              <MyFooter />
+            </Route>
 
-              <Route path="/shoplist">
-                <ShakesBeardNavbar />
-                <div className="footerFix">
-                  <ShopList />
-                </div>
-                <MyFooter />
-              </Route>
+            <Route path="/ordercheck">
+              <ShakesBeardNavbar />
+              <div className="footerFix KosPadding">
+                <OrderCheck />
+              </div>
+              <MyFooter />
+            </Route>
 
-              <Route path="/shopdetail">
-                <ShakesBeardNavbar />
-                <div className="footerFix">
-                  <ShopDetail />
-                </div>
-                <MyFooter />
-              </Route>
+            <Route path="/shoplist">
+              <ShakesBeardNavbar />
+              <div className="footerFix">
+                <ShopList />
+              </div>
+              <MyFooter />
+            </Route>
 
-              <Route path="/memberupdate">
-                <ShakesBeardNavbar />
-                <div className="footerFix">
-                  <MemberUpdate />
-                </div>
-                <MyFooter />
-              </Route>
+            <Route path="/shopdetail">
+              <ShakesBeardNavbar />
+              <div className="footerFix">
+                <ShopDetail />
+              </div>
+              <MyFooter />
+            </Route>
 
-              <Route path="/passwordupdate">
-                <ShakesBeardNavbar />
-                <div className="footerFix">
-                  <PasswordUpdate />
-                </div>
-                <MyFooter />
-              </Route>
+            <Route path="/memberupdate">
+              <ShakesBeardNavbar />
+              <div className="footerFix">
+                <MemberUpdate />
+              </div>
+              <MyFooter />
+            </Route>
 
-              <Route path="/preferencesetting">
-                <ShakesBeardNavbar />
-                <div className="footerFix">
-                  <PreferenceSetting />
-                </div>
-                <MyFooter />
-              </Route>
+            <Route path="/passwordupdate">
+              <ShakesBeardNavbar />
+              <div className="footerFix">
+                <PasswordUpdate />
+              </div>
+              <MyFooter />
+            </Route>
 
-              <Route path="/favoriteslist">
-                <ShakesBeardNavbar />
-                <div className="footerFix">
-                  <FavoritesList />
-                </div>
-                <MyFooter />
-              </Route>
+            <Route path="/preferencesetting">
+              <ShakesBeardNavbar />
+              <div className="footerFix">
+                <PreferenceSetting />
+              </div>
+              <MyFooter />
+            </Route>
 
-              <Route path="/reservationmake">
-                <ShakesBeardNavbar />
-                <div className="footerFix">
-                  <ReservationMake />
-                </div>
-                <MyFooter />
-              </Route>
+            <Route path="/favoriteslist">
+              <ShakesBeardNavbar />
+              <div className="footerFix">
+                <FavoritesList />
+              </div>
+              <MyFooter />
+            </Route>
 
-              <Route path="/reservationperson">
-                <ShakesBeardNavbar />
-                <div className="footerFix">
-                  <ReservationPerson />
-                </div>
-                <MyFooter />
-              </Route>
 
-              <Route path="/reservationcheck">
-                <ShakesBeardNavbar />
-                <div className="footerFix">
-                  <ReservationCheck />
-                </div>
-                <MyFooter />
-              </Route>
 
-              <Route path="*">
-                <ShakesBeardNavbar />
-                  <div className="footerFix">
-                    <NotFoundPage />
-                  </div>
-                <MyFooter />
-              </Route>
-           
+            <Route path="/memberoption">
+              <ShakesBeardNavbar />
+              <div className="footerFix">
+                <MemberOption />
+              </div>
+              <MyFooter />
+            </Route>
+
+
+
+
+
+
+
+            <Route path="/reservationmake">
+              <ShakesBeardNavbar />
+              <div className="footerFix">
+                <ReservationMake />
+              </div>
+              <MyFooter />
+            </Route>
+
+            <Route path="/reservationperson">
+              <ShakesBeardNavbar />
+              <div className="footerFix">
+                <ReservationPerson />
+              </div>
+              <MyFooter />
+            </Route>
+
+            <Route path="/reservationcheck">
+              <ShakesBeardNavbar />
+              <div className="footerFix">
+                <ReservationCheck />
+              </div>
+              <MyFooter />
+            </Route>
+
+            <Route path="*">
+              <ShakesBeardNavbar />
+              <div className="footerFix">
+                <NotFoundPage />
+              </div>
+              <MyFooter />
+            </Route>
+
           </Switch>
         </main>
-        
-    </></Router>
+
+      </></Router>
   );
 }
 
