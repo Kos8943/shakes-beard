@@ -20,6 +20,7 @@ class Class_ChooseStand extends React.Component
       <div className="contain">
         <div className="background_white">
       
+            <div className="blueBox">
               <div className="whiteBox">
                 <div className="step">Step.4
                   <div className="Title2">選擇修容架</div>
@@ -28,46 +29,46 @@ class Class_ChooseStand extends React.Component
 
                   <div className="Grid">
                   
-                    <div className="Item">
-                      <div><img className="ItemImg" src={img_stand01} /></div>
+                    <div className="giftbox_Item">
+                      <div><img className="giftbox_ItemImg" src={img_stand01} /></div>
                       <div>皇家刮鬍刀</div>
                       <div>NT$ 1580</div>
                     </div>
 
-                    <div className="Item">
-                      <div><img className="ItemImg" src={img_stand02} /></div>
+                    <div className="giftbox_Item">
+                      <div><img className="giftbox_ItemImg" src={img_stand02} /></div>
                       <div>皇家刮鬍刀</div>
                       <div>NT$ 1580</div>
                     </div>
 
-                    <div className="Item">
-                      <div><img className="ItemImg" src={img_stand03} /></div>
+                    <div className="giftbox_Item">
+                      <div><img className="giftbox_ItemImg" src={img_stand03} /></div>
                       <div>皇家刮鬍刀</div>
                       <div>NT$ 1580</div>
                     </div>
                   
-                    <div className="Item">
-                      <div><img className="ItemImg" src={img_stand04} /></div>
+                    <div className="giftbox_Item">
+                      <div><img className="giftbox_ItemImg" src={img_stand04} /></div>
                       <div>皇家刮鬍刀</div>
                       <div>NT$ 1580</div>
                     </div>
 
-                    <div className="Item">
-                      <div><img className="ItemImg" src={img_stand05} /></div>
+                    <div className="giftbox_Item">
+                      <div><img className="giftbox_ItemImg" src={img_stand05} /></div>
                       <div>皇家刮鬍刀</div>
                       <div>NT$ 1580</div>
                     </div>
                     
-                    <div className="Item">
-                      <div><img className="ItemImg" src={img_stand06} /></div>
+                    <div className="giftbox_Item">
+                      <div><img className="giftbox_ItemImg" src={img_stand06} /></div>
                       <div className="Grid">
                         <div>⊙</div>
                         <div>皇家刮鬍刀</div>
                         </div>
                       <div>NT$ 1580</div>
-                    </div>
-
                   </div>
+
+                  
 
                   <div className="Grid">
                     <Button className="backButton" onClick=
@@ -89,11 +90,12 @@ class Class_ChooseStand extends React.Component
                     }     //React程式區間語法 (結束)
                     
                     > 下一步 </Button>
-                  </div>
+                  </div></div>
 
                   
                 </div>
               </div>
+            </div>  
         </div> 
       </div>
       

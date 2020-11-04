@@ -5,32 +5,15 @@ import bannerimg2 from './imgs/輪播圖2.jpg'
 import bannerimg3 from './imgs/輪播圖3.jpg'
 import {Button, Carousel, Card} from 'react-bootstrap'
 import giftimg from './imgs/禮物盒.jpg'
-import hot1 from './imgs/hot/hot1.jpg'
-import hot2 from './imgs/hot/hot2.jpeg'
-import hot3 from './imgs/hot/hot3.jpg'
 import hotpage from './imgs/熱銷.jpg'
 import map1 from './imgs/map1.jpg'
 import map2 from './imgs/map2.jpg'
+import HotProduct from './components/HotProduct'
 
 
 //animation
-import { bounceInLeft,} from 'react-animations'
-import Radium, {StyleRoot} from 'radium';
 import "animate.css/animate.min.css"
 import ScrollAnimation from 'react-animate-on-scroll'
-
-
-
-
-
-
-
-const styles = {
-    bounceInLeft: {
-      animation: 'x 2s',
-      animationName: Radium.keyframes(bounceInLeft, 'bounceInLeft')
-    }
-  }
 
 
 
@@ -120,85 +103,7 @@ class HomePage extends React.Component {
 
 {/* 熱門商品*/}
 
-            <div className="hot-area w-100 h-100 ">
-            <ScrollAnimation animateIn='flipInY'
-                            animateOut='flipOutY'>
-                <div className="hot-text-area"  style={styles.bounceInLeft}>
-                <h2 className="hot-title py-3">熱門商品</h2>
-                        <p className="hot-text mx-auto">精湛工藝呈現出迷人魅力。繁複的製作工序沒有令我們對工藝的要求卻步；反令我們力臻極佳品質。
-                        </p>
-                </div>
-                </ScrollAnimation>
-                <div className="hot-card-area">
-                                    <Card id="cardborder" style={{ width: '20rem' }}>
-                    <Card.Img variant="top" src={hot1} />
-                    <Card.Body id="cardbody">
-                        <Card.Title>機械質感袖扣</Card.Title>
-                        <Card.Text id="price">
-                        NT$1200
-                        </Card.Text>
-                        <Button variant="primary" id="chadbuy">立即購買</Button>
-                    </Card.Body>
-                    </Card>
-                    <Card id="cardborder" style={{ width: '20rem' }}>
-                    <Card.Img variant="top" src={hot2} />
-                    <Card.Body id="cardbody">
-                        <Card.Title>質男嚴選毛刷</Card.Title>
-                        <Card.Text id="price">
-                        NT$1200
-                        </Card.Text>
-                        <Button variant="primary" id="chadbuy">立即購買</Button>
-                    </Card.Body>
-                    </Card>
-                    <Card id="cardborder" style={{ width: '20rem' }}>
-                    <Card.Img variant="top" src={hot3} />
-                    <Card.Body id="cardbody">
-                        <Card.Title>純銀刮鬍刀架</Card.Title>
-                        <Card.Text id="price">
-                        NT$1200
-                        </Card.Text>
-                        <Button variant="primary" id="chadbuy">立即購買</Button>
-                    </Card.Body>
-                    </Card>
-                    </div>
-
- {/* 熱門商品手機板 */}
-                    <div className="hot-card-area-mobile">
-                    <Card id="cardborder" style={{ width: '20rem' }}>
-                    <Carousel>
-                                        <Carousel.Item>
-                                            <img
-                                            className="d-block w-100"
-                                            src={hot1}
-                                            alt="First slide"
-                                            />
-                                        </Carousel.Item>
-                                        <Carousel.Item>
-                                            <img
-                                            className="d-block w-100"
-                                            src={hot2}
-                                            alt="Third slide"
-                                            />          
-                                        </Carousel.Item>
-                                        <Carousel.Item>
-                                            <img
-                                            className="d-block w-100"
-                                            src={hot3}
-                                            alt="Third slide"
-                                            />                                 
-                                        </Carousel.Item>
-                        </Carousel>
-                        <Card.Body id="card-body-mobile">
-                            <Card.Title>質男嚴選毛刷</Card.Title>
-                            <Card.Text>
-                           NT$1000
-                            </Card.Text>
-                            <Button variant="primary" id="chadbuy">立即購買</Button>
-                        </Card.Body>
-                    </Card>
-                    </div>
-             </div>
-
+            <HotProduct/>
 {/* 熱銷單品 */}
 
             <div className="gift-area">

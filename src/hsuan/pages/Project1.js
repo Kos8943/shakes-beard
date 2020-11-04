@@ -10,6 +10,7 @@ import ReactCSSTransitionGroup from "react-addons-css-transition-group";
 
 import { Container, Row, Breadcrumb } from "react-bootstrap";
 import { NavLink } from "react-router-dom";
+import ScrollAnimation from "react-animate-on-scroll";
 
 function Project1() {
   return (
@@ -77,14 +78,15 @@ function Project1() {
         <Script />
         <Breadcrumb className="HsuanBread">
             <Breadcrumb.Item href="#">首頁</Breadcrumb.Item>
-            <Breadcrumb.Item href="https://getbootstrap.com/docs/4.0/components/breadcrumb/">
+            <Breadcrumb.Item href="http://localhost:3000/project1">
               服飾配件
             </Breadcrumb.Item>
-            <Breadcrumb.Item href="https://getbootstrap.com/docs/4.0/components/breadcrumb/">
+            <Breadcrumb.Item href="http://localhost:3000/project1">
               領帶/領結
             </Breadcrumb.Item>
             <Breadcrumb.Item active>Data</Breadcrumb.Item>
           </Breadcrumb>
+         
         <section className="SectionTile brand-SectionProduct">
           <div className="SectionTile__container">
             <div className="brand-ProductItems">
@@ -93,14 +95,11 @@ function Project1() {
                   className="brand-ProductItems__item finished"
                   data-anime="fadeInUp"
                   data-anime-trigger=".brand-ProductItems"
-                  data-anime-delay="0"
-                >
+                  data-anime-delay="0">
+                  <ScrollAnimation animateIn='fadeIn' >
                   <div className="brand-ProductItems__card">
-                    <a
-                      href="../product/1"
-                      className="brand-ProductItems__image"
-                    >
-                      <div className="_image">
+                    <a href="../product/1" className="brand-ProductItems__image">
+                       <div className="_image">
                         <img
                           src={require("../icon/original.jpg")}
                           className="card-img-top"
@@ -112,7 +111,7 @@ function Project1() {
                       <div className="_name typesquare_option">種類</div>
                       <div className="_price">說明</div>
                     </div>
-                  </div>
+                  </div></ScrollAnimation>
                 </div>
                 <div
                   className="brand-ProductItems__item finished"
@@ -120,12 +119,10 @@ function Project1() {
                   data-anime-trigger=".brand-ProductItems"
                   data-anime-delay="0"
                 >
+                  <ScrollAnimation animateIn='fadeIn' >
                   <div className="brand-ProductItems__card">
-                    <a
-                      href="../product/1"
-                      className="brand-ProductItems__image"
-                    >
-                      <div className="_image">
+                    <a href="../product/1" className="brand-ProductItems__image">
+                       <div className="_image">
                         <img
                           src={require("../icon/original.jpg")}
                           className="card-img-top"
@@ -137,7 +134,7 @@ function Project1() {
                       <div className="_name typesquare_option">種類</div>
                       <div className="_price">說明</div>
                     </div>
-                  </div>
+                  </div></ScrollAnimation>
                 </div>
                 <div
                   className="brand-ProductItems__item finished"
@@ -145,12 +142,10 @@ function Project1() {
                   data-anime-trigger=".brand-ProductItems"
                   data-anime-delay="0"
                 >
+                  <ScrollAnimation animateIn='fadeIn' >
                   <div className="brand-ProductItems__card">
-                    <a
-                      href="../product/1"
-                      className="brand-ProductItems__image"
-                    >
-                      <div className="_image">
+                    <a href="../product/1" className="brand-ProductItems__image">
+                       <div className="_image">
                         <img
                           src={require("../icon/original.jpg")}
                           className="card-img-top"
@@ -162,7 +157,7 @@ function Project1() {
                       <div className="_name typesquare_option">種類</div>
                       <div className="_price">說明</div>
                     </div>
-                  </div>
+                  </div></ScrollAnimation>
                 </div>
                 <div
                   className="brand-ProductItems__item finished"
@@ -170,12 +165,10 @@ function Project1() {
                   data-anime-trigger=".brand-ProductItems"
                   data-anime-delay="0"
                 >
+                  <ScrollAnimation animateIn='fadeIn' >
                   <div className="brand-ProductItems__card">
-                    <a
-                      href="../product/1"
-                      className="brand-ProductItems__image"
-                    >
-                      <div className="_image">
+                    <a href="../product/1" className="brand-ProductItems__image">
+                       <div className="_image">
                         <img
                           src={require("../icon/original.jpg")}
                           className="card-img-top"
@@ -187,20 +180,17 @@ function Project1() {
                       <div className="_name typesquare_option">種類</div>
                       <div className="_price">說明</div>
                     </div>
-                  </div>
+                  </div></ScrollAnimation>
                 </div>
                 <div
                   className="brand-ProductItems__item finished"
                   data-anime="fadeInUp"
                   data-anime-trigger=".brand-ProductItems"
-                  data-anime-delay="0"
-                >
+                  data-anime-delay="0">
+                  <ScrollAnimation animateIn='fadeIn' >
                   <div className="brand-ProductItems__card">
-                    <a
-                      href="../product/1"
-                      className="brand-ProductItems__image"
-                    >
-                      <div className="_image">
+                    <a href="../product/1" className="brand-ProductItems__image">
+                       <div className="_image">
                         <img
                           src={require("../icon/original.jpg")}
                           className="card-img-top"
@@ -212,7 +202,7 @@ function Project1() {
                       <div className="_name typesquare_option">種類</div>
                       <div className="_price">說明</div>
                     </div>
-                  </div>
+                  </div></ScrollAnimation>
                 </div>
                 <div
                   className="brand-ProductItems__item finished"
@@ -220,12 +210,10 @@ function Project1() {
                   data-anime-trigger=".brand-ProductItems"
                   data-anime-delay="0.2"
                 >
+                  <ScrollAnimation animateIn='fadeIn' >
                   <div className="brand-ProductItems__card">
-                    <a
-                      href="../product/2"
-                      className="brand-ProductItems__image"
-                    >
-                      <div className="_image">
+                    <a href="../product/1" className="brand-ProductItems__image">
+                       <div className="_image">
                         <img
                           src={require("../icon/original.jpg")}
                           className="card-img-top"
@@ -237,7 +225,7 @@ function Project1() {
                       <div className="_name typesquare_option">種類</div>
                       <div className="_price">說明</div>
                     </div>
-                  </div>
+                  </div></ScrollAnimation>
                 </div>
                 <div
                   className="brand-ProductItems__item finished"
@@ -245,12 +233,10 @@ function Project1() {
                   data-anime-trigger=".brand-ProductItems"
                   data-anime-delay="0.4"
                 >
+                  <ScrollAnimation animateIn='fadeIn' >
                   <div className="brand-ProductItems__card">
-                    <a
-                      href="../product/3"
-                      className="brand-ProductItems__image"
-                    >
-                      <div className="_image">
+                    <a href="../product/1" className="brand-ProductItems__image">
+                       <div className="_image">
                         <img
                           src={require("../icon/original.jpg")}
                           className="card-img-top"
@@ -262,7 +248,7 @@ function Project1() {
                       <div className="_name typesquare_option">種類</div>
                       <div className="_price">說明</div>
                     </div>
-                  </div>
+                  </div></ScrollAnimation>
                 </div>
                 <div
                   className="brand-ProductItems__item finished"
@@ -270,12 +256,10 @@ function Project1() {
                   data-anime-trigger=".brand-ProductItems"
                   data-anime-delay="0.6000000000000001"
                 >
+                  <ScrollAnimation animateIn='fadeIn' >
                   <div className="brand-ProductItems__card">
-                    <a
-                      href="../product/4"
-                      className="brand-ProductItems__image"
-                    >
-                      <div className="_image">
+                    <a href="../product/1" className="brand-ProductItems__image">
+                       <div className="_image">
                         <img
                           src={require("../icon/original.jpg")}
                           className="card-img-top"
@@ -287,7 +271,7 @@ function Project1() {
                       <div className="_name typesquare_option">種類</div>
                       <div className="_price">說明</div>
                     </div>
-                  </div>
+                  </div></ScrollAnimation>
                 </div>
                 <div
                   className="brand-ProductItems__item finished"
@@ -295,12 +279,10 @@ function Project1() {
                   data-anime-trigger=".brand-ProductItems"
                   data-anime-delay="0.8"
                 >
+                  <ScrollAnimation animateIn='fadeIn' >
                   <div className="brand-ProductItems__card">
-                    <a
-                      href="../product/11"
-                      className="brand-ProductItems__image"
-                    >
-                      <div className="_image">
+                    <a href="../product/1" className="brand-ProductItems__image">
+                       <div className="_image">
                         <img
                           src={require("../icon/original.jpg")}
                           className="card-img-top"
@@ -312,7 +294,7 @@ function Project1() {
                       <div className="_name typesquare_option">種類</div>
                       <div className="_price">說明</div>
                     </div>
-                  </div>
+                  </div></ScrollAnimation>
                 </div>
                 <div
                   className="brand-ProductItems__item finished"
@@ -320,12 +302,10 @@ function Project1() {
                   data-anime-trigger=".brand-ProductItems"
                   data-anime-delay="1"
                 >
+                  <ScrollAnimation animateIn='fadeIn' >
                   <div className="brand-ProductItems__card">
-                    <a
-                      href="../product/12"
-                      className="brand-ProductItems__image"
-                    >
-                      <div className="_image">
+                    <a href="../product/1" className="brand-ProductItems__image">
+                       <div className="_image">
                         <img
                           src={require("../icon/original.jpg")}
                           className="card-img-top"
@@ -337,7 +317,7 @@ function Project1() {
                       <div className="_name typesquare_option">種類</div>
                       <div className="_price">說明</div>
                     </div>
-                  </div>
+                  </div></ScrollAnimation>
                 </div>
                 <div
                   className="brand-ProductItems__item finished"
@@ -345,12 +325,10 @@ function Project1() {
                   data-anime-trigger=".brand-ProductItems"
                   data-anime-delay="1.2000000000000002"
                 >
+                  <ScrollAnimation animateIn='fadeIn' >
                   <div className="brand-ProductItems__card">
-                    <a
-                      href="../product/13"
-                      className="brand-ProductItems__image"
-                    >
-                      <div className="_image">
+                    <a href="../product/1" className="brand-ProductItems__image">
+                       <div className="_image">
                         <img
                           src={require("../icon/original.jpg")}
                           className="card-img-top"
@@ -362,7 +340,7 @@ function Project1() {
                       <div className="_name typesquare_option">種類</div>
                       <div className="_price">說明</div>
                     </div>
-                  </div>
+                  </div></ScrollAnimation>
                 </div>
                 <div
                   className="brand-ProductItems__item finished"
@@ -370,12 +348,10 @@ function Project1() {
                   data-anime-trigger=".brand-ProductItems"
                   data-anime-delay="1.4000000000000001"
                 >
+                  <ScrollAnimation animateIn='fadeIn' >
                   <div className="brand-ProductItems__card">
-                    <a
-                      href="../product/77"
-                      className="brand-ProductItems__image"
-                    >
-                      <div className="_image">
+                    <a href="../product/1" className="brand-ProductItems__image">
+                       <div className="_image">
                         <img
                           src={require("../icon/original.jpg")}
                           className="card-img-top"
@@ -387,7 +363,7 @@ function Project1() {
                       <div className="_name typesquare_option">種類</div>
                       <div className="_price">說明</div>
                     </div>
-                  </div>
+                  </div></ScrollAnimation>
                 </div>
               </div>
               {/* <section className="SectionTile brand-SectionOtherBrands">

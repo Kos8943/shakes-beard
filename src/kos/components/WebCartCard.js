@@ -1,7 +1,7 @@
 import { get } from 'jquery'
 import React, { useState, useEffect } from 'react'
 import Delete from '../icon/delete.svg'
-import Cuf1 from '../img/1-3.jpg'
+// import Cuf1 from '../img/1-3.jpg'
 import Trash from '../icon/trash.svg'
 
 function WebCartCard(props) {
@@ -57,8 +57,8 @@ function WebCartCard(props) {
   )
     return (
         <>
-                    <div className="cartItemPhone d-xl-flex">
-                        <img className="itemImg" src={Cuf1}></img>
+                    <div className="cartItem d-xl-flex">
+                        <img className="itemImg" src="./imgs/1-3.jpg"></img>
                         <div className="itemName my-lg-auto">{productName}</div>
 
                         {/* web style select */}

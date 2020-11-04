@@ -344,7 +344,13 @@ html {
   font-size: 62.5%;
   height: 100%;
 }
-
+.visible, .invisible {
+  opacity: 0.0;
+  transition: opacity 0.5s ease;
+}
+.visible {
+  opacity: 1.0;
+}
 body {
   font-family: "Hiragino Kaku Gothic ProN", "ヒラギノ角ゴ ProN W3", "Hiragino Kaku Gothic Pro", "ヒラギノ角ゴ Pro W3", "游ゴシック体", "Yu Gothic", YuGothic, "Segoe UI", "メイリオ", Meiryo, "ＭＳ Ｐゴシック", sans-serif;
   font-weight: 300;
@@ -365,9 +371,9 @@ a {
   text-decoration: underline;
 }
 
-a:link, a:visited {
+/* a:link, a:visited {
   color: #1c7ae3;
-}
+} */
 
 a:hover, a:active {
   text-decoration: none;
@@ -1215,9 +1221,9 @@ a.ButtonA {
   background-color: #ffffff;
 }
 
-.PgaeWrapper__inner {
+/* .PgaeWrapper__inner {
   position: relative;
-}
+} */
 
 .SectionTile {
   position: relative;
@@ -1308,9 +1314,9 @@ a.ButtonA {
   box-shadow: inset 4px 4px 8px rgba(201, 177, 181, 0.3), inset -4px -4px 8px white;
 }
 
-.brand-BrandCardItems .brand-BrandCardItems__inner {
+/* .brand-BrandCardItems .brand-BrandCardItems__inner {
   background-color: #f8f8f8;
-}
+} */
 
 .brand-BrandCardItems__items {
   display: flex;
@@ -1427,7 +1433,7 @@ a.ButtonA {
   }
 }
 
-.brand-BrandCardItems__inner {
+/* .brand-BrandCardItems__inner {
   position: relative;
 }
 
@@ -1435,7 +1441,7 @@ a.ButtonA {
   content: '';
   display: block;
   padding-top: 41.66667%;
-}
+} */
 
 .brand-BrandCardItems__image {
   position: absolute;
@@ -2544,10 +2550,10 @@ a.ButtonA {
 }
 
 /*************************
- *  写真
+ *  圖片
  **************************/
 .top-BrandTile__photo {
-  z-index: 3;
+  /* z-index: 3; */
   display: flex;
   align-items: center;
   justify-content: center;
@@ -2578,13 +2584,13 @@ a.ButtonA {
      object-fit: cover;
   font-family: 'object-fit: cover;';
 }
-
+/* 商品圖片陰影 */
 .top-BrandTile.top-BrandTile--lilac .top-BrandTile__photo ._inner {
-  box-shadow: 70px 105px 60px rgba(156, 138, 142, 0.3);
+  box-shadow: 70px 90px 30px rgba(156, 138, 142, 0.089);
 }
 
 .top-BrandTile.top-BrandTile--beige .top-BrandTile__photo ._inner {
-  box-shadow: 70px 105px 60px rgba(170, 160, 149, 0.3);
+  box-shadow: 70px 90px 30px rgba(156, 138, 142, 0.089);
 }
 
 @media screen and (min-width: 960px) {

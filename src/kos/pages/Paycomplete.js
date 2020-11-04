@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import CartCss from '../styles/CartCss.scss'
 import Complete from '../styles/Complete.scss'
+import { Link } from "react-router-dom";
 
 function Paycomplete() {
     return (
@@ -47,7 +48,7 @@ function Paycomplete() {
                         <p>貨品數量：6</p>
                     </div>
                     <div className="checkOrder">
-                        <button className="checkOrderButton">查看訂單＞</button>
+                        <Link to="/ordercheck"><button className="checkOrderButton">查看訂單＞</button></Link>
                     </div>
                 </div>
                 
