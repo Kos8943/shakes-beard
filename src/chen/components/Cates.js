@@ -11,7 +11,7 @@ function Cates(props) {
     <>
     <div className="sorting">
       <nav aria-label="breadcrumb cates">
-        <ol className="breadcrumb">
+        <ol className="breadcrumb mb-0">
           {/* <li className="breadcrumb-item cates-item">
             <Link to="#">所有商家</Link>
           </li> */}
