@@ -5,7 +5,7 @@ import MyFooter from "./components/MyFooter";
 import { BrowserRouter as Router, Route, Link, Switch } from "react-router-dom";
 import HeroPage from "./chad/HeroPage";
 import Sid from "./Sid";
-
+import ScrollUp from 'react-scroll-up'
 
 //以下import個人頁面
 
@@ -38,6 +38,8 @@ import Payment from "./kos/pages/Payment";
 import Paycomplete from './kos/pages/Paycomplete'
 import orderCheck from './kos/pages/OrderCheck'
 import OrderCheck from "./kos/pages/OrderCheck";
+import TopArrow from "./icon/top-arrow.jpg"
+
 
 
 function App() {
@@ -46,10 +48,13 @@ function App() {
 
     <>
    
-   
+    
 
       
         <main role="main">
+        <ScrollUp showUnder={150}>
+          <img src={TopArrow} class="scrolltotop"></img>
+        </ScrollUp>
           <Switch>
             <Route exact path="/">
               <HeroPage />

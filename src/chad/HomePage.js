@@ -162,7 +162,7 @@ class HomePage extends React.Component {
                     </Card>
                     </div>
 
- {/* 熱們商品手機板 */}
+ {/* 熱門商品手機板 */}
                     <div className="hot-card-area-mobile">
                     <Card id="cardborder" style={{ width: '20rem' }}>
                     <Carousel>

@@ -126,9 +126,9 @@
 //禮物
 
 .gift-area {
-  padding-left: 17.5%;
-  padding-right: 17.5%;
+  width: 75%;
   position: relative;
+  margin: 0 auto;
 }
 
 .gift-img {
@@ -137,12 +137,12 @@
 }
 .gift-text-area {
   position: absolute;
-  right: 22%;
-  bottom: 30%;
+  right: 15%;
+  bottom: 45%;
   background-color: hsla(228, 43%, 31%, 0.7);
   border-radius: 4px;
-  width: 20%;
-  height: 30%;
+  width: 25%;
+  height: 25%;
   color: #f8f8f8;
   text-align: center;
   line-height: 30px;
@@ -164,8 +164,8 @@
   font: 20px PingFang;
   color: #ffffff;
   position: absolute;
-  right: 28%;
-  bottom: 10%;
+  right: 22%;
+  bottom: 33%;
 }
 .giftBtn:hover {
   background: hsla(228, 43%, 31%, 1);
@@ -304,7 +304,7 @@
   width: 15%;
   position: absolute;
   top: 10%;
-  right: 23%;
+  right: 18%;
   line-height: 40px;
 }
 
@@ -324,8 +324,8 @@
   font: 20px PingFang;
   color: #ffffff;
   position: absolute;
-  right: 28%;
-  top: 26%;
+  right: 20%;
+  top: 22%;
 }
 .topBtn:hover {
   background: hsla(228, 43%, 31%, 0.7);
