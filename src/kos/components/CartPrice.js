@@ -21,7 +21,7 @@ function CartPrice(props) {
                         
                     </div>
                     <div className="sumitBtn ml-auto">
-                        <Link to="/payment">送出訂單</Link>
+                        <Link to="/payment"><button>送出訂單</button></Link>
                     </div>
         </>
     )
