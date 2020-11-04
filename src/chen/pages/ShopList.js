@@ -5,7 +5,7 @@ import CatesAside from '../components/CatesAside'
 import Cards from '../components/Cards'
 import Cates from '../components/Cates'
 import Banner from '../components/Banner'
-import { Link } from 'react-router-dom'
+import '../styles/shops.scss'
 
 function ShopList(props) {
   console.log('Shoplist', props)

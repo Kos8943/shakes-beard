@@ -1,7 +1,4 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
-// 1015 match/history/location
-// product/:id? withRouter,useParams
 import { Dropdown } from 'react-bootstrap'
 
 function Cates(props) {
