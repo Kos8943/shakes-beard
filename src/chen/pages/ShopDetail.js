@@ -13,7 +13,7 @@ function ShopDetail(props) {
   return (
     <>
       <Breadcrumb />
-      <div className="container">
+      <div className="container shopdetail">
         <div className="row">
           <div className="col-12 col-sm-12 col-md-3 col-lg-2">
             <CatesAside />
@@ -23,8 +23,8 @@ function ShopDetail(props) {
           </div>
         </div>
         <div className="row">
-          <div className="col-12 col-sm-12 col-md-3 col-lg-3"></div>
-          <div className="col-12 col-sm-12 col-md-9 col-lg-9">
+          <div className="col-12 col-sm-12 col-md-3 col-lg-2"></div>
+          <div className="col-12 col-sm-12 col-md-9 col-lg-10">
               <Description/>
               <Description/>
               <strong className="d-inline-block my-2">注意事項</strong>
