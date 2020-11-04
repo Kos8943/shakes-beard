@@ -141,13 +141,13 @@ function App() {
               <MyFooter />
             </Route>
 
-            <Route exact path="/Market">
+            {/* <Route exact path="/Market">
               <ShakesBeardNavbar />
               <div className="footerFix">
                 <Market />
               </div>
               <MyFooter />
-            </Route>
+            </Route> */}
 
             <Route path="/cart">
               <ShakesBeardNavbar />
