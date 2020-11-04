@@ -73,6 +73,9 @@
 }
 
 //故事
+body > .bounceInLeft{
+  pointer-events: none;
+}
 .story-area {
   margin: 15px auto;
 }
@@ -155,6 +158,31 @@
   line-height: 30px;
 }
 
+/* Pulse Grow */
+@-webkit-keyframes giftBtn {
+  to {
+    transform: scale(1.1);
+  }
+}
+@keyframes giftBtn {
+  to { 
+    transform: scale(1.1);
+  }
+}
+.giftBtn {
+  display: inline-block;
+  vertical-align: middle; 
+  transform: perspective(1px) translateZ(0);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+}
+.giftBtn:hover{
+  background: hsla(228, 43%, 31%, 1);
+  animation-name: giftBtn;
+  animation-duration: 0.3s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
 .giftBtn {
   display: inline-block;
   padding: 12px 40px;
@@ -164,12 +192,10 @@
   font: 20px PingFang;
   color: #ffffff;
   position: absolute;
-  right: 22%;
+  right: 21%;
   bottom: 33%;
 }
-.giftBtn:hover {
-  background: hsla(228, 43%, 31%, 1);
-}
+
 
 //禮物 手機板
 @media (max-width: 700px) {
@@ -221,7 +247,9 @@
 }
 
 //熱門
-
+.hot-area > .flipInY {
+  pointer-events: none;
+}
 .hot-card-area-mobile {
   display: none;
 }
@@ -315,21 +343,34 @@
 }
 
 .topBtn {
+  display: inline-block;
+  vertical-align: middle;
+  transform: perspective(1px) translateZ(0);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+}
+.topBtn:hover{
+  background: hsla(228, 43%, 31%, 0.7);
+  animation-name: giftBtn;
+  animation-duration: 0.3s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+.topBtn {
   margin-top: 2%;
   display: inline-block;
   padding: 12px 40px;
   border-radius: 4px;
   border: 0px;
-  background: hsla(228, 43%, 31%, 1);
+  background: hsla(228, 43%, 31%, 1.0);
   font: 20px PingFang;
   color: #ffffff;
   position: absolute;
   right: 20%;
   top: 22%;
 }
-.topBtn:hover {
-  background: hsla(228, 43%, 31%, 0.7);
-}
+
+
 
 //熱銷 手機板
 @media (max-width: 700px) {
@@ -407,21 +448,35 @@
   margin-top: 5%;
   width: 50%;
 }
+.map-down-area > .bounceInRight{
+  pointer-events: none;
+}
 
+#mapBtn {
+  display: inline-block;
+  vertical-align: middle;
+  transform: perspective(1px) translateZ(0);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+}
+#mapBtn:hover{
+  background: hsla(228, 43%, 31%, 0.7);
+  animation-name: giftBtn;
+  animation-duration: 0.3s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
 #mapBtn {
   margin-top: 4%;
   display: inline-block;
   padding: 12px 40px;
   border-radius: 4px;
   border: 0px;
-  background: hsla(228, 43%, 31%, 1);
+  background: hsla(228, 43%, 31%, 1.0);
   font: 20px PingFang;
   color: #ffffff;
 }
 
-#mapBtn:hover {
-  background: hsla(228, 43%, 31%, 0.7);
-}
 
 //地圖 手機板
 @media (max-width: 700px) {
