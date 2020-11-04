@@ -3,13 +3,13 @@ import Cuf1 from '../img/1-3.jpg'
 import CartCss from '../styles/CartCss.scss'
 import PayCss from '../styles/PayCss.scss'
 import Delete from '../icon/delete.svg'
-
+import CartBuyStep from '../components/CartBuyStep'
 
 
 function Payment() {
     return (
         <>
-           <div className="cartArea">
+           {/* <div className="cartArea">
                     <h2 className="d-flex justify-content-center">送出訂單</h2>
                     <div className="cartStep d-flex justify-content-center">
                     <div className="d-flex align-items-start flex-column">
@@ -27,7 +27,9 @@ function Payment() {
                         <div className="cartStepFont">訂單完成</div>
                     </div>   
                     </div>
-            </div>
+            </div> */}
+
+            <CartBuyStep step="2"/>
 
             <div className="PayCard">
                 <h3 className="d-flex justify-content-center">你的訂單</h3>

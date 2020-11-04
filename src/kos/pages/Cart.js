@@ -4,11 +4,22 @@ import Delete from '../icon/delete.svg'
 import Cuf1 from '../img/1-3.jpg'
 import Trash from '../icon/trash.svg'
 import WebCartCard from '../components/WebCartCard'
+import PhoneCartCard from '../components/PhoneCartCard'
+import CartPrice from '../components/CartPrice'
+import CartBuyStep from '../components/CartBuyStep'
 
 function Cart(props) { 
+    // const [total, setTotal] = useState(1)
         return (
             <>
-                <div className="cartArea">
+                <CartBuyStep step="1"/>
+                <WebCartCard />
+                {/* <PhoneCartCard /> */}
+                <CartPrice />
+
+
+
+                {/* <div className="cartArea">
                     <h2 className="d-flex justify-content-center">購物車</h2>
                     <div className="cartStep d-flex justify-content-center">
                     <div className="d-flex align-items-start flex-column">
@@ -26,10 +37,11 @@ function Cart(props) {
                         <div className="cartStepFont">訂單完成</div>
                     </div>   
                     </div>
-                </div>
+                </div> */}
                 
-                <div>
-                    <WebCartCard />
+                
+                    
+
                     {/* <div className="cartItem d-xl-flex">
                         <img className="itemImg" src={Cuf1}></img>
                         <div className="itemName my-auto">Ritmo di vita 陀飛輪袖扣</div>
@@ -48,7 +60,7 @@ function Cart(props) {
                         <img src={Delete} className="deleteIcon"></img>
                     </div> */}
 
-                    <div className="cartItemPhone">
+                    {/* <div className="cartItemPhone">
                         <img className="itemImg" src={Cuf1}></img>
                         <div className="itemName">Ritmo di vita 陀飛輪袖扣</div>
                         <div className="KosProjectType">經典黑</div>
@@ -61,9 +73,9 @@ function Cart(props) {
                             <div className="subtotal">NT$2,882</div>
                         </div>
                         
-                        {/* <img src={Delete} className="deleteIcon"></img> */}
-                    </div>
-                    <div className="priceArea ml-auto d-flex">
+                       
+                    </div> */}
+                    {/* <div className="priceArea ml-auto d-flex">
                         <div className="priceArea font">
                             <div>優惠代碼：</div>
                             <div>折扣：</div>
@@ -81,9 +93,9 @@ function Cart(props) {
                     </div>
                     <div className="sumitBtn ml-auto">
                         <button>送出訂單</button>
-                    </div>
+                    </div> */}
                     
-                </div>
+                
                 
             </>
         )   

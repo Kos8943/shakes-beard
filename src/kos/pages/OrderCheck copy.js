@@ -33,7 +33,6 @@ function OrderCheck(props) {
     // setTotal(data.total)
     setPrice(data[0].price)
     setType(data[0].type)
-    setImg(data[0].img)
     setName(data[0].name)
   }
 

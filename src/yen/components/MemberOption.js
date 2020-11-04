@@ -1,11 +1,13 @@
-import React from 'react'
-import MemberUpdateCss from '../styles/MemberUpdateCss.scss'
-import MemberUpdate from '../MemberUpdate'
+import React ,{useState} from 'react'
+// import MemberUpdateCss from '../styles/MemberUpdateCss.scss'
+import MemberDataTable from './MemberDataTable'
+import MemberDataTable2 from './MemberDataTable2'
 
 function MemberOption(props) {
+  const [pageTitle, setPageTitle] = useState("密碼修改")
+
   return <>
-  {/* <div className="container-fluid">
-    <div className="row justify-content-between"> */}
+
 
         <div className="leftArea col-2 d-flex flex-column">
             <div className="userName">王大明</div>
@@ -16,6 +18,14 @@ function MemberOption(props) {
             <div className="option">收藏清單</div>
             <div className="option">訂單查詢</div>
         </div>
+        {(pageTitle === "資料修改")?
+        <MemberDataTable title="資料修改"/> :''}
+
+        {(pageTitle === "密碼修改")?
+        <MemberDataTable2 title="密碼修改"/> :''}
+
+
+        
 
 
         {/* <div className="rightArea col-9">
@@ -27,8 +37,10 @@ function MemberOption(props) {
         </div> */}
 
 
-    {/* </div>
-  </div> */}
+
+
+
+        
       
   </>
 }
