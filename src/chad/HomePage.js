@@ -27,8 +27,8 @@ import ScrollAnimation from 'react-animate-on-scroll'
 
 const styles = {
     bounceInLeft: {
-      animation: 'x 2s',
-      animationName: Radium.keyframes(bounceInLeft, 'bounceInLeft')
+    animation: 'x 2s',
+    animationName: Radium.keyframes(bounceInLeft, 'bounceInLeft')
     }
   }
 
