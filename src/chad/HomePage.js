@@ -85,9 +85,9 @@ class HomePage extends React.Component {
     </Carousel>
     </div>
 {/* 品牌故事 */}     
-<ScrollAnimation animateIn='bounceInRight'
-  animateOut='bounceOutLeft'>
-        <div className="story-area w-100 h-100">
+<ScrollAnimation animateIn='bounceInLeft'
+  animateOut='bounceOutRight'>
+        <div className="story-area w-75 h-100">
          <h2 className="story-title">品牌故事</h2>
             <div className="story-text-area">
                 <p className="story-text pb-2">

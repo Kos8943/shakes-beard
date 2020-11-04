@@ -53,7 +53,7 @@ function App() {
       
         <main role="main">
         <ScrollUp showUnder={150}>
-          <img src={TopArrow} class="scrolltotop"></img>
+          <img src={TopArrow} class="scrolltotop d-lg-block d-none"></img>
         </ScrollUp>
           <Switch>
             <Route exact path="/">
