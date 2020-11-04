@@ -11,7 +11,6 @@ import ScrollUp from 'react-scroll-up'
 
 import HomePage from "./chad/HomePage";
 import Product from "./hsuan/pages/Product";
-import Market from "./hsuan/Market";
 import Project1 from "./hsuan/pages/Project1";
 import Project from "./hsuan/Project";
 import Cart from "./kos/pages/Cart";
@@ -141,15 +140,7 @@ function App() {
                 <MyFooter />
               </Route>
 
-              <Route exact path="/Market">
-                <ShakesBeardNavbar />
-                <div className="footerFix">
-                  <Market />
-                </div>
-                <MyFooter />
-              </Route>
-
-              <Route path="/cart">
+               <Route path="/cart">
                 <ShakesBeardNavbar />
                 <div className="footerFix KosPadding">
                   <Cart />

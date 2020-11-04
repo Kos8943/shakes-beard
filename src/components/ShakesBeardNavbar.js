@@ -24,7 +24,7 @@ function ShakesBeardNavbar(props) {
   <Navbar.Collapse id="basic-navbar-nav">
     <Nav  className="navbarFlex d-flex justify-content-between">
       <Nav.Link  as={NavLink} to="/homepage" href="#home" className="navBarFontSize">首頁</Nav.Link>
-      <Nav.Link  as={NavLink} to="/project1" className="navBarFontSize">產品列表</Nav.Link>
+      <Nav.Link  as={NavLink} to="/product" className="navBarFontSize">產品列表</Nav.Link>
       <Nav.Link href="Path_GiftBox" className="navBarFontSize">客製化禮盒</Nav.Link>
       <Navbar.Brand href="#home" className="logoFont">logo</Navbar.Brand>
       
