@@ -21,10 +21,10 @@ import CartOrderCheck from "../kos/components/CartOrderCheck";
 
 
 function MemberOption(props) {
-    const [pageTitle, setPageTitle] = useState("資料修改")
+   
 
   const [pageTitle, setPageTitle] = useState("訂單查詢");
-  const [titleColor, setTitleColor] = useState("訂單查詢");
+
 
   return (
     <>
