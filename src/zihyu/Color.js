@@ -33,25 +33,25 @@ class Class_Color extends React.Component
                   <input className="message"></input>
 
                   <div className="Grid">
-                  <Button className="separate backButton" onClick=
+                    <Button className="separate backButton" onClick=
+                      {     //React程式區間語法 (開始)
+                        () =>
+                        {
+                          window.open("/Path_ChooseStand", '_self');
+                        }
+                      }     //React程式區間語法 (結束)
+                    
+                    > 上一步 </Button>
+
+                    <Button className="startButton" onClick=
                     {     //React程式區間語法 (開始)
                       () =>
                       {
-                        window.open("/Path_ChooseStand", '_self');
+                        window.open("/Path_Finish", '_self');
                       }
                     }     //React程式區間語法 (結束)
                   
-                  > 上一步 </Button>
-
-                  <Button className="startButton" onClick=
-                  {     //React程式區間語法 (開始)
-                    () =>
-                    {
-                      window.open("/Path_Finish", '_self');
-                    }
-                  }     //React程式區間語法 (結束)
-                
-                > 完成 </Button>
+                  > 完成 </Button>
                 </div>
                   
                 </div>
