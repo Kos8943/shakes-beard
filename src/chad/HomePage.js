@@ -3,6 +3,7 @@ import '../chad/styles/custom.scss';
 import bannerimg1 from './imgs/輪播圖1.jpg'
 import bannerimg2 from './imgs/輪播圖2.jpg'
 import bannerimg3 from './imgs/輪播圖3.jpg'
+import bannerimg4 from './imgs/輪播圖4.jpg'
 import {Button, Carousel, Card} from 'react-bootstrap'
 import giftimg from './imgs/禮物盒.jpg'
 import hotpage from './imgs/熱銷.jpg'
@@ -17,11 +18,13 @@ import ScrollAnimation from 'react-animate-on-scroll'
 
 
 
+
+
 class HomePage extends React.Component {
     render(){
     return (
       
-    <>
+    <>  
       <body className="body">
  
 {/* 輪播牆 */}
@@ -33,11 +36,7 @@ class HomePage extends React.Component {
                     src={bannerimg1}
                     alt="First slide"
                 />
-
-                <Carousel.Caption>
-                    <h3>First slide label</h3>
-                    <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
-                </Carousel.Caption>
+             
         </Carousel.Item>
 
         <Carousel.Item>
@@ -47,10 +46,6 @@ class HomePage extends React.Component {
                     alt="Second slide"
                 />
 
-                <Carousel.Caption>
-                    <h3>Second slide label</h3>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                </Carousel.Caption>
         </Carousel.Item>
         
         <Carousel.Item>
@@ -60,10 +55,16 @@ class HomePage extends React.Component {
                     alt="Third slide"
                 />
 
-                <Carousel.Caption>
-                    <h3>Third slide label</h3>
-                    <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
-                </Carousel.Caption>
+                
+        </Carousel.Item>
+        <Carousel.Item>
+                <img
+                    className="d-block w-100 h-100"
+                    src={bannerimg4}
+                    alt="Third slide"
+                />
+
+                
         </Carousel.Item>
     </Carousel>
     </div>
@@ -91,15 +92,17 @@ class HomePage extends React.Component {
                     className="gift-img"
                     src={giftimg}                
                 />
+                
                 <div className="gift-text-area">
 
                 <h2 className="gift-title py-3">訂製專屬禮盒</h2>
-                <p className="gift-text">您可以在網頁上設計專屬的禮物盒，即時預覽您的設計，達成最佳的個性化送禮服務。</p>
-                
+               <p className="gift-text">您可以在網頁上設計專屬的禮物盒，即時預覽您的設計，達成最佳的個性化送禮服務。</p>              
                 </div>
+        
                 <button class="giftBtn">開始製作</button>
+               
             </div>
-
+           
 
 {/* 熱門商品*/}
 
