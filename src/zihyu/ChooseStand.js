@@ -16,61 +16,61 @@ class Class_ChooseStand extends React.Component
   render()
   {
     return (
-      <>
+      
       <div className="contain">
         <div className="background_white">
       
             <div className="blueBox">
               <div className="whiteBox">
                 <div className="step">Step.4
-                  <div className="Title2">選擇修容架</div>
-                  <div className="lineTop"></div>
-                  <div className="lineDown"></div>
+                <div className="Title2">選擇修容架</div>
+                <div className="lineTop"></div>
+                <div className="lineDown"></div>
 
                   <div className="Grid">
                   
-                    <div className="giftbox_Item">
+                    <div className="giftbox_Item col">
                       <div><img className="giftbox_ItemImg" src={img_stand01} /></div>
-                      <div>皇家刮鬍刀</div>
-                      <div>NT$ 1580</div>
+                      <div className="giftbox_itemName">皇家刮鬍刀</div>
+                      <div className="giftbox_itemPrice">NT$ 1580</div>
                     </div>
 
-                    <div className="giftbox_Item">
+                    <div className="giftbox_Item col">
                       <div><img className="giftbox_ItemImg" src={img_stand02} /></div>
-                      <div>皇家刮鬍刀</div>
-                      <div>NT$ 1580</div>
+                      <div className="giftbox_itemName">皇家刮鬍刀</div>
+                      <div className="giftbox_itemPrice">NT$ 1580</div>
                     </div>
 
-                    <div className="giftbox_Item">
+                    <div className="giftbox_Item col">
                       <div><img className="giftbox_ItemImg" src={img_stand03} /></div>
-                      <div>皇家刮鬍刀</div>
-                      <div>NT$ 1580</div>
+                      <div className="giftbox_itemName">皇家刮鬍刀</div>
+                      <div className="giftbox_itemPrice">NT$ 1580</div>
                     </div>
                   
-                    <div className="giftbox_Item">
+                    <div className="giftbox_Item col">
                       <div><img className="giftbox_ItemImg" src={img_stand04} /></div>
-                      <div>皇家刮鬍刀</div>
-                      <div>NT$ 1580</div>
+                      <div className="giftbox_itemName">皇家刮鬍刀</div>
+                      <div className="giftbox_itemPrice">NT$ 1580</div>
                     </div>
 
-                    <div className="giftbox_Item">
+                    <div className="giftbox_Item col">
                       <div><img className="giftbox_ItemImg" src={img_stand05} /></div>
-                      <div>皇家刮鬍刀</div>
-                      <div>NT$ 1580</div>
+                      <div className="giftbox_itemName">皇家刮鬍刀</div>
+                      <div className="giftbox_itemPrice">NT$ 1580</div>
                     </div>
                     
-                    <div className="giftbox_Item">
+                    <div className="giftbox_Item col">
                       <div><img className="giftbox_ItemImg" src={img_stand06} /></div>
-                      <div className="Grid">
-                        <div>⊙</div>
-                        <div>皇家刮鬍刀</div>
-                        </div>
-                      <div>NT$ 1580</div>
+                      <div className="giftbox_itemName">皇家刮鬍刀</div>
+                      <div className="giftbox_itemPrice">NT$ 1580</div>
+                    </div>
+                    
+                      
                   </div>
 
                   
 
-                  <div className="Grid">
+                  <div className="button_box">
                     <Button className="separate backButton" onClick=
                       {     //React程式區間語法 (開始)
                         () =>
@@ -90,7 +90,7 @@ class Class_ChooseStand extends React.Component
                     }     //React程式區間語法 (結束)
                     
                     > 下一步 </Button>
-                  </div></div>
+                  </div>
 
                   
                 </div>
@@ -102,7 +102,7 @@ class Class_ChooseStand extends React.Component
 
 
 
-</>
+      
     );
   }
 }
