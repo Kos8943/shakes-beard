@@ -21,3 +21,6 @@
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+
+/src/yen/text.txt
+/src/yen/components/DbConnect2.js
