@@ -63,7 +63,7 @@
   color: #2d3b72;
   font-family: Roboto;
   font-size: 17px;
-  margin: 39px auto 0px;
+  margin: 34px auto 0px;
   text-align: center;
   align-items: center;
 }
@@ -78,13 +78,17 @@
 }
 
 .lineTop {
-  width: 450px;
+  width: 455px;
   border-top: solid #2d3b72 1px;
-  margin: 15px auto 0px;
+  margin: 8px auto 0px;
 }
 
 .lineDown {
-  width: 100%;
+  width: 455px;
   border-top: solid #2d3b72 3px;
-  margin: 2px auto 0px;
+  margin: 2px auto;
+}
+
+.separate {
+  margin-right: 62px;
 }

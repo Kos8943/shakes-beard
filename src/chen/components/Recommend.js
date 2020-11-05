@@ -1,5 +1,6 @@
 import React from 'react'
 import { Badge } from 'react-bootstrap'
+import { Link } from 'react-router-dom'
 
 function Recommend(props) {
   console.log('Recommend', props)
@@ -16,7 +17,7 @@ function Recommend(props) {
                     <Badge pill variant="secondary">理髮</Badge>
                   </p>
                   <h6 className="mb-1">Sculptor Barber</h6>
-                  <a href="#">查看店家</a>
+                  <Link to='/shopdetail/'>查看店家</Link>
                 </div>
               </div>
               <div className="card recommend">
@@ -28,7 +29,7 @@ function Recommend(props) {
                     <Badge pill variant="secondary">理髮</Badge>
                   </p>
                   <h6 className="mb-1">Sculptor Barber</h6>
-                  <a href="#">查看店家</a>
+                  <Link to='/shopdetail/#'>查看店家</Link>
                 </div>
               </div>
               <div className="card recommend">
@@ -40,9 +41,9 @@ function Recommend(props) {
                     <Badge pill variant="secondary">理髮</Badge>
                   </p>
                   <h6 className="mb-1">
-                    <a className="text-dark" href="#">Sculptor Barber</a>
+                    <Link className="text-dark" to='/shopdetail/#'>Sculptor Barber</Link>
                   </h6>
-                  <a href="#">查看店家</a>
+                  <Link to='/shopdetail/#'>查看店家</Link>
                 </div>
               </div>
               <div className="card recommend">
@@ -54,9 +55,9 @@ function Recommend(props) {
                     <Badge pill variant="secondary">理髮</Badge>
                   </p>
                   <h6 className="mb-1">
-                    <a className="text-dark" href="#">Sculptor Barber</a>
+                    <Link className="text-dark" to='/shopdetail/#'>Sculptor Barber</Link>
                   </h6>
-                  <a href="#">查看店家</a>
+                  <Link to='/shopdetail/#'>查看店家</Link>
                 </div>
               </div>
           </div>

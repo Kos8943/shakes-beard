@@ -1,11 +1,12 @@
-import React from 'react'
+import React, {useState, useEffect} from 'react'
+import { Link, withRouter } from 'react-router-dom'
 import Breadcrumb from '../components/Breadcrumb'
 import Pagination from '../components/Pagination'
 import CatesAside from '../components/CatesAside'
 import Cards from '../components/Cards'
 import Cates from '../components/Cates'
 import Banner from '../components/Banner'
-import '../styles/shops.scss'
+import '../styles/shops.scss' 
 
 function ShopList(props) {
   console.log('Shoplist', props)
@@ -32,11 +33,8 @@ function ShopList(props) {
           </div>
         </div>
       </div>
-      <div id="stop" className="scrollTop">
-        <span><a href="">向上</a></span>
-      </div>
       <div id="stop" className="helpdesk">
-        <span><a href="">客服</a></span>
+        <span><Link to="">客服</Link></span>
       </div>
     </>
   )
