@@ -17,12 +17,14 @@ const Step = () => {
   const [ value, setValue ] = React.useState(50);
 
   return (
+    <div style={{width: "80%", margin: "auto"}}>
     <RangeSlider className="silderbox"
       value={value}
       onChange={e => setValue(e.target.value)}
       step={50}
       tooltip='off'
     />
+    </div>
   );
 
 };

@@ -13,11 +13,28 @@ import img_stand06 from './image/stand06.jpg';
 
 class Class_ChooseStand extends React.Component
 {
+  state =
+  {
+    StandGoods: ''
+  };
+
+  OnChangeRadio = e =>
+  {
+    this.setState({
+      StandGoods: e.target.value
+    });
+    // console.log("state : " + JSON.stringify(this.state, null, 4));
+  };
+
+
   render()
   {
+    const { StandGoods } = this.state;
+
     return (
       
       <div className="contain">
+      
         <div className="background_white">
       
             <div className="blueBox">
@@ -31,37 +48,97 @@ class Class_ChooseStand extends React.Component
                   
                     <div className="giftbox_Item col">
                       <div><img className="giftbox_ItemImg" src={img_stand01} /></div>
-                      <div className="giftbox_itemName">皇家刮鬍刀</div>
+                      
+                      <div style={{display: "flex", margin: "auto", width: "100px"}}>
+                        <input style={{margin: "auto"}}
+                          type="radio"
+                          value="1"
+                          onChange={this.OnChangeRadio}
+                          checked={StandGoods === "1"}
+                        />
+                        <div className="giftbox_itemName">皇家刮鬍刀</div>
+                      </div>
+                      
                       <div className="giftbox_itemPrice">NT$ 1580</div>
                     </div>
 
                     <div className="giftbox_Item col">
                       <div><img className="giftbox_ItemImg" src={img_stand02} /></div>
-                      <div className="giftbox_itemName">皇家刮鬍刀</div>
+
+                      <div style={{display: "flex", margin: "auto", width: "100px"}}>
+                        <input style={{margin: "auto"}}
+                          type="radio"
+                          value="2"
+                          onChange={this.OnChangeRadio}
+                          checked={StandGoods === "2"}
+                        />
+                        <div className="giftbox_itemName">皇家刮鬍刀</div>
+                      </div>
+
                       <div className="giftbox_itemPrice">NT$ 1580</div>
                     </div>
 
                     <div className="giftbox_Item col">
                       <div><img className="giftbox_ItemImg" src={img_stand03} /></div>
-                      <div className="giftbox_itemName">皇家刮鬍刀</div>
+                      
+                      <div style={{display: "flex", margin: "auto", width: "100px"}}>
+                        <input style={{margin: "auto"}}
+                          type="radio"
+                          value="3"
+                          onChange={this.OnChangeRadio}
+                          checked={StandGoods === "3"}
+                        />
+                        <div className="giftbox_itemName">皇家刮鬍刀</div>
+                      </div>
+                      
                       <div className="giftbox_itemPrice">NT$ 1580</div>
                     </div>
                   
                     <div className="giftbox_Item col">
                       <div><img className="giftbox_ItemImg" src={img_stand04} /></div>
-                      <div className="giftbox_itemName">皇家刮鬍刀</div>
+                      
+                      <div style={{display: "flex", margin: "auto", width: "100px"}}>
+                        <input style={{margin: "auto"}}
+                          type="radio"
+                          value="4"
+                          onChange={this.OnChangeRadio}
+                          checked={StandGoods === "4"}
+                        />
+                        <div className="giftbox_itemName">皇家刮鬍刀</div>
+                      </div>
+                      
                       <div className="giftbox_itemPrice">NT$ 1580</div>
                     </div>
 
                     <div className="giftbox_Item col">
                       <div><img className="giftbox_ItemImg" src={img_stand05} /></div>
-                      <div className="giftbox_itemName">皇家刮鬍刀</div>
+                      
+                      <div style={{display: "flex", margin: "auto", width: "100px"}}>
+                        <input style={{margin: "auto"}}
+                          type="radio"
+                          value="5"
+                          onChange={this.OnChangeRadio}
+                          checked={StandGoods === "5"}
+                        />
+                        <div className="giftbox_itemName">皇家刮鬍刀</div>
+                      </div>
+                      
                       <div className="giftbox_itemPrice">NT$ 1580</div>
                     </div>
                     
                     <div className="giftbox_Item col">
                       <div><img className="giftbox_ItemImg" src={img_stand06} /></div>
-                      <div className="giftbox_itemName">皇家刮鬍刀</div>
+                      
+                      <div style={{display: "flex", margin: "auto", width: "100px"}}>
+                        <input style={{margin: "auto"}}
+                          type="radio"
+                          value="6"
+                          onChange={this.OnChangeRadio}
+                          checked={StandGoods === "6"}
+                        />
+                        <div className="giftbox_itemName">皇家刮鬍刀</div>
+                      </div>
+                      
                       <div className="giftbox_itemPrice">NT$ 1580</div>
                     </div>
                     
