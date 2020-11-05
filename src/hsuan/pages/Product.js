@@ -127,8 +127,7 @@ class Product extends React.Component {
                   className="ButtonA finished"
                   data-anime="fadeIn"
                   data-anime-trigger='.top-BrandTile[data-index="2"]'
-                  data-anime-delay="2.9"
-                >
+                  data-anime-delay="2.9">
                   <span>MORE</span>
                 </a>
               </h2>
