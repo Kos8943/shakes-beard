@@ -348,7 +348,7 @@ body > .bounceInLeft{
   transform: perspective(1px) translateZ(0);
   box-shadow: 0 0 1px rgba(0, 0, 0, 0);
 }
-.topBtn:hover{
+.chad-topBtn:hover{
   background: hsla(228, 43%, 31%, 0.7);
   animation-name: giftBtn;
   animation-duration: 0.3s;
@@ -356,7 +356,7 @@ body > .bounceInLeft{
   animation-iteration-count: infinite;
   animation-direction: alternate;
 }
-.topBtn {
+.chad-topBtn {
   margin-top: 2%;
   display: inline-block;
   padding: 12px 40px;
@@ -366,8 +366,8 @@ body > .bounceInLeft{
   font: 20px PingFang;
   color: #ffffff;
   position: absolute;
-  right: 20%;
-  top: 22%;
+  right: 18%;
+  top: 24%;
 }
 
 
@@ -394,7 +394,7 @@ body > .bounceInLeft{
     position: relative;
   }
 
-  .topBtn {
+  .chad-topBtn {
     width: 144px;
     height: 46.4px;
     margin-top: 3%;
@@ -409,7 +409,7 @@ body > .bounceInLeft{
     right: 4%;
     top: 35%;
   }
-  .topBtn:hover {
+  .chad-topBtn:hover {
     background: hsla(228, 43%, 31%, 0.7);
   }
 }

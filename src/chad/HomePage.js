@@ -113,7 +113,7 @@ class HomePage extends React.Component {
                 />            
                 <p className="top-text">用我們獨有的工藝技術，為不甘平凡的您，點綴出更獨特的風格。</p>
 
-                <button class="topBtn">所有系列</button>
+                <button class="chad-topBtn">所有系列</button>
             </div>
 
 {/* 地圖 */}
