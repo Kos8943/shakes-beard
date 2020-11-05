@@ -71,7 +71,7 @@ class Class_ChooseStand extends React.Component
                   
 
                   <div className="Grid">
-                    <Button className="backButton" onClick=
+                    <Button className="separate backButton" onClick=
                       {     //React程式區間語法 (開始)
                         () =>
                         {
