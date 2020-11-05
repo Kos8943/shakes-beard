@@ -1,11 +1,10 @@
 import React, { useState, useEffect } from 'react'
-import { Link, Switch, useParams, Redirect } from 'react-router-dom'
+import { Link, Switch, useParams, Redirect, withRouter  } from 'react-router-dom'
 import Breadcrumb from '../components/Breadcrumb'
 import CatesAside from '../components/CatesAside'
 import InfoSection from '../components/InfoSection'
 import Description from '../components/Description'
 import Recommend from '../components/Recommend'
-import { Table,Tabs,Tab } from 'react-bootstrap'  
 import '../styles/shops.scss'
 
 function ShopDetail(props) {
@@ -37,11 +36,8 @@ function ShopDetail(props) {
           </div>
         </div>
       </div>
-      <div id="stop" className="scrollTop">
-        <span><a href="">向上</a></span>
-      </div>
       <div id="stop" className="helpdesk">
-        <span><a href="">客服</a></span>
+        <span><Link to="">客服</Link></span>
       </div>
     </>
   )
