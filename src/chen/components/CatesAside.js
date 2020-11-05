@@ -9,9 +9,9 @@ function CatesAside(props) {
           <Form.Row>
             <Form.Control type="text" className="col-10 col-sm-10 col-md-9"></Form.Control>
             <Form.Label className="p-1 mb-0 col-2 col-sm-2 col-md-3">
-              <a href="#">
+              {/* <a href="#"> */}
                 <svg xmlns="https://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#a69981" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" focusable="false" role="img"><title>Search</title><circle cx="10.5" cy="10.5" r="7.5"></circle><line x1="21" y1="21" x2="15.8" y2="15.8"></line></svg>
-              </a>
+              {/* </a> */}
             </Form.Label>
           </Form.Row>
         </Form.Group>

@@ -7,6 +7,7 @@ function InfoSection(props) {
   return (
     <>
           <img
+            alt="infosection-img"
             width={350}
             className="col-sm-12 col-md-6 mt-3"
             src={require('../img/card01.jpg')} 
