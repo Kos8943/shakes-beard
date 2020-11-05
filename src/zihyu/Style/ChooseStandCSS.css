@@ -7,9 +7,22 @@
 .giftbox_Item {
   width: 30%;
   height: auto;
-  margin: 10px;
   text-align: center;
 }
 .giftbox_ItemImg {
-  width: 150px;
+  width: 135px;
+}
+
+.giftbox_itemName {
+  color: #2d3b72;
+  font-family: PingFang;
+  font-size: 17px;
+  text-align: center;
+}
+
+.giftbox_itemPrice {
+  color: #2d3b72;
+  font-family: Roboto;
+  font-size: 16px;
+  text-align: center;
 }

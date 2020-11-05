@@ -1,5 +1,4 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
 import { Media } from 'react-bootstrap'
 import '../styles/shops.scss'
 
@@ -9,6 +8,7 @@ function Description(props) {
     <>
       <Media className="mb-3">
         <img
+          alt="description-img"
           width={200}
           className="mr-3"
           src={require('../img/card01.jpg')} 

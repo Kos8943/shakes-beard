@@ -10,18 +10,21 @@ import { Button } from 'react-bootstrap'
  */
 import 'react-bootstrap-range-slider/dist/react-bootstrap-range-slider.css';
 import RangeSlider from 'react-bootstrap-range-slider';
+import { auto } from '@popperjs/core';
  
 const Step = () => {
 
   const [ value, setValue ] = React.useState(50);
 
   return (
-    <RangeSlider
+    <div style={{width: "80%", margin: "auto"}}>
+    <RangeSlider className="silderbox"
       value={value}
       onChange={e => setValue(e.target.value)}
       step={50}
       tooltip='off'
     />
+    </div>
   );
 
 };
@@ -40,23 +43,27 @@ class Class_Budget extends React.Component
                   <div className="Title2">選擇預算</div>
                   <div className="lineTop"></div>
                   <div className="lineDown"></div>
+
                   <div><img className="budget_boxImg" src={img_box} /></div>
 
                   <Step></Step>
 
-                  <div className="ramge3000">小於<br/>3000元</div>
-                  <div className="ramge3000to4000">3000元~4000元</div>
-                  <div className="ramge4000">大於<br/>4000元</div>
+                  <div className="Grid align-items-center">
+                    <div className="ramgeNumber ramge3000 col">小於<br/>3000元</div>
+                    <div className="ramgeNumber ramge3000to4000 col-7">3000元~4000元</div>
+                    <div className="ramgeNumber ramge4000 col">大於<br/>4000元</div>
+                  </div>
                   
                   <div><Button className="startButton" onClick=
-                  {     //React程式區間語法 (開始)
-                    () =>
-                    {
-                      window.open("/Path_ChooseRazor", '_self');
-                    }
-                  }     //React程式區間語法 (結束)
-                
-                  > 下一步 </Button></div>
+                    {     //React程式區間語法 (開始)
+                      () =>
+                      {
+                        window.open("/Path_ChooseRazor", '_self');
+                      }
+                    }     //React程式區間語法 (結束)
+                  
+                    > 下一步 </Button>
+                  </div>
                 </div>
               </div>
           </div> 

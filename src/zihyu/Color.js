@@ -22,34 +22,36 @@ class Class_Color extends React.Component
                   <div className="lineDown"></div>
 
                   <div><img className="color_boxImg" src={img_box} /></div>
-                  <button className="color_button1"></button>
-                  <button className="color_button2"></button>
-                  <button className="color_button3"></button>
-                  <button className="color_button4"></button>
-                  <button className="color_button5"></button>
-                  <div className="message_card">留言小卡內容：</div>
+                  <div className="color_button">
+                    <button className="change color_button1"></button>
+                    <button className="change color_button2"></button>
+                    <button className="change color_button3"></button>
+                    <button className="change color_button4"></button>
+                    <button className="change color_button5"></button>
+                  </div>
+                  <div className="message_title">留言小卡內容：</div>
                   <input className="message"></input>
 
                   <div className="Grid">
-                  <Button className="backButton" onClick=
+                    <Button className="separate backButton" onClick=
+                      {     //React程式區間語法 (開始)
+                        () =>
+                        {
+                          window.open("/Path_ChooseStand", '_self');
+                        }
+                      }     //React程式區間語法 (結束)
+                    
+                    > 上一步 </Button>
+
+                    <Button className="startButton" onClick=
                     {     //React程式區間語法 (開始)
                       () =>
                       {
-                        window.open("/Path_ChooseStand", '_self');
+                        window.open("/Path_Finish", '_self');
                       }
                     }     //React程式區間語法 (結束)
                   
-                  > 上一步 </Button>
-
-                  <Button className="startButton" onClick=
-                  {     //React程式區間語法 (開始)
-                    () =>
-                    {
-                      window.open("/Path_Finish", '_self');
-                    }
-                  }     //React程式區間語法 (結束)
-                
-                > 完成 </Button>
+                  > 完成 </Button>
                 </div>
                   
                 </div>

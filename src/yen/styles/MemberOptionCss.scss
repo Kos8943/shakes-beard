@@ -3,7 +3,7 @@
 }
 
 .leftArea {
-  //   border: 1px solid red;
+  // border: 1px solid red;
   margin-top: 120px;
 }
 
@@ -21,19 +21,21 @@
   border-top: 3px solid #a69981;
   border-bottom: 1px solid #a69981;
   margin: 30px 0 30px 0;
+  // background-color: #faf;
+  width: 100%;
 }
 
 .option {
   margin-bottom: 40px;
   font-size: 1.25rem;
-  cursor: pointer
+  cursor: pointer;
 }
 
 // .option:hover{
 //   color: #f25d50;
 // }
 
-.thisPage{
+.thisPage {
   color: #f25d50;
 }
 
@@ -41,7 +43,6 @@
   font-size: 2rem;
   margin-left: 55px;
 }
-
 
 .updateArea {
   // border: 1px solid red;
@@ -53,11 +54,11 @@
   margin: 5px 0 10px 0;
 }
 
-.birthday{
+.birthday {
   margin: 5px 5px 10px 0;
 }
 
-.birthdayText{
+.birthdayText {
   margin: 5px 5px 10px 0;
 }
 
@@ -84,3 +85,45 @@
   border-radius: 4px;
 }
 
+.PhoneIcon {
+  display: none;
+}
+
+@media (max-width: 800px) {
+  .html {
+    font-size: 12px;
+  }
+
+  .userName {
+    font-size: 2rem;
+    margin-top: 15px;
+  }
+
+  .leftArea {
+    // border: 1px solid red;
+    margin-top: 0;
+    display: flex;
+  }
+
+  .option {
+    font-size: 1rem;
+    margin: 0 5px;
+    display: flex;
+  }
+
+  .decLine {
+    height: 8px;
+    border-top: 3px solid #a69981;
+    border-bottom: 1px solid #a69981;
+    margin: 10px 0 0px 0;
+    // background-color: #faf;
+    width: 100%;
+  }
+
+  .PhoneIcon {
+    width: 50px;
+    height: 50px;
+    display: block;
+    margin: 5px 0 0 0;
+  }
+}

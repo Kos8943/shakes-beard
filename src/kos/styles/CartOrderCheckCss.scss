@@ -1,0 +1,102 @@
+.OrderTableCss {
+    border: 1px solid #2D3B72;
+    font-size: 1.1rem;
+    text-align: center;
+}
+
+.OrderTableWidth {
+    width: 16%;
+}
+
+.OrderCheckSid {
+    margin-bottom: 0;
+}
+
+.OrderCheckDate {
+    width: 20%;
+    border-radius: 2px 0 0 0;
+}
+
+.OrderCheckReturn {
+    width: 16%;
+    border-radius: 0 2px 0 0;
+}
+
+.OrderCheckReturn2 {
+    border-radius: 0 0 2px 0;
+}
+
+.OrderCheckDate2 {
+    width: 20%;
+    border-radius: 0 0 0 2px;
+}
+
+.OrderCheckDetailsText {
+    font-size: 1.1rem;
+    margin-right: 1%;
+    // background-color: #faf;
+    margin-bottom: 2%;
+}
+
+.OrderCheckDetails {
+    width: 30px;
+    height: 30px;
+    background-color: #2D3B72;
+    border-radius: 50%;
+    color: #f8f8f8;
+    text-align: center;
+}
+
+.OrderCheckDetailsUpArrow {
+    width: 20px;
+    height: 20px;
+    color: #f8f8f8;
+}
+
+.OrderCheckLine {
+    width: 100%;
+    height: 2px;
+    margin-bottom: 2%;
+    background-color: #a69981;
+}
+
+.OrderCheck.cartItem {
+    width: 98%;
+    height: 100px;
+    background-color: #f8f8f8;
+    padding: .5rem;
+    margin-bottom: 2%;
+    
+}
+.OrderCheck.itemImg{
+    height: 100%;
+    width: 12%;
+    background-color: #ccc;
+    margin-right: 3%;
+}
+
+.OrderCheck.itemName {
+    font-size: .8rem;
+    margin-right: 9%;
+}
+
+.OrderCheck .unitPrice {
+    margin: auto 0;
+    font-size: .8rem;
+    margin-right: 9%;
+}
+
+.OrderCheck.subtotal {
+    margin: auto 0;
+    font-size: .8rem;
+    margin-right: 4%;
+    color: #2D3B72;
+}
+
+.OrderCheck .productTpye {
+    font-size: .8rem;
+}
+
+.OrderCheck .amount {
+    font-size: .8rem;
+}
