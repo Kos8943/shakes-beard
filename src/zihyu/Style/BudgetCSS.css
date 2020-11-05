@@ -1,6 +1,6 @@
 .budget_boxImg {
-  height: 165px;
-  margin-top: 50px;
+  height: 220px;
+  margin-top: 30px;
 }
 .ramgeNumber {
   color: #2d3b72;
@@ -9,4 +9,16 @@
   text-align: center;
   display: flex;
   justify-content: center;
+}
+
+.silderbox {
+  margin-top: 15px;
+}
+
+.Grid {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  height: auto;
+  margin-bottom: 24px;
 }
