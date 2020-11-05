@@ -1,6 +1,5 @@
 import React from 'react'
-import { Nav,Form,InputGroup } from 'react-bootstrap'
-import '../styles/shops.scss'
+import { Nav,Form } from 'react-bootstrap'
 
 function CatesAside(props) {
   console.log('CatesAside', props)
@@ -17,7 +16,7 @@ function CatesAside(props) {
           </Form.Row>
         </Form.Group>
         <Nav className="sideNav">
-          <Nav.Link href="#">所有商家</Nav.Link>
+          <Nav.Link href="#" active>所有商家</Nav.Link>
           <Nav.Link href="/shopdetail/">特價優惠</Nav.Link>
           <Nav.Link href="/shopdetail/" eventKey="link-1">男士理髮</Nav.Link>
           <Nav.Link href="/shopdetail/" eventKey="link-2">男士修容</Nav.Link>

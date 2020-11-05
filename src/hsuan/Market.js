@@ -2,10 +2,10 @@ import React from "react";
 import "./Project.css";
 // import original from './icon/original.jpg';
 // import Breadcrumb from './component/Breadcrumb'
-import Pagination from './component/Pagination'
+// import Pagination from './component/Pagination'
 import CatesAside from './component/CatesAside'
 import Cards from './component/Cards'
-import Sorts from './component/Sorts'
+// import Sorts from './component/Sorts'
 // import Cates from './component/Cates'
 import Banner from './component/Banner'
 import {

@@ -1,10 +1,32 @@
 import React from 'react'
 import './Style/BudgetCSS.css';
-import img from './image/box.png';
+import './Style/CommonCSS.css';
+import img_box from './image/box.png';
 import { Button } from 'react-bootstrap'
+
+/** 安裝Slider (https://www.npmjs.com/package/react-bootstrap-range-slider)
+ * Example (https://jaywilz.github.io/react-bootstrap-range-slider/)
+ * npm install react-bootstrap-range-slider
+ */
+import 'react-bootstrap-range-slider/dist/react-bootstrap-range-slider.css';
+import RangeSlider from 'react-bootstrap-range-slider';
+ 
+const Step = () => {
+
+  const [ value, setValue ] = React.useState(50);
+
+  return (
+    <RangeSlider
+      value={value}
+      onChange={e => setValue(e.target.value)}
+      step={50}
+      tooltip='off'
+    />
+  );
+
+};
+
 class Class_Budget extends React.Component
-
-
 {
   render()
   {
@@ -18,8 +40,14 @@ class Class_Budget extends React.Component
                   <div className="Title2">選擇預算</div>
                   <div className="lineTop"></div>
                   <div className="lineDown"></div>
-                  <div><img className="budget_boxImg" src={img} /></div>
+                  <div><img className="budget_boxImg" src={img_box} /></div>
 
+                  <Step></Step>
+
+                  <div className="ramge3000">小於<br/>3000元</div>
+                  <div className="ramge3000to4000">3000元~4000元</div>
+                  <div className="ramge4000">大於<br/>4000元</div>
+                  
                   <div><Button className="startButton" onClick=
                   {     //React程式區間語法 (開始)
                     () =>

@@ -7,13 +7,14 @@ function Cards(props) {
   console.log('Cards', props)
   return (
     <>
-      <div className="card col-12 col-sm-6 col-md-6 col-lg-4 p-0 mb-3">
-        <Link to="#" className="todetail">
+    <div className="col-12 col-sm-6 col-md-6 col-lg-4 p-0">
+      <div className="shopcard">
+        {/* <Link to="#" className="todetail"> */}
           <img src={require('../img/card01.jpg')} className="card-img-top" alt="..." />
-        </Link>
+        {/* </Link> */}
         <div className="card-body p-2">
-          <h5 className="card-title mb-1">Sculptor Barber</h5> 
-            <Badge pill variant="secondary">
+          <h5 className="card-title mb-1">Sculptor Barber</h5>
+             <Badge pill variant="secondary">
               男士理髮廳
             </Badge>
             <Badge pill variant="secondary">
@@ -25,6 +26,8 @@ function Cards(props) {
           </Link>
         </div>
       </div>
+    </div>
+      
     </>
   )
 }
