@@ -8,17 +8,14 @@ class Class_ChooseRazor extends React.Component
 
 {
   render()
-  {
-    const MyString = 'Hello';
-    
+  {  
     return (
       <>
       <div className="contain">
         <div className="background_white">
       
-          <div className="blueBox">
-              <div className="whiteBox">
-                <div className="step">Step.2
+          <div className="blueBox1">
+            <div className="step">Step.2
                   <div className="Title2">選擇刮鬍刀</div>
                   <div className="lineTop"></div>
                   <div className="lineDown"></div>
@@ -43,9 +40,8 @@ class Class_ChooseRazor extends React.Component
                 
                 > 下一步 </Button>
 
-                  
-                </div>
-              </div>
+            </div>      
+            
           </div> 
 
         </div> 

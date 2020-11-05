@@ -84,9 +84,9 @@
 }
 
 .lineDown {
-  width: 100%;
+  width: 455px;
   border-top: solid #2d3b72 3px;
-  margin: 2px 0 0 0;
+  margin: 2px auto;
 }
 
 .separate {
