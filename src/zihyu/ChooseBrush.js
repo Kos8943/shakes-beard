@@ -22,7 +22,7 @@ class Class_ChooseBrush extends React.Component
                   <div className="lineTop"></div>
                   <div className="lineDown"></div>
 
-                  <Button className="backButton" onClick=
+                  <Button className="separate backButton" onClick=
                     {     //React程式區間語法 (開始)
                       () =>
                       {

@@ -21,7 +21,7 @@ function Cards(props) {
               台北市大安區
             </Badge>
           <p className="card-text mb-2">提供男士理髮、染髮、護髮等服務</p>
-          <Link to="#" className="linktodetail">
+          <Link to="/shopdetail/" className="linktodetail">
             詳細內容
           </Link>
         </div>
