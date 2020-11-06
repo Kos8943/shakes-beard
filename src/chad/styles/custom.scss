@@ -139,6 +139,15 @@ body > .bounceInLeft {
   width: 100%;
   height: 100%;
 }
+.gift-img1 {
+  width: 100%;
+  height: 100%;
+  display: none;
+}
+
+
+
+
 .gift-text-area {
   position: absolute;
   right: 15%;
@@ -150,6 +159,19 @@ body > .bounceInLeft {
   color: #f8f8f8;
   text-align: center;
   line-height: 30px;
+}
+.gift-text-area1 {
+  position: absolute;
+  right: 8%;
+  bottom: 40%;
+  background-color: hsla(228, 43%, 31%, 0.7);
+  border-radius: 4px;
+  width: 50%;
+  height: 50%;
+  color: #f8f8f8;
+  text-align: center;
+  line-height: 10px;
+  display: none;
 }
 
 .gift-text {
@@ -196,15 +218,25 @@ body > .bounceInLeft {
   right: 21%;
   bottom: 33%;
 }
+.giftBtn1{
+  display: none;
+}
 
 //禮物 手機板
 @media (max-width: 700px) {
   .gift-area {
     position: relative;
   }
+  .gift-img1 {
+    width: 100%;
+    height: 100%;
+    display: block;
+  }
+  
   .gift-img {
     width: 414px;
     height: 300px;
+    display: none;
   }
   .gift-title {
     font-size: 1rem;
@@ -220,13 +252,28 @@ body > .bounceInLeft {
     color: #f8f8f8;
     text-align: center;
     line-height: 10px;
+    display: none;
   }
-
+  .gift-text-area1 {
+    position: absolute;
+    right: 8%;
+    bottom: 40%;
+    background-color: hsla(228, 43%, 31%, 0.7);
+    border-radius: 4px;
+    width: 50%;
+    height: 55%;
+    color: #f8f8f8;
+    text-align: center;
+    line-height: 10px;
+    display: block;
+    
+  }
   .gift-text {
     word-break: keep-all;
     font-size: 0.5rem;
     text-overflow: clip;
     line-height: 30px;
+   
   }
 
   .giftBtn {
@@ -240,9 +287,23 @@ body > .bounceInLeft {
     position: absolute;
     right: 15%;
     bottom: 10%;
+    display: none;
   }
   .giftBtn:hover {
     background: hsla(228, 43%, 31%, 1);
+  }
+  .giftBtn1{
+    display: block;
+    display: inline-block;
+    padding: 12px 40px;
+    border-radius: 4px;
+    border: 0px;
+    background: hsla(228, 43%, 31%, 0.7);
+    font: 16px PingFang;
+    color: #ffffff;
+    position: absolute;
+    right: 15%;
+    bottom: 10%;
   }
 }
 
@@ -335,13 +396,17 @@ body > .bounceInLeft {
   right: 18%;
   line-height: 40px;
 }
-
+.top-text1{
+  display: none;
+}
 .top-img {
   position: relative;
   width: 100%;
   height: 100%;
 }
-
+.top-img1{
+  display: none;
+}
 .topBtn {
   display: inline-block;
   vertical-align: middle;
@@ -369,7 +434,9 @@ body > .bounceInLeft {
   right: 20%;
   top: 22%;
 }
-
+.chad-topBtn1{
+  display: none;
+} 
 //熱銷 手機板
 @media (max-width: 700px) {
   .top-text {
@@ -381,6 +448,18 @@ body > .bounceInLeft {
     top: 10%;
     right: 23%;
     line-height: 25px;
+    display: none;
+  }
+  .top-text1 {
+    word-break: keep-all;
+    font-size: 12px;
+    text-overflow: clip;
+    width: 15%;
+    position: absolute;
+    top: 10%;
+    right: 20%;
+    line-height: 25px;
+    display: block;
   }
   .gift-area {
     width: 100%;
@@ -390,8 +469,14 @@ body > .bounceInLeft {
     width: 414px;
     height: 300px;
     position: relative;
+    display: none;
   }
-
+  .top-img1{
+    width: 414px;
+    height: 300px;
+    position: relative;
+    display: block;
+  }
   .chad-topBtn {
     width: 144px;
     height: 46.4px;
@@ -406,6 +491,23 @@ body > .bounceInLeft {
     position: absolute;
     right: 4%;
     top: 35%;
+    display: none;
+  }
+  .chad-topBtn1 {
+    width: 144px;
+    height: 46.4px;
+    margin-top: 3%;
+    display: inline-block;
+    padding: 12px 40px;
+    border-radius: 4px;
+    border: 0px;
+    background: hsla(228, 43%, 31%, 1);
+    font: 16px PingFang;
+    color: #ffffff;
+    position: absolute;
+    right: 4%;
+    top: 35%;
+    display: block;
   }
   .chad-topBtn:hover {
     background: hsla(228, 43%, 31%, 0.7);
