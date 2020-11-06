@@ -17,8 +17,7 @@ class Class_Gift extends React.Component
         <div><img className="Img_Left" src={img_Left} /></div>
         <div><img className="Img_Right" src={img_Right} /></div>
                 
-          <div className="blueBox">
-            <div className="whiteBox">
+          <div className="blueBox1">
               <div className="line-top">
                 <div className="line-under"></div>
                 <div className="title">客製化修容禮盒</div>
@@ -42,10 +41,8 @@ class Class_Gift extends React.Component
               > 開始製作 </Button></div>
 
 
-              </div>
             </div>
-          </div> 
-
+          </div>
         </div> 
 
       </div>     
