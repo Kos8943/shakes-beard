@@ -17,7 +17,7 @@ const Step = () => {
   const [ value, setValue ] = React.useState(50);
 
   return (
-    <div style={{width: "80%", margin: "auto"}}>
+    <div style={{width: "60%", margin: "auto"}}>
     <RangeSlider className="silderbox"
       value={value}
       onChange={e => setValue(e.target.value)}
@@ -37,37 +37,35 @@ class Class_Budget extends React.Component
       <div className="contain">
         <div className="background_white">
       
-          <div className="blueBox">
-              <div className="whiteBox">
+          <div className="blueBox1">
                 <div className="step">Step.1
-                  <div className="Title2">選擇預算</div>
-                  <div className="lineTop"></div>
-                  <div className="lineDown"></div>
+                    <div className="Title2">選擇預算</div>
+                    <div className="lineTop"></div>
+                    <div className="lineDown"></div>
 
-                  <div><img className="budget_boxImg" src={img_box} /></div>
+                    <div><img className="budget_boxImg" src={img_box} /></div>
 
-                  <Step></Step>
+                    <Step></Step>
 
-                  <div className="budget_Grid align-items-center">
-                    <div className="ramgeNumber ramge3000 col">小於<br/>3000元</div>
-                    <div className="ramgeNumber ramge3000to4000 col-7">3000元~4000元</div>
-                    <div className="ramgeNumber ramge4000 col">大於<br/>4000元</div>
-                  </div>
-                  
-                  <div><Button className="startButton" onClick=
-                    {     //React程式區間語法 (開始)
-                      () =>
-                      {
-                        window.open("/Path_ChooseRazor", '_self');
-                      }
-                    }     //React程式區間語法 (結束)
-                  
-                    > 下一步 </Button>
-                  </div>
+                    <div className="budget_Grid align-items-center">
+                      <div className="ramgeNumber ramge3000 col">小於<br/>3000元</div>
+                      <div className="ramgeNumber ramge3000to4000 col-7">3000元~4000元</div>
+                      <div className="ramgeNumber ramge4000 col">大於<br/>4000元</div>
+                    </div>
+                    
+                    <div style={{margin: "16px auto"}}>
+                      <Button className="startButton" onClick=
+                        {     //React程式區間語法 (開始)
+                          () =>
+                          {
+                            window.open("/Path_ChooseRazor", '_self');
+                          }
+                        }     //React程式區間語法 (結束)
+                      
+                        > 下一步 </Button>
+                    </div>
                 </div>
-              </div>
-          </div> 
-
+          </div>
         </div> 
 
       </div>     

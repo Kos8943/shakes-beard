@@ -42,7 +42,7 @@ class Class_ChooseBrush extends React.Component
                   <div className="lineDown"></div>
 
 
-                  <div className="Grid" style={{margin: "10px auto"}}>
+                  <div className="giftbox_Grid" style={{margin: "10px auto"}}>
                   
                     <div className="giftbox_Item col">
                       <div><img className="giftbox_ItemImg" src={img_Brush01} /></div>

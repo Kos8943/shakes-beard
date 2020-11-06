@@ -41,7 +41,7 @@ class Class_ChooseRazor extends React.Component
                   <div className="lineDown"></div>
 
 
-                <div className="Grid align-items-center">
+                <div className="giftbox_Grid align-items-center">
                   
                     <div className="giftbox_Item col">
                       <div><img className="giftbox_ItemImg" src={img_Razor01} /></div>
@@ -90,9 +90,10 @@ class Class_ChooseRazor extends React.Component
                       
                       <div className="giftbox_itemPrice">NT$ 1090</div>
                     </div>
+                </div>
 
                   
-                  <div className="Grid align-items-center" style={{margin: "15px auto 0px"}}>
+                <div className="giftbox_Grid align-items-center" style={{margin: "15px auto 0px"}}>
                     <div className="giftbox_Item col">
                       <div><img className="giftbox_ItemImg" src={img_Razor04} /></div>
                       
@@ -141,9 +142,9 @@ class Class_ChooseRazor extends React.Component
                       <div className="giftbox_itemPrice">NT$ 1650</div>
                     </div>
                   
-                  </div>
-                    
                 </div>
+                    
+                
 
                 
 

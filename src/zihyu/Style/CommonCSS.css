@@ -12,25 +12,15 @@
   align-items: center;
 }
 
-.blueBox {
-  background-color: #2d3b72;
-  width: 633.73px;
-  height: 605.71px;
-  z-index: 1;
+.blueBox1 {
+  background-color: white;
+  border: #2d3b72 solid 6px;
+  width: 633px;
+  height: 605px;
   position: absolute;
-  display: flex;
+  display: block;
   justify-content: center;
   align-items: center;
-}
-
-.whiteBox {
-  background-color: white;
-  width: 621.87px;
-  height: 593px;
-  z-index: 1;
-  position: absolute;
-  display: flex;
-  justify-content: center;
 }
 
 .startButton {
@@ -95,11 +85,12 @@
 }
 
 /* 商品選擇區 */
-.Grid {
+.giftbox_Grid {
   display: flex;
   flex-wrap: wrap;
-  width: 100%;
+  width: 85%;
   height: auto;
+  margin: auto;
 }
 .giftbox_Item {
   width: 30%;

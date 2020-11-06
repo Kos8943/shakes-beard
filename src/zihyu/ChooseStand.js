@@ -33,17 +33,15 @@ class Class_ChooseStand extends React.Component
     return (
       
       <div className="contain">
-      
         <div className="background_white">
       
-            <div className="blueBox">
-              <div className="whiteBox">
+          <div className="blueBox1">
                 <div className="step">Step.4
                 <div className="Title2">選擇修容架</div>
                 <div className="lineTop"></div>
                 <div className="lineDown"></div>
 
-                  <div className="Grid">
+                  <div className="giftbox_Grid">
                   
                     <div className="giftbox_Item col">
                       <div><img className="giftbox_ItemImg" src={img_stand01} /></div>
@@ -172,8 +170,8 @@ class Class_ChooseStand extends React.Component
                 </div>
               </div>
             </div>  
-        </div> 
-      </div>
+      </div> 
+
       
 
 
