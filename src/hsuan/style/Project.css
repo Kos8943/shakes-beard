@@ -1,11 +1,4 @@
 @charset "UTF-8";
-/*!
- * Bootstrap Reboot v4.1.3 (https://getbootstrap.com/)
- * Copyright 2011-2018 The Bootstrap Authors
- * Copyright 2011-2018 Twitter, Inc.
- * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
- * Forked from Normalize.css, licensed MIT (https://github.com/necolas/normalize.css/blob/master/LICENSE.md)
- */
 *,
 *::before,
 *::after {
@@ -13,7 +6,7 @@
 }
 
 html {
-  font-family: sans-serif;
+font-family: 'PingFang';
   line-height: 1.15;
   -webkit-text-size-adjust: 100%;
   -ms-text-size-adjust: 100%;
@@ -21,14 +14,18 @@ html {
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
 
+
 @-ms-viewport {
   width: device-width;
 }
 
+article, aside, figcaption, figure, footer, header, hgroup, main, nav, section {
+  display: block;
+}
 
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  font-family: 'PingFang';
   font-size: 1rem;
   font-weight: 400;
   line-height: 1.5;
@@ -40,7 +37,6 @@ body {
 [tabindex="-1"]:focus {
   outline: 0 !important;
 }
-
 
 hr {
   box-sizing: content-box;
@@ -159,7 +155,7 @@ pre,
 code,
 kbd,
 samp {
-  font-family: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+    font-family: 'PingFang';
   font-size: 1em;
 }
 
@@ -344,15 +340,9 @@ html {
   font-size: 62.5%;
   height: 100%;
 }
-.visible, .invisible {
-  opacity: 0.0;
-  transition: opacity 0.5s ease;
-}
-.visible {
-  opacity: 1.0;
-}
+
 body {
-  font-family: "Hiragino Kaku Gothic ProN", "ヒラギノ角ゴ ProN W3", "Hiragino Kaku Gothic Pro", "ヒラギノ角ゴ Pro W3", "游ゴシック体", "Yu Gothic", YuGothic, "Segoe UI", "メイリオ", Meiryo, "ＭＳ Ｐゴシック", sans-serif;
+    font-family: 'PingFang';
   font-weight: 300;
   line-height: 1.5;
   color: #333;
@@ -371,9 +361,9 @@ a {
   text-decoration: underline;
 }
 
-/* a:link, a:visited {
+a:link, a:visited {
   color: #1c7ae3;
-} */
+}
 
 a:hover, a:active {
   text-decoration: none;
@@ -460,6 +450,8 @@ h1, h2, h3, h4, h5 {
   display: block;
   margin-left: auto;
   margin-right: auto;
+  opacity: 1; 
+  width: 3300px;
 }
 
 .slick-track:before, .slick-track:after {
@@ -517,28 +509,6 @@ h1, h2, h3, h4, h5 {
 }
 
 
-
-
-
-/* Arrows */
-.slick-prev,
-.slick-next {
-  position: absolute;
-  display: block;
-  height: 20px;
-  width: 20px;
-  line-height: 0px;
-  font-size: 0px;
-  cursor: pointer;
-  background: transparent;
-  color: transparent;
-  top: 50%;
-  transform: translate(0, -50%);
-  padding: 0;
-  border: none;
-  outline: none;
-}
-
 .slick-prev:hover, .slick-prev:focus,
 .slick-next:hover,
 .slick-next:focus {
@@ -560,7 +530,7 @@ h1, h2, h3, h4, h5 {
 
 .slick-prev:before,
 .slick-next:before {
-  font-family: "slick";
+ font-family: 'PingFang';
   font-size: 20px;
   line-height: 1;
   color: white;
@@ -658,7 +628,7 @@ h1, h2, h3, h4, h5 {
   content: "•";
   width: 20px;
   height: 20px;
-  font-family: "slick";
+ font-family: 'PingFang';
   font-size: 6px;
   line-height: 20px;
   text-align: center;
@@ -673,9 +643,7 @@ h1, h2, h3, h4, h5 {
   opacity: 0.75;
 }
 
-/*
- * <a href="#" class="ButtonA"><span>MORE</span></a>
- */
+/* 購物車按鈕 */
 .ButtonA {
   position: relative;
   display: flex;
@@ -683,11 +651,12 @@ h1, h2, h3, h4, h5 {
   justify-content: center;
   height: 46px;
   width: 175px;
-  margin-left: auto;
+  margin-left: 1px;
   margin-right: auto;
+  margin-top: 30px;
   border-radius: 2px;
   background-color: transparent;
-  font-family: 'Oswald', sans-serif;
+  font-family: 'PingFang';
   font-weight: 300;
   color: inherit;
   font-size: 15px;
@@ -696,16 +665,15 @@ h1, h2, h3, h4, h5 {
 }
 
 .ButtonA:before {
-  box-shadow: 7px 7px 14px rgba(201, 177, 181, 0.3), -7px -7px 14px rgb(116, 100, 100);
+  box-shadow: 7px 7px 1px rgba(201, 177, 181, 0.055), -2px -2px 7px #A69981;
 }
 
 .ButtonA:after {
-  box-shadow: inset 4px 4px 8px rgba(201, 177, 181, 0.062), inset -4px -4px 12px #A69981
-  ;
+  box-shadow: inset 4px 4px 8px rgba(201, 177, 181, 0.3), inset -4px -4px 8px white;
 }
 
 .ButtonA > span:before, .ButtonA > span:after {
-  background-color: #595452;
+  background-color: #b59da1;
 }
 
 .ButtonA:before {
@@ -755,13 +723,13 @@ h1, h2, h3, h4, h5 {
   left: 20px;
   transform-origin: 100% 50%;
 }
-
+/* 按鈕 */
 .ButtonA > span:before {
-  transform: rotate(-50deg);
+  transform: rotate(-45deg);
 }
 
 .ButtonA > span:after {
-  transform: rotate(50deg);
+  transform: rotate(50deg );
 }
 
 a.ButtonA {
@@ -794,14 +762,14 @@ a.ButtonA {
   .ButtonA {
     height: 40px;
     width: 150px;
-    border-radius: 2px;
+    border-radius: 20px;
     font-size: 13px;
   }
   .ButtonA:before {
-    border-radius: 2px;
+    border-radius: 20px;
   }
   .ButtonA:after {
-    border-radius: 2px;
+    border-radius: 20px;
   }
   .ButtonA > span:before, .ButtonA > span:after {
     width: 7px;
@@ -823,7 +791,7 @@ a.ButtonA {
 }
 
 .ButtonA--lilac {
-  background: #ffffff;
+  background: #FCF6F3;
 }
 
 .ButtonA--ext i:before {
@@ -851,7 +819,184 @@ a.ButtonA {
     height: 12px;
   }
 }
+/* 追蹤按鈕 */
+.ButtonA1 {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 46px;
+  width: 175px;
+  /* margin-left: auto; */
+  margin-right: auto;
+  margin-top: 10px;
+  border-radius: 2px;
+  background-color: transparent;
+  font-family: 'PingFang';
+  font-weight: 300;
+  color: inherit;
+  font-size: 15px;
+  letter-spacing: 0.15em;
+  transition: 0.3s box-shadow;
+  
+}
 
+.ButtonA1:before {
+  box-shadow: 7px 7px 1px rgba(201, 177, 181, 0.055), -2px -2px 7px #A69981;;
+}
+
+.ButtonA1:after {
+  box-shadow: inset 4px 4px 8px rgba(201, 177, 181, 0.3), inset -4px -4px 8px white;
+}
+
+.ButtonA1 > span:before, .ButtonA1 > span:after {
+  background-color: #b59da1;
+}
+
+.ButtonA1:before {
+  content: '';
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  border-radius: 2px;
+  transition: 0.3s opacity;
+  opacity: 1;
+}
+
+.ButtonA1:after {
+  content: '';
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  border-radius: 2px;
+  transition: opacity 0.3s , box-shadow 0.3s;
+  opacity: 0;
+  mix-blend-mode: multiply;
+}
+
+.ButtonA1 > span {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+/* 
+.ButtonA1 > span:before, .ButtonA1 > span:after {
+  content: '';
+  display: block;
+  position: absolute;
+  height: 1px;
+  width: 10px;
+  top: 50%;
+  left: 20px;
+  transform-origin: 100% 50%;
+} */
+/* 追蹤按鈕 */
+/* .ButtonA1 > span:before {
+  transform: rotate(-50deg);
+}
+
+.ButtonA1 > span:after {
+  transform: rotate(50deg);
+} */
+
+a.ButtonA1 {
+  color: inherit;
+  text-decoration: none;
+}
+
+@media screen and (min-width: 960px) {
+  .ButtonA1:hover {
+    cursor: pointer;
+  }
+  .ButtonA1:hover:before {
+    opacity: 0;
+  }
+  .ButtonA1:hover:after {
+    opacity: 1;
+  }
+}
+
+@media screen and (max-width: 959px) {
+  .ButtonA1:active:before {
+    opacity: 0;
+  }
+  .ButtonA1:active:after {
+    opacity: 1;
+  }
+}
+
+@media screen and (max-width: 559px) {
+  .ButtonA1 {
+    height: 40px;
+    width: 150px;
+    border-radius: 20px;
+    font-size: 13px;
+  }
+  .ButtonA1:before {
+    border-radius: 20px;
+  }
+  .ButtonA1:after {
+    border-radius: 20px;
+  }
+  .ButtonA1 > span:before, .ButtonA1 > span:after {
+    width: 7px;
+    left: 10px;
+  }
+}
+
+.ButtonA1--l {
+  width: 244px;
+  letter-spacing: 0.075em;
+}
+
+.ButtonA1--l > span {
+  padding-left: 1em;
+}
+
+.ButtonA1--l > span:before, .ButtonA1--l > span:after {
+  left: 10px;
+}
+
+.ButtonA1--lilac {
+  background: #FCF6F3;
+}
+
+.ButtonA1--ext i:before {
+  content: '';
+  display: block;
+  position: absolute;
+  right: 20px;
+  top: 50%;
+  width: 17px;
+  height: 15px;
+ 
+  transform: translateY(-50%);
+}
+
+@media screen and (max-width: 959px) {
+  .ButtonA1--ext > span {
+    top: -1px;
+  }
+  .ButtonA1--ext > span:before, .ButtonA1--ext > span:after {
+    width: 7px;
+    left: 10px;
+  }
+  .ButtonA1--ext i:before {
+    right: 10px;
+    width: 15px;
+    height: 12px;
+  }
+}
 /*
 <section class="PageTitle">
 	<p class="en">COMPANY</p>
@@ -885,7 +1030,7 @@ a.ButtonA {
   font-family: 'PingFang';
   font-size: 80px;
   line-height: 1;
-  color: #595452;
+  color: #b59da1;
 }
 
 .PageTitle .en:after {
@@ -894,27 +1039,27 @@ a.ButtonA {
   width: 64px;
   height: 1px;
   margin: 18px auto 26px;
-  background: #595452;
+  background: #b59da1;
 }
 
 .PageTitle .ja {
-  font-family: 'PingFang';
+ font-family: 'PingFang';
   font-size: 20px;
   line-height: 1;
   letter-spacing: 0.125em;
-  color: #595452;
+  color: #b59da1;
 }
 
 .is-color-beige .PageTitle .en {
-  color: #A69981;
+  color: #af9f8d;
 }
 
 .is-color-beige .PageTitle:after {
-  background: #A69981;
+  background: #af9f8d;
 }
 
 .is-color-beige .PageTitle .ja {
-  color: #A69981;
+  color: #af9f8d;
 }
 
 @media screen and (max-width: 559px) {
@@ -947,14 +1092,14 @@ a.ButtonA {
 .Scroller span {
   height: 100%;
   width: 1px;
-  background-color: #595452;
+  background-color: #b59da1;
   margin: 0 6px;
 }
 
 .Scroller:before, .Scroller:after {
   content: '';
   display: block;
-  background-color: #595452;
+  background-color: #b59da1;
   width: 8px;
   height: 8px;
   border-radius: 4px;
@@ -962,6 +1107,15 @@ a.ButtonA {
   opacity: 0;
 }
 
+.Scroller:before {
+  -webkit-animation: anime-scroller 6s 0s infinite ease-in-out;
+          animation: anime-scroller 6s 0s infinite ease-in-out;
+}
+
+.Scroller:after {
+  -webkit-animation: anime-scroller 6s 3s infinite ease-in-out;
+          animation: anime-scroller 6s 3s infinite ease-in-out;
+}
 
 @media screen and (max-width: 959px) {
   .Scroller {
@@ -1089,125 +1243,13 @@ a.ButtonA {
   }
 }
 
-.Breadcrumb {
-  padding-top: 40px;
-  padding-bottom: 40px;
-  position: relative;
-  z-index: 2;
-  color: #595452;
-}
 
-.Breadcrumb a {
-  color: #595452;
-}
 
-.Breadcrumb .Breadcrumb__list li:before, .Breadcrumb .Breadcrumb__list li:after {
-  background-color: #595452;
-}
-
-@media screen and (max-width: 959px) {
-  .Breadcrumb {
-    padding-top: 20px;
-    padding-bottom: 20px;
-  }
-}
-
-.Breadcrumb__container {
-  position: relative;
-  margin-left: auto;
-  margin-right: auto;
-  width: 100%;
-  max-width: 1200px;
-}
-
-@media screen and (min-width: 960px) and (max-width: 1279px) {
-  .Breadcrumb__container {
-    max-width: initial;
-    padding-left: 40px;
-    padding-right: 40px;
-  }
-}
-
-@media screen and (min-width: 560px) and (max-width: 959px) {
-  .Breadcrumb__container {
-    max-width: initial;
-    padding-left: 20px;
-    padding-right: 20px;
-  }
-}
-
-@media screen and (max-width: 559px) {
-  .Breadcrumb__container {
-    max-width: initial;
-    padding-left: 20px;
-    padding-right: 20px;
-  }
-}
-
-.Breadcrumb__list {
-  display: flex;
-  align-items: center;
-  justify-content: flex-start;
-}
-
-.Breadcrumb__list li {
-  position: relative;
-  padding-right: 40px;
-  color: inherit;
-  font-size: 13px;
-}
-
-.Breadcrumb__list li a {
-  color: inherit;
-  text-decoration: none;
-}
-
-.Breadcrumb__list li a:hover {
-  text-decoration: underline;
-}
-
-.Breadcrumb__list li:before, .Breadcrumb__list li:after {
-  content: '';
-  display: block;
-  position: absolute;
-  height: 1px;
-  width: 8px;
-  top: 50%;
-  right: 15px;
-  transform-origin: 100% 50%;
-}
-
-.Breadcrumb__list li:before {
-  transform: rotate(-50deg);
-}
-
-.Breadcrumb__list li:after {
-  transform: rotate(50deg);
-}
-
-.Breadcrumb__list li:last-child {
-  padding-right: 0;
-}
-
-.Breadcrumb__list li:last-child:before, .Breadcrumb__list li:last-child:after {
-  display: none;
-}
-
-@media screen and (max-width: 559px) {
-  .Breadcrumb__list {
-    display: flex;
-    white-space: nowrap;
-    overflow-x: auto;
-    overflow-y: hidden;
-    -webkit-overflow-scrolling: touch;
-    -ms-overflow-style: -ms-autohiding-scrollbar;
-  }
-}
-
+/* /其他推薦 */
 .PgaeWraper {
   position: relative;
-  background-color: f8f8f8;
-  color: #595452;
+  background-color: #f8f8f8;
+  color: #A69981;
 }
 
 .PgaeWraper:before {
@@ -1218,12 +1260,12 @@ a.ButtonA {
   height: 100%;
   top: 0;
   right: 0;
-  background-color: #ffffff;
+  background-color: #f8f8f8;
 }
 
-/* .PgaeWrapper__inner {
+.PgaeWrapper__inner {
   position: relative;
-} */
+}
 
 .SectionTile {
   position: relative;
@@ -1299,24 +1341,24 @@ a.ButtonA {
 }
 
 .brand-BrandCardItems {
-  color: #595452;
+  color: #b59da1;
 }
 
 .brand-BrandCardItems a {
-  color: #595452;
+  color: #b59da1;
 }
 
 .brand-BrandCardItems .brand-BrandCardItems__card:before {
-  box-shadow: 7px 7px 7px rgba(201, 177, 181, 0.3), -7px -7px 7px white;
+  box-shadow: 7px 7px 1px rgba(201, 177, 181, 0.055), -2px -2px 7px #A69981;
 }
 
 .brand-BrandCardItems .brand-BrandCardItems__card:after {
-  box-shadow: inset 4px 4px 8px rgba(201, 177, 181, 0.3), inset -4px -4px 8px white;
+  box-shadow: 7px 7px 1px rgba(201, 177, 181, 0.055), -2px -2px 7px #A69981;
 }
 
-/* .brand-BrandCardItems .brand-BrandCardItems__inner {
-  background-color: #f8f8f8;
-} */
+.brand-BrandCardItems .brand-BrandCardItems__inner {
+  background-color: #fcfafb;
+}
 
 .brand-BrandCardItems__items {
   display: flex;
@@ -1387,7 +1429,7 @@ a.ButtonA {
 }
 
 .brand-BrandCardItems__card:before {
-  z-index: 2;
+  /* z-index: 2; */
   content: '';
   display: block;
   position: absolute;
@@ -1400,7 +1442,7 @@ a.ButtonA {
 }
 
 .brand-BrandCardItems__card:after {
-  z-index: 2;
+  /* z-index: 2; */
   content: '';
   display: block;
   position: absolute;
@@ -1433,7 +1475,7 @@ a.ButtonA {
   }
 }
 
-/* .brand-BrandCardItems__inner {
+.brand-BrandCardItems__inner {
   position: relative;
 }
 
@@ -1441,7 +1483,7 @@ a.ButtonA {
   content: '';
   display: block;
   padding-top: 41.66667%;
-} */
+}
 
 .brand-BrandCardItems__image {
   position: absolute;
@@ -1459,7 +1501,7 @@ a.ButtonA {
   left: 0;
   -o-object-fit: cover;
      object-fit: cover;
-  font-family: 'object-fit: cover;';
+  font-family: 'PingFang';
 }
 
 .brand-BrandCardItems__title {
@@ -1496,7 +1538,7 @@ a.ButtonA {
   padding-top: 20px;
   padding-bottom: 20px;
   color: inherit;
-  font-family: 'PingFang';
+ font-family: 'PingFang';
   font-size: 13px;
   letter-spacing: 0.05em;
   line-height: 1.8;
@@ -1509,18 +1551,18 @@ a.ButtonA {
     font-size: 12px;
   }
 }
-
+/* 推薦字 */
 .brand-ProductItems {
-  color: #595452;
+  color: #a69981;
 }
 
 .brand-ProductItems a {
-  color: #595452;
+  color: #b59da1;
   text-decoration: none;
 }
 
 .brand-ProductItems .brand-ProductItems__image:before {
-  box-shadow: 7px 7px 7px rgba(201, 177, 181, 0.3), -7px -7px 7px white;
+  box-shadow: 7px 7px 1px rgba(201, 177, 181, 0.055), -2px -2px 7px #A69981;
 }
 
 .brand-ProductItems .brand-ProductItems__image:after {
@@ -1590,7 +1632,7 @@ a.ButtonA {
 }
 
 .brand-ProductItems__image:before {
-  z-index: 2;
+  /* z-index: 2; */
   content: '';
   display: block;
   position: absolute;
@@ -1603,7 +1645,7 @@ a.ButtonA {
 }
 
 .brand-ProductItems__image:after {
-  z-index: 2;
+  /* z-index: 2; */
   content: '';
   display: block;
   position: absolute;
@@ -1634,8 +1676,7 @@ a.ButtonA {
   left: 0;
   -o-object-fit: cover;
      object-fit: cover;
-  font-family: 'object-fit: cover;';
-}
+     font-family: 'PingFang';}
 
 @media screen and (min-width: 960px) {
   .brand-ProductItems__image:hover {
@@ -1665,7 +1706,7 @@ a.ButtonA {
 }
 
 .brand-ProductItems__body ._no {
-  font-family: 'EB Garamond', serif;
+  font-family: 'PingFang';
   font-size: 12px;
   letter-spacing: 0.05em;
   margin-bottom: 8px;
@@ -1683,14 +1724,14 @@ a.ButtonA {
 }
 
 .brand-ProductItems__body ._name {
-  font-family: 'PingFang';
-  font-size: 15px;
+ font-family: 'PingFang';
+  font-size: 16px;
   letter-spacing: 0.05em;
   margin-bottom: 8px;
 }
 
 .brand-ProductItems__body ._price {
-  font-family: 'EB Garamond', serif;
+  font-family: 'PingFang';
   font-size: 14px;
   letter-spacing: 0.05em;
 }
@@ -1700,7 +1741,7 @@ a.ButtonA {
     font-size: 12px;
   }
   .brand-ProductItems__body ._name {
-    font-size: 13.4px;
+    font-size: 16px;
     margin-left: -3px;
     margin-right: -3px;
     letter-spacing: 0;
@@ -1713,7 +1754,7 @@ a.ButtonA {
 .brand-SectionCover {
   padding-top: 80px;
   padding-bottom: 40px;
-  color: #595452;
+  color: #b59da1;
 }
 
 .brand-SectionCover .brand-SectionCover__title ._card:before {
@@ -1721,7 +1762,7 @@ a.ButtonA {
 }
 
 .brand-SectionCover .brand-SectionCover__title ._title1:after {
-  background-color: #595452;
+  background-color: #b59da1;
 }
 
 .brand-SectionCover__main {
@@ -1933,14 +1974,14 @@ a.ButtonA {
 }
 
 .brand-SectionCover__body ._text1 {
-  font-family: 'PingFang';
+ font-family: 'PingFang';
   font-size: 22px;
   line-height: 2;
   margin-bottom: 30px;
 }
 
 .brand-SectionCover__body ._text2 {
-  font-family: 'PingFang';
+ font-family: 'PingFang';
   font-size: 15px;
   line-height: 2.75;
   text-align: justify;
@@ -1998,11 +2039,11 @@ a.ButtonA {
 
 .brand-SectionProductDetail {
   padding-top: 80px;
-  color: #595452;
+  color: #A69981;
 }
 
 .brand-SectionProductDetail a {
-  color: #595452;
+  color: #A69981;
   text-decoration: none;
 }
 
@@ -2011,7 +2052,7 @@ a.ButtonA {
 }
 
 .brand-SectionProductDetail .brand-SectionProductDetail__thums ._item:before {
-  box-shadow: 4px 4px 8px rgba(201, 177, 181, 0.3), -4px -4px 8px white;
+  box-shadow: 7px 7px 1px rgba(201, 177, 181, 0.055), -2px -2px 7px #A69981;
 }
 
 .brand-SectionProductDetail .brand-SectionProductDetail__thums ._item:after {
@@ -2068,7 +2109,7 @@ a.ButtonA {
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
-  font-family: 'object-fit: cover;';
+ font-family: 'PingFang';
 }
 
 @media screen and (max-width: 959px) {
@@ -2132,7 +2173,7 @@ a.ButtonA {
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
-  font-family: 'object-fit: cover;';
+ font-family: 'PingFang';
 }
 
 @media screen and (min-width: 1280px) {
@@ -2256,13 +2297,13 @@ a.ButtonA {
   height: 1px;
   left: 0;
   bottom: 0;
-  background-color: #595452;
+  background-color: #f8f8f8;
 }
-
+/* 價錢 */
 .brand-SectionProductDetail__heading ._name {
   margin-bottom: 24px;
   line-height: 2.5;
-  font-size: 13px;
+  font-size: 16px;
 }
 
 .brand-SectionProductDetail__heading .__name {
@@ -2280,11 +2321,11 @@ a.ButtonA {
   font-weight: normal;
   pointer-events: none;
 }
-
+/* 商品名稱 */
 .brand-SectionProductDetail__heading ._title {
   margin-bottom: 60px;
-  font-family: 'PingFang';
-  font-size: 20px;
+ font-family: 'PingFang';
+  font-size: 23px;
   line-height: 2;
   letter-spacing: 0.1em;
 }
@@ -2364,7 +2405,7 @@ a.ButtonA {
 }
 
 .brand-SectionProductDetail__external .ButtonA {
-  background: #ffffff;
+  background: #F8F3F5;
 }
 
 @media screen and (min-width: 960px) {
@@ -2447,15 +2488,15 @@ a.ButtonA {
   width: 100%;
   height: 1166px;
   position: relative;
-  background-color: #ffffff;
+  background-color: #f8f3f5;
 }
 
 .top-BrandTile.top-BrandTile--lilac {
-  background-color: #ffffff;
+  background-color: #f8f3f5;
 }
 
 .top-BrandTile.top-BrandTile--beige {
-  background-color: #ffffff;
+  background-color: #fcf6f3;
 }
 
 .top-BrandTile.top-BrandTile--lilac + .top-BrandTile.top-BrandTile--beige:before {
@@ -2465,7 +2506,7 @@ a.ButtonA {
   width: 100%;
   height: 200px;
   top: -100px;
-  background-image: linear-gradient(to bottom, #ffffff 0%, #ffffff 100%);
+  background-image: linear-gradient(to bottom, #f8f3f5 0%, #fcf6f3 100%);
 }
 
 .top-BrandTile.top-BrandTile--beige + .top-BrandTile.top-BrandTile--lilac:before {
@@ -2475,7 +2516,7 @@ a.ButtonA {
   width: 100%;
   height: 200px;
   top: -100px;
-  background-image: linear-gradient(to bottom, #ffffff 0%, #ffffff 100%);
+  background-image: linear-gradient(to bottom, #fcf6f3 0%, #f8f3f5 100%);
 }
 
 @media screen and (max-width: 959px) {
@@ -2491,7 +2532,7 @@ a.ButtonA {
  *  背景
  **************************/
 .top-BrandTile__bg {
-  z-index: 2;
+  /* z-index: 2; */
   position: absolute;
   top: 0;
   right: 53px;
@@ -2550,17 +2591,16 @@ a.ButtonA {
 }
 
 /*************************
- *  圖片
+ *  写真
  **************************/
 .top-BrandTile__photo {
-  /* z-index: 3; */
+  z-index: 3;
   display: flex;
   align-items: center;
   justify-content: center;
   position: absolute;
   width: 554px;
   height: 100%;
-  pointer-events: none;
 }
 
 .top-BrandTile__photo ._inner {
@@ -2583,15 +2623,15 @@ a.ButtonA {
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
-  font-family: 'object-fit: cover;';
+ font-family: 'PingFang';
 }
-/* 商品圖片陰影 */
+
 .top-BrandTile.top-BrandTile--lilac .top-BrandTile__photo ._inner {
-  box-shadow: 70px 90px 30px rgba(156, 138, 142, 0.089);
+  box-shadow: 70px 105px 60px rgba(156, 138, 142, 0.3);
 }
 
 .top-BrandTile.top-BrandTile--beige .top-BrandTile__photo ._inner {
-  box-shadow: 70px 90px 30px rgba(156, 138, 142, 0.089);
+  box-shadow: 70px 105px 60px rgba(170, 160, 149, 0.3);
 }
 
 @media screen and (min-width: 960px) {
@@ -2622,10 +2662,10 @@ a.ButtonA {
 }
 
 /*************************
- *  ボディー
+ *  body
  **************************/
 .top-BrandTile__body {
-  /* z-index: 4; */
+  z-index: 4;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -2640,7 +2680,7 @@ a.ButtonA {
   position: relative;
   width: 100%;
   font-family: 'PingFang';
-  color: #595452;
+  color: #b59da1;
 }
 
 .top-BrandTile__body ._inner ._title1 {
@@ -2660,7 +2700,7 @@ a.ButtonA {
   height: 1px;
   left: 0;
   bottom: 0;
-  background-color: #595452;
+  background-color: #b59da1;
 }
 
 .top-BrandTile__body ._inner ._title2 {
@@ -2680,11 +2720,11 @@ a.ButtonA {
   line-height: 2.75;
   margin-bottom: 70px;
   text-align: justify;
-  font-family: 'PingFang';
+ font-family: 'PingFang';
 }
 
 .top-BrandTile__body ._inner ._title_ja {
-  font-family: 'PingFang';
+ font-family: 'PingFang';
   margin-bottom: 35px;
   font-size: 24px;
   letter-spacing: 0.125em;
@@ -2692,7 +2732,7 @@ a.ButtonA {
 }
 
 .top-BrandTile__body ._inner ._text_ja {
-  font-family: 'PingFang';
+ font-family: 'PingFang';
   margin-bottom: 70px;
   font-size: 15px;
   letter-spacing: 0.1em;
@@ -2702,37 +2742,37 @@ a.ButtonA {
 .top-BrandTile__body ._inner .ButtonA {
   margin-left: 0;
 }
-/* 育鬍滋養 */
+
 .top-BrandTile.top-BrandTile--lilac .top-BrandTile__body ._inner {
-  color: #595452;
+  color: #b59da1;
 }
 
 .top-BrandTile.top-BrandTile--lilac .top-BrandTile__body ._inner ._title1:after {
-  background-color: #595452;
+  background-color: #b59da1;
 }
-/* 靠左的more按鈕 */
+
 .top-BrandTile.top-BrandTile--lilac .top-BrandTile__body ._inner .ButtonA {
-  color: #595452;
+  color: #b59da1;
 }
 
 .top-BrandTile.top-BrandTile--lilac .top-BrandTile__body ._inner .ButtonA span:before, .top-BrandTile.top-BrandTile--lilac .top-BrandTile__body ._inner .ButtonA span:after {
-  background-color: #595452;
+  background-color: #b59da1;
 }
 
 .top-BrandTile.top-BrandTile--beige .top-BrandTile__body ._inner {
-  color: #A69981;
+  color: #af9f8d;
 }
 
 .top-BrandTile.top-BrandTile--beige .top-BrandTile__body ._inner ._title1:after {
-  background-color: #A69981;
+  background-color: #af9f8d;
 }
-/* 靠右的more按鈕 */
+
 .top-BrandTile.top-BrandTile--beige .top-BrandTile__body ._inner .ButtonA {
-  color: #A69981;
+  color: #af9f8d;
 }
 
 .top-BrandTile.top-BrandTile--beige .top-BrandTile__body ._inner .ButtonA span:before, .top-BrandTile.top-BrandTile--beige .top-BrandTile__body ._inner .ButtonA span:after {
-  background-color: #A69981;
+  background-color: #af9f8d;
 }
 
 @media screen and (min-width: 960px) {
@@ -2765,10 +2805,10 @@ a.ButtonA {
     margin-right: auto;
   }
   .top-BrandTile.top-BrandTile--lilac .top-BrandTile__body {
-    background-color: #ffffff;
+    background-color: #f8f3f5;
   }
   .top-BrandTile.top-BrandTile--beige .top-BrandTile__body {
-    background-color: #ffffff;
+    background-color: #fcf6f3;
   }
 }
 
@@ -2795,7 +2835,7 @@ a.ButtonA {
     line-height: 2.2;
   }
   .top-BrandTile__body ._inner ._title_ja {
-    font-family: 'PingFang';
+   font-family: 'PingFang';
     margin-bottom: 20px;
     font-size: 20px;
     line-height: 1.8;
@@ -2812,7 +2852,7 @@ a.ButtonA {
   height: 100%;
   position: relative;
   overflow: hidden;
-  background-color: #ffffff;
+  background-color: #f8f3f5;
 }
 
 @media screen\0 {
@@ -2939,7 +2979,7 @@ a.ButtonA {
      object-fit: cover;
   -o-object-position: center right;
      object-position: center right;
-  font-family: 'object-fit: cover; object-position: center right;';
+  font-family: 'PingFang';
 }
 
 @media screen and (min-width: 960px) {
@@ -2963,7 +3003,7 @@ a.ButtonA {
   height: calc(100% - 280px);
   top: 150px;
   right: 0;
-  background-color: f8f8f8;
+  background-color: #fcfafb;
 }
 
 @media (min-width: 1600px) {
@@ -2993,7 +3033,7 @@ a.ButtonA {
 }
 
 .top-MainVisual__title-sp {
-  z-index: 2;
+  /* z-index: 2; */
   position: absolute;
   display: flex;
   align-items: center;
@@ -3018,7 +3058,7 @@ a.ButtonA {
 
 .top-MainVisual__copy-sp {
   position: absolute;
-  z-index: 2;
+  /* z-index: 2; */
   bottom: 10px;
   left: calc(100% - 10px);
   font-size: 10px;
@@ -3055,7 +3095,7 @@ a.ButtonA {
     content: '';
     position: absolute;
     display: block;
-    background-color: #ffffff;
+    background-color: #f8f3f5;
     top: 0;
     right: 0;
     width: 37.53846%;
@@ -3074,7 +3114,7 @@ a.ButtonA {
     content: '';
     position: absolute;
     display: block;
-    background-color: #ffffff;
+    background-color: #f8f3f5;
     top: 0;
     right: 0;
     width: 37.53846%;
@@ -3096,7 +3136,7 @@ a.ButtonA {
 }
 
 .top-MainVisualCover__copy ._text1 {
-  color: #595452;
+  color: #b59da1;
   font-family: 'PingFang';
   font-size: 80px;
   line-height: 1.1;
@@ -3112,8 +3152,8 @@ a.ButtonA {
 }
 
 .top-MainVisualCover__copy ._text2 {
-  font-family: 'PingFang';
-  color: #595452;
+ font-family: 'PingFang';
+  color: #b59da1;
   font-size: 14px;
   letter-spacing: 0.05em;
   line-height: 2.75;
@@ -3179,7 +3219,7 @@ a.ButtonA {
 .top-MainVisualCover__navi ._sns ul li svg {
   height: 23px;
   width: 23px;
-  fill: #595452;
+  fill: #b59da1;
 }
 
 .top-MainVisualCover__navi ._sns ul li:last-child {
@@ -3187,7 +3227,7 @@ a.ButtonA {
 }
 
 .top-MainVisualCover__navi ._sns ul li a {
-  color: #595452;
+  color: #b59da1;
   text-decoration: none;
 }
 
@@ -3204,7 +3244,7 @@ a.ButtonA {
 }
 
 .top-MainVisualCover__navi ._navi ul li a {
-  color: #595452;
+  color: #b59da1;
   text-decoration: none;
 }
 
@@ -3235,48 +3275,37 @@ body main {
 }
 
 body.is-color-beige {
-  color: #A69981;
+  color: #af9f8d;
 }
 
 body.is-color-beige a {
-  color: #A69981;
+  color: #af9f8d;
 }
 
 body.is-color-beige .header-Main {
-  color: #A69981;
+  color: #af9f8d;
 }
 
 body.is-color-beige .header-Main a {
-  color: #A69981;
+  color: #af9f8d;
 }
 
 body.is-color-beige .header-Main .header-Main__right:before {
-  background-color: #A69981;
+  background-color: #af9f8d;
 }
 
 body.is-color-beige .PgaeWraper {
-  background-color: #fdfcfa;
-  color: #A69981;
+  background-color: #f8f8f8;
+  color: #af9f8d;
 }
 
 body.is-color-beige .PgaeWraper:before {
-  background-color: #ffffff;
+  background-color: #f8f8f8;
 }
 
-body.is-color-beige .Breadcrumb {
-  color: #A69981;
-}
-
-body.is-color-beige .Breadcrumb a {
-  color: #A69981;
-}
-
-body.is-color-beige .Breadcrumb .Breadcrumb__list li:before, body.is-color-beige .Breadcrumb .Breadcrumb__list li:after {
-  background-color: #A69981;
-}
 
 body.is-color-beige .brand-SectionCover {
-  color: #A69981;
+  color: #af9f8d;
 }
 
 body.is-color-beige .brand-SectionCover .brand-SectionCover__title ._card:before {
@@ -3284,15 +3313,15 @@ body.is-color-beige .brand-SectionCover .brand-SectionCover__title ._card:before
 }
 
 body.is-color-beige .brand-SectionCover .brand-SectionCover__title ._title1:after {
-  background-color: #A69981;
+  background-color: #af9f8d;
 }
 
 body.is-color-beige .brand-SectionProductDetail {
-  color: #A69981;
+  color: #af9f8d;
 }
 
 body.is-color-beige .brand-SectionProductDetail a {
-  color: #A69981;
+  color: #af9f8d;
 }
 
 body.is-color-beige .brand-SectionProductDetail .brand-SectionProductDetail__slider {
@@ -3308,11 +3337,11 @@ body.is-color-beige .brand-SectionProductDetail .brand-SectionProductDetail__thu
 }
 
 body.is-color-beige .brand-ProductItems {
-  color: #A69981;
+  color: #af9f8d;
 }
 
 body.is-color-beige .brand-ProductItems a {
-  color: #A69981;
+  color: #af9f8d;
   text-decoration: none;
 }
 
@@ -3325,11 +3354,11 @@ body.is-color-beige .brand-ProductItems .brand-ProductItems__image:after {
 }
 
 body.is-color-beige .brand-BrandCardItems {
-  color: #A69981;
+  color: #af9f8d;
 }
 
 body.is-color-beige .brand-BrandCardItems a {
-  color: #A69981;
+  color: #af9f8d;
 }
 
 body.is-color-beige .brand-BrandCardItems .brand-BrandCardItems__card:before {
@@ -3345,11 +3374,11 @@ body.is-color-beige .brand-BrandCardItems .brand-BrandCardItems__inner {
 }
 
 body.is-color-beige .footer-Main {
-  background-color: #A69981;
+  background-color: #af9f8d;
 }
 
 body.is-color-beige .footer-Main .footer-Main__navi1 ul li span {
-  background-color: #A69981;
+  background-color: #af9f8d;
 }
 
 @media screen and (max-width: 959px) {
@@ -3366,13 +3395,13 @@ body.is-color-beige .footer-Main .footer-Main__navi1 ul li span {
     content: '';
     display: block;
     height: 180px;
-    background-color: #ffffff;
+    background-color: #f8f3f5;
   }
   .is-color-beige .brandItems:after {
     content: '';
     display: block;
     height: 180px;
-    background-color: #ffffff;
+    background-color: #fcf6f3;
   }
 }
 
@@ -3534,7 +3563,7 @@ body.is-color-beige .footer-Main .footer-Main__navi1 ul li span {
   text-align: center;
   font-family: 'PingFang';
   font-size: 30px;
-  color: #595452;
+  color: #B59DA1;
 }
 
 @media screen and (max-width: 559px) {
@@ -3545,7 +3574,7 @@ body.is-color-beige .footer-Main .footer-Main__navi1 ul li span {
 }
 
 .companyMessage__body {
-  font-family: 'PingFang';
+ font-family: 'PingFang';
 }
 
 .companyMessage__body p {
@@ -3554,7 +3583,7 @@ body.is-color-beige .footer-Main .footer-Main__navi1 ul li span {
   line-height: 3;
   letter-spacing: 0.100em;
   text-align: justify;
-  color: #595452;
+  color: #B59DA1;
 }
 
 .companyMessage__body .sign {
@@ -3581,7 +3610,7 @@ body.is-color-beige .footer-Main .footer-Main__navi1 ul li span {
   text-align: center;
   font-family: 'PingFang';
   font-size: 30px;
-  color: #595452;
+  color: #B59DA1;
 }
 
 @media screen and (max-width: 559px) {
@@ -3592,7 +3621,7 @@ body.is-color-beige .footer-Main .footer-Main__navi1 ul li span {
 }
 
 .companyOutline__body {
-  font-family: 'PingFang';
+ font-family: 'PingFang';
 }
 
 .companyOutline__body table {
@@ -3612,7 +3641,7 @@ body.is-color-beige .footer-Main .footer-Main__navi1 ul li span {
   font-size: 15px;
   line-height: 1.95;
   letter-spacing: 0.125em;
-  color: #595452;
+  color: #B59DA1;
 }
 
 .companyOutline__body th {
@@ -3660,7 +3689,7 @@ body.is-color-beige .footer-Main .footer-Main__navi1 ul li span {
   text-align: center;
   font-family: 'PingFang';
   font-size: 30px;
-  color: #595452;
+  color: #B59DA1;
 }
 
 @media screen and (max-width: 559px) {
@@ -3899,7 +3928,7 @@ body.is-color-beige .footer-Main .footer-Main__navi1 ul li span {
 }
 
 .contactForm label._radioLabel input[type=radio]:checked + span {
-  border: 2px solid #A69981;
+  border: 2px solid #AF9F8D;
 }
 
 .contactForm label._radioLabel input[type=radio]:checked + span:before {
@@ -3913,7 +3942,7 @@ body.is-color-beige .footer-Main .footer-Main__navi1 ul li span {
   width: 10px;
   height: 10px;
   border-radius: 50%;
-  background-color: #A69981;
+  background-color: #AF9F8D;
 }
 
 .contactForm label._checkLabel {
@@ -3948,7 +3977,7 @@ body.is-color-beige .footer-Main .footer-Main__navi1 ul li span {
 }
 
 .contactForm input[type=checkbox]:checked + label._checkLabel span {
-  background-color: #A69981;
+  background-color: #AF9F8D;
 }
 
 .contactForm input[type=checkbox] {
@@ -3994,7 +4023,7 @@ body.is-color-beige .footer-Main .footer-Main__navi1 ul li span {
   text-align: center;
   font-family: 'PingFang';
   font-size: 30px;
-  color: #A69981;
+  color: #af9f8d;
 }
 
 @media screen and (max-width: 559px) {
@@ -4016,7 +4045,7 @@ body.is-color-beige .footer-Main .footer-Main__navi1 ul li span {
   align-items: center;
   font-size: 20px;
   color: #CDBDAB;
-  font-family: 'PingFang';
+ font-family: 'PingFang';
 }
 
 .contactForm__nav li span {
@@ -4076,8 +4105,8 @@ body.is-color-beige .footer-Main .footer-Main__navi1 ul li span {
   font-size: 15px;
   line-height: 2.4;
   letter-spacing: 0.125em;
-  font-family: 'PingFang';
-  color: #A69981;
+ font-family: 'PingFang';
+  color: #AF9F8D;
 }
 
 .contactForm__lead .required {
@@ -4173,7 +4202,7 @@ body.is-color-beige .footer-Main .footer-Main__navi1 ul li span {
 }
 
 .contactForm__agree a:link, .contactForm__agree a:visited {
-  color: #A69981;
+  color: #AF9F8D;
 }
 
 .contactForm__agree a:hover, .contactForm__agree a:active {
@@ -4199,7 +4228,7 @@ body.is-color-beige .footer-Main .footer-Main__navi1 ul li span {
 }
 
 .contactForm__submit a.back {
-  color: #A69981;
+  color: #AF9F8D;
   font-size: 14px;
 }
 
@@ -4300,7 +4329,7 @@ body.is-color-beige .footer-Main .footer-Main__navi1 ul li span {
 }
 
 .contactForm__tel ._title span {
-  font-family: 'PingFang';
+ font-family: 'PingFang';
   display: inline-block;
   padding: 0 35px;
   font-size: 20px;
@@ -4471,7 +4500,9 @@ body.page-top .header-Spacer {
   }
 }
 
-
+/*************************
+ *  ヘッダーナビ詳細
+ **************************/
 @media screen and (max-width: 959px) {
   body.page-top .header-Main.is-top .header-NaviButton span:nth-child(1),
   body.page-top .header-Main.is-top .header-NaviButton span:nth-child(2),
@@ -4549,112 +4580,6 @@ body.page-top .header-Spacer {
 .break_line {
   display: inline-block;
 }
-.ml6 .text-wrapper {
-  position: relative;
-  display: inline-block;
-  padding-top: 0.2em;
-  padding-right: 0.05em;
-  padding-bottom: 0.1em;
-  overflow: hidden;
-}
-.ml6 .text-wrapper {
-  position: relative;
-  display: inline-block;
-  padding-top: 0.2em;
-  padding-right: 0.05em;
-  padding-bottom: 0.1em;
-  overflow: hidden;
-}
-.PgaeWraper {
-  position: relative;
-  background-color:#f8f8f8;
-  /* color: #b11515; */
-}
-
-
-.PgaeWraper:before {
-  content: '';
-  display: block;
-  position: absolute;
-  width: 37.5%;
-  height: 100%;
-  top: 0;
-  right: 0;
-  background-color:#f8f8f8;
-}
-
-.PgaeWrapper__inner {
-  position: relative;
-}
-.SectionTile {
-  position: relative;
-  padding-top: 80px;
-  padding-bottom: 80px;
-}
-
-.SectionTile .TitleA {
-  margin-bottom: 40px;
-}
-
-.SectionTile .TitleA:last-child {
-  margin-bottom: 0;
-} */
-
-@media screen and (max-width: 559px) {
-  .SectionTile {
-    padding-top: 40px;
-    padding-bottom: 40px;
-  }
-  .Breadcrumb + .SectionTile {
-    padding-top: 40px;
-  }
-}
-
-.SectionTile__container {
-  position: relative;
-  margin-left: auto;
-  margin-right: auto;
-  width: 100%;
-  max-width: 1200px;
-}
-
-@media screen and (min-width: 960px) and (max-width: 1279px) {
-  .SectionTile__container {
-    max-width: initial;
-    padding-left: 40px;
-    padding-right: 40px;
-  }
-}
-
-@media screen and (min-width: 560px) and (max-width: 959px) {
-  .SectionTile__container {
-    max-width: initial;
-    padding-left: 20px;
-    padding-right: 20px;
-  }
-}
-
-@media screen and (max-width: 559px) {
-  .SectionTile__container {
-    max-width: initial;
-    padding-left: 20px;
-    padding-right: 20px;
-  }
-}
-
-.SectionTile__block {
-  margin-bottom: 80px;
-}
-
-.SectionTile__block:last-child {
-  margin-bottom: 0;
-}
-
-@media screen and (max-width: 559px) {
-  .SectionTile__block {
-    margin-bottom: 40px;
-  }
-  .SectionTile__block:last-child {
-    margin-bottom: 0;
-  }
+.ButtonA.finished{
+opacity: 1; visibility: inherit;
 }

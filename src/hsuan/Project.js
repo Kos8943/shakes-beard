@@ -1,194 +1,285 @@
 import React from "react";
-import "./Project.css";
-import search from './icon/search.svg';
+import "./style/Project.css";
+import search from "./icon/search.svg";
 // import original from './icon/original.jpg';
 // import Breadcrumb from './component/Breadcrumb'
 // import Pagination from './component/Pagination'
-import CatesAside from './component/CatesAside'
-import Cards from './component/Cards'
 // import Sorts from './component/Sorts'
-import Cates from './component/Cates'
-import Banner from './component/Banner'
-import {
-  Container,
-  Row,
-  Col,
-  Button,
-  Navbar,
-  Form,
-  FormControl,
-  Accordion,
-  Card,
-} from "react-bootstrap";
-import { NavLink } from "react-router-dom";
+import {} from "react-bootstrap";
+import { NavLink } from "react-router-dom"; 
+import original from "./icon/original.jpg";
+// import Library, { NamedComponent } from 'library';
+import Resizer from 'react-image-file-resizer';
+// import "project-img.js";
 
+// const resizeFile = (file) => new Promise(resolve => {
+//     Resizer.imageFileResizer(file, 300, 300, 'original', 100, 0,
+//     uri => {
+//       resolve(uri);
+//     },
+//     'base64'
+//     );
+// });
+// const onChange = async (event) => {
+//     const file = event.target.files[0];
+//     const image = await resizeFile(file);
+//     console.log(image);
+//   }
+              
 function Project() {
   return (
     <>
-     <Row>
-   
-  </Row>
-  <banner/>
-      <Container>
-      <Row>
     
-    
-  </Row>
-           
-    </Container>
-     
-           {/* <Carousel /> */}
-      <div className="container">
-        <div className="row">
-          <div className="col-3">
-            <CatesAside/>
-          </div>
-          <div className="col-9">
-            <Banner />
-            <Cates />
-            {/* <Sorts /> */}
-            <div className="cardGroup">
-             
-            </div>
-            <div className="cardGroup">
-             
-            </div>
-          </div>
-        </div>
-        {/* <div className="row">
-          <div className="col-3"></div>
-          <div className="col-9 cardGroup">
-            <Cards />
-            <Cards />
-            <Cards />
-          </div>
-        </div> */}
-        {/* <Pagination /> */}
-      </div>
-      <section className="SectionTile brand-SectionOtherBrands">
+    {/* <div>
+        <img style={{maxWidth: '50px'}} src={imagesPath[original]} onClick={this.toggleImage} />
+      </div> */}
+      <body className="page-brand_detail  typesquare_option">
+        <main>
+          <div className="PgaeWraper">
+            <div className="PgaeWrapper__inner">
+              {/* <!-- start PageWraper --> */}
+
+              <section className="SectionTile brand-SectionProductDetail">
                 <div className="SectionTile__container">
-                <div className="brand-BrandCardItems">
-                    <div className="brand-BrandCardItems__items">
-                     <div className="brand-BrandCardItems__item finished"
-                        data-anime="fadeInUp"
-                        data-anime-trigger=".brand-BrandCardItems"
-                        data-anime-delay="0.6000000000000001">
-                        <a href=".." className="brand-BrandCardItems__card">
-                          <div className="brand-BrandCardItems__inner">
-                            <div className="brand-BrandCardItems__image">
-                              <img src={require("./icon/horizontal.jpg")}
-                                className="card-img-top"
-                                alt="..."></img>
-                            </div>
-                            <div className="brand-BrandCardItems__title">
-                              <div className="_inner">
-                                <div>刮鬍修容</div>
-                              </div>
-                            </div>
+                  <div className="brand-SectionProductDetail__layout">
+                    <div className="brand-SectionProductDetail__image">
+                      <div className="brand-SectionProductDetail__thums">
+                        <div className="_item" style={{width: "100%", display: "inline-block"}}>
+                          <div className="_image1">
+                            <img src={require("./icon/original.jpg")}
+                              className="card-img-top"
+                              alt="..." ></img>
                           </div>
-                        </a>
                         </div>
-                      <div className="brand-BrandCardItems__item finished"
-                        data-anime="fadeInUp"
-                        data-anime-trigger=".brand-BrandCardItems"
-                        data-anime-delay="0.8">
-                        <a href=".." className="brand-BrandCardItems__card">
-                          <div className="brand-BrandCardItems__inner">
-                            <div className="brand-BrandCardItems__image">
-                              <img src={require("./icon/horizontal.jpg")}
-                                className="card-img-top"
-                                alt="..."></img>
-                            </div>
-                            <div className="brand-BrandCardItems__title">
-                              <div className="_inner">
-                                <div>頭髮造型</div>
-                              </div>
+                      
+                        <div className="_item" >
+                          <div className="_image">
+                            <img 
+                              src={require("./icon/horizontal3.jpg")}
+                              className="card-img-top"
+                              alt="..."
+                            ></img>
+                          </div>
+                        </div>
+                        <div className="_item">
+                          <div className="_image">
+                          <img 
+                              src={require("./icon/horizontal3.jpg")}
+                              className="card-img-top"
+                              alt="..."
+                            ></img>
+                          </div>
+                        </div>
+                        <div className="_item">
+                          <div className="_image">
+                            <img src={require("./icon/horizontal1.jpg")}
+                              className="card-img-top"
+                              alt="..."
+                            ></img>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div className="brand-SectionProductDetail__body">
+                      <div className="brand-SectionProductDetail__heading">
+                        <h2
+                          className="_title typesquare_option finished"
+                          data-anime="fadeInRight"
+                          data-anime-trigger=".brand-SectionProductDetail"
+                          data-anime-delay="0.6">
+                          {" "}
+                          商品名稱
+                        </h2>
+                        <div
+                          className="_name finished"
+                          data-anime="fadeInRight"
+                          data-anime-trigger=".brand-SectionProductDetail"
+                          data-anime-delay="0.3"
+                        >
+                          <h1 className="__name">NT$1500</h1>
+                        </div>
+                      </div>
+
+                      <div
+                        className="brand-SectionProductDetail__text finished"
+                        data-anime="fadeInRight"
+                        data-anime-trigger=".brand-SectionProductDetail"
+                        data-anime-delay="0.9"
+                      >
+                        {" "}
+                        打一些介紹
+                      </div>
+                      <div
+                        className="brand-SectionProductDetail__info finished"
+                        data-anime="fadeInRight"
+                        data-anime-trigger=".brand-SectionProductDetail"
+                        data-anime-delay="1.2"
+                      >
+                        <div className="_rows">
+                          <div className="_row">
+                            <div className="_col _col--1">高度</div>
+                            <div className="_col _col--2">24.2mm</div>
+                          </div>
+                          <div className="_row">
+                            <div className="_col _col--1">寬度</div>
+                            <div className="_col _col--2">7.5mm</div>
+                          </div>
+                          <div className="_row">
+                            <div className="_col _col--1">重量</div>
+                            <div className="_col _col--2">17.22g</div>
+                          </div>
+                          <div className="_row">
+                            <div className="_col _col--1">說明</div>
+                            <div className="_col _col--2">
+                              說明<span className="_tax"></span>
                             </div>
                           </div>
-                        </a>
-                         </div>
-                      <div className="brand-BrandCardItems__item finished"
-                        data-anime="fadeInUp"
-                        data-anime-trigger=".brand-BrandCardItems"
-                        data-anime-delay="1">
-                        <a href=".." className="brand-BrandCardItems__card">
-                          <div className="brand-BrandCardItems__inner">
-                            <div className="brand-BrandCardItems__image">
-                              <img src={require("./icon/horizontal.jpg")}
-                                className="card-img-top"
-                                alt="..."></img>
-                            </div>
-                            <div className="brand-BrandCardItems__title">
-                              <div className="_inner">
-                                <div>沐浴清潔</div>
-                              </div>
-                            </div>
+                          <div className="_row">
+                            <div className="_col _col--1">說明</div>
+                            <div className="_col _col--2">說明</div>
                           </div>
-                        </a>
-                       </div>
-					   <div className="brand-BrandCardItems__item finished"
-                        data-anime="fadeInUp"
-                        data-anime-trigger=".brand-BrandCardItems"
-                        data-anime-delay="1">
-                        <a href=".." className="brand-BrandCardItems__card">
-                          <div className="brand-BrandCardItems__inner">
-                            <div className="brand-BrandCardItems__image">
-                              <img src={require("./icon/horizontal.jpg")}
-                                className="card-img-top"
-                                alt="..."></img>
-                            </div>
-                            <div className="brand-BrandCardItems__title">
-                              <div className="_inner">
-                                <div>紳士香氛</div>
-                              </div>
-                            </div>
-                          </div>
-                        </a>
-                       </div>
-					   <div className="brand-BrandCardItems__item finished"
-                        data-anime="fadeInUp"
-                        data-anime-trigger=".brand-BrandCardItems"
-                        data-anime-delay="1">
-                        <a href=".." className="brand-BrandCardItems__card">
-                          <div className="brand-BrandCardItems__inner">
-                            <div className="brand-BrandCardItems__image">
-                              <img src={require("./icon/horizontal.jpg")}
-                                className="card-img-top"
-                                alt="..."></img>
-                            </div>
-                            <div className="brand-BrandCardItems__title">
-                              <div className="_inner">
-                                <div>服飾配件</div>
-                              </div>
-                            </div>
-                          </div>
-                        </a>
-                       </div>
-					   <div className="brand-BrandCardItems__item finished"
-                        data-anime="fadeInUp"
-                        data-anime-trigger=".brand-BrandCardItems"
-                        data-anime-delay="1">
-                        <a href=".." className="brand-BrandCardItems__card">
-                          <div className="brand-BrandCardItems__inner">
-                            <div className="brand-BrandCardItems__image">
-                              <img src={require("./icon/horizontal.jpg")}
-                                className="card-img-top"
-                                alt="..."></img>
-                            </div>
-                            <div className="brand-BrandCardItems__title">
-                              <div className="_inner">
-                                <div>精選優惠</div>
-                              </div>
-                            </div>
-                          </div>
-                        </a>
-                       </div>
+                        </div>
+                      </div>
+                      <a href="/brand/pole_pole.php" className="ButtonA finished">
+                        <span>加入購物車</span>
+                      </a>
+                      <br></br>
+                      {/* <img src="./icon/search.svg" style="width: 15px;"> */}
+                      <a href="/brand/pole_pole.php" className="ButtonA1 finished">
+                        <span>♥加入追蹤♥</span>
+                      </a>
                     </div>
                   </div>
                 </div>
-              </section> 
+              </section>
+
+              <section className="SectionTile brand-SectionRelatedProducts">
+                <div className="SectionTile__container">
+                  <h2 className="TitleA">其他推薦</h2>
+
+                  <div className="brand-ProductItems">
+                    <div className="brand-ProductItems__items">
+                      <div
+                        className="brand-ProductItems__item finished"
+                        data-anime="fadeInUp"
+                        data-anime-trigger=".brand-ProductItems"
+                        data-anime-delay="0"
+                      >
+                        <div className="brand-ProductItems__card">
+                          <a
+                            href="../product/3"
+                            className="brand-ProductItems__image"
+                          >
+                            <div className="_image">
+                              <img
+                                src={require("./icon/original.jpg")}
+                                className="card-img-top"
+                                alt="..."
+                              ></img>
+                            </div>
+                          </a>
+                          <div className="brand-ProductItems__body">
+                            <div className="_no">
+                              <span className="_code">名稱</span>
+                            </div>
+                            <div className="_price">價錢</div>
+                          </div>
+                        </div>
+                      </div>
+                      <div
+                        className="brand-ProductItems__item finished"
+                        data-anime="fadeInUp"
+                        data-anime-trigger=".brand-ProductItems"
+                        data-anime-delay="0.2"
+                      >
+                        <div className="brand-ProductItems__card">
+                          <a
+                            href="../product/12"
+                            className="brand-ProductItems__image"
+                          >
+                            <div className="_image">
+                              <img
+                                src={require("./icon/original.jpg")}
+                                className="card-img-top"
+                                alt="..."
+                              ></img>
+                            </div>
+                          </a>
+                          <div className="brand-ProductItems__body">
+                            <div className="_no">
+                              <span className="_code">名稱</span>
+                            </div>
+                            <div className="_price">價錢</div>
+                          </div>
+                        </div>
+                      </div>
+                      <div
+                        className="brand-ProductItems__item finished"
+                        data-anime="fadeInUp"
+                        data-anime-trigger=".brand-ProductItems"
+                        data-anime-delay="0.4"
+                      >
+                        <div className="brand-ProductItems__card">
+                          <a
+                            href="../product/78"
+                            className="brand-ProductItems__image"
+                          >
+                            <div className="_image">
+                              <img
+                                src={require("./icon/original.jpg")}
+                                className="card-img-top"
+                                alt="..."
+                              ></img>
+                            </div>
+                          </a>
+                          <div className="brand-ProductItems__body">
+                            <div className="_no">
+                              <span className="_code">名稱</span>
+                            </div>
+                            <div className="_price">價錢</div>
+                          </div>
+                        </div>
+                      </div>
+                      <div
+                        className="brand-ProductItems__item finished"
+                        data-anime="fadeInUp"
+                        data-anime-trigger=".brand-ProductItems"
+                        data-anime-delay="0.6000000000000001"
+                      >
+                        <div className="brand-ProductItems__card">
+                          <a
+                            href="../product/13"
+                            className="brand-ProductItems__image"
+                          >
+                            <div className="_image">
+                              <img
+                                src={require("./icon/original.jpg")}
+                                className="card-img-top"
+                                alt="..."
+                              ></img>
+                            </div>
+                          </a>
+                          <div className="brand-ProductItems__body">
+                            <div className="_no">
+                              <span className="_code">名稱</span>
+                            </div>
+                            <div className="_price">價錢</div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </section>
+            </div>
+          </div>
+          {/* <!-- end PageWraper --> */}
+        </main>
+      </body>
     </>
   );
 }
+
 
 export default Project;
