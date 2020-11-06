@@ -48,7 +48,7 @@ class Class_Budget extends React.Component
 
                   <Step></Step>
 
-                  <div className="Grid align-items-center">
+                  <div className="budget_Grid align-items-center">
                     <div className="ramgeNumber ramge3000 col">小於<br/>3000元</div>
                     <div className="ramgeNumber ramge3000to4000 col-7">3000元~4000元</div>
                     <div className="ramgeNumber ramge4000 col">大於<br/>4000元</div>
