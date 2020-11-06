@@ -53,10 +53,10 @@ class Class_ChooseRazor extends React.Component
                           onChange={this.OnChangeRadio}
                           checked={StandGoods === "1"}
                         />
-                        <div className="giftbox_itemName">皇家刮鬍刀</div>
+                        <div className="giftbox_itemName">特務刮鬍刀</div>
                       </div>
                       
-                      <div className="giftbox_itemPrice">NT$ 1580</div>
+                      <div className="giftbox_itemPrice">NT$ 980</div>
                     </div>
 
                     <div className="giftbox_Item col">
@@ -69,10 +69,10 @@ class Class_ChooseRazor extends React.Component
                           onChange={this.OnChangeRadio}
                           checked={StandGoods === "2"}
                         />
-                        <div className="giftbox_itemName">皇家刮鬍刀</div>
+                        <div className="giftbox_itemName">消光刮鬍刀</div>
                       </div>
 
-                      <div className="giftbox_itemPrice">NT$ 1580</div>
+                      <div className="giftbox_itemPrice">NT$ 1090</div>
                     </div>
 
                     <div className="giftbox_Item col">
@@ -85,10 +85,10 @@ class Class_ChooseRazor extends React.Component
                           onChange={this.OnChangeRadio}
                           checked={StandGoods === "3"}
                         />
-                        <div className="giftbox_itemName">皇家刮鬍刀</div>
+                        <div className="giftbox_itemName">復古刮鬍刀</div>
                       </div>
                       
-                      <div className="giftbox_itemPrice">NT$ 1580</div>
+                      <div className="giftbox_itemPrice">NT$ 1090</div>
                     </div>
 
                   
@@ -103,7 +103,7 @@ class Class_ChooseRazor extends React.Component
                           onChange={this.OnChangeRadio}
                           checked={StandGoods === "4"}
                         />
-                        <div className="giftbox_itemName">皇家刮鬍刀</div>
+                        <div className="giftbox_itemName">尊爵刮鬍刀</div>
                       </div>
                       
                       <div className="giftbox_itemPrice">NT$ 1580</div>
@@ -119,10 +119,10 @@ class Class_ChooseRazor extends React.Component
                           onChange={this.OnChangeRadio}
                           checked={StandGoods === "5"}
                         />
-                        <div className="giftbox_itemName">皇家刮鬍刀</div>
+                        <div className="giftbox_itemName">鹿角刮鬍刀</div>
                       </div>
                       
-                      <div className="giftbox_itemPrice">NT$ 1580</div>
+                      <div className="giftbox_itemPrice">NT$ 1480</div>
                     </div>
                     
                     <div className="giftbox_Item col">
@@ -135,10 +135,10 @@ class Class_ChooseRazor extends React.Component
                           onChange={this.OnChangeRadio}
                           checked={StandGoods === "6"}
                         />
-                        <div className="giftbox_itemName">皇家刮鬍刀</div>
+                        <div className="giftbox_itemName">牛角刮鬍刀</div>
                       </div>
                       
-                      <div className="giftbox_itemPrice">NT$ 1580</div>
+                      <div className="giftbox_itemPrice">NT$ 1650</div>
                     </div>
                   
                   </div>
