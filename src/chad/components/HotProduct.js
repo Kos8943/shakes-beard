@@ -4,51 +4,45 @@ import ScrollAnimation from "react-animate-on-scroll";
 import "../styles/custom.scss";
 import { Button, Carousel, Card } from "react-bootstrap";
 
-
-
-
 function HotProduct() {
-  const [dataLoading, setDataLoading] = useState(false)
-  const[hotImg, setHotImg]=useState()
-  const[hotName, setHotName]=useState()
-  const[hotPrice, setHotPrice]=useState()
-  
-  
-   // 載入資料用
-   async function getTotalFromServer() {
-    setDataLoading(true)
-    const url = 'http://localhost:3000/try-db'
-    
-    const request = new Request(url, {
-      method: 'GET',
-      headers: new Headers({
-        Accept: 'application/json',
-        'Content-Type': 'application/json',
-      }),
-    })
+  const [dataLoading, setDataLoading] = useState(false);
+  const [hotImg, setHotImg] = useState();
+  const [hotName, setHotName] = useState();
+  const [hotPrice, setHotPrice] = useState();
 
-    const response = await fetch(request)
-    const data = await response.json()
+  // 載入資料用
+  async function getTotalFromServer() {
+    setDataLoading(true);
+    const url = "http://localhost:3000/try-db";
+
+    const request = new Request(url, {
+      method: "GET",
+      headers: new Headers({
+        Accept: "application/json",
+        "Content-Type": "application/json",
+      }),
+    });
+
+    const response = await fetch(request);
+    const data = await response.json();
     // data會是一個物件值
-    console.log(data[0].image_name)
+    console.log(data[0].image_name);
 
     // setTotal(data.total)
-    setHotImg(data[0].image_name)
-    setHotName(data[0].hotname)
-    setHotPrice(data[0].hotprice)
-      
+    setHotImg(data[0].image_name);
+    setHotName(data[0].hotname);
+    setHotPrice(data[0].hotprice);
   }
 
   // componentDidMount，一開始會載入資料(在元件初始化完成後)
   useEffect(() => {
-    getTotalFromServer()
-  }, [])
+    getTotalFromServer();
+  }, []);
 
   // 每次total資料有改變，2秒後關閉載入指示
   useEffect(() => {
-    setTimeout(() => setDataLoading(false), 500)
-  }, [])
-
+    setTimeout(() => setDataLoading(false), 500);
+  }, []);
 
   return (
     <>
@@ -61,7 +55,7 @@ function HotProduct() {
             </p>
           </div>
         </ScrollAnimation>
-        
+
         <div className="hot-card-area">
           <Card id="cardborder" style={{ width: "20rem" }}>
             <Card.Img variant="top" src={"./imgs/" + `${hotImg}`} />
@@ -74,20 +68,31 @@ function HotProduct() {
             </Card.Body>
           </Card>
         </div>
-       
 
         {/* 熱門商品手機板 */}
         <div className="hot-card-area-mobile">
           <Card id="cardborder" style={{ width: "20rem" }}>
             <Carousel>
               <Carousel.Item>
-                <img className="d-block w-100" src="./imgs/hot1.jpg" alt="First slide" />
+                <img
+                  className="d-block w-100"
+                  src="./imgs/hot1.jpg"
+                  alt="First slide"
+                />
               </Carousel.Item>
               <Carousel.Item>
-                <img className="d-block w-100" src="./imgs/hot2.jpeg" alt="Third slide" />
+                <img
+                  className="d-block w-100"
+                  src="./imgs/hot2.jpeg"
+                  alt="Third slide"
+                />
               </Carousel.Item>
               <Carousel.Item>
-                <img className="d-block w-100" src="./imgs/hot3.jpg" alt="Third slide" />
+                <img
+                  className="d-block w-100"
+                  src="./imgs/hot3.jpg"
+                  alt="Third slide"
+                />
               </Carousel.Item>
             </Carousel>
             <Card.Body id="card-body-mobile">
