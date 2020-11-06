@@ -10,7 +10,6 @@ import img_stand05 from './image/stand05.jpg';
 import img_stand06 from './image/stand06.jpg';
 
 
-
 class Class_ChooseStand extends React.Component
 {
   state =
@@ -147,7 +146,7 @@ class Class_ChooseStand extends React.Component
 
                   
 
-                  <div className="button_box">
+                  <div style={{margin: "19px auto"}}>
                     <Button className="separate backButton" onClick=
                       {     //React程式區間語法 (開始)
                         () =>
