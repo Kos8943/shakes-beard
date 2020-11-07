@@ -12,7 +12,7 @@ import ScrollUp from 'react-scroll-up'
 import HomePage from "./chad/HomePage";
 import Product from "./hsuan/pages/Product";
 import Project1 from "./hsuan/pages/Project1";
-import Project from "./hsuan/Project";
+import Project from "./hsuan/pages/Project";
 import Cart from "./kos/pages/Cart";
 import ShopList from "./chen/pages/ShopList";
 import ShopDetail from "./chen/pages/ShopDetail";

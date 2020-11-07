@@ -1,13 +1,13 @@
 import React from "react";
-import "./style/Project.css";
-import search from "./icon/search.svg";
+import "../style/Project.css";
+import search from "../icon/search.svg";
 // import original from './icon/original.jpg';
 // import Breadcrumb from './component/Breadcrumb'
 // import Pagination from './component/Pagination'
 // import Sorts from './component/Sorts'
 import {} from "react-bootstrap";
 import { NavLink } from "react-router-dom"; 
-import original from "./icon/original.jpg";
+import original from "../icon/original.jpg";
 // import Library, { NamedComponent } from 'library';
 import Resizer from 'react-image-file-resizer';
 // import "project-img.js";
@@ -46,7 +46,7 @@ function Project() {
                       <div className="brand-SectionProductDetail__thums">
                         <div className="_item" style={{width: "100%", display: "inline-block"}}>
                           <div className="_image1">
-                            <img src={require("./icon/original.jpg")}
+                            <img src={require("../icon/original.jpg")}
                               className="card-img-top"
                               alt="..." ></img>
                           </div>
@@ -55,7 +55,7 @@ function Project() {
                         <div className="_item" >
                           <div className="_image">
                             <img 
-                              src={require("./icon/horizontal3.jpg")}
+                              src={require("../icon/horizontal3.jpg")}
                               className="card-img-top"
                               alt="..."
                             ></img>
@@ -64,7 +64,7 @@ function Project() {
                         <div className="_item">
                           <div className="_image">
                           <img 
-                              src={require("./icon/horizontal3.jpg")}
+                              src={require("../icon/horizontal3.jpg")}
                               className="card-img-top"
                               alt="..."
                             ></img>
@@ -72,7 +72,7 @@ function Project() {
                         </div>
                         <div className="_item">
                           <div className="_image">
-                            <img src={require("./icon/horizontal1.jpg")}
+                            <img src={require("../icon/horizontal1.jpg")}
                               className="card-img-top"
                               alt="..."
                             ></img>
@@ -173,7 +173,7 @@ function Project() {
                           >
                             <div className="_image">
                               <img
-                                src={require("./icon/original.jpg")}
+                                src={require("../icon/original.jpg")}
                                 className="card-img-top"
                                 alt="..."
                               ></img>
@@ -200,7 +200,7 @@ function Project() {
                           >
                             <div className="_image">
                               <img
-                                src={require("./icon/original.jpg")}
+                                src={require("../icon/original.jpg")}
                                 className="card-img-top"
                                 alt="..."
                               ></img>
@@ -227,7 +227,7 @@ function Project() {
                           >
                             <div className="_image">
                               <img
-                                src={require("./icon/original.jpg")}
+                                src={require("../icon/original.jpg")}
                                 className="card-img-top"
                                 alt="..."
                               ></img>
@@ -254,7 +254,7 @@ function Project() {
                           >
                             <div className="_image">
                               <img
-                                src={require("./icon/original.jpg")}
+                                src={require("../icon/original.jpg")}
                                 className="card-img-top"
                                 alt="..."
                               ></img>
