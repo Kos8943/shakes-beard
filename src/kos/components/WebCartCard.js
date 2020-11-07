@@ -32,12 +32,12 @@ function WebCartCard(props) {
     const response = await fetch(request)
     const data = await response.json()
     // data會是一個物件值
-    console.log(data[1].img)
+    console.log(data[0].img)
 
     // setTotal(data.total)
-    setProductPrice(data[1].price)
-    setProductType(data[1].type)
-    setProduetName(data[1].name)
+    setProductPrice(data[0].price)
+    setProductType(data[0].type)
+    setProduetName(data[0].name)
   }
 
   // componentDidMount，一開始會載入資料(在元件初始化完成後)
