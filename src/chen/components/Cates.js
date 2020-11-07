@@ -20,7 +20,7 @@ function Cates(props) {
             {path}
           </li> */}
           <li className="breadcrumb-item active" aria-current="page">
-            特價優惠
+            所有商家
           </li>
         </ol>
       </nav>
