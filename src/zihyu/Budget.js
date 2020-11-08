@@ -12,6 +12,7 @@ import 'react-bootstrap-range-slider/dist/react-bootstrap-range-slider.css';
 import RangeSlider from 'react-bootstrap-range-slider';
 import { auto } from '@popperjs/core';
  
+let SliderValue = "1";
 const Step = () => {
 
   const [ value, setValue ] = React.useState(50);
@@ -20,7 +21,24 @@ const Step = () => {
     <div style={{width: "60%", margin: "auto"}}>
     <RangeSlider className="silderbox"
       value={value}
-      onChange={e => setValue(e.target.value)}
+      onChange={e =>
+        {
+          setValue(e.target.value);
+
+          switch (e.target.value)
+          {
+            case "0":
+              SliderValue = "0";
+              break;
+            case "50":
+              SliderValue = "1";
+              break;
+            case "100":
+              SliderValue = "2";
+              break;
+          }
+        }
+      }
       step={50}
       tooltip='off'
     />
@@ -29,8 +47,9 @@ const Step = () => {
 
 };
 
-class Class_Budget extends React.Component
+export class Class_Budget extends React.Component
 {
+
   render()
   {
     return (
@@ -58,7 +77,7 @@ class Class_Budget extends React.Component
                         {     //React程式區間語法 (開始)
                           () =>
                           {
-                            window.open("/Path_ChooseRazor", '_self');
+                            window.open("/Path_ChooseRazor?SelectRange=" + SliderValue, '_self');
                           }
                         }     //React程式區間語法 (結束)
                       
