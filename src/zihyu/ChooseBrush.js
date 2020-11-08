@@ -8,9 +8,8 @@ import img_Brush03 from './image/Brush03.jpg';
 import img_Brush04 from './image/Brush04.jpg';
 import img_Brush05 from './image/Brush05.jpg';
 import img_Brush06 from './image/Brush06.jpg';
+
 class Class_ChooseBrush extends React.Component
-
-
 {
   state =
   {

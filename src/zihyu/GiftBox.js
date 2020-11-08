@@ -5,7 +5,7 @@ import { Button } from 'react-bootstrap'
 import img_Left from './image/razor.png';
 import img_Right from './image/standBrush.png';
 
-class Class_Gift extends React.Component
+class ClassGift extends React.Component
 {
   render()
   {   
@@ -55,7 +55,7 @@ class Class_Gift extends React.Component
 function Func_GiftBox(props)
 {
   return (
-    <Class_Gift />
+    <ClassGift />
   )
 }
 

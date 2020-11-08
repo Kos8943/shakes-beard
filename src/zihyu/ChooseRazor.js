@@ -9,6 +9,12 @@ import img_Razor04 from './image/Razor04.png';
 import img_Razor05 from './image/Razor05.png';
 import img_Razor06 from './image/Razor06.png';
 
+//Ref : https://www.sitepoint.com/get-url-parameters-with-javascript/
+let queryString = window.location.search;
+const urlParams = new URLSearchParams(queryString);
+const SelectRange = urlParams.get('SelectRange')
+console.log(SelectRange);
+
 class Class_ChooseRazor extends React.Component
 {
   state =
