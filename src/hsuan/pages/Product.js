@@ -63,9 +63,8 @@ class Product extends React.Component {
             <div className="top-BrandTile__photo finished " data-anime="fadeInRight"
               data-anime-trigger='.top-BrandTile[data-index="1"]'
               data-anime-delay="1.25" >
-              
-              <div className="_inner">
-                <img src={require("../icon/24K.png")}
+               <div className="_inner">
+               <img src={require("../icon/24K.png")}
                   className="card-img-top"
                   alt="..."></img>
               </div>
