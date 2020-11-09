@@ -136,7 +136,7 @@ class Class_ChooseRazor extends React.Component
                   {     //React程式區間語法 (開始)
                     () =>
                     {
-                      window.open("/Path_ChooseBrush  + "&SelectRazorIndex=" + SelectRazorIndex, '_self');
+                      window.open("/Path_ChooseBrush?SelectRange=" + SelectRange + "&SelectRazorIndex=" + SelectRazorIndex, '_self');
                     }
                   }     //React程式區間語法 (結束)
                   
