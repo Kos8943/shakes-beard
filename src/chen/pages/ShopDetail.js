@@ -8,7 +8,11 @@ import Recommend from '../components/Recommend'
 import '../styles/shops.scss'
 
 function ShopDetail(props) {
-  console.log('ShopDetail', props)
+  // console.log('ShopDetail', props)
+  // const shopid = props.match.params.shopid
+  // console.log('props.match.params',props.match.params)
+  // console.log('shopid',shopid)
+
   return (
     <>
       <Breadcrumb />
@@ -29,7 +33,7 @@ function ShopDetail(props) {
               <strong className="d-inline-block my-2">注意事項</strong>
               <p className="card-text mb-auto">This is a wider card with supporting text below as a natural lead-in to additional content.</p>
               {/* map */}    
-              <Link to="#" className="mt-4 btn goReserve mx-auto d-flex justify-self-center">
+              <Link to="/reservation" className="mt-4 btn goReserve mx-auto d-flex justify-self-center">
                 立即預約
               </Link>
               <Recommend/>
@@ -43,4 +47,4 @@ function ShopDetail(props) {
   )
 }
 
-export default ShopDetail
+export default withRouter(ShopDetail)

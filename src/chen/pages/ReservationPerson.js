@@ -11,6 +11,7 @@ function ReservationPerson(props) {
         <div className="mt-5 py-5 text-center">
           <h2>預約服務</h2>
           <p className="lead">簡單 3 步驟，輕鬆預約ShakeBeard特約商家提供的多樣服務。</p>
+          <div className="decLine"></div>
         </div>
         <div className="row d-flex justify-content-center">
         <Form>
@@ -52,17 +53,20 @@ function ReservationPerson(props) {
             <Form.Check type="checkbox" label="訂購人不是參加者" />
           </Form.Group>
           </Form.Row>
-
+        </Form>
+        </div>
+        <div className="mt-5 py-5 text-center">
           <Button
+            className="reserveBtn"
             onClick={() => props.history.goBack()}>
             上一步
           </Button> 
-          <Button type="submit" className="ml-2" onClick={() =>
+          <Button type="submit" className="ml-2 reserveBtn" onClick={() =>
               props.history.push('/reservationcheck')}>
             下一步
           </Button>
-        </Form>
         </div>
+
 
         {/* <label for="email">聯絡信箱 <span className="text-muted">(必須，以便寄送span></label>
       <div className="col-md-8 mb-3">

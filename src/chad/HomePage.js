@@ -9,6 +9,7 @@ import giftimg from "./imgs/禮物盒.jpg";
 import hotpage from "./imgs/熱銷.jpg";
 import map1 from "./imgs/map1.jpg";
 import map2 from "./imgs/map2.jpg";
+import map3 from "./imgs/map3.jpg";
 import HotProduct from "./components/HotProduct";
 import { Link } from 'react-router-dom';
 
@@ -252,7 +253,7 @@ class HomePage extends React.Component {
               animateOut="bounceOutLeft"
             >
               <div className="map-top-img-area">
-                <img className="map-top-img" src={map1} />
+                <img className="map-top-img" src={map3} />
               </div>
             </ScrollAnimation>
             <div className="top-text-area">
