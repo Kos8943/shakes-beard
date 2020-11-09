@@ -1,6 +1,6 @@
+/* eslint-disable jsx-a11y/alt-text */
 import { get } from "jquery";
 import React, { useState, useEffect } from "react";
-import Delete from "../icon/delete.svg";
 // import Cuf1 from '../img/1-3.jpg'
 import Trash from "../icon/trash.svg";
 import { Link } from "react-router-dom";
@@ -14,7 +14,6 @@ function WebCartCard(props) {
   const [productType3, setProductType3] = useState();
   const [phoneProductType, setPhoneProductType]= useState()
   const [dataLoading, setDataLoading] = useState(false);
-  const [total, setTotal] = useState(1);
   const [amount, setAmount] = useState(1);
   const [subtotal, setSubtotal] = useState(productPrice * amount);
   const [coopo, setCoopo] = useState('')
@@ -104,7 +103,7 @@ function WebCartCard(props) {
         <span className="subtotal  d-none d-lg-block">NT${subtotal}</span>
 
         {/* web del img*/}
-        <img src={Delete} className="deleteIcon d-none d-lg-block"></img>
+        <img src="./imgs/delete.svg" className="deleteIcon d-none d-lg-block" onClick={() => {console.log(236)}}></img>
 
         {/* mobile qty select*/}
         <div className="d-flex counterArea d-block d-lg-none">
@@ -142,7 +141,7 @@ function WebCartCard(props) {
           >
             +
           </div>
-          <img src={Trash} className="CartTarsh"></img>
+          <img src="./imgs/delete.svg" className="CartTarsh"></img>
           <div className="subtotal">NT${subtotal}</div>
         </div>
       </div>
