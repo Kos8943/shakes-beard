@@ -6,6 +6,7 @@ import MemberPasswordUpdateTable from "./components/MemberPasswordUpdateTable";
 import MemberPreferenceSetting from "./components/MemberPreferenceSetting";
 import MemberFavorites from "./components/MemberFavorites";
 import CartOrderCheck from "../kos/components/CartOrderCheck";
+import ReservationOrderCheck from "../chen/components/ReservationOrderCheck";
 
 function MemberOption(props) {
     const [pageTitle, setPageTitle] = useState("訂單查詢");
@@ -89,10 +90,14 @@ function MemberOption(props) {
                                 訂單查詢
                             </div>
 
+                            <div className={`option ${pageTitle === "預約查詢" ? "thisPage" : ""}`} onClick={() => { setPageTitle("預約查詢"); }}>
+                                預約查詢
+                            </div>
+
                         </div>
                     </div><div className="decLine  d-lg-none"></div>
 
-                    {(pageTitle === "資料修改") ?
+                {(pageTitle === "資料修改") ?
                     <MemberDataUpdateTable title="資料修改" /> : ''}
                 {(pageTitle === "密碼修改") ?
                     <MemberPasswordUpdateTable title="密碼修改" /> : ''}
@@ -102,6 +107,8 @@ function MemberOption(props) {
                     <MemberFavorites title="追蹤清單" /> : ''}
                 {(pageTitle === "訂單查詢") ?
                     <CartOrderCheck title="訂單查詢" /> : ''}
+                {(pageTitle === "預約查詢") ?
+                    <ReservationOrderCheck title="預約查詢" /> : ''}
                 </div>
             </div>
 

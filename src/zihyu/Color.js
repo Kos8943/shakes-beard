@@ -3,6 +3,7 @@ import './Style/ColorCSS.css';
 import './Style/CommonCSS.css';
 import img_box from './image/box.png';
 import { Button } from 'react-bootstrap'
+
 class Class_Color extends React.Component
 
 

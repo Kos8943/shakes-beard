@@ -4,6 +4,7 @@ import { Link, withRouter } from 'react-router-dom'
 function Breadcrumb(props) {
   console.log('Breadcrumb')
   console.log(props)
+  const[crumb,setCrumb]=useState('商家預約')
 
   let path = ''
   const pathname = props.location.pathname
@@ -37,10 +38,21 @@ function Breadcrumb(props) {
             <Link to="/">首頁</Link>
           </li>
           <li className="breadcrumb-item">
-            <Link to="#">商家預約</Link>
+            <Link to="#"
+              onClick={() => {
+                if(path === "商家頁面"){
+                  console.log("離開商家頁面")
+                  props.history.push('/shoplist')
+                  setCrumb('商家列表')}
+                else{console.log("離開其他頁面")
+                  props.history.push('/homepage')}
+            }}>
+              {crumb}
+            </Link>
           </li>
           <li className="breadcrumb-item active" aria-current="page">
             {path}
+            {/* <Link to="">{path}</Link> */}
           </li>
         </ol>
       </nav>

@@ -1,0 +1,103 @@
+.ReservationOrderTableCss {
+    border: 1px solid #44494a;
+    font-size: 1.1rem;
+    text-align: center;
+}
+
+.ReservationOrderTableWidth {
+    width: 16%;
+}
+
+.ReservationOrderCheckSid {
+    margin-bottom: 0;
+}
+
+.ReservationOrderCheckDate {
+    width: 20%;
+    border-radius: 2px 0 0 0;
+}
+
+.ReservationOrderCheckCancel {
+    width: 16%;
+    border-radius: 0 2px 0 0;
+}
+
+.ReservationOrderCheckCancel2 {
+    border-radius: 0 0 2px 0;
+}
+
+.ReservationOrderCheckDate2 {
+    width: 20%;
+    border-radius: 0 0 0 2px;
+}
+
+.ReservationOrderCheckDetailsText {
+    font-size: 1.1rem;
+    margin-right: 1%;
+    // background-color: #faf;
+    margin-bottom: 2%;
+}
+
+.ReservationOrderCheckDetails {
+    width: 30px;
+    height: 30px;
+    background-color: #2D3B72;
+    border-radius: 50%;
+    color: #f8f8f8;
+    text-align: center;
+}
+
+.ReservationOrderCheckDetailsUpArrow {
+    width: 20px;
+    height: 20px;
+    color: #f8f8f8;
+}
+
+.ReservationOrderCheckLine {
+    margin-top: 2%;
+    width: 100%;
+    height: 2px;
+    margin-bottom: 2%;
+    background-color: #a69981;
+}
+
+.ReservationOrderCheck.cartItem {
+    width: 98%;
+    height: 100px;
+    background-color: #f8f8f8;
+    padding: .5rem;
+    margin-bottom: 2%;
+    
+}
+.ReservationOrderCheck.itemImg{
+    height: 100%;
+    width: 12%;
+    background-color: #ccc;
+    margin-right: 3%;
+}
+
+.ReservationOrderCheck.itemName {
+    font-size: .8rem;
+    margin-right: 9%;
+}
+
+.ReservationOrderCheck .unitPrice {
+    margin: auto 0;
+    font-size: .8rem;
+    margin-right: 9%;
+}
+
+.ReservationOrderCheck.subtotal {
+    margin: auto 0;
+    font-size: .8rem;
+    margin-right: 4%;
+    color: #2D3B72;
+}
+
+.ReservationOrderCheck .productTpye {
+    font-size: .8rem;
+}
+
+.ReservationOrderCheck .amount {
+    font-size: .8rem;
+}

@@ -2,12 +2,12 @@ import React from 'react'
 import './Style/BudgetCSS.css';
 import './Style/CommonCSS.css';
 import img_box from './image/box.png';
+import img_box2 from './image/Razor06.png';
 import { Button } from 'react-bootstrap'
 
 /** 安裝Slider (https://www.npmjs.com/package/react-bootstrap-range-slider)
  * Example (https://jaywilz.github.io/react-bootstrap-range-slider/)
- * npm install react-bootstrap-range-slider
- */
+ * npm install react-bootstrap-range-slider*/
 import 'react-bootstrap-range-slider/dist/react-bootstrap-range-slider.css';
 import RangeSlider from 'react-bootstrap-range-slider';
 import { auto } from '@popperjs/core';
@@ -18,23 +18,27 @@ const Step = () => {
   const [ value, setValue ] = React.useState(50);
 
   return (
-    <div style={{width: "60%", margin: "auto"}}>
+    <div style={{width: "58%", margin: "auto"}}>
     <RangeSlider className="silderbox"
       value={value}
       onChange={e =>
         {
           setValue(e.target.value);
+          var targetDiv = document.getElementById("changebudget_boxImg");
 
           switch (e.target.value)
           {
             case "0":
               SliderValue = "0";
+              targetDiv.setAttribute("src","./image/Razor06.png");
               break;
             case "50":
               SliderValue = "1";
+              targetDiv.setAttribute("src","./image/box.png");
               break;
             case "100":
               SliderValue = "2";
+              targetDiv.setAttribute("src","./image/Razor06.png");
               break;
           }
         }
@@ -62,7 +66,7 @@ export class Class_Budget extends React.Component
                     <div className="lineTop"></div>
                     <div className="lineDown"></div>
 
-                    <div><img className="budget_boxImg" src={img_box} /></div>
+                    <div><img className="budget_boxImg" id="changebudget_boxImg" src={img_box} /></div>
 
                     <Step></Step>
 

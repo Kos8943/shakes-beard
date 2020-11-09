@@ -88,13 +88,16 @@
   }
   
   .breadcrumb-item a,
-  .sorts>.dropdown>.dropdown-menu>.dropdown-item{
+  .sort>option,
+  // .openDay>.dropdown>.dropdown-menu>.dropdown-item,
+  .openDay>.opendaySelect{
     color: #44494a;
     text-decoration: none;
   }
 
   .breadcrumb-item a:hover,
-  .sorts>.dropdown>.dropdown-menu>.dropdown-item:hover{
+  .sort>option:hover,
+  .openDay>.opendaySelect:hover{
     color: #fff;
     background-color: #3f61be;
   }
@@ -109,22 +112,28 @@
     margin-top: 0;
   }
 
-  .sort {
+  .sort,
+  .opendaySelect {
     border: 1px solid #a69981;
     background-color: #fffffd;
+    padding: 3px;;
   }
 
   // 商家列表: 商家卡片
   .shopcard {
     margin-top: 15px;
     margin-bottom: 15px;
-    margin-right: 3px;
+    margin-right: 10px;
     // box-shadow: 5px 5px 0 rgba(0,0,0,0.2);
   }
 
   .shopcard>.card-img-top{
     border-radius: 0;
   }
+
+  // .shopcard>.todetail:hover .card-img-top{
+  //   filter: grayscale(100%);
+  // }
 
   .cardGroup {
     flex-wrap: wrap;
@@ -141,8 +150,11 @@
     font-size: 1rem;
   }
 
-  .linktodetail:hover .linktodetail{
-    text-decoration: underline;
+  .like,.dislike{
+    color: #be3f3f; 
+    // position: relative;
+    // top: -30px;
+    // left: 90%;
   }
 
   // 商家列表: 分頁
@@ -173,16 +185,15 @@
   }
 
   .page-link:hover {
-    background-color: #007bff;
+    background-color: #3f61be;
   }
   
   // 商家詳細: 預約按鈕
   .goReserve {
     background-color: #2d3b72;
-    color: white;
     border: none;
-    width: 10rem;
-    display: inline;
+    width: 6rem;
+    // display: inline;
     text-decoration: none;
   }
 

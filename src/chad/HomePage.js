@@ -9,7 +9,11 @@ import giftimg from "./imgs/禮物盒.jpg";
 import hotpage from "./imgs/熱銷.jpg";
 import map1 from "./imgs/map1.jpg";
 import map2 from "./imgs/map2.jpg";
+import map3 from "./imgs/map3.jpg";
 import HotProduct from "./components/HotProduct";
+import { Link } from 'react-router-dom';
+
+
 
 //animation
 import "animate.css/animate.min.css";
@@ -102,7 +106,9 @@ const parallaxData = [
   ];
 
 class HomePage extends React.Component {
+
   render() {
+   
     return (
       <>
         <body className="body">
@@ -170,7 +176,6 @@ class HomePage extends React.Component {
                   並以「莎士比亞」為諧音，呈現出別具風格的活潑樣貌。
                 </p>
                 <p className="story-text pb-2" id="story-text2">
-                  {" "}
                   Shakes Beard
                   發展出一種北德貴族品味的學院風，代表著注重品質的堅持，
                   又融合了英國的優雅經典，讓時尚商品能夠成為永恆的精品。
@@ -191,7 +196,7 @@ class HomePage extends React.Component {
             
               <h2 className="gift-title py-3">訂製專屬禮盒</h2>
               <p className="gift-text">
-                您可以在網頁上設計專屬的禮物盒，即時預覽您的設計，達成最佳的個性化送禮服務。
+                您可以在網頁上設計專屬的禮物盒，即時預覽您的設計，達成最佳的客製化送禮服務。
               </p>
             
             </Plx>
@@ -199,12 +204,19 @@ class HomePage extends React.Component {
             
               <h2 className="gift-title py-3">訂製專屬禮盒</h2>
               <p className="gift-text">
-                您可以在網頁上設計專屬的禮物盒，即時預覽您的設計，達成最佳的個性化送禮服務。
+                您可以在網頁上設計專屬的禮物盒，即時預覽您的設計，達成最佳的客製化送禮服務。
               </p>
             
             </div>
+           
+            <Link to="Path_GiftBox">
             <Plx  type="button" className="giftBtn" parallaxData={parallaxDataBtn}>開始製作</Plx>
+            </Link>
+          
+            <Link to="Path_GiftBox">
             <button className="giftBtn1">開始製作</button>
+            </Link>
+           
           </div>
          
           {/* 熱門商品*/}
@@ -225,8 +237,12 @@ class HomePage extends React.Component {
             <p className="top-text1">
               用我們獨有的工藝技術，為不甘平凡的您，點綴出更獨特的風格。
             </p>
+            <Link to="/product">
             <Plx  type="button" className="chad-topBtn" parallaxData={parallaxDataBtn2}>所有系列</Plx>
-            <button className="chad-topBtn1">開始製作</button>
+            </Link>
+            <Link to="/product">
+            <button className="chad-topBtn1">所有系列</button>
+            </Link>
           </div>
 
           {/* 地圖 */}
@@ -237,7 +253,7 @@ class HomePage extends React.Component {
               animateOut="bounceOutLeft"
             >
               <div className="map-top-img-area">
-                <img className="map-top-img" src={map1} />
+                <img className="map-top-img" src={map3} />
               </div>
             </ScrollAnimation>
             <div className="top-text-area">
@@ -259,10 +275,11 @@ class HomePage extends React.Component {
                 <p className="map-down-text">
                   我們為您挑選了優質的店家，提供最高品質的服務，讓您煥然一新。{" "}
                 </p>
-
+                <Link to="/ShopList">
                 <Button variant="primary" id="mapBtn">
                   立即預約
                 </Button>
+                </Link>
               </ScrollAnimation>
             </div>
             <ScrollAnimation
