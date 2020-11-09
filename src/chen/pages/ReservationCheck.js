@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react'
-import { withRouter, useHistory } from 'react-router-dom'
+import { withRouter, Link,useHistory } from 'react-router-dom'
 import { Table,Button,Modal } from 'react-bootstrap'
 import '../styles/reservations.scss'
 
@@ -9,6 +9,8 @@ function ReservationCheck(props) {
   const [modalShow, setModalShow] = useState(false)
 
   function MyVerticallyCenteredModal(props) {
+    console.log('model-props',props)
+    
     return (
       <Modal
         {...props}
@@ -26,8 +28,10 @@ function ReservationCheck(props) {
           <p>確認OK，回首頁</p>
         </Modal.Body>
         <Modal.Footer>
-          <Button onClick={props.onHide} className="reserveBtn">OK</Button>
-          {/* <Button onClick={props.onHide} className="reserveBtn">OK</Button> */}
+          <Link to="/homepage">
+            <Button className="reserveBtn">OK</Button>
+            {/* <button onClick={props.onHide} className="reserveBtn">OK</button> */}
+          </Link>
         </Modal.Footer>
       </Modal>
     );
@@ -56,9 +60,10 @@ function ReservationCheck(props) {
               <td>ST001</td>
             </tr>
             <tr>
+              <td>預約日期</td>
+              <td>(星期二)</td>
               <td>預約時間</td>
-              <td>星期二</td>
-              <td colSpan="2">12:00~13:00</td>
+              <td>12:00~13:00</td>
             </tr>
             <tr>
               <td>預約服務</td>

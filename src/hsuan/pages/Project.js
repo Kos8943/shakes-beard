@@ -11,32 +11,19 @@ import original from "../icon/original.jpg";
 // import Library, { NamedComponent } from 'library';
 import Resizer from 'react-image-file-resizer';
 // import "project-img.js";
-
-// const resizeFile = (file) => new Promise(resolve => {
-//     Resizer.imageFileResizer(file, 300, 300, 'original', 100, 0,
-//     uri => {
-//       resolve(uri);
-//     },
-//     'base64'
-//     );
-// });
-// const onChange = async (event) => {
-//     const file = event.target.files[0];
-//     const image = await resizeFile(file);
-//     console.log(image);
-//   }
               
 function Project() {
   const [path, setPath] = useState('horizontal4.jpg')
 
   return (
     <>
-    
+     
     {/* <div>
         <img style={{maxWidth: '50px'}} src={imagesPath[original]} onClick={this.toggleImage} />
       </div> */}
       <body className="page-brand_detail  typesquare_option">
         <main>
+        
           <div className="PgaeWraper">
             <div className="PgaeWrapper__inner">
               {/* <!-- start PageWraper --> */}
@@ -49,36 +36,28 @@ function Project() {
                         <div className="_item"  style={{width:'100%',display:'inline-block'}}>
                           <div className="_image">
                             <img src={`./imgs/hsuan/${path}`}
-                              className="card-img-top"
-                              ></img>
+                              className="card-img-top"></img>
                           </div>
                         </div>
                                               
                         <div className="_item" >
                           <div className="_image">
-                          <img 
-                              src={require("../icon/horizontal4.jpg")}
-                              className="card-img-top"
-                             
-                            ></img>
+                          <img src={require("../icon/horizontal4.jpg")}
+                              className="card-img-top"></img>
                           </div>
                         </div>
                        <div className="_item" onClick={() => { setPath('horizontal3.jpg') }} >
                           <div className="_image" >
                             <img 
                               src={`./imgs/hsuan/horizontal3.jpg`}
-                              className="card-img-top"
-                             
-                            ></img>
+                              className="card-img-top"></img>
                           </div>
                         </div>
-                        <div className="_item">
+                        <div className="_item" onClick={() => { setPath('horizontal2.jpg') }}>
                           <div className="_image">
                           <img 
-                              src={require("../icon/horizontal3.jpg")}
-                              className="card-img-top"
-                             
-                            ></img>
+                              src={require("../icon/horizontal2.jpg")}
+                              className="card-img-top"></img>
                           </div>
                         </div>                    
                       </div>

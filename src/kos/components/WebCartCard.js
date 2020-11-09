@@ -51,11 +51,7 @@ function WebCartCard(props) {
     setTimeout(() => setDataLoading(false), 500)
   }, [setProductPrice])
 
-  const loading = (
-    <div className="spinner-grow" role="status">
-      <span className="sr-only">Loading...</span>
-    </div>
-  )
+ 
     return (
         <>
                     <div className="cartItem d-xl-flex d-block">

@@ -24,11 +24,6 @@ function ShopList(props) {
             <Cates />
             <div className="cardGroup">
               <Cards />
-              <Cards />
-              <Cards />
-              <Cards />
-              <Cards />
-              <Cards />
             </div>
           <Pagination />
           </div>
