@@ -3,22 +3,37 @@ import { Dropdown } from 'react-bootstrap'
 
 function Cates(props) {
   console.log('Cates', props)
+  let title = ''
+  const titleName = props.category
+
+  switch (titleName) {
+    case 'allshops':
+      title = '所有商家'
+      break
+    case 'discountshops':
+      title = '特價優惠'
+      break
+    case 'barbershops':
+      title = '男士理髮'
+      break
+    case 'shavingshops':
+      title = '男士修容'
+      break
+    case 'dressingshops':
+      title = '男士造型'
+      break
+     case 'shopslocation':
+      title = '商家位置'
+      break
+    default:
+      title = ''
+  }
 
   return (
     <>
     <div className="sorting">
       <nav aria-label="breadcrumb cates">
         <ol className="breadcrumb mb-0">
-          {/* <li className="breadcrumb-item cates-item">
-            <Link to="#">所有商家</Link>
-          </li> */}
-          {/* <li className="breadcrumb-item cates-item">
-            <Link to="#">特價優惠</Link>
-          </li> */}
-          {/* 變數
-          <li className="breadcrumb-item active" aria-current="page">
-            {path}
-          </li> */}
           <li className="breadcrumb-item active cates-item" aria-current="page">
             所有商家
           </li>

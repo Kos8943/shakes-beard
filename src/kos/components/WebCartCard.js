@@ -3,6 +3,7 @@ import React, { useState, useEffect } from 'react'
 import Delete from '../icon/delete.svg'
 // import Cuf1 from '../img/1-3.jpg'
 import Trash from '../icon/trash.svg'
+import { Link } from 'react-router-dom'
 
 function WebCartCard(props) {
     const [productName, setProduetName]=useState()
@@ -57,7 +58,7 @@ function WebCartCard(props) {
   )
     return (
         <>
-                    <div className="cartItem d-xl-flex">
+                    <div className="cartItem d-xl-flex d-block">
                         <img className="itemImg" src="./imgs/1-3.jpg"></img>
                         <div className="itemName my-lg-auto">{productName}</div>
 
@@ -93,6 +94,26 @@ function WebCartCard(props) {
                             <img src={Trash} className="CartTarsh"></img>
                             <div className="subtotal">NT$2,882</div>
                         </div>
+                    </div>
+
+                    <div className="priceArea ml-auto d-flex">
+                        <div className="priceArea font">
+                            <div>優惠代碼：</div>
+                            <div>折扣：</div>
+                            <div>運費：</div>
+                            <div>總計：</div>
+                        </div>
+
+                        <div className="priceArea font totalPrice priceColor">
+                            <div><input></input></div>
+                            <div>NT$ -150</div>
+                            <div>NT$ 150</div>
+                            <div>NT$ 8,796</div>
+                        </div>
+                        
+                    </div>
+                    <div className="sumitBtn ml-auto">
+                        <Link to="/payment"><button>送出訂單</button></Link>
                     </div>
         </>
     )
