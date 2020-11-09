@@ -6,6 +6,7 @@ import MemberPasswordUpdateTable from "./components/MemberPasswordUpdateTable";
 import MemberPreferenceSetting from "./components/MemberPreferenceSetting";
 import MemberFavorites from "./components/MemberFavorites";
 import CartOrderCheck from "../kos/components/CartOrderCheck";
+import ReservationOrderCheck from "../chen/components/ReservationOrderCheck";
 
 function MemberOption(props) {
     const [pageTitle, setPageTitle] = useState("訂單查詢");
@@ -107,7 +108,7 @@ function MemberOption(props) {
                 {(pageTitle === "訂單查詢") ?
                     <CartOrderCheck title="訂單查詢" /> : ''}
                 {(pageTitle === "預約查詢") ?
-                    <CartOrderCheck title="預約查詢" /> : ''}
+                    <ReservationOrderCheck title="預約查詢" /> : ''}
                 </div>
             </div>
 

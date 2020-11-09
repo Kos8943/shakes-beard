@@ -88,7 +88,7 @@ class Class_ChooseStand extends React.Component
                         <div className="giftbox_itemName">胡桃修容架</div>
                       </div>
                       
-                      <div className="giftbox_itemPrice">NT$ 980</div>
+                      <div className="giftbox_itemPrice">NT$ 1200</div>
                     </div>
                   
                     <div className="giftbox_Item col">
@@ -104,7 +104,7 @@ class Class_ChooseStand extends React.Component
                         <div className="giftbox_itemName">木頭修容架</div>
                       </div>
                       
-                      <div className="giftbox_itemPrice">NT$ 980</div>
+                      <div className="giftbox_itemPrice">NT$ 780</div>
                     </div>
 
                     <div className="giftbox_Item col">
@@ -120,7 +120,7 @@ class Class_ChooseStand extends React.Component
                         <div className="giftbox_itemName">尊爵刮鬍刀</div>
                       </div>
                       
-                      <div className="giftbox_itemPrice">NT$ 780</div>
+                      <div className="giftbox_itemPrice">NT$ 1200</div>
                     </div>
                     
                     <div className="giftbox_Item col">
@@ -136,7 +136,7 @@ class Class_ChooseStand extends React.Component
                         <div className="giftbox_itemName">紅壇修容架</div>
                       </div>
                       
-                      <div className="giftbox_itemPrice">NT$ 980</div>
+                      <div className="giftbox_itemPrice">NT$ 400</div>
                     </div>
                     
                       

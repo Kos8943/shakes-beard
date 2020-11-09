@@ -62,7 +62,7 @@ class Class_ChooseRazor extends React.Component
                         <div className="giftbox_itemName">特務刮鬍刀</div>
                       </div>
                       
-                      <div className="giftbox_itemPrice">NT$ 980</div>
+                      <div className="giftbox_itemPrice">NT$ 600</div>
                     </div>
 
                     <div className="giftbox_Item col">
@@ -113,7 +113,7 @@ class Class_ChooseRazor extends React.Component
                         <div className="giftbox_itemName">尊爵刮鬍刀</div>
                       </div>
                       
-                      <div className="giftbox_itemPrice">NT$ 1580</div>
+                      <div className="giftbox_itemPrice">NT$ 1800</div>
                     </div>
 
                     <div className="giftbox_Item col">
@@ -145,7 +145,7 @@ class Class_ChooseRazor extends React.Component
                         <div className="giftbox_itemName">牛角刮鬍刀</div>
                       </div>
                       
-                      <div className="giftbox_itemPrice">NT$ 1650</div>
+                      <div className="giftbox_itemPrice">NT$ 1800</div>
                     </div>
                   
                 </div>

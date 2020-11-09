@@ -56,7 +56,7 @@ class Class_ChooseBrush extends React.Component
                         <div className="giftbox_itemName">拋光刮鬍刷</div>
                       </div>
                       
-                      <div className="giftbox_itemPrice">NT$ 990</div>
+                      <div className="giftbox_itemPrice">NT$ 2990</div>
                     </div>
 
                     <div className="giftbox_Item col">
@@ -72,7 +72,7 @@ class Class_ChooseBrush extends React.Component
                         <div className="giftbox_itemName">橄欖刮鬍刷</div>
                       </div>
 
-                      <div className="giftbox_itemPrice">NT$ 990</div>
+                      <div className="giftbox_itemPrice">NT$ 3000</div>
                     </div>
 
                     <div className="giftbox_Item col">
@@ -88,7 +88,7 @@ class Class_ChooseBrush extends React.Component
                         <div className="giftbox_itemName">沼澤刮鬍刷</div>
                       </div>
                       
-                      <div className="giftbox_itemPrice">NT$ 990</div>
+                      <div className="giftbox_itemPrice">NT$ 3000</div>
                     </div>
                   
                     <div className="giftbox_Item col">
@@ -104,7 +104,7 @@ class Class_ChooseBrush extends React.Component
                         <div className="giftbox_itemName">皇家刮鬍刷</div>
                       </div>
                       
-                      <div className="giftbox_itemPrice">NT$ 749</div>
+                      <div className="giftbox_itemPrice">NT$ 1900</div>
                     </div>
 
                     <div className="giftbox_Item col">
@@ -120,7 +120,7 @@ class Class_ChooseBrush extends React.Component
                         <div className="giftbox_itemName">鬃毛刮鬍刷</div>
                       </div>
                       
-                      <div className="giftbox_itemPrice">NT$ 330</div>
+                      <div className="giftbox_itemPrice">NT$ 1000</div>
                     </div>
                     
                     <div className="giftbox_Item col">

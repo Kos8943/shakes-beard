@@ -1,7 +1,23 @@
 .modal-content{
-    width: 70%;
+    width: 60%;
+    position: relative;
+    left: 20%;
 }
 
 .modal-header, .modal-footer{
+    border: none;
+}
+
+.decLine {
+    height: 8px;
+    border-top: 3px solid #a69981;
+    border-bottom: 1px solid #a69981;
+    margin: 30px 0 15px 0;
+    // background-color: #faf;
+    width: 100%;
+  }
+
+.reserveBtn{
+    background-color: #3f61be;
     border: none;
 }
