@@ -26,37 +26,37 @@ html {
 // 1920
 
 .loginCard {
-  width: 44.6vw;
+  width: 40vw;
   // width:848px;
   // height: 578px;
-  height: 60.2vh;
+  height: 50vh;
   background-color: rgba(255, 255, 255, 0.75);
   border: radius 4px;
-  margin: 8vh auto;
+  margin: 13vh auto;
   // border: 2px solid saddlebrown;
   // display: none;
 }
 
 .loginTittle {
-  font-size: 1.63rem;
+  font-size: 2rem;
   font-weight: bold;
   text-align: center;
   // border: 1px solid black;
-  padding-top: 45px;
+  padding-top: 25px;
 }
 
 .loginArea1 {
-  width: 22.0833vw;
-  height: 34.722vh;
+  width: 18vw;
+  height: 32vh;
   // border: 1px solid hotpink;
   border-right: 0.5px solid #232d2f;
   margin-top: 38px;
-  padding-left: 65px;
+  text-align: center;
 }
 
 .loginArea2 {
-  width: 22.0833vw;
-  height: 34.722vh;
+  width: 18vw;
+  height: 32vh;
   // border: 1px solid steelblue;
   border-left: 0.5px solid #232d2f;
   margin-top: 38px;
@@ -66,15 +66,27 @@ html {
   font-size: 1.25rem;
   // margin-left: 4rem;
   // border: 1px solid #232d2f;
-  margin-top: 33px;
+  margin-top: 40px;
+  text-align: left;
+  margin-left: 30px;
+
+}
+.logText2 {
+  font-size: 1.25rem;
+  text-align: left;
+  // border: 1px solid #232d2f;
+  margin-left: 30px;
+
+
 }
 
 .loginInput {
   background-color: #898584;
   border: 1.3px solid #6b7496;
-  width: 15.9vw;
-  height: 5.74vh;
+  width: 15vw;
+  height: 4vh;
   border-radius: 4px;
+ 
 }
 
 .otherAccount {
@@ -84,11 +96,12 @@ html {
 }
 
 .otherLogButton {
-  width: 15.9vw;
-  height: 5.74vh;
+  width: 15vw;
+  height: 5vh;
   border-radius: 4px;
   text-align: left;
   border: 1.3px solid #6b7496;
+  font-size: 1rem;
 }
 
 .facebook {
@@ -187,11 +200,26 @@ html {
   }
 
   .logText {
-    margin-bottom: 15px;
-    // border: 1px solid steelblue;
-    margin-top: 15px;
+    font-size: 1.25rem;
+    // margin-left: 4rem;
+    // border: 1px solid #232d2f;
+    margin-top: 40px;
+    text-align: left;
+    margin-left: 0;
 
   }
+
+  .logText2 {
+    font-size: 1.25rem;
+  // margin-left: 4rem;
+  // border: 1px solid #232d2f;
+  margin-top: 40px;
+  text-align: left;
+  margin-left: 0;
+
+  }
+
+
 
   .loginInput {
     width: 100%;

@@ -16,8 +16,12 @@ function SignUp(props) {
                 註冊新帳號
               </div>
 
-              <div className="area ">
+              <div className="area">
 
+                <div className="signUpText ">帳號</div>
+                <div className="d-flex justify-content-center">
+                  <input className="signUpInput" type="text"></input>
+                </div>
                 <div className="signUpText ">姓名</div>
                 <div className="d-flex justify-content-center">
                   <input className="signUpInput" type="text"></input>
@@ -42,11 +46,11 @@ function SignUp(props) {
                 <div className="d-flex justify-content-center">
                   <input className="signUpInput" type="password"></input>
                 </div>
-
+ <button  className="singUpButton d-flex justify-content-center align-items-center">完成</button>
+              
               </div>
               
-              <a href="" className="singUpButton d-flex justify-content-center align-items-center">完成</a>
-              
+             
             </div>
 
           </div>

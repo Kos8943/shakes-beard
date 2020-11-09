@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import "../style/Project.css";
 import search from "../icon/search.svg";
 // import original from './icon/original.jpg';
@@ -27,6 +27,8 @@ import Resizer from 'react-image-file-resizer';
 //   }
               
 function Project() {
+  const [path, setPath] = useState('horizontal4.jpg')
+
   return (
     <>
     
@@ -43,21 +45,30 @@ function Project() {
                 <div className="SectionTile__container">
                   <div className="brand-SectionProductDetail__layout">
                     <div className="brand-SectionProductDetail__image">
-                      <div className="brand-SectionProductDetail__thums">
-                        <div className="_item" style={{width: "100%", display: "inline-block"}}>
-                          <div className="_image1">
-                            <img src={require("../icon/original.jpg")}
+                      <div className="brand-SectionProductDetail__thums">                   
+                        <div className="_item"  style={{width:'100%',display:'inline-block'}}>
+                          <div className="_image">
+                            <img src={`./imgs/hsuan/${path}`}
                               className="card-img-top"
-                              alt="..." ></img>
+                              ></img>
                           </div>
                         </div>
-                      
+                                              
                         <div className="_item" >
                           <div className="_image">
-                            <img 
-                              src={require("../icon/horizontal3.jpg")}
+                          <img 
+                              src={require("../icon/horizontal4.jpg")}
                               className="card-img-top"
-                              alt="..."
+                             
+                            ></img>
+                          </div>
+                        </div>
+                       <div className="_item" onClick={() => { setPath('horizontal3.jpg') }} >
+                          <div className="_image" >
+                            <img 
+                              src={`./imgs/hsuan/horizontal3.jpg`}
+                              className="card-img-top"
+                             
                             ></img>
                           </div>
                         </div>
@@ -66,21 +77,14 @@ function Project() {
                           <img 
                               src={require("../icon/horizontal3.jpg")}
                               className="card-img-top"
-                              alt="..."
+                             
                             ></img>
                           </div>
-                        </div>
-                        <div className="_item">
-                          <div className="_image">
-                            <img src={require("../icon/horizontal1.jpg")}
-                              className="card-img-top"
-                              alt="..."
-                            ></img>
-                          </div>
-                        </div>
+                        </div>                    
                       </div>
+                  
                     </div>
-
+                    
                     <div className="brand-SectionProductDetail__body">
                       <div className="brand-SectionProductDetail__heading">
                         <h2
@@ -175,7 +179,7 @@ function Project() {
                               <img
                                 src={require("../icon/original.jpg")}
                                 className="card-img-top"
-                                alt="..."
+                               
                               ></img>
                             </div>
                           </a>
@@ -202,7 +206,7 @@ function Project() {
                               <img
                                 src={require("../icon/original.jpg")}
                                 className="card-img-top"
-                                alt="..."
+                               
                               ></img>
                             </div>
                           </a>
@@ -229,7 +233,7 @@ function Project() {
                               <img
                                 src={require("../icon/original.jpg")}
                                 className="card-img-top"
-                                alt="..."
+                               
                               ></img>
                             </div>
                           </a>
@@ -256,7 +260,7 @@ function Project() {
                               <img
                                 src={require("../icon/original.jpg")}
                                 className="card-img-top"
-                                alt="..."
+                               
                               ></img>
                             </div>
                           </a>

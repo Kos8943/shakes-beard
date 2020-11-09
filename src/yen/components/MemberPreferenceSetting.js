@@ -8,7 +8,7 @@ function MemberPreferenceSetting(props) {
             <div className="updateArea">
                 <div className="tittle2">付款方式</div>
                 <div>
-                    <div>信用卡卡號</div>
+                    <div className="cardText">信用卡卡號</div>
                     <div className="d-flex">
                     <input type="text" className="cardNum" value=""></input>
                     <input type="text" className="cardNum" value=""></input>
@@ -16,7 +16,7 @@ function MemberPreferenceSetting(props) {
                     <input type="text" className="cardNum" value=""></input>
                     </div>
 
-                    <div>有效日期</div>
+                    <div className="cardText">有效日期</div>
                     <div className="d-flex">
                         <select className="cardDate">
                             <option>1</option>
@@ -28,11 +28,13 @@ function MemberPreferenceSetting(props) {
                         <div className="cardDateText">日</div>
                     </div>
 
-                    <div>檢核碼(3碼)</div>
+                    <div className="cardText">檢核碼(3碼)</div>
                     <input type="text" className="updateInput" placeholder="信用卡背面3碼"></input>
 
+                    
+
                     <div className="d-flex flex-column">
-                        <div>發票設定</div>
+                        <div className="cardText">發票設定</div>
                         <div>
                             <input type="radio" className="personal" id="personal" name="invoice" value="兩聯式發票"></input>
                             <label for="personal">兩聯式發票(個人)</label>    
