@@ -97,7 +97,8 @@
 
   .breadcrumb-item a:hover,
   .sorts>.dropdown>.dropdown-menu>.dropdown-item:hover,
-  .openday>.dropdown>.dropdown-menu>.dropdown-item:hover{
+  // .openday>.dropdown>.dropdown-menu>.dropdown-item:hover,
+  .openDay>.opendaySelect:hover{
     color: #fff;
     background-color: #3f61be;
   }
