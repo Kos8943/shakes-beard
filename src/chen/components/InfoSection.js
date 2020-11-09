@@ -27,10 +27,19 @@ function InfoSection(props) {
             <span>ST001</span></p>
             <p className="mt-3">電話:  02-27375832</p>
             <p>地址:  106台北市大安區敦化南路二段265巷6號2樓</p>
-            <div className="">
-              <Dropdown>
+            <div className="mb-3 openday">
               營業時間: 
-              <Dropdown.Toggle id="dropdown-basic" className="day m-0 col" variant="">
+              <select className="opendaySelect m-1">
+                <option value="星期一">星期一</option>
+                <option value="星期二">星期二</option>
+                <option value="星期三">星期三</option>
+                <option value="星期四">星期四</option>
+                <option value="星期五">星期五</option>
+                <option value="星期六">星期六</option>
+                <option value="星期日">星期日</option>
+              </select>
+              {/* <Dropdown>
+              <Dropdown.Toggle id="dropdown-basic" className="day m-0 p-1" variant="">
                 星期一
               </Dropdown.Toggle>
                 <Dropdown.Menu>
@@ -41,21 +50,15 @@ function InfoSection(props) {
                  <Dropdown.Item>星期六</Dropdown.Item>
                  <Dropdown.Item>星期日</Dropdown.Item>
                 </Dropdown.Menu>
-              </Dropdown>
-              <span className="col">17:00 - 21:00</span>
+              </Dropdown> */}
+              <span className="col p-1">17:00 - 21:00</span>
             </div>
             <p>商家簡介:<br/>台灣男仕barbershop 第一品牌，創業六年以來，以美麗的理髮廳空間與台灣男仕理容文化薪傳聞名。</p>
             <p>提供服務:
             <div className="d-flex">
-              <h5>
                 <Badge pill variant="secondary">理髮</Badge>
-              </h5>
-              <h5>
                 <Badge pill variant="secondary">修護</Badge>
-              </h5>
-              <h5>
                 <Badge pill variant="secondary">造型</Badge>
-              </h5>
             </div>
             </p>
           </div>
