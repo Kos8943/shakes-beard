@@ -3,12 +3,13 @@ import "animate.css/animate.min.css";
 import ScrollAnimation from "react-animate-on-scroll";
 import "../styles/custom.scss";
 import { Button, Carousel, Card } from "react-bootstrap";
+// import { data } from "jquery";
 
-function HotProduct() {
+function HotProduct(props) {
   const [dataLoading, setDataLoading] = useState(false);
-  const [hotImg, setHotImg] = useState();
-  const [hotName, setHotName] = useState();
-  const [hotPrice, setHotPrice] = useState();
+  const [hotProductList, setHotProductList] = useState([]);
+  // const [hotName, setHotName] = useState([]);
+  // const [hotPrice, setHotPrice] = useState([]);
 
   // 載入資料用
   async function getTotalFromServer() {
@@ -26,12 +27,12 @@ function HotProduct() {
     const response = await fetch(request);
     const data = await response.json();
     // data會是一個物件值
-    console.log(data[0].image_name);
+    console.log(data);
 
     // setTotal(data.total)
-    setHotImg(data[0].image_name);
-    setHotName(data[0].hotname);
-    setHotPrice(data[0].hotprice);
+   
+    setHotProductList(data);
+    
   }
 
   // componentDidMount，一開始會載入資料(在元件初始化完成後)
@@ -44,8 +45,11 @@ function HotProduct() {
     setTimeout(() => setDataLoading(false), 500);
   }, []);
 
+
+
   return (
     <>
+
       <div className="hot-area w-100 h-100 ">
         <ScrollAnimation animateIn="flipInY">
           <div className="hot-text-area">
@@ -57,16 +61,21 @@ function HotProduct() {
         </ScrollAnimation>
 
         <div className="hot-card-area">
-          <Card id="cardborder" style={{ width: "20rem" }}>
-            <Card.Img variant="top" src={"./imgs/" + `${hotImg}`} />
+        {hotProductList.map((value, index)=>{
+          return(
+            <Card id="cardborder" style={{ width: "20rem" }}>
+            <Card.Img variant="top" src={"./imgs/" + `${hotProductList[index].image_name}`} />
             <Card.Body id="cardbody">
-              <Card.Title>{hotName}</Card.Title>
-              <Card.Text id="price">NT${hotPrice}</Card.Text>
+              <Card.Title>{hotProductList[index].hotname}</Card.Title>
+              <Card.Text id="price">NT${hotProductList[index].hotprice}</Card.Text>
               <Button variant="primary" id="chadbuy">
                 立即購買
               </Button>
             </Card.Body>
           </Card>
+          )
+        })}
+         
         </div>
 
         {/* 熱門商品手機板 */}
