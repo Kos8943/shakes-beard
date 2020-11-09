@@ -89,7 +89,8 @@
   display: flex;
   flex-wrap: wrap;
   width: 85%;
-  height: auto;
+  height: 360px;
+  /* height: auto; */
   margin: auto;
 }
 .giftbox_Item {

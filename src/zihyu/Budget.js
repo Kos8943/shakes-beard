@@ -1,8 +1,9 @@
 import React from 'react'
 import './Style/BudgetCSS.css';
 import './Style/CommonCSS.css';
-import img_box from './image/box.png';
-import img_box2 from './image/Razor06.png';
+import Img_Small from './image/Box_Small.png';
+import Img_Mid from './image/Box_Mid.png';
+import Img_Big from './image/Box_Big.png';
 import { Button } from 'react-bootstrap'
 
 /** 安裝Slider (https://www.npmjs.com/package/react-bootstrap-range-slider)
@@ -30,15 +31,15 @@ const Step = () => {
           {
             case "0":
               SliderValue = "0";
-              targetDiv.setAttribute("src","./image/Razor06.png");
+              targetDiv.setAttribute("src", Img_Small);
               break;
             case "50":
               SliderValue = "1";
-              targetDiv.setAttribute("src","./image/box.png");
+              targetDiv.setAttribute("src", Img_Mid);
               break;
             case "100":
               SliderValue = "2";
-              targetDiv.setAttribute("src","./image/Razor06.png");
+              targetDiv.setAttribute("src", Img_Big);
               break;
           }
         }
@@ -53,7 +54,6 @@ const Step = () => {
 
 export class Class_Budget extends React.Component
 {
-
   render()
   {
     return (
@@ -66,14 +66,14 @@ export class Class_Budget extends React.Component
                     <div className="lineTop"></div>
                     <div className="lineDown"></div>
 
-                    <div><img className="budget_boxImg" id="changebudget_boxImg" src={img_box} /></div>
+                    <div><img className="budget_boxImg" id="changebudget_boxImg" src={Img_Mid} /></div>
 
                     <Step></Step>
 
                     <div className="budget_Grid align-items-center">
-                      <div className="ramgeNumber ramge3000 col">小於<br/>3000元</div>
-                      <div className="ramgeNumber ramge3000to4000 col-7">3000元~4000元</div>
-                      <div className="ramgeNumber ramge4000 col">大於<br/>4000元</div>
+                      <div className="ramgeNumber ramge3000 col">小於<br/>2000元</div>
+                      <div className="ramgeNumber ramge3000to4000 col-7">2000元~5000元</div>
+                      <div className="ramgeNumber ramge4000 col">大於<br/>5000元</div>
                     </div>
                     
                     <div style={{margin: "16px auto"}}>
