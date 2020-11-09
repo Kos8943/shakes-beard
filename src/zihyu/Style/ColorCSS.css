@@ -1,6 +1,6 @@
 .color_boxImg {
   height: 192px;
-  margin-top: 16px;
+  margin-top: 10px;
 }
 
 .color_button {
@@ -49,9 +49,12 @@
   text-align: center;
   display: flex;
   justify-content: center;
-  margin: 13px 0;
+  margin: 13px 0 8px 0;
 }
 
 .message {
-  margin: 0 0 13px 0;
+  height: 60px;
+  width: 350px;
+  border-radius: 4px;
+  margin: 0 auto;
 }

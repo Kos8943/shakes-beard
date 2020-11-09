@@ -18,7 +18,7 @@ const Step = () => {
   const [ value, setValue ] = React.useState(50);
 
   return (
-    <div style={{width: "60%", margin: "auto"}}>
+    <div style={{width: "58%", margin: "auto"}}>
     <RangeSlider className="silderbox"
       value={value}
       onChange={e =>
