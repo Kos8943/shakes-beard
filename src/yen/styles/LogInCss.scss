@@ -101,7 +101,7 @@ html {
   border-radius: 4px;
   text-align: left;
   border: 1.3px solid #6b7496;
-  font-size: 1.25rem;
+  font-size: 1rem;
 }
 
 .facebook {
@@ -200,11 +200,26 @@ html {
   }
 
   .logText {
-    margin-bottom: 15px;
-    // border: 1px solid steelblue;
-    margin-top: 15px;
+    font-size: 1.25rem;
+    // margin-left: 4rem;
+    // border: 1px solid #232d2f;
+    margin-top: 40px;
+    text-align: left;
+    margin-left: 0;
 
   }
+
+  .logText2 {
+    font-size: 1.25rem;
+  // margin-left: 4rem;
+  // border: 1px solid #232d2f;
+  margin-top: 40px;
+  text-align: left;
+  margin-left: 0;
+
+  }
+
+
 
   .loginInput {
     width: 100%;
