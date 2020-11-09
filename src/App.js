@@ -16,7 +16,7 @@ import Project from "./hsuan/Project";
 import Cart from "./kos/pages/Cart";
 import ShopList from "./chen/pages/ShopList";
 import ShopDetail from "./chen/pages/ShopDetail";
-import ReservationMake from "./chen/pages/ReservationMake";
+import Reservation from "./chen/pages/Reservation";
 import ReservationPerson from "./chen/pages/ReservationPerson";
 import ReservationCheck from "./chen/pages/ReservationCheck";
 import NotFoundPage from "./chen/pages/NotFoundPage";
@@ -187,7 +187,7 @@ function App() {
               <MyFooter />
             </Route>
 
-            <Route path="/shopdetail">
+            <Route path="/shopdetail/:shopid?">
               <ShakesBeardNavbar />
               <div className="footerFix">
                 <ShopDetail />
@@ -228,10 +228,10 @@ function App() {
 
 
 
-            <Route path="/reservationmake">
+            <Route path="/reservation">
               <ShakesBeardNavbar />
               <div className="footerFix">
-                <ReservationMake />
+                <Reservation />
               </div>
               <MyFooter />
             </Route>
