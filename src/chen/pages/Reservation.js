@@ -11,6 +11,7 @@ function Reservation(props) {
         <div className="mt-5 py-5 text-center">
           <h2>預約服務</h2>
           <p className="lead">簡單 3 步驟，輕鬆預約ShakeBeard特約商家提供的多樣服務。</p>
+          <div className="decLine"></div>
         </div>
         <div className="row">
         <h4 className="my-3">一、預約服務</h4>
@@ -39,10 +40,12 @@ function Reservation(props) {
           </tbody>
         </Table>
         </div>
-        <Button type="submit" onClick={() =>
-            props.history.push('/reservationperson')}>
-          下一步
-        </Button>
+        <div className="mt-5 py-5 text-center">
+          <Button type="submit" className="reserveBtn" onClick={() =>
+              props.history.push('/reservationperson')}>
+            下一步
+          </Button>
+        </div>
       </div>
     </>
   )

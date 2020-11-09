@@ -6,7 +6,7 @@ import '../styles/shops.scss'
 
 function Cards(props) {
   console.log('Cards', props)
-  // const[heart, setHeart] = useState();
+  const[heart, setHeart] = useState();
 
   return (
     <>
@@ -25,9 +25,9 @@ function Cards(props) {
             </Badge>
           </h6>
           <h5 className="card-title mb-1">Sculptor Barber</h5>
-          <Link className="addlikes">
-             {/* <FaHeart className="likes"/> */}
-             <FaRegHeart className="likes"/>
+          <Link className="addlike">
+             {/* <FaHeart className="like"/> */}
+             <FaRegHeart className="dislike"/>
           </Link>
           {/* <p className="card-text mb-2">提供男士理髮、染髮、護髮等服務</p>
           <Link to="/shopdetail/" className="todetail">

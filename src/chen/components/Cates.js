@@ -41,7 +41,12 @@ function Cates(props) {
       </nav>
 
       <div className="sorts col justify-content-end">
-        <Dropdown>
+        <select className="sort m-1">
+          <option value="價格高低">價格高低</option>
+          <option value="近期活動">近期活動</option>
+          <option value="熱門排行">熱門排行</option>
+        </select>
+        {/* <Dropdown>
           <Dropdown.Toggle id="dropdown-basic" className="sort d-flex align-items-center" variant="">
             排序方式
           </Dropdown.Toggle>
@@ -50,7 +55,7 @@ function Cates(props) {
             <Dropdown.Item href="#/action-2">近期活動</Dropdown.Item>
             <Dropdown.Item href="#/action-3">熱門排行</Dropdown.Item>
           </Dropdown.Menu>
-        </Dropdown>
+        </Dropdown> */}
       </div>
     </div>
     </>

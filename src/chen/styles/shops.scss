@@ -88,7 +88,7 @@
   }
   
   .breadcrumb-item a,
-  .sorts>.dropdown>.dropdown-menu>.dropdown-item,
+  .sort>option,
   // .openDay>.dropdown>.dropdown-menu>.dropdown-item,
   .openDay>.opendaySelect{
     color: #44494a;
@@ -96,8 +96,7 @@
   }
 
   .breadcrumb-item a:hover,
-  .sorts>.dropdown>.dropdown-menu>.dropdown-item:hover,
-  // .openday>.dropdown>.dropdown-menu>.dropdown-item:hover,
+  .sort>option:hover,
   .openDay>.opendaySelect:hover{
     color: #fff;
     background-color: #3f61be;
@@ -117,6 +116,7 @@
   .opendaySelect {
     border: 1px solid #a69981;
     background-color: #fffffd;
+    padding: 3px;;
   }
 
   // 商家列表: 商家卡片
@@ -150,7 +150,7 @@
     font-size: 1rem;
   }
 
-  .likes{
+  .like,.dislike{
     color: #be3f3f; 
     position: relative;
     top: -30px;
@@ -201,7 +201,7 @@
   }
 
   .goReserve:hover {
-    background-color: #3f61be;
+    background-color: #007bff;
     color: white;
   }
 
