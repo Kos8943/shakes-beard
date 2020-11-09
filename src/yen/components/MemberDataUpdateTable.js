@@ -8,9 +8,11 @@ function MemberDataUpdateTable(props) {
             <div className="updateArea">
                 <div>
                     <div>會員帳號</div>
-                    <input type="text" disabled="disabled" className="updateInput" value="xxx@gmail.com" ></input>
+                    <input type="text" disabled="disabled" className="updateInput" value="xxx" ></input>
                     <div>姓名</div>
                     <input type="text" className="updateInput" value="王大明"></input>
+                    <div>信箱</div>
+                    <input type="text" className="updateInput" value="xxx@xxx.com"></input>
                     <div>生日</div>
                     <div className="d-flex">
                         <select className="birthday">

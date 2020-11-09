@@ -18,6 +18,10 @@ function SignUp(props) {
 
               <div className="area ">
 
+                <div className="signUpText ">帳號</div>
+                <div className="d-flex justify-content-center">
+                  <input className="signUpInput" type="text"></input>
+                </div>
                 <div className="signUpText ">姓名</div>
                 <div className="d-flex justify-content-center">
                   <input className="signUpInput" type="text"></input>
@@ -45,7 +49,7 @@ function SignUp(props) {
 
               </div>
               
-              <a href="" className="singUpButton d-flex justify-content-center align-items-center">完成</a>
+              <button  className="singUpButton d-flex justify-content-center align-items-center">完成</button>
               
             </div>
 
