@@ -123,13 +123,17 @@
   .shopcard {
     margin-top: 15px;
     margin-bottom: 15px;
-    margin-right: 3px;
+    margin-right: 10px;
     // box-shadow: 5px 5px 0 rgba(0,0,0,0.2);
   }
 
   .shopcard>.card-img-top{
     border-radius: 0;
   }
+
+  // .shopcard>.todetail:hover .card-img-top{
+  //   filter: grayscale(100%);
+  // }
 
   .cardGroup {
     flex-wrap: wrap;
@@ -146,8 +150,14 @@
     font-size: 1rem;
   }
 
-  .linktodetail:hover .linktodetail{
-    text-decoration: underline;
+  .likes{
+    color: #be3f3f; 
+    position: relative;
+    top: -30px;
+    left: 90%;
+    // color: #44494a;
+    // width: 15px;
+    // height: 15px;
   }
 
   // 商家列表: 分頁
@@ -178,7 +188,7 @@
   }
 
   .page-link:hover {
-    background-color: #007bff;
+    background-color: #3f61be;
   }
   
   // 商家詳細: 預約按鈕
@@ -191,7 +201,7 @@
   }
 
   .goReserve:hover {
-    background-color: #007bff;
+    background-color: #3f61be;
     color: white;
   }
 
