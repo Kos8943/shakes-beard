@@ -8,7 +8,11 @@ import Recommend from '../components/Recommend'
 import '../styles/shops.scss'
 
 function ShopDetail(props) {
-  console.log('ShopDetail', props)
+  // console.log('ShopDetail', props)
+  // const shopid = props.match.params.shopid
+  // console.log('props.match.params',props.match.params)
+  // console.log('shopid',shopid)
+
   return (
     <>
       <Breadcrumb />
@@ -43,4 +47,4 @@ function ShopDetail(props) {
   )
 }
 
-export default ShopDetail
+export default withRouter(ShopDetail)
