@@ -103,8 +103,7 @@ function Project1() {
                         <img
                           src={require("../icon/original.jpg")}
                           className="card-img-top"
-                          alt="..."
-                        ></img>
+                          alt="..."></img>
                       </div>
                     </a>
                     <div className="brand-ProductItems__body">

@@ -1,4 +1,4 @@
-import React from "react";
+import React,{Component} from "react";
 import "../chad/styles/custom.scss";
 import bannerimg1 from "./imgs/輪播圖1.jpg";
 import bannerimg2 from "./imgs/輪播圖2.jpg";
@@ -14,6 +14,92 @@ import HotProduct from "./components/HotProduct";
 //animation
 import "animate.css/animate.min.css";
 import ScrollAnimation from "react-animate-on-scroll";
+import Plx from 'react-plx';
+
+const parallaxData = [
+    {
+      start:0,
+      end: 1000,
+      duration: 600,
+      properties: [
+        {
+          startValue: 0.5,
+          endValue: 1,
+          property: 'scale',
+        },
+      ],
+    },
+  ];
+  const parallaxData2 = [
+    {
+      start:0,
+      end: 1000,
+      duration: 900,
+      properties: [
+        {
+          startValue: 0.2,
+          endValue: 1,
+          property: 'scale',
+        },
+      ],
+    },
+  ];
+  const parallaxDataBtn = [
+    {
+      start:0,
+      end: 1000,
+      duration: 900,
+      properties: [
+        {
+          startValue: 500,
+          endValue: 0,
+          property: 'translateX',
+        },
+      ],
+    },
+  ];
+  const parallaxDataBtn2 = [
+    {
+      start:0,
+      end: 2400,
+      duration: 2200,
+      properties: [
+        {
+          startValue: 500,
+          endValue: 0,
+          property: 'translateX',
+        },
+      ],
+    },
+  ];
+  const parallaxData3 = [
+    {
+      start:0,
+      end: 2400,
+      duration: 2200,
+      properties: [
+        {
+          startValue: 0.2,
+          endValue: 1,
+          property: 'scale',
+        },
+      ],
+    },
+  ];
+  const parallaxData4 = [
+    {
+      start:0,
+      end: 2400,
+      duration: 2200,
+      properties: [
+        {
+          startValue: 500,
+          endValue: -120,
+          property: 'translateX',
+        },
+      ],
+    },
+  ];
 
 class HomePage extends React.Component {
   render() {
@@ -54,7 +140,7 @@ class HomePage extends React.Component {
                   alt="Third slide"
                 />
                 <Carousel.Caption>
-                  <h3>時尚優雅的配件</h3>
+                  <h3>既時尚又優雅的配件</h3>
                   <p>用精緻的配件展現您的個人氣質。</p>
                 </Carousel.Caption>
               </Carousel.Item>
@@ -94,32 +180,53 @@ class HomePage extends React.Component {
           </ScrollAnimation>
 
           {/* 禮物盒 */}
-
+          
           <div className="gift-area d-flex justify-content-center">
+          
+          <Plx className="gift-img" parallaxData={parallaxData2}>
             <img className="gift-img" src={giftimg} />
-
-            <div className="gift-text-area">
+            </Plx>
+            <img className="gift-img1" src={giftimg} />
+            <Plx className="gift-text-area" parallaxData={parallaxData}>
+            
               <h2 className="gift-title py-3">訂製專屬禮盒</h2>
               <p className="gift-text">
                 您可以在網頁上設計專屬的禮物盒，即時預覽您的設計，達成最佳的個性化送禮服務。
               </p>
+            
+            </Plx>
+            <div className="gift-text-area1">
+            
+              <h2 className="gift-title py-3">訂製專屬禮盒</h2>
+              <p className="gift-text">
+                您可以在網頁上設計專屬的禮物盒，即時預覽您的設計，達成最佳的個性化送禮服務。
+              </p>
+            
             </div>
-
-            <button class="giftBtn">開始製作</button>
+            <Plx  type="button" className="giftBtn" parallaxData={parallaxDataBtn}>開始製作</Plx>
+            <button className="giftBtn1">開始製作</button>
           </div>
-
+         
           {/* 熱門商品*/}
 
           <HotProduct />
-          {/* 熱銷單品 */}
+          {/* 所有系列 */}
 
           <div className="gift-area">
+          <Plx className="top-img my-3" parallaxData={parallaxData3}>
             <img className="top-img my-3" src={hotpage} />
+            </Plx>
+            <img className="top-img1 my-3" src={hotpage} />
+            <Plx className="top-text" parallaxData={parallaxData4}>
             <p className="top-text">
               用我們獨有的工藝技術，為不甘平凡的您，點綴出更獨特的風格。
             </p>
-
-            <button class="chad-topBtn">所有系列</button>
+            </Plx>
+            <p className="top-text1">
+              用我們獨有的工藝技術，為不甘平凡的您，點綴出更獨特的風格。
+            </p>
+            <Plx  type="button" className="chad-topBtn" parallaxData={parallaxDataBtn2}>所有系列</Plx>
+            <button className="chad-topBtn1">開始製作</button>
           </div>
 
           {/* 地圖 */}
