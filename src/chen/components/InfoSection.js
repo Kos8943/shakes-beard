@@ -17,10 +17,10 @@ function InfoSection(props) {
           <div className="test2"></div> */}
          <div className="info col-12 col-sm-12 col-md-5 mt-3">
             <h4 className="info-title">Sculptor Barber</h4>
-            <Badge pill variant="secondary">
+            <Badge pill variant="secondary" className="mr-1">
               男士理髮廳
             </Badge>
-             <Badge pill variant="secondary">
+             <Badge pill variant="secondary" className="mr-1">
               台北市大安區
             </Badge>
             <p className="mt-3">商家編號: 
@@ -56,9 +56,9 @@ function InfoSection(props) {
             <p>商家簡介:<br/>台灣男仕barbershop 第一品牌，創業六年以來，以美麗的理髮廳空間與台灣男仕理容文化薪傳聞名。</p>
             <p>提供服務:
             <div className="d-flex">
-                <Badge pill variant="secondary">理髮</Badge>
-                <Badge pill variant="secondary">修護</Badge>
-                <Badge pill variant="secondary">造型</Badge>
+                <Badge pill variant="secondary" className="mr-1">理髮</Badge>
+                <Badge pill variant="secondary" className="mr-1">修護</Badge>
+                <Badge pill variant="secondary" className="mr-1">造型</Badge>
             </div>
             </p>
           </div>
