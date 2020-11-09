@@ -48,15 +48,15 @@ hr {
   overflow: visible;
 }
 
-h1, h2, h3, h4, h5, h6 {
+/* h1, h2, h3, h4, h5, h6 {
   margin-top: 0;
   margin-bottom: 0.5rem;
-}
+} */
 
-p {
+/* p {
   margin-top: 0;
   margin-bottom: 1rem;
-}
+} */
 
 abbr[title],
 abbr[data-original-title] {
@@ -392,10 +392,10 @@ dl, dt, dd {
   font-style: normal;
 }
 
-p {
+/* p {
   text-align: inherit;
   line-height: 1.85;
-}
+} */
 
 em {
   font-style: normal;
@@ -410,12 +410,12 @@ em {
   outline: none;
 }
 
-h1, h2, h3, h4, h5 {
+/* h1, h2, h3, h4, h5 {
   margin: 0;
   padding: 0;
   font-weight: inherit;
   font-size: inherit;
-}
+} */
 
 /* Slider */
 .slick-slider {
@@ -1590,7 +1590,7 @@ a.ButtonA {
 }
 
 .brand-ProductItems__image:before {
-  z-index: 2;
+  /* z-index: 2; */
   content: '';
   display: block;
   position: absolute;
@@ -2441,7 +2441,7 @@ a.ButtonA {
 }
 
 /*************************
- *  レイアウト
+ *  body
  **************************/
 .top-BrandTile {
   width: 100%;
@@ -3548,14 +3548,14 @@ body.is-color-beige .footer-Main .footer-Main__navi1 ul li span {
   font-family: 'PingFang';
 }
 
-.companyMessage__body p {
+/* .companyMessage__body p {
   margin-bottom: 1.5em;
   font-size: 15px;
   line-height: 3;
   letter-spacing: 0.100em;
   text-align: justify;
   color: #595452;
-}
+} */
 
 .companyMessage__body .sign {
   margin-bottom: 0;
@@ -4071,14 +4071,14 @@ body.is-color-beige .footer-Main .footer-Main__navi1 ul li span {
   margin-bottom: 80px;
 }
 
-.contactForm__lead p {
+/* .contactForm__lead p {
   text-align: center;
   font-size: 15px;
   line-height: 2.4;
   letter-spacing: 0.125em;
   font-family: 'PingFang';
   color: #A69981;
-}
+} */
 
 .contactForm__lead .required {
   color: #C0272D;

@@ -98,7 +98,7 @@ function Project1() {
                   data-anime-delay="0">
                   <ScrollAnimation animateIn='fadeIn' >
                   <div className="brand-ProductItems__card">
-                    <a href="../product/1" className="brand-ProductItems__image">
+                    <a href="http://localhost:3000/project" className="brand-ProductItems__image">
                        <div className="_image">
                         <img
                           src={require("../icon/original.jpg")}
@@ -120,7 +120,7 @@ function Project1() {
                 >
                   <ScrollAnimation animateIn='fadeIn' >
                   <div className="brand-ProductItems__card">
-                    <a href="../product/1" className="brand-ProductItems__image">
+                    <a href="http://localhost:3000/project" className="brand-ProductItems__image">
                        <div className="_image">
                         <img
                           src={require("../icon/original.jpg")}
@@ -143,7 +143,7 @@ function Project1() {
                 >
                   <ScrollAnimation animateIn='fadeIn' >
                   <div className="brand-ProductItems__card">
-                    <a href="../product/1" className="brand-ProductItems__image">
+                    <a href="http://localhost:3000/project" className="brand-ProductItems__image">
                        <div className="_image">
                         <img
                           src={require("../icon/original.jpg")}
@@ -166,7 +166,7 @@ function Project1() {
                 >
                   <ScrollAnimation animateIn='fadeIn' >
                   <div className="brand-ProductItems__card">
-                    <a href="../product/1" className="brand-ProductItems__image">
+                    <a href="http://localhost:3000/project" className="brand-ProductItems__image">
                        <div className="_image">
                         <img
                           src={require("../icon/original.jpg")}
@@ -188,7 +188,7 @@ function Project1() {
                   data-anime-delay="0">
                   <ScrollAnimation animateIn='fadeIn' >
                   <div className="brand-ProductItems__card">
-                    <a href="../product/1" className="brand-ProductItems__image">
+                    <a href="http://localhost:3000/project" className="brand-ProductItems__image">
                        <div className="_image">
                         <img
                           src={require("../icon/original.jpg")}
@@ -211,7 +211,7 @@ function Project1() {
                 >
                   <ScrollAnimation animateIn='fadeIn' >
                   <div className="brand-ProductItems__card">
-                    <a href="../product/1" className="brand-ProductItems__image">
+                    <a href="http://localhost:3000/project" className="brand-ProductItems__image">
                        <div className="_image">
                         <img
                           src={require("../icon/original.jpg")}
@@ -234,7 +234,7 @@ function Project1() {
                 >
                   <ScrollAnimation animateIn='fadeIn' >
                   <div className="brand-ProductItems__card">
-                    <a href="../product/1" className="brand-ProductItems__image">
+                    <a href="http://localhost:3000/project" className="brand-ProductItems__image">
                        <div className="_image">
                         <img
                           src={require("../icon/original.jpg")}
@@ -257,7 +257,7 @@ function Project1() {
                 >
                   <ScrollAnimation animateIn='fadeIn' >
                   <div className="brand-ProductItems__card">
-                    <a href="../product/1" className="brand-ProductItems__image">
+                    <a href="http://localhost:3000/project" className="brand-ProductItems__image">
                        <div className="_image">
                         <img
                           src={require("../icon/original.jpg")}
@@ -280,7 +280,7 @@ function Project1() {
                 >
                   <ScrollAnimation animateIn='fadeIn' >
                   <div className="brand-ProductItems__card">
-                    <a href="../product/1" className="brand-ProductItems__image">
+                    <a href="http://localhost:3000/project" className="brand-ProductItems__image">
                        <div className="_image">
                         <img
                           src={require("../icon/original.jpg")}
@@ -303,7 +303,7 @@ function Project1() {
                 >
                   <ScrollAnimation animateIn='fadeIn' >
                   <div className="brand-ProductItems__card">
-                    <a href="../product/1" className="brand-ProductItems__image">
+                    <a href="http://localhost:3000/project" className="brand-ProductItems__image">
                        <div className="_image">
                         <img
                           src={require("../icon/original.jpg")}
@@ -326,7 +326,7 @@ function Project1() {
                 >
                   <ScrollAnimation animateIn='fadeIn' >
                   <div className="brand-ProductItems__card">
-                    <a href="../product/1" className="brand-ProductItems__image">
+                    <a href="http://localhost:3000/project" className="brand-ProductItems__image">
                        <div className="_image">
                         <img
                           src={require("../icon/original.jpg")}
@@ -349,7 +349,7 @@ function Project1() {
                 >
                   <ScrollAnimation animateIn='fadeIn' >
                   <div className="brand-ProductItems__card">
-                    <a href="../product/1" className="brand-ProductItems__image">
+                    <a href="http://localhost:3000/project" className="brand-ProductItems__image">
                        <div className="_image">
                         <img
                           src={require("../icon/original.jpg")}
