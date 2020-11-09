@@ -17,24 +17,24 @@ function LogIn(props) {
 
               <div className="loginWeb">
 
-                <div className="loginArea1 ">
-                  <div className="logText">信箱</div>
+                <div className="loginArea1">
+                  <div className="logText">帳號</div>
                   <input className="loginInput" type="email"></input>  
                   <div className="logText">密碼</div>
                   <input className="loginInput" type="password"></input>
-                  <div>忘記密碼</div>
+                  <div className="logText2">忘記密碼</div>
                   <a href=""><button className="loginCheckButton loginMobile">登入</button></a> 
                 </div>
 
                 <div className="loginArea2 ">
                   <div className="otherAccount">
-                    <a href=""><button className="otherLogButton facebook"> <div className="d-flex justify-content-around align-items-center"><img src={facebook} className="lognIcon "></img>使用Facebook登入<div></div></div></button></a>
+                  <button className="otherLogButton facebook"> <div className="d-flex justify-content-around align-items-center"><img src={facebook} className="lognIcon "></img>使用Facebook登入<div></div></div></button>
 
-                     <a href=""><button className="otherLogButton twitter"><div className="d-flex justify-content-around align-items-center"><img src={twitter} className="lognIcon"></img>使用Twitter登入<div></div></div></button></a>
+                  <button className="otherLogButton twitter"><div className="d-flex justify-content-around align-items-center"><img src={twitter} className="lognIcon"></img>使用Twitter登入<div></div></div></button>
 
-                    <a href=""><button className="otherLogButton google"><div className="d-flex justify-content-around align-items-center"><img src={google} className="lognIcon"></img>使用Google登入<div></div></div></button></a>
+                  <button className="otherLogButton google"><div className="d-flex justify-content-around align-items-center"><img src={google} className="lognIcon"></img>使用Google登入<div></div></div></button>
                     
-                    <a href=""><button className="loginSingUpButton loginMobile">註冊帳號</button></a>
+                  <button className="loginSingUpButton loginMobile">註冊帳號</button>
 
 
                   </div>               
