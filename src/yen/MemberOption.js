@@ -92,7 +92,7 @@ function MemberOption(props) {
                         </div>
                     </div><div className="decLine  d-lg-none"></div>
 
-                    {/* {(pageTitle === "資料修改") ?
+                    {(pageTitle === "資料修改") ?
                     <MemberDataUpdateTable title="資料修改" /> : ''}
                 {(pageTitle === "密碼修改") ?
                     <MemberPasswordUpdateTable title="密碼修改" /> : ''}
@@ -101,7 +101,7 @@ function MemberOption(props) {
                 {(pageTitle === "追蹤清單") ?
                     <MemberFavorites title="追蹤清單" /> : ''}
                 {(pageTitle === "訂單查詢") ?
-                    <CartOrderCheck title="訂單查詢" /> : ''} */}
+                    <CartOrderCheck title="訂單查詢" /> : ''}
                 </div>
             </div>
 
