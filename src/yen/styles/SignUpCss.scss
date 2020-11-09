@@ -80,7 +80,7 @@ html {
   font-size: 1.5rem;
   font-weight: bold;
   border-radius: 4px;
-  margin: 1.5rem auto;
+  margin: 1rem auto;
 }
 
 
@@ -88,14 +88,23 @@ html {
   html {
     font-size: 12px;
   }
-
+.bagimg2 {
+  min-height:80vh;
+  background-color: rgba(89, 84, 82, 0.66);
+  background-origin: border-box;
+  padding-top: 0;
+  margin: 0;
+  margin:-23px;
+  // border: 2px solid red;
+}
   .signUpArea {
     width: 80vw;
-    height: 100%;
+    height: 800px;
     padding: 0 55px;
-    margin: 2vh auto;
-    // border: 2px solid saddlebrown;
+    margin:2vh auto;
+    // border: 21px solid saddlebrown;
   }
+  
 
   .area{
     // border: 1px solid black;
@@ -112,7 +121,7 @@ html {
 
   .signUpInput {
     width: 100%;
-    height: 5.74vh;
+    height: 5vh;
     margin-bottom: 15px;
   }
 
@@ -123,7 +132,7 @@ html {
     height: 5vh;
     font-size: 1.5rem;
     border-radius: 4px;
-    margin-bottom: 20px;
+    margin-bottom: 120px;
     // border: 1px solid steelblue;
   }
   
