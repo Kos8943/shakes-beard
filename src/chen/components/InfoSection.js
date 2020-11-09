@@ -12,6 +12,7 @@ function InfoSection(props) {
   const [shopTag, setShopTag] = useState('')
   const [shopPlace, setShopPlace] = useState('')
   const [shopAddr, setShopAddr] = useState('')
+  const [shopIntro, setShopIntro] = useState('')
   const [dataIsExist, setDataIsExist] = useState(true)
 
   async function getShopFromServer(){
@@ -43,6 +44,7 @@ function InfoSection(props) {
     setShopTag(data.tag)
     setShopPlace(data.place)
     setShopAddr(data.address)
+    setShopIntro(data.intro)
   }
 
   useEffect(()=>{
@@ -88,7 +90,9 @@ function InfoSection(props) {
         </select>
         <span className="col p-1">17:00 - 21:00</span>
       </div>
-      <p>商家簡介:<br/>台灣男仕barbershop 第一品牌，創業六年以來，以美麗的理髮廳空間與台灣男仕理容文化薪傳聞名。</p>
+      <p>商家簡介:<br/>
+        <span>{shopIntro}</span>
+      </p>
       <p>提供服務:
       <div className="d-flex">
           <Badge pill variant="secondary" className="mr-1">理髮</Badge>

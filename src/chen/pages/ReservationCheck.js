@@ -60,9 +60,10 @@ function ReservationCheck(props) {
               <td>ST001</td>
             </tr>
             <tr>
+              <td>預約日期</td>
+              <td>(星期二)</td>
               <td>預約時間</td>
-              <td>星期二</td>
-              <td colSpan="2">12:00~13:00</td>
+              <td>12:00~13:00</td>
             </tr>
             <tr>
               <td>預約服務</td>
