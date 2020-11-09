@@ -1,8 +1,10 @@
-import React from 'react'
+import React,{useState} from 'react'
 import { Nav,Form } from 'react-bootstrap'
 
 function CatesAside(props) {
   console.log('CatesAside', props)
+  const [category, setCategory] = useState("所有商家");
+
   return (
     <>
         <Form.Group className="searchForm col-10">
@@ -16,12 +18,12 @@ function CatesAside(props) {
           </Form.Row>
         </Form.Group>
         <Nav className="sideNav">
-          <Nav.Link href="#" active>所有商家</Nav.Link>
-          <Nav.Link href="/shopdetail/">特價優惠</Nav.Link>
-          <Nav.Link href="/shopdetail/" eventKey="link-1">男士理髮</Nav.Link>
-          <Nav.Link href="/shopdetail/" eventKey="link-2">男士修容</Nav.Link>
-          <Nav.Link href="/shopdetail/" eventKey="link-3">男士造型</Nav.Link>
-          <Nav.Link href="/shopdetail/" eventKey="link-4">商家位置</Nav.Link>
+          <Nav.Link href="/shopdetail" className={`${category === "所有商家" ? "active" : ""}`} onClick={() => { setCategory("所有商家"); }}>所有商家</Nav.Link>
+          <Nav.Link href="/shopdetail?" className={`${category === "特價優惠" ? "active" : ""}`} onClick={() => { setCategory("特價優惠"); }}>特價優惠</Nav.Link>
+          <Nav.Link href="/shopdetail?" eventKey="link-1" className={`${category === "男士理髮" ? "active" : ""}`} onClick={() => { setCategory("男士理髮"); }}>男士理髮</Nav.Link>
+          <Nav.Link href="/shopdetail?" eventKey="link-2" className={`${category === "男士修容" ? "active" : ""}`} onClick={() => { setCategory("男士修容"); }}>男士修容</Nav.Link>
+          <Nav.Link href="/shopdetail?" eventKey="link-3" className={`${category === "男士造型" ? "active" : ""}`} onClick={() => { setCategory("男士造型"); }}>男士造型</Nav.Link>
+          <Nav.Link href="/shopdetail?" eventKey="link-4" className={`${category === "商家位置" ? "active" : ""}`} onClick={() => { setCategory("商家位置"); }}>商家位置</Nav.Link>
         </Nav>
     </>
   )

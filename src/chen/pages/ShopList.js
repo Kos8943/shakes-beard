@@ -10,6 +10,7 @@ import '../styles/shops.scss'
 
 function ShopList(props) {
   console.log('Shoplist', props)
+  
   return (
     <>
       <Breadcrumb />
@@ -33,9 +34,9 @@ function ShopList(props) {
           </div>
         </div>
       </div>
-      <div id="stop" className="helpdesk">
+      {/* <div id="stop" className="helpdesk">
         <span><Link to="">客服</Link></span>
-      </div>
+      </div> */}
     </>
   )
 }

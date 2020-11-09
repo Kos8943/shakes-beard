@@ -29,16 +29,16 @@ function ShopDetail(props) {
               <strong className="d-inline-block my-2">注意事項</strong>
               <p className="card-text mb-auto">This is a wider card with supporting text below as a natural lead-in to additional content.</p>
               {/* map */}    
-              <Link to="#" className="mt-4 btn goReserve">
+              <Link to="#" className="mt-4 btn goReserve mx-auto d-flex justify-self-center">
                 立即預約
               </Link>
               <Recommend/>
           </div>
         </div>
       </div>
-      <div id="stop" className="helpdesk">
+      {/* <div id="stop" className="helpdesk">
         <span><Link to="">客服</Link></span>
-      </div>
+      </div> */}
     </>
   )
 }

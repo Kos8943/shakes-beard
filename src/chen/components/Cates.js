@@ -19,7 +19,7 @@ function Cates(props) {
           <li className="breadcrumb-item active" aria-current="page">
             {path}
           </li> */}
-          <li className="breadcrumb-item active" aria-current="page">
+          <li className="breadcrumb-item active cates-item" aria-current="page">
             所有商家
           </li>
         </ol>
