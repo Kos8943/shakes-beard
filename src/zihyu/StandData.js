@@ -1,9 +1,9 @@
-import img_Stand01 from './image/Stand01.jpg';
-import img_Stand02 from './image/Stand02.jpg';
-import img_Stand03 from './image/Stand03.jpg';
-import img_Stand04 from './image/Stand04.jpg';
-import img_Stand05 from './image/Stand05.jpg';
-import img_Stand06 from './image/Stand06.jpg';
+import img_Stand01 from './image/stand01.jpg';
+import img_Stand02 from './image/stand02.jpg';
+import img_Stand03 from './image/stand03.jpg';
+import img_Stand04 from './image/stand04.jpg';
+import img_Stand05 from './image/stand05.jpg';
+import img_Stand06 from './image/stand06.jpg';
 
 global.StandData = [
     {
