@@ -39,18 +39,47 @@ class Product extends React.Component {
       <ReactCSSTransitionGroup />
       
       <Sid />
-      {/* <animate/>	   */}
-
-      {/* <div className="page-top typesquare_option"> */}
-        {/* <main> */}
-          {/* <section  className="top-MainVisualCover">
-	<div  className="top-MainVisualCover__navi finished" data-anime="fadeInUp" data-anime-trigger=".top-MainVisualCover__copy" data-anime-delay="1.2"  >
-		<div  className="_sns">
-			
-		</div>
-		
-	</div>
-</section> */}
+       <section className="SectionTile brand-SectionCover">
+          <div className="SectionTile__container">
+            <div
+              className="brand-SectionCover__main finished"
+              data-anime="fadeInRight"
+              data-anime-trigger=".brand-SectionCover__main">
+              <img
+                src={require("../icon/bathroom.jpg")}
+                className="card-img-top"
+                alt="..."
+              ></img>
+            </div>
+            <div className="brand-SectionCover__layout">
+              <div
+                className="brand-SectionCover__title finished"  style={{color:"#A69981"}}>
+                <div className="_card">
+                  <div className="_wrap">
+                    <h1 className="_inner">
+                    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
+                      <div className="_title1">BRAND</div>
+                      <div className="_title2">
+                        <div className="_b" style={{color:"#A69981"}}>Shakes Beard</div>
+                      </div>
+                    </h1>
+                  </div>
+                </div>
+              </div>
+              
+              <div className="brand-SectionCover__body" >
+                <div className="_text2 typesquare_option finished"
+                  data-anime="fadeInRight"
+                  data-anime-trigger=".brand-SectionCover__main"
+                  data-anime-delay="0.9">
+                  精湛工藝呈現出迷人魅力。繁複的製作工序沒有令我們對工藝的要求卻步；
+                  <br></br>
+                  反令我們力臻極佳品質。
+                </div>
+              </div>
+            </div>
+          </div>
+        </section> 
 
 
           <section className="top-BrandTile top-BrandTile--lilac brandItem "  data-index="1">
@@ -60,16 +89,14 @@ class Product extends React.Component {
               data-anime-trigger='.top-BrandTile[data-index="1"]'
               data-anime-delay="0"></div> */}
          
-            <div className="top-BrandTile__photo finished " data-anime="fadeInRight"
-              data-anime-trigger='.top-BrandTile[data-index="1"]'
-              data-anime-delay="1.25" >
-               <div className="_inner">
+            <div className="top-BrandTile__photo finished "  >
+               <div className="_inner" >
                <img src={require("../icon/24K.png")}
-                  className="card-img-top"
+                  className="card-img-top" 
                   alt="..."></img>
               </div>
             </div>
-            <div className="top-BrandTile__body">
+            <div className="top-BrandTile__body" >
               <h2 className="_inner">
                 <ScrollAnimation animateIn='fadeIn'><div className="_title2 finished"
                   data-anime="fadeInRight"
@@ -78,7 +105,7 @@ class Product extends React.Component {
                   刮鬍修容
                 </div></ScrollAnimation>
 				         {/* more的按鈕效果 */}
-                <a href="http://localhost:3000/project1"
+                <a href=""
                   className="ButtonA finished"
                   data-anime="fadeIn"
                   data-anime-trigger='.top-BrandTile[data-index="1"]'
