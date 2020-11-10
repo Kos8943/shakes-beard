@@ -38,7 +38,7 @@ function LogIn(props) {
               novalidate
             >
               <div className="loginArea1">
-                <lable for="account" className="logText_ d-flex flex-column ">
+                <lable for="account" className="logText_">
                   帳號
                 </lable>
                 <input

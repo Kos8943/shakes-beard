@@ -29,7 +29,7 @@ html {
   width: 40vw;
   // width:848px;
   // height: 578px;
-  height: 50vh;
+  height: 55vh;
   background-color: rgba(255, 255, 255, 0.75);
   border: radius 4px;
   margin: 13vh auto;
@@ -63,19 +63,20 @@ html {
 }
 
 .logText_ {
-  font-size: 1.25rem;
+  font-size: 1.2rem;
   // margin-left: 4rem;
   // border: 1px solid #232d2f;
-  margin-top: 40px;
+  margin-top: 30px;
   text-align: left;
-  margin-left: 30px;
+  margin-left: 25px;
+  display: block;
 
 }
 .logText_2 {
-  font-size: 1.25rem;
+  font-size: 1rem;
   text-align: left;
   // border: 1px solid #232d2f;
-  margin-left: 30px;
+  margin-left: 25px;
 
 
 }
@@ -130,6 +131,9 @@ html {
   font-size: 1.5rem;
   font-weight: bold;
   border-radius: 4px;
+  border: none;
+  line-height: 24px;
+
   // border: 1px solid steelblue;
 }
 
@@ -142,6 +146,8 @@ html {
   font-size: 1.5rem;
   font-weight: bold;
   border-radius: 4px;
+  line-height: 24px;
+
   // border: 1px solid steelblue;
 }
 
