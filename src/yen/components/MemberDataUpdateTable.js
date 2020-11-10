@@ -51,7 +51,7 @@ function MemberDataUpdateTable(props) {
     setAuthAccount(memberData[0].authAccount)
     setName(memberData[0].name);
     setEmail(memberData[0].email);
-    setBirth(memberData[0].birth);
+    // setBirth(memberData[0].birth);
     setPhone(memberData[0].phone);
     setAddress(memberData[0].address);
   }

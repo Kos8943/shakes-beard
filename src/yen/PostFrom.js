@@ -22,7 +22,7 @@ class PostFrom extends Component {
             title:this.state.title,
             body:this.state.body
         }
-        fetch('http://localhost:3000/try-qs',{
+        fetch('"http://localhost:3000/yen//try-qs',{
             // post提交
             method:"POST",
             Accept: "application/json",
