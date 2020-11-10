@@ -144,7 +144,7 @@ function Project() {
                   <div className="brand-ProductItems">
                     <div className="brand-ProductItems__items">
                       <div
-                        className="brand-ProductItems__item finished"
+                        className="brand-ProductItems__item1 finished"
                         data-anime="fadeInUp"
                         data-anime-trigger=".brand-ProductItems"
                         data-anime-delay="0"
@@ -171,7 +171,7 @@ function Project() {
                         </div>
                       </div>
                       <div
-                        className="brand-ProductItems__item finished"
+                        className="brand-ProductItems__item1 finished"
                         data-anime="fadeInUp"
                         data-anime-trigger=".brand-ProductItems"
                         data-anime-delay="0.2"
@@ -198,7 +198,7 @@ function Project() {
                         </div>
                       </div>
                       <div
-                        className="brand-ProductItems__item finished"
+                        className="brand-ProductItems__item1 finished"
                         data-anime="fadeInUp"
                         data-anime-trigger=".brand-ProductItems"
                         data-anime-delay="0.4"

@@ -8,7 +8,7 @@ import anime from "react-anime";
 import ReactCSSTransitionGroup from "react-addons-css-transition-group";
 
 import { Container, Row, Breadcrumb } from "react-bootstrap";
-import { NavLink } from "react-router-dom";
+import { Dropdown } from "react-bootstrap";
 import ScrollAnimation from "react-animate-on-scroll";
 
 function Project1(props) {
@@ -51,6 +51,7 @@ function Project1(props) {
   return (
     <>
       <anime />
+      <Dropdown/>
       <ReactCSSTransitionGroup />
       <Script url="https://cdn.staticfile.org/jquery/3.3.1/jquery.min.js" />
       <Sid />
@@ -119,10 +120,15 @@ function Project1(props) {
           </Breadcrumb.Item>
           <Breadcrumb.Item active>Data</Breadcrumb.Item>
         </Breadcrumb>
-
+        <ul>
+        <Dropdown.Menu show>
+  <Dropdown.Header>Dropdown header</Dropdown.Header>
+  <Dropdown.Item eventKey="2">Another action</Dropdown.Item>
+  <Dropdown.Item eventKey="3">Something else here</Dropdown.Item>
+</Dropdown.Menu></ul>
         <section className="SectionTile brand-SectionProduct">
-          <div className="SectionTile__container ">
-           
+        <div className="SectionTile__container ">
+        
                 <div className="brand-ProductItems ">
                   <div className="brand-ProductItems__items">
                   {myProduct.map((value, index) => {
@@ -134,7 +140,7 @@ function Project1(props) {
                         <ScrollAnimation animateIn="fadeIn" className="">
                           <div className="brand-ProductItems__card">
                             <a
-                              href="http://localhost:3000/project"
+                              href="http://localhost:3001/project"
                               className="brand-ProductItems__image"
                             >
                               <div className="_image">

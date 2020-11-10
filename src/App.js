@@ -187,7 +187,7 @@ function App() {
               <MyFooter />
             </Route>
 
-            <Route path="/shopdetail/:shopid?">
+            <Route path="/shopdetail/:sid?">
               <ShakesBeardNavbar />
               <div className="footerFix">
                 <ShopDetail />
@@ -216,7 +216,7 @@ function App() {
 
             <Route path="/memberoption">
               <ShakesBeardNavbar />
-              <div className="footerFix KosPadding">
+              <div className="memFooterFix ">
                 <MemberOption />
               </div>
               <MyFooter />
