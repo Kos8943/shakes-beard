@@ -198,8 +198,10 @@ function App() {
               <MyFooter />
             </Route>
 
-            <Route path="/shopdetail/:shopid?">
+            <Route path="/shopdetail/:sid?">
               <ShakesBeardNavbar isAuth={isAuth} setIsAuth={setIsAuth}/>
+            <Route path="/shopdetail/:sid?">
+              <ShakesBeardNavbar />
               <div className="footerFix">
                 <ShopDetail />
               </div>
