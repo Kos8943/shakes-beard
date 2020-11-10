@@ -24,7 +24,7 @@ function LogIn(props) {
               novalidate
             >
               <div className="loginArea1">
-                <lable for="account" className="logText">
+                <lable for="account" className="logText_ d-flex flex-column ">
                   帳號 </lable>
                   <input
                     className="loginInput"
@@ -38,7 +38,7 @@ function LogIn(props) {
                
 
 
-                <label for="password" className="logText">
+                <label for="password" className="logText_ d-flex flex-column">
                   密碼</label>
                   <input
                     className="loginInput"
@@ -51,7 +51,7 @@ function LogIn(props) {
                   ></input>
                 
 
-                <div className="logText2">忘記密碼</div>
+                <div className="logText_2">忘記密碼</div>
                 <button
                   type="submit"
                   className="loginCheckButton loginMobile" >
