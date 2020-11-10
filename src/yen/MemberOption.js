@@ -10,7 +10,7 @@ import ReservationOrderCheck from "../chen/components/ReservationOrderCheck";
 import { Router, Route, Link, Switch, Redirect } from "react-router-dom";
 
 function MemberOption(props) {
-  const [pageTitle, setPageTitle] = useState("追蹤清單");
+  const [pageTitle, setPageTitle] = useState("資料修改");
   const { isAuth, setIsAuth } = props;
 
   // if(isAuth===false) return <Redirect to="/signup" />
@@ -21,7 +21,7 @@ function MemberOption(props) {
         <div className="row justify-content-between">
           <div className="userName d-lg-none">王大明</div>
           <div className="decLine  d-lg-none"></div>
-          <div className="leftArea col-lg-2 col-12 ">
+          <div className="leftArea col-12 col-sm-2 col-md-2">
             <div className="userName d-none d-lg-block">王大明</div>
             <div className="decLine d-none d-lg-block"></div>
 

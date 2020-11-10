@@ -7,6 +7,7 @@ import HeroPage from "./chad/HeroPage";
 import Sid from "./Sid";
 import ScrollUp from 'react-scroll-up'
 
+
 //以下import個人頁面
 
 import HomePage from "./chad/HomePage";
