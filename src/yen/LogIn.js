@@ -5,12 +5,13 @@ import twitter from "./img/twitter.svg";
 import google from "./img/google.svg";
 
 function LogIn(props) {
+  const { isAuth, setIsAuth } = props;
   return (
     <>
       <div className="bagimg">
         <div className="bagimg2">
           <div className="loginCard">
-            <div className="loginTittle">登入</div>
+            <div className="loginTittle"></div>
 
             <div className="loginWeb">
               <div className="loginArea1">
@@ -57,17 +58,23 @@ function LogIn(props) {
 
             <div className="d-flex justify-content-around ">
               <a href="">
-                <button className="loginCheckButton loginWebNone">登入</button>
+                <button
+                  className="loginCheckButton loginWebNone"
+                  
+                >
+                  登入
+                </button>
               </a>
 
               <a href="">
-                <button className="loginSingUpButton loginWebNone">
+                <button
+                  className="loginSingUpButton loginWebNone"
+                  
+                >
                   註冊帳號
                 </button>
               </a>
             </div>
-
-
 
             <div className="loginMobile"></div>
           </div>

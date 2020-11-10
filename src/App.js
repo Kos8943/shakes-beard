@@ -41,6 +41,8 @@ import TopArrow from "./icon/top-arrow.jpg"
 
 
 function App() {
+  // 登出/登入狀態
+  const [isAuth,setIsAuth]=useState(false)
   return (
     <Router>
 
@@ -108,8 +110,8 @@ function App() {
             </Route>
 
             <Route path="/login">
-              <ShakesBeardNavbar />
-              <LogIn />
+              <ShakesBeardNavbar isAuth={isAuth} setIsAuth={setIsAuth} />
+              <LogIn isAuth={isAuth} setIsAuth={setIsAuth} />
               <MyFooter />
             </Route>
 
@@ -217,7 +219,7 @@ function App() {
             <Route path="/memberoption">
               <ShakesBeardNavbar />
               <div className="memFooterFix ">
-                <MemberOption />
+                <MemberOption isAuth={isAuth} setIsAuth={setIsAuth} />
               </div>
               <MyFooter />
             </Route>
