@@ -54,14 +54,14 @@ hr {
   margin-bottom: 1rem;
 } */
 
-abbr[title],
+/* abbr[title],
 abbr[data-original-title] {
   text-decoration: underline;
   -webkit-text-decoration: underline dotted;
   text-decoration: underline dotted;
   cursor: help;
   border-bottom: 0;
-}
+} */
 
 address {
   margin-bottom: 1rem;
@@ -132,10 +132,10 @@ a {
   -webkit-text-decoration-skip: objects;
 }
 
-a:hover {
+/* a:hover {
   color: #0056b3;
   text-decoration: underline;
-}
+} */
 
 a:not([href]):not([tabindex]) {
   color: inherit;
@@ -357,9 +357,9 @@ body {
   }
 }
 
-a {
+/* a {
   text-decoration: underline;
-}
+} */
 
 a:link, a:visited {
   color: #1c7ae3;
@@ -705,7 +705,7 @@ em {
 
 .ButtonA > span {
   position: relative;
-  z-index: 2;
+  /* z-index: 2; */
   width: 100%;
   height: 100%;
   display: flex;
@@ -791,7 +791,7 @@ a.ButtonA {
 }
 
 .ButtonA--lilac {
-  background: #FCF6F3;
+  background: #ffffff;
 }
 
 .ButtonA--ext i:before {
@@ -882,7 +882,7 @@ a.ButtonA {
 
 .ButtonA1 > span {
   position: relative;
-  z-index: 2;
+  /* z-index: 2; */
   width: 100%;
   height: 100%;
   display: flex;
@@ -968,7 +968,7 @@ a.ButtonA1 {
 }
 
 .ButtonA1--lilac {
-  background: #FCF6F3;
+  background: #ffffff;
 }
 
 .ButtonA1--ext i:before {
@@ -1010,7 +1010,7 @@ a.ButtonA1 {
   font-size: 40px;
   line-height: 1;
   text-align: center;
-  z-index: 0;
+  /* z-index: 0; */
 }
 
 .PageTitle:before {
@@ -1023,7 +1023,7 @@ a.ButtonA1 {
   width: calc(50% + 50px);
   height: calc(100% + 99px);
   pointer-events: none;
-  z-index: -1;
+  /* z-index: -1; */
 }
 
 .PageTitle .en {
@@ -1578,7 +1578,7 @@ a.ButtonA1 {
 }
 
 @media screen and (min-width: 1280px) {
-  .brand-ProductItems__item {
+  .brand-ProductItems__item1 {
     width: calc(25% - 49.5px);
     flex-shrink: 0;
     margin-right: 66px;
@@ -1758,7 +1758,7 @@ a.ButtonA1 {
 }
 
 .brand-SectionCover .brand-SectionCover__title ._card:before {
-  background-color: #e6d9db;
+  background-color: #A69981;
 }
 
 .brand-SectionCover .brand-SectionCover__title ._title1:after {
@@ -2130,7 +2130,7 @@ a.ButtonA1 {
 }
 
 .brand-SectionProductDetail__thums ._item:before {
-  z-index: 2;
+  /* z-index: 2; */
   content: '';
   display: block;
   position: absolute;
@@ -2143,7 +2143,7 @@ a.ButtonA1 {
 }
 
 .brand-SectionProductDetail__thums ._item:after {
-  z-index: 2;
+  /* z-index: 2; */
   content: '';
   display: block;
   position: absolute;
@@ -2405,7 +2405,7 @@ a.ButtonA1 {
 }
 
 .brand-SectionProductDetail__external .ButtonA {
-  background: #F8F3F5;
+  background: #ffffff;
 }
 
 @media screen and (min-width: 960px) {
@@ -2488,15 +2488,15 @@ a.ButtonA1 {
   width: 100%;
   height: 1166px;
   position: relative;
-  background-color: #f8f3f5;
+  background-color: #ffffff;
 }
 
 .top-BrandTile.top-BrandTile--lilac {
-  background-color: #f8f3f5;
+  background-color: #ffffff;
 }
 
 .top-BrandTile.top-BrandTile--beige {
-  background-color: #fcf6f3;
+  background-color: #ffffff;
 }
 
 .top-BrandTile.top-BrandTile--lilac + .top-BrandTile.top-BrandTile--beige:before {
@@ -2506,7 +2506,7 @@ a.ButtonA1 {
   width: 100%;
   height: 200px;
   top: -100px;
-  background-image: linear-gradient(to bottom, #f8f3f5 0%, #fcf6f3 100%);
+  background-image: linear-gradient(to bottom, #ffffff 0%, #ffffff 100%);
 }
 
 .top-BrandTile.top-BrandTile--beige + .top-BrandTile.top-BrandTile--lilac:before {
@@ -2516,7 +2516,7 @@ a.ButtonA1 {
   width: 100%;
   height: 200px;
   top: -100px;
-  background-image: linear-gradient(to bottom, #fcf6f3 0%, #f8f3f5 100%);
+  background-image: linear-gradient(to bottom, #ffffff 0%, #ffffff 100%);
 }
 
 @media screen and (max-width: 959px) {
@@ -2594,7 +2594,7 @@ a.ButtonA1 {
  *  写真
  **************************/
 .top-BrandTile__photo {
-  z-index: 3;
+  /* z-index: 3; */
   display: flex;
   align-items: center;
   justify-content: center;
@@ -2642,7 +2642,7 @@ a.ButtonA1 {
 
 @media screen and (max-width: 959px) {
   .top-BrandTile__photo {
-    z-index: 5;
+    /* z-index: 5; */
     position: relative;
     width: 100%;
     height: auto;
@@ -2665,7 +2665,7 @@ a.ButtonA1 {
  *  body
  **************************/
 .top-BrandTile__body {
-  z-index: 4;
+  /* z-index: 4; */
   display: flex;
   align-items: center;
   justify-content: center;
@@ -2805,10 +2805,10 @@ a.ButtonA1 {
     margin-right: auto;
   }
   .top-BrandTile.top-BrandTile--lilac .top-BrandTile__body {
-    background-color: #f8f3f5;
+    background-color: #ffffff;
   }
   .top-BrandTile.top-BrandTile--beige .top-BrandTile__body {
-    background-color: #fcf6f3;
+    background-color: #ffffff;
   }
 }
 
@@ -2852,7 +2852,7 @@ a.ButtonA1 {
   height: 100%;
   position: relative;
   overflow: hidden;
-  background-color: #f8f3f5;
+  background-color: #ffffff;
 }
 
 @media screen\0 {
@@ -3095,7 +3095,7 @@ a.ButtonA1 {
     content: '';
     position: absolute;
     display: block;
-    background-color: #f8f3f5;
+    background-color: #ffffff;
     top: 0;
     right: 0;
     width: 37.53846%;
@@ -3114,7 +3114,7 @@ a.ButtonA1 {
     content: '';
     position: absolute;
     display: block;
-    background-color: #f8f3f5;
+    background-color: #ffffff;
     top: 0;
     right: 0;
     width: 37.53846%;
@@ -3201,7 +3201,7 @@ a.ButtonA1 {
   }
 }
 
-.top-MainVisualCover__navi {
+/* .top-MainVisualCover__navi {
   z-index: 3;
   position: absolute;
   left: 80px;
@@ -3258,7 +3258,7 @@ a.ButtonA1 {
   .top-MainVisualCover__navi {
     display: none;
   }
-}
+} */
 
 body #SvgSymbol {
   display: none;
@@ -3395,13 +3395,13 @@ body.is-color-beige .footer-Main .footer-Main__navi1 ul li span {
     content: '';
     display: block;
     height: 180px;
-    background-color: #f8f3f5;
+    background-color: #ffffff;
   }
   .is-color-beige .brandItems:after {
     content: '';
     display: block;
     height: 180px;
-    background-color: #fcf6f3;
+    background-color: #ffffff;
   }
 }
 

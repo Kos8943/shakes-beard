@@ -43,7 +43,7 @@ function Cards(props) {
         <Link
           className="todetail"
           to={{
-            pathname:'/shopdetail/'+ value.shop_id
+            pathname:'/shopdetail/'+ value.sid
         }}>
           <img src={require('../img/card01.jpg')} className="card-img-top" alt="..." />
         </Link>
@@ -55,7 +55,7 @@ function Cards(props) {
             <Badge pill variant="secondary" className="mr-1">
               {value.shop_place_tag}
             </Badge>
-            <Link className="addlike">
+            <Link className="addlike" to="">
               {/* <FaHeart className="like"/> */}
               <FaRegHeart className="dislike"/>
             </Link>

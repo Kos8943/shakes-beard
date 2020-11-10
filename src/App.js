@@ -30,109 +30,122 @@ import Func_Finish from "./zihyu/Finish";
 import LogIn from "./yen/LogIn";
 import SignUp from "./yen/SignUp";
 import MemberOption from "./yen/MemberOption";
-import PreferenceSetting from "./yen/PreferenceSetting";
-import FavoritesList from "./yen/FavoritesList";
+import TestAuth from "./yen/TestAuth";
 import Payment from "./kos/pages/Payment";
 import Paycomplete from './kos/pages/Paycomplete'
 import orderCheck from './kos/pages/OrderCheck'
 import OrderCheck from "./kos/pages/OrderCheck";
 import TopArrow from "./icon/top-arrow.jpg"
+import { set } from "animejs";
 
 
 
 function App() {
+  // 登出/登入狀態
+  const [isAuth,setIsAuth]=useState(false)
+
+  const [authAccount,setAuthAccount]=useState('zzz')
+  const [authPassword,setAuthPasswor]=useState('123')
+  const [account, setAccount] = useState("");
+  const [password, setPassword] = useState("");
+
+
+
+
   return (
     <Router>
 
       <>
 
-
-
-
         <main role="main">
           <ScrollUp showUnder={150}>
             <img src={TopArrow} class="scrolltotop d-lg-block d-none"></img>
           </ScrollUp>
+
           <Switch>
             <Route exact path="/">
               <HeroPage />
-
             </Route>
 
             <Route exact path="/homepage">
-              <ShakesBeardNavbar />
+              <ShakesBeardNavbar isAuth={isAuth} setIsAuth={setIsAuth} />
               <HomePage />
               <MyFooter />
             </Route>
 
             <Route path="/Path_GiftBox">
-              <ShakesBeardNavbar />
+              <ShakesBeardNavbar isAuth={isAuth} setIsAuth={setIsAuth}/>
               <Func_GiftBox />
               <MyFooter />
             </Route>
 
             <Route path="/Path_Budget">
-              <ShakesBeardNavbar />
+              <ShakesBeardNavbar isAuth={isAuth} setIsAuth={setIsAuth} />
               <Func_Budget />
               <MyFooter />
             </Route>
 
             <Route path="/Path_ChooseRazor">
-              <ShakesBeardNavbar />
+              <ShakesBeardNavbar isAuth={isAuth} setIsAuth={setIsAuth}/>
               <Func_ChooseRazor />
               <MyFooter />
             </Route>
 
             <Route path="/Path_ChooseBrush">
-              <ShakesBeardNavbar />
+              <ShakesBeardNavbar isAuth={isAuth} setIsAuth={setIsAuth}/>
               <Func_ChooseBrush />
               <MyFooter />
             </Route>
 
             <Route path="/Path_ChooseStand">
-              <ShakesBeardNavbar />
+              <ShakesBeardNavbar isAuth={isAuth} setIsAuth={setIsAuth}/>
               <Func_ChooseStand />
               <MyFooter />
             </Route>
 
             <Route path="/Path_Color">
-              <ShakesBeardNavbar />
+              <ShakesBeardNavbar isAuth={isAuth} setIsAuth={setIsAuth}/>
               <Func_Color />
               <MyFooter />
             </Route>
 
             <Route path="/Path_Finish">
-              <ShakesBeardNavbar />
+              <ShakesBeardNavbar isAuth={isAuth} setIsAuth={setIsAuth}/>
               <Func_Finish />
               <MyFooter />
             </Route>
 
             <Route path="/login">
-              <ShakesBeardNavbar />
-              <LogIn />
+              <ShakesBeardNavbar isAuth={isAuth} setIsAuth={setIsAuth} />
+              <LogIn isAuth={isAuth} setIsAuth={setIsAuth} authAccount={authAccount} setAuthAccount={setAuthAccount} authPassword={authPassword} setAuthPassword={setAuthPasswor} account={account} setAccount={setAccount} password={password} setPassword={setPassword}  />
               <MyFooter />
             </Route>
 
+            <Route path="/testAuth">
+              <ShakesBeardNavbar isAuth={isAuth} setIsAuth={setIsAuth} />
+              <TestAuth isAuth={isAuth} setIsAuth={setIsAuth} />
+            </Route>
+
             <Route path="/signup">
-              <ShakesBeardNavbar />
+              <ShakesBeardNavbar isAuth={isAuth} setIsAuth={setIsAuth}/>
               <SignUp />
               <MyFooter />
             </Route>
 
             <Route path="/Project1">
-              <ShakesBeardNavbar />
+              <ShakesBeardNavbar isAuth={isAuth} setIsAuth={setIsAuth}/>
               <Project1 />
               <MyFooter />
             </Route>
 
             <Route path="/Project">
-              <ShakesBeardNavbar />
+              <ShakesBeardNavbar isAuth={isAuth} setIsAuth={setIsAuth}/>
               <Project />
               <MyFooter />
             </Route>
 
             <Route exact path="/Product">
-              <ShakesBeardNavbar />
+              <ShakesBeardNavbar isAuth={isAuth} setIsAuth={setIsAuth}/>
               <div className="footerFix">
                 <Product />
               </div>
@@ -148,7 +161,7 @@ function App() {
             </Route> */}
 
             <Route path="/cart">
-              <ShakesBeardNavbar />
+              <ShakesBeardNavbar isAuth={isAuth} setIsAuth={setIsAuth}/>
               <div className="footerFix KosPadding">
                 <Cart />
               </div>
@@ -156,7 +169,7 @@ function App() {
             </Route>
 
             <Route path="/payment">
-              <ShakesBeardNavbar />
+              <ShakesBeardNavbar isAuth={isAuth} setIsAuth={setIsAuth}/>
               <div className="footerFix KosPadding">
                 <Payment />
               </div>
@@ -164,7 +177,7 @@ function App() {
             </Route>
 
             <Route path="/paycomplete">
-              <ShakesBeardNavbar />
+              <ShakesBeardNavbar isAuth={isAuth} setIsAuth={setIsAuth}/>
               <div className="footerFix KosPadding">
                 <Paycomplete />
               </div>
@@ -172,7 +185,7 @@ function App() {
             </Route>
 
             <Route path="/ordercheck">
-              <ShakesBeardNavbar />
+              <ShakesBeardNavbar isAuth={isAuth} setIsAuth={setIsAuth}/>
               <div className="footerFix KosPadding">
                 <OrderCheck />
               </div>
@@ -180,14 +193,14 @@ function App() {
             </Route>
 
             <Route path="/shoplist">
-              <ShakesBeardNavbar />
+              <ShakesBeardNavbar isAuth={isAuth} setIsAuth={setIsAuth}/>
               <div className="footerFix">
                 <ShopList />
               </div>
               <MyFooter />
             </Route>
 
-            <Route path="/shopdetail/:shopid?">
+            <Route path="/shopdetail/:sid?">
               <ShakesBeardNavbar />
               <div className="footerFix">
                 <ShopDetail />
@@ -195,41 +208,19 @@ function App() {
               <MyFooter />
             </Route>
 
-
-            <Route path="/preferencesetting">
-              <ShakesBeardNavbar />
-              <div className="footerFix">
-                <PreferenceSetting />
-              </div>
-              <MyFooter />
-            </Route>
-
-            <Route path="/favoriteslist">
-              <ShakesBeardNavbar />
-              <div className="footerFix">
-                <FavoritesList />
-              </div>
-              <MyFooter />
-            </Route>
-
-
+    
 
             <Route path="/memberoption">
-              <ShakesBeardNavbar />
+              <ShakesBeardNavbar isAuth={isAuth} setIsAuth={setIsAuth}/>
               <div className="memFooterFix ">
-                <MemberOption />
+                <MemberOption isAuth={isAuth} setIsAuth={setIsAuth} />
               </div>
               <MyFooter />
             </Route>
-
-
-
-
-
 
 
             <Route path="/reservation">
-              <ShakesBeardNavbar />
+              <ShakesBeardNavbar isAuth={isAuth} setIsAuth={setIsAuth}/>
               <div className="footerFix">
                 <Reservation />
               </div>
@@ -237,7 +228,7 @@ function App() {
             </Route>
 
             <Route path="/reservationperson">
-              <ShakesBeardNavbar />
+              <ShakesBeardNavbar isAuth={isAuth} setIsAuth={setIsAuth}/>
               <div className="footerFix">
                 <ReservationPerson />
               </div>
@@ -245,7 +236,7 @@ function App() {
             </Route>
 
             <Route path="/reservationcheck">
-              <ShakesBeardNavbar />
+              <ShakesBeardNavbar isAuth={isAuth} setIsAuth={setIsAuth}/>
               <div className="footerFix">
                 <ReservationCheck />
               </div>
@@ -253,7 +244,7 @@ function App() {
             </Route>
 
             <Route path="*">
-              <ShakesBeardNavbar />
+              <ShakesBeardNavbar isAuth={isAuth} setIsAuth={setIsAuth}/>
               <div className="footerFix">
                 <NotFoundPage />
               </div>
@@ -263,8 +254,9 @@ function App() {
           </Switch>
         </main>
 
-      </></Router>
-  );
+      </>
+    </Router>
+  )
 }
 
 export default App;
