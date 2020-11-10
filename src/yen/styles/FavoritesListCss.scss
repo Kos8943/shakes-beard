@@ -2,76 +2,69 @@
   font-size: 16px;
 }
 
-.favUpdateArea {
-  // border: 1px solid red;
-  font-size: 1rem;
-  padding: 0 1.25rem;
-}
-
 .memberfav {
-  width: 260px;
-  height: 300px;
+  width: 130px;
+  height: 200px;
   background-color: #a69981;
   // border:3px solid #A69981;
-  padding: 0.5rem;
-  margin: 0.5rem;
-  text-align: center;
-  // border: 1px solid red;
+  margin: 3px;
+  text-align: center
 }
 
 .memberfavImg {
-  height: 80%;
-  background-color: #ccc;
+  width:120px;
   // border: 1px solid red;
+  margin-top: 3px;
 }
 
 .memberfavItemName {
-  // border: 1px solid red;
   text-align: center;
-  font-size: 1.2rem;
+  font-size: .8rem;
 }
+
 
 .memberfavPrice {
   // margin: 0 auto;
-  font-size: 1.2rem;
+  font-size: .8rem;
 }
 
 .memberBookmark {
-  width: 30px;
+  width: 32px;
 }
 
 @media (max-width: 800px) {
-  .favUpdateArea {
-    // border: 1px solid red;
-    font-size: 1rem;
-  }
 
   .memberfav {
-    width: 140px;
-    height: 180px;
+    width: 48%;
+    height: 50%;
     background-color: #a69981;
     // border:3px solid #A69981;
-    padding: 0.5rem;
-    margin: 0.25rem;
-    text-align: center;
-    // border: 1px solid red;
+    margin: 3px;
+    text-align: center
   }
-
+  
   .memberfavImg {
-    height: 50%;
-    background-color: #ccc;
+    width:80px;
     // border: 1px solid red;
+    margin: 5px;
+  }
+  
+  .memberfavItemName {
+    text-align: center;
+    font-size: 1rem;
+  }
+  
+  
+  .memberfavPrice {
+    // margin: 0 auto;
+    font-size: 1rem;
+  }
+  
+  .memberBookmark {
+    width: 36px;
+  }
+
+ 
   }
 
 
-  .webObj {
-    display: none;
-  }
-
-.btnCenter{
-    display: flex;
-    justify-content:end;
-    
-  }
-
-}

@@ -51,7 +51,7 @@ function MemberDataUpdateTable(props) {
 
   return (
     <>
-      <div className="rightArea col-12 col-sm-10 col-md-8 justify-content-around">
+      <div className="rightArea col-12 col-sm-10 col-md-9 justify-content-around">
         <div className="optionTittle webObj">{props.title}</div>
         <div className="decLine webObj"></div>
           <form className="dataForm">

@@ -4,7 +4,7 @@ import PreferenceSettingCss from "../styles/PreferenceSettingCss.scss";
 function MemberPreferenceSetting(props) {
   return (
     <>
-      <div className="rightArea col-12 col-sm-10 col-md-8 justify-content-around">
+      <div className="rightArea col-12 col-sm-10 col-md-9 justify-content-around">
         <div className="optionTittle webObj">{props.title}</div>
         <div className="decLine webObj"></div>
 

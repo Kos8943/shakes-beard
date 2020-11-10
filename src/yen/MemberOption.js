@@ -10,7 +10,7 @@ import ReservationOrderCheck from "../chen/components/ReservationOrderCheck";
 import { Router, Route, Link, Switch, Redirect } from "react-router-dom";
 
 function MemberOption(props) {
-  const [pageTitle, setPageTitle] = useState("偏好設定");
+  const [pageTitle, setPageTitle] = useState("追蹤清單");
   const { isAuth, setIsAuth } = props;
 
   // if(isAuth===false) return <Redirect to="/signup" />
