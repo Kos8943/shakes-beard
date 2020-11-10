@@ -7,9 +7,9 @@ import heart from '../img/heart-2.png'
 
 function App(props) {
   return <>
-    <div className="rightArea col-9">
-        <div className="optionTittle">追蹤清單</div>
-        <div className="decLine"></div>
+    <div className="rightArea col-12 col-sm-9">
+        <div className="optionTittle webObj">追蹤清單</div>
+        <div className="decLine webObj"></div>
   
         <div className="favUpdateArea d-flex flex-wrap">
 

@@ -9,6 +9,15 @@ import img_Brush04 from './image/Brush04.jpg';
 import img_Brush05 from './image/Brush05.jpg';
 import img_Brush06 from './image/Brush06.jpg';
 
+
+let queryString = window.location.search;
+const urlParams = new URLSearchParams(queryString);
+const SelectRange = urlParams.get('SelectRange');             //第一頁選擇的參數
+const SelectRazorIndex = urlParams.get('SelectRazorIndex');   //上一頁選擇的參數
+console.log("SelectRange = " + SelectRange);
+console.log("SelectRazorIndex = " + SelectRazorIndex);
+
+
 class Class_ChooseBrush extends React.Component
 {
   state =
@@ -148,7 +157,7 @@ class Class_ChooseBrush extends React.Component
                       {     //React程式區間語法 (開始)
                         () =>
                         {
-                          window.open("/Path_ChooseRazor", '_self');
+                          window.open("/Path_ChooseRazor?SelectRange=" + SelectRange, '_self');
                         }
                       }     //React程式區間語法 (結束)
                     

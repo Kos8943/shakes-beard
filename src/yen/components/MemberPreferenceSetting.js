@@ -1,9 +1,9 @@
 import React from 'react'
 function MemberPreferenceSetting(props) {
   return <>
-      <div className="rightArea col-9">
-            <div className="optionTittle">偏好設定</div>
-            <div className="decLine"></div>
+      <div className="rightArea col-sm-9 col-12">
+            <div className="optionTittle webObj ">偏好設定</div>
+            <div className="decLine webObj "></div>
             
             <div className="updateArea">
                 <div className="tittle2">付款方式</div>
@@ -68,8 +68,14 @@ function MemberPreferenceSetting(props) {
 
 
 
-                <button className="memberCheck">完成</button>
-                <button className="memberCancle">取消</button>
+                <div className="btnCenter justify-content-end">
+            <button type="submit" className="memberCancle">
+              取消
+            </button>
+            <button type="submit" className="memberCheck">
+              完成
+            </button>
+          </div>
             </div>
         </div>
   </>

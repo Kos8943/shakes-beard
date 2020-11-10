@@ -13,7 +13,7 @@ function Cards(props) {
     // setDataLoading(true)
 
     // json-db
-    const url = 'http://localhost:3000/shop'
+    const url = 'http://localhost:3000/try-shop'
 
     const request = new Request(url, {
       method:'GET',
@@ -39,21 +39,21 @@ function Cards(props) {
     {shops.map((value, index)=>{
       return(
       <div className="col-12 col-sm-6 col-md-6 col-lg-4 p-0" key={index}>
-        <div className="shopcard" key={value.id}>
+        <div className="shopcard" key={value.shop_id}>
         <Link
           className="todetail"
           to={{
-            pathname:'/shopdetail/'+ value.id
+            pathname:'/shopdetail/'+ value.shop_id
         }}>
           <img src={require('../img/card01.jpg')} className="card-img-top" alt="..." />
         </Link>
         <div className="card-body p-2">
           <h6>
             <Badge pill variant="secondary" className="mr-1">
-              {value.tag}
+              {value.shop_cate_tag}
             </Badge>
             <Badge pill variant="secondary" className="mr-1">
-              {value.place}
+              {value.shop_place_tag}
             </Badge>
             <Link className="addlike">
               {/* <FaHeart className="like"/> */}
@@ -61,7 +61,7 @@ function Cards(props) {
             </Link>
           </h6>
           <h5 className="card-title mb-1" className="mr-1">
-            {value.name}
+            {value.shop_name}
           </h5>
           {/* <Link className="addlike">
              <FaHeart className="like"/>

@@ -7,21 +7,7 @@ import Trash from '../kos/icon/trash.svg'
 function FavoritesList(props) {
     
   return <>
-  <div className="container-fluid">
-    <div className="row justify-content-between">
-
-        <div className="leftArea col-2 d-flex flex-column">
-            <div className="userName">王大明</div>
-            <div className="decLine"></div>
-            <div className="option">資料修改</div>
-            <div className="option">密碼修改</div>
-            <div className="option">偏好設定</div>
-            <div className="option thisPage">追蹤清單</div>
-            <div className="option">訂單查詢</div>
-        </div>
-
-
-        <div className="rightArea col-9">
+        <div className="rightArea col-12 col-sm-9">
             <div className="optionTittle">追蹤清單</div>
             <div className="decLine"></div>
             
@@ -49,8 +35,7 @@ function FavoritesList(props) {
         </div>
 
 
-    </div>
-  </div>
+ 
       
   </>
 }

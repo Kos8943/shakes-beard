@@ -2,52 +2,76 @@
   font-size: 16px;
 }
 
-.favUpdateArea{
+.favUpdateArea {
   // border: 1px solid red;
   font-size: 1rem;
-  padding:0 1.25rem;
+  padding: 0 1.25rem;
 }
 
 .memberfav {
   width: 260px;
   height: 300px;
-  background-color:#A69981;
+  background-color: #a69981;
   // border:3px solid #A69981;
-  padding: .5rem;
-  margin: .5rem;
+  padding: 0.5rem;
+  margin: 0.5rem;
   text-align: center;
- 
   // border: 1px solid red;
-  
 }
 
-.memberfavImg{
+.memberfavImg {
   height: 80%;
   background-color: #ccc;
-  // border: 1px solid red; 
-  
+  // border: 1px solid red;
 }
 
-
-
-
-.memberfavItemName{
+.memberfavItemName {
   // border: 1px solid red;
   text-align: center;
   font-size: 1.2rem;
 }
 
-
-
-.memberfavPrice{
+.memberfavPrice {
   // margin: 0 auto;
   font-size: 1.2rem;
-
 }
 
-
-.memberBookmark{
+.memberBookmark {
   width: 30px;
-  
 }
 
+@media (max-width: 800px) {
+  .favUpdateArea {
+    // border: 1px solid red;
+    font-size: 1rem;
+  }
+
+  .memberfav {
+    width: 140px;
+    height: 180px;
+    background-color: #a69981;
+    // border:3px solid #A69981;
+    padding: 0.5rem;
+    margin: 0.25rem;
+    text-align: center;
+    // border: 1px solid red;
+  }
+
+  .memberfavImg {
+    height: 50%;
+    background-color: #ccc;
+    // border: 1px solid red;
+  }
+
+
+  .webObj {
+    display: none;
+  }
+
+.btnCenter{
+    display: flex;
+    justify-content:end;
+    
+  }
+
+}

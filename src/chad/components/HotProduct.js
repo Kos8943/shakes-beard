@@ -14,7 +14,7 @@ function HotProduct(props) {
   // 載入資料用
   async function getTotalFromServer() {
     setDataLoading(true);
-    const url = "http://localhost:3000/try-db";
+    const url = "http://localhost:3000/try-home";
 
     const request = new Request(url, {
       method: "GET",

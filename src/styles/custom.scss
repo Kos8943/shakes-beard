@@ -32,6 +32,14 @@ main {
   padding-right: 17.5%;
 }
 
+.memFooterFix {
+  min-height: 75.1vh;
+  padding-left: 17.5%;
+  padding-right: 17.5%;
+}
+
+
+
 .navBarcolor {
   background-color: #595452;
   padding-left: 17.5%;
@@ -112,4 +120,14 @@ main > .container {
     padding-left: 7%;
     padding-right: 7%;
   }
+
+  .memFooterFix{
+  min-height: 71vh;
+  padding-left: 7%;
+  padding-right: 7%;
+
+  }
+
+
+
 }
