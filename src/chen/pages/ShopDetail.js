@@ -29,7 +29,6 @@ function ShopDetail(props) {
           <div className="col-12 col-sm-12 col-md-3 col-lg-2"></div>
           <div className="col-12 col-sm-12 col-md-9 col-lg-10">
               <Description/>
-              <Description/>
               <strong className="d-inline-block my-2">注意事項</strong>
               <p className="card-text mb-auto">This is a wider card with supporting text below as a natural lead-in to additional content.</p>
               {/* map */}    

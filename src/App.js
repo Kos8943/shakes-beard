@@ -201,7 +201,6 @@ function App() {
             </Route>
 
             <Route path="/shopdetail/:sid?">
-              <ShakesBeardNavbar isAuth={isAuth} setIsAuth={setIsAuth}/>
               <ShakesBeardNavbar />
               <div className="footerFix">
                 <ShopDetail />
