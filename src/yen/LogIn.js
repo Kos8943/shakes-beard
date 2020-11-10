@@ -1,13 +1,27 @@
 import React, { useState, useEffect } from "react";
+import { Router, Route, Link, Switch, Redirect } from "react-router-dom";
 import LogInCss from "./styles/LogInCss.scss";
 import facebook from "./img/facebook.svg";
 import twitter from "./img/twitter.svg";
 import google from "./img/google.svg";
 
 function LogIn(props) {
-  const { isAuth, setIsAuth } = props;
-  const [acc, setAcc] = useState("");
-  const [pass, setPass] = useState("");
+  const {
+    isAuth,
+    setIsAuth,
+    authAccount,
+    setAuthAccount,
+    authPassword,
+    setAuthPasswor,
+    account,
+    setAccount,
+    password,
+    setPassword,
+  } = props;
+  // const [account, setAccount] = useState("");
+  // const [password, setPassword] = useState("");
+
+  if(isAuth===true) return <Redirect to="/homepage" /> 
 
   return (
     <>
@@ -25,47 +39,48 @@ function LogIn(props) {
             >
               <div className="loginArea1">
                 <lable for="account" className="logText_ d-flex flex-column ">
-                  帳號 </lable>
-                  <input
-                    className="loginInput"
-                    name="account"
-                    type="text"
-                    id="account"
-                    value={acc}
-                    onChange={(e) => setAcc(e.target.value)}
-                    required
-                  ></input>
-               
-
+                  帳號
+                </lable>
+                <input
+                  className="loginInput"
+                  name="account"
+                  type="text"
+                  id="account"
+                  value={account}
+                  onChange={(e) => setAccount(e.target.value)}
+                  required
+                ></input>
 
                 <label for="password" className="logText_ d-flex flex-column">
-                  密碼</label>
-                  <input
-                    className="loginInput"
-                    name="password"
-                    type="password"
-                    id="password"
-                    value={pass}
-                    onChange={(e) => setPass(e.target.value)}
-                    required
-                  ></input>
-                
+                  密碼
+                </label>
+                <input
+                  className="loginInput"
+                  name="password"
+                  type="password"
+                  id="password"
+                  value={password}
+                  onChange={(e) => setPassword(e.target.value)}
+                  required
+                ></input>
 
                 <div className="logText_2">忘記密碼</div>
+
                 <button
-                  type="submit"
-                  className="loginCheckButton loginMobile" >
+                  type="button"
+                  className="loginCheckButton loginMobile"
+                  onClick={() => {
+                    if (authAccount === account && authPassword === password) {
+                      setIsAuth(true);
+                      alert("登入成功");
+                    } else {
+                      alert("帳號/密碼錯誤");
+                    }
+                  }}
+                >
                   登入
                 </button>
               </div>
-
-
-
-
-
-
-
-
 
               <div className="loginArea2 ">
                 <div className="otherAccount">
@@ -101,7 +116,14 @@ function LogIn(props) {
             </form>
 
             <div className="d-flex justify-content-around ">
-              <button type="submit" className="loginCheckButton loginWebNone">
+              <button type="submit" className="loginCheckButton loginWebNone" onClick={() => {
+                    if (authAccount === account && authPassword === password) {
+                      setIsAuth(true);
+                      alert("登入成功");
+                    } else {
+                      alert("帳號/密碼錯誤");
+                    }
+                  }}>
                 登入
               </button>
               <button type="submit" className="loginSingUpButton loginWebNone">

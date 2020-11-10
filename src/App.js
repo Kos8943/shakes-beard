@@ -30,20 +30,28 @@ import Func_Finish from "./zihyu/Finish";
 import LogIn from "./yen/LogIn";
 import SignUp from "./yen/SignUp";
 import MemberOption from "./yen/MemberOption";
-import PreferenceSetting from "./yen/PreferenceSetting";
-import FavoritesList from "./yen/FavoritesList";
 import TestAuth from "./yen/TestAuth";
 import Payment from "./kos/pages/Payment";
 import Paycomplete from './kos/pages/Paycomplete'
 import orderCheck from './kos/pages/OrderCheck'
 import OrderCheck from "./kos/pages/OrderCheck";
 import TopArrow from "./icon/top-arrow.jpg"
+import { set } from "animejs";
 
 
 
 function App() {
   // 登出/登入狀態
   const [isAuth,setIsAuth]=useState(false)
+
+  const [authAccount,setAuthAccount]=useState('zzz')
+  const [authPassword,setAuthPasswor]=useState('123')
+  const [account, setAccount] = useState("");
+  const [password, setPassword] = useState("");
+
+
+
+
   return (
     <Router>
 
@@ -109,7 +117,7 @@ function App() {
 
             <Route path="/login">
               <ShakesBeardNavbar isAuth={isAuth} setIsAuth={setIsAuth} />
-              <LogIn isAuth={isAuth} setIsAuth={setIsAuth} />
+              <LogIn isAuth={isAuth} setIsAuth={setIsAuth} authAccount={authAccount} setAuthAccount={setAuthAccount} authPassword={authPassword} setAuthPassword={setAuthPasswor} account={account} setAccount={setAccount} password={password} setPassword={setPassword}  />
               <MyFooter />
             </Route>
 
@@ -201,21 +209,7 @@ function App() {
               <MyFooter />
             </Route>
 
-            <Route path="/preferencesetting">
-              <ShakesBeardNavbar isAuth={isAuth} setIsAuth={setIsAuth}/>
-              <div className="footerFix">
-                <PreferenceSetting />
-              </div>
-              <MyFooter />
-            </Route>
-
-            <Route path="/favoriteslist">
-              <ShakesBeardNavbar isAuth={isAuth} setIsAuth={setIsAuth}/>
-              <div className="footerFix">
-                <FavoritesList />
-              </div>
-              <MyFooter />
-            </Route>
+    
 
             <Route path="/memberoption">
               <ShakesBeardNavbar isAuth={isAuth} setIsAuth={setIsAuth}/>
