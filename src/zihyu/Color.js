@@ -2,6 +2,12 @@ import React from 'react'
 import './Style/ColorCSS.css';
 import './Style/CommonCSS.css';
 import img_box from './image/box.png';
+import img_box1 from './image/box1.png';
+import img_box2 from './image/box2.png';
+import img_box3 from './image/box3.png';
+import img_box4 from './image/box4.png';
+import img_box5 from './image/box5.png';
+
 import { Button } from 'react-bootstrap'
 
 class Class_Color extends React.Component
@@ -21,7 +27,7 @@ class Class_Color extends React.Component
                   <div className="lineTop"></div>
                   <div className="lineDown"></div>
 
-                  <div><img className="color_boxImg" src={img_box} /></div>
+                  <div><img className="color_boxImg" id="change_boxColor" src={img_box} /></div>
                   <div className="color_button">
                     <button className="change color_button1"></button>
                     <button className="change color_button2"></button>
