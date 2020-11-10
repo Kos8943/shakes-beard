@@ -7,18 +7,17 @@ import { Link } from "react-router-dom";
 import { queryByTestId } from "@testing-library/react";
 
 function WebCartCard(props) {
-  const [productName, setProduetName] = useState();
-  const [productPrice, setProductPrice] = useState(0);
-  const [productType1, setProductType1] = useState();
-  const [productType2, setProductType2] = useState();
-  const [productType3, setProductType3] = useState();
-  const [phoneProductType, setPhoneProductType]= useState()
+  const [myProductName, setMyProduetName] = useState([]);
+  // const [productPrice, setProductPrice] = useState(0);
+  // const [productType1, setProductType1] = useState();
+  // const [productType2, setProductType2] = useState();
+  // const [productType3, setProductType3] = useState();
+  const [phoneProductType, setPhoneProductType] = useState();
   const [dataLoading, setDataLoading] = useState(false);
   const [amount, setAmount] = useState(1);
-  const [subtotal, setSubtotal] = useState(productPrice * amount);
-  const [coopo, setCoopo] = useState('')
-  const [offPrice, setOffPrice] = useState(0)
-
+  const [subtotal, setSubtotal] = useState(myProductName.price * amount);
+  const [coopo, setCoopo] = useState("");
+  const [offPrice, setOffPrice] = useState(0);
 
   // 載入資料用
   async function getTotalFromServer() {
@@ -40,11 +39,11 @@ function WebCartCard(props) {
     // data會是一個物件值
 
     // setTotal(data.total)
-    setProductPrice(parseInt(data[1].price));
-    setProductType1(data[1].type1);
-    setProductType2(data[1].type2)
-    setProductType3(data[1].type3)
-    setProduetName(data[1].name);
+    setMyProduetName(data);
+    // setProductType1(data[1].type1);
+    // setProductType2(data[1].type2)
+    // setProductType3(data[1].type3)
+    // setProduetName(data[1].name);
     setSubtotal(data[1].price * amount);
     console.log(data[1].price);
   }
@@ -55,9 +54,9 @@ function WebCartCard(props) {
   }, []);
 
   // 每次total資料有改變，2秒後關閉載入指示
-  useEffect(() => {
-    setTimeout(() => setDataLoading(false), 500);
-  }, [setProductPrice]);
+  // useEffect(() => {
+  //   setTimeout(() => setDataLoading(false), 500);
+  // }, [setProductPrice]);
 
   const loading = (
     <div className="spinner-grow" role="status">
@@ -69,82 +68,116 @@ function WebCartCard(props) {
 
   return (
     <>
-      <div className="cartItem d-xl-flex d-block">
-        <img className="itemImg" src="./imgs/1-3.jpg"></img>
-        <div className="itemName my-lg-auto">{productName}</div>
+      {myProductName.map((value, index) => {
+        return (
+          <div className="cartItem d-xl-flex d-block">
+            <img
+              className="itemImg"
+              src={"./imgs/" + `${myProductName[index].img}`}
+            ></img>
+            <div className="itemName my-lg-auto">
+              {myProductName[index].name}
+            </div>
 
-        {/* web style select */}
-        <select className="selectHigh d-none d-lg-block" id="typeSelect" onChange={(e)=>{setPhoneProductType(e.target.value)}}>
-          <option value={productType1}>{productType1}</option>
-          <option value={productType2}>{productType2}</option>
-          <option value={productType3}>{productType3}</option>
-        </select>
-        <select
-          className="selectHigh  d-none d-lg-block"
-          onChange={ (e) => { setAmount(e.target.value)
-          console.log(e.target.selectedIndex)
-            setSubtotal(productPrice * e.target.value);
-          }}
-          id="select"
-        >
-          <option value="1">1</option>
-          <option value="2">2</option>
-          <option value="3">3</option>
-          <option value="4">4</option>
-          <option value="5">5</option>
-        </select>
+            {/* web style select */}
+            <select
+              className="selectHigh d-none d-lg-block"
+              id="typeSelect"
+              onChange={(e) => {
+                setPhoneProductType(e.target.value);
+              }}
+            >
+              <option value={myProductName[index].type1}>
+                {myProductName[index].type1}
+              </option>
+              <option value={myProductName[index].type2}>
+                {myProductName[index].type2}
+              </option>
+              <option value={myProductName[index].type3}>
+                {myProductName[index].type3}
+              </option>
+            </select>
+            <select
+              className="selectHigh  d-none d-lg-block"
+              onChange={(e) => {
+                setAmount(e.target.value);
+                console.log(e.target.value);
+                // setSubtotal(myProductName[index].price * e.target.value);
+                // setSubtotal(e.target.nextSibling.nextSibling.nextSibling * myProductName[index].price)
+                console.log(e.target.nextSibling.nextSibling.nextSibling.innerHTML);
 
-        {/* mobile styel select*/}
-        <div className="KosProjectType d-block d-lg-none">{phoneProductType}</div>
+                //  * document.getElementsByClassName('subtotal').previousSibling.previousSibling.previousSibling.value
+              }}
+              id="select"
+            >
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="5">5</option>
+            </select>
 
-        <span className="unitPrice">NT${productPrice}</span>
+            {/* mobile styel select*/}
+            <div className="KosProjectType d-block d-lg-none">
+              {phoneProductType}
+            </div>
 
-        {/* web show total price*/}
-        <span className="subtotal  d-none d-lg-block">NT${subtotal}</span>
+            <span className="unitPrice">NT${myProductName[index].price}</span>
 
-        {/* web del img*/}
-        <img src="./imgs/delete.svg" className="deleteIcon d-none d-lg-block" onClick={() => {console.log(236)}}></img>
+            {/* web show total price*/}
+            <span className="subtotal  d-none d-lg-block">
+              NT${myProductName[index].price}
+            </span>
 
-        {/* mobile qty select*/}
-        <div className="d-flex counterArea d-block d-lg-none">
-          <div
-            className="cartMinus"
-            onClick={function () {
-              if (amount === 1) {
-                setAmount(1);
-              } else {
-                const newamount = amount - 1
-                setAmount(amount - 1);
-                setSubtotal(productPrice * newamount)
-                document.getElementById("select").selectedIndex = amount -2
-                
-                
-              }
-            }}
-          >
-            -
+            {/* web del img*/}
+            <img
+              src="./imgs/delete.svg"
+              className="deleteIcon d-none d-lg-block"
+              onClick={() => {
+                console.log(236);
+              }}
+            ></img>
+
+            {/* mobile qty select*/}
+            <div className="d-flex counterArea d-block d-lg-none">
+              <div
+                className="cartMinus"
+                onClick={function () {
+                  if (amount === 1) {
+                    setAmount(1);
+                  } else {
+                    const newamount = amount - 1;
+                    setAmount(amount - 1);
+                    setSubtotal(myProductName[this].price * newamount);
+                    document.getElementById("select").selectedIndex =
+                      amount - 2;
+                  }
+                }}
+              >
+                -
+              </div>
+              <div className="cartQty" value={amount}>
+                {amount}
+              </div>
+              <div
+                className="cartAdd"
+                onClick={function () {
+                  if (amount === 5) {
+                    setAmount(5);
+                  } else {
+                    const newamount = amount + 1;
+                    setAmount(parseInt(amount) + 1);
+                    setSubtotal(myProductName[index].price * newamount);
+                    document.getElementById("select").selectedIndex = amount;
+                  }
+                }}
+              ></div>
+              <img src={Trash} className="CartTarsh"></img>
+              <div className="subtotal">NT${subtotal}</div>
+            </div>
           </div>
-          <div className="cartQty" value={amount} >{amount}</div>
-          <div
-            className="cartAdd"
-            onClick={ function() {
-              if (amount === 5) {
-                setAmount(5)
-              } else {
-                const newamount = amount + 1
-                setAmount(parseInt(amount) + 1);
-                setSubtotal(productPrice * newamount)
-                document.getElementById("select").selectedIndex = amount
-              }
-            }
-            }
-          >
-            +
-          </div>
-          <img src="./imgs/delete.svg" className="CartTarsh"></img>
-          <div className="subtotal">NT${subtotal}</div>
-        </div>
-      </div>
+        );
+      })}
 
       <div className="priceArea ml-auto d-flex">
         <div className="priceArea font">
@@ -156,11 +189,12 @@ function WebCartCard(props) {
 
         <div className="priceArea font totalPrice priceColor">
           <div>
-            <input onChange={(e) => { (e.target.value === "abc")?
-              setOffPrice(-150): setOffPrice(0)
-            }
-               
-              } className="inputvalue"></input>
+            <input
+              onChange={(e) => {
+                e.target.value === "abc" ? setOffPrice(-150) : setOffPrice(0);
+              }}
+              className="inputvalue"
+            ></input>
           </div>
           <div>NT$ {offPrice}</div>
           <div>NT$ 150</div>

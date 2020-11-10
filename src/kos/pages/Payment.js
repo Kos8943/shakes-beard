@@ -22,11 +22,9 @@ function Payment(props) {
         <hr />
         <div className="recipient">
           <h3 className="d-flex justify-content-center">收件人資訊</h3>
-          <form>
+         
             <PaymentAddress />
-            <hr />
-            <PaymentCreditCard />
-          </form>
+   
         </div>
       </div>
       <div className="paymentBtn mx-auto">

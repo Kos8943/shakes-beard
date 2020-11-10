@@ -7,6 +7,7 @@ import WebCartCard from '../components/WebCartCard'
 import PhoneCartCard from '../components/PhoneCartCard'
 import CartBuyStep from '../components/CartBuyStep'
 
+
 function Cart(props) { 
     // const [total, setTotal] = useState(1)
         return (
