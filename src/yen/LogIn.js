@@ -11,7 +11,7 @@ function LogIn(props) {
       <div className="bagimg">
         <div className="bagimg2">
           <div className="loginCard">
-            <div className="loginTittle"></div>
+            <div className="loginTittle">登入</div>
 
             <div className="loginWeb">
               <div className="loginArea1">
@@ -57,23 +57,11 @@ function LogIn(props) {
             </div>
 
             <div className="d-flex justify-content-around ">
-              <a href="">
-                <button
-                  className="loginCheckButton loginWebNone"
-                  
-                >
-                  登入
-                </button>
-              </a>
+              <button className="loginCheckButton loginWebNone">登入</button>
 
-              <a href="">
-                <button
-                  className="loginSingUpButton loginWebNone"
-                  
-                >
-                  註冊帳號
-                </button>
-              </a>
+              <button className="loginSingUpButton loginWebNone">
+                註冊帳號
+              </button>
             </div>
 
             <div className="loginMobile"></div>
