@@ -21,6 +21,8 @@ function MemberDataUpdateTable(props) {
 
   const [startDate, setStartDate] = useState(new Date());
 
+  
+
   async function getFromServer() {
     const url = "http://localhost:3000/try-mem";
     const request = new Request(url, {
