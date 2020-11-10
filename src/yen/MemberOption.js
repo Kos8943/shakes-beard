@@ -7,9 +7,13 @@ import MemberPreferenceSetting from "./components/MemberPreferenceSetting";
 import MemberFavorites from "./components/MemberFavorites";
 import CartOrderCheck from "../kos/components/CartOrderCheck";
 import ReservationOrderCheck from "../chen/components/ReservationOrderCheck";
+import { Router, Route, Link, Switch, Redirect } from "react-router-dom";
 
 function MemberOption(props) {
   const [pageTitle, setPageTitle] = useState("追蹤清單");
+  const { isAuth, setIsAuth } = props;
+
+  // if(isAuth===false) return <Redirect to="/signup" />
 
   return (
     <>
@@ -126,7 +130,7 @@ function MemberOption(props) {
                 src="./imgs/1-3.jpg"
                 className="PhoneIcon"
                 onClick={() => {
-                  setPageTitle("訂單查詢");
+                  setPageTitle("預約查詢");
                 }}
               ></img>
               <div
@@ -142,7 +146,6 @@ function MemberOption(props) {
             </div>
           </div>
 
-          
           <div className="decLine  d-lg-none"></div>
 
           {pageTitle === "資料修改" ? (

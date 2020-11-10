@@ -5,6 +5,10 @@ import twitter from "./img/twitter.svg";
 import google from "./img/google.svg";
 
 function LogIn(props) {
+  const { isAuth, setIsAuth } = props;
+  const [acc, setAcc] = useState("");
+  const [pass, setPass] = useState("");
+
   return (
     <>
       <div className="bagimg">
@@ -12,22 +16,60 @@ function LogIn(props) {
           <div className="loginCard">
             <div className="loginTittle">登入</div>
 
-            <div className="loginWeb">
+            <form
+              className="loginWeb"
+              method="POST"
+              name="memberForm"
+              onsubmit="return false;"
+              novalidate
+            >
               <div className="loginArea1">
-                <div className="logText">帳號</div>
-                <input className="loginInput" type="email"></input>
-                <div className="logText">密碼</div>
-                <input className="loginInput" type="password"></input>
-                <div className="logText2">忘記密碼</div>
-                <a href="">
-                  <button className="loginCheckButton loginMobile">登入</button>
-                </a>
+                <lable for="account" className="logText_ d-flex flex-column ">
+                  帳號 </lable>
+                  <input
+                    className="loginInput"
+                    name="account"
+                    type="text"
+                    id="account"
+                    value={acc}
+                    onChange={(e) => setAcc(e.target.value)}
+                    required
+                  ></input>
+               
+
+
+                <label for="password" className="logText_ d-flex flex-column">
+                  密碼</label>
+                  <input
+                    className="loginInput"
+                    name="password"
+                    type="password"
+                    id="password"
+                    value={pass}
+                    onChange={(e) => setPass(e.target.value)}
+                    required
+                  ></input>
+                
+
+                <div className="logText_2">忘記密碼</div>
+                <button
+                  type="submit"
+                  className="loginCheckButton loginMobile" >
+                  登入
+                </button>
               </div>
+
+
+
+
+
+
+
+
 
               <div className="loginArea2 ">
                 <div className="otherAccount">
                   <button className="otherLogButton facebook">
-                    {" "}
                     <div className="d-flex justify-content-around align-items-center">
                       <img src={facebook} className="lognIcon "></img>
                       使用Facebook登入<div></div>
@@ -48,26 +90,24 @@ function LogIn(props) {
                     </div>
                   </button>
 
-                  <button className="loginSingUpButton loginMobile">
+                  <button
+                    type="submit"
+                    className="loginSingUpButton loginMobile"
+                  >
                     註冊帳號
                   </button>
                 </div>
               </div>
-            </div>
+            </form>
 
             <div className="d-flex justify-content-around ">
-              <a href="">
-                <button className="loginCheckButton loginWebNone">登入</button>
-              </a>
-
-              <a href="">
-                <button className="loginSingUpButton loginWebNone">
-                  註冊帳號
-                </button>
-              </a>
+              <button type="submit" className="loginCheckButton loginWebNone">
+                登入
+              </button>
+              <button type="submit" className="loginSingUpButton loginWebNone">
+                註冊帳號
+              </button>
             </div>
-
-
 
             <div className="loginMobile"></div>
           </div>

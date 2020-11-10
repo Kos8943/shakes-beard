@@ -105,7 +105,7 @@ class Product extends React.Component {
                   刮鬍修容
                 </div></ScrollAnimation>
 				         {/* more的按鈕效果 */}
-                <a href=""
+                <a href="http://localhost:3001/project1"
                   className="ButtonA finished"
                   data-anime="fadeIn"
                   data-anime-trigger='.top-BrandTile[data-index="1"]'
