@@ -9,22 +9,32 @@ import "react-datepicker/dist/react-datepicker.css";
 // 參考：https://github.com/Hacker0x01/react-datepicker/#localization
 import { registerLocale, setDefaultLocale } from "react-datepicker";
 import { zhTW } from "date-fns/esm/locale";
+import { set } from "animejs";
 registerLocale("zh-TW", zhTW);
 
 function MemberDataUpdateTable(props) {
-  const [account, setAccount] = useState("");
+  // const { isAuth, setIsAuth,account, setAccount,password, setPassword ,authAccount,setAuthAccount,authPassword,setAuthPassword} = props;
+
+  const [authAccount,setAuthAccount]=useState('')
+  const [authPassword,setAuthPasswor]=useState('')
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
-  const [birth, setBirth] = useState("");
   const [phone, setPhone] = useState("");
+  const [birth, setBirth] = useState(new Date());
+  const [dirst, setDirst] = useState("");
+  const [city, setCity] = useState("");
   const [address, setAddress] = useState("");
-
-  const [startDate, setStartDate] = useState(new Date());
-
+  const [card, setCard] = useState("");
+  const [cardDate, setCardDate] = useState("");
+  const [cvc, setCvc] = useState("");
+  const [invoice, setInvoice] = useState("");
+  const [favorite, setFavorite] = useState("");
   
 
+
+  
   async function getFromServer() {
-    const url = "http://localhost:3000/try-mem";
+    const url = "http://localhost:3000/yen/try-mem";
     const request = new Request(url, {
       method: "GET",
       headers: new Headers({
@@ -38,12 +48,12 @@ function MemberDataUpdateTable(props) {
     console.log(memberData);
 
     //待判斷使用者為誰
-    setAccount(memberData[1].account);
-    setName(memberData[1].name);
-    setEmail(memberData[1].email);
-    setPhone(memberData[1].phone);
-    setAddress(memberData[1].address);
-    setName(memberData[1].name);
+    setAuthAccount(memberData[0].authAccount)
+    setName(memberData[0].name);
+    setEmail(memberData[0].email);
+    setBirth(memberData[0].birth);
+    setPhone(memberData[0].phone);
+    setAddress(memberData[0].address);
   }
   useEffect(() => {
     getFromServer();
@@ -60,8 +70,8 @@ function MemberDataUpdateTable(props) {
               type="text"
               disabled="disabled"
               className="updateInput"
-              name="account"
-              value={account}
+              name="authAccount"
+              value={authAccount}
             ></input>
             <div>姓名</div>
             <input
@@ -87,9 +97,9 @@ function MemberDataUpdateTable(props) {
             <DatePicker
               className="updateInput"
               dateFormat="yyyy-MM-dd"
-              selected={startDate}
+              selected={birth}
               locale="zh-TW"
-              onChange={(date) => setStartDate(date)}
+              onChange={(date) => setBirth(date)}
             />
 
             <div>手機</div>
