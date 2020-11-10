@@ -52,14 +52,14 @@ hr {
   margin-bottom: 1rem;
 } */
 
-abbr[title],
+/* abbr[title],
 abbr[data-original-title] {
   text-decoration: underline;
   -webkit-text-decoration: underline dotted;
   text-decoration: underline dotted;
   cursor: help;
   border-bottom: 0;
-}
+} */
 
 address {
   margin-bottom: 1rem;
@@ -130,10 +130,10 @@ a {
   -webkit-text-decoration-skip: objects;
 }
 
-a:hover {
+/* a:hover {
   color: #0056b3;
   text-decoration: underline;
-}
+} */
 
 a:not([href]):not([tabindex]) {
   color: inherit;
@@ -361,9 +361,9 @@ body {
   }
 }
 
-a {
+/* a {
   text-decoration: underline;
-}
+} */
 
 /* a:link, a:visited {
   color: #1c7ae3;
@@ -731,7 +731,7 @@ em {
 
 .ButtonA > span {
   position: relative;
-  z-index: 2;
+  /* z-index: 2; */
   width: 100%;
   height: 100%;
   display: flex;
@@ -859,7 +859,7 @@ a.ButtonA {
   font-size: 40px;
   line-height: 1;
   text-align: center;
-  z-index: 0;
+  /* z-index: 0; */
 }
 
 .PageTitle:before {
@@ -872,7 +872,7 @@ a.ButtonA {
   width: calc(50% + 50px);
   height: calc(100% + 99px);
   pointer-events: none;
-  z-index: -1;
+  /* z-index: -1; */
 }
 
 .PageTitle .en {
@@ -1087,7 +1087,7 @@ a.ButtonA {
   padding-top: 40px;
   padding-bottom: 40px;
   position: relative;
-  z-index: 2;
+  /* z-index: 2; */
   color: #595452;
 }
 
@@ -1381,7 +1381,7 @@ a.ButtonA {
 }
 
 .brand-BrandCardItems__card:before {
-  z-index: 2;
+  /* z-index: 2; */
   content: '';
   display: block;
   position: absolute;
@@ -1394,7 +1394,7 @@ a.ButtonA {
 }
 
 .brand-BrandCardItems__card:after {
-  z-index: 2;
+  /* z-index: 2; */
   content: '';
   display: block;
   position: absolute;
@@ -1533,7 +1533,7 @@ a.ButtonA {
   .brand-ProductItems__item {
     width: calc(25% - 49.5px);
     flex-shrink: 0;
-    margin-right: 66px;
+    /* margin-right: 66px; */
     margin-bottom: 30px;
   }
   .brand-ProductItems__item:nth-child(4n) {
@@ -1597,7 +1597,7 @@ a.ButtonA {
 }
 
 .brand-ProductItems__image:after {
-  z-index: 2;
+  /* z-index: 2; */
   content: '';
   display: block;
   position: absolute;
@@ -2083,7 +2083,7 @@ a.ButtonA {
 }
 
 .brand-SectionProductDetail__thums ._item:before {
-  z-index: 2;
+  /* z-index: 2; */
   content: '';
   display: block;
   position: absolute;
@@ -2096,7 +2096,7 @@ a.ButtonA {
 }
 
 .brand-SectionProductDetail__thums ._item:after {
-  z-index: 2;
+  /* z-index: 2; */
   content: '';
   display: block;
   position: absolute;
@@ -2485,7 +2485,7 @@ a.ButtonA {
  *  背景
  **************************/
 .top-BrandTile__bg {
-  z-index: 2;
+  /* z-index: 2; */
   position: absolute;
   top: 0;
   right: 53px;
@@ -2596,7 +2596,7 @@ a.ButtonA {
 
 @media screen and (max-width: 959px) {
   .top-BrandTile__photo {
-    z-index: 5;
+    /* z-index: 5; */
     position: relative;
     width: 100%;
     height: auto;
@@ -2619,7 +2619,7 @@ a.ButtonA {
  *  body
  **************************/
 .top-BrandTile__body { 
-  z-index: 0; 
+  /* z-index: 0;  */
   display: flex;
   align-items: center;
   justify-content: center;
@@ -2822,7 +2822,7 @@ a.ButtonA {
 }
 
 .top-MainVisual__sliderWrap {
-  z-index: 2;
+  /* z-index: 2; */
   position: absolute;
   top: 33px;
   right: 54px;
@@ -2951,7 +2951,7 @@ a.ButtonA {
 }
 
 .top-MainVisual__bg {
-  z-index: 1;
+  /* z-index: 1; */
   position: absolute;
   width: calc(100% - 142px);
   height: calc(100% - 280px);
@@ -2987,7 +2987,7 @@ a.ButtonA {
 }
 
 .top-MainVisual__title-sp {
-  z-index: 2;
+  /* z-index: 2; */
   position: absolute;
   display: flex;
   align-items: center;
@@ -3012,7 +3012,7 @@ a.ButtonA {
 
 .top-MainVisual__copy-sp {
   position: absolute;
-  z-index: 2;
+  /* z-index: 2; */
   bottom: 10px;
   left: calc(100% - 10px);
   font-size: 10px;
@@ -3030,7 +3030,7 @@ a.ButtonA {
 }
 
 .top-MainVisualCover {
-  z-index: 2;
+  /* z-index: 2; */
   position: absolute;
   width: 100%;
   height: 100%;
@@ -3077,7 +3077,7 @@ a.ButtonA {
 }
 
 .top-MainVisualCover__copy {
-  z-index: 3;
+  /* z-index: 3; */
   display: flex;
   align-items: center;
   justify-content: flex-start;
@@ -3155,9 +3155,9 @@ a.ButtonA {
   }
 }
 
-.top-MainVisualCover__navi {
-  z-index: 3;
-  position: absolute;
+/* .top-MainVisualCover__navi { */
+  /* z-index: 3; */
+  /* position: absolute;
   left: 80px;
   bottom: 70px;
 }
@@ -3212,7 +3212,7 @@ a.ButtonA {
   .top-MainVisualCover__navi {
     display: none;
   }
-}
+} */
 
 body #SvgSymbol {
   display: none;
@@ -4028,7 +4028,7 @@ body.is-color-beige .footer-Main .footer-Main__navi1 ul li span {
 
 .contactForm__nav .current {
   position: relative;
-  z-index: 2;
+  /* z-index: 2; */
   color: #fff;
 }
 
