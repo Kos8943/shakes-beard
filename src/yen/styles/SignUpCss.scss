@@ -7,9 +7,9 @@ html {
   background-image: url("../img/bg-img1.jpg");
   background-repeat: no-repeat;
   background-size: cover;
-  // border: 3px solid red;
+  // border: 1px solid red;
   background-origin: border-box;
-  padding: 1px;
+  padding: 0px;
 }
 
 .sbagimg2 {
@@ -20,7 +20,7 @@ html {
   padding-top: 10px;
   margin: -1px;
   // margin: -50px;
-  // border: 2px solid red;
+  border: 1px solid rgba(89, 84, 82, 0.66);
 }
 .signUpArea {
   width: 40vw;
@@ -51,7 +51,7 @@ html {
 }
 
 .signUpText{
-  font-size: 1.25rem;
+  font-size: 1.2rem;
   // margin-left: 17rem;
   margin-top: 8px;
   // border: 1px solid black;
@@ -115,7 +115,7 @@ html {
     height: 80vh;
     padding: 0 55px;
     margin:0vh auto;
-    border: 1px solid saddlebrown;
+    // border: 1px solid saddlebrown;
   }
   
 
@@ -141,7 +141,7 @@ html {
   }
 
   .singUpButton {
-    color: #000;
+    color: #fff;
     font-weight: normal;
     width: 15vw;
     height: 5vh;
