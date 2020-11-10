@@ -49,17 +49,14 @@ function App() {
 
       <>
 
-
-
-
         <main role="main">
           <ScrollUp showUnder={150}>
             <img src={TopArrow} class="scrolltotop d-lg-block d-none"></img>
           </ScrollUp>
+
           <Switch>
             <Route exact path="/">
               <HeroPage />
-
             </Route>
 
             <Route exact path="/homepage">
@@ -119,10 +116,7 @@ function App() {
             <Route path="/testAuth">
               <ShakesBeardNavbar isAuth={isAuth} setIsAuth={setIsAuth} />
               <TestAuth isAuth={isAuth} setIsAuth={setIsAuth} />
-             
             </Route>
-
-            
 
             <Route path="/signup">
               <ShakesBeardNavbar isAuth={isAuth} setIsAuth={setIsAuth}/>
@@ -200,14 +194,12 @@ function App() {
 
             <Route path="/shopdetail/:sid?">
               <ShakesBeardNavbar isAuth={isAuth} setIsAuth={setIsAuth}/>
-            <Route path="/shopdetail/:sid?">
               <ShakesBeardNavbar />
               <div className="footerFix">
                 <ShopDetail />
               </div>
               <MyFooter />
             </Route>
-
 
             <Route path="/preferencesetting">
               <ShakesBeardNavbar isAuth={isAuth} setIsAuth={setIsAuth}/>
@@ -225,8 +217,6 @@ function App() {
               <MyFooter />
             </Route>
 
-
-
             <Route path="/memberoption">
               <ShakesBeardNavbar isAuth={isAuth} setIsAuth={setIsAuth}/>
               <div className="memFooterFix ">
@@ -234,11 +224,6 @@ function App() {
               </div>
               <MyFooter />
             </Route>
-
-
-
-
-
 
 
             <Route path="/reservation">
@@ -276,8 +261,9 @@ function App() {
           </Switch>
         </main>
 
-      </></Router>
-  );
+      </>
+    </Router>
+  )
 }
 
 export default App;
