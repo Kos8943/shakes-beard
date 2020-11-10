@@ -52,9 +52,8 @@ function MemberDataUpdateTable(props) {
       <div className="rightArea col-12 col-sm-10 col-md-8 justify-content-around">
         <div className="optionTittle webObj">{props.title}</div>
         <div className="decLine webObj"></div>
-        <div className="updateArea">
           <form className="dataForm">
-            <h5>會員帳號</h5>
+            <div>會員帳號</div>
             <input
               type="text"
               disabled="disabled"
@@ -62,7 +61,7 @@ function MemberDataUpdateTable(props) {
               name="account"
               value={account}
             ></input>
-            <h5>姓名</h5>
+            <div>姓名</div>
             <input
               type="text"
               className="updateInput"
@@ -72,7 +71,7 @@ function MemberDataUpdateTable(props) {
                 setName(e.target.value);
               }}
             ></input>
-            <h5>信箱</h5>
+            <div>信箱</div>
             <input
               type="text"
               className="updateInput"
@@ -112,13 +111,12 @@ function MemberDataUpdateTable(props) {
                 setAddress(e.target.value);
               }}
             ></input>
-            <div className="btnDir">
+            <div className="upbtnDir">
               <button className="upDateCancle">取消</button>
               <button className="upDateCheck">完成</button>
             </div>
           </form>
         </div>
-      </div>
       {/* <div>{name}</div>
         <div>{phone}</div> */}
       {/* 測試用 */}

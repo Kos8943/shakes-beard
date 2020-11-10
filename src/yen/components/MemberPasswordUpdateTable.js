@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import PasswordUpdate from "../styles/PasswordUpdate.scss";
 
 function MemberPasswordUpdateTable(props) {
   const [pass, setPass] = useState();
@@ -24,15 +25,15 @@ function MemberPasswordUpdateTable(props) {
 
   return (
     <>
-      <div className="rightArea col-sm-9 col-12">
+       <div className="rightArea col-12 col-sm-10 col-md-8 justify-content-around">
         <div className="optionTittle webObj">{props.title}</div>
         <div className="decLine webObj"></div>
-        <form className="updateArea" method="POST" onSubmit="return false">
+        <form method="POST" className="passForm" onSubmit="return false">
           <div>
             <div>舊密碼</div>
             <input
               type="text"
-              className="updateInput"
+              className="passInput"
               name="password"
               value={pass}
               onChange={(e)=>{
@@ -42,7 +43,7 @@ function MemberPasswordUpdateTable(props) {
             <div>新密碼</div>
             <input
               type="password"
-              className="updateInput"
+              className="passInput"
               name="newPassword"
               value={newPassword}
               onChange={(e)=>{
@@ -52,7 +53,7 @@ function MemberPasswordUpdateTable(props) {
             <div>再次確認密碼</div>
             <input
               type="password"
-              className="updateInput"
+              className="passInput"
               name="newPasswordCheck"
               value={newPasswordCheck}
               onChange={(e)=>{
@@ -60,9 +61,9 @@ function MemberPasswordUpdateTable(props) {
               }}
             ></input>
           </div>
-          <div className="btnCenter justify-content-end">
-          <button type="submit" className="memberCancle">取消</button>
-          <button type="submit" className="memberCheck">完成</button>
+          <div className="passbtnDir">
+          <button type="submit" className="passCancle">取消</button>
+          <button type="submit" className="passCheck">完成</button>
           </div>
         </form>
       </div>
