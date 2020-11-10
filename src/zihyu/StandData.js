@@ -1,4 +1,4 @@
-import img_Stand01 from './image/Stand01.jpg';
+import img_Stand001 from './image/Stand001.jpg';
 import img_Stand02 from './image/Stand02.jpg';
 import img_Stand03 from './image/Stand03.jpg';
 import img_Stand04 from './image/Stand04.jpg';
@@ -9,7 +9,7 @@ global.StandData = [
     {
       Name: '曜石修容架',
       Price: 880,
-      Image: img_Stand01
+      Image: img_Stand001
     },
     {
       Name: '紳士修容架',
