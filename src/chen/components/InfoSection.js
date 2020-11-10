@@ -4,11 +4,12 @@ import { withRouter,Link } from 'react-router-dom'
 
 function InfoSection(props) {
   console.log('InfoSection', props)
-  const shopid = props.match.params.shopid
+  const sid = props.match.params.sid
   console.log('props.match.params',props.match.params)
-  console.log('shopid',shopid)
+  console.log('sid',sid)
 
   const [shopName, setShopName] = useState('')
+  const [shopid, setShopId] = useState('')
   const [shopTag, setShopTag] = useState('')
   const [shopPlace, setShopPlace] = useState('')
   const [shopAddr, setShopAddr] = useState('')
@@ -16,9 +17,10 @@ function InfoSection(props) {
   const [dataIsExist, setDataIsExist] = useState(true)
 
   async function getShopFromServer(){
-    console.log('getShopFromServer',shopid)
+    console.log('getShopFromServer',sid)
     // json-db
-    const url = 'http://localhost:3000/shop/'+ shopid
+    // const url = 'http://localhost:3000/try-shop/'+ shopid
+    const url = 'http://localhost:3000/try-shop'
     console.log("url",url)
 
     const request = new Request(url, {
@@ -33,18 +35,23 @@ function InfoSection(props) {
     const data = await response.json()
     console.log('response',response)
     console.log("data",data)
+    
+    const i = [sid]-1
+    console.log("[sid]-1",i)
+    console.log("data[i]",data[i])// index 改sid?
 
-    if(!data.id){
+    if(!data[i].sid){
       setDataIsExist(false)
-      console.log('no data.id')
+      console.log('no data[i].sid')
       return
     }
 
-    setShopName(data.name)
-    setShopTag(data.tag)
-    setShopPlace(data.place)
-    setShopAddr(data.address)
-    setShopIntro(data.intro)
+    setShopName(data[i].shop_name)
+    setShopId(data[i].shop_id)
+    setShopTag(data[i].shop_cate_tag)
+    setShopPlace(data[i].shop_place_tag)
+    setShopAddr(data[i].shop_address)
+    setShopIntro(data[i].shop_intro)
   }
 
   useEffect(()=>{
@@ -93,13 +100,13 @@ function InfoSection(props) {
       <p>商家簡介:<br/>
         <span>{shopIntro}</span>
       </p>
-      <p>提供服務:
-      <div className="d-flex">
+      <div>提供服務:
+      <p className="d-flex">
           <Badge pill variant="secondary" className="mr-1">理髮</Badge>
           <Badge pill variant="secondary" className="mr-1">修護</Badge>
           <Badge pill variant="secondary" className="mr-1">造型</Badge>
-      </div>
       </p>
+      </div>
     </div>
   </>)
 
