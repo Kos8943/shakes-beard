@@ -1,120 +1,129 @@
-import React,{Component} from "react";
+import React, { Component } from "react";
 import "../chad/styles/custom.scss";
 import bannerimg1 from "./imgs/輪播圖1.jpg";
 import bannerimg2 from "./imgs/輪播圖2.jpg";
 import bannerimg3 from "./imgs/輪播圖3.jpg";
-import bannerimg4 from "./imgs/輪播圖4.jpg";
 import { Button, Carousel, Card } from "react-bootstrap";
 import giftimg from "./imgs/禮物盒.jpg";
 import hotpage from "./imgs/熱銷.jpg";
-import map1 from "./imgs/map1.jpg";
 import map2 from "./imgs/map2.jpg";
 import map3 from "./imgs/map3.jpg";
 import HotProduct from "./components/HotProduct";
-import { Link } from 'react-router-dom';
-
-
+import all1 from "./imgs/all1.png";
+import all2 from "./imgs/all2.png";
 
 //animation
 import "animate.css/animate.min.css";
 import ScrollAnimation from "react-animate-on-scroll";
-import Plx from 'react-plx';
+import Plx from "react-plx";
 
 const parallaxData = [
-    {
-      start:0,
-      end: 1000,
-      duration: 600,
-      properties: [
-        {
-          startValue: 0.5,
-          endValue: 1,
-          property: 'scale',
-        },
-      ],
-    },
-  ];
-  const parallaxData2 = [
-    {
-      start:0,
-      end: 1000,
-      duration: 900,
-      properties: [
-        {
-          startValue: 0.2,
-          endValue: 1,
-          property: 'scale',
-        },
-      ],
-    },
-  ];
-  const parallaxDataBtn = [
-    {
-      start:0,
-      end: 1000,
-      duration: 900,
-      properties: [
-        {
-          startValue: 500,
-          endValue: 0,
-          property: 'translateX',
-        },
-      ],
-    },
-  ];
-  const parallaxDataBtn2 = [
-    {
-      start:0,
-      end: 2400,
-      duration: 2200,
-      properties: [
-        {
-          startValue: 500,
-          endValue: 0,
-          property: 'translateX',
-        },
-      ],
-    },
-  ];
-  const parallaxData3 = [
-    {
-      start:0,
-      end: 2400,
-      duration: 2200,
-      properties: [
-        {
-          startValue: 0.2,
-          endValue: 1,
-          property: 'scale',
-        },
-      ],
-    },
-  ];
-  const parallaxData4 = [
-    {
-      start:0,
-      end: 2400,
-      duration: 2200,
-      properties: [
-        {
-          startValue: 500,
-          endValue: -120,
-          property: 'translateX',
-        },
-      ],
-    },
-  ];
+  {
+    start: 0,
+    end: 1000,
+    duration: 600,
+    properties: [
+      {
+        startValue: 0.5,
+        endValue: 1,
+        property: "scale",
+      },
+    ],
+  },
+];
+const parallaxData2 = [
+  {
+    start: 0,
+    end: 1000,
+    duration: 900,
+    properties: [
+      {
+        startValue: 0.2,
+        endValue: 1,
+        property: "scale",
+      },
+    ],
+  },
+];
+const parallaxDataBtn = [
+  {
+    start: 0,
+    end: 1000,
+    duration: 900,
+    properties: [
+      {
+        startValue: 500,
+        endValue: 0,
+        property: "translateX",
+      },
+    ],
+  },
+];
+const parallaxDataBtn2 = [
+  {
+    start: 0,
+    end: 2400,
+    duration: 2200,
+    properties: [
+      {
+        startValue: 500,
+        endValue: 0,
+        property: "translateX",
+      },
+    ],
+  },
+];
+const parallaxData3 = [
+  {
+    start: 0,
+    end: 2400,
+    duration: 2200,
+    properties: [
+      {
+        startValue: 0.2,
+        endValue: 1,
+        property: "scale",
+      },
+    ],
+  },
+];
+const parallaxData4 = [
+  {
+    start: 0,
+    end: 2600,
+    duration: 2500,
+    properties: [
+      {
+        startValue: 500,
+        endValue: -120,
+        property: "translateX",
+      },
+    ],
+  },
+];
+const parallaxDataAll = [
+  {
+    start: 2400,
+    end: 2700,
+    duration: 3000,
+    properties: [
+      {
+        startValue:-200,
+        endValue: 720,
+        property: "translateX",
+      },
+    ],
+  },
+];
 
 class HomePage extends React.Component {
-
   render() {
-   
     return (
       <>
         <body className="body">
           {/* 輪播牆 */}
           <div className="carosel-div">
-            <Carousel>
+            <Carousel id="caroselText">
               <Carousel.Item>
                 <img
                   className="d-block w-100 h-100"
@@ -150,18 +159,6 @@ class HomePage extends React.Component {
                   <p>用精緻的配件展現您的個人氣質。</p>
                 </Carousel.Caption>
               </Carousel.Item>
-              {/* <Carousel.Item>
-                <img
-                    className="d-block w-100 h-100"
-                    src={bannerimg4}
-                    alt="Third slide"
-                />
-
-<Carousel.Caption>
-      <h3>First slide label</h3>
-      <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
-    </Carousel.Caption>   
-        </Carousel.Item> */}
             </Carousel>
           </div>
 
@@ -185,64 +182,73 @@ class HomePage extends React.Component {
           </ScrollAnimation>
 
           {/* 禮物盒 */}
-          
+
           <div className="gift-area d-flex justify-content-center">
-          
-          <Plx className="gift-img" parallaxData={parallaxData2}>
-            <img className="gift-img" src={giftimg} />
+            <Plx className="gift-img" parallaxData={parallaxData2}>
+              <img className="gift-img" src={giftimg} />
             </Plx>
             <img className="gift-img1" src={giftimg} />
             <Plx className="gift-text-area" parallaxData={parallaxData}>
-            
               <h2 className="gift-title py-3">訂製專屬禮盒</h2>
               <p className="gift-text">
                 您可以在網頁上設計專屬的禮物盒，即時預覽您的設計，達成最佳的客製化送禮服務。
               </p>
-            
             </Plx>
             <div className="gift-text-area1">
-            
               <h2 className="gift-title py-3">訂製專屬禮盒</h2>
               <p className="gift-text">
                 您可以在網頁上設計專屬的禮物盒，即時預覽您的設計，達成最佳的客製化送禮服務。
               </p>
-            
             </div>
-           
-            <Link to="Path_GiftBox">
-            <Plx  type="button" className="giftBtn" parallaxData={parallaxDataBtn}>開始製作</Plx>
-            </Link>
-          
-            <Link to="Path_GiftBox">
-            <button className="giftBtn1">開始製作</button>
-            </Link>
-           
+
+            <a href="Path_GiftBox">
+              <Plx
+                type="button"
+                className="giftBtn"
+                parallaxData={parallaxDataBtn}
+              >
+                開始製作
+              </Plx>
+            </a>
+
+            <a href="Path_GiftBox">
+              <button className="giftBtn1">開始製作</button>
+            </a>
           </div>
-         
+
           {/* 熱門商品*/}
 
           <HotProduct />
           {/* 所有系列 */}
 
           <div className="gift-area">
-          <Plx className="top-img my-3" parallaxData={parallaxData3}>
-            <img className="top-img my-3" src={hotpage} />
+            <Plx className="top-img my-3" parallaxData={parallaxData3}>
+              <img className="top-img my-3" src={all1} />
             </Plx>
             <img className="top-img1 my-3" src={hotpage} />
             <Plx className="top-text" parallaxData={parallaxData4}>
-            <p className="top-text">
-              用我們獨有的工藝技術，為不甘平凡的您，點綴出更獨特的風格。
-            </p>
+              <p className="top-text">
+                用我們獨有的工藝技術，為不甘平凡的您，點綴出更獨特的風格。
+              </p>
             </Plx>
             <p className="top-text1">
               用我們獨有的工藝技術，為不甘平凡的您，點綴出更獨特的風格。
             </p>
-            <Link to="/product">
-            <Plx  type="button" className="chad-topBtn" parallaxData={parallaxDataBtn2}>所有系列</Plx>
-            </Link>
-            <Link to="/product">
-            <button className="chad-topBtn1">所有系列</button>
-            </Link>
+            <a href="/product">
+              <Plx
+                type="button"
+                className="chad-topBtn"
+                parallaxData={parallaxDataBtn2}
+              >
+                所有系列
+              </Plx>
+            </a>
+            <a href="/product">
+              <button className="chad-topBtn1">所有系列</button>
+            </a>
+            <Plx className="allimg2" parallaxData={parallaxDataAll}>
+              <img className="allimg2" src={all2} />
+            </Plx>
           </div>
 
           {/* 地圖 */}
@@ -275,11 +281,11 @@ class HomePage extends React.Component {
                 <p className="map-down-text">
                   我們為您挑選了優質的店家，提供最高品質的服務，讓您煥然一新。{" "}
                 </p>
-                <Link to="/ShopList">
-                <Button variant="primary" id="mapBtn">
-                  立即預約
-                </Button>
-                </Link>
+                <a href="/ShopList">
+                  <Button variant="primary" id="mapBtn">
+                    立即預約
+                  </Button>
+                </a>
               </ScrollAnimation>
             </div>
             <ScrollAnimation
