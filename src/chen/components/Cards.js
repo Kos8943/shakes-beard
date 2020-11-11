@@ -14,7 +14,7 @@ import shop08 from "../img/1-ST008.jpg";
 
 function Cards(props) {
   console.log('Cards', props)
-  const[heart, setHeart] = useState();
+  const[heart, setHeart] = useState("dislike");
   const [shops, setShops] = useState([])
   
   async function getShopsFromServer(){
@@ -64,10 +64,9 @@ function Cards(props) {
             <Badge pill variant="secondary" className="mr-1">
               {value.shop_place_tag}
             </Badge>
-            <Link className="addlike" to="">
-              {/* <FaHeart className="like"/> */}
-              <FaRegHeart className="dislike"/>
-            </Link>
+            {/* <FaRegHeart className="like"/>*/}
+            {/* <FaRegHeart className="dislike" onClick={()=>console.log('hi')}/> */}
+            <FaHeart className={heart} onClick={()=>setHeart("like")}/>
           </h6>
           <h5 className="card-title mb-1" className="mr-1">
             {value.shop_name}
