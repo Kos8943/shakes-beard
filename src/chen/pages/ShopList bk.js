@@ -5,6 +5,7 @@ import Pagination from '../components/Pagination'
 import CatesAside from '../components/CatesAside'
 import Cards from '../components/Cards'
 import Cates from '../components/Cates'
+import Banner from '../components/Banner'
 import '../styles/shops.scss' 
 
 function ShopList(props) {
@@ -15,16 +16,17 @@ function ShopList(props) {
       <Breadcrumb />
       <div className="shops container">
         <div className="row">
-          {/* <div className="col-12 col-sm-12 col-md-3 col-lg-2">
+          <div className="col-12 col-sm-12 col-md-3 col-lg-2">
             <CatesAside />
           </div>
-          <div className="col-12 col-sm-12 col-md-9 col-lg-10"> */}
+          <div className="col-12 col-sm-12 col-md-9 col-lg-10">
+            {/* <Banner /> */}
             <Cates />
             <div className="cardGroup">
               <Cards />
             </div>
           <Pagination />
-          {/* </div> */}
+          </div>
         </div>
       </div>
       {/* <div id="stop" className="helpdesk">

@@ -9,9 +9,9 @@ function Breadcrumb(props) {
   let path = ''
   const pathname = props.location.pathname
 
+  // '預約商家 / 商家列表'
   switch (pathname) {
     case '/ShopList':
-      // path = '預約商家 / 商家列表'
       path = '商家列表'
       break
     case '/shoplist':
@@ -20,9 +20,6 @@ function Breadcrumb(props) {
     case '/shopdetail/':
       path = '商家頁面'
       break
-    // case '/reservation':
-    //   path = '預約服務'
-    //   break
     case '/map':
       path = '商家地圖'
       break
