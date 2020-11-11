@@ -40,7 +40,7 @@ function Pagination(props) {
   const display=(<>
     <nav aria-label="Page navigation example" className="page">
       <ul className="pagination justify-content-center">
-        <li className={`page-item ${currentPage===1?'disabled':''}`} onClick={()=>setCurrentPage(currentPage-1)}>
+        <li className={`page-item ${currentPage<=1?'disabled':''}`} onClick={()=>setCurrentPage(currentPage-1)}>
           <Link
             className="page-link"
             to="#"
@@ -76,7 +76,7 @@ function Pagination(props) {
             5
           </Link>
         </li>
-        <li className={`page-item ${currentPage===totalPage?'disabled':''}`} onClick={()=>setCurrentPage(currentPage+1)}>
+        <li className={`page-item ${currentPage>=totalPage?'disabled':''}`} onClick={()=>setCurrentPage(currentPage+1)}>
           <Link className="page-link" to="#">
             下一頁
           </Link>
