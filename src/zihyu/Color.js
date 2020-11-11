@@ -2,49 +2,42 @@ import React from 'react'
 import './Style/ColorCSS.css';
 import './Style/CommonCSS.css';
 import img_box from './image/box.png';
-import imgbox1 from './image/box1.png';
-import imgbox2 from './image/box2.png';
-import imgbox3 from './image/box3.png';
+import imgGiftBox_1 from './image/box1.png';
+import imgGiftBox_2 from './image/box2.png';
+import imgGiftBox_3 from './image/box3.png';
+import imgGiftBox_4 from './image/box4.png';
+import imgGiftBox_5 from './image/box5.png';
+
 
 import { Button } from 'react-bootstrap'
 
-// constructor();
-//   super()
+let queryString = window.location.search;
+const urlParams = new URLSearchParams(queryString);
+const SelectRange = urlParams.get('SelectRange');             //第一頁選擇的參數   //上一頁選擇的參數
+const SelectRazorIndex = urlParams.get('SelectRazorIndex');
+const SelectBrushIndex = urlParams.get('SelectBrushIndex');
+const SelectStandIndex = urlParams.get('SelectStandIndex');
 
-//   this.onClickChange = this.onClickChange.bind(this)
-
-//   const imgbox1 = require("./image/box1.png");
-//   const imgbox2 = require("./image/box2.png");
-//   const imgbox3 = require("./image/box3.png");
-
-//   this.state = {
-//     index: 0,
-//     imgList: [img_box1, img_box2, img_box3]
-//   }
-
-// onClickChange() ;
-//     if (this.state.index +1 === this.state.imgList.length)
-//     this.setState({
-//       index: 0
-//     })
-//     else{
-//       this.setState({
-//         index: this.state.index + 1
-//       })
-//     }
+let SelectColorIndex = "-1";
 
 class Class_Color extends React.Component
-
-
 {
+
+  state = {
+    text: ""
+  };
+  onChangeText = e => {
+    this.setState({
+      text: e.target.value
+    });
+  };
+
+
   render()
   {
+    const { text } = this.state;
     return (
       <>
-      {/* <div>
-        <img src={this.state.imgList[this.state.index]} alt="" />
-        <button onClick={this.onClickChange}></button>
-      </div> */}
       <div className="contain">
         <div className="background_white">
       
@@ -56,14 +49,22 @@ class Class_Color extends React.Component
 
                   <div><img className="color_boxImg" id="change_boxColor" src={img_box} /></div>
                   <div className="color_button">
-                    <button className="change color_button1"></button>
+                    <button className="change color_button1" onClick=
+                    {   
+                      () =>
+                      {
+                        SelectColorIndex = "0";
+                        var targetDiv = document.getElementById("change_boxColor");
+                        targetDiv.setAttribute("src", imgGiftBox_1);
+                      }
+                    }></button>
                     <button className="change color_button2"></button>
                     <button className="change color_button3"></button>
                     <button className="change color_button4"></button>
                     <button className="change color_button5"></button>
                   </div>
                   <div className="message_title">留言小卡內容：</div>
-                  <input className="message"></input>
+                  <input type="text" className="message" value={text} onChange={this.onChangeText} />
 
                   <div style={{margin: "19px auto"}}>
                       <Button className="separate backButton" onClick=
@@ -80,10 +81,23 @@ class Class_Color extends React.Component
                       {     //React程式區間語法 (開始)
                         () =>
                         {
-                          window.open("/Path_Finish", '_self');
-                        }
-                      }     //React程式區間語法 (結束)
-                    
+                          if (SelectBrushIndex == "-1")
+                          {
+                            alert("請選擇一樣商品");
+                          }
+                          else
+                          {
+
+                            window.open("/Path_Finish?SelectRange=" + SelectRange +
+                                                    "&SelectRazorIndex=" + SelectRazorIndex +
+                                                    "&SelectBrushIndex=" + SelectBrushIndex +
+                                                    "&SelectStandIndex=" + SelectStandIndex +
+                                                    "&SelectColorIndex=" + SelectColorIndex +
+                                                    "&Text=" + text,
+                                                    '_self');
+                          }
+                        }     //React程式區間語法 (結束)
+                      }
                     > 完成 </Button>
                   
                   </div>

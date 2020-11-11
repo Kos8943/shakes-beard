@@ -13,7 +13,7 @@ const urlParams = new URLSearchParams(queryString);
 const SelectRange = urlParams.get('SelectRange');   //上一頁選擇的參數
 console.log(SelectRange);
 
-let SelectRazorIndex = "0";
+let SelectRazorIndex = "-1";
 
 class Class_ChooseRazor extends React.Component
 {
@@ -136,7 +136,14 @@ class Class_ChooseRazor extends React.Component
                   {     //React程式區間語法 (開始)
                     () =>
                     {
-                      window.open("/Path_ChooseBrush?SelectRange=" + SelectRange + "&SelectRazorIndex=" + SelectRazorIndex, '_self');
+                      if (SelectRazorIndex == "-1")
+                      {
+                        alert("請選擇一樣商品");
+                      }
+                      else
+                      {
+                        window.open("/Path_ChooseBrush?SelectRange=" + SelectRange + "&SelectRazorIndex=" + SelectRazorIndex, '_self');
+                      }
                     }
                   }     //React程式區間語法 (結束)
                   

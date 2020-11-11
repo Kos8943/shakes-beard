@@ -9,9 +9,11 @@ const Data = global.StandData;
 let queryString = window.location.search;
 const urlParams = new URLSearchParams(queryString);
 const SelectRange = urlParams.get('SelectRange');             //第一頁選擇的參數   //上一頁選擇的參數
-console.log(SelectRange);
+const SelectRazorIndex = urlParams.get('SelectRazorIndex');
+const SelectBrushIndex = urlParams.get('SelectBrushIndex');
 
-let SelectStandIndex = "0";
+
+let SelectStandIndex = "-1";
 
 class Class_ChooseStand extends React.Component
 {
@@ -115,7 +117,17 @@ class Class_ChooseStand extends React.Component
                     {     //React程式區間語法 (開始)
                       () =>
                       {
-                        window.open("/Path_Color", '_self');
+                        if (SelectStandIndex == "-1")
+                        {
+                          alert("請選擇一樣商品");
+                        }
+                        else
+                        {
+                          //SelectRange 代入範圍
+                          //SelectRazorIndex 代入範圍
+
+                          window.open("/Path_Color?SelectRange=" + SelectRange + "&SelectRazorIndex=" + SelectRazorIndex + "&SelectBrushIndex=" + SelectBrushIndex + "&SelectStandIndex=" + SelectStandIndex , '_self');
+                        }
                       }
                     }     //React程式區間語法 (結束)
                     
