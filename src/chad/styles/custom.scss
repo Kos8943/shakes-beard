@@ -391,8 +391,14 @@ body > .bounceInLeft {
   }
 }
 
-//熱銷
-
+//所有商品
+.allimg2{
+  position: absolute;
+  bottom: 45px;
+  right: 720px;
+  width: 400px;
+  height: 400px;
+}
 .top-text {
   word-break: keep-all;
   font-size: 1.4rem;
