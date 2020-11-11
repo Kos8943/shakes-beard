@@ -2,13 +2,36 @@ import React from 'react'
 import './Style/ColorCSS.css';
 import './Style/CommonCSS.css';
 import img_box from './image/box.png';
-import img_box1 from './image/box1.png';
-import img_box2 from './image/box2.png';
-import img_box3 from './image/box3.png';
-import img_box4 from './image/box4.png';
-import img_box5 from './image/box5.png';
+import imgbox1 from './image/box1.png';
+import imgbox2 from './image/box2.png';
+import imgbox3 from './image/box3.png';
 
 import { Button } from 'react-bootstrap'
+
+// constructor();
+//   super()
+
+//   this.onClickChange = this.onClickChange.bind(this)
+
+//   const imgbox1 = require("./image/box1.png");
+//   const imgbox2 = require("./image/box2.png");
+//   const imgbox3 = require("./image/box3.png");
+
+//   this.state = {
+//     index: 0,
+//     imgList: [img_box1, img_box2, img_box3]
+//   }
+
+// onClickChange() ;
+//     if (this.state.index +1 === this.state.imgList.length)
+//     this.setState({
+//       index: 0
+//     })
+//     else{
+//       this.setState({
+//         index: this.state.index + 1
+//       })
+//     }
 
 class Class_Color extends React.Component
 
@@ -18,6 +41,10 @@ class Class_Color extends React.Component
   {
     return (
       <>
+      {/* <div>
+        <img src={this.state.imgList[this.state.index]} alt="" />
+        <button onClick={this.onClickChange}></button>
+      </div> */}
       <div className="contain">
         <div className="background_white">
       
