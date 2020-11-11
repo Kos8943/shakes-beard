@@ -103,9 +103,9 @@ const parallaxData4 = [
 ];
 const parallaxDataAll = [
   {
-    start: 1800,
-    end: 2600,
-    duration: 2600,
+    start: 2400,
+    end: 2700,
+    duration: 3000,
     properties: [
       {
         startValue:-200,

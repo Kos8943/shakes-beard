@@ -13,11 +13,17 @@ import {
   Form,
   FormControl,
 } from "react-bootstrap";
-import { NavLink,Router, Route, Link, Switch, Redirect } from "react-router-dom";
+import {
+  NavLink,
+  Router,
+  Route,
+  Link,
+  Switch,
+  Redirect,
+} from "react-router-dom";
 
 function ShakesBeardNavbar(props) {
   const { isAuth, setIsAuth } = props;
-  
 
   return (
     <>
@@ -26,38 +32,29 @@ function ShakesBeardNavbar(props) {
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
           <Navbar.Collapse id="basic-navbar-nav">
             <Nav className="navbarFlex d-flex justify-content-between">
-              <Nav.Link
-                as={NavLink}
-                to="/homepage"
-                href="#home"
-                className="navBarFontSize"
-              >
+              <a href="/homepage" className="navBarFontSize">
                 首頁
-              </Nav.Link>
-              <Nav.Link as={NavLink} to="/product" className="navBarFontSize">
+              </a>
+              <a href="/product" className="navBarFontSize">
                 產品列表
-              </Nav.Link>
-              <Nav.Link href="Path_GiftBox" className="navBarFontSize">
+              </a>
+              <a href="Path_GiftBox" className="navBarFontSize">
                 客製化禮盒
-              </Nav.Link>
-              <Navbar.Brand href="#home" className="logoFont">
+              </a>
+              <Navbar.Brand href="/homepage" className="logoFont">
                 logo
               </Navbar.Brand>
 
-              <Nav.Link as={NavLink} to="/homepage">
+              <a  href="/homepage">
                 <img src={Logo} className="logo"></img>
-              </Nav.Link>
+              </a>
 
-              <Nav.Link href="ShopList" className="navBarFontSize">
+              <a href="/ShopList" className="navBarFontSize">
                 商家預約
-              </Nav.Link>
-              <Nav.Link
-                as={NavLink}
-                to="/memberoption"
-                className="navBarFontSize"
-              >
+              </a>
+              <a href="/memberoption" className="navBarFontSize">
                 我的帳戶
-              </Nav.Link>
+              </a>
               <div className="loginCartArea d-flex">
                 {/* <div className="loginCartArea"> */}
                 {/* <button className="loginBtn" href="lognin">登入</button>
