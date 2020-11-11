@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import "../style/Project1.css";
 import Sid from "../../Sid";
 import Script from "react-load-script";
-// import "./Css";
+import Pagination from "../component/Pagination";
 import "animate.css";
 import anime from "react-anime";
 import ReactCSSTransitionGroup from "react-addons-css-transition-group";
@@ -169,6 +169,7 @@ function Project1(props) {
                 </div>
           </div>
         </section>
+        <Pagination />
       </div>
     </>
   );
