@@ -66,7 +66,13 @@ function Cards(props) {
             </Badge>
             {/* <FaRegHeart className="like"/>*/}
             {/* <FaRegHeart className="dislike" onClick={()=>console.log('hi')}/> */}
-            <FaHeart className={heart} onClick={()=>setHeart("like")}/>
+            <FaHeart
+              className={heart}
+              onClick={
+                ()=>{
+                  if(heart==="like"){setHeart("dislike")}
+                  else{setHeart("like")}
+                  }}/>
           </h6>
           <h5 className="card-title mb-1" className="mr-1">
             {value.shop_name}
