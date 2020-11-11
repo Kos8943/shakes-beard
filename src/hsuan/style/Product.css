@@ -123,12 +123,12 @@ sup {
   top: -.5em;
 }
 
-a {
+/* a {
   color: #007bff;
   text-decoration: none;
   background-color: transparent;
   -webkit-text-decoration-skip: objects;
-}
+} */
 
 /* a:hover {
   color: #0056b3;
@@ -369,10 +369,10 @@ body {
   color: #1c7ae3;
 } */
 
-a:hover, a:active {
+/* a:hover, a:active {
   text-decoration: none;
   color: #77afee;
-}
+} */
 
 ul, li {
   list-style: none;
@@ -2330,14 +2330,14 @@ a.ButtonA {
 }
 
 .brand-SectionProductDetail__info ._col._col--2 {
-  font-size: 13px;
+  font-size: 16px;
   line-height: 20px;
   font-feature-settings: "palt";
   letter-spacing: 0.1em;
 }
 
 .brand-SectionProductDetail__info ._tax {
-  font-size: 11px;
+  font-size: 16px;
 }
 
 @media screen and (max-width: 559px) {

@@ -114,7 +114,7 @@ class HomePage extends React.Component {
         <body className="body">
           {/* 輪播牆 */}
           <div className="carosel-div">
-            <Carousel>
+            <Carousel id="caroselText">
               <Carousel.Item>
                 <img
                   className="d-block w-100 h-100"
@@ -209,13 +209,13 @@ class HomePage extends React.Component {
             
             </div>
            
-            <Link to="Path_GiftBox">
+            <a href="Path_GiftBox">
             <Plx  type="button" className="giftBtn" parallaxData={parallaxDataBtn}>開始製作</Plx>
-            </Link>
+            </a>
           
-            <Link to="Path_GiftBox">
+            <a href="Path_GiftBox">
             <button className="giftBtn1">開始製作</button>
-            </Link>
+            </a>
            
           </div>
          
@@ -237,12 +237,12 @@ class HomePage extends React.Component {
             <p className="top-text1">
               用我們獨有的工藝技術，為不甘平凡的您，點綴出更獨特的風格。
             </p>
-            <Link to="/product">
+            <a href="/product">
             <Plx  type="button" className="chad-topBtn" parallaxData={parallaxDataBtn2}>所有系列</Plx>
-            </Link>
-            <Link to="/product">
+            </a>
+            <a href="/product">
             <button className="chad-topBtn1">所有系列</button>
-            </Link>
+            </a>
           </div>
 
           {/* 地圖 */}
@@ -275,11 +275,11 @@ class HomePage extends React.Component {
                 <p className="map-down-text">
                   我們為您挑選了優質的店家，提供最高品質的服務，讓您煥然一新。{" "}
                 </p>
-                <Link to="/ShopList">
+                <a href="/ShopList">
                 <Button variant="primary" id="mapBtn">
                   立即預約
                 </Button>
-                </Link>
+                </a>
               </ScrollAnimation>
             </div>
             <ScrollAnimation

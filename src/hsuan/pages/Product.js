@@ -33,9 +33,11 @@ class Product extends React.Component {
   return (
    
    <>
-   
+   <script>
+  AOS.init();
+</script>
 	<link rel="stylesheet" href="http://cdn.bootcss.com/animate.css/3.5.1/animate.min.css"></link>
-     
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script> 
       <ReactCSSTransitionGroup />
       
       <Sid />
@@ -89,7 +91,7 @@ class Product extends React.Component {
               data-anime-trigger='.top-BrandTile[data-index="1"]'
               data-anime-delay="0"></div> */}
          
-            <div className="top-BrandTile__photo finished "  >
+            <div className="top-BrandTile__photo finished " data-aos="fade-right" >
                <div className="_inner" >
                <img src={require("../icon/24K.png")}
                   className="card-img-top" 
@@ -129,13 +131,11 @@ class Product extends React.Component {
             ></div> */}
             <div
               className="top-BrandTile__photo finished"
-              data-anime="fadeInRight"
-              data-anime-trigger='.top-BrandTile[data-index="2"]'
-              data-anime-delay="1.25">
+              >
               
                <div className="_inner">
                <img src={require("../icon/3.jpg")}
-                  className="card-img-top" alt="..."></img>
+                  className="card-img-top" alt="..." ></img>
               </div>
             </div>
             <div className="top-BrandTile__body">
@@ -147,7 +147,8 @@ class Product extends React.Component {
                   data-anime-trigger='.top-BrandTile[data-index="2"]'
                   data-anime-delay="2.05" >
                   頭髮造型
-                </div></ScrollAnimation>
+                </div>
+                </ScrollAnimation>
                 <a
                  href="http://localhost:3000/project1"
                   className="ButtonA finished"

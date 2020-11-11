@@ -8,14 +8,16 @@ import search from "../icon/search.svg";
 import {} from "react-bootstrap";
 import { NavLink } from "react-router-dom"; 
 import original from "../icon/original.jpg";
+
 // import Library, { NamedComponent } from 'library';
 import Resizer from 'react-image-file-resizer';
 // import "project-img.js";
-              
+      
 function Project() {
   const [path, setPath] = useState('horizontal4.jpg')
 
   return (
+   
     <>
      
     {/* <div>
@@ -23,7 +25,6 @@ function Project() {
       </div> */}
       <body className="page-brand_detail  typesquare_option">
         <main>
-        
           <div className="PgaeWraper">
             <div className="PgaeWrapper__inner">
               {/* <!-- start PageWraper --> */}
