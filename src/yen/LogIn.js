@@ -18,10 +18,32 @@ function LogIn(props) {
     password,
     setPassword,
   } = props;
+
+
   // const [account, setAccount] = useState("");
   // const [password, setPassword] = useState("");
 
-  if(isAuth===true) return <Redirect to="/homepage" /> 
+
+  function data() {
+    const d = {
+      account: account,
+      password: password,
+      authAccount:authAccount,
+      authPassword:authPassword
+    }
+
+    fetch("http://localhost:3001/member/login", {
+      method: "POST",
+      body: JSON.stringify(d)
+    })
+
+      .then((res) => res.JSON)
+
+  }
+
+
+
+  // if (isAuth === true) return <Redirect to="/homepage" />
 
   return (
     <>
@@ -35,8 +57,11 @@ function LogIn(props) {
               method="POST"
               name="memberForm"
               onsubmit="return false;"
-              novalidate
-            >
+              onSubmit={(e) => {
+                e.preventDefault();
+                data();
+              }}
+              novalidate>
               <div className="loginArea1">
                 <lable for="account" className="logText_">
                   帳號
@@ -117,13 +142,13 @@ function LogIn(props) {
 
             <div className="d-flex justify-content-around ">
               <button type="submit" className="loginCheckButton loginWebNone" onClick={() => {
-                    if (authAccount === account && authPassword === password) {
-                      setIsAuth(true);
-                      alert("登入成功");
-                    } else {
-                      alert("帳號/密碼錯誤");
-                    }
-                  }}>
+                if (authAccount === account && authPassword === password) {
+                  setIsAuth(true);
+                  alert("登入成功");
+                } else {
+                  alert("帳號/密碼錯誤");
+                }
+              }}>
                 登入
               </button>
               <button type="submit" className="loginSingUpButton loginWebNone">
