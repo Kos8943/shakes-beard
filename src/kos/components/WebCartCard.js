@@ -8,7 +8,7 @@ import { Link } from "react-router-dom";
 import { queryByTestId } from "@testing-library/react";
 
 function WebCartCard(props) {
-  const [myProductName, setMyProduetName] = useState([]);
+  const [myProductName, setMyProductName] = useState([]);
   // const [productPrice, setProductPrice] = useState(0);
   // const [productType1, setProductType1] = useState();
   // const [productType2, setProductType2] = useState();
@@ -18,6 +18,7 @@ function WebCartCard(props) {
   const [amount, setAmount] = useState(1);
   const [subtotal, setSubtotal] = useState(myProductName.price * amount);
   const [offPrice, setOffPrice] = useState(0);
+  const [ddd, setDdd] = useState(0);
 
   // 載入資料用
   async function getTotalFromServer() {
@@ -39,7 +40,7 @@ function WebCartCard(props) {
     // data會是一個物件值
 
     // setTotal(data.total)
-    setMyProduetName(data);
+    setMyProductName(data);
     // setProductType1(data[1].type1);
     // setProductType2(data[1].type2)
     // setProductType3(data[1].type3)
@@ -52,6 +53,12 @@ function WebCartCard(props) {
   useEffect(() => {
     getTotalFromServer();
   }, []);
+
+  useEffect(() => {
+    let a = ddd;
+    setDdd(a+1)
+    console.log('hi')
+  }, [myProductName]);
 
   // 每次total資料有改變，2秒後關閉載入指示
   // useEffect(() => {
@@ -70,7 +77,12 @@ function WebCartCard(props) {
     <>
       <form>
         {myProductName.map((value, index) => {
+
+          {/* <component productInfo={value}> */}
+
+          {/* props.productInfo.img */}
           return (
+            
             <div className="cartItem d-xl-flex d-block">
               <img
                 className="itemImg"
@@ -79,7 +91,7 @@ function WebCartCard(props) {
               <div className="itemName my-lg-auto">
                 {myProductName[index].name}
               </div>
-
+              {console.log('value',value)}
               {/* web style select */}
               <select
                 className="selectHigh d-none d-lg-block"
@@ -99,13 +111,30 @@ function WebCartCard(props) {
                 </option>
               </select>
               <select
-                className="selectHigh  d-none d-lg-block"
+                className="selectHigh  d-none d-lg-block" qIndex={index}
                 onChange={(e) => {
-                  setAmount(e.target.value);
-                  console.log(e.target.value);
+                  // setAmount(e.target.value);
+                  console.log('qIndex',e.target.getAttribute('qIndex'));
+                  let oldData = myProductName;
+                  let nowIndex = e.target.getAttribute('qIndex');
+                  console.log('oldData',oldData)
+                  oldData[nowIndex].amount = +e.target.value;
+                  console.log('newOldData',oldData)
+                  setMyProductName(oldData);
                   // setSubtotal(parseInt(e.target.nextSibling.nextSibling.innerHTML.slice(3)) * e.target.value);
                   // setSubtotal(e.target.nextSibling.nextSibling.nextSibling * myProductName[index].price)
+
                   e.target.nextSibling.nextSibling.nextSibling.innerHTML= "NT$" + parseInt(e.target.nextSibling.nextSibling.innerHTML.slice(3)) * e.target.value
+                  
+                  let totalDom = document.querySelectorAll('.subtotalD');
+                  let totalT = 0;
+                  console.log('totalDom.length')
+                  for(let i=0; i < totalDom.length; i++){
+                    
+                    totalT += +totalDom[i].innerHTML.substring(3,totalDom[i].innerHTML.length);
+                  }
+                  document.querySelector('.totalPriceT').innerHTML = 'NT$' + totalT;
+
                   console.log(
                     parseInt(e.target.nextSibling.nextSibling.innerHTML.slice(3))
                   );
@@ -127,8 +156,8 @@ function WebCartCard(props) {
               <span className="unitPrice">NT${myProductName[index].price}</span>
 
               {/* web show total price*/}
-              <span className="subtotal  d-none d-lg-block">
-                NT${subtotal}
+              <span className="subtotal subtotalD d-none d-lg-block">
+                NT${myProductName[index].price * myProductName[index].amount}
               </span>
 
               {/* web del img*/}
@@ -200,7 +229,7 @@ function WebCartCard(props) {
             </div>
             <div>NT$ {offPrice}</div>
             <div>NT$ 150</div>
-            <div>NT$ 8,796</div>
+            <div className="totalPriceT">NT$ 8,796</div>
           </div>
         </div>
         <div className="sumitBtn ml-auto">
