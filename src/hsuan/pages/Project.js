@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
-import "../style/Project.css";
+import "../style/All.css";
+// import "../style/Project1.scss";
 import search from "../icon/search.svg";
 // import original from './icon/original.jpg';
 // import Breadcrumb from './component/Breadcrumb'
@@ -7,19 +8,20 @@ import search from "../icon/search.svg";
 // import Sorts from './component/Sorts'
 import {} from "react-bootstrap";
 import { NavLink } from "react-router-dom"; 
+import {Breadcrumb } from "react-bootstrap"; 
 import original from "../icon/original.jpg";
 
 // import Library, { NamedComponent } from 'library';
 import Resizer from 'react-image-file-resizer';
 // import "project-img.js";
       
-function Project() {
-  const [path, setPath] = useState('horizontal4.jpg')
+function Project(props) {
+   const [path, setPath] = useState('horizontal4.jpg')
 
   return (
-   
-    <>
-     
+      <>
+    
+     <Breadcrumb/>
     {/* <div>
         <img style={{maxWidth: '50px'}} src={imagesPath[original]} onClick={this.toggleImage} />
       </div> */}
@@ -27,6 +29,16 @@ function Project() {
         <main>
           <div className="PgaeWraper">
             <div className="PgaeWrapper__inner">
+            <Breadcrumb className="HsuanBread">
+          <Breadcrumb.Item href="#">首頁</Breadcrumb.Item>
+          <Breadcrumb.Item href="http://localhost:3000/project1">
+            服飾配件
+          </Breadcrumb.Item>
+          <Breadcrumb.Item href="http://localhost:3000/project1">
+            領帶/領結
+          </Breadcrumb.Item>
+          <Breadcrumb.Item active>Data</Breadcrumb.Item>
+        </Breadcrumb>
               {/* <!-- start PageWraper --> */}
 
               <section className="SectionTile brand-SectionProductDetail">
@@ -37,28 +49,28 @@ function Project() {
                         <div className="_item"  style={{width:'100%',display:'inline-block'}}>
                           <div className="_image">
                             <img src={`./imgs/hsuan/${path}`}
-                              className="card-img-top"></img>
+                              className="card-img-top" alt=""></img>
                           </div>
                         </div>
                                               
                         <div className="_item" >
                           <div className="_image">
                           <img src={require("../icon/horizontal4.jpg")}
-                              className="card-img-top"></img>
+                              className="card-img-top" alt=""/>
                           </div>
                         </div>
                        <div className="_item" onClick={() => { setPath('horizontal3.jpg') }} >
                           <div className="_image" >
                             <img 
                               src={`./imgs/hsuan/horizontal3.jpg`}
-                              className="card-img-top"></img>
+                              className="card-img-top" alt=""></img>
                           </div>
                         </div>
                         <div className="_item" onClick={() => { setPath('horizontal2.jpg') }}>
                           <div className="_image">
                           <img 
                               src={require("../icon/horizontal2.jpg")}
-                              className="card-img-top"></img>
+                              className="card-img-top" alt=""></img>
                           </div>
                         </div>                    
                       </div>
@@ -81,7 +93,7 @@ function Project() {
                           data-anime-trigger=".brand-SectionProductDetail"
                           data-anime-delay="0.3"
                         >
-                          <h1 className="__name">NT$1500</h1>
+                          <h1 className="__name" style={{fontSize:"1.5rem"}}>NT$1500</h1>
                         </div>
                       </div>
 
@@ -98,8 +110,7 @@ function Project() {
                         className="brand-SectionProductDetail__info finished"
                         data-anime="fadeInRight"
                         data-anime-trigger=".brand-SectionProductDetail"
-                        data-anime-delay="1.2"
-                      >
+                        data-anime-delay="1.2" >
                         <div className="_rows">
                           <div className="_row">
                             <div className="_col _col--1">高度</div>
@@ -113,24 +124,14 @@ function Project() {
                             <div className="_col _col--1">重量</div>
                             <div className="_col _col--2">17.22g</div>
                           </div>
-                          <div className="_row">
-                            <div className="_col _col--1">說明</div>
-                            <div className="_col _col--2">
-                              說明<span className="_tax"></span>
-                            </div>
                           </div>
-                          <div className="_row">
-                            <div className="_col _col--1">說明</div>
-                            <div className="_col _col--2">說明</div>
-                          </div>
-                        </div>
                       </div>
                       <a href="/brand/pole_pole.php" className="ButtonA finished">
                         <span>加入購物車</span>
                       </a>
                       <br></br>
                       {/* <img src="./icon/search.svg" style="width: 15px;"> */}
-                      <a href="/brand/pole_pole.php" className="ButtonA1 finished">
+                      <a href="/brand/pole_pole.php" className="ButtonA finished">
                         <span>♥加入追蹤♥</span>
                       </a>
                     </div>
@@ -156,11 +157,11 @@ function Project() {
                             className="brand-ProductItems__image"
                           >
                             <div className="_image">
-                              <img
+                            <img
                                 src={require("../icon/original.jpg")}
-                                className="card-img-top"
-                               
-                              ></img>
+                                className="card-img-top" alt="" >
+                                
+                              </img>
                             </div>
                           </a>
                           <div className="brand-ProductItems__body">
@@ -185,7 +186,7 @@ function Project() {
                             <div className="_image">
                               <img
                                 src={require("../icon/original.jpg")}
-                                className="card-img-top"
+                                className="card-img-top" alt=""
                                
                               ></img>
                             </div>
@@ -207,14 +208,11 @@ function Project() {
                         <div className="brand-ProductItems__card">
                           <a
                             href="../product/78"
-                            className="brand-ProductItems__image"
-                          >
+                            className="brand-ProductItems__image">
                             <div className="_image">
-                              <img
-                                src={require("../icon/original.jpg")}
-                                className="card-img-top"
-                               
-                              ></img>
+                            <div className="zoom">
+                              <img src={require("../icon/original.jpg")}
+                                className="card-img-top" alt=""></img></div>
                             </div>
                           </a>
                           <div className="brand-ProductItems__body">
@@ -226,7 +224,7 @@ function Project() {
                         </div>
                       </div>
                       <div
-                        className="brand-ProductItems__item finished"
+                        className="brand-ProductItems__item1 finished"
                         data-anime="fadeInUp"
                         data-anime-trigger=".brand-ProductItems"
                         data-anime-delay="0.6000000000000001"
@@ -239,7 +237,7 @@ function Project() {
                             <div className="_image">
                               <img
                                 src={require("../icon/original.jpg")}
-                                className="card-img-top"
+                                className="card-img-top" alt=""
                                
                               ></img>
                             </div>
