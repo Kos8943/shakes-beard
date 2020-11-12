@@ -24,7 +24,7 @@ function Breadcrumb(props) {
       path = '商家地圖'
       break
     default:
-      path = ''
+      path = '商家頁面'
   }
 
   return (
@@ -35,12 +35,12 @@ function Breadcrumb(props) {
             <Link to="/">首頁</Link>
           </li>
           <li className="breadcrumb-item">
-            <Link to="#"
+            <Link 
               onClick={() => {
                 if(path === "商家頁面"){
                   console.log("離開商家頁面")
-                  props.history.push('/shoplist')
-                  setCrumb('商家列表')}
+                  props.history.push('/shoplist')}
+                  // setCrumb('商家列表')
                 else{console.log("離開其他頁面")
                   props.history.push('/homepage')}
             }}>

@@ -10,12 +10,15 @@ import imgGiftBox_5 from './image/box5.png';
 
 import { Button } from 'react-bootstrap'
 
+
 let queryString = window.location.search;
 const urlParams = new URLSearchParams(queryString);
+//const命名->並設定值
 const SelectRange = urlParams.get('SelectRange');             //第一頁選擇的參數   //上一頁選擇的參數
 const SelectRazorIndex = urlParams.get('SelectRazorIndex');
 const SelectBrushIndex = urlParams.get('SelectBrushIndex');
 const SelectStandIndex = urlParams.get('SelectStandIndex');
+
 
 let SelectColorIndex = "-1";
 
@@ -52,6 +55,8 @@ class Class_Color extends React.Component
                     {   
                       () =>
                       {
+                        //當SelectColorIndex被點到的時候，值會從-1變成在這裡設定的值(此為0)，
+                        //接著抓到圖片的ID值change_boxColor，並改變圖片
                         SelectColorIndex = "0";
                         var targetDiv = document.getElementById("change_boxColor");
                         targetDiv.setAttribute("src", imgGiftBox_1);
@@ -118,7 +123,8 @@ class Class_Color extends React.Component
                           }
                           else
                           {
-
+                            //下一頁的路徑+選擇範圍的值+
+                            //"&被選擇頁數的字串=" +選擇頁數的值
                             window.open("/Path_Finish?SelectRange=" + SelectRange +
                                                     "&SelectRazorIndex=" + SelectRazorIndex +
                                                     "&SelectBrushIndex=" + SelectBrushIndex +
