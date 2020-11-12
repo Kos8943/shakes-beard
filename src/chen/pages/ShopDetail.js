@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import { Link, Switch, useParams, Redirect, withRouter  } from 'react-router-dom'
 import Breadcrumb from '../components/Breadcrumb'
-import CatesAside from '../components/CatesAside'
 import InfoSection from '../components/InfoSection'
 import Description from '../components/Description'
 import Recommend from '../components/Recommend'
@@ -14,35 +13,30 @@ function ShopDetail(props) {
   // console.log('shopid',shopid)
 
   return (
-    <>
-      <Breadcrumb />
-      <div className="container shopdetail">
-        <div className="row">
-          <div className="col-12 col-sm-12 col-md-3 col-lg-2">
-            <CatesAside />
-          </div>
-          <div className="cardGroup mb-5 col-12 col-sm-12 col-md-9 col-lg-10">
-            <InfoSection/>
-          </div>
-        </div>
-        <div className="row">
-          <div className="col-12 col-sm-12 col-md-3 col-lg-2"></div>
-          <div className="col-12 col-sm-12 col-md-9 col-lg-10">
-              <Description/>
-              <strong className="d-inline-block my-2">注意事項</strong>
-              <p className="card-text mb-auto">This is a wider card with supporting text below as a natural lead-in to additional content.</p>
-              {/* map */}    
-              <Link to="/reservation" className="mt-4 btn goReserve mx-auto d-flex justify-self-center">
-                立即預約
-              </Link>
-              <Recommend/>
-          </div>
+  <>
+    <div className="shops container">
+      <div className="row">
+        <Breadcrumb />
+      </div>
+      <div className="row mb-5">
+        <InfoSection/>
+      </div>
+      <div className="row pl-3">
+        <div>
+          <Description/>
+            <strong className="d-inline-block my-2">注意事項</strong>
+            <p className="card-text mb-auto">This is a wider card with supporting text below asanatural lead-in to additional content.</p>
+            {/* map */}    
+            <Link to="/reservation" className="mt-4 btn goReserve mx-auto d-flex justify-self-center justify-items-center">
+              立即預約
+            </Link>
         </div>
       </div>
-      {/* <div id="stop" className="helpdesk">
-        <span><Link to="">客服</Link></span>
-      </div> */}
-    </>
+      <div className="row">
+        <Recommend/>
+      </div>
+    </div>
+  </>
   )
 }
 

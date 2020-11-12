@@ -71,12 +71,14 @@ function InfoSection(props) {
     <div className="test2"></div> */}
    <div className="info col-12 col-sm-12 col-md-5 mt-3">
       <h4 className="info-title">{shopName}</h4>
-      <Badge pill variant="secondary" className="mr-1">
-        {shopTag}
-      </Badge>
-      <Badge pill variant="secondary" className="mr-1">
-        {shopPlace}
-      </Badge>
+      <h5>
+        <Badge pill variant="secondary" className="mr-1 cate-tag">
+          {shopTag}
+        </Badge>
+        <Badge pill variant="secondary" className="mr-1">
+          {shopPlace}
+        </Badge>
+      </h5>
       <p className="mt-3">商家編號: 
         <span>{shopid}</span>
       </p>
@@ -101,11 +103,11 @@ function InfoSection(props) {
         <span>{shopIntro}</span>
       </p>
       <div>提供服務:
-      <p className="d-flex">
+      <h5 className="d-flex">
           <Badge pill variant="secondary" className="mr-1">理髮</Badge>
           <Badge pill variant="secondary" className="mr-1">修護</Badge>
           <Badge pill variant="secondary" className="mr-1">造型</Badge>
-      </p>
+      </h5>
       </div>
     </div>
   </>)

@@ -12,24 +12,18 @@ function ShopList(props) {
   
   return (
     <>
-      <Breadcrumb />
-      <div className="shops container">
-        <div className="row">
-          {/* <div className="col-12 col-sm-12 col-md-3 col-lg-2">
-            <CatesAside />
-          </div>
-          <div className="col-12 col-sm-12 col-md-9 col-lg-10"> */}
-            <Cates />
-            <div className="cardGroup">
-              <Cards />
-            </div>
-          <Pagination />
-          {/* </div> */}
-        </div>
+    <div className="shops container">
+      <div className="row">
+        <Breadcrumb />
       </div>
-      {/* <div id="stop" className="helpdesk">
-        <span><Link to="">客服</Link></span>
-      </div> */}
+      <div className="row">
+          <Cates />
+          <div className="cardGroup">
+            <Cards />
+          </div>
+      </div>
+      <Pagination  className="justify-contents-center"/>
+    </div>
     </>
   )
 }
