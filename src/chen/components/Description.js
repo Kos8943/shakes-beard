@@ -56,7 +56,7 @@ function Description(props) {
   },[])
 
    const display=(<>
-      <Media className="mb-3">
+      <Media className="mb-5">
       <img
         alt="description-img"
         width={350}
@@ -73,7 +73,7 @@ function Description(props) {
         </Link> */}
       </Media.Body>
     </Media>
-    <Media className="mb-3">
+    <Media className="mb-5">
       <Media.Body>
         <div>
           <h5>{shopSecondTitle}</h5>
