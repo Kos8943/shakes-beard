@@ -39,6 +39,7 @@ import orderCheck from './kos/pages/OrderCheck'
 import OrderCheck from "./kos/pages/OrderCheck";
 import TopArrow from "./icon/top-arrow.jpg"
 import { set } from "animejs";
+import InfoSection from "./chen/components/InfoSection";
 
 
 
@@ -137,6 +138,18 @@ function App() {
             <Route path="/Project1">
               <ShakesBeardNavbar isAuth={isAuth} setIsAuth={setIsAuth}/>
               <Project1 />
+              <MyFooter />
+            </Route>
+
+            {/* <Route path="/Project1/:sid?">
+              <ShakesBeardNavbar/>
+              <InfoSection />
+              <MyFooter />
+            </Route> */}
+
+            <Route path="/Project/:sid?">
+              <ShakesBeardNavbar/>
+              <Project />
               <MyFooter />
             </Route>
 
