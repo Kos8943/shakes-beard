@@ -35,7 +35,7 @@ function Breadcrumb(props) {
             <Link to="/">首頁</Link>
           </li>
           <li className="breadcrumb-item">
-            <Link 
+            <Link to="#"
               onClick={() => {
                 if(path === "商家頁面"){
                   console.log("離開商家頁面")

@@ -46,11 +46,11 @@ class Class_ChooseBrush extends React.Component
     }
     else if (SelectRange == "1")
     {
-      showIndexs = [0, 1, 2, 4, 5];
+      showIndexs = [3, 4, 5];
     }
     else    //2
     {
-      showIndexs = [0, 1, 2, 3, 4, 5];
+      showIndexs = [0, 1, 2];
     }
     
     let lists = [];

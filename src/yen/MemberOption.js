@@ -13,7 +13,11 @@ function MemberOption(props) {
   const [pageTitle, setPageTitle] = useState("資料修改");
   const { isAuth, setIsAuth } = props;
 
+<<<<<<< HEAD
+  if(isAuth===false) return <Redirect to="/login" />
+=======
   // if(isAuth===false) return <Redirect to="/login" />
+>>>>>>> becb5e077ad3b707d785812c670eccd3a693893f
 
   return (
     <>

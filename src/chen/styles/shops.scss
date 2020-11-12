@@ -91,6 +91,10 @@
     // background-color: #a69981;
     border: none;
   }
+
+  .btn-group > .btn.active{
+    z-index: -1;
+  }
   
   // .btn-secondary:not(:disabled):not(.disabled).active
   // .btn-group > .btn.active{
@@ -173,6 +177,10 @@
   .like:hover,.dislike:hover{
     cursor: pointer;
   }
+
+  // .heartsValue{
+  //   font-size: 16px;
+  // }
 
   // 商家列表: 分頁
   .page-link {

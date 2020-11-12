@@ -4,7 +4,8 @@ import './Style/CommonCSS.css';
 import Img_Small from './image/Box_Small.png';
 import Img_Mid from './image/Box_Mid.png';
 import Img_Big from './image/Box_Big.png';
-import { Button } from 'react-bootstrap'
+import { Button } from 'react-bootstrap';
+import {Animated} from "react-animated-css";
 
 /** 安裝Slider (https://www.npmjs.com/package/react-bootstrap-range-slider)
  * Example (https://jaywilz.github.io/react-bootstrap-range-slider/)
@@ -66,9 +67,9 @@ export class Class_Budget extends React.Component
                     <div className="lineTop"></div>
                     <div className="lineDown"></div>
 
-                    <div>
+                    <Animated animationIn="rubberBand" animationOut="bounce" animationInDuration={800} animationOutDuration={800} isVisible={false}>
                       <img className="budget_boxImg" id="changebudget_boxImg" src={Img_Mid} />
-                    </div>
+                    </Animated>
 
                     <Step></Step>
 
