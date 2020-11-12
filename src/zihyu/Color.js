@@ -2,20 +2,40 @@ import React from 'react'
 import './Style/ColorCSS.css';
 import './Style/CommonCSS.css';
 import img_box from './image/box.png';
-import img_box1 from './image/box1.png';
-import img_box2 from './image/box2.png';
-import img_box3 from './image/box3.png';
-import img_box4 from './image/box4.png';
-import img_box5 from './image/box5.png';
+import imgGiftBox_1 from './image/box1.png';
+import imgGiftBox_2 from './image/box2.png';
+import imgGiftBox_3 from './image/box3.png';
+import imgGiftBox_4 from './image/box4.png';
+import imgGiftBox_5 from './image/box5.png';
+
 
 import { Button } from 'react-bootstrap'
 
+let queryString = window.location.search;
+const urlParams = new URLSearchParams(queryString);
+const SelectRange = urlParams.get('SelectRange');             //第一頁選擇的參數   //上一頁選擇的參數
+const SelectRazorIndex = urlParams.get('SelectRazorIndex');
+const SelectBrushIndex = urlParams.get('SelectBrushIndex');
+const SelectStandIndex = urlParams.get('SelectStandIndex');
+
+let SelectColorIndex = "-1";
+
 class Class_Color extends React.Component
-
-
 {
+
+  state = {
+    text: ""
+  };
+  onChangeText = e => {
+    this.setState({
+      text: e.target.value
+    });
+  };
+
+
   render()
   {
+    const { text } = this.state;
     return (
       <>
       <div className="contain">
@@ -29,14 +49,22 @@ class Class_Color extends React.Component
 
                   <div><img className="color_boxImg" id="change_boxColor" src={img_box} /></div>
                   <div className="color_button">
-                    <button className="change color_button1"></button>
+                    <button className="change color_button1" onClick=
+                    {   
+                      () =>
+                      {
+                        SelectColorIndex = "0";
+                        var targetDiv = document.getElementById("change_boxColor");
+                        targetDiv.setAttribute("src", imgGiftBox_1);
+                      }
+                    }></button>
                     <button className="change color_button2"></button>
                     <button className="change color_button3"></button>
                     <button className="change color_button4"></button>
                     <button className="change color_button5"></button>
                   </div>
                   <div className="message_title">留言小卡內容：</div>
-                  <input className="message"></input>
+                  <input type="text" className="message" value={text} onChange={this.onChangeText} />
 
                   <div style={{margin: "19px auto"}}>
                       <Button className="separate backButton" onClick=
@@ -53,10 +81,23 @@ class Class_Color extends React.Component
                       {     //React程式區間語法 (開始)
                         () =>
                         {
-                          window.open("/Path_Finish", '_self');
-                        }
-                      }     //React程式區間語法 (結束)
-                    
+                          if (SelectBrushIndex == "-1")
+                          {
+                            alert("請選擇一樣商品");
+                          }
+                          else
+                          {
+
+                            window.open("/Path_Finish?SelectRange=" + SelectRange +
+                                                    "&SelectRazorIndex=" + SelectRazorIndex +
+                                                    "&SelectBrushIndex=" + SelectBrushIndex +
+                                                    "&SelectStandIndex=" + SelectStandIndex +
+                                                    "&SelectColorIndex=" + SelectColorIndex +
+                                                    "&Text=" + text,
+                                                    '_self');
+                          }
+                        }     //React程式區間語法 (結束)
+                      }
                     > 完成 </Button>
                   
                   </div>

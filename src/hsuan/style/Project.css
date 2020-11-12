@@ -351,6 +351,12 @@ body {
   height: 100%;
 }
 
+/*set a border on the images to prevent shifting*/
+/* #gallery_01 img{border:2px solid white;} */
+ 
+/*Change the colour*/
+/* .active img{border:2px solid #333 !important;} */
+
 @media screen and (max-width: 559px) {
   body {
     /* font-size: 1.4rem; */
@@ -360,10 +366,10 @@ body {
 /* a {
   text-decoration: underline;
 } */
-
+/* 
 a:link, a:visited {
   color: #1c7ae3;
-}
+} */
 
 a:hover, a:active {
   text-decoration: none;
@@ -2377,14 +2383,14 @@ a.ButtonA1 {
 }
 
 .brand-SectionProductDetail__info ._col._col--2 {
-  font-size: 13px;
+  font-size: 16px;
   line-height: 20px;
   font-feature-settings: "palt";
   letter-spacing: 0.1em;
 }
 
 .brand-SectionProductDetail__info ._tax {
-  font-size: 11px;
+  font-size: 16px;
 }
 
 @media screen and (max-width: 559px) {

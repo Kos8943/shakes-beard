@@ -29,7 +29,7 @@ function ShakesBeardNavbar(props) {
               <Nav.Link
                 as={NavLink}
                 to="/homepage"
-                href="#home"
+
                 className="navBarFontSize"
               >
                 首頁
@@ -37,10 +37,10 @@ function ShakesBeardNavbar(props) {
               <Nav.Link as={NavLink} to="/product" className="navBarFontSize">
                 產品列表
               </Nav.Link>
-              <Nav.Link href="Path_GiftBox" className="navBarFontSize">
+              <Nav.Link as={NavLink} to="/Path_GiftBox" className="navBarFontSize">
                 客製化禮盒
               </Nav.Link>
-              <Navbar.Brand href="#home" className="logoFont">
+              <Navbar.Brand as={NavLink} to="/homepage" className="logoFont">
                 logo
               </Navbar.Brand>
 
@@ -48,7 +48,7 @@ function ShakesBeardNavbar(props) {
                 <img src={Logo} className="logo"></img>
               </Nav.Link>
 
-              <Nav.Link href="ShopList" className="navBarFontSize">
+              <Nav.Link as={NavLink} to="/ShopList" className="navBarFontSize">
                 商家預約
               </Nav.Link>
               <Nav.Link

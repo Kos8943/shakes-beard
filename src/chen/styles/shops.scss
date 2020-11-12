@@ -150,11 +150,17 @@
     font-size: 1rem;
   }
 
-  .like,.dislike{
+  .dislike{
+    color: #44494a
+  }
+  .like{
     color: #be3f3f; 
     // position: relative;
     // top: -30px;
     // left: 90%;
+  }
+  .like:hover,.dislike:hover{
+    cursor: pointer;
   }
 
   // 商家列表: 分頁
@@ -187,6 +193,10 @@
   .page-link:hover {
     background-color: #3f61be;
   }
+
+  // .Page>.pagination>.page-item.disabled .page-link{
+  //   text-decoration: underline;
+  // }
   
   // 商家詳細: 預約按鈕
   .goReserve {

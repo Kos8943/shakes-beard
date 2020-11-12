@@ -13,7 +13,7 @@ import 'react-bootstrap-range-slider/dist/react-bootstrap-range-slider.css';
 import RangeSlider from 'react-bootstrap-range-slider';
 import { auto } from '@popperjs/core';
  
-let SliderValue = "1";
+let SelectRange = "1";
 const Step = () => {
 
   const [ value, setValue ] = React.useState(50);
@@ -26,19 +26,19 @@ const Step = () => {
         {
           setValue(e.target.value);
           var targetDiv = document.getElementById("changebudget_boxImg");
-
+          
           switch (e.target.value)
           {
             case "0":
-              SliderValue = "0";
+              SelectRange = "0";
               targetDiv.setAttribute("src", Img_Small);
               break;
             case "50":
-              SliderValue = "1";
+              SelectRange = "1";
               targetDiv.setAttribute("src", Img_Mid);
               break;
             case "100":
-              SliderValue = "2";
+              SelectRange = "2";
               targetDiv.setAttribute("src", Img_Big);
               break;
           }
@@ -66,7 +66,9 @@ export class Class_Budget extends React.Component
                     <div className="lineTop"></div>
                     <div className="lineDown"></div>
 
-                    <div><img className="budget_boxImg" id="changebudget_boxImg" src={Img_Mid} /></div>
+                    <div>
+                      <img className="budget_boxImg" id="changebudget_boxImg" src={Img_Mid} />
+                    </div>
 
                     <Step></Step>
 
@@ -81,7 +83,7 @@ export class Class_Budget extends React.Component
                         {     //React程式區間語法 (開始)
                           () =>
                           {
-                            window.open("/Path_ChooseRazor?SelectRange=" + SliderValue, '_self');
+                            window.open("/Path_ChooseRazor?SelectRange=" + SelectRange, '_self');
                           }
                         }     //React程式區間語法 (結束)
                       
