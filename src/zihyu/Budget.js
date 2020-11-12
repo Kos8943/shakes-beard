@@ -32,7 +32,7 @@ const Step = () => {
           {
             case "0":
               SelectRange = "0";
-              targetDiv.setAttribute("src", Img_Mid);
+              targetDiv.setAttribute("src", Img_Small);
               break;
             case "50":
               SelectRange = "1";
