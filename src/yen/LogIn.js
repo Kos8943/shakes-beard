@@ -4,6 +4,7 @@ import LogInCss from "./styles/LogInCss.scss";
 import facebook from "./img/facebook.svg";
 import twitter from "./img/twitter.svg";
 import google from "./img/google.svg";
+import { FaDAndDBeyond } from "react-icons/fa";
 
 function LogIn(props) {
   const {
@@ -20,60 +21,61 @@ function LogIn(props) {
   } = props;
 
 
-  // const [account, setAccount] = useState("");
-  // const [password, setPassword] = useState("");
+  function memberIoginForm() {
+
+    const url = 'http://localhost:3000/yen/try-log'
+
+    // const fd = new FormData(document.memberForm)
+
+    // console.log(fd)
+    fetch(url, {
+      method: 'POST',
+      body: JSON.stringify({ account, password }),
+      headers: new Headers({
+        'Content-Type': 'application/json'
+      })
+    })
+      .then(r => r.json())
+
+      .then(o => {
+        console.log(o);
+      })
+
+  }
 
 
-  // function data() {
-  //   const d = {
-  //     account: account,
-  //     password: password,
-  //     authAccount:authAccount,
-  //     authPassword:authPassword
-  //   }
 
-  //   fetch("http://localhost:3001/member/login", {
-  //     method: "POST",
-  //     body: JSON.stringify(d)
+  //   // 注意資料格式要設定，伺服器才知道是json格式
+  //   const request = new Request(url, {
+  //     method: 'POST',
+  //     body: JSON.stringify(newData),
+  //     headers: new Headers({
+  //       Accept: 'application/json',
+  //       'Content-Type': 'application/json',
+  //     }),
   //   })
 
-  //     .then((res) => res.JSON)
+  //   console.log(JSON.stringify(newData))
 
+  //   const response = await fetch(request)
+  //   const data = await response.json()
+
+  //   console.log('伺服器回傳的json資料', data)
+  //   // 要等驗証過，再設定資料(簡單的直接設定)
+
+  //   //直接在一段x秒關掉指示器
+  //   setTimeout(() => {
+  //     alert('儲存完成')
+  //     props.history.push('/')
+  //   }, 500)
   // }
 
 
+  // // const [account, setAccount] = useState("");
+  // // const [password, setPassword] = useState("");
 
-  // if (isAuth === true) return <Redirect to="/homepage" />
+  if (isAuth === true) return <Redirect to="/homepage" />
 
-  async function memberIoginForm() {
-    const newData = { account, password }
-
-    const url = 'http://localhost:3000/yen/try-mem'
-
-    const request = new Request(url, {
-      method: 'POST',
-      body: JSON.stringify(newData),
-      headers: new Headers({
-        Accept: 'application/json',
-        'Content-Type': 'application/json',
-      }),
-    })
-
-    console.log(JSON.stringify(newData))
-
-    const response = await fetch(request)
-    const data = await response.json()
-
-    console.log('伺服器回傳的json資料', data)
-    // 要等驗証過，再設定資料(簡單的直接設定)
-   
-    //  alert('儲存完成')
-  }
-
-  // const [account, setAccount] = useState("");
-  // const [password, setPassword] = useState("");
-
-  // if(isAuth===true) return <Redirect to="/homepage" /> 
 
   return (
     <>
@@ -84,14 +86,14 @@ function LogIn(props) {
 
             <form
               className="loginWeb"
-              method="POST"
+              // method="POST"
               name="memberForm"
-              onsubmit="return false;"
+              // novalidate
               onSubmit={(e) => {
                 e.preventDefault();
-                // data();
+                memberIoginForm()
               }}
-              novalidate>
+            >
               <div className="loginArea1">
                 <lable for="account" className="logText_">
                   帳號
@@ -122,17 +124,13 @@ function LogIn(props) {
                 <div className="logText_2">忘記密碼</div>
 
                 <button
-                  type="button"
-                  onClick={()=>{memberIoginForm()}}
+                  type="submit"
+                  // onClick={() => { memberIoginForm() }}
                   className="loginCheckButton loginMobile"
-                  // onClick={() => {
-                  //   if (authAccount === account && authPassword === password) {
-                  //     setIsAuth(true);
-                  //     alert("登入成功");
-                  //   } else {
-                  //     alert("帳號/密碼錯誤");
-                  //   }
-                  // }}
+                // onClick={(e) => {
+                //   e.preventDefault();
+                //   memberIoginForm()
+                // }}
                 >
                   登入
                 </button>
@@ -169,24 +167,30 @@ function LogIn(props) {
                   </button>
                 </div>
               </div>
+
+
+              <div className="d-flex justify-content-around ">
+                <button type="submit" className="loginCheckButton loginWebNone"
+                // onClick={(e) => {
+                //   e.preventDefault();
+                //   memberIoginForm();
+
+
+                // if (authAccount === account && authPassword === password) {
+                //   setIsAuth(true);
+                //   alert("登入成功");
+                // } else {
+                //   alert("帳號/密碼錯誤");
+                // }
+                // }}>
+                >
+                  登入
+              </button>
+                <button type="submit" className="loginSingUpButton loginWebNone">
+                  註冊帳號
+              </button>
+              </div>
             </form>
-
-            <div className="d-flex justify-content-around ">
-              <button type="submit" className="loginCheckButton loginWebNone" onClick={() => {
-                if (authAccount === account && authPassword === password) {
-                  setIsAuth(true);
-                  alert("登入成功");
-                } else {
-                  alert("帳號/密碼錯誤");
-                }
-              }}>
-                登入
-              </button>
-              <button type="submit" className="loginSingUpButton loginWebNone">
-                註冊帳號
-              </button>
-            </div>
-
             <div className="loginMobile"></div>
           </div>
         </div>
