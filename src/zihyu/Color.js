@@ -1,7 +1,6 @@
 import React from 'react'
 import './Style/ColorCSS.css';
 import './Style/CommonCSS.css';
-import img_box from './image/box.png';
 import imgGiftBox_1 from './image/box1.png';
 import imgGiftBox_2 from './image/box2.png';
 import imgGiftBox_3 from './image/box3.png';
@@ -47,7 +46,7 @@ class Class_Color extends React.Component
                   <div className="lineTop"></div>
                   <div className="lineDown"></div>
 
-                  <div><img className="color_boxImg" id="change_boxColor" src={img_box} /></div>
+                  <div><img className="color_boxImg" id="change_boxColor" src={imgGiftBox_1} /></div>
                   <div className="color_button">
                     <button className="change color_button1" onClick=
                     {   
@@ -58,10 +57,42 @@ class Class_Color extends React.Component
                         targetDiv.setAttribute("src", imgGiftBox_1);
                       }
                     }></button>
-                    <button className="change color_button2"></button>
-                    <button className="change color_button3"></button>
-                    <button className="change color_button4"></button>
-                    <button className="change color_button5"></button>
+                    <button className="change color_button2" onClick=
+                    {   
+                      () =>
+                      {
+                        SelectColorIndex = "1";
+                        var targetDiv = document.getElementById("change_boxColor");
+                        targetDiv.setAttribute("src", imgGiftBox_2);
+                      }
+                    }></button>
+                    <button className="change color_button3" onClick=
+                    {   
+                      () =>
+                      {
+                        SelectColorIndex = "2";
+                        var targetDiv = document.getElementById("change_boxColor");
+                        targetDiv.setAttribute("src", imgGiftBox_3);
+                      }
+                    }></button>
+                    <button className="change color_button4" onClick=
+                    {   
+                      () =>
+                      {
+                        SelectColorIndex = "3";
+                        var targetDiv = document.getElementById("change_boxColor");
+                        targetDiv.setAttribute("src", imgGiftBox_4);
+                      }
+                    }></button>
+                    <button className="change color_button5" onClick=
+                    {   
+                      () =>
+                      {
+                        SelectColorIndex = "4";
+                        var targetDiv = document.getElementById("change_boxColor");
+                        targetDiv.setAttribute("src", imgGiftBox_5);
+                      }
+                    }></button>
                   </div>
                   <div className="message_title">留言小卡內容：</div>
                   <input type="text" className="message" value={text} onChange={this.onChangeText} />
