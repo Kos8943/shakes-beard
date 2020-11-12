@@ -24,6 +24,7 @@ function LogIn(props) {
   // const [password, setPassword] = useState("");
 
 
+<<<<<<< HEAD
   function data() {
     const d = {
       account: account,
@@ -40,6 +41,24 @@ function LogIn(props) {
       .then((res) => res.JSON)
 
   }
+=======
+  // function data() {
+  //   const d = {
+  //     account: account,
+  //     password: password,
+  //     authAccount:authAccount,
+  //     authPassword:authPassword
+  //   }
+
+  //   fetch("http://localhost:3001/member/login", {
+  //     method: "POST",
+  //     body: JSON.stringify(d)
+  //   })
+
+  //     .then((res) => res.JSON)
+
+  // }
+>>>>>>> becb5e077ad3b707d785812c670eccd3a693893f
 
 
 
@@ -87,6 +106,7 @@ function LogIn(props) {
               method="POST"
               name="memberForm"
 <<<<<<< HEAD
+<<<<<<< HEAD
               onsubmit="return false;"
               onSubmit={(e) => {
                 e.preventDefault();
@@ -97,6 +117,14 @@ function LogIn(props) {
               novalidate
             >
 >>>>>>> 2bf3e82c0080fde0284bbc44f6eadaa07fedc82b
+=======
+              onsubmit="return false;"
+              onSubmit={(e) => {
+                e.preventDefault();
+                // data();
+              }}
+              novalidate>
+>>>>>>> becb5e077ad3b707d785812c670eccd3a693893f
               <div className="loginArea1">
                 <lable for="account" className="logText_">
                   帳號

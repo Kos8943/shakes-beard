@@ -32,7 +32,6 @@ import LogIn from "./yen/LogIn";
 import SignUp from "./yen/SignUp";
 import MemberOption from "./yen/MemberOption";
 import TestAuth from "./yen/TestAuth";
-import PostFrom from "./yen/PostFrom";
 import Payment from "./kos/pages/Payment";
 import Paycomplete from './kos/pages/Paycomplete'
 import orderCheck from './kos/pages/OrderCheck'
@@ -218,12 +217,6 @@ function App() {
                 <MemberOption isAuth={isAuth} setIsAuth={setIsAuth} />
               </div>
               <MyFooter />
-            </Route>
-
-            <Route path="/PostFrom">
-              
-                <PostFrom />
-              
             </Route>
 
 
