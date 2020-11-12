@@ -45,6 +45,36 @@ function LogIn(props) {
 
   // if (isAuth === true) return <Redirect to="/homepage" />
 
+  async function memberIoginForm() {
+    const newData = { account, password }
+
+    const url = 'http://localhost:3000/yen/try-mem'
+
+    const request = new Request(url, {
+      method: 'POST',
+      body: JSON.stringify(newData),
+      headers: new Headers({
+        Accept: 'application/json',
+        'Content-Type': 'application/json',
+      }),
+    })
+
+    console.log(JSON.stringify(newData))
+
+    const response = await fetch(request)
+    const data = await response.json()
+
+    console.log('伺服器回傳的json資料', data)
+    // 要等驗証過，再設定資料(簡單的直接設定)
+   
+    //  alert('儲存完成')
+  }
+
+  // const [account, setAccount] = useState("");
+  // const [password, setPassword] = useState("");
+
+  // if(isAuth===true) return <Redirect to="/homepage" /> 
+
   return (
     <>
       <div className="bagimg">
@@ -56,12 +86,17 @@ function LogIn(props) {
               className="loginWeb"
               method="POST"
               name="memberForm"
+<<<<<<< HEAD
               onsubmit="return false;"
               onSubmit={(e) => {
                 e.preventDefault();
                 data();
               }}
               novalidate>
+=======
+              novalidate
+            >
+>>>>>>> 2bf3e82c0080fde0284bbc44f6eadaa07fedc82b
               <div className="loginArea1">
                 <lable for="account" className="logText_">
                   帳號
@@ -93,15 +128,16 @@ function LogIn(props) {
 
                 <button
                   type="button"
+                  onClick={()=>{memberIoginForm()}}
                   className="loginCheckButton loginMobile"
-                  onClick={() => {
-                    if (authAccount === account && authPassword === password) {
-                      setIsAuth(true);
-                      alert("登入成功");
-                    } else {
-                      alert("帳號/密碼錯誤");
-                    }
-                  }}
+                  // onClick={() => {
+                  //   if (authAccount === account && authPassword === password) {
+                  //     setIsAuth(true);
+                  //     alert("登入成功");
+                  //   } else {
+                  //     alert("帳號/密碼錯誤");
+                  //   }
+                  // }}
                 >
                   登入
                 </button>

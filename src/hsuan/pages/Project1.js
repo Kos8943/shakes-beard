@@ -1,15 +1,15 @@
 import React, { useState, useEffect } from "react";
-import "../style/Project1.css";
+import "../style/All.css";
 import Sid from "../../Sid";
 import Script from "react-load-script";
 import Pagination from "../component/Pagination";
 import "animate.css";
 import anime from "react-anime";
 import ReactCSSTransitionGroup from "react-addons-css-transition-group";
-
 import { Container, Row, Breadcrumb } from "react-bootstrap";
 import { Dropdown } from "react-bootstrap";
 import ScrollAnimation from "react-animate-on-scroll";
+
 
 function Project1(props) {
   const [myProduct, setMyProduct] = useState([]);
@@ -48,6 +48,7 @@ function Project1(props) {
   useEffect(() => {
     setTimeout(() => setDataLoading(false), 500);
   }, []);
+  
   return (
     <>
       <anime />
@@ -126,6 +127,7 @@ function Project1(props) {
   <Dropdown.Item eventKey="2">Another action</Dropdown.Item>
   <Dropdown.Item eventKey="3">Something else here</Dropdown.Item>
 </Dropdown.Menu></ul>
+
         <section className="SectionTile brand-SectionProduct">
         <div className="SectionTile__container ">
         
@@ -145,15 +147,15 @@ function Project1(props) {
                             >
                               <div className="_image">
                                 <img
-                                  src={`./imgs/hsuan/${myProduct[index].imgName}`}
+                                  src={`./imgs/hsuan/${myProduct[index].imgname}`}
                                   className="card-img-top"
                                   alt="..."
                                 ></img>
                               </div>
                             </a>
                             <div className="brand-ProductItems__body">
-                              <div className="_name typesquare_option">
-                                {myProduct[index].name}
+                              <div className="_name typesquare_option" style={{paddingTop:"20px"}}>
+                                {myProduct[index].productname}
                               </div>
                               <div className="_price">
                                 NT${myProduct[index].price}

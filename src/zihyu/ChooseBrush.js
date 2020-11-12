@@ -9,9 +9,10 @@ const Data = global.BrushData;
 let queryString = window.location.search;
 const urlParams = new URLSearchParams(queryString);
 const SelectRange = urlParams.get('SelectRange');             //第一頁選擇的參數   //上一頁選擇的參數
-console.log(SelectRange);
+const SelectRazorIndex = urlParams.get('SelectRazorIndex');
 
-let SelectBrushIndex = "0";
+
+let SelectBrushIndex = "-1";
 
 class Class_ChooseBrush extends React.Component
 {
@@ -114,7 +115,17 @@ class Class_ChooseBrush extends React.Component
                     {     //React程式區間語法 (開始)
                       () =>
                       {
-                        window.open("/Path_ChooseStand", '_self');
+                        if (SelectBrushIndex == "-1")
+                        {
+                          alert("請至少選擇一樣商品");
+                        }
+                        else
+                        {
+                          //SelectRange 代入範圍
+                          //SelectRazorIndex 代入範圍
+
+                          window.open("/Path_ChooseStand?SelectRange=" + SelectRange + "&SelectRazorIndex=" + SelectRazorIndex + "&SelectBrushIndex=" + SelectBrushIndex , '_self');
+                        }
                       }
                     }     //React程式區間語法 (結束)
                   

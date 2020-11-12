@@ -58,7 +58,7 @@ function Cards(props) {
         </Link>
         <div className="card-body p-2">
           <h6>
-            <Badge pill variant="secondary" className="mr-1">
+            <Badge pill variant="secondary" className="mr-1 cate-tag">
               {value.shop_cate_tag}
             </Badge>
             <Badge pill variant="secondary" className="mr-1">

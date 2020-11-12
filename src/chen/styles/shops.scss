@@ -47,7 +47,7 @@
 
     .goReserve{
       vertical-align: middle;
-      width: 40%;
+      width: 60%;
     }
 
     .recommend {
@@ -86,7 +86,18 @@
   .cates-item{
     font-size: 1rem;
   }
+
+  .cate-btns button:hover{
+    // background-color: #a69981;
+    border: none;
+  }
   
+  // .btn-secondary:not(:disabled):not(.disabled).active
+  // .btn-group > .btn.active{
+  //   background-color: #a69981;
+  //   // border: none;
+  // }
+
   .breadcrumb-item a,
   .sort>option,
   // .openDay>.dropdown>.dropdown-menu>.dropdown-item,
@@ -267,7 +278,12 @@
   // 共用: 標籤
   .badge{
     font-weight: normal;
-    font-size: 0.6rem;
+    // font-size: 0.6rem;
+  }
+
+  .cate-tag{
+    // background-color: #232d2f;
+    background-color: #848686
   }
   // // 共用: 客服
   // .helpdesk a {
