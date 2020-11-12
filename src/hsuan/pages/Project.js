@@ -39,7 +39,7 @@ function Project(props) {
   const [showImg2, setShowImg2] = useState(true);
   const [showImg3, setShowImg3] = useState(false);
   // const [dataIsExist, setDataIsExist] = useState(true)
-
+ 
   async function getmyProduct() {
     //  console.log('getmyProduct',sid)
     // json-db
@@ -274,7 +274,7 @@ function Project(props) {
                         </div>
                       </div>
                       <a
-                        href="/brand/pole_pole.php"
+                        href="/"
                         className="ButtonA finished"
                       >
                         <span>加入購物車</span>
@@ -282,7 +282,7 @@ function Project(props) {
                       <br></br>
                       {/* <img src="./icon/search.svg" style="width: 15px;"> */}
                       <a
-                        href="/brand/pole_pole.php"
+                        href="/"
                         className="ButtonA finished"
                       >
                         <span>♥加入追蹤♥</span>
@@ -306,12 +306,12 @@ function Project(props) {
                       >
                         <div className="brand-ProductItems__card">
                           <a
-                            href="../product/3"
+                            href="http://localhost:3001/project/5"
                             className="brand-ProductItems__image"
                           >
                             <div className="_image">
                               <img
-                                src={require("../icon/original.jpg")}
+                                src="/imgs/hsuan/5-1.jpg"
                                 className="card-img-top"
                                 alt=""
                               ></img>
@@ -319,9 +319,9 @@ function Project(props) {
                           </a>
                           <div className="brand-ProductItems__body">
                             <div className="_no">
-                              <span className="_code">名稱</span>
+                              <span className="_code">方形鋼琴黑袖扣</span>
                             </div>
-                            <div className="_price">價錢</div>
+                            <div className="_price">NT$1488</div>
                           </div>
                         </div>
                       </div>
@@ -333,12 +333,12 @@ function Project(props) {
                       >
                         <div className="brand-ProductItems__card">
                           <a
-                            href="../product/12"
+                            href="http://localhost:3001/project/7"
                             className="brand-ProductItems__image"
                           >
                             <div className="_image">
                               <img
-                                src={require("../icon/original.jpg")}
+                                src="/imgs/hsuan/7-1.jpg"
                                 className="card-img-top"
                                 alt=""
                               ></img>
@@ -346,9 +346,9 @@ function Project(props) {
                           </a>
                           <div className="brand-ProductItems__body">
                             <div className="_no">
-                              <span className="_code">名稱</span>
+                              <span className="_code">陀飛輪軸白色袖扣</span>
                             </div>
-                            <div className="_price">價錢</div>
+                            <div className="_price">NT$2555</div>
                           </div>
                         </div>
                       </div>
@@ -360,13 +360,13 @@ function Project(props) {
                       >
                         <div className="brand-ProductItems__card">
                           <a
-                            href="../product/78"
+                            href="http://localhost:3001/project/8"
                             className="brand-ProductItems__image"
                           >
                             <div className="_image">
                               <div className="zoom">
                                 <img
-                                  src={require("../icon/original.jpg")}
+                                  src="/imgs/hsuan/8-1.jpg"
                                   className="card-img-top"
                                   alt=""
                                 ></img>
@@ -375,9 +375,9 @@ function Project(props) {
                           </a>
                           <div className="brand-ProductItems__body">
                             <div className="_no">
-                              <span className="_code">名稱</span>
+                              <span className="_code">機械機芯黑色袖扣</span>
                             </div>
-                            <div className="_price">價錢</div>
+                            <div className="_price">NT$2300</div>
                           </div>
                         </div>
                       </div>
@@ -389,12 +389,12 @@ function Project(props) {
                       >
                         <div className="brand-ProductItems__card">
                           <a
-                            href="../product/13"
+                            href="http://localhost:3001/project/2"
                             className="brand-ProductItems__image"
                           >
                             <div className="_image">
                               <img
-                                src={require("../icon/original.jpg")}
+                                src="/imgs/hsuan/1-1.jpg"
                                 className="card-img-top"
                                 alt=""
                               ></img>
@@ -402,9 +402,9 @@ function Project(props) {
                           </a>
                           <div className="brand-ProductItems__body">
                             <div className="_no">
-                              <span className="_code">名稱</span>
+                              <span className="_code">星空石袖扣</span>
                             </div>
-                            <div className="_price">價錢</div>
+                            <div className="_price">NT$1200</div>
                           </div>
                         </div>
                       </div>

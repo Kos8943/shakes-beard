@@ -622,6 +622,8 @@ a.ButtonA {
   }
 }
 
+
+
 .Breadcrumb {
   padding-top: 40px;
   padding-bottom: 40px;
@@ -1850,7 +1852,7 @@ a.ButtonA {
   text-align: justify;
   text-justify: inter-ideograph;
   line-height: 2.5;
-  font-size: 16px;
+  font-size: 14px;
 }
 
 @media screen and (max-width: 559px) {

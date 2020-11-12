@@ -67,62 +67,19 @@ function Project1(props) {
 
       <div className="PgaeWraper ">
         <div className="AllBread"></div>
-        {/* <section className="SectionTile brand-SectionCover">
-          <div className="SectionTile__container">
-            <div
-              className="brand-SectionCover__main finished"
-              data-anime="fadeInRight"
-              data-anime-trigger=".brand-SectionCover__main">
-              <img
-                src={require("../icon/bathroom.jpg")}
-                className="card-img-top"
-                alt="..."
-              ></img>
-            </div>
-            <div className="brand-SectionCover__layout">
-              <div
-                className="brand-SectionCover__title finished"
-                data-anime="fadeInLeft"
-                data-anime-trigger=".brand-SectionCover__main"
-                data-anime-delay="0.3"
-              >
-                <div className="_card">
-                  <div className="_wrap">
-                    <h1 className="_inner">
-                    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
-                      <div className="_title1">BRAND</div>
-                      <div className="_title2">
-                        <div className="_b">Shakes Beard</div>
-                      </div>
-                    </h1>
-                  </div>
-                </div>
-              </div>
-              
-              <div className="brand-SectionCover__body">
-                <div className="_text2 typesquare_option finished"
-                  data-anime="fadeInRight"
-                  data-anime-trigger=".brand-SectionCover__main"
-                  data-anime-delay="0.9">
-                  精湛工藝呈現出迷人魅力。繁複的製作工序沒有令我們對工藝的要求卻步；
-                  <br></br>
-                  反令我們力臻極佳品質。
-                </div>
-              </div>
-            </div>
-          </div>
-        </section> */}
+        
         <Script />
+        <div className="container">
         <Breadcrumb className="HsuanBread">
           <Breadcrumb.Item href="#">首頁</Breadcrumb.Item>
-          <Breadcrumb.Item href="http://localhost:3000/project1">
+          <Breadcrumb.Item href="http://localhost:3001/product">
             服飾配件
           </Breadcrumb.Item>
           <Breadcrumb.Item href="http://localhost:3000/project1">
             袖扣
           </Breadcrumb.Item>
           {/* <Breadcrumb.Item active>所有系列</Breadcrumb.Item> */}
-        </Breadcrumb>
+        </Breadcrumb></div>
         <ul>
         <Dropdown.Menu show>
   <Dropdown.Header>Dropdown header</Dropdown.Header>
