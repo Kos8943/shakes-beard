@@ -25,35 +25,7 @@ function LogIn(props) {
 
     const url = 'http://localhost:3000/yen/try-log'
 
-<<<<<<< HEAD
     // const fd = new FormData(document.memberForm)
-=======
-<<<<<<< HEAD
-  function data() {
-    const d = {
-      account: account,
-      password: password,
-      authAccount:authAccount,
-      authPassword:authPassword
-    }
-
-    fetch("http://localhost:3001/member/login", {
-      method: "POST",
-      body: JSON.stringify(d)
-    })
-
-      .then((res) => res.JSON)
-
-  }
-=======
-  // function data() {
-  //   const d = {
-  //     account: account,
-  //     password: password,
-  //     authAccount:authAccount,
-  //     authPassword:authPassword
-  //   }
->>>>>>> e90326973525916392f10d675a5cf8b360ebf767
 
     // console.log(fd)
     fetch(url, {
@@ -69,12 +41,7 @@ function LogIn(props) {
         console.log(o);
       })
 
-<<<<<<< HEAD
   }
-=======
-  // }
->>>>>>> becb5e077ad3b707d785812c670eccd3a693893f
->>>>>>> e90326973525916392f10d675a5cf8b360ebf767
 
 
 
@@ -121,34 +88,12 @@ function LogIn(props) {
               className="loginWeb"
               // method="POST"
               name="memberForm"
-<<<<<<< HEAD
               // novalidate
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-              onsubmit="return false;"
-              onSubmit={(e) => {
-                e.preventDefault();
-                data();
-              }}
-              novalidate>
-=======
-              novalidate
-            >
->>>>>>> 2bf3e82c0080fde0284bbc44f6eadaa07fedc82b
-=======
-              onsubmit="return false;"
->>>>>>> e90326973525916392f10d675a5cf8b360ebf767
               onSubmit={(e) => {
                 e.preventDefault();
                 memberIoginForm()
               }}
-<<<<<<< HEAD
             >
-=======
-              novalidate>
->>>>>>> becb5e077ad3b707d785812c670eccd3a693893f
->>>>>>> e90326973525916392f10d675a5cf8b360ebf767
               <div className="loginArea1">
                 <lable for="account" className="logText_">
                   帳號
