@@ -318,13 +318,20 @@
     font-weight: bolder;
   }
 
+  .info-head>.col-3>p{
+    color: #6c757d;
+  }
+
   .media-body{
     font-size: 1rem;
+    line-height: 2;
+    margin-top: auto;
   }
 
   .media-body h5{
     // font-weight: bolder;
     font-size: 1.1rem;
+    line-height: 1.2;
   }
 
   .test1 {
@@ -338,6 +345,15 @@
     width: 80px;
     height: 80px;
     margin-left: 10px;
+  }
+
+  .test3 {
+    background-color: #6c757d;
+    width: 50px;
+    height: 50px;
+    margin: 5px;
+    display: flex;
+    justify-self: space-evenly;
   }
 
   .testImg {

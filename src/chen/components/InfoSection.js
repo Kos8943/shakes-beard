@@ -60,56 +60,68 @@ function InfoSection(props) {
 
   const display=(
   <>
-    <img
-      alt="infosection-img"
-      width={350}
-      className="col-sm-12 col-md-6 mt-3"
-      src={require('../img/card01.jpg')} 
-    />
-    {/* <div className="test2"></div>
-    <div className="test2"></div>
-    <div className="test2"></div> */}
-   <div className="info col-12 col-sm-12 col-md-5 mt-3">
-      <h4 className="info-title">{shopName}</h4>
-      <h5>
-        <Badge pill variant="secondary" className="mr-1 cate-tag">
-          {shopTag}
-        </Badge>
-        <Badge pill variant="secondary" className="mr-1">
-          {shopPlace}
-        </Badge>
-      </h5>
-      <p className="mt-3">商家編號: 
-        <span>{shopid}</span>
-      </p>
-      <p className="mt-3">電話:  02-27375832</p>
-      <p>地址: 
-        <span>{shopAddr}</span>
-      </p>
-      <div className="mb-3 openday">
-        營業時間: 
-        <select className="opendaySelect m-1">
-          <option value="星期一">星期一</option>
-          <option value="星期二">星期二</option>
-          <option value="星期三">星期三</option>
-          <option value="星期四">星期四</option>
-          <option value="星期五">星期五</option>
-          <option value="星期六">星期六</option>
-          <option value="星期日">星期日</option>
-        </select>
-        <span className="col p-1">17:00 - 21:00</span>
-      </div>
-      <p>商家簡介:<br/>
-        <span>{shopIntro}</span>
-      </p>
-      <div>提供服務:
-      <h5 className="d-flex">
-          <Badge pill variant="secondary" className="mr-1">理髮</Badge>
-          <Badge pill variant="secondary" className="mr-1">修護</Badge>
-          <Badge pill variant="secondary" className="mr-1">造型</Badge>
-      </h5>
-      </div>
+    <div className="container">
+     <div className="row">
+      <img
+          alt="infosection-img"
+          width={350}
+          className="col-sm-12 col-md-6 mt-3"
+          src={require('../img/card01.jpg')} 
+        />
+      <div className="info col-12 col-sm-12 col-md-5 mt-3">
+          <h4 className="info-title">{shopName}</h4>
+          <h5>
+            <Badge pill variant="secondary" className="mr-1 cate-tag">
+              {shopTag}
+            </Badge>
+            <Badge pill variant="secondary" className="mr-1">
+              {shopPlace}
+            </Badge>
+          </h5>
+          <div className="row info-head">
+            <div className="col-3">
+              <p>商家編號:</p>
+              <p>電話:</p>
+              <p>地址:</p>
+            </div>
+            <div className="col-9">
+              <p>{shopid}</p>
+              <p>02-27375832</p>
+              <p>{shopAddr}</p>
+            </div>
+          </div>
+          <div className="row info-head">
+            <div className="col-3">
+              <p>商家簡介:</p>
+            </div>
+            <div className="col-9">
+              <p>{shopIntro}</p>
+            </div>
+          </div>
+          <div className="row info-head">
+            <div className="col-3">
+              <p className="col pl-0">提供服務:</p>
+            </div>
+            <div className="col-9">
+              <h5 className="col pl-0">
+                <Badge pill variant="secondary" className="mr-1">理髮</Badge>
+                <Badge pill variant="secondary" className="mr-1">修護</Badge>
+                <Badge pill variant="secondary" className="mr-1">造型</Badge>
+              </h5>
+            </div>
+          </div>
+        </div>
+     </div>
+     <div className="row mt-1 col-sm-12 col-md-6">
+      <div className="test3"></div>
+      <div className="test3"></div>
+      <div className="test3"></div>
+      <div className="test3"></div>
+      <div className="test3"></div>
+     </div>
     </div>
+    
+    
   </>)
 
   return (

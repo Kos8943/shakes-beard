@@ -27,7 +27,9 @@ function ShopDetail(props) {
         </div>
       </div>
       <div className="row">
-        <div>
+        <div className="col">
+          <h4>可預約時段</h4>
+          <div className="test1"></div>
           <strong className="d-inline-block my-2">注意事項</strong>
           <p className="card-text mb-auto">This is a wider card with supporting text belowasanatural lead-in to additional content.</p>
           {/* map */}    
