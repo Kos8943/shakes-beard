@@ -6,22 +6,6 @@ import twitter from "./img/twitter.svg";
 import google from "./img/google.svg";
 
 function LogIn(props) {
-
-function postData() {
-    const fd = new FormData(document.memberForm)
-  fetch('http://localhost:3000/yen/post-test',{
-    method:'POST',
-    body:fd,
-    headers: new Headers({
-      "Content-Type": "application/json",
-    }),
-  })
-  .then((res)=>res.json)
-  .then((res)=>console.log('success:',res))
-}
-
-
-
   const {
     isAuth,
     setIsAuth,
@@ -34,6 +18,58 @@ function postData() {
     password,
     setPassword,
   } = props;
+
+
+  // const [account, setAccount] = useState("");
+  // const [password, setPassword] = useState("");
+
+
+  function data() {
+    const d = {
+      account: account,
+      password: password,
+      authAccount:authAccount,
+      authPassword:authPassword
+    }
+
+    fetch("http://localhost:3001/member/login", {
+      method: "POST",
+      body: JSON.stringify(d)
+    })
+
+      .then((res) => res.JSON)
+
+  }
+
+
+
+  // if (isAuth === true) return <Redirect to="/homepage" />
+
+  async function memberIoginForm() {
+    const newData = { account, password }
+
+    const url = 'http://localhost:3000/yen/try-mem'
+
+    const request = new Request(url, {
+      method: 'POST',
+      body: JSON.stringify(newData),
+      headers: new Headers({
+        Accept: 'application/json',
+        'Content-Type': 'application/json',
+      }),
+    })
+
+    console.log(JSON.stringify(newData))
+
+    const response = await fetch(request)
+    const data = await response.json()
+
+    console.log('伺服器回傳的json資料', data)
+    // 要等驗証過，再設定資料(簡單的直接設定)
+   
+    //  alert('儲存完成')
+  }
+
   // const [account, setAccount] = useState("");
   // const [password, setPassword] = useState("");
 
@@ -50,12 +86,17 @@ function postData() {
               className="loginWeb"
               method="POST"
               name="memberForm"
-              onSubmit={(e)=>{
+<<<<<<< HEAD
+              onsubmit="return false;"
+              onSubmit={(e) => {
                 e.preventDefault();
-                postData()
+                data();
               }}
+              novalidate>
+=======
               novalidate
             >
+>>>>>>> 2bf3e82c0080fde0284bbc44f6eadaa07fedc82b
               <div className="loginArea1">
                 <lable for="account" className="logText_">
                   帳號
@@ -87,6 +128,7 @@ function postData() {
 
                 <button
                   type="button"
+                  onClick={()=>{memberIoginForm()}}
                   className="loginCheckButton loginMobile"
                   // onClick={() => {
                   //   if (authAccount === account && authPassword === password) {
@@ -136,13 +178,13 @@ function postData() {
 
             <div className="d-flex justify-content-around ">
               <button type="submit" className="loginCheckButton loginWebNone" onClick={() => {
-                    if (authAccount === account && authPassword === password) {
-                      setIsAuth(true);
-                      alert("登入成功");
-                    } else {
-                      alert("帳號/密碼錯誤");
-                    }
-                  }}>
+                if (authAccount === account && authPassword === password) {
+                  setIsAuth(true);
+                  alert("登入成功");
+                } else {
+                  alert("帳號/密碼錯誤");
+                }
+              }}>
                 登入
               </button>
               <button type="submit" className="loginSingUpButton loginWebNone">
