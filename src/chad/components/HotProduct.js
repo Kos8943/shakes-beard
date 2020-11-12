@@ -132,6 +132,7 @@ function HotProduct(props) {
           </Card>
         </div>
       </div>
+     
     </>
   );
 }
