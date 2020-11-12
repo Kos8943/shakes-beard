@@ -56,11 +56,11 @@ function Description(props) {
   },[])
 
    const display=(<>
-      <Media className="mb-3">
+      <Media className="mb-5">
       <img
         alt="description-img"
-        width={200}
-        className="mr-3"
+        width={350}
+        className="mr-4"
         src={require('../img/card01.jpg')} 
       />
       <Media.Body>
@@ -72,13 +72,8 @@ function Description(props) {
           立即預約
         </Link> */}
       </Media.Body>
-    </Media><Media className="mb-3">
-      <img
-        alt="description-img"
-        width={200}
-        className="mr-3"
-        src={require('../img/card01.jpg')} 
-      />
+    </Media>
+    <Media className="mb-5">
       <Media.Body>
         <div>
           <h5>{shopSecondTitle}</h5>
@@ -88,6 +83,12 @@ function Description(props) {
           立即預約
         </Link> */}
       </Media.Body>
+      <img
+        alt="description-img"
+        width={350}
+        className="mr-3"
+        src={require('../img/card01.jpg')} 
+      />
     </Media>
   </>)
   

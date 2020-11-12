@@ -12,16 +12,16 @@ import shop06 from "../img/1-ST006.jpg";
 import shop07 from "../img/1-ST007.jpg";
 import shop08 from "../img/1-ST008.jpg";
 
-function Cards(props) {
-  console.log('Cards', props)
+function CardsCateIsHair(props) {
+  console.log('CardsCateIsHair', props)
   const[heart, setHeart] = useState("dislike");
   const [shops, setShops] = useState([])
   
-  async function getShopsFromServer(){
+  async function getBarberShopsFromServer(){
     // setDataLoading(true)
 
     // json-db
-    const url = 'http://localhost:3000/try-shop'
+    const url = 'http://localhost:3000/try-hair'
 
     const request = new Request(url, {
       method:'GET',
@@ -39,7 +39,7 @@ function Cards(props) {
   }
 
   useEffect(()=>{
-    getShopsFromServer()
+    getBarberShopsFromServer()
   },[])
 
   const display=(
@@ -91,4 +91,4 @@ function Cards(props) {
   )
 }
 
-export default withRouter(Cards)
+export default withRouter(CardsCateIsHair)
