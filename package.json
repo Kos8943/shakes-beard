@@ -27,6 +27,7 @@
     "react": "^17.0.0",
     "react-addons-css-transition-group": "^15.6.2",
     "react-animate-on-scroll": "^2.1.5",
+    "react-animated-css": "^1.2.1",
     "react-animation": "^1.2.2",
     "react-animations": "^1.0.0",
     "react-anime": "^3.0.3",

@@ -63,7 +63,7 @@ class Class_ChooseRazor extends React.Component
     }
     else    //2
     {
-      showIndexs = [0, 1, 2, 3, 4, 5];
+      showIndexs = [3, 4, 5];
       // goodsName  = ['特務刮鬍刀','消光刮鬍刀','復古刮鬍刀','尊爵刮鬍刀','鹿角刮鬍刀','牛角刮鬍刀'];
       // goodsPrice = [600, 1090, 1090, 1800, 1480, 1800];
       // images = [img_Razor01, img_Razor02, img_Razor03, img_Razor04, img_Razor05, img_Razor06];

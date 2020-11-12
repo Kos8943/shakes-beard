@@ -48,11 +48,11 @@ class Class_ChooseStand extends React.Component
     }
     else if (SelectRange == "1")
     {
-      showIndexs = [0, 1, 2, 4];
+      showIndexs = [0, 1, 2, 3, 4];
     }
     else    //2
     {
-      showIndexs = [0, 1, 2, 3, 4, 5];
+      showIndexs = [0, 1, 2, 3, 4];
     }
     
     let lists = [];
