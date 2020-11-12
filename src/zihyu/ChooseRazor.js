@@ -138,7 +138,7 @@ class Class_ChooseRazor extends React.Component
                     {
                       if (SelectRazorIndex == "-1")
                       {
-                        alert("請選擇一樣商品");
+                        alert("請至少選擇一樣商品");
                       }
                       else
                       {
