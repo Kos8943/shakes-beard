@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { withRouter } from "react-router-dom";
 import "../style/All.css";
+// import "../style/Project1.scss";
 import search from "../icon/search.svg";
 // import original from './icon/original.jpg';
 // import Breadcrumb from './component/Breadcrumb'

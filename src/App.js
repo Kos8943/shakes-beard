@@ -32,7 +32,6 @@ import LogIn from "./yen/LogIn";
 import SignUp from "./yen/SignUp";
 import MemberOption from "./yen/MemberOption";
 import TestAuth from "./yen/TestAuth";
-import PostFrom from "./yen/PostFrom";
 import Payment from "./kos/pages/Payment";
 import Paycomplete from './kos/pages/Paycomplete'
 import orderCheck from './kos/pages/OrderCheck'
@@ -47,10 +46,10 @@ function App() {
   // 登出/登入狀態
   const [isAuth,setIsAuth]=useState(false)
 
-  const [authAccount,setAuthAccount]=useState('zzz')
-  const [authPassword,setAuthPasswor]=useState('123')
-  const [account, setAccount] = useState("");
-  const [password, setPassword] = useState("");
+  const [authAccount,setAuthAccount]=useState()
+  const [authPassword,setAuthPasswor]=useState()
+  const [account, setAccount] = useState();
+  const [password, setPassword] = useState();
 
 
 
@@ -231,12 +230,6 @@ function App() {
                 <MemberOption isAuth={isAuth} setIsAuth={setIsAuth} />
               </div>
               <MyFooter />
-            </Route>
-
-            <Route path="/PostFrom">
-              
-                <PostFrom />
-              
             </Route>
 
 

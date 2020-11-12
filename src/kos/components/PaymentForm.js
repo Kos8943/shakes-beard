@@ -6,14 +6,46 @@ import Creaditcard from "./Creaditcard";
 import TWZipCode from "./TWZipCode";
 
 function PaymentForm(props) {
+  
   return (
     <>
       <form>
         <div className="PayCard">
           <h3 className="d-flex justify-content-center">你的訂單</h3>
+          {/* 網頁 */}
+          <div className="cartItem d-xl-flex">
+            <img className="itemImg" src="./imgs/1-3.jpg"></img>
+            <div className="itemName my-auto">Ritmo di vita 陀飛輪袖扣</div>
+            <span className="productTpye">經典黑</span>
+            <span className="amount">1</span>
+            <span className="unitPrice">NT$1,441</span>
+            <span className="subtotal">NT$2,882</span>
+          </div>
 
-          <PaymentCard />
-          <PaymentPrice />
+          {/* 手機 */}
+
+          <div className="cartItemPhone">
+            <img className="itemImg" src="./imgs/1-3.jpg"></img>
+            <div className="itemName">Ritmo di vita 陀飛輪袖扣</div>
+            <div className="KosProjectType">經典黑</div>
+            <div className="PaymentunitPrice">NT$1,441</div>
+
+            <div className="PaymentQty">X1</div>
+            <div className="PaymentSubtotal">NT$2,882</div>
+          </div>
+          <div className="priceArea ml-auto d-flex">
+            <div className="priceArea font">
+              <div>折扣：</div>
+              <div>運費：</div>
+              <div>總計：</div>
+            </div>
+            <div className="priceArea font totalPrice">
+              <div>NT$ -150</div>
+              <div>NT$ 150</div>
+              <div>NT$ 8,796</div>
+            </div>
+          </div>
+
           <hr />
           <div className="recipient">
             <h3 className="d-flex justify-content-center">收件人資訊</h3>
@@ -121,7 +153,9 @@ function PaymentForm(props) {
         </div>
         <div className="paymentBtn mx-auto">
           <Link to="/Paycomplete">
-            <button className="SumitButton" type="submit">確定送出</button>
+            <button className="SumitButton" type="submit">
+              確定送出
+            </button>
           </Link>
         </div>
       </form>
@@ -129,5 +163,4 @@ function PaymentForm(props) {
   );
 }
 
-
-export default PaymentForm
+export default PaymentForm;

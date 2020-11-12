@@ -4,19 +4,23 @@ import './Style/CommonCSS.css';
 import Img_Small from './image/Box_Small.png';
 import Img_Mid from './image/Box_Mid.png';
 import Img_Big from './image/Box_Big.png';
-import { Button } from 'react-bootstrap'
+import { Button } from 'react-bootstrap';
+import {Animated} from "react-animated-css";
+import styled, { keyframes } from 'styled-components';
+import { bounce } from 'react-animations';
+
 
 /** 安裝Slider (https://www.npmjs.com/package/react-bootstrap-range-slider)
  * Example (https://jaywilz.github.io/react-bootstrap-range-slider/)
  * npm install react-bootstrap-range-slider*/
 import 'react-bootstrap-range-slider/dist/react-bootstrap-range-slider.css';
 import RangeSlider from 'react-bootstrap-range-slider';
-import { auto } from '@popperjs/core';
+
  
 let SelectRange = "1";
 const Step = () => {
 
-  const [ value, setValue ] = React.useState(50);
+const [ value, setValue ] = React.useState(50);
 
   return (
     <div style={{width: "58%", margin: "auto"}}>
@@ -52,6 +56,8 @@ const Step = () => {
 
 };
 
+const Bounce = styled.div`animation: 2s ${keyframes`${bounce}`} infinite`;
+
 export class Class_Budget extends React.Component
 {
   render()
@@ -66,9 +72,10 @@ export class Class_Budget extends React.Component
                     <div className="lineTop"></div>
                     <div className="lineDown"></div>
 
-                    <div>
+                    <Animated animationIn="rubberBand" animationOut="bounce" animationInDuration={800} animationOutDuration={800} isVisible={false}>
                       <img className="budget_boxImg" id="changebudget_boxImg" src={Img_Mid} />
-                    </div>
+                    </Animated>
+                    <Bounce></Bounce>
 
                     <Step></Step>
 

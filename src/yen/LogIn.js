@@ -4,24 +4,9 @@ import LogInCss from "./styles/LogInCss.scss";
 import facebook from "./img/facebook.svg";
 import twitter from "./img/twitter.svg";
 import google from "./img/google.svg";
+import { FaDAndDBeyond } from "react-icons/fa";
 
 function LogIn(props) {
-
-function postData() {
-    const fd = new FormData(document.memberForm)
-  fetch('http://localhost:3000/yen/post-test',{
-    method:'POST',
-    body:fd,
-    headers: new Headers({
-      "Content-Type": "application/json",
-    }),
-  })
-  .then((res)=>res.json)
-  .then((res)=>console.log('success:',res))
-}
-
-
-
   const {
     isAuth,
     setIsAuth,
@@ -34,10 +19,63 @@ function postData() {
     password,
     setPassword,
   } = props;
-  // const [account, setAccount] = useState("");
-  // const [password, setPassword] = useState("");
 
-  // if(isAuth===true) return <Redirect to="/homepage" /> 
+
+  function memberIoginForm() {
+
+    const url = 'http://localhost:3000/yen/try-log'
+
+    // const fd = new FormData(document.memberForm)
+
+    // console.log(fd)
+    fetch(url, {
+      method: 'POST',
+      body: JSON.stringify({ account, password }),
+      headers: new Headers({
+        'Content-Type': 'application/json'
+      })
+    })
+      .then(r => r.json())
+
+      .then(o => {
+        console.log(o);
+      })
+
+  }
+
+
+
+  //   // 注意資料格式要設定，伺服器才知道是json格式
+  //   const request = new Request(url, {
+  //     method: 'POST',
+  //     body: JSON.stringify(newData),
+  //     headers: new Headers({
+  //       Accept: 'application/json',
+  //       'Content-Type': 'application/json',
+  //     }),
+  //   })
+
+  //   console.log(JSON.stringify(newData))
+
+  //   const response = await fetch(request)
+  //   const data = await response.json()
+
+  //   console.log('伺服器回傳的json資料', data)
+  //   // 要等驗証過，再設定資料(簡單的直接設定)
+
+  //   //直接在一段x秒關掉指示器
+  //   setTimeout(() => {
+  //     alert('儲存完成')
+  //     props.history.push('/')
+  //   }, 500)
+  // }
+
+
+  // // const [account, setAccount] = useState("");
+  // // const [password, setPassword] = useState("");
+
+  if (isAuth === true) return <Redirect to="/homepage" />
+
 
   return (
     <>
@@ -48,13 +86,13 @@ function postData() {
 
             <form
               className="loginWeb"
-              method="POST"
+              // method="POST"
               name="memberForm"
-              onSubmit={(e)=>{
+              // novalidate
+              onSubmit={(e) => {
                 e.preventDefault();
-                postData()
+                memberIoginForm()
               }}
-              novalidate
             >
               <div className="loginArea1">
                 <lable for="account" className="logText_">
@@ -86,16 +124,13 @@ function postData() {
                 <div className="logText_2">忘記密碼</div>
 
                 <button
-                  type="button"
+                  type="submit"
+                  // onClick={() => { memberIoginForm() }}
                   className="loginCheckButton loginMobile"
-                  // onClick={() => {
-                  //   if (authAccount === account && authPassword === password) {
-                  //     setIsAuth(true);
-                  //     alert("登入成功");
-                  //   } else {
-                  //     alert("帳號/密碼錯誤");
-                  //   }
-                  // }}
+                // onClick={(e) => {
+                //   e.preventDefault();
+                //   memberIoginForm()
+                // }}
                 >
                   登入
                 </button>
@@ -132,24 +167,30 @@ function postData() {
                   </button>
                 </div>
               </div>
+
+
+              <div className="d-flex justify-content-around ">
+                <button type="submit" className="loginCheckButton loginWebNone"
+                // onClick={(e) => {
+                //   e.preventDefault();
+                //   memberIoginForm();
+
+
+                // if (authAccount === account && authPassword === password) {
+                //   setIsAuth(true);
+                //   alert("登入成功");
+                // } else {
+                //   alert("帳號/密碼錯誤");
+                // }
+                // }}>
+                >
+                  登入
+              </button>
+                <button type="submit" className="loginSingUpButton loginWebNone">
+                  註冊帳號
+              </button>
+              </div>
             </form>
-
-            <div className="d-flex justify-content-around ">
-              <button type="submit" className="loginCheckButton loginWebNone" onClick={() => {
-                    if (authAccount === account && authPassword === password) {
-                      setIsAuth(true);
-                      alert("登入成功");
-                    } else {
-                      alert("帳號/密碼錯誤");
-                    }
-                  }}>
-                登入
-              </button>
-              <button type="submit" className="loginSingUpButton loginWebNone">
-                註冊帳號
-              </button>
-            </div>
-
             <div className="loginMobile"></div>
           </div>
         </div>

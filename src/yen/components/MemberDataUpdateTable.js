@@ -4,9 +4,6 @@ import DatePicker from "react-datepicker";
 import Address from "./Address";
 
 import "react-datepicker/dist/react-datepicker.css";
-
-// 改為台灣繁體中文的日期樣式
-// 參考：https://github.com/Hacker0x01/react-datepicker/#localization
 import { registerLocale, setDefaultLocale } from "react-datepicker";
 import { zhTW } from "date-fns/esm/locale";
 import { set } from "animejs";
@@ -16,7 +13,7 @@ function MemberDataUpdateTable(props) {
   // const { isAuth, setIsAuth,account, setAccount,password, setPassword ,authAccount,setAuthAccount,authPassword,setAuthPassword} = props;
 
   const [authAccount,setAuthAccount]=useState('')
-  const [authPassword,setAuthPasswor]=useState('')
+  // const [authPassword,setAuthPasswor]=useState('')
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [phone, setPhone] = useState("");
@@ -33,8 +30,8 @@ function MemberDataUpdateTable(props) {
 
 
   
-  async function getFromServer() {
-    const url = "http://localhost:3000/yen/try-mem";
+  async function getFrom() {
+    const url = "http://localhost:3000/yen/update";
     const request = new Request(url, {
       method: "GET",
       headers: new Headers({
@@ -47,7 +44,7 @@ function MemberDataUpdateTable(props) {
     const memberData = await res.json();
     console.log(memberData);
 
-    //待判斷使用者為誰
+ 
     setAuthAccount(memberData[0].authAccount)
     setName(memberData[0].name);
     setEmail(memberData[0].email);
@@ -56,8 +53,38 @@ function MemberDataUpdateTable(props) {
     setAddress(memberData[0].address);
   }
   useEffect(() => {
-    getFromServer();
+    getFrom();
   }, []);
+
+
+ function post() {
+    const postdata ={
+       name:name,
+       email:email,
+       birth:birth,
+       phone:phone,
+       address:address
+    }
+    console.log(postdata)
+    fetch('',{
+        method:"POST",
+        headers:{
+            "Content-type":"application/json"
+        },
+        body:JSON.stringify(postdata)
+    })
+    .then(res =>res.json())
+    .then(data =>{
+        console.log(data)
+    })
+
+ }
+
+useEffect(() => {
+      post();
+    }, []);
+
+
 
   return (
     <>
@@ -124,7 +151,10 @@ function MemberDataUpdateTable(props) {
               }}
             ></input>
             <div className="upbtnDir">
-              <button className="upDateCancle">取消</button>
+              <button className="upDateCancle" onSubmit={(e)=>{
+                e.preventDefault();
+                post();
+              }}>取消</button>
               <button className="upDateCheck">完成</button>
             </div>
           </form>
@@ -136,68 +166,6 @@ function MemberDataUpdateTable(props) {
   );
 }
 
-// import React from "react";
 
-// function MemberDataUpdateTable(props) {
-//   return (
-//     <>
-//       <div className="rightArea col-12 col-sm-9">
-//         <div className="optionTittle webObj">{props.title}</div>
-//         <div className="decLine webObj"></div>
-//         <div className="updateArea">
-//           <div>
-//             <div>會員帳號</div>
-//             <input
-//               type="text"
-//               disabled="disabled"
-//               className="updateInput"
-//               value="xxx"
-//             ></input>
-//             <div>姓名</div>
-//             <input type="text" className="updateInput" value="王大明"></input>
-//             <div>信箱</div>
-//             <input
-//               type="text"
-//               className="updateInput"
-//               value="xxx@xxx.com"
-//             ></input>
-//             <div>生日</div>
-//             <div className="d-flex">
-//               <select className="birthday">
-//                 <option>1</option>
-//               </select>
-//               <div className="birthdayText">月</div>
-//               <select className="birthday">
-//                 <option>13</option>
-//               </select>
-//               <div className="birthdayText">日</div>
-//             </div>
-//             {/* <input type="text" className="updateInput" placeholder="YYYY-MM-DD"></input> */}
-//             <div>手機</div>
-//             <input type="text" className="updateInput"></input>
-//             <div>地址</div>
-//             <div className="d-flex">
-//               <select>
-//                 <option>台北市</option>
-//               </select>
-//               <select>
-//                 <option>大安區</option>
-//               </select>
-//             </div>
-//             <input type="text" className="updateInput"></input>
-//           </div>
-//           <div className="btnCenter justify-content-end">
-//             <button type="submit" className="memberCancle">
-//               取消
-//             </button>
-//             <button type="submit" className="memberCheck">
-//               完成
-//             </button>
-//           </div>
-//         </div>
-//       </div>
-//     </>
-//   );
-// }
 
 export default MemberDataUpdateTable;
