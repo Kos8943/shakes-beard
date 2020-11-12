@@ -16,50 +16,33 @@ import { bounce } from 'react-animations';
 import 'react-bootstrap-range-slider/dist/react-bootstrap-range-slider.css';
 import RangeSlider from 'react-bootstrap-range-slider';
 
- 
 let SelectRange = "1";
-const Step = () => {
-
-const [ value, setValue ] = React.useState(50);
-
-  return (
-    <div style={{width: "58%", margin: "auto"}}>
-    <RangeSlider className="silderbox"
-      value={value}
-      onChange={e =>
-        {
-          setValue(e.target.value);
-          var targetDiv = document.getElementById("changebudget_boxImg");
-          
-          switch (e.target.value)
-          {
-            case "0":
-              SelectRange = "0";
-              targetDiv.setAttribute("src", Img_Small);
-              break;
-            case "50":
-              SelectRange = "1";
-              targetDiv.setAttribute("src", Img_Mid);
-              break;
-            case "100":
-              SelectRange = "2";
-              targetDiv.setAttribute("src", Img_Big);
-              break;
-          }
-        }
-      }
-      step={50}
-      tooltip='off'
-    />
-    </div>
-  );
-
-};
-
-const Bounce = styled.div`animation: 2s ${keyframes`${bounce}`} infinite`;
+//動畫參考網址：https://www.cnblogs.com/nzbin/p/8934478.html
+let ExeAniName = "rubberBand";
 
 export class Class_Budget extends React.Component
 {
+  constructor(props)
+  {
+    super(props);
+    this.state = {
+      aniName:'',
+      sliderValue: 50
+    }
+  }
+  handleAnimationEnd = (e)=>
+  {
+    this.setState({
+      aniName: ''
+    });
+  }
+  startPlayAni = (e)=>
+  {
+    this.setState({
+      aniName: ExeAniName
+    });
+  }
+
   render()
   {
     return (
@@ -72,12 +55,43 @@ export class Class_Budget extends React.Component
                     <div className="lineTop"></div>
                     <div className="lineDown"></div>
 
-                    <Animated animationIn="rubberBand" animationOut="bounce" animationInDuration={800} animationOutDuration={800} isVisible={false}>
-                      <img className="budget_boxImg" id="changebudget_boxImg" src={Img_Mid} />
-                    </Animated>
-                    <Bounce></Bounce>
+                    
+            <div className={`animated ${this.state.aniName}`} onAnimationEnd={this.handleAnimationEnd}>
+              <img className="budget_boxImg" id="changebudget_boxImg" src={Img_Mid} />
+            </div>
+        
+        
+            <div style={{width: "58%", margin: "auto"}}>
+              <RangeSlider className="silderbox"
+                value={this.state.sliderValue}
+                onChange={e =>
+                  {
+                    this.state.sliderValue = Number(e.target.value);
+                    var targetDiv = document.getElementById("changebudget_boxImg");
+                    
+                    switch (e.target.value)
+                    {
+                      case "0":
+                        SelectRange = "0";
+                        targetDiv.setAttribute("src", Img_Small);
+                        break;
+                      case "50":
+                        SelectRange = "1";
+                        targetDiv.setAttribute("src", Img_Mid);
+                        break;
+                      case "100":
+                        SelectRange = "2";
+                        targetDiv.setAttribute("src", Img_Big);
+                        break;
+                    }
+                    this.startPlayAni(e);
+                  }
+                }
+                step={50}
+                tooltip='off'
+              />
+            </div>
 
-                    <Step></Step>
 
                     <div className="budget_Grid align-items-center">
                       <div className="ramgeNumber ramge3000 col">小於<br/>2000元</div>

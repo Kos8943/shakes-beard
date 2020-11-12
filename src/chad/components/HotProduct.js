@@ -2,8 +2,8 @@ import React, { useState, useEffect } from "react";
 import "animate.css/animate.min.css";
 import ScrollAnimation from "react-animate-on-scroll";
 import "../styles/custom.scss";
-import { Button, Carousel, Card } from "react-bootstrap";
-// import { data } from "jquery";
+import { Button, Carousel, Card, CarouselItem } from "react-bootstrap";
+import { Link} from "react-router-dom";
 
 function HotProduct(props) {
   const [dataLoading, setDataLoading] = useState(false);
@@ -68,9 +68,11 @@ function HotProduct(props) {
             <Card.Body id="cardbody">
               <Card.Title>{hotProductList[index].hotname}</Card.Title>
               <Card.Text id="price">NT${hotProductList[index].hotprice}</Card.Text>
+              <a href="/project">
               <Button variant="primary" id="chadbuy">
                 立即購買
               </Button>
+              </a>
             </Card.Body>
           </Card>
           )
@@ -105,15 +107,32 @@ function HotProduct(props) {
               </Carousel.Item>
             </Carousel>
             <Card.Body id="card-body-mobile">
-              <Card.Title>質男嚴選毛刷</Card.Title>
-              <Card.Text>NT$1000</Card.Text>
+
+  
+    <Carousel>
+              <CarouselItem>
+              <Card.Title>機械質感袖扣</Card.Title>
+              <Card.Text>NT$1200</Card.Text>
+              </CarouselItem>
+              <CarouselItem>
+              <Card.Title>純獾毛刮鬍刷</Card.Title>
+              <Card.Text>NT$1280</Card.Text>
+              </CarouselItem>
+              <CarouselItem>
+              <Card.Title>木質調刮鬍刀架</Card.Title>
+              <Card.Text>NT$1300</Card.Text>
+              </CarouselItem>
+            </Carousel>     
+              <Link as={Link} to="/project">
               <Button variant="primary" id="chadbuy">
                 立即購買
               </Button>
+              </Link>
             </Card.Body>
           </Card>
         </div>
       </div>
+     
     </>
   );
 }

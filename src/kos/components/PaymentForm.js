@@ -1,38 +1,118 @@
-import React, { useState } from "react";
+/* eslint-disable no-useless-concat */
+/* eslint-disable jsx-a11y/alt-text */
+import React, { useState, useEffect } from "react";
 import PaymentCard from "./PaymentCard";
 import PaymentPrice from "./PaymentPrice";
-import { Link } from "react-router-dom";
+import { Link, Redirect } from "react-router-dom";
 import Creaditcard from "./Creaditcard";
 import TWZipCode from "./TWZipCode";
 
 function PaymentForm(props) {
-  
+  const [paymentDataBD, setPaymentDataBD] = useState([]);
+  const [sss , setsss] = useState(0)
+  // const [paymentImg, setPaymentDataImg] = useState()
+  // const [paymentproductName, setPaymentproductName] = useState()
+  // const [paymentProductType, setPaymentProductType] = useState()
+  // const [paymentAmount, setPaymentAmount] = useState()
+  // const [paymentSubtotal, setPaymentSubtotal] = useState()
+  // const [paymentUnitPrice, setPaymentUnitPrice] = useState()
+  // const [paymentPriceOff, setPaymentPriceOff] = useState()
+  // const [paymentShipping, setPaymentShipping] = useState()
+  // const [paymentTotal, setPaymentTotal] = useState()
+
+  async function getPaymentDataFromDB() {
+    const url = "http://localhost:3000/try-payment";
+
+    const request = new Request(url, {
+      method: "GET",
+      headers: new Headers({
+        Accept: "application/json",
+        "Content-Type": "application/json",
+      }),
+    });
+
+    const response = await fetch(request);
+    const data = await response.json();
+
+    setPaymentDataBD(data);
+    console.log(data);
+  }
+
+  useEffect(() => {
+    getPaymentDataFromDB();
+  }, []);
+
+  function paymentData() {
+    const d = {
+      name: document.querySelector(".itemName").innerHTML,
+    };
+
+    console.log(d);
+    
+  }
+
   return (
     <>
-      <form>
-        <div className="PayCard">
+      <form
+        name="form1"
+        method="post"
+        onSubmit={(e) => {
+          e.preventDefault();
+          paymentData();
+        }}
+      >
+        <div className="PayCard m-auto">
           <h3 className="d-flex justify-content-center">你的訂單</h3>
-          {/* 網頁 */}
-          <div className="cartItem d-xl-flex">
-            <img className="itemImg" src="./imgs/1-3.jpg"></img>
-            <div className="itemName my-auto">Ritmo di vita 陀飛輪袖扣</div>
-            <span className="productTpye">經典黑</span>
-            <span className="amount">1</span>
-            <span className="unitPrice">NT$1,441</span>
-            <span className="subtotal">NT$2,882</span>
-          </div>
+          {paymentDataBD.map((value, index) => {
+            return (
+              <>
+                {/* 網頁 */}
+                <div className="cartItem d-xl-flex">
+                  <img
+                    className="itemImg"
+                    src={"./imgs/hsuan/" + `${paymentDataBD[index].img}`}
+                  ></img>
+                  <div className="itemName my-auto">
+                    {paymentDataBD[index].name}
+                  </div>
+                  <span className="productTpye">
+                    {paymentDataBD[index].type}
+                  </span>
+                  <span className="amount">{paymentDataBD[index].amount}</span>
+                  <span className="unitPrice">
+                    NT${paymentDataBD[index].unitPrice}
+                  </span>
+                  <span className="subtotal">
+                    NT${paymentDataBD[index].subtotal}
+                  </span>
+                </div>
 
-          {/* 手機 */}
+                {/* 手機 */}
 
-          <div className="cartItemPhone">
-            <img className="itemImg" src="./imgs/1-3.jpg"></img>
-            <div className="itemName">Ritmo di vita 陀飛輪袖扣</div>
-            <div className="KosProjectType">經典黑</div>
-            <div className="PaymentunitPrice">NT$1,441</div>
+                <div className="cartItemPhone">
+                  <img
+                    className="itemImg"
+                    src={"./imgs/hsuan/" + `${paymentDataBD[index].img}`}
+                  ></img>
+                  <div className="itemName"> {paymentDataBD[index].name}</div>
+                  <div className="KosProjectType">
+                    {paymentDataBD[index].type}
+                  </div>
+                  <div className="PaymentunitPrice">
+                    NT${paymentDataBD[index].unitPrice}
+                  </div>
 
-            <div className="PaymentQty">X1</div>
-            <div className="PaymentSubtotal">NT$2,882</div>
-          </div>
+                  <div className="PaymentQty">
+                    X{paymentDataBD[index].amount}
+                  </div>
+                  <div className="PaymentSubtotal">
+                    NT${paymentDataBD[index].subtotal}
+                  </div>
+                </div>
+              </>
+            );
+          })}
+
           <div className="priceArea ml-auto d-flex">
             <div className="priceArea font">
               <div>折扣：</div>
@@ -75,16 +155,36 @@ function PaymentForm(props) {
               <h3 className="d-flex justify-content-center">發票</h3>
               <div className="">
                 <label className="col-6 col-xl-3 LabelFont">
-                  <input type="radio" className="radio"></input>個人電子發票
+                  <input
+                    type="radio"
+                    name="Receipt"
+                    className="paymentRadio"
+                  ></input>
+                  電子發票
                 </label>
                 <label className="col-6 col-xl-3 LabelFont">
-                  <input type="radio" className="radio"></input>捐贈發票
+                  <input
+                    type="radio"
+                    name="Receipt"
+                    className="paymentRadio"
+                  ></input>
+                  捐贈發票
                 </label>
                 <label className="col-6 col-xl-3 LabelFont pr-1">
-                  <input type="radio" className="radio"></input>公司戶電子發票
+                  <input
+                    type="radio"
+                    name="Receipt"
+                    className="paymentRadio"
+                  ></input>
+                  公司電子發票
                 </label>
                 <label className="col-6 col-xl-3 LabelFont">
-                  <input type="radio" className="radio"></input>手機載具
+                  <input
+                    type="radio"
+                    name="Receipt"
+                    className="paymentRadio"
+                  ></input>
+                  手機載具
                 </label>
               </div>
             </div>
@@ -151,12 +251,12 @@ function PaymentForm(props) {
             </div>
           </div>
         </div>
+        {/* to="/Paycomplete" */}
         <div className="paymentBtn mx-auto">
-          <Link to="/Paycomplete">
-            <button className="SumitButton" type="submit">
-              確定送出
-            </button>
-          </Link>
+          <Link to="/Paycomplete"> </Link>
+          <button className="SumitButton" type="submit">
+            確定送出
+          </button>
         </div>
       </form>
     </>
