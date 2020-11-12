@@ -16,7 +16,6 @@ import all2 from "./imgs/all2.png";
 import "animate.css/animate.min.css";
 import ScrollAnimation from "react-animate-on-scroll";
 import Plx from "react-plx";
-
 const parallaxData = [
   {
     start: 0,
