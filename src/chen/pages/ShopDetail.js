@@ -24,16 +24,22 @@ function ShopDetail(props) {
       <div className="row pl-3">
         <div>
           <Description/>
-            <strong className="d-inline-block my-2">注意事項</strong>
-            <p className="card-text mb-auto">This is a wider card with supporting text below asanatural lead-in to additional content.</p>
-            {/* map */}    
-            <Link to="/reservation" className="mt-4 btn goReserve mx-auto d-flex justify-self-center justify-items-center">
-              立即預約
-            </Link>
         </div>
       </div>
       <div className="row">
-        <Recommend/>
+        <div>
+          <strong className="d-inline-block my-2">注意事項</strong>
+          <p className="card-text mb-auto">This is a wider card with supporting text belowasanatural lead-in to additional content.</p>
+          {/* map */}    
+          <Link to="/reservation" className="mt-4 btn goReserve mx-auto d-flex justify-self-center justify-items-center">
+            立即預約
+          </Link>
+        </div>
+      </div>
+      <div className="row">
+        <div>
+          <Recommend/>
+        </div>
       </div>
     </div>
   </>
