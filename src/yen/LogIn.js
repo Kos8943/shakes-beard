@@ -6,6 +6,22 @@ import twitter from "./img/twitter.svg";
 import google from "./img/google.svg";
 
 function LogIn(props) {
+
+function postData() {
+    const fd = new FormData(document.memberForm)
+  fetch('http://localhost:3000/yen/post-test',{
+    method:'POST',
+    body:fd,
+    headers: new Headers({
+      "Content-Type": "application/json",
+    }),
+  })
+  .then((res)=>res.json)
+  .then((res)=>console.log('success:',res))
+}
+
+
+
   const {
     isAuth,
     setIsAuth,
@@ -21,7 +37,7 @@ function LogIn(props) {
   // const [account, setAccount] = useState("");
   // const [password, setPassword] = useState("");
 
-  if(isAuth===true) return <Redirect to="/homepage" /> 
+  // if(isAuth===true) return <Redirect to="/homepage" /> 
 
   return (
     <>
@@ -34,7 +50,10 @@ function LogIn(props) {
               className="loginWeb"
               method="POST"
               name="memberForm"
-              onsubmit="return false;"
+              onSubmit={(e)=>{
+                e.preventDefault();
+                postData()
+              }}
               novalidate
             >
               <div className="loginArea1">
@@ -69,14 +88,14 @@ function LogIn(props) {
                 <button
                   type="button"
                   className="loginCheckButton loginMobile"
-                  onClick={() => {
-                    if (authAccount === account && authPassword === password) {
-                      setIsAuth(true);
-                      alert("登入成功");
-                    } else {
-                      alert("帳號/密碼錯誤");
-                    }
-                  }}
+                  // onClick={() => {
+                  //   if (authAccount === account && authPassword === password) {
+                  //     setIsAuth(true);
+                  //     alert("登入成功");
+                  //   } else {
+                  //     alert("帳號/密碼錯誤");
+                  //   }
+                  // }}
                 >
                   登入
                 </button>
