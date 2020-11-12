@@ -6,22 +6,6 @@ import twitter from "./img/twitter.svg";
 import google from "./img/google.svg";
 
 function LogIn(props) {
-
-function postData() {
-    const fd = new FormData(document.memberForm)
-  fetch('http://localhost:3000/yen/post-test',{
-    method:'POST',
-    body:fd,
-    headers: new Headers({
-      "Content-Type": "application/json",
-    }),
-  })
-  .then((res)=>res.json)
-  .then((res)=>console.log('success:',res))
-}
-
-
-
   const {
     isAuth,
     setIsAuth,
@@ -34,6 +18,34 @@ function postData() {
     password,
     setPassword,
   } = props;
+
+
+
+  async function memberIoginForm() {
+    const newData = { account, password }
+
+    const url = 'http://localhost:3000/yen/try-mem'
+
+    const request = new Request(url, {
+      method: 'POST',
+      body: JSON.stringify(newData),
+      headers: new Headers({
+        Accept: 'application/json',
+        'Content-Type': 'application/json',
+      }),
+    })
+
+    console.log(JSON.stringify(newData))
+
+    const response = await fetch(request)
+    const data = await response.json()
+
+    console.log('伺服器回傳的json資料', data)
+    // 要等驗証過，再設定資料(簡單的直接設定)
+   
+    //  alert('儲存完成')
+  }
+
   // const [account, setAccount] = useState("");
   // const [password, setPassword] = useState("");
 
@@ -50,10 +62,6 @@ function postData() {
               className="loginWeb"
               method="POST"
               name="memberForm"
-              onSubmit={(e)=>{
-                e.preventDefault();
-                postData()
-              }}
               novalidate
             >
               <div className="loginArea1">
@@ -87,6 +95,7 @@ function postData() {
 
                 <button
                   type="button"
+                  onClick={()=>{memberIoginForm()}}
                   className="loginCheckButton loginMobile"
                   // onClick={() => {
                   //   if (authAccount === account && authPassword === password) {
