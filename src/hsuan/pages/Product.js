@@ -88,7 +88,7 @@ class Product extends React.Component {
       <a href="http://localhost:3001/project1">
       <ScrollAnimation animateIn='fadeIn'>
         <div class="i sa sa--down show">
-                <img class="fit" src={require("../icon/1-5.jpg")} alt=""/>
+                <img class="fit" src="./imgs/hsuan/1-5.jpg" alt=""/>
               </div>
         <div class="title en">服飾配件</div>
         </ScrollAnimation>
@@ -121,7 +121,7 @@ class Product extends React.Component {
       <a href="http://localhost:3001/project1">
       <ScrollAnimation animateIn='fadeIn'>
         <div class="i sa sa--down show">
-                <img class="fit"  src="./imgs/hsuan/du.jpg" alt=""/>
+                <img class="fit"  src="./imgs/hsuan/lash.jpg" alt=""/>
               </div>
         <div class="title en">沐浴清潔</div>
         </ScrollAnimation>
