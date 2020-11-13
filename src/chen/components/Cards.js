@@ -46,7 +46,7 @@ function Cards(props) {
             pathname:'/shopdetail/'+ value.sid
         }}>
           {/* <img src={require('../img/card01.jpg')} className="card-img-top" alt="..." /> */}
-          <img src={require(`../img/${value.shop_avatar}`)} className="card-img-top" alt="..." />
+          <img src={`/imgs/shops/${value.shop_avatar}`} className="card-img-top" alt="..." />
         </Link>
         <div className="card-body p-2">
           <h6>
