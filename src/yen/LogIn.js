@@ -20,6 +20,7 @@ function LogIn(props) {
     setPassword,
   } = props;
 
+
   function memberIoginForm() {
     const url = "http://localhost:3000/yen/try-log";
 
@@ -35,9 +36,25 @@ function LogIn(props) {
     })
       .then((r) => r.json())
 
+
       .then(o => {
         console.log('react收到的', o);
+        if (o.success) {
+          setIsAuth(true)
+          localStorage.setItem("data", JSON.stringify(o))
+          localStorage.setItem('auth', true)
+
+          // setIsAuth = (JSON.parse(localStorage.getItem('auth')))
+
+
+        } else {
+          alert('帳號／密碼錯誤')
+          setPassword('')
+          setAccount('')
+        }
+
       })
+
 
   }
 

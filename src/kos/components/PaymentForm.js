@@ -44,8 +44,8 @@ function PaymentForm(props) {
       name: document.querySelector(".itemName").value,
     };
 
-    console.log(d);
-    
+    // console.log(d);
+    // return <Redirect to="/homepage" />;
   }
 
   return (
@@ -172,7 +172,7 @@ function PaymentForm(props) {
         </div>
         {/* to="/Paycomplete" */}
         <div className="paymentBtn mx-auto">
-         <Link to=""></Link>
+          <Link to=""></Link>
           <button className="SumitButton" type="submit" >
             確定送出
           </button>
