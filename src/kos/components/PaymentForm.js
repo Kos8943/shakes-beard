@@ -9,7 +9,7 @@ import TWZipCode from "./TWZipCode";
 
 function PaymentForm(props) {
   const [paymentDataBD, setPaymentDataBD] = useState([]);
-  const [sss , setsss] = useState(0)
+  const [sss, setsss] = useState(0)
   // const [paymentImg, setPaymentDataImg] = useState()
   // const [paymentproductName, setPaymentproductName] = useState()
   // const [paymentProductType, setPaymentProductType] = useState()
@@ -43,12 +43,12 @@ function PaymentForm(props) {
   }, []);
 
   function paymentData() {
-    const d = {
-      name: document.querySelector(".itemName").innerHTML,
-    };
+    // const d = {
+    //   name: document.querySelector(".itemName").innerHTML,
+    // };
 
-    console.log(d);
-    
+    // console.log(d);
+    // return <Redirect to="/homepage" />;
   }
 
   return (

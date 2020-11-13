@@ -16,7 +16,7 @@ function MemberPreferenceSetting(props) {
   const [card, setCard] = useState("");
   const [cardDate, setCardDate] = useState("");
   const [cvc, setCvc] = useState("");
-  const [invoice, setInvoice] = useState("個人發票");
+  const [invoice, setInvoice] = useState("三聯式發票");
   const [favorite, setFavorite] = useState("");
 
   const [radio, setRadio] = useState("");
@@ -46,7 +46,7 @@ function MemberPreferenceSetting(props) {
     setPhone(memberData[0].phone);
     setAddress(memberData[0].address);
     setCvc(memberData[0].cvc);
-    setInvoice(memberData[0].invoice);
+    //setInvoice(memberData[0].invoice);
 
 
 
@@ -95,7 +95,7 @@ function MemberPreferenceSetting(props) {
 
             <div className="tittle2">發票設定</div>
 
-            {/* // {(invoice==="個人發票")?check:""} */}
+
 
             <div>
               <input
@@ -103,11 +103,13 @@ function MemberPreferenceSetting(props) {
                 id="personal"
                 name="invoice"
                 value="兩聯式發票"
+                checked={invoice == "兩聯式發票"}
                 onChange={(e) => {
                   setInvoice(e.target.value)
                 }}
-              ></input>
+              />
               <label for="personal">兩聯式發票(個人)</label>
+
             </div>
 
             <div>
@@ -116,6 +118,8 @@ function MemberPreferenceSetting(props) {
                 id="company"
                 name="invoice"
                 value="三聯式發票"
+                checked={invoice == "三聯式發票"}
+
                 onChange={(e) => {
                   setInvoice(e.target.value)
                 }}
