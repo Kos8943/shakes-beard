@@ -45,7 +45,7 @@ class Class_Color extends React.Component
       
           <div className="blueBox1">
                 <div className="step">Step.5
-                  <div className="Title2">選擇顏色</div>
+                  <div className="Title2">選擇禮盒顏色</div>
                   <div className="lineTop"></div>
                   <div className="lineDown"></div>
 
