@@ -20,30 +20,32 @@ function LogIn(props) {
     setPassword,
   } = props;
 
-
   function memberIoginForm() {
-
-    const url = 'http://localhost:3000/yen/try-log'
+    const url = "http://localhost:3000/yen/try-log";
 
     // const fd = new FormData(document.memberForm)
 
     // console.log(fd)
     fetch(url, {
-      method: 'POST',
+      method: "POST",
       body: JSON.stringify({ account, password }),
       headers: new Headers({
-        'Content-Type': 'application/json'
-      })
+        "Content-Type": "application/json",
+      }),
     })
-      .then(r => r.json())
+      .then((r) => r.json())
 
+<<<<<<< HEAD
       .then(o => {
         console.log('react收到的', o);
       })
 
+=======
+      .then((o) => {
+        console.log(o);
+      });
+>>>>>>> de1d0b3671408e4ab478e279147a54c3d1763510
   }
-
-
 
   //   // 注意資料格式要設定，伺服器才知道是json格式
   //   const request = new Request(url, {
@@ -70,12 +72,10 @@ function LogIn(props) {
   //   }, 500)
   // }
 
-
   // // const [account, setAccount] = useState("");
   // // const [password, setPassword] = useState("");
 
-  if (isAuth === true) return <Redirect to="/homepage" />
-
+  if (isAuth === true) return <Redirect to="/homepage" />;
 
   return (
     <>
@@ -85,110 +85,115 @@ function LogIn(props) {
             <div className="loginTittle">登入</div>
 
             <form
-              className="loginWeb"
+              className="loginWeb d-flex flex-column"
               // method="POST"
               name="memberForm"
               // novalidate
               onSubmit={(e) => {
                 e.preventDefault();
-                memberIoginForm()
+                memberIoginForm();
               }}
             >
-              <div className="loginArea1">
-                <lable for="account" className="logText_">
-                  帳號
-                </lable>
-                <input
-                  className="loginInput"
-                  name="account"
-                  type="text"
-                  id="account"
-                  value={account}
-                  onChange={(e) => setAccount(e.target.value)}
-                  required
-                ></input>
+              <div className="log ">
+                <div className="loginArea1">
+                  <lable for="account" className="logText_">
+                    帳號
+                  </lable>
+                  <input
+                    className="loginInput"
+                    name="account"
+                    type="text"
+                    id="account"
+                    value={account}
+                    onChange={(e) => setAccount(e.target.value)}
+                    required
+                  ></input>
 
-                <label for="password" className="logText_ d-flex flex-column">
-                  密碼
-                </label>
-                <input
-                  className="loginInput"
-                  name="password"
-                  type="password"
-                  id="password"
-                  value={password}
-                  onChange={(e) => setPassword(e.target.value)}
-                  required
-                ></input>
+                  <label for="password" className="logText_ d-flex flex-column">
+                    密碼
+                  </label>
+                  <input
+                    className="loginInput"
+                    name="password"
+                    type="password"
+                    id="password"
+                    value={password}
+                    onChange={(e) => setPassword(e.target.value)}
+                    required
+                  ></input>
 
-                <div className="logText_2">忘記密碼</div>
-
-                <button
-                  type="submit"
-                  // onClick={() => { memberIoginForm() }}
-                  className="loginCheckButton loginMobile"
-                // onClick={(e) => {
-                //   e.preventDefault();
-                //   memberIoginForm()
-                // }}
-                >
-                  登入
-                </button>
-              </div>
-
-              <div className="loginArea2 ">
-                <div className="otherAccount">
-                  <button className="otherLogButton facebook">
-                    <div className="d-flex justify-content-around align-items-center">
-                      <img src={facebook} className="lognIcon "></img>
-                      使用Facebook登入<div></div>
-                    </div>
-                  </button>
-
-                  <button className="otherLogButton twitter">
-                    <div className="d-flex justify-content-around align-items-center">
-                      <img src={twitter} className="lognIcon"></img>
-                      使用Twitter登入<div></div>
-                    </div>
-                  </button>
-
-                  <button className="otherLogButton google">
-                    <div className="d-flex justify-content-around align-items-center">
-                      <img src={google} className="lognIcon"></img>
-                      使用Google登入<div></div>
-                    </div>
-                  </button>
+                  <div className="logText_2">忘記密碼</div>
 
                   <button
                     type="submit"
-                    className="loginSingUpButton loginMobile"
+                    // onClick={() => { memberIoginForm() }}
+                    className="loginCheckButton loginMobile"
+                    // onClick={(e) => {
+                    //   e.preventDefault();
+                    //   memberIoginForm()
+                    // }}
                   >
-                    註冊帳號
+                    登入
                   </button>
                 </div>
+
+                <div className="loginArea2 ">
+                  <div className="otherAccount">
+                    <button className="otherLogButton facebook">
+                      <div className="d-flex justify-content-around align-items-center">
+                        <img src={facebook} className="lognIcon "></img>
+                        使用Facebook登入<div></div>
+                      </div>
+                    </button>
+
+                    <button className="otherLogButton twitter">
+                      <div className="d-flex justify-content-around align-items-center">
+                        <img src={twitter} className="lognIcon"></img>
+                        使用Twitter登入<div></div>
+                      </div>
+                    </button>
+
+                    <button className="otherLogButton google">
+                      <div className="d-flex justify-content-around align-items-center">
+                        <img src={google} className="lognIcon"></img>
+                        使用Google登入<div></div>
+                      </div>
+                    </button>
+
+                    <button
+                      type="submit"
+                      className="loginSingUpButton loginMobile"
+                    >
+                      註冊帳號
+                    </button>
+                  </div>
+                </div>
               </div>
-
-
+              {/* </form> */}
               <div className="d-flex justify-content-around ">
-                <button type="submit" className="loginCheckButton loginWebNone"
-                // onClick={(e) => {
-                //   e.preventDefault();
-                //   memberIoginForm();
+                <button
+                  type="submit"
+                  className="loginCheckButton loginWebNone"
+                  // onClick={(e) => {
+                  //   e.preventDefault();
+                  //   memberIoginForm();
 
-
-                // if (authAccount === account && authPassword === password) {
-                //   setIsAuth(true);
-                //   alert("登入成功");
-                // } else {
-                //   alert("帳號/密碼錯誤");
-                // }
-                // }}>
+                  // if (authAccount === account && authPassword === password) {
+                  //   setIsAuth(true);
+                  //   alert("登入成功");
+                  // } else {
+                  //   alert("帳號/密碼錯誤");
+                  // }
+                  // }}>
                 >
                   登入
-              </button>
-                <button type="submit" className="loginSingUpButton loginWebNone">
+                </button>
+                <button
+                  type="submit"
+                  className="loginSingUpButton loginWebNone"
+                >
                   註冊帳號
-              </button>
+                </button>
               </div>
             </form>
             <div className="loginMobile"></div>
