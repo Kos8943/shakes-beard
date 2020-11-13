@@ -87,7 +87,7 @@ function LogIn(props) {
                 memberIoginForm();
               }}
             >
-              <div className="d-flex">
+              <div className="log ">
                 <div className="loginArea1">
                   <lable for="account" className="logText_">
                     帳號
@@ -162,29 +162,32 @@ function LogIn(props) {
                   </div>
                 </div>
               </div>
-            {/* </form> */}
-            <div className="d-flex justify-content-around ">
-              <button
-                type="submit"
-                className="loginCheckButton loginWebNone"
-                // onClick={(e) => {
-                //   e.preventDefault();
-                //   memberIoginForm();
+              {/* </form> */}
+              <div className="d-flex justify-content-around ">
+                <button
+                  type="submit"
+                  className="loginCheckButton loginWebNone"
+                  // onClick={(e) => {
+                  //   e.preventDefault();
+                  //   memberIoginForm();
 
-                // if (authAccount === account && authPassword === password) {
-                //   setIsAuth(true);
-                //   alert("登入成功");
-                // } else {
-                //   alert("帳號/密碼錯誤");
-                // }
-                // }}>
-              >
-                登入
-              </button>
-              <button type="submit" className="loginSingUpButton loginWebNone">
-                註冊帳號
-              </button>
-            </div>
+                  // if (authAccount === account && authPassword === password) {
+                  //   setIsAuth(true);
+                  //   alert("登入成功");
+                  // } else {
+                  //   alert("帳號/密碼錯誤");
+                  // }
+                  // }}>
+                >
+                  登入
+                </button>
+                <button
+                  type="submit"
+                  className="loginSingUpButton loginWebNone"
+                >
+                  註冊帳號
+                </button>
+              </div>
             </form>
             <div className="loginMobile"></div>
           </div>
