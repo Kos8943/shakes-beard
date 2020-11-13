@@ -11,7 +11,7 @@ import map3 from "./imgs/map3.jpg";
 import HotProduct from "./components/HotProduct";
 import all1 from "./imgs/all1.png";
 import all2 from "./imgs/all2.png";
-import BrandArea from "./components/BrandArea";
+import BrandArea from "./components/BrandArea"
 
 //animation
 import "animate.css/animate.min.css";
@@ -108,7 +108,7 @@ const parallaxDataAll = [
     duration: 3000,
     properties: [
       {
-        startValue: -200,
+        startValue:-200,
         endValue: 720,
         property: "translateX",
       },
@@ -132,12 +132,15 @@ class HomePage extends React.Component {
                 />
                 <Carousel.Caption>
                   <h5 class="chad-carosel-text">男仕身分地位與品味的象徵</h5>
+                  
                 </Carousel.Caption>
                 <a href="/project1" class="carosel-link">
-                  <div className="right-text-area">
-                    <h2>專為男仕挑選的修容用品</h2>
-                  </div>
-                </a>
+                <div className="right-text-area">
+                
+            <h2>專為男仕挑選的修容用品</h2>
+           
+          </div>
+          </a>
               </Carousel.Item>
 
               <Carousel.Item>
@@ -148,12 +151,16 @@ class HomePage extends React.Component {
                 />
                 <Carousel.Caption>
                   <h5 class="chad-carosel-text">提供優質店家做預約服務</h5>
+                
                 </Carousel.Caption>
                 <a href="/ShopList" class="carosel-link">
-                  <div className="right-text-area">
-                    <h2>精湛工藝的店家</h2>
-                  </div>
-                </a>
+                <div className="right-text-area">
+                
+                <h2>精湛工藝的店家</h2>
+                
+            
+          </div>
+          </a>
               </Carousel.Item>
 
               <Carousel.Item>
@@ -163,18 +170,21 @@ class HomePage extends React.Component {
                   alt="Third slide"
                 />
                 <Carousel.Caption>
-                  <h5 class="chad-carosel-text">
-                    用精緻的配件展現您的個人氣質
-                  </h5>
+                  <h5 class="chad-carosel-text">用精緻的配件展現您的個人氣質</h5>
+                 
                 </Carousel.Caption>
                 <a href="/project1" class="carosel-link">
-                  <div className="right-text-area">
-                    <h2>既時尚又優雅的配件</h2>
-                  </div>{" "}
-                </a>
+                <div className="right-text-area">
+                
+            <h2>既時尚又優雅的配件</h2>
+           
+          </div> </a>
               </Carousel.Item>
+            
             </Carousel>
           </div>
+
+          
 
           {/* 品牌故事 */}
           <ScrollAnimation animateIn="bounceInLeft" animateOut="bounceOutRight">
@@ -311,7 +321,7 @@ class HomePage extends React.Component {
               </div>
             </ScrollAnimation>
           </div>
-          <BrandArea />
+          <BrandArea/>
         </body>
       </>
     );

@@ -5,6 +5,8 @@ import InfoSection from '../components/InfoSection'
 import Description from '../components/Description'
 import Recommend from '../components/Recommend'
 import '../styles/shops.scss'
+import Datetime from 'react-datetime'
+import "react-datetime/css/react-datetime.css";
 
 function ShopDetail(props) {
   // console.log('ShopDetail', props)
@@ -28,8 +30,7 @@ function ShopDetail(props) {
       </div>
       <div className="row">
         <div className="col">
-          <h4>可預約時段</h4>
-          <div className="test1"></div>
+         
           <strong className="d-inline-block my-2">注意事項</strong>
           <p className="card-text mb-auto">This is a wider card with supporting text belowasanatural lead-in to additional content.</p>
           {/* map */}    
