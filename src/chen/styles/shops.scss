@@ -87,6 +87,11 @@
     font-size: 1rem;
   }
 
+  // 沒成功
+  .cates-btns>.button-secondary{
+    background-color: #44494a;
+  }
+  
   .cate-btns button:hover{
     // background-color: #a69981;
     border: none;
@@ -95,7 +100,11 @@
   .btn-group > .btn.active{
     z-index: -1;
   }
-  
+
+  .btn-secondary:not(:disabled):not(.disabled).active{
+    border: none;
+    background-color: #a69981;
+  }  
   // .btn-secondary:not(:disabled):not(.disabled).active
   // .btn-group > .btn.active{
   //   background-color: #a69981;
@@ -144,6 +153,7 @@
 
   .shopcard>.card-img-top{
     border-radius: 0;
+    min-height: 190px;
   }
 
   // .shopcard>.todetail:hover .card-img-top{
@@ -210,7 +220,7 @@
   }
 
   .page-link:hover {
-    background-color: #3f61be;
+    background-color: #545b62;
   }
 
   // .Page>.pagination>.page-item.disabled .page-link{

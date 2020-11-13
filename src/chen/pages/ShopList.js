@@ -75,8 +75,8 @@ function ShopList(props) {
         {/* <Cards /> */}
         {currentCate === '所有商家' ? <Cards title='所有商家' /> : ''}
         {currentCate === '特價優惠' ? <Cards title='特價優惠' /> : ''}
-        {currentCate === '男士理髮' ? <CardsCateIsHair /> : ''}
-        {currentCate === '男士修容' ? <CardsCateIsBeard /> : ''}
+        {currentCate === '男士理髮' ? <CardsCateIsHair title='男士理髮' /> : ''}
+        {currentCate === '男士修容' ? <CardsCateIsBeard title='男士修容' /> : ''}
         </div>
     </div>
       <Pagination  className="justify-contents-center"/>

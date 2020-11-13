@@ -3,14 +3,6 @@ import { Link, withRouter } from 'react-router-dom'
 import { Badge } from 'react-bootstrap'  
 import { FaRegHeart, FaHeart } from "react-icons/fa";
 import '../styles/shops.scss'
-import shop01 from "../img/1-ST001.jpg";
-import shop02 from "../img/1-ST002.jpg";
-import shop03 from "../img/1-ST003.png";
-import shop04 from "../img/1-ST004.jpg";
-import shop05 from "../img/1-ST005.jpg";
-import shop06 from "../img/1-ST006.jpg";
-import shop07 from "../img/1-ST007.jpg";
-import shop08 from "../img/1-ST008.jpg";
 
 function CardsCateIsHair(props) {
   console.log('CardsCateIsHair', props)
@@ -54,7 +46,7 @@ function CardsCateIsHair(props) {
             pathname:'/shopdetail/'+ value.sid
         }}>
           {/* <img src={require('../img/card01.jpg')} className="card-img-top" alt="..." /> */}
-          <img src={shop01} className="card-img-top" alt="..." />
+          <img src={require(`../img/${value.shop_avatar}`)} className="card-img-top" alt="..." />
         </Link>
         <div className="card-body p-2">
           <h6>
