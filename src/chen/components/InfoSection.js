@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from 'react'
 import { Dropdown,Badge } from 'react-bootstrap'
 import { withRouter,Link } from 'react-router-dom'
+import Datetime from 'react-datetime'
+import "react-datetime/css/react-datetime.css";
 
 function InfoSection(props) {
   console.log('InfoSection', props)
@@ -167,6 +169,10 @@ function InfoSection(props) {
                 <Badge pill variant="secondary" className="mr-1">修護</Badge>
                 <Badge pill variant="secondary" className="mr-1">造型</Badge>
               </h5>
+            </div>
+            <div className="col-3">
+              <p className="col pl-0">預約時間:</p>
+              <div className="test1"><Datetime/></div>
             </div>
           </div>
         </div>

@@ -82,28 +82,20 @@ class Class_ChooseRazor extends React.Component
             <div><img className="giftbox_ItemImg" src={Data[dataIndex].Image} /></div>
           
             <div style={{display: "flex", margin: "auto", width: "100px"}}>
-              <input style={{margin: "auto"}}
-                type="radio"
-                value={dataIndex.toString()}
-                onChange={this.OnChangeRadio}
-                checked={StandGoods === dataIndex.toString()}
-              />
+              <label>
+                <input style={{margin: "auto"}}
+                  type="radio"
+                  value={dataIndex.toString()}
+                  onChange={this.OnChangeRadio}
+                  checked={StandGoods === dataIndex.toString()}
+                />
+              </label>
               <div className="giftbox_itemName">{Data[dataIndex].Name}</div>
             </div>
           
             <div className="giftbox_itemPrice">NT$ {Data[dataIndex].Price}</div>
           </div>
         );
-    }
-    
-    // var targetDiv = document.getElementById("ChangeCSS");
-    if (SelectRange == "0")
-    {
-      // targetDiv.setAttribute("className", "giftbox_Grid align-items-center");
-    }
-    else
-    {
-      // targetDiv.setAttribute("className", "giftbox_Grid2 align-items-center");
     }
 
     return (

@@ -24,7 +24,7 @@ export class Class_Budget extends React.Component
     super(props);
     this.state = {
       aniName:'',
-      sliderValue: 0
+      sliderValue: 50
     }
   }
   handleAnimationEnd = (e)=>
@@ -54,7 +54,7 @@ export class Class_Budget extends React.Component
 
                     <Animated animationIn="rubberBand" animationOut="bounce" animationInDuration={800} animationOutDuration={800} isVisible={false}>        
                       <div className={`animated ${this.state.aniName}`} onAnimationEnd={this.handleAnimationEnd}>
-                        <img className="budget_boxImg" id="changebudget_boxImg" src={Img_Small} />
+                        <img className="budget_boxImg" id="changebudget_boxImg" src={Img_Mid} />
                       </div>
                     </Animated>
                 
