@@ -64,7 +64,7 @@ function HotProduct(props) {
         {hotProductList.map((value, index)=>{
           return(
             <Card id="cardborder" style={{ width: "20rem" }}>
-            <Card.Img variant="top" src={"./imgs/" + `${hotProductList[index].image_name}`} />
+            <Card.Img id="cardhover" variant="top" src={"./imgs/" + `${hotProductList[index].image_name}`} />
             <Card.Body id="cardbody">
               <Card.Title>{hotProductList[index].hotname}</Card.Title>
               <Card.Text id="price">NT${hotProductList[index].hotprice}</Card.Text>

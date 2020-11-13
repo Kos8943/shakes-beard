@@ -352,6 +352,11 @@ body > .bounceInLeft {
 #chadbuy:hover {
   background: hsla(228, 43%, 31%, 0.7);
 }
+#cardhover:hover{
+  opacity: 0.5;
+  transition: .5s;
+  
+}
 
 //熱門 手機板
 @media (max-width: 700px) {
@@ -563,9 +568,6 @@ body > .bounceInLeft {
   margin-top: 5%;
   width: 50%;
 }
-.map-down-area > .bounceInRight {
-  pointer-events: none;
-}
 
 #mapBtn {
   display: inline-block;
@@ -590,6 +592,15 @@ body > .bounceInLeft {
   background: hsla(228, 43%, 31%, 1);
   font: 20px PingFang;
   color: #ffffff;
+}
+.map-top-img:hover{
+  opacity: 0.7;
+  transition: .5s;
+}
+.down-img:hover{
+  opacity: 0.7;
+  transition: .5s;
+  pointer-events: auto;
 }
 
 //地圖 手機板
@@ -644,6 +655,7 @@ body > .bounceInLeft {
   .down-img {
     width: 100%;
   }
+ 
 }
 
 
