@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import { Link, withRouter } from 'react-router-dom'
 
-function Breadcrumb(props) {
+function BreadcrumbSecond(props) {
   console.log('Breadcrumb')
   console.log(props)
   const[crumb,setCrumb]=useState('商家預約')
@@ -34,19 +34,18 @@ function Breadcrumb(props) {
           <li className="breadcrumb-item">
             <Link to="/">首頁</Link>
           </li>
-          {/* <li className="breadcrumb-item">
+          <li className="breadcrumb-item">
             <Link to="#"
               onClick={() => {
                 if(path === "商家頁面"){
                   console.log("離開商家頁面")
                   props.history.push('/shoplist')}
-                  // setCrumb('商家列表')
                 else{console.log("離開其他頁面")
                   props.history.push('/homepage')}
             }}>
-              {crumb}
+              商家列表
             </Link>
-          </li> */}
+          </li>
           <li className="breadcrumb-item active" aria-current="page">
             {path}
             {/* <Link to="">{path}</Link> */}
@@ -57,4 +56,4 @@ function Breadcrumb(props) {
   )
 }
 
-export default withRouter(Breadcrumb)
+export default withRouter(BreadcrumbSecond)

@@ -161,19 +161,28 @@ function InfoSection(props) {
           </div>
           <div className="row info-head">
             <div className="col-3">
-              <p className="col pl-0">提供服務:</p>
+              <p className="col p-0">提供服務:</p>
             </div>
             <div className="col-9">
-              <h5 className="col pl-0">
+              <h5 className="col p-0">
                 <Badge pill variant="secondary" className="mr-1">理髮</Badge>
                 <Badge pill variant="secondary" className="mr-1">修護</Badge>
                 <Badge pill variant="secondary" className="mr-1">造型</Badge>
               </h5>
             </div>
             <div className="col-3">
-              <p className="col pl-0">預約時間:</p>
-              <div className="test1"><Datetime/></div>
+              <p className="col p-0">預約時間:</p>
             </div>
+            <div className="col-9 mb-3">
+              <Datetime/>
+              {/* <div className="test1"><Datetime/></div> */}
+            </div>
+            <p className="col-12">注意事項: 如取消預約，請於預約日三天前聯絡。謝謝</p>
+          </div>
+          <div className="row pl-3">
+            <Link to="/reservation" className="btn goReserve">
+              立即預約
+            </Link>
           </div>
         </div>
      </div>
