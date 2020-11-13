@@ -11,6 +11,7 @@ import map3 from "./imgs/map3.jpg";
 import HotProduct from "./components/HotProduct";
 import all1 from "./imgs/all1.png";
 import all2 from "./imgs/all2.png";
+import BrandArea from "./components/BrandArea"
 
 //animation
 import "animate.css/animate.min.css";
@@ -296,6 +297,7 @@ class HomePage extends React.Component {
               </div>
             </ScrollAnimation>
           </div>
+          <BrandArea/>
         </body>
       </>
     );
