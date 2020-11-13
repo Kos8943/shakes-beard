@@ -65,7 +65,12 @@ function ShakesBeardNavbar(props) {
                 <Nav.Link
                   href="login"
                   className="navBarFontSize"
-                  onClick={() => setIsAuth(false)}
+                  onClick={() =>{
+                  if(isAuth === true){
+                    setIsAuth(false);
+                    localStorage.removeItem("data")
+                    localStorage.removeItem("auth")
+                  } }}
                 >
                   {isAuth ? "登出" : "登入"}
                 </Nav.Link>

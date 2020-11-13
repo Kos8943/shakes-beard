@@ -10,9 +10,9 @@ import { set } from "animejs";
 registerLocale("zh-TW", zhTW);
 
 function MemberDataUpdateTable(props) {
-  // const { isAuth, setIsAuth,account, setAccount,password, setPassword ,authAccount,setAuthAccount,authPassword,setAuthPassword} = props;
+  const { isAuth, setIsAuth,account, setAccount,password, setPassword ,authAccount,setAuthAccount,authPassword,setAuthPassword} = props;
 
-  const [authAccount, setAuthAccount] = useState('')
+  // const [authAccount, setAuthAccount] = useState('')
   // const [authPassword,setAuthPasswor]=useState('')
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
@@ -31,7 +31,11 @@ function MemberDataUpdateTable(props) {
 
 
   async function getFrom() {
-    const url = "http://localhost:3000/yen/update";
+
+    if(isAuth === true){
+
+
+const url = "http://localhost:3000/yen/update";
     const request = new Request(url, {
       method: "GET",
       headers: new Headers({
@@ -51,7 +55,22 @@ function MemberDataUpdateTable(props) {
     // setBirth(memberData[0].birth);
     setPhone(memberData[0].phone);
     setAddress(memberData[0].address);
+  }else{
+
+
+
+    
   }
+
+
+    }
+
+    
+     
+    
+
+
+  
   useEffect(() => {
     getFrom();
   }, []);
