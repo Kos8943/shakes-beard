@@ -38,7 +38,7 @@ function LogIn(props) {
       .then(r => r.json())
 
       .then(o => {
-        console.log(o);
+        console.log('react收到的', o);
       })
 
   }
