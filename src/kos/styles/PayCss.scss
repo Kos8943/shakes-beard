@@ -148,6 +148,8 @@ hr {
 .paymentBtn {
     width: 25%;
     margin: 2% auto;
+    height: 70px;
+    margin: 5% 0 10% 0;
 }
 
 .paymentBtn .SumitButton {
@@ -158,7 +160,7 @@ hr {
     border-radius: 4px;
     font-size: 1.5rem;
     color: #fff;
-    line-height: 70px;
+    // line-height: 70px;
     margin-bottom: 40%;
 }
 

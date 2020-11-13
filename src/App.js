@@ -39,6 +39,7 @@ import OrderCheck from "./kos/pages/OrderCheck";
 import TopArrow from "./icon/top-arrow.jpg"
 import { set } from "animejs";
 import InfoSection from "./chen/components/InfoSection";
+import TryLocalstrage from './kos/pages/TryLocalstrage'
 
 
 
@@ -194,6 +195,14 @@ function App() {
               <ShakesBeardNavbar isAuth={isAuth} setIsAuth={setIsAuth}/>
               <div className="footerFix KosPadding">
                 <Paycomplete />
+              </div>
+              <MyFooter />
+            </Route>
+
+            <Route path="/trylocal">
+              <ShakesBeardNavbar isAuth={isAuth} setIsAuth={setIsAuth}/>
+              <div className="footerFix KosPadding">
+                <TryLocalstrage />
               </div>
               <MyFooter />
             </Route>

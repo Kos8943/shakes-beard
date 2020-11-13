@@ -1,216 +1,43 @@
-/* eslint-disable no-useless-concat */
-/* eslint-disable jsx-a11y/alt-text */
-import { get } from "jquery";
 import React, { useState, useEffect } from "react";
 // import Cuf1 from '../img/1-3.jpg'
 import Trash from "../icon/trash.svg";
 import { Link } from "react-router-dom";
 import { queryByTestId } from "@testing-library/react";
+import CartCardMap from './CartCardMap'
 
 function WebCartCard(props) {
-  const [myProductName, setMyProductName] = useState([]);
-  // const [productPrice, setProductPrice] = useState(0);
-  // const [productType1, setProductType1] = useState();
-  // const [productType2, setProductType2] = useState();
-  // const [productType3, setProductType3] = useState();
-  const [phoneProductType, setPhoneProductType] = useState();
-  const [dataLoading, setDataLoading] = useState(false);
-  const [amount, setAmount] = useState(1);
-  const [subtotal, setSubtotal] = useState(myProductName.price * amount);
-  const [offPrice, setOffPrice] = useState(0);
-  const [ddd, setDdd] = useState(0);
+  const [myCart, setMyCart] = useState([]);
+  const [total, setTotal] = useState();
 
-  // 載入資料用
-  async function getTotalFromServer() {
-    // 開啟載入的指示圖示
-    setDataLoading(true);
+  function getLocalStorage() {
+    const newCart = localStorage.getItem("cart") || "[]";
 
-    const url = "http://localhost:3000/try-db";
+    console.log(JSON.parse(newCart));
 
-    const request = new Request(url, {
-      method: "GET",
-      headers: new Headers({
-        Accept: "application/json",
-        "Content-Type": "application/json",
-      }),
-    });
+    setMyCart(JSON.parse(newCart));
 
-    const response = await fetch(request);
-    const data = await response.json();
-    // data會是一個物件值
-
-    // setTotal(data.total)
-    setMyProductName(data);
-    // setProductType1(data[1].type1);
-    // setProductType2(data[1].type2)
-    // setProductType3(data[1].type3)
-    // setProduetName(data[1].name);
-    setSubtotal(data[1].price * amount);
-    console.log(data[1].price);
   }
 
-  // componentDidMount，一開始會載入資料(在元件初始化完成後)
+  
+
   useEffect(() => {
-    getTotalFromServer();
+    getLocalStorage();
   }, []);
 
-  useEffect(() => {
-    let a = ddd;
-    setDdd(a+1)
-    console.log('hi')
-  }, [myProductName]);
+  useEffect(() => {}, [myCart]);
 
-  // 每次total資料有改變，2秒後關閉載入指示
-  // useEffect(() => {
-  //   setTimeout(() => setDataLoading(false), 500);
-  // }, [setProductPrice]);
-
-  const loading = (
-    <div className="spinner-grow" role="status">
-      <span className="sr-only">Loading...</span>
-    </div>
-  );
-
-  // console.log("window loaded")
+  // return <>{myCart.map((v,i)=>(
+  //   <>
+  //   <div>{v.name}</div>
+  //   <img src={v.img} />
+  //   </>
+  // ))}</>
 
   return (
     <>
-      <form>
-        {myProductName.map((value, index) => {
+      <CartCardMap total={total} setTotal={setTotal}/>
 
-          {/* <component productInfo={value}> */}
-
-          {/* props.productInfo.img */}
-          return (
-            
-            <div className="cartItem d-xl-flex d-block">
-              <img
-                className="itemImg"
-                src={"./imgs/" + `${myProductName[index].img}`}
-              ></img>
-              <div className="itemName my-lg-auto">
-                {myProductName[index].name}
-              </div>
-              {console.log('value',value)}
-              {/* web style select */}
-              <select
-                className="selectHigh d-none d-lg-block"
-                id="typeSelect"
-                onChange={(e) => {
-                  setPhoneProductType(e.target.value);
-                }}
-              >
-                <option value={myProductName[index].type1}>
-                  {myProductName[index].type1}
-                </option>
-                <option value={myProductName[index].type2}>
-                  {myProductName[index].type2}
-                </option>
-                <option value={myProductName[index].type3}>
-                  {myProductName[index].type3}
-                </option>
-              </select>
-              <select
-                className="selectHigh  d-none d-lg-block" qIndex={index}
-                onChange={(e) => {
-                  // setAmount(e.target.value);
-                  console.log('qIndex',e.target.getAttribute('qIndex'));
-                  let oldData = myProductName;
-                  let nowIndex = e.target.getAttribute('qIndex');
-                  console.log('oldData',oldData)
-                  oldData[nowIndex].amount = +e.target.value;
-                  console.log('newOldData',oldData)
-                  setMyProductName(oldData);
-                  // setSubtotal(parseInt(e.target.nextSibling.nextSibling.innerHTML.slice(3)) * e.target.value);
-                  // setSubtotal(e.target.nextSibling.nextSibling.nextSibling * myProductName[index].price)
-
-                  e.target.nextSibling.nextSibling.nextSibling.innerHTML= "NT$" + parseInt(e.target.nextSibling.nextSibling.innerHTML.slice(3)) * e.target.value
-                  
-                  let totalDom = document.querySelectorAll('.subtotalD');
-                  let totalT = 0;
-                  console.log('totalDom.length')
-                  for(let i=0; i < totalDom.length; i++){
-                    
-                    totalT += +totalDom[i].innerHTML.substring(3,totalDom[i].innerHTML.length);
-                  }
-                  document.querySelector('.totalPriceT').innerHTML = 'NT$' + totalT;
-
-                  console.log(
-                    parseInt(e.target.nextSibling.nextSibling.innerHTML.slice(3))
-                  );
-                }}
-                id="select"
-              >
-                <option value="1">1</option>
-                <option value="2">2</option>
-                <option value="3">3</option>
-                <option value="4">4</option>
-                <option value="5">5</option>
-              </select>
-
-              {/* mobile styel select*/}
-              <div className="KosProjectType d-block d-lg-none">
-                {phoneProductType}
-              </div>
-
-              <span className="unitPrice">NT${myProductName[index].price}</span>
-
-              {/* web show total price*/}
-              <span className="subtotal subtotalD d-none d-lg-block">
-                NT${myProductName[index].price * myProductName[index].amount}
-              </span>
-
-              {/* web del img*/}
-              <img
-                src="./imgs/delete.svg"
-                className="deleteIcon d-none d-lg-block"
-                onClick={() => {
-                  console.log(236);
-                }}
-              ></img>
-
-              {/* mobile qty select*/}
-              <div className="d-flex counterArea d-block d-lg-none">
-                <div
-                  className="cartMinus"
-                  onClick={function () {
-                    if (amount === 1) {
-                      setAmount(1);
-                    } else {
-                      const newamount = amount - 1;
-                      setAmount(amount - 1);
-                      setSubtotal(myProductName[this].price * newamount);
-                      document.getElementById("select").selectedIndex =
-                        amount - 2;
-                    }
-                  }}
-                >
-                  -
-                </div>
-                <div className="cartQty" value={amount}>
-                  {amount}
-                </div>
-                <div
-                  className="cartAdd"
-                  onClick={function () {
-                    if (amount === 5) {
-                      setAmount(5);
-                    } else {
-                      const newamount = amount + 1;
-                      setAmount(parseInt(amount) + 1);
-                      setSubtotal(myProductName[index].price * newamount);
-                      document.getElementById("select").selectedIndex = amount;
-                    }
-                  }}
-                ></div>
-                <img src={Trash} className="CartTarsh"></img>
-                <div className="subtotal">NT${subtotal}</div>
-              </div>
-            </div>
-          );
-        })}
-
-        <div className="priceArea ml-auto d-flex">
+      <div className="priceArea ml-auto d-flex">
           <div className="priceArea font">
             <div>優惠代碼：</div>
             <div>折扣：</div>
@@ -220,16 +47,11 @@ function WebCartCard(props) {
 
           <div className="priceArea font totalPrice priceColor">
             <div>
-              <input
-                onChange={(e) => {
-                  e.target.value === "abc" ? setOffPrice(-150) : setOffPrice(0);
-                }}
-                className="inputvalue"
-              ></input>
+              <input onChange={(e) => {}} className="inputvalue"></input>
             </div>
-            <div>NT$ {offPrice}</div>
+            <div>NT$ </div>
             <div>NT$ 150</div>
-            <div className="totalPriceT">NT$ 8,796</div>
+            <div className="totalPriceT">NT$ {total}</div>
           </div>
         </div>
         <div className="sumitBtn ml-auto">
@@ -237,7 +59,55 @@ function WebCartCard(props) {
             <button>送出訂單</button>
           </Link>
         </div>
-      </form>
+        {/* <div className="cartItem d-xl-flex d-block">
+          <img className="itemImg" src={"./imgs/"}></img>
+          <div className="itemName my-lg-auto"></div>
+
+          web style select
+          <div className="itemName my-lg-auto"></div>
+          <select
+            className="selectHigh  d-none d-lg-block"
+            onChange={(e) => {}}
+            id="select"
+          >
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+          </select>
+
+          mobile styel select
+          <div className="KosProjectType d-block d-lg-none"></div>
+
+          <span className="unitPrice">NT$</span>
+
+          web show total price
+          <span className="subtotal subtotalD d-none d-lg-block">NT${}</span>
+
+          web del img
+          <img
+            src="./imgs/delete.svg"
+            className="deleteIcon d-none d-lg-block"
+            onClick={() => {
+              console.log(236);
+            }}
+          ></img>
+
+          mobile qty select
+          <div className="d-flex counterArea d-block d-lg-none">
+            <div className="cartMinus" onClick={function () {}}>
+              -
+            </div>
+            <div className="cartQty" value=""></div>
+            <div className="cartAdd" onClick=""></div>
+            <img src={Trash} className="CartTarsh"></img>
+            <div className="subtotal">NT$</div>
+          </div>
+        </div> */}
+
+        
+      
     </>
   );
 }
