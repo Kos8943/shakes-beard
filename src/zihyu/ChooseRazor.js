@@ -82,14 +82,12 @@ class Class_ChooseRazor extends React.Component
             <div><img className="giftbox_ItemImg" src={Data[dataIndex].Image} /></div>
           
             <div style={{display: "flex", margin: "auto", width: "100px"}}>
-              <label>
                 <input style={{margin: "auto"}}
                   type="radio"
                   value={dataIndex.toString()}
                   onChange={this.OnChangeRadio}
                   checked={StandGoods === dataIndex.toString()}
                 />
-              </label>
               <div className="giftbox_itemName">{Data[dataIndex].Name}</div>
             </div>
           
@@ -110,7 +108,9 @@ class Class_ChooseRazor extends React.Component
                   <div className="lineDown"></div>
 
 
-                  <div id="ChangeCSS" className="giftbox_Grid align-items-center">{lists}</div>
+                  <div id="ChangeCSS" className="giftbox_Grid align-items-center">
+                    <label id="ChangeLabel">{lists}</label>
+                  </div>
                 
 
                 <div style={{margin: "16px auto"}}>
