@@ -6,9 +6,6 @@ import Img_Mid from './image/Box_Mid.png';
 import Img_Big from './image/Box_Big.png';
 import { Button } from 'react-bootstrap';
 import {Animated} from "react-animated-css";
-import styled, { keyframes } from 'styled-components';
-import { bounce } from 'react-animations';
-
 
 /** 安裝Slider (https://www.npmjs.com/package/react-bootstrap-range-slider)
  * Example (https://jaywilz.github.io/react-bootstrap-range-slider/)
@@ -27,7 +24,7 @@ export class Class_Budget extends React.Component
     super(props);
     this.state = {
       aniName:'',
-      sliderValue: 50
+      sliderValue: 0
     }
   }
   handleAnimationEnd = (e)=>
@@ -55,42 +52,42 @@ export class Class_Budget extends React.Component
                     <div className="lineTop"></div>
                     <div className="lineDown"></div>
 
-                    
-            <div className={`animated ${this.state.aniName}`} onAnimationEnd={this.handleAnimationEnd}>
-              <img className="budget_boxImg" id="changebudget_boxImg" src={Img_Mid} />
-            </div>
-        
-        
-            <div style={{width: "58%", margin: "auto"}}>
-              <RangeSlider className="silderbox"
-                value={this.state.sliderValue}
-                onChange={e =>
-                  {
-                    this.state.sliderValue = Number(e.target.value);
-                    var targetDiv = document.getElementById("changebudget_boxImg");
-                    
-                    switch (e.target.value)
-                    {
-                      case "0":
-                        SelectRange = "0";
-                        targetDiv.setAttribute("src", Img_Small);
-                        break;
-                      case "50":
-                        SelectRange = "1";
-                        targetDiv.setAttribute("src", Img_Mid);
-                        break;
-                      case "100":
-                        SelectRange = "2";
-                        targetDiv.setAttribute("src", Img_Big);
-                        break;
-                    }
-                    this.startPlayAni(e);
-                  }
-                }
-                step={50}
-                tooltip='off'
-              />
-            </div>
+                    <Animated animationIn="rubberBand" animationOut="bounce" animationInDuration={800} animationOutDuration={800} isVisible={false}>        
+                      <div className={`animated ${this.state.aniName}`} onAnimationEnd={this.handleAnimationEnd}>
+                        <img className="budget_boxImg" id="changebudget_boxImg" src={Img_Small} />
+                      </div>
+                    </Animated>
+                
+                    <div style={{width: "58%", margin: "auto"}}>
+                      <RangeSlider className="silderbox"
+                        value={this.state.sliderValue}
+                        onChange={e =>
+                          {
+                            this.state.sliderValue = Number(e.target.value);
+                            var targetDiv = document.getElementById("changebudget_boxImg");
+                            
+                            switch (e.target.value)
+                            {
+                              case "0":
+                                SelectRange = "0";
+                                targetDiv.setAttribute("src", Img_Small);
+                                break;
+                              case "50":
+                                SelectRange = "1";
+                                targetDiv.setAttribute("src", Img_Mid);
+                                break;
+                              case "100":
+                                SelectRange = "2";
+                                targetDiv.setAttribute("src", Img_Big);
+                                break;
+                            }
+                            this.startPlayAni(e);
+                          }
+                        }
+                        step={50}
+                        tooltip='off'
+                      />
+                </div>
 
 
                     <div className="budget_Grid align-items-center">
