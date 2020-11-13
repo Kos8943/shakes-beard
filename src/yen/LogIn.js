@@ -35,16 +35,10 @@ function LogIn(props) {
     })
       .then((r) => r.json())
 
-<<<<<<< HEAD
       .then(o => {
         console.log('react收到的', o);
       })
 
-=======
-      .then((o) => {
-        console.log(o);
-      });
->>>>>>> de1d0b3671408e4ab478e279147a54c3d1763510
   }
 
   //   // 注意資料格式要設定，伺服器才知道是json格式
@@ -128,10 +122,10 @@ function LogIn(props) {
                     type="submit"
                     // onClick={() => { memberIoginForm() }}
                     className="loginCheckButton loginMobile"
-                    // onClick={(e) => {
-                    //   e.preventDefault();
-                    //   memberIoginForm()
-                    // }}
+                  // onClick={(e) => {
+                  //   e.preventDefault();
+                  //   memberIoginForm()
+                  // }}
                   >
                     登入
                   </button>
@@ -174,17 +168,17 @@ function LogIn(props) {
                 <button
                   type="submit"
                   className="loginCheckButton loginWebNone"
-                  // onClick={(e) => {
-                  //   e.preventDefault();
-                  //   memberIoginForm();
+                // onClick={(e) => {
+                //   e.preventDefault();
+                //   memberIoginForm();
 
-                  // if (authAccount === account && authPassword === password) {
-                  //   setIsAuth(true);
-                  //   alert("登入成功");
-                  // } else {
-                  //   alert("帳號/密碼錯誤");
-                  // }
-                  // }}>
+                // if (authAccount === account && authPassword === password) {
+                //   setIsAuth(true);
+                //   alert("登入成功");
+                // } else {
+                //   alert("帳號/密碼錯誤");
+                // }
+                // }}>
                 >
                   登入
                 </button>
