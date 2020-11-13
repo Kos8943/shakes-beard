@@ -11,8 +11,10 @@ function Description(props) {
 
   const [shopMainTitle, setShopMainTitle] = useState('')
   const [shopMainText, setShopMainText] = useState('')
+  const [shopMainImg, setShopMainImg] = useState('')
   const [shopSecondTitle, setShopSecondTitle] = useState('')
   const [shopSecondText, setShopSecondText] = useState('')
+  const [shopSecondImg, setShopSecondImg] = useState('')
   const [dataIsExist, setDataIsExist] = useState(true)
 
   async function getShopFromServer(){
@@ -47,8 +49,10 @@ function Description(props) {
 
     setShopMainTitle(data[i].description_title_main)
     setShopMainText(data[i].description_text_main)
+    setShopMainImg(data[i].description_img_main)
     setShopSecondTitle(data[i].description_title_second)
     setShopSecondText(data[i].description_text_second)
+    setShopSecondImg(data[i].description_img_second)
   }
 
   useEffect(()=>{
@@ -59,13 +63,14 @@ function Description(props) {
       <Media className="mb-5">
       <img
         alt="description-img"
-        width={350}
-        className="mr-4"
-        src={require('../img/card01.jpg')} 
+        width={400}
+        className="mr-3"
+        src={`/imgs/shops/${shopMainImg}`}
       />
       <Media.Body>
         <div>
-          <h5>{shopMainTitle}</h5>
+            <h5>{shopMainTitle}</h5>
+            {/* <hr className="p-0"/> */}
           <p>{shopMainText}</p>
         </div>
         {/* <Link to="#" className="btn btn-primary">
@@ -85,9 +90,9 @@ function Description(props) {
       </Media.Body>
       <img
         alt="description-img"
-        width={350}
-        className="mr-3"
-        src={require('../img/card01.jpg')} 
+        width={400}
+        className="ml-3"
+        src={`/imgs/shops/${shopSecondImg}`}
       />
     </Media>
   </>)

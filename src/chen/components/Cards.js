@@ -40,14 +40,17 @@ function Cards(props) {
       return(
       <div className="col-12 col-sm-6 col-md-6 col-lg-4 p-0" key={index}>
         <div className="shopcard" key={value.shop_id}>
-        <Link
+        {/* <div className="card-img-top"> */}
+        {/* <div className="w-100 shopcard-top"> */}
+          <Link
           className="todetail"
           to={{
             pathname:'/shopdetail/'+ value.sid
         }}>
-          {/* <img src={require('../img/card01.jpg')} className="card-img-top" alt="..." /> */}
-          <img src={require(`../img/${value.shop_avatar}`)} className="card-img-top" alt="..." />
+          <img src={`/imgs/shops/${value.shop_avatar}`} className="card-img-top" alt="..." />
         </Link>
+        {/* </div> */}
+        
         <div className="card-body p-2">
           <h6>
             <Badge pill variant="secondary" className="mr-1 cate-tag">

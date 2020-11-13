@@ -17,10 +17,10 @@ function ShopList(props) {
   return (
     <>
     <div className="shops container">
-      <div className="row">
+      <div className="row mb-4">
         <Breadcrumb />
       </div>
-      <div className="row">
+      <div className="row mb-3">
         {/* <Cates /> 開始*/}
         {/* <Cates currentCate='所有商家'/> */}
         <div className="container">

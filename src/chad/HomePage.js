@@ -131,9 +131,16 @@ class HomePage extends React.Component {
                   alt="First slide"
                 />
                 <Carousel.Caption>
-                  <h3 class="chad-carosel-text">專為男仕挑選</h3>
-                  <p>男仕身分地位與品味的象徵。</p>
+                  <h5 class="chad-carosel-text">男仕身分地位與品味的象徵</h5>
+                  
                 </Carousel.Caption>
+                <a href="/project1" class="carosel-link">
+                <div className="right-text-area">
+                
+            <h2>專為男仕挑選的修容用品</h2>
+           
+          </div>
+          </a>
               </Carousel.Item>
 
               <Carousel.Item>
@@ -143,9 +150,17 @@ class HomePage extends React.Component {
                   alt="Second slide"
                 />
                 <Carousel.Caption>
-                  <h3>精湛工藝的店家</h3>
-                  <p>提供優質店家做預約服務。</p>
+                  <h5 class="chad-carosel-text">提供優質店家做預約服務</h5>
+                
                 </Carousel.Caption>
+                <a href="/ShopList" class="carosel-link">
+                <div className="right-text-area">
+                
+                <h2>精湛工藝的店家</h2>
+                
+            
+          </div>
+          </a>
               </Carousel.Item>
 
               <Carousel.Item>
@@ -155,12 +170,21 @@ class HomePage extends React.Component {
                   alt="Third slide"
                 />
                 <Carousel.Caption>
-                  <h3>既時尚又優雅的配件</h3>
-                  <p>用精緻的配件展現您的個人氣質。</p>
+                  <h5 class="chad-carosel-text">用精緻的配件展現您的個人氣質</h5>
+                 
                 </Carousel.Caption>
+                <a href="/project1" class="carosel-link">
+                <div className="right-text-area">
+                
+            <h2>既時尚又優雅的配件</h2>
+           
+          </div> </a>
               </Carousel.Item>
+            
             </Carousel>
           </div>
+
+          
 
           {/* 品牌故事 */}
           <ScrollAnimation animateIn="bounceInLeft" animateOut="bounceOutRight">

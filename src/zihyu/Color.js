@@ -45,7 +45,7 @@ class Class_Color extends React.Component
       
           <div className="blueBox1">
                 <div className="step">Step.5
-                  <div className="Title2">選擇顏色</div>
+                  <div className="Title2">選擇禮盒顏色</div>
                   <div className="lineTop"></div>
                   <div className="lineDown"></div>
 
@@ -107,7 +107,7 @@ class Class_Color extends React.Component
                         {     //React程式區間語法 (開始)
                           () =>
                           {
-                            window.open("/Path_ChooseStand", '_self');
+                            window.open("/Path_ChooseStand?SelectRange=" + SelectRange+ "&SelectRazorIndex=" + SelectRazorIndex + "&SelectBrushIndex=" + SelectBrushIndex, '_self');
                           }
                         }     //React程式區間語法 (結束)
                       

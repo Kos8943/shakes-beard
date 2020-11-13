@@ -74,7 +74,36 @@
   }
 }
 //輪播
+.carosel-div{
+  position: relative;
+}
 
+.right-text-area{
+  padding-top:18px;
+  width: 410px;
+  height: 80px;
+  text-align: center;
+  position: absolute;
+  bottom: 125px;
+  right:750px;
+  color:#fff;
+  border:solid 1.5px white;
+  border-radius: 4px;
+  letter-spacing: 2px;
+  
+}
+.right-text-area:hover{
+  background-color: rgba(255, 235, 205, 0.3);
+}
+.chad-carosel-text{
+  letter-spacing: 2px;
+}
+.carosel-link:visited{
+  color: #fff;
+}
+.carosel-link:hover{
+  text-decoration: none;
+}
 //故事
 body > .bounceInLeft {
   pointer-events: none;
@@ -666,6 +695,13 @@ body > .bounceInLeft {
   background-size: cover;
   background-repeat: no-repeat;
   opacity: 0.8;
+  display: flex;
+  justify-content: center;
+}
+@media (max-width: 700px){
+  .brandbg-area{
+    display: none;
+  }
 }
 .fadeIn{
   pointer-events: none;

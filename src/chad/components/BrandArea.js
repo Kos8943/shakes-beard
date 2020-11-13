@@ -12,8 +12,9 @@ function BrandArea(props) {
   return <>
   <ScrollAnimation
               animateIn="fadeIn"
+               
             >
-            <div className="brandbg-area d-flex justify-content-center">
+            <div className="brandbg-area">
             <div className="brand-img-area m-auto">
             <img src={brand1}></img>
             <img src={brand2}></img>

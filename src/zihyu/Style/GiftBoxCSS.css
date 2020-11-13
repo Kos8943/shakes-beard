@@ -28,14 +28,14 @@
 .subtitle {
   color: #2d3b72;
   font-family: Roboto;
-  font-size: 17px;
+  font-size: 19px;
   margin: 60px auto 55px;
   text-align: center;
   letter-spacing: 2px;
 }
 
 .line-middle {
-  width: 61%;
+  width: 70%;
   border-top: solid #2d3b72 1px;
   margin: 0 auto;
 }
@@ -43,7 +43,7 @@
 .thirdTitle {
   color: #2d3b72;
   font-family: PingFang;
-  font-size: 17px;
+  font-size: 19px;
   margin: 51px auto 50px;
   text-align: center;
 }
