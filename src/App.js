@@ -204,7 +204,7 @@ function App() {
             </Route>
 
             <Route path="/trylocal">
-              <ShakesBeardNavbar isAuth={isAuth} setIsAuth={setIsAuth}/>
+              <ShakesBeardNavbar isAuth={isAuth} setIsAuth={setIsAuth} />
               <div className="footerFix KosPadding">
                 <TryLocalstrage />
               </div>
