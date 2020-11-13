@@ -359,12 +359,19 @@
   }
 
   .test3 {
-    background-color: #6c757d;
-    width: 50px;
-    height: 50px;
+    // background-color: #6c757d;
+    // width: 50px;
+    // height: 50px;
+    // border: 1px solid #6c757d;
+    width: 60px;
+    height: 60px;
     margin: 5px;
     display: flex;
     justify-self: space-evenly;
+  }
+
+  .selectedImg{
+    border: 3px solid #be3f3f;
   }
 
   .testImg {
