@@ -1,14 +1,16 @@
 import React, { useState, useEffect } from "react";
 import Trash from "../icon/trash.svg";
 import { Link } from "react-router-dom";
+import { FaSun } from "react-icons/fa";
 
 function CartCardMap(props) {
   const [myCart, setMyCart] = useState([]);
-  
+
   const {
     total,
     setTotal
   } = props
+
 
   function getLocalStorage() {
     const newCart = localStorage.getItem("cart") || "[]";
@@ -18,8 +20,19 @@ function CartCardMap(props) {
     setMyCart(JSON.parse(newCart));
   }
 
+  const sum = (v) => {
+    let sumTotal = 0
+    for (let i = 0; i < v.length; i++) {
+    sumTotal += v[i].amount * v[i].price
+  }
+  return setTotal(sumTotal)
+}
+
+sum(myCart)
+
   useEffect(() => {
     getLocalStorage();
+    
   }, []);
 
   useEffect(() => {}, [myCart]);
@@ -47,6 +60,7 @@ function CartCardMap(props) {
   }
 
   
+  
   return (
     <>
       {myCart.map((v, i) => (
@@ -61,6 +75,7 @@ function CartCardMap(props) {
               className="selectHigh  d-none d-lg-block"
               onChange={(e) => {
                 updateCartToLocalStorage(v, false, e.target.value)
+              
               }}
               id="select"
             >
@@ -70,9 +85,6 @@ function CartCardMap(props) {
               <option value="4">4</option>
               <option value="5">5</option>
             </select>
-
-            {/* mobile styel select */}
-            <div className="KosProjectType d-block d-lg-none"></div>
 
             <span className="unitPrice">NT${v.price}</span>
 
@@ -93,10 +105,10 @@ function CartCardMap(props) {
               <div className="cartMinus" onClick={function () {}}>
                 -
               </div>
-              <div className="cartQty" value=""></div>
-              <div className="cartAdd" onClick=""></div>
+              <div className="cartQty" value="">{v.amount}</div>
+              <div className="cartAdd" onClick="">+</div>
               <img src={Trash} className="CartTarsh"></img>
-              <div className="subtotal">NT$</div>
+              <div className="subtotal">NT$ {v.price}</div>
             </div>
           </div>
 

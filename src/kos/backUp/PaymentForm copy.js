@@ -1,18 +1,16 @@
 /* eslint-disable no-useless-concat */
 /* eslint-disable jsx-a11y/alt-text */
 import React, { useState, useEffect } from "react";
-import PaymentCard from "./PaymentCard";
-import PaymentPrice from "./PaymentPrice";
+import PaymentCard from "../components/PaymentCard";
+import PaymentPrice from "../components/PaymentPrice";
 import { Link, Redirect } from "react-router-dom";
-import Creaditcard from "./Creaditcard";
-import TWZipCode from "./TWZipCode";
-import PaymentCardMap from "./PayMentCardMap"
+import Creaditcard from "../components/Creaditcard";
+import TWZipCode from "../components/TWZipCode";
+import PaymentCardMap from "../components/PayMentCardMap"
 
 function PaymentForm(props) {
-  const [payment, setPayment] = useState([])
-  const [total, setTotal] = useState()
-  const [priceOff, setPriceOff] = useState(300)
-  const [shipping, setShipping] = useState(150)
+  const [paymentDataBD, setPaymentDataBD] = useState([]);
+  const [sss , setsss] = useState(0)
   // const [paymentImg, setPaymentDataImg] = useState()
   // const [paymentproductName, setPaymentproductName] = useState()
   // const [paymentProductType, setPaymentProductType] = useState()
@@ -23,22 +21,28 @@ function PaymentForm(props) {
   // const [paymentShipping, setPaymentShipping] = useState()
   // const [paymentTotal, setPaymentTotal] = useState()
 
- 
-// 抓LocalStorage
-  function getLocalStorage() {
-    const newCart = localStorage.getItem("cart") || "[]";
+  async function getPaymentDataFromDB() {
+    const url = "http://localhost:3000/try-payment";
 
-    console.log(JSON.parse(newCart));
+    const request = new Request(url, {
+      method: "GET",
+      headers: new Headers({
+        Accept: "application/json",
+        "Content-Type": "application/json",
+      }),
+    });
 
-    setPayment(JSON.parse(newCart));
+    const response = await fetch(request);
+    const data = await response.json();
+
+    setPaymentDataBD(data);
+    console.log(data);
   }
 
   useEffect(() => {
-    getLocalStorage();
+    getPaymentDataFromDB();
   }, []);
 
-
-  // 發送Fetch用
   function paymentData() {
     const d = {
       name: document.querySelector(".itemName").value,
@@ -60,7 +64,57 @@ function PaymentForm(props) {
       >
         <div className="PayCard m-auto">
           <h3 className="d-flex justify-content-center">你的訂單</h3>
-            <PaymentCardMap total={total} setTotal={setTotal}/>
+            <PaymentCardMap />
+          {/* {paymentDataBD.map((value, index) => {
+            return (
+              <>
+                網頁
+                <div className="cartItem d-xl-flex">
+                  <img
+                    className="itemImg"
+                    src={"./imgs/hsuan/" + `${paymentDataBD[index].img}`}
+                  ></img>
+                  <div className="itemName my-auto">
+                    {paymentDataBD[index].name}
+                  </div>
+                  <span className="productTpye">
+                    {paymentDataBD[index].type}
+                  </span>
+                  <span className="amount">{paymentDataBD[index].amount}</span>
+                  <span className="unitPrice">
+                    NT${paymentDataBD[index].unitPrice}
+                  </span>
+                  <span className="subtotal">
+                    NT${paymentDataBD[index].subtotal}
+                  </span>
+                </div>
+
+                手機
+
+                <div className="cartItemPhone">
+                  <img
+                    className="itemImg"
+                    src={"./imgs/hsuan/" + `${paymentDataBD[index].img}`}
+                  ></img>
+                  <div className="itemName"> {paymentDataBD[index].name}</div>
+                  <div className="KosProjectType">
+                    {paymentDataBD[index].type}
+                  </div>
+                  <div className="PaymentunitPrice">
+                    NT${paymentDataBD[index].unitPrice}
+                  </div>
+
+                  <div className="PaymentQty">
+                    X{paymentDataBD[index].amount}
+                  </div>
+                  <div className="PaymentSubtotal">
+                    NT${paymentDataBD[index].subtotal}
+                  </div>
+                </div>
+              </>
+            );
+          })} */}
+
           <div className="priceArea ml-auto d-flex">
             <div className="priceArea font">
               <div>折扣：</div>
@@ -68,9 +122,9 @@ function PaymentForm(props) {
               <div>總計：</div>
             </div>
             <div className="priceArea font totalPrice">
-              <div>NT$ {priceOff}</div>
-              <div>NT$ {shipping}</div>
-              <div>NT$ {total + shipping - priceOff}</div>
+              <div>NT$ -150</div>
+              <div>NT$ 150</div>
+              <div>NT$ 8,796</div>
             </div>
           </div>
 
@@ -89,7 +143,16 @@ function PaymentForm(props) {
               <p>地址：</p>
 
               <TWZipCode />
-             
+              {/* <select className="addressSelect">
+          <option value="台北市">台北市</option>
+          <option value="新北市">新北市</option>
+          <option value="桃園市">桃園市</option>
+        </select>
+        <select className="addressSelect">
+          <option value="大安區">大安區</option>
+          <option value="中正區">中正區</option>
+          <option value="內湖區">內湖區</option>
+        </select> */}
               <input className="address DisplayBlock"></input>
               <h3 className="d-flex justify-content-center">發票</h3>
               <div className="">
@@ -145,7 +208,11 @@ function PaymentForm(props) {
                     <Creaditcard />
                   </div>
 
-                
+                  {/* <p>信用卡卡號：</p> */}
+                  {/* <div className="PhoneDisplayNone">
+              <input></input>
+              
+            </div> */}
                   {/* 手機板卡號 */}
                   <input className="PhoneCreditCardInput webDisplay"></input>
                   <div className="webDisplay">
@@ -162,10 +229,26 @@ function PaymentForm(props) {
                         <p>卡背後3碼：</p>
                         <input></input>
                       </div>
-
                     </div>
                   </div>
+
+                  {/*  桌機板卡號 */}
+                  {/* <div className="d-xl-flex PhoneDisplayNone">
+              <div className="creditCardDate">
+                <p>有效期限：</p>
+                <input></input>
+                <span>年</span>
+                <input></input>
+                <span>月</span>
+              </div>
+              <div className="creditCardDate1">
+                <p>卡背後3碼：</p>
+                <input></input>
+              </div>
+            </div> */}
                 </div>
+
+                {/* <div className="creditCardImg PhoneDisplayNone">123</div> */}
               </div>
             </div>
           </div>
