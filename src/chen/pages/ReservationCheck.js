@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react'
-import { withRouter, useHistory } from 'react-router-dom'
+import { withRouter, Link,useHistory } from 'react-router-dom'
 import { Table,Button,Modal } from 'react-bootstrap'
 import '../styles/reservations.scss'
 
@@ -9,6 +9,8 @@ function ReservationCheck(props) {
   const [modalShow, setModalShow] = useState(false)
 
   function MyVerticallyCenteredModal(props) {
+    console.log('model-props',props)
+    
     return (
       <Modal
         {...props}
@@ -22,12 +24,14 @@ function ReservationCheck(props) {
           </Modal.Title>
         </Modal.Header>
         <Modal.Body>
-          <p>
-            您的預約已完成！
-          </p>
+          <p>您的預約已完成！</p>
+          <p>確認OK，回首頁</p>
         </Modal.Body>
         <Modal.Footer>
-          <Button onClick={props.onHide}>OK</Button>
+          <Link to="/homepage">
+            <Button className="reserveBtn">OK</Button>
+            {/* <button onClick={props.onHide} className="reserveBtn">OK</button> */}
+          </Link>
         </Modal.Footer>
       </Modal>
     );
@@ -39,6 +43,7 @@ function ReservationCheck(props) {
         <div className="mt-5 py-5 text-center">
           <h2>預約服務</h2>
           <p className="lead">簡單 3 步驟，輕鬆預約ShakeBeard特約商家提供的多樣服務。</p>
+          <div className="decLine"></div>
         </div>
         <div className="row">
         <h4 className="my-3">三、確認預約內容</h4>
@@ -55,9 +60,10 @@ function ReservationCheck(props) {
               <td>ST001</td>
             </tr>
             <tr>
+              <td>預約日期</td>
+              <td>(星期二)</td>
               <td>預約時間</td>
-              <td>星期二</td>
-              <td colSpan="2">12:00~13:00</td>
+              <td>12:00~13:00</td>
             </tr>
             <tr>
               <td>預約服務</td>
@@ -71,19 +77,21 @@ function ReservationCheck(props) {
             </tr>
           </tbody>
         </Table>
-
-        <Button
-          onClick={() => props.history.goBack()}>
-          上一步
-        </Button>
-        <Button type="submit" className="ml-2" onClick={() =>
-          setModalShow(true)}>
-          送出
-        </Button>
-        <MyVerticallyCenteredModal
-          show={modalShow}
-          onHide={() => setModalShow(false)}
-        />
+        </div>
+        <div className="mt-5 py-5 text-center">
+          <Button 
+            className="reserveBtn"
+            onClick={() => props.history.goBack()}>
+            上一步
+          </Button>
+          <Button type="submit" className="ml-2 reserveBtn" onClick={() =>
+            setModalShow(true)}>
+            送出
+          </Button>
+          <MyVerticallyCenteredModal
+            show={modalShow}
+            onHide={() => setModalShow(false)}
+          />
         </div>
       </div>
     </>

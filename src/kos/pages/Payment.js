@@ -3,38 +3,18 @@ import CartCss from "../styles/CartCss.scss";
 import PayCss from "../styles/PayCss.scss";
 import Delete from "../icon/delete.svg";
 import CartBuyStep from "../components/CartBuyStep";
-import PaymentCard from "../components/PaymentCard";
-import PaymentPrice from "../components/PaymentPrice";
 import PaymentAddress from "../components/PaymentAddress";
 import PaymentCreditCard from "../components/PaymentCreditCard";
 import { Link } from "react-router-dom";
+import PaymentForm from '../components/PaymentForm'
 
 function Payment(props) {
   return (
     <>
       <CartBuyStep step="2" />
+      <PaymentForm />
 
-      <div className="PayCard">
-        <h3 className="d-flex justify-content-center">你的訂單</h3>
-
-        <PaymentCard />
-        <PaymentPrice />
-        <hr />
-        <div className="recipient">
-          <h3 className="d-flex justify-content-center">收件人資訊</h3>
-          <form>
-            <PaymentAddress />
-            <hr />
-            <PaymentCreditCard />
-          </form>
-        </div>
-      </div>
-      <div className="paymentBtn mx-auto">
-        <Link to="/Paycomplete">
-          <button className="SumitButton">確定送出</button>
-        </Link>
-      </div>
-
+      
       {/* <div className="cartArea">
                     <h2 className="d-flex justify-content-center">送出訂單</h2>
                     <div className="cartStep d-flex justify-content-center">

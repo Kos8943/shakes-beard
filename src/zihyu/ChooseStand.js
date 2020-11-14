@@ -2,13 +2,18 @@ import React from 'react'
 import './Style/ChooseStandCSS.css';
 import './Style/CommonCSS.css';
 import { Button } from 'react-bootstrap'
-import img_stand01 from './image/stand01.jpg';
-import img_stand02 from './image/stand02.jpg';
-import img_stand03 from './image/stand03.jpg';
-import img_stand04 from './image/stand04.jpg';
-import img_stand05 from './image/stand05.jpg';
-import img_stand06 from './image/stand06.jpg';
 
+import './StandData.js';
+const Data = global.StandData;
+
+let queryString = window.location.search;
+const urlParams = new URLSearchParams(queryString);
+const SelectRange = urlParams.get('SelectRange');             //第一頁選擇的參數   //上一頁選擇的參數
+const SelectRazorIndex = urlParams.get('SelectRazorIndex');
+const SelectBrushIndex = urlParams.get('SelectBrushIndex');
+
+
+let SelectStandIndex = "-1";
 
 class Class_ChooseStand extends React.Component
 {
@@ -22,13 +27,65 @@ class Class_ChooseStand extends React.Component
     this.setState({
       StandGoods: e.target.value
     });
-    // console.log("state : " + JSON.stringify(this.state, null, 4));
+    console.log("e.target.value = " + e.target.value);
+    SelectStandIndex = e.target.value;
   };
 
 
   render()
-  {
+  { 
     const { StandGoods } = this.state;
+    let showIndexs  = [];
+
+    let goodsName  = [];
+    let goodsPrice = [];
+    let images = [];
+
+    if (SelectRange == "0")
+    {
+      showIndexs = [5];
+
+    }
+    else if (SelectRange == "1")
+    {
+      showIndexs = [0, 1, 2, 3, 4];
+    }
+    else    //2
+    {
+      showIndexs = [0, 1, 2, 3, 4];
+    }
+    
+    let lists = [];
+    console.log("Data = " + Data);
+    
+    for (let i = 0; i < showIndexs.length; i++)
+    {
+        let dataIndex = showIndexs[i];
+
+        lists.push(
+
+          <div className="giftbox_Item col">
+            <div><img className="giftbox_ItemImg" src={Data[dataIndex].Image} /></div>
+          
+            <div style={{display: "flex", margin: "auto", width: "100px"}}>
+              <input style={{margin: "auto"}}
+                type="radio"
+                value={dataIndex.toString()}
+                onChange={this.OnChangeRadio}
+                checked={StandGoods === dataIndex.toString()}
+              />
+              <div className="giftbox_itemName">{Data[dataIndex].Name}</div>
+            </div>
+          
+            <div className="giftbox_itemPrice">NT$ {Data[dataIndex].Price}</div>
+          </div>
+        );
+    }
+
+
+
+
+
 
     return (
       
@@ -41,106 +98,7 @@ class Class_ChooseStand extends React.Component
                 <div className="lineTop"></div>
                 <div className="lineDown"></div>
 
-                  <div className="giftbox_Grid">
-                  
-                    <div className="giftbox_Item col">
-                      <div><img className="giftbox_ItemImg" src={img_stand01} /></div>
-                      
-                      <div style={{display: "flex", margin: "auto", width: "100px"}}>
-                        <input style={{margin: "auto"}}
-                          type="radio"
-                          value="1"
-                          onChange={this.OnChangeRadio}
-                          checked={StandGoods === "1"}
-                        />
-                        <div className="giftbox_itemName">曜石修容架</div>
-                      </div>
-                      
-                      <div className="giftbox_itemPrice">NT$ 880</div>
-                    </div>
-
-                    <div className="giftbox_Item col">
-                      <div><img className="giftbox_ItemImg" src={img_stand02} /></div>
-
-                      <div style={{display: "flex", margin: "auto", width: "100px"}}>
-                        <input style={{margin: "auto"}}
-                          type="radio"
-                          value="2"
-                          onChange={this.OnChangeRadio}
-                          checked={StandGoods === "2"}
-                        />
-                        <div className="giftbox_itemName">紳士修容架</div>
-                      </div>
-
-                      <div className="giftbox_itemPrice">NT$ 780</div>
-                    </div>
-
-                    <div className="giftbox_Item col">
-                      <div><img className="giftbox_ItemImg" src={img_stand03} /></div>
-                      
-                      <div style={{display: "flex", margin: "auto", width: "100px"}}>
-                        <input style={{margin: "auto"}}
-                          type="radio"
-                          value="3"
-                          onChange={this.OnChangeRadio}
-                          checked={StandGoods === "3"}
-                        />
-                        <div className="giftbox_itemName">胡桃修容架</div>
-                      </div>
-                      
-                      <div className="giftbox_itemPrice">NT$ 980</div>
-                    </div>
-                  
-                    <div className="giftbox_Item col">
-                      <div><img className="giftbox_ItemImg" src={img_stand04} /></div>
-                      
-                      <div style={{display: "flex", margin: "auto", width: "100px"}}>
-                        <input style={{margin: "auto"}}
-                          type="radio"
-                          value="4"
-                          onChange={this.OnChangeRadio}
-                          checked={StandGoods === "4"}
-                        />
-                        <div className="giftbox_itemName">木頭修容架</div>
-                      </div>
-                      
-                      <div className="giftbox_itemPrice">NT$ 980</div>
-                    </div>
-
-                    <div className="giftbox_Item col">
-                      <div><img className="giftbox_ItemImg" src={img_stand05} /></div>
-                      
-                      <div style={{display: "flex", margin: "auto", width: "100px"}}>
-                        <input style={{margin: "auto"}}
-                          type="radio"
-                          value="5"
-                          onChange={this.OnChangeRadio}
-                          checked={StandGoods === "5"}
-                        />
-                        <div className="giftbox_itemName">尊爵刮鬍刀</div>
-                      </div>
-                      
-                      <div className="giftbox_itemPrice">NT$ 780</div>
-                    </div>
-                    
-                    <div className="giftbox_Item col">
-                      <div><img className="giftbox_ItemImg" src={img_stand06} /></div>
-                      
-                      <div style={{display: "flex", margin: "auto", width: "100px"}}>
-                        <input style={{margin: "auto"}}
-                          type="radio"
-                          value="6"
-                          onChange={this.OnChangeRadio}
-                          checked={StandGoods === "6"}
-                        />
-                        <div className="giftbox_itemName">紅壇修容架</div>
-                      </div>
-                      
-                      <div className="giftbox_itemPrice">NT$ 980</div>
-                    </div>
-                    
-                      
-                  </div>
+                <div id="ChangeCSS" className="giftbox_Grid align-items-center">{lists}</div> 
 
                   
 
@@ -149,7 +107,7 @@ class Class_ChooseStand extends React.Component
                       {     //React程式區間語法 (開始)
                         () =>
                         {
-                          window.open("/Path_ChooseBrush", '_self');
+                          window.open("/Path_ChooseBrush?SelectRange=" + SelectRange+ "&SelectRazorIndex=" + SelectRazorIndex, '_self');
                         }
                       }     //React程式區間語法 (結束)
                     
@@ -159,7 +117,17 @@ class Class_ChooseStand extends React.Component
                     {     //React程式區間語法 (開始)
                       () =>
                       {
-                        window.open("/Path_Color", '_self');
+                        if (SelectStandIndex == "-1")
+                        {
+                          alert("請至少選擇一樣商品");
+                        }
+                        else
+                        {
+                          //SelectRange 代入範圍
+                          //SelectRazorIndex 代入範圍
+
+                          window.open("/Path_Color?SelectRange=" + SelectRange + "&SelectRazorIndex=" + SelectRazorIndex + "&SelectBrushIndex=" + SelectBrushIndex + "&SelectStandIndex=" + SelectStandIndex , '_self');
+                        }
                       }
                     }     //React程式區間語法 (結束)
                     

@@ -26,54 +26,63 @@ html {
 // 1920
 
 .loginCard {
-  width: 44.6vw;
+  width: 40vw;
   // width:848px;
   // height: 578px;
-  height: 60.2vh;
+  height: 55vh;
   background-color: rgba(255, 255, 255, 0.75);
   border: radius 4px;
-  margin: 8vh auto;
+  margin: 13vh auto;
   // border: 2px solid saddlebrown;
   // display: none;
 }
 
 .loginTittle {
-  font-size: 1.63rem;
+  font-size: 2rem;
   font-weight: bold;
   text-align: center;
   // border: 1px solid black;
-  padding-top: 45px;
+  padding-top: 25px;
 }
 
 .loginArea1 {
-  width: 22.0833vw;
-  height: 34.722vh;
+  width: 18vw;
+  height: 32vh;
   // border: 1px solid hotpink;
   border-right: 0.5px solid #232d2f;
   margin-top: 38px;
-  padding-left: 65px;
+  text-align: center;
 }
 
 .loginArea2 {
-  width: 22.0833vw;
-  height: 34.722vh;
+  width: 18vw;
+  height: 32vh;
   // border: 1px solid steelblue;
   border-left: 0.5px solid #232d2f;
   margin-top: 38px;
 }
 
-.logText {
-  font-size: 1.25rem;
+.logText_ {
+  font-size: 1.2rem;
   // margin-left: 4rem;
   // border: 1px solid #232d2f;
-  margin-top: 33px;
+  margin-top: 30px;
+  text-align: left;
+  margin-left: 25px;
+  display: block;
+}
+.logText_2 {
+  font-size: 1rem;
+  text-align: left;
+  // border: 1px solid #232d2f;
+  margin-left: 25px;
 }
 
 .loginInput {
   background-color: #898584;
   border: 1.3px solid #6b7496;
-  width: 15.9vw;
-  height: 5.74vh;
+  width: 15vw;
+  height: 4vh;
   border-radius: 4px;
 }
 
@@ -84,11 +93,12 @@ html {
 }
 
 .otherLogButton {
-  width: 15.9vw;
-  height: 5.74vh;
+  width: 15vw;
+  height: 5vh;
   border-radius: 4px;
   text-align: left;
   border: 1.3px solid #6b7496;
+  font-size: 1rem;
 }
 
 .facebook {
@@ -117,6 +127,9 @@ html {
   font-size: 1.5rem;
   font-weight: bold;
   border-radius: 4px;
+  border: none;
+  line-height: 24px;
+
   // border: 1px solid steelblue;
 }
 
@@ -129,16 +142,24 @@ html {
   font-size: 1.5rem;
   font-weight: bold;
   border-radius: 4px;
+  line-height: 24px;
+
   // border: 1px solid steelblue;
 }
 
 .loginWeb {
   display: flex;
+  flex-direction: column;
   justify-content: center;
+  border: 1px solid red;
 }
 
 .loginMobile {
   display: none;
+}
+.log {
+  display: flex;
+  justify-content: center;
 }
 
 //手機
@@ -148,36 +169,46 @@ html {
     font-size: 12px;
   }
 
+  .bagimg {
+    background-color: #595452;
+    min-height: 75.1vh;
+    background-image: url("../img/phoneimg.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    // border: 3px solid red;
+    background-origin: border-box;
+    padding: 1px;
+  }
+
   .loginMobile {
     display: block;
   }
 
   .loginWeb {
     display: block;
-  
   }
-  .loginWebNone{
+  .loginWebNone {
     display: none;
   }
 
-
   .bagimg2 {
     height: 100%;
+    border: 1px solid rgba(89, 84, 82, 0.66);
+    background-color: transparent;
   }
 
   .loginCard {
     width: 80vw;
     height: 100%;
     padding: 0 55px;
-    margin: 2vh auto;
+    margin: -10px auto;
   }
-
   .loginTittle {
     padding-top: 30px;
   }
 
   .loginArea1 {
-    // border: 1px solid steelblue;
+    border: 1px solid steelblue;
     border-right: none;
     border-bottom: 1px solid #232d2f;
     width: 100%;
@@ -187,10 +218,21 @@ html {
   }
 
   .logText {
-    margin-bottom: 15px;
-    // border: 1px solid steelblue;
-    margin-top: 15px;
+    font-size: 1.25rem;
+    // margin-left: 4rem;
+    // border: 1px solid #232d2f;
+    margin-top: 40px;
+    text-align: left;
+    margin-left: 0;
+  }
 
+  .logText2 {
+    font-size: 1.25rem;
+    // margin-left: 4rem;
+    // border: 1px solid #232d2f;
+    margin-top: 10px;
+    text-align: left;
+    margin-left: 0;
   }
 
   .loginInput {
@@ -208,19 +250,17 @@ html {
     border-left: none;
     width: 100%;
     height: 100%;
-    padding:0;
+    padding: 0;
     margin-top: 15px;
   }
 
-
   .otherAccount {
     // border: 1px solid hotpink;
-    text-align: center; 
-    display:flex;
+    text-align: center;
+    display: flex;
     flex-direction: column;
     margin: 0;
   }
-
 
   .otherLogButton {
     width: 100%;
@@ -234,11 +274,11 @@ html {
   .facebook {
     margin-bottom: 20px;
   }
-  
+
   .twitter {
     margin-bottom: 20px;
   }
- 
+
   .google {
     background-color: #e8e9e8;
     margin-bottom: 20px;
@@ -255,19 +295,14 @@ html {
     // border: 1px solid steelblue;
   }
 
-  
+  .loginWeb {
+    display: none;
+    // flex-direction: column;;
+  }
+  .log {
+    display: flex;
+    flex-direction: column;
 
-
-
-
-
-
-
-
-
-
-
-
-
-
+    // justify-content:center;
+  }
 }

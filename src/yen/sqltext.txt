@@ -1,0 +1,1 @@
+INSERT INTO `member` (SELECT `sid`, `authAccount`, `authPassword`, `name`, `email`, `phone`, `birth`, `city`, `dist`, `address`, `card`, `cardDate`, `cvc`, `invoice`, `favorite`) VALUES (NULL, 'aaa', '123', '測試用', 'aaa123@xxx.com', '0909123456', '1994-01-01', '台北市', '信義區', '信義路', '1234432112344321 ', '0422', '101', '', '');

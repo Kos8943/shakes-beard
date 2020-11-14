@@ -14,10 +14,10 @@ function Recommend(props) {
                 </div>
                 <div className="card-body d-flex flex-column align-items-start">
                   <p>
-                    <Badge pill variant="secondary">理髮</Badge>
+                    <Badge pill variant="secondary" className="mr-1">理髮</Badge>
                   </p>
                   <h6 className="mb-1">Sculptor Barber</h6>
-                  <Link to='/shopdetail/'>查看店家</Link>
+                  <Link to='/shopdetail?' className="learnMore">查看店家</Link>
                 </div>
               </div>
               <div className="card recommend">
@@ -26,10 +26,10 @@ function Recommend(props) {
                 </div>
                 <div className="card-body d-flex flex-column align-items-start">
                   <p>
-                    <Badge pill variant="secondary">理髮</Badge>
+                    <Badge pill variant="secondary" className="mr-1">理髮</Badge>
                   </p>
                   <h6 className="mb-1">Sculptor Barber</h6>
-                  <Link to='/shopdetail/#'>查看店家</Link>
+                  <Link to='/shopdetail?' className="learnMore">查看店家</Link>
                 </div>
               </div>
               <div className="card recommend">
@@ -38,12 +38,10 @@ function Recommend(props) {
                 </div>
                 <div className="card-body d-flex flex-column align-items-start">
                   <p>
-                    <Badge pill variant="secondary">理髮</Badge>
+                    <Badge pill variant="secondary" className="mr-1">理髮</Badge>
                   </p>
-                  <h6 className="mb-1">
-                    <Link className="text-dark" to='/shopdetail/#'>Sculptor Barber</Link>
-                  </h6>
-                  <Link to='/shopdetail/#'>查看店家</Link>
+                  <h6 className="mb-1">Sculptor Barber</h6>
+                  <Link to='/shopdetail?' className="learnMore">查看店家</Link>
                 </div>
               </div>
               <div className="card recommend">
@@ -52,12 +50,10 @@ function Recommend(props) {
                 </div>
                 <div className="card-body d-flex flex-column align-items-start">
                   <p>
-                    <Badge pill variant="secondary">理髮</Badge>
+                    <Badge pill variant="secondary" className="mr-1">理髮</Badge>
                   </p>
-                  <h6 className="mb-1">
-                    <Link className="text-dark" to='/shopdetail/#'>Sculptor Barber</Link>
-                  </h6>
-                  <Link to='/shopdetail/#'>查看店家</Link>
+                  <h6 className="mb-1">Sculptor Barber</h6>
+                  <Link to='/shopdetail?' className="learnMore">查看店家</Link>
                 </div>
               </div>
           </div>

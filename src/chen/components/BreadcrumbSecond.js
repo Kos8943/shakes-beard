@@ -1,0 +1,59 @@
+import React, { useState, useEffect } from 'react'
+import { Link, withRouter } from 'react-router-dom'
+
+function BreadcrumbSecond(props) {
+  console.log('Breadcrumb')
+  console.log(props)
+  const[crumb,setCrumb]=useState('商家預約')
+
+  let path = ''
+  const pathname = props.location.pathname
+
+  // '預約商家 / 商家列表'
+  switch (pathname) {
+    case '/ShopList':
+      path = '商家列表'
+      break
+    case '/shoplist':
+      path = '商家列表'
+      break
+    case '/shopdetail/':
+      path = '商家頁面'
+      break
+    case '/map':
+      path = '商家地圖'
+      break
+    default:
+      path = '商家頁面'
+  }
+
+  return (
+    <>
+      <nav aria-label="breadcrumb">
+        <ol className="breadcrumb">
+          <li className="breadcrumb-item">
+            <Link to="/">首頁</Link>
+          </li>
+          <li className="breadcrumb-item">
+            <Link to="#"
+              onClick={() => {
+                if(path === "商家頁面"){
+                  console.log("離開商家頁面")
+                  props.history.push('/shoplist')}
+                else{console.log("離開其他頁面")
+                  props.history.push('/homepage')}
+            }}>
+              商家列表
+            </Link>
+          </li>
+          <li className="breadcrumb-item active" aria-current="page">
+            {path}
+            {/* <Link to="">{path}</Link> */}
+          </li>
+        </ol>
+      </nav>
+    </>
+  )
+}
+
+export default withRouter(BreadcrumbSecond)

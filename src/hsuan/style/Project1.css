@@ -92,6 +92,7 @@ padding-left: 8.5rem;
 .HsuanBread a:hover {
   text-decoration: underline;
 }
+/* 進階篩選 */
 
 .PageTitle {
   position: relative;
@@ -100,7 +101,7 @@ padding-left: 8.5rem;
   font-size: 40px;
   line-height: 1;
   text-align: center;
-  z-index: 0;
+  /* z-index: 0; */
 }
 
 .PageTitle:before {
@@ -113,7 +114,7 @@ padding-left: 8.5rem;
   width: calc(50% + 50px);
   height: calc(100% + 99px);
   pointer-events: none;
-  z-index: -1;
+  /* z-index: -1; */
 }
 
 
@@ -130,14 +131,14 @@ padding-left: 8.5rem;
 .Scroller span {
   height: 100%;
   width: 1px;
-  background-color: #b59da1;
+  background-color: #232D2F;
   margin: 0 6px;
 }
 
 .Scroller:before, .Scroller:after {
   content: '';
   display: block;
-  background-color: #b59da1;
+  background-color: #232D2F;
   width: 8px;
   height: 8px;
   border-radius: 4px;
@@ -406,7 +407,7 @@ padding-left: 8.5rem;
 .brand-SectionCover__body {
   flex: 1;
   padding-top: 90px;
-  padding-bottom: 90px;
+  padding-bottom: 30px;
   color: inherit;
 }
 
@@ -416,11 +417,11 @@ padding-left: 8.5rem;
 }
 
 .brand-BrandCardItems a {
-  color: #b59da1;
+  color: #232D2F;
 }
 /* 禮盒hover */
  .brand-BrandCardItems .brand-BrandCardItems__card:before {
-    box-shadow: 7px 7px 1px rgba(201, 177, 181, 0.055), -2px -2px 7px #A69981;;
+    box-shadow: 7px 7px 1px rgba(201, 177, 181, 0.055), -2px -2px 7px #A232D2F;;
 } 
 
 .brand-BrandCardItems .brand-BrandCardItems__card:after {
@@ -500,7 +501,7 @@ padding-left: 8.5rem;
 }
 
 .brand-BrandCardItems__card:before {
-  z-index: 2;
+  /* z-index: 2; */
   content: '';
   display: block;
   position: absolute;
@@ -513,7 +514,7 @@ padding-left: 8.5rem;
 }
 
 .brand-BrandCardItems__card:after {
-  z-index: 2;
+  /* z-index: 2; */
   content: '';
   display: block;
   position: absolute;
@@ -624,7 +625,7 @@ padding-left: 8.5rem;
 }
 
 .brand-ProductItems {
-  color: #A69981;
+  color: #232D2F;
 }
 /* 禮盒顏色 */
 .brand-ProductItems a {
@@ -652,7 +653,7 @@ padding-left: 8.5rem;
   .brand-ProductItems__item {
     width: calc(25% - 49.5px);
     flex-shrink: 0;
-    margin-right: 66px;
+    /* margin-right: 66px; */
     margin-bottom: 30px;
   }
   .brand-ProductItems__item:nth-child(4n) {
@@ -703,7 +704,7 @@ padding-left: 8.5rem;
 }
 
 .brand-ProductItems__image:before {
-  z-index: 2;
+  /* z-index: 2; */
   content: '';
   display: block;
   position: absolute;
@@ -716,7 +717,7 @@ padding-left: 8.5rem;
 }
 
 .brand-ProductItems__image:after {
-  z-index: 2;
+  /* z-index: 2; */
   content: '';
   display: block;
   position: absolute;
@@ -824,17 +825,17 @@ padding-left: 8.5rem;
 }
 /* brand shakesbeard */
 .brand-SectionCover {
-  padding-top: 80px;
-  padding-bottom: 40px;
+  padding-top: 40px;
+  padding-bottom: 20px;
   color:  #595452;
 }
 ._text2  {
-    color:#A69981;
+    color:#232D2F;
     padding-bottom: 60px;
   }
 /* shakesbeard card */
 .brand-SectionCover .brand-SectionCover__title ._card:before {
-  background-color: #a69981;
+  background-color: #232D2F;
 }
 
 .brand-SectionCover .brand-SectionCover__title ._title1:after {

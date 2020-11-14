@@ -2,18 +2,19 @@ import React, { useState, useEffect } from "react";
 import "animate.css/animate.min.css";
 import ScrollAnimation from "react-animate-on-scroll";
 import "../styles/custom.scss";
-import { Button, Carousel, Card } from "react-bootstrap";
+import { Button, Carousel, Card, CarouselItem } from "react-bootstrap";
+import { Link} from "react-router-dom";
 
-function HotProduct() {
+function HotProduct(props) {
   const [dataLoading, setDataLoading] = useState(false);
-  const [hotImg, setHotImg] = useState();
-  const [hotName, setHotName] = useState();
-  const [hotPrice, setHotPrice] = useState();
+  const [hotProductList, setHotProductList] = useState([]);
+  // const [hotName, setHotName] = useState([]);
+  // const [hotPrice, setHotPrice] = useState([]);
 
   // 載入資料用
   async function getTotalFromServer() {
     setDataLoading(true);
-    const url = "http://localhost:3000/try-db";
+    const url = "http://localhost:3000/try-home";
 
     const request = new Request(url, {
       method: "GET",
@@ -26,12 +27,12 @@ function HotProduct() {
     const response = await fetch(request);
     const data = await response.json();
     // data會是一個物件值
-    console.log(data[0].image_name);
+    console.log(data);
 
     // setTotal(data.total)
-    setHotImg(data[0].image_name);
-    setHotName(data[0].hotname);
-    setHotPrice(data[0].hotprice);
+   
+    setHotProductList(data);
+    
   }
 
   // componentDidMount，一開始會載入資料(在元件初始化完成後)
@@ -44,8 +45,11 @@ function HotProduct() {
     setTimeout(() => setDataLoading(false), 500);
   }, []);
 
+
+
   return (
     <>
+
       <div className="hot-area w-100 h-100 ">
         <ScrollAnimation animateIn="flipInY">
           <div className="hot-text-area">
@@ -57,16 +61,23 @@ function HotProduct() {
         </ScrollAnimation>
 
         <div className="hot-card-area">
-          <Card id="cardborder" style={{ width: "20rem" }}>
-            <Card.Img variant="top" src={"./imgs/" + `${hotImg}`} />
+        {hotProductList.map((value, index)=>{
+          return(
+            <Card id="cardborder" style={{ width: "20rem" }}>
+            <Card.Img id="cardhover" variant="top" src={"./imgs/" + `${hotProductList[index].image_name}`} />
             <Card.Body id="cardbody">
-              <Card.Title>{hotName}</Card.Title>
-              <Card.Text id="price">NT${hotPrice}</Card.Text>
+              <Card.Title>{hotProductList[index].hotname}</Card.Title>
+              <Card.Text id="price">NT${hotProductList[index].hotprice}</Card.Text>
+              <a href="/project">
               <Button variant="primary" id="chadbuy">
                 立即購買
               </Button>
+              </a>
             </Card.Body>
           </Card>
+          )
+        })}
+         
         </div>
 
         {/* 熱門商品手機板 */}
@@ -96,15 +107,32 @@ function HotProduct() {
               </Carousel.Item>
             </Carousel>
             <Card.Body id="card-body-mobile">
-              <Card.Title>質男嚴選毛刷</Card.Title>
-              <Card.Text>NT$1000</Card.Text>
+
+  
+    <Carousel>
+              <CarouselItem>
+              <Card.Title>機械質感袖扣</Card.Title>
+              <Card.Text>NT$1200</Card.Text>
+              </CarouselItem>
+              <CarouselItem>
+              <Card.Title>純獾毛刮鬍刷</Card.Title>
+              <Card.Text>NT$1280</Card.Text>
+              </CarouselItem>
+              <CarouselItem>
+              <Card.Title>木質調刮鬍刀架</Card.Title>
+              <Card.Text>NT$1300</Card.Text>
+              </CarouselItem>
+            </Carousel>     
+              <Link as={Link} to="/project">
               <Button variant="primary" id="chadbuy">
                 立即購買
               </Button>
+              </Link>
             </Card.Body>
           </Card>
         </div>
       </div>
+     
     </>
   );
 }

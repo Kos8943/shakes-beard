@@ -52,6 +52,7 @@ html {
     height: 130px;
     background-color: #f8f8f8;
     padding: .5rem;
+    margin-bottom: .5%;
     
 }
 .itemImg{
@@ -151,7 +152,7 @@ html {
     }
 
     .cartItem {
-        display: none;
+        margin-bottom: 1%;
     }
 
     .cartArea {
@@ -192,9 +193,10 @@ html {
     }
 
     .itemImg{
-        height: 55%;
-        width: 25%;
+        height: 60%;
+        width: 22%;
         margin-right: 3%;
+        margin-bottom: 5%;
         float: left;
     }
 
@@ -255,7 +257,7 @@ html {
     .priceArea {
         width: 100%;
         margin: 1% 0;
-        padding: 0 4% 0 0;
+        padding: 0 2% 0 0;
     
     }
 

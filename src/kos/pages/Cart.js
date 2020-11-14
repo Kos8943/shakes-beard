@@ -5,8 +5,8 @@ import Delete from '../icon/delete.svg'
 import Trash from '../icon/trash.svg'
 import WebCartCard from '../components/WebCartCard'
 import PhoneCartCard from '../components/PhoneCartCard'
-import CartPrice from '../components/CartPrice'
 import CartBuyStep from '../components/CartBuyStep'
+
 
 function Cart(props) { 
     // const [total, setTotal] = useState(1)
@@ -15,7 +15,7 @@ function Cart(props) {
                 <CartBuyStep step="1"/>
                 <WebCartCard />
                 {/* <PhoneCartCard /> */}
-                <CartPrice />
+             
 
 
 

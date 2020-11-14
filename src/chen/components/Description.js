@@ -1,33 +1,105 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react'
+import { withRouter } from 'react-router-dom'
 import { Media } from 'react-bootstrap'
 import '../styles/shops.scss'
 
 function Description(props) {
   console.log('Description', props)
+  const sid = props.match.params.sid
+  console.log('props.match.params',props.match.params)
+  console.log('sid',sid)
+
+  const [shopMainTitle, setShopMainTitle] = useState('')
+  const [shopMainText, setShopMainText] = useState('')
+  const [shopMainImg, setShopMainImg] = useState('')
+  const [shopSecondTitle, setShopSecondTitle] = useState('')
+  const [shopSecondText, setShopSecondText] = useState('')
+  const [shopSecondImg, setShopSecondImg] = useState('')
+  const [dataIsExist, setDataIsExist] = useState(true)
+
+  async function getShopFromServer(){
+    console.log('getShopFromServer',sid)
+    // json-db
+    // const url = 'http://localhost:3000/try-shop/'+ shopid
+    const url = 'http://localhost:3000/try-shop'
+    console.log("url",url)
+
+    const request = new Request(url, {
+      method:'GET',
+      headers:new Headers({
+        Accept: 'application/json',
+        'Content-Type': 'application/json',
+      }),
+    })
+
+    const response = await fetch(request)
+    const data = await response.json()
+    console.log('response',response)
+    console.log("data",data)
+    
+    const i = [sid]-1
+    console.log("[sid]-1",i)
+    console.log("data[i]",data[i])// index 改sid?
+
+    if(!data[i].sid){
+      setDataIsExist(false)
+      console.log('no data[i].sid')
+      return
+    }
+
+    setShopMainTitle(data[i].description_title_main)
+    setShopMainText(data[i].description_text_main)
+    setShopMainImg(data[i].description_img_main)
+    setShopSecondTitle(data[i].description_title_second)
+    setShopSecondText(data[i].description_text_second)
+    setShopSecondImg(data[i].description_img_second)
+  }
+
+  useEffect(()=>{
+    getShopFromServer()
+  },[])
+
+   const display=(<>
+      <Media className="mb-5">
+      <img
+        alt="description-img"
+        width={400}
+        className="mr-3"
+        src={`/imgs/shops/${shopMainImg}`}
+      />
+      <Media.Body>
+        <div>
+            <h5>{shopMainTitle}</h5>
+            {/* <hr className="p-0"/> */}
+          <p>{shopMainText}</p>
+        </div>
+        {/* <Link to="#" className="btn btn-primary">
+          立即預約
+        </Link> */}
+      </Media.Body>
+    </Media>
+    <Media className="mb-5">
+      <Media.Body>
+        <div>
+          <h5>{shopSecondTitle}</h5>
+          <p>{shopSecondText}</p>
+        </div>
+        {/* <Link to="#" className="btn btn-primary">
+          立即預約
+        </Link> */}
+      </Media.Body>
+      <img
+        alt="description-img"
+        width={400}
+        className="ml-3"
+        src={`/imgs/shops/${shopSecondImg}`}
+      />
+    </Media>
+  </>)
+  
   return (
-    <>
-      <Media className="mb-3">
-        <img
-          alt="description-img"
-          width={200}
-          className="mr-3"
-          src={require('../img/card01.jpg')} 
-        />
-        <Media.Body>
-          <h5>男仕理髮</h5>
-          <p>
-            Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque
-            ante sollicitudin commodo. Cras purus odio, vestibulum in vulputate at,
-            tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla.
-            Donec lacinia congue felis in faucibus.
-          </p>
-          {/* <Link to="#" className="btn btn-primary">
-            立即預約
-          </Link> */}
-        </Media.Body>
-      </Media>
-    </>
+    <>{display}</>
   )
 }
 
-export default Description
+export default withRouter(Description)
