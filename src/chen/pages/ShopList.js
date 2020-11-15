@@ -17,7 +17,7 @@ function ShopList(props) {
   return (
     <>
     <div className="shops container">
-      <div className="row mb-4">
+      <div className="row mb-1">
         <Breadcrumb />
       </div>
       <div className="row mb-3">
