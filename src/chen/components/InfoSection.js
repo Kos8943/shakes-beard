@@ -130,7 +130,7 @@ function InfoSection(props) {
         </div>
       </div>
       <div className="info col-12 col-sm-12 col-md-5 mt-3">
-          <h4 className="info-title">{shopName}</h4>
+          <h1 className="info-title">{shopName}</h1>
           <h5>
             <Badge pill variant="secondary" className="mr-1 cate-tag">
               {shopTag}
@@ -177,12 +177,15 @@ function InfoSection(props) {
               <Datetime/>
               {/* <div className="test1"><Datetime/></div> */}
             </div>
-            <p className="col-12">注意事項: 如取消預約，請於預約日三天前聯絡。謝謝</p>
+            {/* <p className="col-12">注意事項: 如取消預約，請於預約日三天前聯絡。謝謝</p> */}
           </div>
           <div className="row pl-3">
-            <Link to="/reservation" className="btn goReserve">
-              立即預約
-            </Link>
+            {/* <div className="m-auto"> */}
+            <div className="m-auto">
+              <Link to="/reservation" className="btn goReserve">
+                立即預約
+              </Link>
+            </div>
           </div>
         </div>
      </div>

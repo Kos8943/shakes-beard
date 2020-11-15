@@ -73,11 +73,12 @@ class Class_ChooseStand extends React.Component
                 value={dataIndex.toString()}
                 onChange={this.OnChangeRadio}
                 checked={StandGoods === dataIndex.toString()}
+                id={"radioID"+i}
               />
-              <div className="giftbox_itemName">{Data[dataIndex].Name}</div>
+              <div className="giftbox_itemName"><label htmlFor={"radioID"+i} style={{display: "contents"}}>{Data[dataIndex].Name}</label></div>
             </div>
-          
-            <div className="giftbox_itemPrice">NT$ {Data[dataIndex].Price}</div>
+
+            <div className="giftbox_itemPrice"><label htmlFor={"radioID"+i} style={{display: "contents"}}>NT$ {Data[dataIndex].Price}</label></div>
           </div>
         );
     }

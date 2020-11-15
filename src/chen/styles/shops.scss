@@ -172,6 +172,15 @@
     font-size: 1.25rem;
   }
 
+  .card-body>a{
+    color: #44494a;
+    text-decoration:none;
+  }
+
+  .card-body>a:hover{
+    text-decoration:underline;
+  }
+
   .card-text{
     font-size: 1rem;
   }
@@ -326,7 +335,7 @@
 
   .info-title{
     font-size: 1.25rem;
-    font-weight: bolder;
+    font-weight: bold;
   }
 
   .info-head>.col-3>p{
