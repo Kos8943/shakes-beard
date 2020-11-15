@@ -221,15 +221,15 @@ function App() {
 
             <Route path="/shoplist">
               <ShakesBeardNavbar isAuth={isAuth} setIsAuth={setIsAuth} />
-              <div className="footerFix">
+              {/* <div className="footerFix"> */}
                 <ShopList />
-              </div>
+              {/* </div> */}
               <MyFooter />
             </Route>
 
             <Route path="/shopdetail/:sid?">
               <ShakesBeardNavbar />
-              <div className="footerFix">
+              <div className="footerFix KosPadding">
                 <ShopDetail />
               </div>
               <MyFooter />
