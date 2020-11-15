@@ -5,7 +5,11 @@ import MyFooter from "./components/MyFooter";
 import { BrowserRouter as Router, Route, Link, Switch } from "react-router-dom";
 import HeroPage from "./chad/HeroPage";
 import Sid from "./Sid";
-import ScrollUp from 'react-scroll-up'
+import ScrollUp from "react-scroll-up";
+
+
+import firebase from "firebase";
+import StyledFirebaseAuth from 'react-firebaseui/StyledFirebaseAuth';
 
 
 //以下import個人頁面
@@ -31,39 +35,32 @@ import Func_Finish from "./zihyu/Finish";
 import LogIn from "./yen/LogIn";
 import SignUp from "./yen/SignUp";
 import MemberOption from "./yen/MemberOption";
-import TestAuth from "./yen/TestAuth";
 import Payment from "./kos/pages/Payment";
-import Paycomplete from './kos/pages/Paycomplete'
-import orderCheck from './kos/pages/OrderCheck'
+import Paycomplete from "./kos/pages/Paycomplete";
+import orderCheck from "./kos/pages/OrderCheck";
 import OrderCheck from "./kos/pages/OrderCheck";
-import TopArrow from "./icon/top-arrow.jpg"
+import TopArrow from "./icon/top-arrow.jpg";
 import { set } from "animejs";
 import InfoSection from "./chen/components/InfoSection";
-import TryLocalstrage from './kos/pages/TryLocalstrage'
-
+import TryLocalstrage from "./kos/pages/TryLocalstrage";
 
 
 function App() {
-
   // localStorage.setItem('auth', false)
-  const auth = JSON.parse(localStorage.getItem('auth'))
-
+  const auth = JSON.parse(localStorage.getItem("auth"));
 
   // 登出/登入狀態
-  const [isAuth, setIsAuth] = useState(auth)
-  const [authAccount, setAuthAccount] = useState()
-  const [authPassword, setAuthPasswor] = useState()
+  const [isAuth, setIsAuth] = useState(auth);
+  const [authAccount, setAuthAccount] = useState();
+  const [authPassword, setAuthPassword] = useState();
   const [account, setAccount] = useState();
   const [password, setPassword] = useState();
 
-
-
+  const [isSignedIn, setIsSignedIn] = useState(false);
 
   return (
     <Router>
-
       <>
-
         <main role="main">
           <ScrollUp showUnder={150}>
             <img src={TopArrow} class="scrolltotop d-lg-block d-none"></img>
@@ -124,18 +121,20 @@ function App() {
 
             <Route path="/login">
               <ShakesBeardNavbar isAuth={isAuth} setIsAuth={setIsAuth} />
-              <LogIn isAuth={isAuth} setIsAuth={setIsAuth} authAccount={authAccount} setAuthAccount={setAuthAccount} authPassword={authPassword} setAuthPassword={setAuthPasswor} account={account} setAccount={setAccount} password={password} setPassword={setPassword} />
+              <LogIn
+                isAuth={isAuth}
+                setIsAuth={setIsAuth}
+                account={account}
+                setAccount={setAccount}
+                password={password}
+                setPassword={setPassword}
+              />
               <MyFooter />
-            </Route>
-
-            <Route path="/testAuth">
-              <ShakesBeardNavbar isAuth={isAuth} setIsAuth={setIsAuth} />
-              <TestAuth isAuth={isAuth} setIsAuth={setIsAuth} />
             </Route>
 
             <Route path="/signup">
               <ShakesBeardNavbar isAuth={isAuth} setIsAuth={setIsAuth} />
-              <SignUp />
+              <SignUp isAuth={isAuth} setIsAuth={setIsAuth} />
               <MyFooter />
             </Route>
 
@@ -235,15 +234,25 @@ function App() {
               <MyFooter />
             </Route>
 
-
-
             <Route path="/memberoption">
               <ShakesBeardNavbar isAuth={isAuth} setIsAuth={setIsAuth} />
               <div className="memFooterFix ">
-                <MemberOption isAuth={isAuth} setIsAuth={setIsAuth} />
+                <MemberOption
+                  isAuth={isAuth}
+                  setIsAuth={setIsAuth}
+                  authAccount={authAccount}
+                  setAuthAccount={setAuthAccount}
+                  authPassword={authPassword}
+                  setAuthPassword={setAuthPassword}
+                  account={account}
+                  setAccount={setAccount}
+                  password={password}
+                  setPassword={setPassword}
+                />
               </div>
               <MyFooter />
             </Route>
+            
 
 
 
@@ -278,13 +287,11 @@ function App() {
               </div>
               <MyFooter />
             </Route>
-
           </Switch>
         </main>
-
       </>
     </Router>
-  )
+  );
 }
 
 export default App;

@@ -1,5 +1,6 @@
 /* eslint-disable jsx-a11y/alt-text */
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
+
 import MemberOptionCss from "./styles/MemberOptionCss.scss";
 import MemberDataUpdateTable from "./components/MemberDataUpdateTable";
 import MemberPasswordUpdateTable from "./components/MemberPasswordUpdateTable";
@@ -9,21 +10,94 @@ import CartOrderCheck from "../kos/components/CartOrderCheck";
 import ReservationOrderCheck from "../chen/components/ReservationOrderCheck";
 import { Router, Route, Link, Switch, Redirect } from "react-router-dom";
 
-
 function MemberOption(props) {
-  const [pageTitle, setPageTitle] = useState("資料修改");
-  const { isAuth, setIsAuth } = props;
+  const {
+    isAuth,
+    setIsAuth,
+    account,
+    setAccount,
+    password,
+    setPassword,
+    authAccount,
+    setAuthAccount,
+    authPassword,
+    setAuthPassword,
+  } = props;
 
-  // if(isAuth===false) return <Redirect to="/login" />
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+  const [phone, setPhone] = useState("");
+  const [birth, setBirth] = useState("");
+  const [country, setCountry] = useState(-1);
+  const [township, setTownship] = useState(-1);
+  const [address, setAddress] = useState("");
+  const [card, setCard] = useState("");
+  const [cardDate, setCardDate] = useState("");
+  const [cvc, setCvc] = useState("");
+  const [barCode, setBarCode] = useState("");
+  const [invoice, setInvoice] = useState("");
+  const [favorite, setFavorite] = useState("");
+  const [radio, setRadio] = useState("");
+
+  function getFrom() {
+    if (localStorage.getItem("data")) {
+      const url = "http://localhost:3000/yen/member-data";
+      const data = {
+        sid: JSON.parse(localStorage.getItem("data")).sid,
+      };
+      fetch(url, {
+        method: "POST",
+        body: JSON.stringify(data),
+        headers: new Headers({
+          "Content-Type": "application/json",
+        }),
+      })
+        .then((r) => r.json())
+
+        .then((o) => {
+          console.log("react收到的", o);
+          setAuthAccount(o[0].authAccount);
+          setName(o[0].name);
+          setEmail(o[0].email);
+          setBirth(o[0].birth);
+          setPhone(o[0].phone);
+          setAddress(o[0].address);
+          setCvc(o[0].cvc);
+          setInvoice(o[0].invoice);
+          setCard(o[0].card);
+          setCardDate(o[0].cardDate);
+          setBarCode(o[0].barCode);
+
+          if (o[0].country !== "") {
+            setCountry(o[0].country);
+          }
+
+          if (o[0].township !== "") {
+            setTownship(o[0].township);
+          }
+        });
+      // console.log(memberData);
+    } else {
+    }
+  }
+  useEffect(() => {
+    getFrom();
+  }, []);
+
+  const [pageTitle, setPageTitle] = useState("資料修改");
+
+  // console.log(isAuth)
+
+  if (isAuth === false || isAuth === null) return <Redirect to="/login" />;
 
   return (
     <>
       <div className="container-fluid">
         <div className="row justify-content-between">
-          <div className="userName d-lg-none">王大明</div>
+          <div className="userName d-lg-none">{name}</div>
           <div className="decLine  d-lg-none"></div>
           <div className="leftArea col-12 col-sm-2 col-md-2">
-            <div className="userName d-none d-lg-block">王大明</div>
+            <div className="userName d-none d-lg-block">{name}</div>
             <div className="decLine d-none d-lg-block"></div>
 
             <div className="d-flex flex-column">
@@ -35,8 +109,9 @@ function MemberOption(props) {
                 }}
               ></img>
               <div
-                className={`option ${pageTitle === "資料修改" ? "thisPage" : ""
-                  }`}
+                className={`option ${
+                  pageTitle === "資料修改" ? "thisPage" : ""
+                }`}
                 onClick={() => {
                   setPageTitle("資料修改");
                 }}
@@ -54,8 +129,9 @@ function MemberOption(props) {
                 }}
               ></img>
               <div
-                className={`option ${pageTitle === "密碼修改" ? "thisPage" : ""
-                  }`}
+                className={`option ${
+                  pageTitle === "密碼修改" ? "thisPage" : ""
+                }`}
                 onClick={() => {
                   setPageTitle("密碼修改");
                 }}
@@ -73,8 +149,9 @@ function MemberOption(props) {
                 }}
               ></img>
               <div
-                className={`option ${pageTitle === "偏好設定" ? "thisPage" : ""
-                  }`}
+                className={`option ${
+                  pageTitle === "偏好設定" ? "thisPage" : ""
+                }`}
                 onClick={() => {
                   setPageTitle("偏好設定");
                 }}
@@ -92,8 +169,9 @@ function MemberOption(props) {
                 }}
               ></img>
               <div
-                className={`option ${pageTitle === "追蹤清單" ? "thisPage" : ""
-                  }`}
+                className={`option ${
+                  pageTitle === "追蹤清單" ? "thisPage" : ""
+                }`}
                 onClick={() => {
                   setPageTitle("追蹤清單");
                 }}
@@ -111,8 +189,9 @@ function MemberOption(props) {
                 }}
               ></img>
               <div
-                className={`option ${pageTitle === "訂單查詢" ? "thisPage" : ""
-                  }`}
+                className={`option ${
+                  pageTitle === "訂單查詢" ? "thisPage" : ""
+                }`}
                 onClick={() => {
                   setPageTitle("訂單查詢");
                 }}
@@ -130,8 +209,9 @@ function MemberOption(props) {
                 }}
               ></img>
               <div
-                className={`option ${pageTitle === "預約查詢" ? "thisPage" : ""
-                  }`}
+                className={`option ${
+                  pageTitle === "預約查詢" ? "thisPage" : ""
+                }`}
                 onClick={() => {
                   setPageTitle("預約查詢");
                 }}
@@ -144,27 +224,67 @@ function MemberOption(props) {
           <div className="decLine  d-lg-none"></div>
 
           {pageTitle === "資料修改" ? (
-            <MemberDataUpdateTable title="資料修改" />
+            <MemberDataUpdateTable
+              isAuth={isAuth}
+              setIsAuth={setIsAuth}
+              authAccount={authAccount}
+              setAuthAccount={setAuthAccount}
+              authPassword={authPassword}
+              setAuthPassword={setAuthPassword}
+              account={account}
+              setAccount={setAccount}
+              password={password}
+              setPassword={setPassword}
+              name={name}
+              setName={setName}
+              email={email}
+              setEmail={setEmail}
+              birth={birth}
+              setBirth={setBirth}
+              phone={phone}
+              setPhone={setPhone}
+              address={address}
+              setAddress={setAddress}
+              country={country}
+              setCountry={setCountry}
+              township={township}
+              setTownship={setTownship}
+              title="資料修改"
+            />
           ) : (
-              ""
-            )}
+            ""
+          )}
           {pageTitle === "密碼修改" ? (
             <MemberPasswordUpdateTable title="密碼修改" />
           ) : (
-              ""
-            )}
+            ""
+          )}
           {pageTitle === "偏好設定" ? (
-            <MemberPreferenceSetting title="偏好設定" />
+            <MemberPreferenceSetting
+              isAuth={isAuth}
+              setIsAuth={setIsAuth}
+              card={card}
+              setCard={setCard}
+              cardDate={cardDate}
+              setCardDate={setCardDate}
+              cvc={cvc}
+              setCvc={setCvc}
+              invoice={invoice}
+              setInvoice={setInvoice}
+              barCode={barCode}
+              setBarCode={setBarCode}
+              title="偏好設定"
+            />
           ) : (
-              ""
-            )}
+            ""
+          )}
           {pageTitle === "追蹤清單" ? <MemberFavorites title="追蹤清單" /> : ""}
           {pageTitle === "訂單查詢" ? <CartOrderCheck title="訂單查詢" /> : ""}
           {pageTitle === "預約查詢" ? (
             <ReservationOrderCheck title="預約查詢" />
           ) : (
-              ""
-            )}
+            ""
+          )}
         </div>
       </div>
 

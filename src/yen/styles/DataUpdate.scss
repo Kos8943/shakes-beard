@@ -50,6 +50,12 @@
     // border: 1px solid green;
 }
 
+
+.dataForm input:-webkit-autofill { box-shadow: 0 0 0px 1000px white inset ;}
+
+
+
+
 @media (max-width: 500px) {
   .rightArea {
     // border: 1px solid green;
@@ -105,6 +111,10 @@
     //   border: 1px solid green;
     //   margin: 20px 10px 0 140px;
   }
-
+  .addSelect {
+    width: 8rem;
+    height: 2rem;
+    margin-right: 5px;
+  }
  
 }
