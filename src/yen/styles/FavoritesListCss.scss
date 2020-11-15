@@ -5,16 +5,17 @@
 .memberfav {
   width: 130px;
   height: 200px;
+  border:2px solid #595452;
   background-color: #a69981;
-  // border:3px solid #A69981;
-  margin: 3px;
-  text-align: center
+  margin: 5px;
+  text-align: center;
+  
 }
 
 .memberfavImg {
   width:120px;
-  // border: 1px solid red;
-  margin-top: 3px;
+  border: 1px solid #A69981;
+  margin: 3px;
 }
 
 .memberfavItemName {
