@@ -81,7 +81,7 @@ sum(myCart)
     <>
       {myCart.map((v, i) => (
         <>
-          <div className="cartItem d-xl-flex d-block" key={v.id}>
+          <div className="cartItem d-xl-flex justify-content-between d-block " key={v.id}>
             <img className="itemImg" src={"./imgs/hsuan/" + `${v.img}`}></img>
             <div className="itemName my-lg-auto">{v.name}</div>
 
