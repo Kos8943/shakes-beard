@@ -5,6 +5,7 @@ import { FaSun } from "react-icons/fa";
 
 function CartCardMap(props) {
   const [myCart, setMyCart] = useState([]);
+  const [delectCartCard, setDelectCartCard] = useState(0)
 
   const {
     total,
@@ -35,6 +36,11 @@ sum(myCart)
     
   }, []);
 
+  useEffect(() => {
+    getLocalStorage();
+    
+  }, [delectCartCard]);
+
   useEffect(() => {}, [myCart]);
 
   const updateCartToLocalStorage = (v, isAdded = true, y) => {
@@ -59,6 +65,16 @@ sum(myCart)
     setMyCart(currentCart)
   }
 
+  const DeleteCartLocal = (i) => {
+    const currentCart = JSON.parse(localStorage.getItem('cart')) || []
+    const currentCart1 = currentCart.shift(i);
+    console.log("currentCart1:",currentCart1)
+    console.log("currentCart1.length:",currentCart1.length)
+    localStorage.setItem('cart', JSON.stringify(currentCart))
+    setDelectCartCard(delectCartCard+1)
+  }
+
+
   
   
   return (
@@ -74,6 +90,7 @@ sum(myCart)
             <select
               className="selectHigh  d-none d-lg-block"
               onChange={(e) => {
+
                 updateCartToLocalStorage(v, false, e.target.value)
               
               }}
@@ -97,7 +114,7 @@ sum(myCart)
             <img
               src="./imgs/delete.svg"
               className="deleteIcon d-none d-lg-block"
-              onClick={() => {}}
+              onClick={() => { DeleteCartLocal(i)}}
             ></img>
 
             {/* mobile qty select */}

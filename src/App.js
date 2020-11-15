@@ -55,9 +55,13 @@ function App() {
   const [authPassword, setAuthPasswor] = useState()
   const [account, setAccount] = useState();
   const [password, setPassword] = useState();
+
+  //購物車數量
   const [addCartCount, setAddCartCount] = useState(0)
+  
+  
 
-
+  
 
   return (
     <Router>
