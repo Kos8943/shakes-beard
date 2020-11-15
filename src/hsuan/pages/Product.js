@@ -73,7 +73,7 @@ class Product extends React.Component {
               <div className="brand-SectionCover__body" >
                 <div className="_text2 typesquare_option finished"
                   style={{fontSize:"20px"}}>
-                  精湛工藝呈現出迷人魅力。繁複的製作工序沒有令我們對工藝的要求卻步；
+                  .精湛工藝呈現出迷人魅力。繁複的製作工序沒有令我們對工藝的要求卻步；
                   反令我們力臻極佳品質。
                 </div>
               </div>
