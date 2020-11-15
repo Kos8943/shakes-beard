@@ -9,7 +9,7 @@ import { Transition } from 'react-transition-group';
 // import "animate.compat.css";
 // import Anime, {anime} from 'react-anime';
 // import "../Script.js";
-import { Carousel } from "react-bootstrap";
+import { Breadcrumb } from "react-bootstrap";
 import { NavLink } from "react-router-dom";
 
 //animation
@@ -83,7 +83,13 @@ class Product extends React.Component {
 
 
         <div class="product_wrap clearfix">
-    
+        <Breadcrumb className="HsuanBread">
+          <Breadcrumb.Item href="#">首頁</Breadcrumb.Item>
+          <Breadcrumb.Item href="http://localhost:3001/product">
+            產品列表
+          </Breadcrumb.Item>
+          
+        </Breadcrumb>
         
     <div class="unit">
       <Link to="/project1">

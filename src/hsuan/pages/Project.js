@@ -325,8 +325,7 @@ function Project(props) {
 
                       <button
                         className="ButtonA finished"
-                        style={{ border: "0px" }}
-                      >
+                        style={{ border: "0px" }}>
                         ♥加入追蹤♥
                       </button>
                     </div>

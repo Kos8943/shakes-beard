@@ -16,6 +16,9 @@ function Project1(props) {
   const [myProduct, setMyProduct] = useState([]);
   const [dataLoading, setDataLoading] = useState(false);
   const pathname="http://localhost:3001/project/"
+  const [showdata, setShowdata] = useState([]);
+  const [filterinput, setFilterinput] = useState('');
+  const [showdataJSX, setShowdataJSX] = useState('');
 
 
   // 載入資料用
@@ -40,6 +43,8 @@ function Project1(props) {
 
     // setTotal(data.total)
     setMyProduct(data);
+    setShowdata(data);
+    
   }
 
   // componentDidMount，一開始會載入資料(在元件初始化完成後)
@@ -61,13 +66,49 @@ function Project1(props) {
   //   component
   // })}
 
-  // useEffect(()=>{
-  //   for (let i=0; i < allData.length ; i++){
-  //     if(data[i].productname.indexOf(filterInput) !== -1){
-  //       showData.push(data[i])
-  //     }
-  //   }
-  // },[filterInput])
+  useEffect(()=>{
+    setShowdataJSX(showdata.map((value, index) => {
+      return (
+            <div className="brand-ProductItems__item finished col-3">
+                <ScrollAnimation animateIn="fadeIn" className="">
+                  {/* <div className="brand-ProductItems__card"> */}
+                    <Link
+                    to={`/project/${showdata[index].sid}`}
+                      // href="http://localhost:3001/project/"
+                      className="brand-ProductItems__image" >
+                      <div className="_image">
+                        <img
+                          src={`./imgs/hsuan/${showdata[index].imgname}`}
+                          className="card-img-top"
+                          alt="..."
+                        ></img>
+                      </div>
+                    </Link>
+                    <div className="brand-ProductItems__body">
+                      <div className="_name typesquare_option" style={{paddingTop:"20px"}}>
+                        {showdata[index].productname}
+                      </div>
+                      <div className="_price">
+                        NT${showdata[index].price}
+                      </div>
+                    </div>
+                  {/* </div> */}
+                </ScrollAnimation>
+              </div>
+          
+      );
+    }))
+  },[filterinput,showdata])
+
+  
+
+  const handleInputChange = (event)=>{
+    setFilterinput(event.target.value)
+    console.log(event.target.value);
+    setShowdata(myProduct.filter((value,index)=>{
+      return value.productname.indexOf(event.target.value) !== -1
+  })) 
+  }
 
   return (
     <>
@@ -99,15 +140,12 @@ function Project1(props) {
           {/* <Breadcrumb.Item active>所有系列</Breadcrumb.Item> */}
         </Breadcrumb>
         <div>
-        <InputGroup className="mb-3" style={{width:"18%"}}>
+        <InputGroup onChange={(e)=>handleInputChange(e)} className="mb-3" style={{width:"18%"}}>
     <FormControl
       placeholder="Search"
       aria-label="Recipient's username"
       aria-describedby="basic-addon2"/>
-    <InputGroup.Append >
-      <Button variant="outline-secondary">GO</Button>
-    </InputGroup.Append>
-  </InputGroup></div>
+     </InputGroup></div>
         </div>
         <ul>
         <Dropdown.Menu show>
@@ -121,40 +159,7 @@ function Project1(props) {
         
                 <div className="brand-ProductItems ">
                   <div className="brand-ProductItems__items">
-                  {myProduct.map((value, index) => {
-              return (
-                    <div className="brand-ProductItems__item finished col-3">
- 
-
-                     
-                        <ScrollAnimation animateIn="fadeIn" className="">
-                          {/* <div className="brand-ProductItems__card"> */}
-                            <Link
-                            to={`/project/${myProduct[index].sid}`}
-                              // href="http://localhost:3001/project/"
-                              className="brand-ProductItems__image" >
-                              <div className="_image">
-                                <img
-                                  src={`./imgs/hsuan/${myProduct[index].imgname}`}
-                                  className="card-img-top"
-                                  alt="..."
-                                ></img>
-                              </div>
-                            </Link>
-                            <div className="brand-ProductItems__body">
-                              <div className="_name typesquare_option" style={{paddingTop:"20px"}}>
-                                {myProduct[index].productname}
-                              </div>
-                              <div className="_price">
-                                NT${myProduct[index].price}
-                              </div>
-                            </div>
-                          {/* </div> */}
-                        </ScrollAnimation>
-                      </div>
-                  
-              );
-            })}  
+                  {showdataJSX}  
                   </div>
                 </div>
           </div>
