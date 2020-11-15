@@ -7,8 +7,9 @@ import "animate.css";
 import anime from "react-anime";
 import ReactCSSTransitionGroup from "react-addons-css-transition-group";
 import { Container, Row, Breadcrumb } from "react-bootstrap";
-import { Dropdown } from "react-bootstrap";
+import { Dropdown,InputGroup,FormControl,Button } from "react-bootstrap";
 import ScrollAnimation from "react-animate-on-scroll";
+import { Link } from 'react-router-dom'
 
 
 function Project1(props) {
@@ -51,6 +52,23 @@ function Project1(props) {
     setTimeout(() => setDataLoading(false), 500);
   }, []);
   
+ //Fetch save data
+  // setAllData(data)
+  // setShowData(data)
+
+  //JSX
+  // {ShowData.map(()=>{
+  //   component
+  // })}
+
+  // useEffect(()=>{
+  //   for (let i=0; i < allData.length ; i++){
+  //     if(data[i].productname.indexOf(filterInput) !== -1){
+  //       showData.push(data[i])
+  //     }
+  //   }
+  // },[filterInput])
+
   return (
     <>
       <anime />
@@ -79,7 +97,18 @@ function Project1(props) {
             袖扣
           </Breadcrumb.Item>
           {/* <Breadcrumb.Item active>所有系列</Breadcrumb.Item> */}
-        </Breadcrumb></div>
+        </Breadcrumb>
+        <div>
+        <InputGroup className="mb-3" style={{width:"18%"}}>
+    <FormControl
+      placeholder="Search"
+      aria-label="Recipient's username"
+      aria-describedby="basic-addon2"/>
+    <InputGroup.Append >
+      <Button variant="outline-secondary">GO</Button>
+    </InputGroup.Append>
+  </InputGroup></div>
+        </div>
         <ul>
         <Dropdown.Menu show>
   <Dropdown.Header>Dropdown header</Dropdown.Header>
@@ -97,11 +126,11 @@ function Project1(props) {
                     <div className="brand-ProductItems__item finished col-3">
  
 
-                      <div className="">
+                     
                         <ScrollAnimation animateIn="fadeIn" className="">
-                          <div className="brand-ProductItems__card">
-                            <a
-                            href={`/project/${myProduct[index].sid}`}
+                          {/* <div className="brand-ProductItems__card"> */}
+                            <Link
+                            to={`/project/${myProduct[index].sid}`}
                               // href="http://localhost:3001/project/"
                               className="brand-ProductItems__image" >
                               <div className="_image">
@@ -111,7 +140,7 @@ function Project1(props) {
                                   alt="..."
                                 ></img>
                               </div>
-                            </a>
+                            </Link>
                             <div className="brand-ProductItems__body">
                               <div className="_name typesquare_option" style={{paddingTop:"20px"}}>
                                 {myProduct[index].productname}
@@ -120,9 +149,9 @@ function Project1(props) {
                                 NT${myProduct[index].price}
                               </div>
                             </div>
-                          </div>
+                          {/* </div> */}
                         </ScrollAnimation>
-                      </div></div>
+                      </div>
                   
               );
             })}  

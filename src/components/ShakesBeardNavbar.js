@@ -16,13 +16,13 @@ import {
 import { NavLink,Router, Route, Link, Switch, Redirect } from "react-router-dom";
 
 function ShakesBeardNavbar(props) {
-  const { isAuth, setIsAuth } = props;
+  const { isAuth, setIsAuth,addCartCount,setAddCartCount } = props;
   
 
   return (
     <>
       <Headroom>
-        <Navbar expand="lg" className="navBarcolor logoset">
+        <Navbar expand="lg" className="navBarcolor logoset position">
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
           <Navbar.Collapse id="basic-navbar-nav">
             <Nav className="navbarFlex d-flex justify-content-between">
@@ -63,7 +63,7 @@ function ShakesBeardNavbar(props) {
                 {/* <button className="loginBtn" href="lognin">登入</button>
       <button className="cartBtn"><img src={Cart} style={{width:"30px", height:'30px'}}/></button> */}
                 <Nav.Link
-                  href="login"
+                  href="/login"
                   className="navBarFontSize"
                   onClick={() =>{
                   if(isAuth === true){
@@ -78,6 +78,9 @@ function ShakesBeardNavbar(props) {
                 <Nav.Link as={NavLink} to="/cart" className="navBarFontSize">
                   <img src={Cart} style={{ width: "30px", height: "30px" }} />
                 </Nav.Link>
+              </div>
+              <div className="addCartCount" style={{borderRadius:"50%",backgroundColor:'#f25d50',height:'20px',width:'20px',textAlign:'center',paddingTop:"1px",fontSize:".5rem",position:'absolute',left:'82.5%',color:'#ffffff'}}>
+              {addCartCount}
               </div>
               {/* </div> */}
             </Nav>

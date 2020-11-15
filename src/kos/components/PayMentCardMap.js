@@ -37,7 +37,7 @@ sum(payment)
           <div className="cartItem d-xl-flex" key={v.id}>
             <img
               className="itemImg"
-              src={"./imgs/" + `${v.img}`}
+              src={"./imgs/hsuan/" + `${v.img}`}
             ></img>
             <div className="itemName my-auto">{v.name}</div>
             <span className="productTpye">{v.type}</span>
@@ -53,7 +53,7 @@ sum(payment)
           <div className="cartItemPhone" key={v.id}>
             <img
               className="itemImg"
-              src={"./imgs/" +  `${v.img}` }
+              src={"./imgs/hsuan/" +  `${v.img}` }
             ></img>
             <div className="itemName">{v.name} </div>
             <div className="KosProjectType">{v.type}</div>
