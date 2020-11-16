@@ -33,13 +33,17 @@ function Project(props) {
   const [height, setHeight] = useState("");
   const [width, setWidth] = useState("");
   const [weight, setWeight] = useState("");
+  const [sid1, setSid1] = useState("");
+  const [type, setType] = useState("");
 
   const [showImg, setShowImg] = useState(true);
   const [showImg1, setShowImg1] = useState(false);
   const [showImg2, setShowImg2] = useState(true);
   const [showImg3, setShowImg3] = useState(false);
   // const [dataIsExist, setDataIsExist] = useState(true)
- 
+
+  const {addCartCount,setAddCartCount}=props;
+
   async function getmyProduct() {
     //  console.log('getmyProduct',sid)
     // json-db
@@ -81,12 +85,33 @@ function Project(props) {
     setHeight(data[i].height);
     setWidth(data[i].width);
     setWeight(data[i].weight);
+    setSid1(data[i].sid);
+    setType(data[i].type);
   }
+
+  const [cart, setCart] = useState([]);
+
+  function updateCartToLocalStorage(value) {
+    const currentCart = localStorage.getItem("cart") || "[]";
+    
+    const newCart = [...JSON.parse(currentCart), value];
+    
+    // setAddCartCount(newCart.length)
+    console.log("AddCartCount:", {addCartCount})
+    localStorage.setItem("cart", JSON.stringify(newCart));
+
+    setCart(newCart);
+    console.log("cart:", );
+    setAddCartCount(cart.length + 1)
+  }
+
+  useEffect(() => {
+
+  }, [cart]);
 
   useEffect(() => {
     getmyProduct();
   }, []);
-
 
   //Fetch save data
   // setAllData(data)
@@ -106,26 +131,26 @@ function Project(props) {
   // },[filterInput])
 
   function ABC(event) {
-    console.log("event.target",event.target.getAttribute('value'));
+    console.log("event.target", event.target.getAttribute("value"));
     // let target = document.querySelector(".card-img-top");
     // console.log(target.attributes.src);
     // target.attributes.src = `/imgs/hsuan/`
     // console.log(target.attributes.src)
-    let value = event.target.getAttribute('value');
+    let value = event.target.getAttribute("value");
     if (value == 1) {
       let tmp = imgname;
-      setImgname(imgname1)
-      setImgname1(tmp)
+      setImgname(imgname1);
+      setImgname1(tmp);
     } else if (value == 2) {
       let tmp = imgname;
-      setImgname(imgname2)
-      setImgname2(tmp)
+      setImgname(imgname2);
+      setImgname2(tmp);
     } else if (value == 3) {
       let tmp = imgname;
-      setImgname(imgname3)
-      setImgname3(tmp)
+      setImgname(imgname3);
+      setImgname3(tmp);
     }
-    
+
     // if(showImg1){
     //   setShowImg1(false)
     //   setShowImg2(true)
@@ -144,17 +169,18 @@ function Project(props) {
         <main>
           <div className="PgaeWraper">
             <div className="PgaeWrapper__inner">
-            <div className="container">
-              <Breadcrumb className="HsuanBread">
-                <Breadcrumb.Item href="#">首頁</Breadcrumb.Item>
-                <Breadcrumb.Item href="http://localhost:3000/project1">
-                  服飾配件
-                </Breadcrumb.Item>
-                <Breadcrumb.Item href="http://localhost:3001/project1">
-                  袖扣
-                </Breadcrumb.Item>
-                <Breadcrumb.Item active>所有系列</Breadcrumb.Item>
-              </Breadcrumb></div>
+              <div className="container">
+                <Breadcrumb className="HsuanBread">
+                  <Breadcrumb.Item href="#">首頁</Breadcrumb.Item>
+                  <Breadcrumb.Item href="http://localhost:3000/project1">
+                    服飾配件
+                  </Breadcrumb.Item>
+                  <Breadcrumb.Item href="http://localhost:3001/project1">
+                    袖扣
+                  </Breadcrumb.Item>
+                  <Breadcrumb.Item active>所有系列</Breadcrumb.Item>
+                </Breadcrumb>
+              </div>
               {/* <!-- start PageWraper --> */}
 
               <section className="SectionTile brand-SectionProductDetail">
@@ -163,17 +189,19 @@ function Project(props) {
                     <div className="brand-SectionProductDetail__image">
                       <div
                         className="brand-SectionProductDetail__thums"
-                        onClick={(event)=>ABC(event)} >
+                        onClick={(event) => ABC(event)}
+                      >
                         <div
                           className="_item"
-                          style={{ width: "100%", display: "inline-block" }}   >
+                          style={{ width: "100%", display: "inline-block" }}
+                        >
                           <div className="_image">
-                          <img
-                                src={`/imgs/hsuan/${imgname}`}
-                                className="card-img-top"
-                                alt=""
-                              ></img>
-                          
+                            <img
+                              src={`/imgs/hsuan/${imgname}`}
+                              className="card-img-top"
+                              alt=""
+                            ></img>
+
                             {/* {showImg1 && (
                               <img
                                 src={`/imgs/hsuan/${imgname}`}
@@ -193,29 +221,29 @@ function Project(props) {
 
                         <div className="_item" value="1">
                           <div className="_image">
-                          <img
-                                src={`/imgs/hsuan/${imgname1}`}
-                                className="card-img-top"
-                                alt=""
-                              ></img>
+                            <img
+                              src={`/imgs/hsuan/${imgname1}`}
+                              className="card-img-top"
+                              alt=""
+                            ></img>
                           </div>
                         </div>
                         <div className="_item" value="2">
                           <div className="_image">
-                          <img
-                                src={`/imgs/hsuan/${imgname2}`}
-                                className="card-img-top"
-                                alt=""
-                              ></img>
+                            <img
+                              src={`/imgs/hsuan/${imgname2}`}
+                              className="card-img-top"
+                              alt=""
+                            ></img>
                           </div>
                         </div>
                         <div className="_item" value="3">
                           <div className="_image">
-                          <img
-                                src={`/imgs/hsuan/${imgname3}`}
-                                className="card-img-top"
-                                alt=""
-                              ></img>
+                            <img
+                              src={`/imgs/hsuan/${imgname3}`}
+                              className="card-img-top"
+                              alt=""
+                            ></img>
                           </div>
                         </div>
                       </div>
@@ -273,20 +301,34 @@ function Project(props) {
                           </div>
                         </div>
                       </div>
-                      <a
-                        href="/"
+
+                      <button
                         className="ButtonA finished"
-                      >
-                        <span>加入購物車</span>
-                      </a>
+                        style={{ border: "0px" }}
+                        type="button"
+                        onClick={() => {
+                          
+                          updateCartToLocalStorage({
+                            id: `${sid1}`,
+                            img: `${imgname}`,
+                            name: `${productname}`,
+                            type: `${type}`,
+                            amount: 1,
+                            price: `${price}`,
+                          });
+                        }} >
+                        加入購物車
+                      </button>
+
                       <br></br>
                       {/* <img src="./icon/search.svg" style="width: 15px;"> */}
-                      <a
-                        href="/"
+
+                      <button
                         className="ButtonA finished"
+                        style={{ border: "0px" }}
                       >
-                        <span>♥加入追蹤♥</span>
-                      </a>
+                        ♥加入追蹤♥
+                      </button>
                     </div>
                   </div>
                 </div>
