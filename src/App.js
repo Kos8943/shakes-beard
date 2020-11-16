@@ -169,7 +169,7 @@ function App() {
 
             <Route path="/Project1">
               <ShakesBeardNavbar isAuth={isAuth} setIsAuth={setIsAuth} setAddCartCount={setAddCartCount} addCartCount={addCartCount}/>
-              <Project1 />
+              <Project1 isAuth={isAuth} setIsAuth={setIsAuth} />
               <MyFooter />
             </Route>
 
