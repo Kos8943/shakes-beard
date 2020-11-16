@@ -1,28 +1,40 @@
 import React, { useState, useEffect } from "react";
-import { Router, Route, Link, Switch, Redirect } from "react-router-dom";
+import { Link, Redirect } from "react-router-dom";
 import LogInCss from "./styles/LogInCss.scss";
 import facebook from "./img/facebook.svg";
 import twitter from "./img/twitter.svg";
 import google from "./img/google.svg";
-import { FaDAndDBeyond } from "react-icons/fa";
+import Swal from "sweetalert2";
+import withReactContent from "sweetalert2-react-content";
+import { Modal, Button } from "react-bootstrap";
+
 
 function LogIn(props) {
+  const MySwal = withReactContent(Swal);
   const {
     isAuth,
     setIsAuth,
-    authAccount,
-    setAuthAccount,
-    authPassword,
-    setAuthPasswor,
     account,
     setAccount,
     password,
     setPassword,
   } = props;
 
+  const [isLoginSuccess, setIsLoginSuccess] = useState("");
+
+  const [show, setShow] = useState(false);
+
+  const handleClose = () => setShow(false);
+  const handleShow = () => setShow(true);
+  
+
+  async function close(){
+    handleClose();
+    await (isLoginSuccess)?setIsAuth(true):setIsAuth(false)
+  }
 
   function memberIoginForm() {
-    const url = "http://localhost:3000/yen/try-log";
+    const url = "http://localhost:3000/yen/log";
 
     // const fd = new FormData(document.memberForm)
 
@@ -36,57 +48,38 @@ function LogIn(props) {
     })
       .then((r) => r.json())
 
+      .then((o) => {
+        console.log("react收到的", o);
 
-      .then(o => {
-        console.log('react收到的', o);
-        if (o.success) {
-          setIsAuth(true)
-          localStorage.setItem("data", JSON.stringify(o))
-          localStorage.setItem('auth', true)
-
-          // setIsAuth = (JSON.parse(localStorage.getItem('auth')))
-
-
-        } else {
-          alert('帳號／密碼錯誤')
-          setPassword('')
-          setAccount('')
+        async function close(){
+          handleClose();
+          await (o.success)?setIsAuth(true):setIsAuth(false)
         }
+        if (o.success) {
+          setIsLoginSuccess(true)
+          localStorage.setItem("data", JSON.stringify(o));
+          localStorage.setItem("auth", true);
+        } else {
+          setPassword("");
+          setAccount("");
+          setIsLoginSuccess(false)
+        }
+        setTimeout(() => {
+          handleShow();
+        }, 10);
 
-      })
-
-
+        setTimeout(() => {
+          close();
+        }, 1800);
+      });
   }
 
-  //   // 注意資料格式要設定，伺服器才知道是json格式
-  //   const request = new Request(url, {
-  //     method: 'POST',
-  //     body: JSON.stringify(newData),
-  //     headers: new Headers({
-  //       Accept: 'application/json',
-  //       'Content-Type': 'application/json',
-  //     }),
-  //   })
+  
 
-  //   console.log(JSON.stringify(newData))
+  if (isAuth === true) {
 
-  //   const response = await fetch(request)
-  //   const data = await response.json()
-
-  //   console.log('伺服器回傳的json資料', data)
-  //   // 要等驗証過，再設定資料(簡單的直接設定)
-
-  //   //直接在一段x秒關掉指示器
-  //   setTimeout(() => {
-  //     alert('儲存完成')
-  //     props.history.push('/')
-  //   }, 500)
-  // }
-
-  // // const [account, setAccount] = useState("");
-  // // const [password, setPassword] = useState("");
-
-  if (isAuth === true) return <Redirect to="/homepage" />;
+    return <Redirect to="/homepage" />;
+  }
 
   return (
     <>
@@ -139,10 +132,10 @@ function LogIn(props) {
                     type="submit"
                     // onClick={() => { memberIoginForm() }}
                     className="loginCheckButton loginMobile"
-                  // onClick={(e) => {
-                  //   e.preventDefault();
-                  //   memberIoginForm()
-                  // }}
+                    // onClick={(e) => {
+                    //   e.preventDefault();
+                    //   memberIoginForm()
+                    // }}
                   >
                     登入
                   </button>
@@ -171,12 +164,11 @@ function LogIn(props) {
                       </div>
                     </button>
 
-                    <button
-                      type="submit"
-                      className="loginSingUpButton loginMobile"
-                    >
-                      註冊帳號
-                    </button>
+                    <Link to="/signup">
+                      <button className="loginSingUpButton loginMobile">
+                        註冊帳號
+                      </button>
+                    </Link>
                   </div>
                 </div>
               </div>
@@ -185,28 +177,39 @@ function LogIn(props) {
                 <button
                   type="submit"
                   className="loginCheckButton loginWebNone"
-                // onClick={(e) => {
-                //   e.preventDefault();
-                //   memberIoginForm();
+                  // onClick={(e) => {
+                  //   e.preventDefault();
+                  //   memberIoginForm();
 
-                // if (authAccount === account && authPassword === password) {
-                //   setIsAuth(true);
-                //   alert("登入成功");
-                // } else {
-                //   alert("帳號/密碼錯誤");
-                // }
-                // }}>
+                  // if (authAccount === account && authPassword === password) {
+                  //   setIsAuth(true);
+                  //   alert("登入成功");
+                  // } else {
+                  //   alert("帳號/密碼錯誤");
+                  // }
+                  // }}>
                 >
                   登入
                 </button>
-                <button
-                  type="submit"
-                  className="loginSingUpButton loginWebNone"
-                >
-                  註冊帳號
-                </button>
+                <Link to="/signup">
+                  <button className="loginSingUpButton loginWebNone">
+                    註冊帳號
+                  </button>
+                </Link>
+                
+                <Modal show={show} onHide={handleClose}>
+                <Modal.Header closeButton className="madalSty" />
+                <Modal.Body className="madalStyS">
+                  {" "}
+                  {isLoginSuccess ? "登入成功" : "帳號/密碼錯誤"}
+                </Modal.Body>
+                <Modal.Footer className="madalStyS" >
+            
+                </Modal.Footer>
+              </Modal>
               </div>
             </form>
+
             <div className="loginMobile"></div>
           </div>
         </div>

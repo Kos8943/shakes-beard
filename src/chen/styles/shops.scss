@@ -50,8 +50,15 @@
       width: 60%;
     }
 
+    .recommends.card{
+      display: flex;
+      justify-content: center;
+      // border: none;
+    }
+
     .recommend {
-      min-width: 130px;
+      min-width: 150px;
+      margin: auto;
     }
 
     // .recommend h6{
@@ -170,6 +177,15 @@
 
   .card-title{
     font-size: 1.25rem;
+  }
+
+  .card-body>a{
+    color: #44494a;
+    text-decoration:none;
+  }
+
+  .card-body>a:hover{
+    text-decoration:underline;
   }
 
   .card-text{
@@ -326,7 +342,7 @@
 
   .info-title{
     font-size: 1.25rem;
-    font-weight: bolder;
+    font-weight: bold;
   }
 
   .info-head>.col-3>p{

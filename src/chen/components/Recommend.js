@@ -7,7 +7,7 @@ function Recommend(props) {
   return (
     <>
           <h4 className="mt-5">推薦給您</h4>
-          <div className="d-flex mb-5 scrollRight">
+          <div className="d-flex justify-contents-center mb-5 scrollRight">
               <div className="card recommend">
                 <div className="card-img">
                   <img src={require('../img/card01.jpg')} className="card-img-top" alt="..." />

@@ -50,7 +50,31 @@
     // border: 1px solid green;
 }
 
+
+.madalSty{
+  text-align: center;
+  margin-top: -35px;
+  font-size: 1.24rem;
+  background-color: #A69981;
+}
+
+
+.dataForm input:-webkit-autofill { box-shadow: 0 0 0px 1000px white inset ;}
+
+
+
+
+
 @media (max-width: 500px) {
+
+  .madalSty{
+    text-align: center;
+    margin-top: 0px;
+    font-size: 1.24rem;
+    background-color: #A69981;
+  }
+  
+
   .rightArea {
     // border: 1px solid green;
     margin: 0px 0 0 0;
@@ -105,6 +129,10 @@
     //   border: 1px solid green;
     //   margin: 20px 10px 0 140px;
   }
-
+  .addSelect {
+    width: 8rem;
+    height: 2rem;
+    margin-right: 5px;
+  }
  
 }

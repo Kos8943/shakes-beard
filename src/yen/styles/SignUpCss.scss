@@ -80,6 +80,33 @@ html {
   margin: 1rem auto;
 }
 
+span.red {
+  color: red;
+  
+}
+span.redNone {
+  display: none;
+}
+
+span.redText{
+  font-size: 14px;
+  color: red;
+  margin-left: 5px;
+}
+
+input:-webkit-autofill { box-shadow: 0 0 0px 1000px #898584 inset ;}
+
+.madalStyS{
+  text-align: center;
+
+  font-size: 1.24rem;
+  background-color: #A69981;
+}
+
+.redborder{
+  border: 1px solid red;
+}
+
 
 @media (max-width: 1400px) {
   html {
@@ -112,8 +139,8 @@ html {
   .signUpArea {
     background-color: rgba(255, 255, 255, 0.678);
     width: 80vw;
-    height: 80vh;
-    padding: 0 55px;
+    height: 90vh;
+    padding: 0 45px;
     margin:0vh auto;
     // border: 1px solid saddlebrown;
   }
@@ -142,6 +169,7 @@ html {
 
   .singUpButton {
     color: #fff;
+  background-color: #f25d50;
     font-weight: normal;
     width: 15vw;
     height: 5vh;
@@ -149,7 +177,7 @@ html {
     border-radius: 4px;
     // margin-bottom: 120px;
     margin: 2px auto;
-    border: 1px solid steelblue;
+    // border: 1px solid steelblue;
   }
   
   

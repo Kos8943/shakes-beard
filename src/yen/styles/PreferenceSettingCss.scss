@@ -12,14 +12,21 @@
 
 
 }
-.settingInput {
-  width: 100%;
+
+.cardsettingInput {
+  width: 80%;
   height: 2rem;
   margin: 5px 2px 10px 2px;
 }
 
 .settingInputBack {
   margin: 5px 2px 10px 2px;
+}
+
+.creditCardIcon{
+  width: 40px;
+  margin-left: px;
+  display: none;
 }
 
 
@@ -69,6 +76,24 @@
   //   margin: 20px 10px 0 140px;
 }
 
+
+span.red {
+  color: red;
+  
+}
+span.redNone {
+  display: none;
+}
+
+span.redText{
+  font-size: 14px;
+  color: red;
+  margin-left: 5px;
+}
+
+.creditCardDisplay{
+display: block;
+}
 
 
 

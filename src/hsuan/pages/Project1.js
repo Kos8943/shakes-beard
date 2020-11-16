@@ -7,14 +7,18 @@ import "animate.css";
 import anime from "react-anime";
 import ReactCSSTransitionGroup from "react-addons-css-transition-group";
 import { Container, Row, Breadcrumb } from "react-bootstrap";
-import { Dropdown } from "react-bootstrap";
+import { Dropdown,InputGroup,FormControl,Button } from "react-bootstrap";
 import ScrollAnimation from "react-animate-on-scroll";
+import { Link } from 'react-router-dom'
 
 
 function Project1(props) {
   const [myProduct, setMyProduct] = useState([]);
   const [dataLoading, setDataLoading] = useState(false);
   const pathname="http://localhost:3001/project/"
+  const [showdata, setShowdata] = useState([]);
+  const [filterinput, setFilterinput] = useState('');
+  const [showdataJSX, setShowdataJSX] = useState('');
 
 
   // 載入資料用
@@ -39,6 +43,8 @@ function Project1(props) {
 
     // setTotal(data.total)
     setMyProduct(data);
+    setShowdata(data);
+    
   }
 
   // componentDidMount，一開始會載入資料(在元件初始化完成後)
@@ -51,6 +57,59 @@ function Project1(props) {
     setTimeout(() => setDataLoading(false), 500);
   }, []);
   
+ //Fetch save data
+  // setAllData(data)
+  // setShowData(data)
+
+  //JSX
+  // {ShowData.map(()=>{
+  //   component
+  // })}
+
+  useEffect(()=>{
+    setShowdataJSX(showdata.map((value, index) => {
+      return (
+            <div className="brand-ProductItems__item finished col-3">
+                <ScrollAnimation animateIn="fadeIn" className="">
+                  {/* <div className="brand-ProductItems__card"> */}
+                    <Link
+                    to={`/project/${showdata[index].sid}`}
+                      // href="http://localhost:3001/project/"
+                      className="brand-ProductItems__image" >
+                      <div className="_image">
+                        <img
+                          src={`./imgs/hsuan/${showdata[index].imgname}`}
+                          className="card-img-top"
+                          alt="..."
+                        ></img>
+                      </div>
+                    </Link>
+                    <div className="brand-ProductItems__body">
+                      <div className="_name typesquare_option" style={{paddingTop:"20px"}}>
+                        {showdata[index].productname}
+                      </div>
+                      <div className="_price">
+                        NT${showdata[index].price}
+                      </div>
+                    </div>
+                  {/* </div> */}
+                </ScrollAnimation>
+              </div>
+          
+      );
+    }))
+  },[filterinput,showdata])
+
+  
+
+  const handleInputChange = (event)=>{
+    setFilterinput(event.target.value)
+    console.log(event.target.value);
+    setShowdata(myProduct.filter((value,index)=>{
+      return value.productname.indexOf(event.target.value) !== -1
+  })) 
+  }
+
   return (
     <>
       <anime />
@@ -73,59 +132,32 @@ function Project1(props) {
         <Breadcrumb className="HsuanBread">
           <Breadcrumb.Item href="#">首頁</Breadcrumb.Item>
           <Breadcrumb.Item href="http://localhost:3001/product">
+            產品列表
+          </Breadcrumb.Item>
+          <Breadcrumb.Item href="http://localhost:3001/product">
             服飾配件
           </Breadcrumb.Item>
           <Breadcrumb.Item href="http://localhost:3000/project1">
             袖扣
           </Breadcrumb.Item>
           {/* <Breadcrumb.Item active>所有系列</Breadcrumb.Item> */}
-        </Breadcrumb></div>
-        <ul>
-        <Dropdown.Menu show>
-  <Dropdown.Header>Dropdown header</Dropdown.Header>
-  <Dropdown.Item eventKey="2">Another action</Dropdown.Item>
-  <Dropdown.Item eventKey="3">Something else here</Dropdown.Item>
-</Dropdown.Menu></ul>
+        </Breadcrumb>
+        <div>
+        <InputGroup onChange={(e)=>handleInputChange(e)} className="mb-3" style={{width:"18%"}}>
+    <FormControl
+      placeholder="Search"
+      aria-label="Recipient's username"
+      aria-describedby="basic-addon2"/>
+     </InputGroup></div>
+        </div>
+        
 
         <section className="SectionTile brand-SectionProduct">
         <div className="SectionTile__container ">
         
                 <div className="brand-ProductItems ">
                   <div className="brand-ProductItems__items">
-                  {myProduct.map((value, index) => {
-              return (
-                    <div className="brand-ProductItems__item finished col-3">
- 
-
-                      <div className="">
-                        <ScrollAnimation animateIn="fadeIn" className="">
-                          <div className="brand-ProductItems__card">
-                            <a
-                            href={`/project/${myProduct[index].sid}`}
-                              // href="http://localhost:3001/project/"
-                              className="brand-ProductItems__image" >
-                              <div className="_image">
-                                <img
-                                  src={`./imgs/hsuan/${myProduct[index].imgname}`}
-                                  className="card-img-top"
-                                  alt="..."
-                                ></img>
-                              </div>
-                            </a>
-                            <div className="brand-ProductItems__body">
-                              <div className="_name typesquare_option" style={{paddingTop:"20px"}}>
-                                {myProduct[index].productname}
-                              </div>
-                              <div className="_price">
-                                NT${myProduct[index].price}
-                              </div>
-                            </div>
-                          </div>
-                        </ScrollAnimation>
-                      </div></div>
-                  
-              );
-            })}  
+                  {showdataJSX}  
                   </div>
                 </div>
           </div>

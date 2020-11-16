@@ -32,7 +32,7 @@ function Breadcrumb(props) {
       <nav aria-label="breadcrumb">
         <ol className="breadcrumb">
           <li className="breadcrumb-item">
-            <Link to="/">首頁</Link>
+            <Link to="/homepage">首頁</Link>
           </li>
           {/* <li className="breadcrumb-item">
             <Link to="#"

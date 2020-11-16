@@ -6,25 +6,30 @@ import PaymentPrice from "./PaymentPrice";
 import { Link, Redirect } from "react-router-dom";
 import Creaditcard from "./Creaditcard";
 import TWZipCode from "./TWZipCode";
-import PaymentCardMap from "./PayMentCardMap"
+import PaymentCardMap from "./PayMentCardMap";
 
 function PaymentForm(props) {
-  const [payment, setPayment] = useState([])
-  const [total, setTotal] = useState()
-  const [priceOff, setPriceOff] = useState(300)
-  const [shipping, setShipping] = useState(150)
-  // const [paymentImg, setPaymentDataImg] = useState()
-  // const [paymentproductName, setPaymentproductName] = useState()
-  // const [paymentProductType, setPaymentProductType] = useState()
-  // const [paymentAmount, setPaymentAmount] = useState()
-  // const [paymentSubtotal, setPaymentSubtotal] = useState()
-  // const [paymentUnitPrice, setPaymentUnitPrice] = useState()
-  // const [paymentPriceOff, setPaymentPriceOff] = useState()
-  // const [paymentShipping, setPaymentShipping] = useState()
-  // const [paymentTotal, setPaymentTotal] = useState()
+  const [payment, setPayment] = useState([]);
+  const [total, setTotal] = useState();
+  const [priceOff, setPriceOff] = useState(300);
+  const [shipping, setShipping] = useState(150);
+  const [recipient, setRecipient] = useState();
+  const [phoneNumber, setPhoneNumber] = useState();
+  const [homeNumber, setHomeNumber] = useState();
+  const [city, setCity] = useState();
+  const [area, setArea] = useState();
+  const [address, setAddress] = useState();
+  const [pricePayment, setPricePayment] = useState("信用卡");
+  const [creditCardNumber, setCreditCardNumber] = useState();
+  const [creditCardYear, setCreditCardYear] = useState();
+  const [creditCardMonth, setCreditCardMonth] = useState();
+  const [creditCardPassword, setCreditCardPassword] = useState();
+  const [country, setCountry] = useState(-1);
+  const [township, setTownship] = useState(-1);
+  const [smallDisplay, setSmallDisplay] = useState(1);
+  const [nextPage, setNextPage] = useState(false);
 
- 
-// 抓LocalStorage
+  // 抓LocalStorage
   function getLocalStorage() {
     const newCart = localStorage.getItem("cart") || "[]";
 
@@ -37,16 +42,51 @@ function PaymentForm(props) {
     getLocalStorage();
   }, []);
 
-
   // 發送Fetch用
   function paymentData() {
-    const d = {
-      name: document.querySelector(".itemName").value,
-    };
+    let correct = true;
 
-    // console.log(d);
-    // return <Redirect to="/homepage" />;
+    // if (!recipient) {
+    //   correct = false;
+    //   setSmallDisplay(0);
+    // }
+    if (correct) {
+      const d = {
+        recipient: recipient,
+        phoneNumber: phoneNumber,
+        homeNumber: homeNumber,
+        country: country,
+        township: township,
+        address: address,
+        pricePayment: pricePayment,
+        creditCardNumber: creditCardNumber,
+        creditCardYear: creditCardYear,
+        creditCardMonth: creditCardMonth,
+        creditCardPassword: creditCardPassword,
+        payment: payment,
+      };
+      console.log(d);
+      setNextPage(true)
+
+      const url = "http://localhost:3000/try-order";
+
+      fetch(url, {
+        method: "POST",
+        body: JSON.stringify(d),
+        headers: new Headers({
+          "Content-Type": "application/json",
+        }),
+      });
+      
+    }
+
+    
   }
+
+  if (nextPage === true) {
+    return <Redirect to="/Paycomplete" />;
+}
+
 
   return (
     <>
@@ -60,7 +100,7 @@ function PaymentForm(props) {
       >
         <div className="PayCard m-auto">
           <h3 className="d-flex justify-content-center">你的訂單</h3>
-            <PaymentCardMap total={total} setTotal={setTotal}/>
+          <PaymentCardMap total={total} setTotal={setTotal} />
           <div className="priceArea ml-auto d-flex">
             <div className="priceArea font">
               <div>折扣：</div>
@@ -80,17 +120,67 @@ function PaymentForm(props) {
 
             {/* 收件人資訊 */}
             <div>
-              <p>收件人：</p>
-              <input placeholder="王大明" className="inputStyle"></input>
-              <p>手機：</p>
-              <input placeholder="0912123456" className="inputStyle"></input>
+              <p>
+                收件人：
+                <small
+                  style={{ color: "red" }}
+                  className={smallDisplay === 1 ? "smallDisplay" : ""}
+                >
+                  *請輸入姓名
+                </small>
+              </p>
+              <input
+                placeholder="王大明"
+                className="inputStyle"
+                onChange={(e) => {
+                  setRecipient(e.target.value);
+                }}
+              ></input>
+              <p>
+                手機號碼：
+                <small
+                  style={{ color: "red" }}
+                  className={smallDisplay === 1 ? "smallDisplay" : ""}
+                >
+                  *請輸入手機號碼
+                </small>
+              </p>
+              <input
+                placeholder="0912123456"
+                className="inputStyle"
+                onChange={(e) => {
+                  setPhoneNumber(e.target.value);
+                }}
+              ></input>
               <p>市話：</p>
-              <input placeholder="02-12345678" className="inputStyle"></input>
-              <p>地址：</p>
+              <input
+                placeholder="02-12345678"
+                className="inputStyle"
+                onChange={(e) => {
+                  setHomeNumber(e.target.value);
+                }}
+              ></input>
+              <p>
+                地址：
+                <small
+                  style={{ color: "red" }}
+                  className={smallDisplay === 1 ? "smallDisplay" : ""}
+                >
+                  *請輸入地址
+                </small>
+              </p>
 
-              <TWZipCode />
-             
-              <input className="address DisplayBlock"></input>
+              <TWZipCode
+                country={country}
+                setCountry={setCountry}
+                township={township}
+                setTownship={setTownship}
+              />
+
+              <input
+                className="address DisplayBlock"
+                onChange={(e) => setAddress(e.target.value)}
+              ></input>
               <h3 className="d-flex justify-content-center">發票</h3>
               <div className="">
                 <label className="col-6 col-xl-3 LabelFont">
@@ -133,7 +223,12 @@ function PaymentForm(props) {
             {/* 信用卡資訊 */}
             <div>
               <h3 className="d-flex justify-content-center">付款方式</h3>
-              <select className="paymentSelect">
+              <select
+                className="paymentSelect"
+                onChange={(e) => {
+                  setPricePayment(e.target.value);
+                }}
+              >
                 <option value="信用卡">信用卡</option>
                 <option value="貨到付款">貨到付款</option>
                 <option value="歐富寶">歐富寶</option>
@@ -142,27 +237,86 @@ function PaymentForm(props) {
               <div className="d-flex creditCardArea">
                 <div className="creditCardNumber">
                   <div className="d-lg-block d-none">
-                    <Creaditcard />
+                    {/* <Creaditcard
+                      creditCardNumber={creditCardNumber}
+                      setCreditCardNumber={setCreditCardNumber}
+                      creditCardUser={creditCardUser}
+                      setCreditCardUser={setCreditCardUser}
+                      creditCardYear={creditCardYear}
+                      setCreditCardYear={setCreditCardYear}
+                      creditCardMonth={creditCardMonth}
+                      setCreditCardMonth={setCreditCardMonth}
+                      creditCardPassword={creditCardPassword}
+                      setCreditCardPassword={setCreditCardPassword}
+                    /> */}
                   </div>
 
-                
-                  {/* 手機板卡號 */}
-                  <input className="PhoneCreditCardInput webDisplay"></input>
-                  <div className="webDisplay">
-                    <div className="d-flex ">
-                      <div className="PhoneCreditCardDate">
-                        <p>有效期限：</p>
-                        <input></input>
-                        <span>年</span>
-                        <input></input>
-                        <span>月</span>
-                      </div>
+                  {/* 卡號 */}
+                  <div>
+                    <p className="">
+                      信用卡卡號：
+                      <small
+                        style={{ color: "red" }}
+                        className={smallDisplay === 1 ? "smallDisplay" : ""}
+                      >
+                        *請輸入卡號
+                      </small>
+                    </p>
+                    <input
+                      className="PhoneCreditCardInput"
+                      onChange={(e) => {
+                        setCreditCardNumber(e.target.value);
+                      }}
+                    ></input>
+                    <div className="">
+                      <div className="d-flex ">
+                        <div className="PhoneCreditCardDate">
+                          <p>
+                            有效期限：
+                            <small
+                              style={{ color: "red" }}
+                              className={
+                                smallDisplay === 1 ? "smallDisplay" : ""
+                              }
+                            >
+                              *請輸入日期
+                            </small>
+                          </p>
+                          <input
+                            onChange={(e) => {
+                              setCreditCardYear(e.target.value);
+                            }}
+                            placeholder="YY"
+                          ></input>
+                          <span>年</span>
+                          <input
+                            onChange={(e) => {
+                              setCreditCardMonth(e.target.value);
+                            }}
+                            placeholder="MM"
+                          ></input>
+                          <span>月</span>
+                        </div>
 
-                      <div className="PhoneCreditCardDate1">
-                        <p>卡背後3碼：</p>
-                        <input></input>
+                        <div className="PhoneCreditCardDate1">
+                          <p>
+                            檢核碼：
+                            <small
+                              style={{ color: "red" }}
+                              className={
+                                smallDisplay === 1 ? "smallDisplay" : ""
+                              }
+                            >
+                              *請輸入檢核碼
+                            </small>
+                          </p>
+                          <input
+                            onChange={(e) => {
+                              setCreditCardPassword(e.target.value);
+                            }}
+                          ></input>
+                        </div>
                       </div>
-
                     </div>
                   </div>
                 </div>
@@ -172,8 +326,7 @@ function PaymentForm(props) {
         </div>
         {/* to="/Paycomplete" */}
         <div className="paymentBtn mx-auto">
-          <Link to=""></Link>
-          <button className="SumitButton" type="submit" >
+          <button className="SumitButton" type="submit">
             確定送出
           </button>
         </div>

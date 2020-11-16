@@ -404,10 +404,10 @@ const data = {
     },
   }
   
-  export const countries = Object.getOwnPropertyNames(data)
-  export const townships = countries.map((v, i, array) =>
+  export const countries1 = Object.getOwnPropertyNames(data)
+  export const townships1 = countries1.map((v, i, array) =>
     Object.getOwnPropertyNames(data[array[i]])
   )
-  export const postcodes = countries.map((v, i, array) =>
+  export const postcodes = countries1.map((v, i, array) =>
     Object.values(data[array[i]])
   )

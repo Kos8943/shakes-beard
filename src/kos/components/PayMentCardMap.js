@@ -2,6 +2,8 @@ import React, { useState, useEffect } from "react";
 
 function PayMentCardMap(props) {
   const [payment, setPayment] = useState([]);
+  
+
 
   const {
     total,
@@ -34,7 +36,7 @@ sum(payment)
       {payment.map((v, i) => (
         <>
           {/* 網頁 */}
-          <div className="cartItem d-xl-flex" key={v.id}>
+          <div className="cartItem d-xl-flex justify-content-between d-none" key={v.id}>
             <img
               className="itemImg"
               src={"./imgs/" + `${v.img}`}
@@ -50,7 +52,7 @@ sum(payment)
 
           {/* 手機 */}
 
-          <div className="cartItemPhone" key={v.id}>
+          <div className="cartItemPhone d-xl-none d-block" key={v.id}>
             <img
               className="itemImg"
               src={"./imgs/" +  `${v.img}` }

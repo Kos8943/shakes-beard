@@ -21,6 +21,7 @@ function InfoSection(props) {
   const [shopImg1, setShopImg1] = useState('')
   const [shopImg2, setShopImg2] = useState('')
   const [shopImg3, setShopImg3] = useState('')
+  // const [timeValue, setTimeValue] = useState()
 
   async function getShopFromServer(){
     console.log('getShopFromServer',sid)
@@ -130,7 +131,7 @@ function InfoSection(props) {
         </div>
       </div>
       <div className="info col-12 col-sm-12 col-md-5 mt-3">
-          <h4 className="info-title">{shopName}</h4>
+          <h1 className="info-title">{shopName}</h1>
           <h5>
             <Badge pill variant="secondary" className="mr-1 cate-tag">
               {shopTag}
@@ -173,16 +174,17 @@ function InfoSection(props) {
             <div className="col-3">
               <p className="col p-0">預約時間:</p>
             </div>
-            <div className="col-9 mb-3">
-              <Datetime/>
-              {/* <div className="test1"><Datetime/></div> */}
+            <div className="col-6 mb-3">
+              <Datetime className="reserveServiceTime"/>
+              {/* <Datetime className="reserveServiceTime" value={timeValue} onChange={(e)=>setTimeValue(e.target.value)}/> */}
             </div>
-            <p className="col-12">注意事項: 如取消預約，請於預約日三天前聯絡。謝謝</p>
-          </div>
-          <div className="row pl-3">
-            <Link to="/reservation" className="btn goReserve">
-              立即預約
-            </Link>
+            <div className="col-3">
+              <Link to={`/reservation/${sid}`}
+              className="btn goReserve">
+                立即預約
+              </Link>
+            </div>
+            {/* <p className="col-12">注意事項: 如取消預約，請於預約日三天前聯絡。謝謝</p> */}
           </div>
         </div>
      </div>

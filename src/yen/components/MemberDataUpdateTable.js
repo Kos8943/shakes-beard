@@ -1,116 +1,139 @@
 import React, { useState, useEffect } from "react";
-import DataUpdate from "../styles/DataUpdate.scss";
-import DatePicker from "react-datepicker";
+import DataUpdate from "../styles/DataUpdate.scss"; //拿掉 版面會跑掉
 import Address from "./Address";
-
 import "react-datepicker/dist/react-datepicker.css";
-import { registerLocale, setDefaultLocale } from "react-datepicker";
-import { zhTW } from "date-fns/esm/locale";
-import { set } from "animejs";
-registerLocale("zh-TW", zhTW);
+import { Modal, Button } from "react-bootstrap";
 
 function MemberDataUpdateTable(props) {
-  const { isAuth, setIsAuth,account, setAccount,password, setPassword ,authAccount,setAuthAccount,authPassword,setAuthPassword} = props;
+  const {
+    authAccount,
+    name,
+    setName,
+    email,
+    setEmail,
+    birth,
+    setBirth,
+    phone,
+    setPhone,
+    address,
+    setAddress,
+    country,
+    setCountry,
+    township,
+    setTownship,
+  } = props;
 
-  // const [authAccount, setAuthAccount] = useState('')
-  // const [authPassword,setAuthPasswor]=useState('')
-  const [name, setName] = useState("");
-  const [email, setEmail] = useState("");
-  const [phone, setPhone] = useState("");
-  const [birth, setBirth] = useState(new Date());
-  const [dirst, setDirst] = useState("");
-  const [city, setCity] = useState("");
-  const [address, setAddress] = useState("");
-  const [card, setCard] = useState("");
-  const [cardDate, setCardDate] = useState("");
-  const [cvc, setCvc] = useState("");
-  const [invoice, setInvoice] = useState("");
-  const [favorite, setFavorite] = useState("");
+  const refreshPage = () => {
+    window.location.reload();
+  };
 
+  const [alertStarsName, setAlertStarsName] = useState(true);
+  const [alertStarsEmail, setAlertStarsEmail] = useState(true);
+  const [alertStarsPhone, setAlertStarsPhone] = useState(true);
+  const [alertStarsBirth, setAlertStarsBirth] = useState(true);
 
+  const [upDateSuccess, setUpDateSuccess] = useState('');
 
+  const [show, setShow] = useState(false);
 
-  async function getFrom() {
+  const handleClose = () => setShow(false);
+  const handleShow = () => setShow(true);
 
-    if(isAuth === true){
+  function check() {
+    const phonePattern = /^09\d{2}\d{3}\d{3}$/;
+    const birthPattern = /^((19|20)?[0-9]{2}[- /.](0?[1-9]|1[012])[- /.](0?[1-9]|[12][0-9]|3[01]))*$/;
+    const emailPattern = /^([\w-]+(?:\.[\w-]+)*)@((?:[\w-]+\.)*\w[\w-]{0,66})\.([a-z]{2,6}(?:\.[a-z]{2})?)$/i;
 
+    //姓名
+    if (!name || name.length < 2) {
+      setAlertStarsName(false);
+    } else {
+      setAlertStarsName(true);
+    }
 
-const url = "http://localhost:3000/yen/update";
-    const request = new Request(url, {
-      method: "GET",
-      headers: new Headers({
-        Accept: "application/json",
-        "Content-Type": "application/json",
-      }),
-    });
+    //信箱
+    if (!emailPattern.test(email)) {
+      setAlertStarsEmail(false);
+    } else {
+      setAlertStarsEmail(true);
+    }
 
-    const res = await fetch(request);
-    const memberData = await res.json();
-    console.log(memberData);
+    //手機
+    if (!phonePattern.test(phone)) {
+      setAlertStarsPhone(false);
+    } else {
+      setAlertStarsPhone(true);
+    }
 
-
-    setAuthAccount(memberData[0].authAccount)
-    setName(memberData[0].name);
-    setEmail(memberData[0].email);
-    // setBirth(memberData[0].birth);
-    setPhone(memberData[0].phone);
-    setAddress(memberData[0].address);
-  }else{
-
-
-
-    
+    //生日
+    if (!birthPattern.test(birth)) {
+      setAlertStarsBirth(false);
+    } else {
+      setAlertStarsBirth(true);
+    }
   }
 
-
-    }
-
-    
-     
-    
-
-
-  
-  useEffect(() => {
-    getFrom();
-  }, []);
-
-
-  function post() {
-    const postdata = {
-      name: name,
-      email: email,
-      birth: birth,
-      phone: phone,
-      address: address
-    }
-    console.log(postdata)
-    fetch('', {
-      method: "POST",
-      headers: {
-        "Content-type": "application/json"
-      },
-      body: JSON.stringify(postdata)
-    })
-      .then(res => res.json())
-      .then(data => {
-        console.log(data)
+  function memberUpdate() {
+    const a =
+      alertStarsName && alertStarsEmail && alertStarsPhone && alertStarsBirth;
+    console.log("a", a);
+    if (a == true) {
+      const url = "http://localhost:3000/yen/data-update";
+      const sid = {
+        sid: JSON.parse(localStorage.getItem("data")).sid,
+      };
+      fetch(url, {
+        method: "POST",
+        body: JSON.stringify({
+          sid,
+          authAccount,
+          name,
+          email,
+          birth,
+          phone,
+          address,
+          country,
+          township,
+        }),
+        headers: new Headers({
+          "Content-Type": "application/json",
+        }),
       })
+        .then((r) => r.json())
 
+        .then((o) => {
+
+          console.log("react收到的", o);
+          
+          if (o.success) {
+            setUpDateSuccess(true)
+          }else{setUpDateSuccess(false)}
+
+          setTimeout(() => {
+              handleShow();
+            }, 10);
+
+            setTimeout(() => {
+              handleClose();
+            }, 1050);
+        });
+
+
+    }
   }
-
-  useEffect(() => {
-    post();
-  }, []);
-
-
 
   return (
     <>
       <div className="rightArea col-12 col-sm-10 col-md-9 justify-content-around">
         <div className="optionTittle webObj">{props.title}</div>
         <div className="decLine webObj"></div>
-        <form className="dataForm">
+        <form
+          className="dataForm"
+          onSubmit={(e) => {
+            e.preventDefault();
+            memberUpdate();
+          }}
+        >
           <div>會員帳號</div>
           <input
             type="text"
@@ -119,7 +142,13 @@ const url = "http://localhost:3000/yen/update";
             name="authAccount"
             value={authAccount}
           ></input>
-          <div>姓名</div>
+
+          <div>
+            <span class={` ${alertStarsName ? "redNone" : "red"}`}>*</span>姓名
+            <span class={` ${alertStarsName ? "redNone" : "redText"}`}>
+              長度需大於3碼
+            </span>
+          </div>
           <input
             type="text"
             className="updateInput"
@@ -129,7 +158,14 @@ const url = "http://localhost:3000/yen/update";
               setName(e.target.value);
             }}
           ></input>
-          <div>信箱</div>
+
+          <div>
+            <span class={` ${alertStarsEmail ? "redNone" : "red"}`}>*</span>
+            信箱
+            <span class={` ${alertStarsEmail ? "redNone" : "redText"}`}>
+              請填寫正確格式
+            </span>
+          </div>
           <input
             type="text"
             className="updateInput"
@@ -139,16 +175,14 @@ const url = "http://localhost:3000/yen/update";
               setEmail(e.target.value);
             }}
           ></input>
-          <div>生日</div>
-          <DatePicker
-            className="updateInput"
-            dateFormat="yyyy-MM-dd"
-            selected={birth}
-            locale="zh-TW"
-            onChange={(date) => setBirth(date)}
-          />
 
-          <div>手機</div>
+          <label>
+            <span class={` ${alertStarsPhone ? "redNone" : "red"}`}>*</span>
+            手機
+            <span class={` ${alertStarsPhone ? "redNone" : "redText"}`}>
+              請填寫正確手機
+            </span>
+          </label>
           <input
             type="text"
             className="updateInput"
@@ -158,8 +192,32 @@ const url = "http://localhost:3000/yen/update";
               setPhone(e.target.value);
             }}
           ></input>
+
+          <div>
+            <span class={` ${alertStarsBirth ? "redNone" : "red"}`}>*</span>
+            生日
+            <span class={` ${alertStarsBirth ? "redNone" : "redText"}`}>
+              請填寫正確格式
+            </span>
+          </div>
+          <input
+            type="text"
+            className="updateInput"
+            name="birth"
+            placeholder="YYYY-MM-DD"
+            value={birth}
+            onChange={(e) => {
+              setBirth(e.target.value);
+            }}
+          ></input>
+
           <div>地址</div>
-          <Address />
+          <Address
+            country={country}
+            setCountry={setCountry}
+            township={township}
+            setTownship={setTownship}
+          />
           <input
             type="text"
             className="updateInput"
@@ -170,11 +228,31 @@ const url = "http://localhost:3000/yen/update";
             }}
           ></input>
           <div className="upbtnDir">
-            <button className="upDateCancle" onSubmit={(e) => {
-              e.preventDefault();
-              post();
-            }}>取消</button>
-            <button className="upDateCheck">完成</button>
+            <button
+              type="button"
+              onClick={refreshPage}
+              className="upDateCancle"
+            >
+              取消
+            </button>
+
+            <button
+              type="submit"
+              onClick={() => {
+                check();
+              }}
+              className="upDateCheck"
+            >
+              完成
+            </button>
+
+          
+
+            <Modal show={show} onHide={handleClose}>
+              <Modal.Header closeButton className="madalSty" />
+              <Modal.Body className="madalSty"> {upDateSuccess ? "資料已修改" : "資料未變更"}</Modal.Body>
+              <Modal.Footer className="madalSty" />
+            </Modal>
           </div>
         </form>
       </div>
@@ -184,7 +262,5 @@ const url = "http://localhost:3000/yen/update";
     </>
   );
 }
-
-
 
 export default MemberDataUpdateTable;

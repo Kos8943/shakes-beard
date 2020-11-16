@@ -17,7 +17,7 @@ function ShopList(props) {
   return (
     <>
     <div className="shops container">
-      <div className="row mb-4">
+      <div className="row mb-1">
         <Breadcrumb />
       </div>
       <div className="row mb-3">
@@ -34,10 +34,10 @@ function ShopList(props) {
                     variant="secondary" 
                     className={`${currentCate==='所有商家'?'active':''}`}
                     onClick={()=>setCurrentCate('所有商家')}>所有商家</Button>{' '}
-                  <Button 
+                  {/* <Button 
                     variant="secondary"
                     className={`${currentCate==='特價優惠'?'active':''}`}
-                    onClick={()=>setCurrentCate('特價優惠')}>特價優惠</Button>{' '}
+                    onClick={()=>setCurrentCate('特價優惠')}>特價優惠</Button>{' '} */}
                   <Button 
                     variant="secondary"
                     className={`${currentCate==='男士理髮'?'active':''}`}
@@ -79,7 +79,7 @@ function ShopList(props) {
         {currentCate === '男士修容' ? <CardsCateIsBeard title='男士修容' /> : ''}
         </div>
     </div>
-      <Pagination  className="justify-contents-center"/>
+      {/* <Pagination  className="justify-contents-center"/> */}
     </div>
     </>
   )
