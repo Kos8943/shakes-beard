@@ -12,6 +12,7 @@ import firebase from "firebase";
 import StyledFirebaseAuth from 'react-firebaseui/StyledFirebaseAuth';
 
 
+
 //以下import個人頁面
 
 import HomePage from "./chad/HomePage";
@@ -33,6 +34,7 @@ import Func_ChooseStand from "./zihyu/ChooseStand";
 import Func_Color from "./zihyu/Color";
 import Func_Finish from "./zihyu/Finish";
 import LogIn from "./yen/LogIn";
+import LogIn2 from "./yen/LogIn2";
 import SignUp from "./yen/SignUp";
 import MemberOption from "./yen/MemberOption";
 import Payment from "./kos/pages/Payment";
@@ -43,6 +45,7 @@ import TopArrow from "./icon/top-arrow.jpg";
 import { set } from "animejs";
 import InfoSection from "./chen/components/InfoSection";
 import TryLocalstrage from "./kos/pages/TryLocalstrage";
+
 
 
 function App() {
@@ -131,6 +134,32 @@ function App() {
               />
               <MyFooter />
             </Route>
+
+
+
+
+            <Route path="/login2">
+              <ShakesBeardNavbar isAuth={isAuth} setIsAuth={setIsAuth} />
+              <LogIn2
+                isAuth={isAuth}
+                setIsAuth={setIsAuth}
+                account={account}
+                setAccount={setAccount}
+                password={password}
+                setPassword={setPassword}
+              />
+              <MyFooter />
+            </Route>
+
+
+
+
+
+
+
+
+
+
 
             <Route path="/signup">
               <ShakesBeardNavbar isAuth={isAuth} setIsAuth={setIsAuth} setAddCartCount={setAddCartCount} addCartCount={addCartCount}/>
