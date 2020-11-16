@@ -180,7 +180,7 @@ function App() {
             </Route> */}
 
             <Route path="/Project/:sid?">
-              <ShakesBeardNavbar />
+              <ShakesBeardNavbar isAuth={isAuth} setIsAuth={setIsAuth} setAddCartCount={setAddCartCount} addCartCount={addCartCount}/>
               <Project setAddCartCount={setAddCartCount} addCartCount={addCartCount}/>
               <MyFooter />
             </Route>

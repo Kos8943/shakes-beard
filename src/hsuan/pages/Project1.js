@@ -132,6 +132,9 @@ function Project1(props) {
         <Breadcrumb className="HsuanBread">
           <Breadcrumb.Item href="#">首頁</Breadcrumb.Item>
           <Breadcrumb.Item href="http://localhost:3001/product">
+            產品列表
+          </Breadcrumb.Item>
+          <Breadcrumb.Item href="http://localhost:3001/product">
             服飾配件
           </Breadcrumb.Item>
           <Breadcrumb.Item href="http://localhost:3000/project1">

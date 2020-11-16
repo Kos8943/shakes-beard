@@ -130,6 +130,10 @@ function Project(props) {
   //   }
   // },[filterInput])
 
+function myFunction(){
+  document.getElementById("demo").innerHTML = "已加入追蹤";
+}
+
   function ABC(event) {
     console.log("event.target", event.target.getAttribute("value"));
     // let target = document.querySelector(".card-img-top");
@@ -161,6 +165,7 @@ function Project(props) {
 
   return (
     <>
+    
       <Breadcrumb />
       {/* <div>
         <img style={{maxWidth: '50px'}} src={imagesPath[original]} onClick={this.toggleImage} />
@@ -323,9 +328,10 @@ function Project(props) {
                       <br></br>
                       {/* <img src="./icon/search.svg" style="width: 15px;"> */}
 
-                      <button
+                      <button id="demo" onclick="myFunction()"
                         className="ButtonA finished"
                         style={{ border: "0px" }}
+                        onClick={(event) => myFunction(event)}
                       >
                         ♥加入追蹤♥
                       </button>
@@ -459,6 +465,7 @@ function Project(props) {
           {/* <!-- end PageWraper --> */}
         </main>
       </body>
+      
     </>
   );
 }
