@@ -9,15 +9,20 @@ import TWZipCode from "./TWZipCode";
 import PaymentCardMap from "./PayMentCardMap";
 
 function PaymentForm(props) {
+  //Localstorage陣列
   const [payment, setPayment] = useState([]);
+  //價格變數
   const [total, setTotal] = useState();
   const [priceOff, setPriceOff] = useState(300);
   const [shipping, setShipping] = useState(150);
+
+  //會員資訊
+  const [memberData, setMemberData] = useState([]);
+  
+  //會員資訊變數
   const [recipient, setRecipient] = useState();
   const [phoneNumber, setPhoneNumber] = useState();
   const [homeNumber, setHomeNumber] = useState();
-  const [city, setCity] = useState();
-  const [area, setArea] = useState();
   const [address, setAddress] = useState();
   const [pricePayment, setPricePayment] = useState("信用卡");
   const [creditCardNumber, setCreditCardNumber] = useState();
@@ -38,18 +43,55 @@ function PaymentForm(props) {
     setPayment(JSON.parse(newCart));
   }
 
+  //進入頁面就抓取LocalStorage
   useEffect(() => {
     getLocalStorage();
   }, []);
 
-  // 發送Fetch用
+  // 發送Fetch,從後端撈會員紀錄.
+  async function getMemberData() {
+    const url = "http://localhost:3000/try-member";
+
+    const request = new Request(url, {
+      method: "post",
+      headers: new Headers({
+        Accept: "application/json",
+        "Content-Type": "application/json",
+      }),
+    });
+
+    const response = await fetch(request);
+    console.log("response:",response)
+    const data = await response.json();
+    console.log("data:",data)
+     setMemberData(data);
+     setRecipient(data[1].name)
+     setPhoneNumber(data[1].phone)
+     setAddress(data[1].address)
+     setCountry(data[1].country)
+     setTownship(data[1].township)
+     setCreditCardNumber(data[1].card)
+     setCreditCardPassword(data[1].cvc)
+     setCreditCardMonth(data[1].cardDate.slice(0,2))
+    //  console.log("data[1].cardDate.slice(2):",data[1].cardDate.slice(0,2))
+     setCreditCardYear(data[1].cardDate.slice(3))
+    
+  }
+
+  //進入頁面就抓取會員資料
+  useEffect(() => {
+    getMemberData();
+  }, []);
+
+
+  // 發送Fetch,送訂單到後端.
   function paymentData() {
     let correct = true;
 
-    // if (!recipient) {
-    //   correct = false;
-    //   setSmallDisplay(0);
-    // }
+    if (!recipient) {
+      correct = false;
+      setSmallDisplay(0);
+    }
     if (correct) {
       const d = {
         recipient: recipient,
@@ -79,8 +121,6 @@ function PaymentForm(props) {
       });
       
     }
-
-    
   }
 
   if (nextPage === true) {
@@ -90,6 +130,7 @@ function PaymentForm(props) {
 
   return (
     <>
+    
       <form
         name="form1"
         method="post"
@@ -132,8 +173,10 @@ function PaymentForm(props) {
               <input
                 placeholder="王大明"
                 className="inputStyle"
+                value={recipient}
                 onChange={(e) => {
                   setRecipient(e.target.value);
+               
                 }}
               ></input>
               <p>
@@ -148,6 +191,7 @@ function PaymentForm(props) {
               <input
                 placeholder="0912123456"
                 className="inputStyle"
+                value={phoneNumber}
                 onChange={(e) => {
                   setPhoneNumber(e.target.value);
                 }}
@@ -179,6 +223,7 @@ function PaymentForm(props) {
 
               <input
                 className="address DisplayBlock"
+                value={address}
                 onChange={(e) => setAddress(e.target.value)}
               ></input>
               <h3 className="d-flex justify-content-center">發票</h3>
@@ -264,6 +309,7 @@ function PaymentForm(props) {
                     </p>
                     <input
                       className="PhoneCreditCardInput"
+                      value={creditCardNumber}
                       onChange={(e) => {
                         setCreditCardNumber(e.target.value);
                       }}
@@ -283,6 +329,7 @@ function PaymentForm(props) {
                             </small>
                           </p>
                           <input
+                          value={creditCardYear}
                             onChange={(e) => {
                               setCreditCardYear(e.target.value);
                             }}
@@ -290,6 +337,7 @@ function PaymentForm(props) {
                           ></input>
                           <span>年</span>
                           <input
+                            value={creditCardMonth}
                             onChange={(e) => {
                               setCreditCardMonth(e.target.value);
                             }}
@@ -311,6 +359,7 @@ function PaymentForm(props) {
                             </small>
                           </p>
                           <input
+                          value={creditCardPassword}
                             onChange={(e) => {
                               setCreditCardPassword(e.target.value);
                             }}
