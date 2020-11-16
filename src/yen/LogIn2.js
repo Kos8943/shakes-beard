@@ -4,32 +4,21 @@ import LogInCss from "./styles/LogInCss.scss";
 import facebook from "./img/facebook.svg";
 import twitter from "./img/twitter.svg";
 import google from "./img/google.svg";
-import firebase from "firebase";
-import StyledFirebaseAuth from "react-firebaseui/StyledFirebaseAuth";
+import Swal from "sweetalert2";
+import withReactContent from "sweetalert2-react-content";
+import { Modal, Button } from "react-bootstrap";
+import StyledFirebaseAuth from 'react-firebaseui/StyledFirebaseAuth';
+import firebase from 'firebase';
+import Test from './components/Test';
 
-const firebaseConfig = {
-  apiKey: "AIzaSyAPaeDGrXrdirweUn6zoDKIbMSGqvoUDOs",
-  authDomain: "shakes-beard.firebaseapp.com",
-  databaseURL: "https://shakes-beard.firebaseio.com",
-  projectId: "shakes-beard",
-  storageBucket: "shakes-beard.appspot.com",
-  messagingSenderId: "33308726107",
-  appId: "1:33308726107:web:cb6db676b3e62902cc007e",
-  measurementId: "G-F5LJS907KR",
-};
-firebase.initializeApp(firebaseConfig);
-
-// firebase.initializeApp({
+// const config = {
 //   apiKey: "AIzaSyAPaeDGrXrdirweUn6zoDKIbMSGqvoUDOs",
-//   authDomain: "shakes-beard.firebaseapp.com",
-//   databaseURL: "https://shakes-beard.firebaseio.com",
-// });
-
-const database = firebase.database();
-
-console.log("database", database);
+//   authDomain: "shakes-beard.firebaseapp.com"
+// };
+// firebase.initializeApp(config);
 
 function LogIn(props) {
+ 
   const {
     isAuth,
     setIsAuth,
@@ -37,63 +26,29 @@ function LogIn(props) {
     setAccount,
     password,
     setPassword,
+   
+
   } = props;
 
-  const [isSignedIn, setIsSignedIn] = useState(false);
+  const [isLoginSuccess, setIsLoginSuccess] = useState("");
 
-  const providerFB = new firebase.auth.FacebookAuthProvider();
-  const providerGoogle = new firebase.auth.GoogleAuthProvider();
-  const providerTwitter = new firebase.auth.TwitterAuthProvider();
-  const providerGithub = new firebase.auth.GithubAuthProvider();
+  const [show, setShow] = useState(false);
 
-  const uiConfig = {
-    signInFlow: "popup",
-    signInOptions: [
-      firebase.auth.GoogleAuthProvider.PROVIDER_ID,
-      firebase.auth.FacebookAuthProvider.PROVIDER_ID,
-      firebase.auth.TwitterAuthProvider.PROVIDER_ID,
-      firebase.auth.GithubAuthProvider.PROVIDER_ID,
-    ],
-    callbacks: {
-      signInSuccess: false,
-    },
-  };
+  const handleClose = () => setShow(false);
+  const handleShow = () => setShow(true);
+  
 
-  firebase
-    .auth()
-    .signInWithPopup(providerFB)
-    .then(function (result) {
-      // This gives you a Facebook Access Token. You can use it to access the Facebook API.
-      const token = result.credential.accessToken;
-      // The signed-in user info.
-      const user = result.user;
-      // ...
-    })
-    .catch(function (error) {
-      // Handle Errors here.
-      const errorCode = error.code;
-      const errorMessage = error.message;
-      // The email of the user's account used.
-      const email = error.email;
-      // The firebase.auth.AuthCredential type that was used.
-      const credential = error.credential;
-      // ...
-    });
-
-  console.log("uiConfig", uiConfig);
-  console.log("providerFB", providerFB.PROVIDER_ID);
-  console.log("firebase.auth()", firebase.auth());
-
-  // useEffect(() => {
-  //   firebase.auth().onAuthStateChanged((user) => {
-  //     setIsSignedIn(!!user);
-  //     console.log("user", user);
-  //   });
-  // }, []);
+  async function close(){
+    handleClose();
+    await (isLoginSuccess)?setIsAuth(true):setIsAuth(false)
+  }
 
   function memberIoginForm() {
     const url = "http://localhost:3000/yen/log";
 
+    // const fd = new FormData(document.memberForm)
+
+    // console.log(fd)
     fetch(url, {
       method: "POST",
       body: JSON.stringify({ account, password }),
@@ -105,19 +60,34 @@ function LogIn(props) {
 
       .then((o) => {
         console.log("react收到的", o);
+
+        async function close(){
+          handleClose();
+          await (o.success)?setIsAuth(true):setIsAuth(false)
+        }
         if (o.success) {
-          setIsAuth(true);
+          setIsLoginSuccess(true)
           localStorage.setItem("data", JSON.stringify(o));
           localStorage.setItem("auth", true);
         } else {
-          alert("帳號／密碼錯誤");
           setPassword("");
           setAccount("");
+          setIsLoginSuccess(false)
         }
+        setTimeout(() => {
+          handleShow();
+        }, 10);
+
+        setTimeout(() => {
+          close();
+        }, 1800);
       });
   }
 
+  
+
   if (isAuth === true) {
+
     return <Redirect to="/homepage" />;
   }
 
@@ -130,7 +100,9 @@ function LogIn(props) {
 
             <form
               className="loginWeb d-flex flex-column"
+              // method="POST"
               name="memberForm"
+              // novalidate
               onSubmit={(e) => {
                 e.preventDefault();
                 memberIoginForm();
@@ -168,34 +140,43 @@ function LogIn(props) {
 
                   <button
                     type="submit"
+                    // onClick={() => { memberIoginForm() }}
                     className="loginCheckButton loginMobile"
+                    // onClick={(e) => {
+                    //   e.preventDefault();
+                    //   memberIoginForm()
+                    // }}
                   >
                     登入
                   </button>
                 </div>
 
+                
+
                 <div className="loginArea2 ">
                   <div className="otherAccount">
-                    <span>
-                      {isSignedIn}
-                      {
-                        <StyledFirebaseAuth
-                          uiConfig={uiConfig}
-                          firebaseAuth={firebase.auth()}
-                        />
-                      }
-                      <button
-                        type="button"
-                        onClick={() => firebase.auth().signOut()}
-                      >
-                        Sign out!
-                      </button>
-                    </span>
 
-                    <StyledFirebaseAuth
-                      uiConfig={uiConfig}
-                      firebaseAuth={firebase.auth()}
-                    />
+                  <Test />
+                    {/* <button className="otherLogButton facebook">
+                      <div className="d-flex justify-content-around align-items-center">
+                        <img src={facebook} className="lognIcon "></img>
+                        使用Facebook登入<div></div>
+                      </div>
+                    </button>
+
+                    <button className="otherLogButton twitter">
+                      <div className="d-flex justify-content-around align-items-center">
+                        <img src={twitter} className="lognIcon"></img>
+                        使用Twitter登入<div></div>
+                      </div>
+                    </button>
+
+                    <button className="otherLogButton google">
+                      <div className="d-flex justify-content-around align-items-center">
+                        <img src={google} className="lognIcon"></img>
+                        使用Google登入<div></div>
+                      </div>
+                    </button> */}
 
                     <Link to="/signup">
                       <button className="loginSingUpButton loginMobile">
@@ -207,7 +188,21 @@ function LogIn(props) {
               </div>
               {/* </form> */}
               <div className="d-flex justify-content-around ">
-                <button type="submit" className="loginCheckButton loginWebNone">
+                <button
+                  type="submit"
+                  className="loginCheckButton loginWebNone"
+                  // onClick={(e) => {
+                  //   e.preventDefault();
+                  //   memberIoginForm();
+
+                  // if (authAccount === account && authPassword === password) {
+                  //   setIsAuth(true);
+                  //   alert("登入成功");
+                  // } else {
+                  //   alert("帳號/密碼錯誤");
+                  // }
+                  // }}>
+                >
                   登入
                 </button>
                 <Link to="/signup">
@@ -215,6 +210,17 @@ function LogIn(props) {
                     註冊帳號
                   </button>
                 </Link>
+                
+                <Modal show={show} onHide={handleClose}>
+                <Modal.Header closeButton className="madalSty" />
+                <Modal.Body className="madalStyS">
+                  {" "}
+                  {isLoginSuccess ? "登入成功" : "帳號/密碼錯誤"}
+                </Modal.Body>
+                <Modal.Footer className="madalStyS" >
+            
+                </Modal.Footer>
+              </Modal>
               </div>
             </form>
 

@@ -39,3 +39,11 @@ UPDATE `member` SET `card` = '7894-1256-4567-1694' WHERE `member`.`sid` = 2
 
 
 https://github.com/pigochu/pigo-learn/blob/master/php-regular-expressions/credit-card-numbers-zh_TW.md
+
+
+
+
+
+
+
+https://dev.to/remi/firebase-google-sign-in-with-react-3741

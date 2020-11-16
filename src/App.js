@@ -139,7 +139,7 @@ function App() {
 
 
             <Route path="/login2">
-              <ShakesBeardNavbar isAuth={isAuth} setIsAuth={setIsAuth} />
+            <ShakesBeardNavbar isAuth={isAuth} setIsAuth={setIsAuth} setAddCartCount={setAddCartCount} addCartCount={addCartCount}/>
               <LogIn2
                 isAuth={isAuth}
                 setIsAuth={setIsAuth}
@@ -148,7 +148,7 @@ function App() {
                 password={password}
                 setPassword={setPassword}
               />
-              <MyFooter />
+          <MyFooter />
             </Route>
 
 
