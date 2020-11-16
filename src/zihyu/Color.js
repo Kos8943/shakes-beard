@@ -7,9 +7,8 @@ import imgGiftBox_3 from './image/box3.png';
 import imgGiftBox_4 from './image/box4.png';
 import imgGiftBox_5 from './image/box5.png';
 
-
 import { Button } from 'react-bootstrap'
-
+import './GiftBoxData.js';
 
 let queryString = window.location.search;
 const urlParams = new URLSearchParams(queryString);
@@ -18,6 +17,19 @@ const SelectRange = urlParams.get('SelectRange');             //第一頁選擇�
 const SelectRazorIndex = urlParams.get('SelectRazorIndex');
 const SelectBrushIndex = urlParams.get('SelectBrushIndex');
 const SelectStandIndex = urlParams.get('SelectStandIndex');
+
+
+
+function updateCartToLocalStorage(value)
+{
+  const currentCart = localStorage.getItem("cart") || "[]";
+  const newCart = [...JSON.parse(currentCart), value];
+  localStorage.setItem("cart", JSON.stringify(newCart));
+
+  //缺：Update 購物車 UI
+}
+
+
 
 
 let SelectColorIndex = "-1";
@@ -123,6 +135,45 @@ class Class_Color extends React.Component
                           }
                           else
                           {
+                            var goodsID = "FRaECxQkl7";
+                            var goodsImg = "";
+                            var goodsColor = "";
+
+                            switch (SelectColorIndex)
+                            {
+                            case "0":   goodsImg = imgGiftBox_1;  goodsColor = "褐色";  break;
+                            case "1":   goodsImg = imgGiftBox_2;  goodsColor = "藍綠色";  break;
+                            case "2":   goodsImg = imgGiftBox_3;  goodsColor = "咖啡色";  break;
+                            case "3":   goodsImg = imgGiftBox_4;  goodsColor = "綠色";  break;
+                            case "4":   goodsImg = imgGiftBox_5;  goodsColor = "靛色";  break;
+                            }
+
+                            var goodsName = "";
+
+                            switch (SelectRange)
+                            {
+                            case "0":   goodsName = "禮物盒 - 小";  break;
+                            case "1":   goodsName = "禮物盒 - 中";  break;
+                            case "2":   goodsName = "禮物盒 - 大";  break;
+                            }
+
+                            var goodsPrice = 0;
+
+                            var razorIndex = Number(SelectRazorIndex);
+                            var razorData = global.RazorData[razorIndex];
+                            goodsPrice += razorData.Price;
+                            // goodsPrice = goodsPrice + razorData.Price;
+
+                            updateCartToLocalStorage(
+                            {
+                              id: goodsID,
+                              img: goodsImg,
+                              name: goodsName,
+                              type: goodsColor,
+                              amount: 1,
+                              price: goodsPrice,
+                            });
+                            
                             //下一頁的路徑+選擇範圍的值+
                             //"&被選擇頁數的字串=" +選擇頁數的值
                             window.open("/Path_Finish?SelectRange=" + SelectRange +
