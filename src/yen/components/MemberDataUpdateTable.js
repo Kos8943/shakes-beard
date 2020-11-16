@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import DataUpdate from "../styles/DataUpdate.scss"; //拿掉 版面會跑掉
 import Address from "./Address";
 import "react-datepicker/dist/react-datepicker.css";
-// import { Col } from "react-bootstrap";
+import { Modal, Button } from "react-bootstrap";
 
 function MemberDataUpdateTable(props) {
   const {
@@ -31,6 +31,13 @@ function MemberDataUpdateTable(props) {
   const [alertStarsEmail, setAlertStarsEmail] = useState(true);
   const [alertStarsPhone, setAlertStarsPhone] = useState(true);
   const [alertStarsBirth, setAlertStarsBirth] = useState(true);
+
+  const [upDateSuccess, setUpDateSuccess] = useState('');
+
+  const [show, setShow] = useState(false);
+
+  const handleClose = () => setShow(false);
+  const handleShow = () => setShow(true);
 
   function check() {
     const phonePattern = /^09\d{2}\d{3}\d{3}$/;
@@ -95,8 +102,23 @@ function MemberDataUpdateTable(props) {
         .then((r) => r.json())
 
         .then((o) => {
+
           console.log("react收到的", o);
+          
+          if (o.success) {
+            setUpDateSuccess(true)
+          }else{setUpDateSuccess(false)}
+
+          setTimeout(() => {
+              handleShow();
+            }, 10);
+
+            setTimeout(() => {
+              handleClose();
+            }, 1050);
         });
+
+
     }
   }
 
@@ -216,11 +238,21 @@ function MemberDataUpdateTable(props) {
 
             <button
               type="submit"
-              onClick={() => check()}
+              onClick={() => {
+                check();
+              }}
               className="upDateCheck"
             >
               完成
             </button>
+
+          
+
+            <Modal show={show} onHide={handleClose}>
+              <Modal.Header closeButton className="madalSty" />
+              <Modal.Body className="madalSty"> {upDateSuccess ? "資料已修改" : "資料未變更"}</Modal.Body>
+              <Modal.Footer className="madalSty" />
+            </Modal>
           </div>
         </form>
       </div>
