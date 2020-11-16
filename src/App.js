@@ -285,7 +285,7 @@ function App() {
 
 
 
-            <Route path="/reservation">
+            <Route path="/reservation/:sid?">
               <ShakesBeardNavbar isAuth={isAuth} setIsAuth={setIsAuth} setAddCartCount={setAddCartCount} addCartCount={addCartCount}/>
               <div className="footerFix">
                 <Reservation />
