@@ -84,7 +84,7 @@ class Product extends React.Component {
 
         <div class="product_wrap clearfix">
         <Breadcrumb className="HsuanBread">
-          <Breadcrumb.Item href="#">首頁</Breadcrumb.Item>
+          <Breadcrumb.Item href="http://localhost:3001/homepage">首頁</Breadcrumb.Item>
           <Breadcrumb.Item href="http://localhost:3001/product">
             產品列表
           </Breadcrumb.Item>
