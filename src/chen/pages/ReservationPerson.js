@@ -4,6 +4,11 @@ import { Table, Button, Form, Col, Row, Modal } from 'react-bootstrap'
 
 function ReservationPerson(props) {
   console.log('ReservationPerson', props)
+  const [reservePerson, setReservePersion] = useState()
+  const [reserveMobile1, setReserveMobile1] = useState()
+  const [reserveMobile2, setReserveMobile2] = useState()
+  const [reserveEmail, setReserveEmail] = useState()
+  const [reserveAddress, setReserveAddress] = useState()
 
   return (
     <>
@@ -18,30 +23,60 @@ function ReservationPerson(props) {
         <h4 className="my-3">二、填寫預約資料</h4>
             <Form.Group controlId="formGridName">
               <Form.Label>訂購人姓名</Form.Label>
-              <Form.Control type="text" placeholder="" />
+              <Form.Control 
+              type="text" 
+              placeholder="" 
+              value={reservePerson} 
+              onChange={(e) => {
+                setReservePersion(e.target.value);
+            }}/>
             </Form.Group>
 
           <Form.Row>
             <Form.Group as={Col} controlId="formGridMobile">
               <Form.Label>連絡電話1</Form.Label>
-              <Form.Control type="mobile" placeholder="" />
+              <Form.Control 
+              type="mobile" 
+              placeholder="" 
+              value={reserveMobile1} 
+              onChange={(e) => {
+                setReserveMobile1(e.target.value);
+            }}/>
             </Form.Group>
 
             <Form.Group as={Col} controlId="formGridMobile">
               <Form.Label>連絡電話2</Form.Label>
-              <Form.Control type="mobile" placeholder="" />
+              <Form.Control 
+              type="mobile" 
+              placeholder="" 
+              value={reserveMobile2}
+              onChange={(e) => {
+                setReserveMobile2(e.target.value);
+            }}/>
             </Form.Group>
           </Form.Row>
           
           <Form.Group controlId="formGridEmail">
               <Form.Label>連絡信箱</Form.Label>
-              <Form.Control type="email" placeholder="" />
+              <Form.Control 
+              type="email" 
+              placeholder="" 
+              value={reserveEmail}
+              onChange={(e) => {
+                setReserveEmail(e.target.value);
+            }}/>
           </Form.Group>
 
           <Form.Row>
             <Form.Group as={Col} controlId="formGridAddress">
               <Form.Label>連絡地址</Form.Label>
-              <Form.Control placeholder="" />
+              <Form.Control 
+              type="text"
+              placeholder="" 
+              value={reserveAddress}
+              onChange={(e) => {
+                setReserveAddress(e.target.value);
+            }}/>
             </Form.Group>
           </Form.Row>
 
@@ -49,9 +84,9 @@ function ReservationPerson(props) {
           <Form.Group as={Col} id="formGrid CheckboxYes">
             <Form.Check type="checkbox" label="訂購人就是參加者" />
           </Form.Group>
-          <Form.Group as={Col} id="formGridCheckboxNo">
+          {/* <Form.Group as={Col} id="formGridCheckboxNo">
             <Form.Check type="checkbox" label="訂購人不是參加者" />
-          </Form.Group>
+          </Form.Group> */}
           </Form.Row>
         </Form>
         </div>

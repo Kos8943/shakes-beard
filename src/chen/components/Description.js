@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from 'react'
-import { withRouter } from 'react-router-dom'
+import { withRouter,Link } from 'react-router-dom'
 import { Media } from 'react-bootstrap'
+import { Badge } from 'react-bootstrap'
+import Recommend from '../components/Recommend'
 import '../styles/shops.scss'
 
 function Description(props) {
@@ -16,6 +18,7 @@ function Description(props) {
   const [shopSecondText, setShopSecondText] = useState('')
   const [shopSecondImg, setShopSecondImg] = useState('')
   const [dataIsExist, setDataIsExist] = useState(true)
+  const [shopCate, setShopCate] = useState('男士理髮')
 
   async function getShopFromServer(){
     console.log('getShopFromServer',sid)
@@ -53,6 +56,7 @@ function Description(props) {
     setShopSecondTitle(data[i].description_title_second)
     setShopSecondText(data[i].description_text_second)
     setShopSecondImg(data[i].description_img_second)
+    setShopCate(data[i].shop_cate_tag)
   }
 
   useEffect(()=>{
@@ -96,9 +100,78 @@ function Description(props) {
       />
     </Media>
   </>)
+
+  const recommend=(
+    <>
+      <div className="row pl-3 mt-3">
+          <h4 className="mt-5">推薦給您</h4>
+        </div>
+        {/* <div className="row"> */}
+        <div className="d-flex justify-contents-center mb-5 scrollRight recommends">
+            <div className="card recommend">
+              <div className="card-img">
+                <img src={`/imgs/shops/ST001.jpg`} className="card-img-top" alt=".."/>
+              </div>
+              <div className="card-body d-flex flex-column align-items-center">
+                <p>
+                  <Badge pill variant="secondary" className="mr-1">男士理髮</Badge>
+                  <Badge pill variant="secondary" className="mr-1">台北市</Badge>
+                </p>
+                <h6 className="mb-1">Sculptor Barber</h6>
+                <Link to='/shopdetail/1' className="learnMore">查看店家</Link>
+              </div>
+            </div>
+            <div className="card recommend">
+              <div className="card-img">
+                <img src={'/imgs/shops/ST002.jpg'} className="card-img-top" alt=".."/>
+              </div>
+                <div className="card-body d-flex flex-column align-items-center">
+                <p>
+                  <Badge pill variant="secondary" className="mr-1">男士理髮</Badge>
+                  <Badge pill variant="secondary" className="mr-1">台北市</Badge>
+                </p>
+                <h6 className="mb-1">One Hand Made Barber</h6>
+                <Link to='/shopdetail/2' className="learnMore">查看店家</Link>
+              </div>
+            </div>
+            <div className="card recommend">
+              <div className="card-img">
+                <img src={'/imgs/shops/ST003.jpg'} className="card-img-top" alt=".."/>
+              </div>
+              <div className="card-body d-flex flex-column align-items-center">
+                <p>
+                  <Badge pill variant="secondary" className="mr-1">男士理髮</Badge>
+                  <Badge pill variant="secondary" className="mr-1">台北市</Badge>
+                </p>
+                <h6 className="mb-1">Tim's fantasy World 男士理髮廳</h6>
+                <Link to='/shopdetail/3' className="learnMore">查看店家</Link>
+              </div>
+            </div>
+            <div className="card recommend">
+              <div className="card-img">
+                <img src={'/imgs/shops/ST009.jpg'} className="card-img-top" alt=".."/>
+              </div>
+              <div className="card-body d-flex flex-column align-items-start">
+                <p>
+                  <Badge pill variant="secondary" className="mr-1">男士理髮</Badge>
+                  <Badge pill variant="secondary" className="mr-1">台中市</Badge>
+                </p>
+                <h6 className="mb-1">Slick Barbershop 俐落男仕理髮廳</h6>
+                <Link to='/shopdetail/9' className="learnMore">查看店家</Link>
+              </div>
+            </div>
+        </div>
+      {/* </div> */}
+    </>
+  )
   
   return (
-    <>{display}</>
+    <>
+    {display}
+    {/* {`${shopCate==='男士理髮'? recommend:''}`} */}
+    {/* {`${shopCate==='男士理髮'? 'yes':'no'}`} */}
+    {recommend}
+    </>
   )
 }
 

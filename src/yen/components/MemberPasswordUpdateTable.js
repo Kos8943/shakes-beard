@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import PasswordUpdate from "../styles/PasswordUpdate.scss";
+import { Modal, Button } from "react-bootstrap";
 
 
 function MemberPasswordUpdateTable(props) {
@@ -12,6 +13,14 @@ function MemberPasswordUpdateTable(props) {
   const [newPasswordCheck, setNewPasswordCheck] = useState("");
   const [alertStarsPassword, setAlertStarsPassword] = useState(true);
   const [alertStarsPasswordSame, setAlertStarsPasswordSame] = useState(true);
+
+  const [upDatePassSuccess, setUpDatePassSuccess] = useState('');
+
+
+  const [show, setShow] = useState(false);
+
+  const handleClose = () => setShow(false);
+  const handleShow = () => setShow(true);
 
   function PasswordCheck() {
     if (newPassword.length < 5 || newPasswordCheck.length < 5) {
@@ -52,16 +61,25 @@ function MemberPasswordUpdateTable(props) {
         .then((o) => {
           console.log("react收到的", o);
           if (o === false) {
-            alert("密碼錯誤");
+            // alert("密碼錯誤");
+            setUpDatePassSuccess(false)
             setNewPassword("");
             setNewPasswordCheck("");
             setPass("");
           } else {
-            alert("修改完成");
+            // alert("修改完成");
+            setUpDatePassSuccess(true)
             setNewPassword("");
             setNewPasswordCheck("");
             setPass("");
           }
+          setTimeout(() => {
+            handleShow();
+          }, 10);
+
+          setTimeout(() => {
+            handleClose();
+          }, 1050);
         });
     }
   }
@@ -82,7 +100,7 @@ function MemberPasswordUpdateTable(props) {
           <div>
             <div>舊密碼</div>
             <input
-              type="text"
+              type="password"
               className="passInput"
               name="password"
               value={pass}
@@ -170,8 +188,14 @@ function MemberPasswordUpdateTable(props) {
             >
               完成
             </button>
+            <Modal show={show} onHide={handleClose}>
+              <Modal.Header closeButton className="madalSty" />
+              <Modal.Body className="madalSty"> {upDatePassSuccess ? "密碼已修改" : "密碼錯誤"}</Modal.Body>
+              <Modal.Footer className="madalSty" />
+            </Modal>
           </div>
         </form>
+       
        
       </div>
      

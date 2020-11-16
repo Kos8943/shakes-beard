@@ -48,32 +48,49 @@ function ReservationCheck(props) {
         <div className="row">
         <h4 className="my-3">三、確認預約內容</h4>
         <Table bordered hover>
-          <tbody className="text-center">
+          <tbody className="text-start">
             <tr>
               <td>預約編號</td>
-              <td colSpan="3">RV0123</td>
+              <td colSpan="2">RV0123</td>
             </tr>
             <tr>
               <td>商家名稱</td>
-              <td>Sculptor Barber</td>
-              <td>商家編號</td>
-              <td>ST001</td>
-            </tr>
-            <tr>
-              <td>預約日期</td>
-              <td>(星期二)</td>
-              <td>預約時間</td>
-              <td>12:00~13:00</td>
+              <td>ST001 Sculptor Barber</td>
             </tr>
             <tr>
               <td>預約服務</td>
-              <td>男士理髮</td>
-              <td>服務編號</td>
-              <td>ST00101</td>
+              <td>ST00101 男士理髮</td>
             </tr>
             <tr>
+              <td>預約時間</td>
+              <td>12:00~13:00</td>
+            </tr>
+            {/* <tr>
               <td>服務說明</td>
               <td colSpan="3">XXXXXXX</td>
+            </tr> */}
+          </tbody>
+        </Table>
+
+        <Table bordered hover>
+          <tbody className="text-start">
+            <tr>
+              <td>訂購人姓名</td>
+              <td colSpan="3">XX3</td>
+            </tr>
+            <tr>
+              <td>連絡電話1</td>
+              <td>XXXX</td>
+              <td>連絡電話2</td>
+              <td>XXXX</td>
+            </tr>
+            <tr>
+              <td>連絡信箱</td>
+              <td colSpan="3">XXXXX</td>
+            </tr>
+            <tr>
+              <td>連絡地址</td>
+              <td colSpan="3">XXXXX</td>
             </tr>
           </tbody>
         </Table>
