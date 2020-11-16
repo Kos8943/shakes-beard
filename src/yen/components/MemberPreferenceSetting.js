@@ -3,6 +3,8 @@ import PreferenceSettingCss from "../styles/PreferenceSettingCss.scss";
 import masterimg from "../img/card/001-mastercard.svg";
 import visaimg from "../img/card/002-visa.svg";
 import americanimg from "../img/card/003-american-express.svg";
+import { Modal, Button } from "react-bootstrap";
+
 
 function MemberPreferenceSetting(props) {
   const refreshPage = () => {
@@ -26,6 +28,13 @@ function MemberPreferenceSetting(props) {
   const [alertStarsCard, setAlertStarsCard] = useState(true);
   const [alertStarsCardDate, setAlertStarsCardDate] = useState(true);
   const [alertStarsCvc, setAlertStarsCvc] = useState(true);
+
+  const [settingSuccess, setSettingSuccess] = useState('');
+
+  const [show, setShow] = useState(false);
+
+  const handleClose = () => setShow(false);
+  const handleShow = () => setShow(true);
 
   const cardPatternVisa = /^4\d{3}([\ \-]?)\d{4}\1\d{4}\1\d{4}$/;
   const cardPatternMasterCard = /^5[1-5]\d{2}([\ \-]?)\d{4}\1\d{4}\1\d{4}$/;
@@ -87,10 +96,20 @@ function MemberPreferenceSetting(props) {
         .then((o) => {
           console.log("react收到的", o);
           if (o === false) {
-            alert("密碼錯誤");
+            // alert("密碼錯誤");
+            setSettingSuccess(false)
           } else {
-            alert("修改完成");
+            // alert("修改完成");
+            setSettingSuccess(true)
           }
+          setTimeout(() => {
+            handleShow();
+          }, 10);
+
+          setTimeout(() => {
+            handleClose();
+          }, 1050);
+
         });
     }
   }
@@ -270,6 +289,12 @@ function MemberPreferenceSetting(props) {
             >
               完成
             </button>
+            <Modal show={show} onHide={handleClose}>
+              <Modal.Header closeButton className="madalSty" />
+              <Modal.Body className="madalSty"> {settingSuccess ? "資料已修改" : "資料未變更"}</Modal.Body>
+              <Modal.Footer className="madalSty" />
+            </Modal>
+
           </div>
         </form>
       </div>

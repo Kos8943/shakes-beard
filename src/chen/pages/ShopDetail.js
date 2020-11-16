@@ -13,6 +13,7 @@ function ShopDetail(props) {
   // const shopid = props.match.params.shopid
   // console.log('props.match.params',props.match.params)
   // console.log('shopid',shopid)
+  // console.log('ffff',props.match.params)
 
   return (
   <>
@@ -23,7 +24,7 @@ function ShopDetail(props) {
       <div className="row mb-5">
         <InfoSection/>
       </div>
-      <div className="row pl-3 mt-3">
+      <div className="row pl-3 pt-5">
         <div>
           <Description/>
         </div>
@@ -33,11 +34,11 @@ function ShopDetail(props) {
           map 
         </div>
       </div> */}   
-      <div className="row">
+      {/* <div className="row">
         <div>
           <Recommend/>
         </div>
-      </div>
+      </div> */}
     </div>
   </>
   )
