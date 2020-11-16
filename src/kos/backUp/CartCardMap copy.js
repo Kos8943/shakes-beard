@@ -5,7 +5,6 @@ import { FaSun } from "react-icons/fa";
 
 function CartCardMap(props) {
   const [myCart, setMyCart] = useState([]);
-  const [delectCartCard, setDelectCartCard] = useState(0)
 
   const {
     total,
@@ -36,11 +35,6 @@ sum(myCart)
     
   }, []);
 
-  useEffect(() => {
-    getLocalStorage();
-    
-  }, [delectCartCard]);
-
   useEffect(() => {}, [myCart]);
 
   const updateCartToLocalStorage = (v, isAdded = true, y) => {
@@ -65,24 +59,14 @@ sum(myCart)
     setMyCart(currentCart)
   }
 
-  const DeleteCartLocal = (i) => {
-    const currentCart = JSON.parse(localStorage.getItem('cart')) || []
-    const currentCart1 = currentCart.shift(i);
-    console.log("currentCart1:",currentCart1)
-    console.log("currentCart1.length:",currentCart1.length)
-    localStorage.setItem('cart', JSON.stringify(currentCart))
-    setDelectCartCard(delectCartCard+1)
-  }
-
-
   
   
   return (
     <>
       {myCart.map((v, i) => (
         <>
-          <div className="cartItem d-xl-flex justify-content-between d-block" key={v.id}>
-            <img className="itemImg" src={"./imgs/hsuan/" + `${v.img}`}></img>
+          <div className="cartItem d-xl-flex d-block" key={v.id}>
+            <img className="itemImg" src={"./imgs/" + `${v.img}`}></img>
             <div className="itemName my-lg-auto">{v.name}</div>
 
             {/* web style select */}
@@ -90,7 +74,6 @@ sum(myCart)
             <select
               className="selectHigh  d-none d-lg-block"
               onChange={(e) => {
-
                 updateCartToLocalStorage(v, false, e.target.value)
               
               }}
@@ -114,7 +97,7 @@ sum(myCart)
             <img
               src="./imgs/delete.svg"
               className="deleteIcon d-none d-lg-block"
-              onClick={() => { DeleteCartLocal(i)}}
+              onClick={() => {}}
             ></img>
 
             {/* mobile qty select */}

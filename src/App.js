@@ -249,9 +249,9 @@ function App() {
 
             <Route path="/shoplist">
               <ShakesBeardNavbar isAuth={isAuth} setIsAuth={setIsAuth} />
-              {/* <div className="footerFix"> */}
+              <div className="footerFix KosPadding p-0">
                 <ShopList />
-              {/* </div> */}
+              </div>
               <MyFooter />
             </Route>
 
@@ -310,11 +310,11 @@ function App() {
             </Route>
 
             <Route path="*">
-              <ShakesBeardNavbar isAuth={isAuth} setIsAuth={setIsAuth} />
+              {/* <ShakesBeardNavbar isAuth={isAuth} setIsAuth={setIsAuth} /> */}
               <div className="footerFix">
                 <NotFoundPage />
               </div>
-              <MyFooter />
+              {/* <MyFooter /> */}
             </Route>
           </Switch>
         </main>

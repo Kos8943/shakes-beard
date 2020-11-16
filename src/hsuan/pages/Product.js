@@ -1,22 +1,22 @@
 import React from "react";
 import "../style/Product.css";
 import Sid from "../../Sid";
-import Script from "react-load-script";
-import ReactDOM from 'react-dom';
-import { Transition } from 'react-transition-group';
+// import Script from "react-load-script";
+// import ReactDOM from 'react-dom';
+// import { Transition } from 'react-transition-group';
 // import "./Css";
 // import "animate.compat.css";
 // import Anime, {anime} from 'react-anime';
 // import "../Script.js";
-import { Carousel } from "react-bootstrap";
-import { NavLink } from "react-router-dom";
+import { Breadcrumb } from "react-bootstrap";
+// import { NavLink } from "react-router-dom";
 
 //animation
-import { bounceInLeft,} from 'react-animations'
-import Radium, {StyleRoot} from 'radium';
+// import { bounceInLeft,} from 'react-animations'
+// import Radium, {StyleRoot} from 'radium';
 import "animate.css/animate.min.css"
 import ScrollAnimation from 'react-animate-on-scroll'
-import anime from 'animejs';
+// import anime from 'animejs';
 import "animate.css";
 import ReactCSSTransitionGroup from "react-addons-css-transition-group";
 // import { TransitionGroup, Transition } from 'react-transition-group';
@@ -82,7 +82,13 @@ class Product extends React.Component {
 
 
         <div class="product_wrap clearfix">
-    
+        <Breadcrumb className="HsuanBread">
+          <Breadcrumb.Item href="http://localhost:3001/homepage">首頁</Breadcrumb.Item>
+          <Breadcrumb.Item href="http://localhost:3001/product">
+            產品列表
+          </Breadcrumb.Item>
+          
+        </Breadcrumb>
         
     <div class="unit">
       <a href="http://localhost:3001/project1">
