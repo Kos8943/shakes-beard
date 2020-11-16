@@ -9,6 +9,14 @@ import MemberFavorites from "./components/MemberFavorites";
 import CartOrderCheck from "../kos/components/CartOrderCheck";
 import ReservationOrderCheck from "../chen/components/ReservationOrderCheck";
 import { Router, Route, Link, Switch, Redirect } from "react-router-dom";
+import membericon from "../yen/img/phone/icons8-user-90.png";
+import pass from "../yen/img/phone/icons8-password-48.png";
+import crediticon from "../yen/img/phone/icons8-credit-card-100.png";
+import list from "../yen/img/phone/icons8-tasklist-90.png";
+import shopping from "../yen/img/phone/icons8-credit-card-100.png";
+import shop from "../yen/img/phone/icons8-barber-pole-90.png";
+import heart from "../yen/img/phone/icons8-heart-100.png";
+
 
 function MemberOption(props) {
   const {
@@ -102,7 +110,7 @@ function MemberOption(props) {
 
             <div className="d-flex flex-column">
               <img
-                src="./imgs/1-3.jpg"
+                src={membericon}
                 className="PhoneIcon"
                 onClick={() => {
                   setPageTitle("資料修改");
@@ -122,7 +130,7 @@ function MemberOption(props) {
 
             <div className="d-flex flex-column">
               <img
-                src="./imgs/1-3.jpg"
+                src={pass}
                 className="PhoneIcon"
                 onClick={() => {
                   setPageTitle("密碼修改");
@@ -142,7 +150,7 @@ function MemberOption(props) {
 
             <div className="d-flex flex-column">
               <img
-                src="./imgs/1-3.jpg"
+                src={crediticon}
                 className="PhoneIcon"
                 onClick={() => {
                   setPageTitle("偏好設定");
@@ -162,7 +170,7 @@ function MemberOption(props) {
 
             <div className="d-flex flex-column">
               <img
-                src="./imgs/1-3.jpg"
+                src={heart}
                 className="PhoneIcon"
                 onClick={() => {
                   setPageTitle("追蹤清單");
@@ -182,7 +190,7 @@ function MemberOption(props) {
 
             <div className="d-flex flex-column">
               <img
-                src="./imgs/1-3.jpg"
+                src={list}
                 className="PhoneIcon"
                 onClick={() => {
                   setPageTitle("訂單查詢");
@@ -202,7 +210,7 @@ function MemberOption(props) {
 
             <div className="d-flex flex-column">
               <img
-                src="./imgs/1-3.jpg"
+                src={shop}
                 className="PhoneIcon"
                 onClick={() => {
                   setPageTitle("預約查詢");
