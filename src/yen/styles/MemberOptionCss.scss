@@ -36,6 +36,7 @@ body {
   font-size: 1.25rem;
   text-align: center;
   cursor: pointer;
+
 }
 
 .option:hover{
@@ -43,11 +44,12 @@ body {
 }
 
 .thisPage {
-  color: #f25d50;
+  color: #f25d50 ;
 }
 
 .optionTittle {
   font-size: 1.55rem;
+
   // margin-left: 0px;
 }
 
@@ -81,6 +83,7 @@ body {
 .PhoneIcon {
   display: none;
 }
+
 
 @media (max-width: 800px) {
   .html {

@@ -96,6 +96,18 @@ span.redText{
 
 input:-webkit-autofill { box-shadow: 0 0 0px 1000px #898584 inset ;}
 
+.madalStyS{
+  text-align: center;
+
+  font-size: 1.24rem;
+  background-color: #A69981;
+}
+
+.redborder{
+  border: 1px solid red;
+}
+
+
 @media (max-width: 1400px) {
   html {
     font-size: 12px;

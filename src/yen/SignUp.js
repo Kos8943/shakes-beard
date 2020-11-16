@@ -1,18 +1,12 @@
 import React, { useState, useEffect } from "react";
 import { Router, Route, Link, Switch, Redirect } from "react-router-dom";
+import { Modal, Button } from "react-bootstrap";
 
 // import { Collapse } from "react-bootstrap";
 import SignUpCss from "./styles/SignUpCss.scss";
 
 function SignUp(props) {
-
-  const {
-    isAuth,
-    setIsAuth,
-  } = props;
-
-
-
+  const { isAuth, setIsAuth } = props;
 
   const [newAccount, setNewAccount] = useState("");
   const [newName, setNewName] = useState("");
@@ -27,6 +21,19 @@ function SignUp(props) {
   const [alertStarsPassword, setAlertStarsPassword] = useState(true);
   const [alertStarsPasswordSame, setAlertStarsPasswordSame] = useState(true);
 
+  const [isSignSuccess, setIsSignSuccess] = useState("");
+
+  const [show, setShow] = useState(false);
+
+  const handleClose = () => setShow(false);
+  const handleShow = () => setShow(true);
+  
+
+  async function close(){
+    handleClose();
+    await setIsAuth(true)
+  }
+
   function memSignup() {
     const phonePattern = /^09\d{2}\d{3}\d{3}$/;
     const emailPattern = /^([\w-]+(?:\.[\w-]+)*)@((?:[\w-]+\.)*\w[\w-]{0,66})\.([a-z]{2,6}(?:\.[a-z]{2})?)$/i;
@@ -35,7 +42,6 @@ function SignUp(props) {
     if (!newAccount || newAccount.length < 3) {
       setAlertStars(false);
     } else {
-    
       setAlertStars(true);
     }
 
@@ -73,7 +79,7 @@ function SignUp(props) {
       setAlertStarsPasswordSame(true);
     }
   }
-  function postSignForm() {
+  async function postSignForm() {
     const a =
       alertStars &&
       alertStarsName &&
@@ -101,20 +107,39 @@ function SignUp(props) {
       })
         .then((r) => r.json())
 
-        .then((o) => {
+        .then(async (o) => {
           console.log("react收到的", o);
-          setIsAuth(true)
-          localStorage.setItem("data", JSON.stringify(o))
-          localStorage.setItem('auth', true)
+          console.log(o.success);
+
+          async function close(){
+            handleClose();
+            await (o.success)?setIsAuth(true):setIsAuth(false)
+          }
+
+          if (o.success) {
+            setIsSignSuccess(true)
+            localStorage.setItem("data", JSON.stringify(o));
+            localStorage.setItem("auth", true);
+          } else {
+            setIsSignSuccess(false);
+            
+          }
+
+          setTimeout(() => {
+            handleShow();
+          }, 10);
+
+          setTimeout(() => {
+            close();
+          }, 1800);
+
+       
+           
          
-
-
         });
- 
-    }
-
+    } 
   }
-  if (isAuth === true) return <Redirect to="/homepage" />;
+if (isAuth === true) return <Redirect to="/homepage" />;
   return (
     <>
       <div className="sbagimg">
@@ -133,14 +158,14 @@ function SignUp(props) {
             <div className="sarea">
               <div>
                 <label className="signUpText">
-                  <span class={` ${alertStars ? "redNone" : "red"}`}>*</span>
+                  <span className={` ${alertStars ? "redNone" : "red"}`}>*</span>
                   帳號
-                  <span class={` ${alertStars ? "redNone" : "redText"}`}>
+                  <span className={` ${alertStars ? "redNone" : "redText"}`}>
                     長度需大於3碼
                   </span>
                 </label>
                 <input
-                  className="signUpInput"
+                  className= "signUpInput"
                   type="text"
                   name="account"
                   value={newAccount}
@@ -149,7 +174,6 @@ function SignUp(props) {
                   }}
                 ></input>
               </div>
-
               <div>
                 <label className="signUpText ">
                   <span class={` ${alertStarsName ? "redNone" : "red"}`}>
@@ -168,7 +192,6 @@ function SignUp(props) {
                   onChange={(e) => setNewName(e.target.value)}
                 ></input>
               </div>
-
               <div>
                 <label className="signUpText">
                   <span class={` ${alertStarsEmail ? "redNone" : "red"}`}>
@@ -187,7 +210,6 @@ function SignUp(props) {
                   onChange={(e) => setNewEmail(e.target.value)}
                 ></input>
               </div>
-
               <div>
                 <label className="signUpText">
                   <span class={` ${alertStarsPhone ? "redNone" : "red"}`}>
@@ -206,7 +228,6 @@ function SignUp(props) {
                   onChange={(e) => setNewPhone(e.target.value)}
                 ></input>
               </div>
-
               <div>
                 <label className="signUpText">
                   <span
@@ -220,13 +241,13 @@ function SignUp(props) {
                   </span>
                   密碼
                   <span
-                    class={` ${alertStarsPassword   ? "redNone" : "redText"}`}
+                    class={` ${alertStarsPassword ? "redNone" : "redText"}`}
                   >
                     密碼長度需大於5碼
                   </span>
                   <span
                     class={` ${
-                      !alertStarsPassword  || alertStarsPasswordSame
+                      !alertStarsPassword || alertStarsPasswordSame
                         ? "redNone"
                         : "redText"
                     }`}
@@ -242,7 +263,6 @@ function SignUp(props) {
                   onChange={(e) => setNewPassword(e.target.value)}
                 ></input>
               </div>
-
               <div>
                 <label className="signUpText">
                   <span
@@ -262,7 +282,7 @@ function SignUp(props) {
                   </span>
                   <span
                     class={` ${
-                      !alertStarsPassword  || alertStarsPasswordSame
+                      !alertStarsPassword || alertStarsPasswordSame
                         ? "redNone"
                         : "redText"
                     }`}
@@ -280,11 +300,21 @@ function SignUp(props) {
               </div>
               <button
                 type="submit"
-                onClick={()=>memSignup()}
+                onClick={() => memSignup()}
                 className="singUpButton d-flex justify-content-center align-items-center"
               >
                 完成
               </button>
+              <Modal show={show} onHide={handleClose}>
+                <Modal.Header closeButton className="madalSty" />
+                <Modal.Body className="madalStyS">
+                  {" "}
+                  {isSignSuccess ? "帳號註冊成功" : "此帳號已註冊過"}
+                </Modal.Body>
+                <Modal.Footer className="madalStyS" >
+            
+                </Modal.Footer>
+              </Modal>
             </div>
           </form>
         </div>
