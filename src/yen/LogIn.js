@@ -7,7 +7,14 @@ import google from "./img/google.svg";
 import Swal from "sweetalert2";
 import withReactContent from "sweetalert2-react-content";
 import { Modal, Button } from "react-bootstrap";
+import StyledFirebaseAuth from 'react-firebaseui/StyledFirebaseAuth';
+import firebase from 'firebase';
 
+const config = {
+  apiKey: "AIzaSyAPaeDGrXrdirweUn6zoDKIbMSGqvoUDOs",
+  authDomain: "shakes-beard.firebaseapp.com"
+};
+firebase.initializeApp(config);
 
 function LogIn(props) {
   const MySwal = withReactContent(Swal);

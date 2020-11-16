@@ -32,12 +32,19 @@ function MemberDataUpdateTable(props) {
   const [alertStarsPhone, setAlertStarsPhone] = useState(true);
   const [alertStarsBirth, setAlertStarsBirth] = useState(true);
 
-  const [upDateSuccess, setUpDateSuccess] = useState('');
+  // const [coopon, setCoopon] = useState(false);
+
+  const [upDateSuccess, setUpDateSuccess] = useState("");
+  const [none, setNone] = useState("");
 
   const [show, setShow] = useState(false);
+  const [modalShow, setModalShow] = React.useState(false);
 
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
+
+  const handleClose1 = () => setModalShow(false);
+  const handleShow1 = () => setModalShow(true);
 
   function check() {
     const phonePattern = /^09\d{2}\d{3}\d{3}$/;
@@ -102,26 +109,84 @@ function MemberDataUpdateTable(props) {
         .then((r) => r.json())
 
         .then((o) => {
-
           console.log("react收到的", o);
-          
+
           if (o.success) {
-            setUpDateSuccess(true)
-          }else{setUpDateSuccess(false)}
+            const b = localStorage.getItem("coo");
+            console.log("b=", b);
 
-          setTimeout(() => {
+            if (b == null) {
+              localStorage.setItem("coo", true);
+
+              // if (localStorage.getItem("coo") == "true") {
+                setModalShow(true);
+                setNone(true)
+              }
+               else {
+                setUpDateSuccess(true);
+                setNone(false)
+
+                setTimeout(() => {
+                  handleShow();
+                }, 1);
+      
+                setTimeout(() => {
+                  handleClose();
+                }, 1200)}
+
+              
+            
+          } else {
+            setUpDateSuccess(false);
+            setNone(false)
+            setTimeout(() => {
               handleShow();
-            }, 10);
-
+            }, 1);
+  
             setTimeout(() => {
               handleClose();
-            }, 1050);
-        });
+            }, 1200)
 
+          }}
+
+
+          
+
+
+
+
+        );
+        
+
+       
 
     }
   }
-
+  function MyVerticallyCenteredModal(props) {
+    return (
+      <Modal
+        {...props}
+        size="lg"
+        aria-labelledby="contained-modal-title-vcenter"
+        centered
+      >
+        <Modal.Header closeButton className="cooponModalBC">
+          <Modal.Title
+            id="contained-modal-title-vcenter"
+            className="getCooponTittle"
+          >
+            <h2>會員資料填寫完畢</h2>
+          </Modal.Title>
+        </Modal.Header>
+        <Modal.Body className="cooponModalBC">
+          <h4>恭喜獲得</h4>
+          <h3>折價券 NT$ 150</h3>
+          <p>結帳輸入折扣代碼  <h2>abc</h2>    即可享有折扣 </p>
+        </Modal.Body>
+        <Modal.Footer className="cooponModalBC"></Modal.Footer>
+      </Modal>
+    );
+  }
   return (
     <>
       <div className="rightArea col-12 col-sm-10 col-md-9 justify-content-around">
@@ -231,6 +296,7 @@ function MemberDataUpdateTable(props) {
             <button
               type="button"
               onClick={refreshPage}
+              // onClick={() => setModalShow(true)}
               className="upDateCancle"
             >
               取消
@@ -246,13 +312,19 @@ function MemberDataUpdateTable(props) {
               完成
             </button>
 
-          
-
             <Modal show={show} onHide={handleClose}>
-              <Modal.Header closeButton className="madalSty" />
-              <Modal.Body className="madalSty"> {upDateSuccess ? "資料已修改" : "資料未變更"}</Modal.Body>
-              <Modal.Footer className="madalSty" />
+              <Modal.Header closeButton className={`madalSty  ${none ? "none" : ""}`}/>
+              <Modal.Body className={`madalSty  ${none ? "none" : ""}`}>
+              
+                {upDateSuccess ? "資料已修改" : "資料未變更"}
+              </Modal.Body>
+              <Modal.Footer className={`madalSty ${none ? "none" : ""}`} />
             </Modal>
+
+            <MyVerticallyCenteredModal
+              show={modalShow}
+              onHide={() => setModalShow(false)}
+            />
           </div>
         </form>
       </div>
