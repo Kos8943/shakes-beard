@@ -2,6 +2,8 @@ import React, { useState, useEffect } from "react";
 
 function PayMentCardMap(props) {
   const [payment, setPayment] = useState([]);
+  
+
 
   const {
     total,

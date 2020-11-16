@@ -3,10 +3,13 @@ import { countries, townships, postcodes } from './data.js'
 
 function TWZipCode(props) {
   // 記錄陣列的索引值
-  const [country, setCountry] = useState(-1)
-  const [township, setTownship] = useState(-1)
+  // const [country, setCountry] = useState(-1)
+  // const [township, setTownship] = useState(-1)
   // 下面這行是備用的，如果需要設定郵遞區號時
   //const [postcode, setPostcode] = useState(-1)
+  const {
+    country, setCountry, township, setTownship
+  } =props
 
   return (
     <>

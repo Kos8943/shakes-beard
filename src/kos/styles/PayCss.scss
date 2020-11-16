@@ -169,6 +169,35 @@ hr {
     width: 100%;
 }
 
+.PhoneCreditCardInput {
+    width: 100%;
+    margin-bottom: 5%;
+    border: 1.3px solid #2D3B72;
+    border-radius: 4px;
+    height: 34px;
+}
+
+.PhoneCreditCardDate {
+    width: 100%;
+}
+.PhoneCreditCardDate input{
+    width: 40%;
+    margin-right: 1%;
+    border: 1.3px solid #2D3B72;
+    border-radius: 4px;
+    height: 34px;
+}
+
+.PhoneCreditCardDate1 input{
+    border: 1.3px solid #2D3B72;
+    border-radius: 4px;
+    height: 34px;
+}
+
+.smallDisplay {
+    display: none;
+}
+
 // 以上是1920的CSS
 
 @media (max-width:576px) {
