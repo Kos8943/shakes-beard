@@ -180,7 +180,7 @@ function App() {
             </Route> */}
 
             <Route path="/Project/:sid?">
-              <ShakesBeardNavbar />
+              <ShakesBeardNavbar isAuth={isAuth} setIsAuth={setIsAuth}/>
               <Project isAuth={isAuth} setIsAuth={setIsAuth} setAddCartCount={setAddCartCount} addCartCount={addCartCount}/>
               <MyFooter />
             </Route>
@@ -256,9 +256,9 @@ function App() {
             </Route>
 
             <Route path="/shopdetail/:sid?">
-              <ShakesBeardNavbar />
+              <ShakesBeardNavbar isAuth={isAuth} setIsAuth={setIsAuth}/>
               <div className="footerFix KosPadding">
-                <ShopDetail />
+                <ShopDetail isAuth={isAuth} setIsAuth={setIsAuth} />
               </div>
               <MyFooter />
             </Route>
@@ -288,7 +288,7 @@ function App() {
             <Route path="/reservation/:sid?">
               <ShakesBeardNavbar isAuth={isAuth} setIsAuth={setIsAuth} setAddCartCount={setAddCartCount} addCartCount={addCartCount}/>
               <div className="footerFix">
-                <Reservation />
+                <Reservation isAuth={isAuth} setIsAuth={setIsAuth}/>
               </div>
               <MyFooter />
             </Route>
@@ -296,7 +296,7 @@ function App() {
             <Route path="/reservationperson">
               <ShakesBeardNavbar isAuth={isAuth} setIsAuth={setIsAuth} setAddCartCount={setAddCartCount} addCartCount={addCartCount}/>
               <div className="footerFix">
-                <ReservationPerson />
+                <ReservationPerson isAuth={isAuth} setIsAuth={setIsAuth}/>
               </div>
               <MyFooter />
             </Route>
@@ -304,7 +304,7 @@ function App() {
             <Route path="/reservationcheck">
               <ShakesBeardNavbar isAuth={isAuth} setIsAuth={setIsAuth} setAddCartCount={setAddCartCount} addCartCount={addCartCount}/>
               <div className="footerFix">
-                <ReservationCheck />
+                <ReservationCheck isAuth={isAuth} setIsAuth={setIsAuth}/>
               </div>
               <MyFooter />
             </Route>
