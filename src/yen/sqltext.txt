@@ -1,1 +1,25 @@
 INSERT INTO `member` (SELECT `sid`, `authAccount`, `authPassword`, `name`, `email`, `phone`, `birth`, `city`, `dist`, `address`, `card`, `cardDate`, `cvc`, `invoice`, `favorite`) VALUES (NULL, 'aaa', '123', '測試用', 'aaa123@xxx.com', '0909123456', '1994-01-01', '台北市', '信義區', '信義路', '1234432112344321 ', '0422', '101', '', '');
+
+
+
+
+
+
+
+
+
+INSERT INTO `member` (`sid`, `authAccount`, `authPassword`, `name`, `email`, `phone`, `birth`, `city`, `dist`, `address`, `card`, `cardDate`, `cvc`, `invoice`, `barCode`, `favorite`) 
+VALUES
+ (NULL, 'e12345', 'e12345', '林冠宇', 'linguanyu83@xxx.com', '0917753956', '1994-07-27', '台北市', '中正區', 'XXXXXXXXXXXXXXXX', '4754-7986-4567-4256', '0723', '436', '兩聯式發票', '/FSK3WJ2',''),
+ (NULL, 'c12345', 'C12345', '鍾小芹', 'siao-chin@xxx.com', '0912143456', '1990-07-23', '新北市', '文山區', 'XXXXXXXXXXXXXXXX', '7513-7853-1321-7821', '0224', '108', '電子發票', '/FSK3WJ2',''),
+
+
+
+
+
+
+
+
+
+
+UPDATE `member` SET `card` = '7894-1256-4567-1694' WHERE `member`.`sid` = 2

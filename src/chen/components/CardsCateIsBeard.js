@@ -65,9 +65,15 @@ function CardsCateIsBeard(props) {
                   }}/>
             <span className="heartsValue">{value.hearts}</span>
           </h6>
-          <h5 className="card-title mb-1" className="mr-1">
-            {value.shop_name}
-          </h5>
+          <Link
+          className="todetail"
+          to={{
+            pathname:'/shopdetail/'+ value.sid
+          }}>
+            <h5 className="card-title mb-1" className="mr-1">
+              {value.shop_name}
+            </h5>
+          </Link>
           {/* <Link className="addlike">
              <FaHeart className="like"/>
              <FaRegHeart className="dislike"/>

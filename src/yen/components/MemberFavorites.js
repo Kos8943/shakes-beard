@@ -19,21 +19,21 @@ function App(props) {
                 <div className="memberfavItemName">Ritmo di vita 陀飛輪袖扣</div>
               
                  <span className="memberfavPrice">NT$1,441</span>
-                <img src={mark} className="memberBookmark"></img>   
+                <img src={heart} className="memberBookmark"></img>   
             </div>
 
             <div className="memberfav ">
                 <img className="memberfavImg" src="./imgs/1-3.jpg"></img>
                 <div className="memberfavItemName">Ritmo di vita 陀飛輪袖扣</div>
                 <span className="memberfavPrice">NT$1,441</span>
-                <img src={markBlue} className="memberBookmark"></img>
+                <img src={heart} className="memberBookmark"></img>
             </div>
 
             <div className="memberfav ">
                 <img className="memberfavImg" src="./imgs/1-3.jpg"></img>
                 <div className="memberfavItemName">Ritmo di vita 陀飛輪袖扣</div>
                 <span className="memberfavPrice">NT$1,441</span>
-                <img src={mark2} className="memberBookmark"></img>
+                <img src={heart} className="memberBookmark"></img>
             </div>
             <div className="memberfav ">
                 <img className="memberfavImg" src="./imgs/1-3.jpg"></img>

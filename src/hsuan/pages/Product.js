@@ -3,7 +3,6 @@ import "../style/Product.css";
 import Sid from "../../Sid";
 import Script from "react-load-script";
 import ReactDOM from 'react-dom';
-import { Link, } from 'react-router-dom'
 import { Transition } from 'react-transition-group';
 // import "./Css";
 // import "animate.compat.css";
@@ -73,7 +72,7 @@ class Product extends React.Component {
               <div className="brand-SectionCover__body" >
                 <div className="_text2 typesquare_option finished"
                   style={{fontSize:"20px"}}>
-                  .精湛工藝呈現出迷人魅力。繁複的製作工序沒有令我們對工藝的要求卻步；
+                  精湛工藝呈現出迷人魅力。繁複的製作工序沒有令我們對工藝的要求卻步；
                   反令我們力臻極佳品質。
                 </div>
               </div>
@@ -92,68 +91,68 @@ class Product extends React.Component {
         </Breadcrumb>
         
     <div class="unit">
-      <Link to="/project1">
+      <a href="http://localhost:3001/project1">
       <ScrollAnimation animateIn='fadeIn'>
         <div class="i sa sa--down show">
                 <img class="fit" src="./imgs/hsuan/1-5.jpg" alt=""/>
               </div>
         <div class="title en">服飾配件</div>
         </ScrollAnimation>
-      </Link>
+      </a>
     </div>
     
     <div class="unit" >
-      <Link to="/project1">
+      <a href="http://localhost:3001/project1">
       <ScrollAnimation animateIn='fadeIn'>
         <div class="i sa sa--down show" >
                 <img class="fit" src="./imgs/hsuan/barbershop.jpg" alt=""/>
               </div>
         <div class="title en">刮鬍修容</div>
         </ScrollAnimation>
-      </Link>
+      </a>
     </div>
       
     <div class="unit">
-      <Link to="/project1">
+      <a href="http://localhost:3001/project1">
       <ScrollAnimation animateIn='fadeIn'>
         <div class="i sa sa--down show">
                 <img class="fit"  src="./imgs/hsuan/pcq.jpg" alt=""/>
               </div>
         <div class="title en">男士香氛</div>
         </ScrollAnimation>
-      </Link>
+      </a>
     </div>
       
     <div class="unit">
-      <Link to="/project1">
+      <a href="http://localhost:3001/project1">
       <ScrollAnimation animateIn='fadeIn'>
         <div class="i sa sa--down show">
                 <img class="fit"  src="./imgs/hsuan/lash.jpg" alt=""/>
               </div>
         <div class="title en">沐浴清潔</div>
         </ScrollAnimation>
-      </Link>
+      </a>
     </div>
       
     <div class="unit">
-      <Link to="/project1">
+      <a href="http://localhost:3001/project1">
       <ScrollAnimation animateIn='fadeIn'>
         <div class="i sa sa--down show">
                 <img class="fit"  src="./imgs/hsuan/cc.jpg" alt=""/>
               </div>
         <div class="title en">頭髮造型</div>
         </ScrollAnimation>
-      </Link>
+      </a>
     </div>
       
     <div class="unit">
-      <Link to="/project1"><ScrollAnimation animateIn='fadeIn'>
+      <a href="http://localhost:3001/project1"><ScrollAnimation animateIn='fadeIn'>
         <div class="i sa sa--down show">
                 <img class="fit"  src={require("../icon/horizontal2.jpg")} alt=""/>
               </div>
         <div class="title en">精選優惠</div>
         </ScrollAnimation>
-      </Link>
+      </a>
     </div>
       
     

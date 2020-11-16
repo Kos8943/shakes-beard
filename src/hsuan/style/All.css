@@ -1052,7 +1052,6 @@ a.ButtonA {
 .brand-ProductItems a {
   color: #232d2f;
   text-decoration: none;
-  pointer-events: auto;
 }
 
 .brand-ProductItems .brand-ProductItems__image:before {

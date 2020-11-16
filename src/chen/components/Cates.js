@@ -19,10 +19,10 @@ function Cates(props) {
               variant="secondary" 
               className={`${currentCate==='所有商家'?'active':''}`}
               onClick={()=>setCurrentCate('所有商家')}>所有商家</Button>{' '}
-            <Button 
+            {/* <Button 
               variant="secondary"
               className={`${currentCate==='特價優惠'?'active':''}`}
-              onClick={()=>setCurrentCate('特價優惠')}>特價優惠</Button>{' '}
+              onClick={()=>setCurrentCate('特價優惠')}>特價優惠</Button>{' '} */}
             <Button 
               variant="secondary"
               className={`${currentCate==='男士理髮'?'active':''}`}
