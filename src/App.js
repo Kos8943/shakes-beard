@@ -181,7 +181,7 @@ function App() {
 
             <Route path="/Project/:sid?">
               <ShakesBeardNavbar />
-              <Project setAddCartCount={setAddCartCount} addCartCount={addCartCount}/>
+              <Project isAuth={isAuth} setIsAuth={setIsAuth} setAddCartCount={setAddCartCount} addCartCount={addCartCount}/>
               <MyFooter />
             </Route>
 
