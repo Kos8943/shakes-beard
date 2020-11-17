@@ -165,13 +165,13 @@ class Class_Color extends React.Component
                             goodsPrice += razorData.Price;
                             // goodsPrice = goodsPrice + razorData.Price;
 
-                            // var brushIndex = Number(SelectBrushIndex);
-                            // var BrushData = global.BrushData[brushIndex];
-                            // goodsPrice += brushData.Price;
+                            var brushIndex = Number(SelectBrushIndex);
+                            var brushData = global.BrushData[brushIndex];
+                            goodsPrice += brushData.Price;
 
-                            // var razorIndex = Number(SelectRazorIndex);
-                            // var razorData = global.RazorData[razorIndex];
-                            // goodsPrice += razorData.Price;
+                            var standIndex = Number(SelectStandIndex);
+                            var standData = global.StandData[standIndex];
+                            goodsPrice += standData.Price;
 
                             updateCartToLocalStorage(
                             {
