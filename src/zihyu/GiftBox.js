@@ -30,7 +30,7 @@ class ClassGift extends React.Component
                 
 
                 <div style= {{margin: '0 auto', width: '220px'}}
-                ><Button className="startButton" onClick=
+                ><Button className="startButton_page1" onClick=
                 {     //React程式區間語法 (開始)
                   () =>
                   {
