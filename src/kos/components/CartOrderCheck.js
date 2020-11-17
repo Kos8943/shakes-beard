@@ -3,6 +3,7 @@ import React, { useState, useEffect } from "react";
 import CartOrderCheckCss from "../styles/CartOrderCheckCss.scss";
 
 
+
 function CartOrderCheck(props) {
   const [orderCheck, setOrderCheck] = useState([]);
   const [orderSid, setOrderSid] = useState();
@@ -13,6 +14,7 @@ function CartOrderCheck(props) {
   const [orderUnitprice, setOrderUnitprice] = useState();
   const [orderName, setOrderName] = useState();
   const [orderDate, setOrderDate] = useState();
+  const [displayChange, setDisplayChange] = useState("orderCheckDisplay");
 
   // 發送Fetch,從後端撈訂單紀錄.
   async function getMemberData() {
@@ -46,6 +48,17 @@ function CartOrderCheck(props) {
     getMemberData();
   }, []);
 
+  function displayChange1() {
+    if(displayChange === "orderCheckDisplay") {
+      setDisplayChange("")
+    } 
+
+    if(displayChange === "") {
+      setDisplayChange("orderCheckDisplay")
+    }
+    
+  }
+
   return (
     <>
       <div className="rightArea col-9">
@@ -73,7 +86,7 @@ function CartOrderCheck(props) {
           </div>
 
           <div className="d-lg-flex">
-            <div className="OrderTableCss OrderCheckDate2">{orderDate}</div>
+            <div className="OrderTableCss OrderCheckDate2">2020/11/19</div>
             <div className="OrderTableCss OrderTableWidth OrderCheckStatus2">
               訂單成立
             </div>
@@ -90,8 +103,8 @@ function CartOrderCheck(props) {
               收到訂單
             </div>
           </div>
-          <div className="d-lg-flex mt-3">
-            <div className="OrderCheckDetailsText">明細</div>
+          <div className="d-lg-flex mt-3" onClick={(e) => displayChange1()}>
+            <div className="OrderCheckDetailsText" >明細</div>
             <div className="OrderCheckDetails">
               <img
                 src="./imgs/upload.svg"
@@ -99,7 +112,9 @@ function CartOrderCheck(props) {
               ></img>
             </div>
           </div>
-          <div className="OrderCheck cartItem d-xl-flex mx-auto">
+
+          {/* 訂單明細 */}
+          <div className={`OrderCheck cartItem d-xl-flex mx-auto ${displayChange}`}>
             <img className="OrderCheck itemImg" src="./imgs/1-3.jpg"></img>
             <div className="OrderCheck itemName my-auto">
               {orderProductName}

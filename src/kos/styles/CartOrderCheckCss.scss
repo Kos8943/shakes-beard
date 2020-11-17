@@ -66,18 +66,20 @@
     background-color: #f8f8f8;
     padding: .5rem;
     margin-bottom: 2%;
+   
     
 }
 .OrderCheck.itemImg{
     height: 100%;
-    width: 12%;
+    width: 11%;
     background-color: #ccc;
-    margin-right: 3%;
+    margin-right: 9%;
 }
 
 .OrderCheck.itemName {
+    width: 150px;
     font-size: .8rem;
-    margin-right: 9%;
+    // margin-right: 5%;
 }
 
 .OrderCheck .unitPrice {
@@ -100,3 +102,8 @@
 .OrderCheck .amount {
     font-size: .8rem;
 }
+
+.orderCheckDisplay {
+    display: none !important;
+}
+
