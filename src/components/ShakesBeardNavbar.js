@@ -84,6 +84,7 @@ if(localStorage.getItem("google")){
                     if(localStorage.getItem("google")){
                       localStorage.removeItem("google");
                       localStorage.removeItem("googleName");
+                      localStorage.removeItem("googleUid");
                     }
                   }}
                 >
