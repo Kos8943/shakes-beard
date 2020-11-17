@@ -42,7 +42,7 @@ function Project(props) {
   const [showImg3, setShowImg3] = useState(false);
   // const [dataIsExist, setDataIsExist] = useState(true)
 
-  const {addCartCount,setAddCartCount}=props;
+  const { addCartCount, setAddCartCount } = props;
 
   async function getmyProduct() {
     //  console.log('getmyProduct',sid)
@@ -93,21 +93,19 @@ function Project(props) {
 
   function updateCartToLocalStorage(value) {
     const currentCart = localStorage.getItem("cart") || "[]";
-    
+
     const newCart = [...JSON.parse(currentCart), value];
-    
+
     // setAddCartCount(newCart.length)
-    console.log("AddCartCount:", {addCartCount})
+    console.log("AddCartCount:", { addCartCount });
     localStorage.setItem("cart", JSON.stringify(newCart));
 
     setCart(newCart);
-    console.log("cart:", );
-    setAddCartCount(cart.length + 1)
+    console.log("cart:", JSON.parse(localStorage.getItem("cart")));
+    // setAddCartCount(JSON.parse(localStorage.getItem("cart")).length );
   }
 
-  useEffect(() => {
-
-  }, [cart]);
+  useEffect(() => {}, [cart]);
 
   useEffect(() => {
     getmyProduct();
@@ -130,9 +128,9 @@ function Project(props) {
   //   }
   // },[filterInput])
 
-function myFunction(){
-  document.getElementById("demo").innerHTML = "已加入追蹤";
-}
+  function myFunction() {
+    document.getElementById("demo").innerHTML = "已加入追蹤";
+  }
 
   function ABC(event) {
     console.log("event.target", event.target.getAttribute("value"));
@@ -165,7 +163,6 @@ function myFunction(){
 
   return (
     <>
-    
       <Breadcrumb />
       {/* <div>
         <img style={{maxWidth: '50px'}} src={imagesPath[original]} onClick={this.toggleImage} />
@@ -312,7 +309,6 @@ function myFunction(){
                         style={{ border: "0px" }}
                         type="button"
                         onClick={() => {
-                          
                           updateCartToLocalStorage({
                             id: `${sid1}`,
                             img: `${imgname}`,
@@ -321,14 +317,26 @@ function myFunction(){
                             amount: 1,
                             price: `${price}`,
                           });
-                        }} >
+                          let cartCount;
+                          if (localStorage.getItem("cart") == null) {
+                            cartCount = 0;
+                          } else {
+                            cartCount = JSON.parse(localStorage.getItem("cart"))
+                              .length;
+                          }
+
+                          setAddCartCount(cartCount);
+                        }}                     
+                      >
                         加入購物車
                       </button>
 
                       <br></br>
                       {/* <img src="./icon/search.svg" style="width: 15px;"> */}
 
-                      <button id="demo" onclick="myFunction()"
+                      <button
+                        id="demo"
+                        onclick="myFunction()"
                         className="ButtonA finished"
                         style={{ border: "0px" }}
                         onClick={(event) => myFunction(event)}
@@ -465,7 +473,6 @@ function myFunction(){
           {/* <!-- end PageWraper --> */}
         </main>
       </body>
-      
     </>
   );
 }

@@ -52,14 +52,20 @@ import TryLocalstrage from "./kos/pages/TryLocalstrage";
 function App() {
   // localStorage.setItem('auth', false)
   const auth = JSON.parse(localStorage.getItem("auth"));
-
+  let cartCount;
+  if (localStorage.getItem("cart")==null){
+    cartCount=0;
+  }else{
+    cartCount = JSON.parse(localStorage.getItem("cart")).length;  
+  }
+  
   // 登出/登入狀態
   const [isAuth, setIsAuth] = useState(auth);
   const [authAccount, setAuthAccount] = useState();
   const [authPassword, setAuthPassword] = useState();
   const [account, setAccount] = useState();
   const [password, setPassword] = useState();
-  const [addCartCount, setAddCartCount] = useState(0)
+  const [addCartCount, setAddCartCount] = useState(cartCount)
   const [isSignedIn, setIsSignedIn] = useState(false);
   const [addReserve, setAddReserve] = useState()
 

@@ -16,7 +16,7 @@ import {
 import { NavLink,Router, Route, Link, Switch, Redirect } from "react-router-dom";
 
 function ShakesBeardNavbar(props) {
-  const { isAuth, setIsAuth,addCartCount,setAddCartCount } = props;
+  const { isAuth, setIsAuth,addCartCount } = props;
   
 
   return (
