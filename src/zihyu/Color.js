@@ -142,11 +142,11 @@ class Class_Color extends React.Component
 
                             switch (SelectColorIndex)
                             {
-                            case "0":   goodsImg = imgGiftBox_1;  goodsColor = "褐色";  break;
-                            case "1":   goodsImg = imgGiftBox_2;  goodsColor = "沉靜藍";  break;
-                            case "2":   goodsImg = imgGiftBox_3;  goodsColor = "咖啡色";  break;
-                            case "3":   goodsImg = imgGiftBox_4;  goodsColor = "抹茶綠";  break;
-                            case "4":   goodsImg = imgGiftBox_5;  goodsColor = "紳士藍";  break;
+                            case "0":   goodsImg = "box1.png";  goodsColor = "褐色";  break;
+                            case "1":   goodsImg = "box2.png";  goodsColor = "沉靜藍";  break;
+                            case "2":   goodsImg = "box3.png";  goodsColor = "咖啡色";  break;
+                            case "3":   goodsImg = "box4.png";  goodsColor = "抹茶綠";  break;
+                            case "4":   goodsImg = "box5.png";  goodsColor = "紳士藍";  break;
                             }
 
                             var goodsName = "";
