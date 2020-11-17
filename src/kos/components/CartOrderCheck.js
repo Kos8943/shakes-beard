@@ -3,6 +3,26 @@ import React, { useState, useEffect } from "react";
 import CartOrderCheckCss from "../styles/CartOrderCheckCss.scss";
 
 function CartOrderCheck(props) {
+  const [orderCheck, setOrderCheck] = useState([]);
+
+  // 發送Fetch,從後端撈訂單紀錄.
+  async function getMemberData() {
+    const url = "http://localhost:3000/try-member";
+    const dataSid = {sid: JSON.parse(localStorage.getItem('data')).sid}
+    const request = new Request(url, {
+      method: "post",
+      body: JSON.stringify(dataSid),
+      headers: new Headers({
+        Accept: "application/json",
+        "Content-Type": "application/json",
+      }),
+    });
+
+    const response = await fetch(request);
+    console.log("response:",response)
+    const data = await response.json();
+  }
+
   return (
     <>
       <div className="rightArea col-9">

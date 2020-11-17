@@ -20,6 +20,7 @@ function PaymentForm(props) {
   const [memberData, setMemberData] = useState([]);
   
   //會員資訊變數
+  const [userSid, setUserSid] = useState();
   const [recipient, setRecipient] = useState();
   const [phoneNumber, setPhoneNumber] = useState();
   const [homeNumber, setHomeNumber] = useState();
@@ -34,26 +35,44 @@ function PaymentForm(props) {
   const [smallDisplay, setSmallDisplay] = useState(1);
   const [nextPage, setNextPage] = useState(false);
 
-  // 抓LocalStorage
+  // 抓購物車LocalStorage
   function getLocalStorage() {
     const newCart = localStorage.getItem("cart") || "[]";
-
-    console.log(JSON.parse(newCart));
-
+    
+    // console.log(JSON.parse(newCart));
+    // console.log("newMember",JSON.parse(newMember).sid);
+    
     setPayment(JSON.parse(newCart));
   }
 
-  //進入頁面就抓取LocalStorage
+  //進入頁面就抓取購物車的LocalStorage
   useEffect(() => {
     getLocalStorage();
+    
+  }, []);
+
+  // 抓會員SIDLocalStorage
+  function getUserSidLocalStorage() {
+    
+    const newMember = localStorage.getItem("data");
+    
+
+    setUserSid(JSON.parse(newMember).sid)
+    console.log("userSid:",userSid);
+  }
+
+// 進入頁面就抓取LocalStorage的會員Sid
+  useEffect(() => {
+    getUserSidLocalStorage();
   }, []);
 
   // 發送Fetch,從後端撈會員紀錄.
   async function getMemberData() {
     const url = "http://localhost:3000/try-member";
-
+    const dataSid = {sid: JSON.parse(localStorage.getItem('data')).sid}
     const request = new Request(url, {
       method: "post",
+      body: JSON.stringify(dataSid),
       headers: new Headers({
         Accept: "application/json",
         "Content-Type": "application/json",
@@ -64,17 +83,18 @@ function PaymentForm(props) {
     console.log("response:",response)
     const data = await response.json();
     console.log("data:",data)
+    console.log("userSid:",userSid)
      setMemberData(data);
-     setRecipient(data[1].name)
-     setPhoneNumber(data[1].phone)
-     setAddress(data[1].address)
-     setCountry(data[1].country)
-     setTownship(data[1].township)
-     setCreditCardNumber(data[1].card)
-     setCreditCardPassword(data[1].cvc)
-     setCreditCardMonth(data[1].cardDate.slice(0,2))
+     setRecipient(data[0].name)
+     setPhoneNumber(data[0].phone)
+     setAddress(data[0].address)
+     setCountry(data[0].country)
+     setTownship(data[0].township)
+     setCreditCardNumber(data[0].card)
+     setCreditCardPassword(data[0].cvc)
+     setCreditCardMonth(data[0].cardDate.slice(0,2))
     //  console.log("data[1].cardDate.slice(2):",data[1].cardDate.slice(0,2))
-     setCreditCardYear(data[1].cardDate.slice(3))
+     setCreditCardYear(data[0].cardDate.slice(3))
     
   }
 

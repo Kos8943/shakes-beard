@@ -39,7 +39,7 @@ sum(payment)
           <div className="cartItem d-xl-flex justify-content-between d-none" key={v.id}>
             <img
               className="itemImg"
-              src={"./imgs/" + `${v.img}`}
+              src={"./imgs/hsuan/" + `${v.img}`}
             ></img>
             <div className="itemName my-auto">{v.name}</div>
             <span className="productTpye">{v.type}</span>

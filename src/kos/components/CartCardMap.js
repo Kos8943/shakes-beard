@@ -65,12 +65,13 @@ sum(myCart)
     setMyCart(currentCart)
   }
 
-  const DeleteCartLocal = (i) => {
+  const DeleteCartLocal = (id) => {
+    console.log("id:",id)
     const currentCart = JSON.parse(localStorage.getItem('cart')) || []
-    const currentCart1 = currentCart.shift(i);
-    console.log("currentCart1:",currentCart1)
-    console.log("currentCart1.length:",currentCart1.length)
-    localStorage.setItem('cart', JSON.stringify(currentCart))
+    const currentCart1 = currentCart.filter((value, index) => id !== value.id);
+    // console.log("currentCart1:",currentCart1)
+    // console.log("currentCart1.length:",currentCart1.length)
+    localStorage.setItem('cart', JSON.stringify(currentCart1))
     setDelectCartCard(delectCartCard+1)
   }
 
@@ -86,7 +87,7 @@ sum(myCart)
             <div className="itemName my-lg-auto">{v.name}</div>
 
             {/* web style select */}
-            <div className="itemName my-lg-auto">{v.type}</div>
+            <div className="itemType my-lg-auto">{v.type}</div>
             <select
               className="selectHigh  d-none d-lg-block"
               onChange={(e) => {
@@ -114,7 +115,7 @@ sum(myCart)
             <img
               src="./imgs/delete.svg"
               className="deleteIcon d-none d-lg-block"
-              onClick={() => { DeleteCartLocal(i)}}
+              onClick={() => { DeleteCartLocal(v.id)}}
             ></img>
 
             {/* mobile qty select */}

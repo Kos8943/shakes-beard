@@ -63,8 +63,14 @@ html {
 }
 
 .itemName {
+    width: 300px;
     font-size: 1.25rem;
-    margin-right: 9%;
+    // margin-right: 9%;
+}
+
+.itemType {
+    font-size: 1.25rem;
+    margin-right: 7%;
 }
 
 .selectHigh {
