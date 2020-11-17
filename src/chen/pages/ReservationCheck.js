@@ -125,7 +125,7 @@ function ReservationCheck(props) {
             取消預約
           </Button>
           <Button 
-            className="reserveBtn ml-2 mr-2"
+            className="cancelBtn ml-2 mr-2"
             onClick={() => props.history.goBack()}>
             上一步
           </Button> 

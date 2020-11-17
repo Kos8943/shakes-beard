@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react'
 import { withRouter, useHistory } from 'react-router-dom'
 import { Table, Button, Form, Col, Row, Modal } from 'react-bootstrap'
 import Datetime from 'react-datetime'
+import '../styles/reservations.scss'
 
 function Reservation(props) {
     console.log('Reservation', props)
@@ -83,6 +84,10 @@ function Reservation(props) {
     getShopFromServer()
   },[])
 
+  function DeleteLocalReservation() {
+    localStorage.setItem("reservation", "[]");
+  }
+
   return (
     <>
       <div className="container mb-5">
@@ -105,7 +110,7 @@ function Reservation(props) {
             </tr>
             <tr>
               <td>預約服務</td>
-              <td>
+              <td colSpan="2">
                 <Form.Group as={Col} controlId="formGridState" className="p-0">
                   <Form.Control as="select" defaultValue="Choose...">
                     <option>{reserveServiceId} {reserveServiceName}</option>
@@ -130,7 +135,10 @@ function Reservation(props) {
         <div className="mt-5 py-5 text-center">
           <Button
             className="cancelBtn"
-            onClick={() => props.history.goBack()}>
+            onClick={() => {
+              props.history.goBack()
+              DeleteLocalReservation()
+            }}>
             上一頁
           </Button> 
           <Button type="submit" className="reserveBtn ml-2" onClick={() =>{

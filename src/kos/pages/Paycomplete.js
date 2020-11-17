@@ -89,7 +89,7 @@ const [member, setMember] = useState([]);
         <div>
           <h4>你的訂單：</h4>
           <p>訂單號碼：{orderSid}</p>
-          <p>總金額：NT$ {orderPrice * orderAmount}</p>
+          <p>總金額：NT$ {orderPrice * orderAmount +150 -300}</p>
           <p>購買件數：{orderAmount}</p>
         </div>
         <div className="checkOrder">

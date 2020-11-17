@@ -20,6 +20,7 @@ import Product from "./hsuan/pages/Product";
 import Project1 from "./hsuan/pages/Project1";
 import Project from "./hsuan/pages/Project";
 import Cart from "./kos/pages/Cart";
+import ShopPage from "./chen/pages/ShopPage";
 import ShopList from "./chen/pages/ShopList";
 import ShopDetail from "./chen/pages/ShopDetail";
 import Reservation from "./chen/pages/Reservation";
@@ -250,6 +251,14 @@ function App() {
               <ShakesBeardNavbar isAuth={isAuth} setIsAuth={setIsAuth} setAddCartCount={setAddCartCount} addCartCount={addCartCount}/>
               <div className="footerFix KosPadding">
                 <OrderCheck />
+              </div>
+              <MyFooter />
+            </Route>
+
+            <Route path="/shoppage">
+              <ShakesBeardNavbar isAuth={isAuth} setIsAuth={setIsAuth} setAddCartCount={setAddCartCount} addCartCount={addCartCount}/>
+              <div className="footerFix">
+                <ShopPage />
               </div>
               <MyFooter />
             </Route>

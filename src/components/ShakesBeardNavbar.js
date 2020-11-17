@@ -48,7 +48,7 @@ function ShakesBeardNavbar(props) {
                 <img src={Logo} className="logo"></img>
               </Nav.Link>
 
-              <Nav.Link as={NavLink} to="/ShopList" className="navBarFontSize">
+              <Nav.Link as={NavLink} to="/shoppage" className="navBarFontSize">
                 商家預約
               </Nav.Link>
               <Nav.Link

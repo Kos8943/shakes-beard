@@ -55,7 +55,7 @@ sum(payment)
           <div className="cartItemPhone d-xl-none d-block" key={v.id}>
             <img
               className="itemImg"
-              src={"./imgs/" +  `${v.img}` }
+              src={"./imgs/hsuan/" +  `${v.img}` }
             ></img>
             <div className="itemName">{v.name} </div>
             <div className="KosProjectType">{v.type}</div>

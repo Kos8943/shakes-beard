@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react'
 import { withRouter, useHistory } from 'react-router-dom';
 import { Table, Button, Form, Col, Row, Modal } from 'react-bootstrap'
 import { FaCommentDollar } from 'react-icons/fa';
+import '../styles/reservations.scss'
 
 function ReservationPerson(props) {
   console.log('ReservationPerson', props)
@@ -26,6 +27,10 @@ function ReservationPerson(props) {
   }, []);
 
   console.log('myReservation',myReservation)
+
+  function DeleteLocalReservation() {
+    localStorage.setItem("reservation", "[]");
+  }
 
   function updateReservationDataToLocalStorage(value) {
     console.log('value',value)
@@ -121,8 +126,11 @@ function ReservationPerson(props) {
         </div>
         <div className="mt-5 py-5 text-center">
           <Button
-            className="reserveBtn"
-            onClick={() => props.history.goBack()}>
+            className="cancelBtn"
+            onClick={() => {
+              props.history.goBack()
+              DeleteLocalReservation()
+            }}>
             上一步
           </Button> 
           <Button type="submit" className="ml-2 reserveBtn" onClick={() =>{

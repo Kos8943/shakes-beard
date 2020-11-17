@@ -49,14 +49,14 @@ function WebCartCard(props) {
 
           <div className="priceArea font totalPrice priceColor">
             <div>
-              <input onChange={(e) => { (e.target.value === "abc")? setPriceOff(300) :setPriceOff(0)}} className="inputvalue"></input>
+              <input onChange={(e) => { (e.target.value === "abc")? setPriceOff(-300) :setPriceOff(0)}} className="inputvalue"></input>
             </div>
             {/* 折扣 */}
             <div>NT$ {priceOff}</div>
             {/* 運費 */}
             <div>NT$ {shiping}</div>
             {/* 總計 */}
-            <div className="totalPriceT" >NT$ {total + shiping - priceOff}</div>
+            <div className="totalPriceT" >NT$ {total + shiping + priceOff}</div>
           </div>
         </div>
         <div className="sumitBtn ml-auto">
