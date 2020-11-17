@@ -1,6 +1,11 @@
 .openbox_Img {
   height: 372px;
 }
+@media (max-width: 415px) {
+  .openbox_Img {
+    height: 265px;
+  }
+}
 
 .Finish_text {
   color: #2d3b72;

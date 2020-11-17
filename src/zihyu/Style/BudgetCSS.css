@@ -2,6 +2,12 @@
   height: 220px;
   margin-top: 30px;
 }
+@media (max-width: 415px) {
+  .budget_boxImg {
+    height: 160px;
+    margin-top: -1px;
+  }
+}
 
 .ramgeNumber {
   color: #2d3b72;
@@ -11,9 +17,19 @@
   display: flex;
   justify-content: center;
 }
+@media (max-width: 415px) {
+  .ramgeNumber {
+    font-size: 12px;
+  }
+}
 
 .silderbox {
   margin-top: 15px;
+}
+@media (max-width: 415px) {
+  .silderbox {
+    margin-top: -3px;
+  }
 }
 
 .budget_Grid {
@@ -23,22 +39,9 @@
   height: auto;
   margin: auto;
 }
-
-.my-element {
-  display: inline-block;
-  margin: 0 0.5rem;
-
-  animation: bounce; /* referring directly to the animation's @keyframe declaration */
-  animation-duration: 2s; /* don't forget to set a duration! */
-}
-
-/* This only changes this particular animation duration */
-.animate__animated.animate__bounce {
-  --animate-duration: 2s;
-}
-
-/* This changes all the animations globally */
-:root {
-  --animate-duration: 800ms;
-  --animate-delay: 0.9s;
+@media (max-width: 415px) {
+  .budget_Grid {
+    height: 45px;
+    margin: auto;
+  }
 }

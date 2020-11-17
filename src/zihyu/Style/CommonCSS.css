@@ -25,14 +25,27 @@
   position: inherit;
 }
 
-@media (max-width: 750px) {
+@media (max-width: 415px) {
+
+  .contain {
+    height: 543px;
+    /* 在media刪除值
+    參考：https://www.quora.com/How-can-I-undefine-delete-a-CSS-property-in-media-query */
+    min-height: unset !important; 
+  }
+
+  .background_white {
+    height: 543px;
+    padding: 10px;
+    min-height: unset !important; 
+  }
+
   .blueBox1 {
-    width: 95%;
+    width: 100%; 
+    height: 400px;
   }
 }
 
-@media (max-width: 736px) {
-}
 
 .startButton {
   background-color: #2d3b72;
@@ -46,6 +59,15 @@
   justify-content: center;
   align-items: center;
 }
+@media (max-width: 415px) {
+  .startButton {
+    width: 130px;
+    height: 50px;
+    font-size: 17px;
+  }
+}
+
+
 
 .backButton {
   background-color: white;
@@ -59,6 +81,15 @@
   justify-content: center;
   align-items: center;
 }
+@media (max-width: 415px) {
+  .backButton {
+    width: 130px;
+    height: 50px;
+    font-size: 17px;
+    border: 2px solid #2d3b72;
+  }
+}
+
 
 .step {
   color: #2d3b72;
@@ -68,6 +99,13 @@
   text-align: center;
   align-items: center;
 }
+@media (max-width: 415px) {
+  .step {
+    font-size: 14px;
+    margin: 10px auto 0px;
+  }
+}
+
 
 .Title2 {
   color: #2d3b72;
@@ -77,11 +115,22 @@
   display: flex;
   justify-content: center;
 }
+@media (max-width: 415px) {
+  .Title2 {
+  font-size: 17px;
+  }
+}
 
 .lineTop {
   width: 455px;
   border-top: solid #2d3b72 1px;
   margin: 8px auto 0px;
+}
+@media (max-width: 415px) {
+  .lineTop {
+    width: 300px;
+    margin: 5px auto 0px;
+  }
 }
 
 .lineDown {
@@ -89,10 +138,22 @@
   border-top: solid #2d3b72 3px;
   margin: 2px auto;
 }
+@media (max-width: 415px) {
+  .lineDown {
+    width: 300px;
+    border-top: solid #2d3b72 3px;
+    margin: 2px auto;
+  }
+}
 
 /* 上下步按鈕間隔 */
 .separate {
   margin-right: 62px;
+}
+@media (max-width: 415px) {
+  .separate {
+    margin-right: 30px;
+  }
 }
 
 /* 商品選擇區 */
@@ -103,14 +164,33 @@
   height: 360px;
   margin: auto;
 }
+@media (max-width: 415px) {
+  .giftbox_Grid {
+    height: unset !important; 
+  }
+}
+
+
 .giftbox_Item {
-  /* width: 30%; */
   height: auto;
   text-align: center;
 }
+@media (max-width: 415px) {
+  .giftbox_Item {
+    height: unset !important; 
+  }
+}
+
+
 .giftbox_ItemImg {
   width: 130px;
 }
+@media (max-width: 415px) {
+  .giftbox_ItemImg {
+    width: 80px;
+  }
+}
+
 
 .giftbox_itemName {
   color: #2d3b72;
@@ -118,12 +198,22 @@
   font-size: 17px;
   text-align: center;
 }
+@media (max-width: 415px) {
+  .giftbox_itemName {
+    font-size: 15px;
+  }
+}
 
 .giftbox_itemPrice {
   color: #2d3b72;
   font-family: Roboto;
   font-size: 16px;
   text-align: center;
+}
+@media (max-width: 415px) {
+  .giftbox_itemPrice {
+    font-size: 13px;
+  }
 }
 
 #ChangeLabel {
