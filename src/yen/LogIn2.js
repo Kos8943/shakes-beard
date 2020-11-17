@@ -10,6 +10,7 @@ import { Modal, Button } from "react-bootstrap";
 import StyledFirebaseAuth from 'react-firebaseui/StyledFirebaseAuth';
 import firebase from 'firebase';
 import Test from './components/Test';
+// import Test3 from './components/Test3';
 
 // const config = {
 //   apiKey: "AIzaSyAPaeDGrXrdirweUn6zoDKIbMSGqvoUDOs",
@@ -84,7 +85,9 @@ function LogIn(props) {
       });
   }
 
-  
+  // if (localStorage.getItem("google")){
+  //   setIsAuth(true)
+  // }
 
   if (isAuth === true) {
 
@@ -156,27 +159,11 @@ function LogIn(props) {
                 <div className="loginArea2 ">
                   <div className="otherAccount">
 
-                  <Test />
-                    {/* <button className="otherLogButton facebook">
-                      <div className="d-flex justify-content-around align-items-center">
-                        <img src={facebook} className="lognIcon "></img>
-                        使用Facebook登入<div></div>
-                      </div>
-                    </button>
+                  <Test  isAuth={isAuth}
+                setIsAuth={setIsAuth} />
+                  {/* <Test3 /> */}
+                  
 
-                    <button className="otherLogButton twitter">
-                      <div className="d-flex justify-content-around align-items-center">
-                        <img src={twitter} className="lognIcon"></img>
-                        使用Twitter登入<div></div>
-                      </div>
-                    </button>
-
-                    <button className="otherLogButton google">
-                      <div className="d-flex justify-content-around align-items-center">
-                        <img src={google} className="lognIcon"></img>
-                        使用Google登入<div></div>
-                      </div>
-                    </button> */}
 
                     <Link to="/signup">
                       <button className="loginSingUpButton loginMobile">
@@ -214,7 +201,7 @@ function LogIn(props) {
                 <Modal show={show} onHide={handleClose}>
                 <Modal.Header closeButton className="madalSty" />
                 <Modal.Body className="madalStyS">
-                  {" "}
+                 
                   {isLoginSuccess ? "登入成功" : "帳號/密碼錯誤"}
                 </Modal.Body>
                 <Modal.Footer className="madalStyS" >

@@ -180,7 +180,7 @@ function MemberDataUpdateTable(props) {
         </Modal.Header>
         <Modal.Body className="cooponModalBC">
           <h4>恭喜獲得</h4>
-          <h3>折價券 NT$ 150</h3>
+          <h3>折價券 NT$300</h3>
           <p>結帳輸入折扣代碼  <h2>abc</h2>    即可享有折扣 </p>
         </Modal.Body>
         <Modal.Footer className="cooponModalBC"></Modal.Footer>
