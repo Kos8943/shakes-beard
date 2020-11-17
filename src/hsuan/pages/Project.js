@@ -2,18 +2,18 @@ import React, { useState, useEffect } from "react";
 import { withRouter } from "react-router-dom";
 import "../style/All.css";
 // import "../style/Project1.scss";
-import search from "../icon/search.svg";
+// import search from "../icon/search.svg";
 // import original from './icon/original.jpg';
 // import Breadcrumb from './component/Breadcrumb'
 // import Pagination from './component/Pagination'
 // import Sorts from './component/Sorts'
 import {} from "react-bootstrap";
-import { NavLink } from "react-router-dom";
+// import { NavLink } from "react-router-dom";
 import { Breadcrumb } from "react-bootstrap";
-import original from "../icon/original.jpg";
+// import original from "../icon/original.jpg";
 
 // import Library, { NamedComponent } from 'library';
-import Resizer from "react-image-file-resizer";
+// import Resizer from "react-image-file-resizer";
 // import "project-img.js";
 
 function Project(props) {
