@@ -2,16 +2,25 @@
 import React, { useState, useEffect } from "react";
 import CartOrderCheckCss from "../styles/CartOrderCheckCss.scss";
 
+
 function CartOrderCheck(props) {
   const [orderCheck, setOrderCheck] = useState([]);
+  const [orderSid, setOrderSid] = useState();
+  const [orderImg, setOrderImg] = useState();
+  const [orderProductName, setOrderProductName] = useState();
+  const [orderType, setOrderType] = useState();
+  const [orderAmount, setOrderAmount] = useState();
+  const [orderUnitprice, setOrderUnitprice] = useState();
+  const [orderName, setOrderName] = useState();
+  const [orderDate, setOrderDate] = useState();
 
   // 發送Fetch,從後端撈訂單紀錄.
   async function getMemberData() {
-    const url = "http://localhost:3000/try-member";
-    const dataSid = {sid: JSON.parse(localStorage.getItem('data')).sid}
+    const url = "http://localhost:3000/try-ordercheck";
+    // const dataSid = {sid: JSON.parse(localStorage.getItem('data')).sid}
     const request = new Request(url, {
-      method: "post",
-      body: JSON.stringify(dataSid),
+      method: "get",
+      // body: JSON.stringify(dataSid),
       headers: new Headers({
         Accept: "application/json",
         "Content-Type": "application/json",
@@ -19,9 +28,23 @@ function CartOrderCheck(props) {
     });
 
     const response = await fetch(request);
-    console.log("response:",response)
+    console.log("response:", response);
     const data = await response.json();
+    console.log("data:", data);
+    setOrderCheck(data);
+    setOrderSid(data[0].ordersid);
+    setOrderImg(data[0].img);
+    setOrderProductName(data[0].protuctname);
+    setOrderType(data[0].type);
+    setOrderAmount(data[0].amount);
+    setOrderUnitprice(data[0].unitprice);
+    setOrderName(data[0].recipient);
+    setOrderDate(data[0].data);
   }
+
+  useEffect(() => {
+    getMemberData();
+  }, []);
 
   return (
     <>
@@ -29,7 +52,7 @@ function CartOrderCheck(props) {
         <div className="optionTittle">訂單查詢</div>
         <div className="decLine"></div>
         <div className="orderArea">
-          <p className="OrderCheckSid">訂單編號：12345678</p>
+          <p className="OrderCheckSid" onClick={(e) => {console.log(new Date().Format("yyyy-MM-dd"));}}>訂單編號：{orderSid}</p>
           <div className="d-lg-flex">
             <div className="OrderTableCss OrderCheckDate">日期</div>
             <div className="OrderTableCss OrderTableWidth OrderCheckStatus">
@@ -50,21 +73,21 @@ function CartOrderCheck(props) {
           </div>
 
           <div className="d-lg-flex">
-            <div className="OrderTableCss OrderCheckDate2">2020/02/20</div>
+            <div className="OrderTableCss OrderCheckDate2">{orderDate}</div>
             <div className="OrderTableCss OrderTableWidth OrderCheckStatus2">
               訂單成立
             </div>
             <div className="OrderTableCss OrderTableWidth OrderCheckReturn2">
-              炭治郎
+              {orderName}
             </div>
             <div className="OrderTableCss OrderTableWidth OrderCheckPrice2">
-              NT$8,796
+              NT$ {orderAmount * orderUnitprice}
             </div>
             <div className="OrderTableCss OrderTableWidth OrderCheckPayment2">
               信用卡
             </div>
             <div className="OrderTableCss OrderTableWidth OrderCheckDelivery2">
-              已送達
+              收到訂單
             </div>
           </div>
           <div className="d-lg-flex mt-3">
@@ -79,12 +102,12 @@ function CartOrderCheck(props) {
           <div className="OrderCheck cartItem d-xl-flex mx-auto">
             <img className="OrderCheck itemImg" src="./imgs/1-3.jpg"></img>
             <div className="OrderCheck itemName my-auto">
-              Ritmo di vita 陀飛輪袖扣
+              {orderProductName}
             </div>
-            <span className="OrderCheck productTpye">經典黑</span>
-            <span className="OrderCheck amount">1</span>
-            <span className="OrderCheck unitPrice">NT$1,441</span>
-            <span className="OrderCheck subtotal">NT$2,882</span>
+            <span className="OrderCheck productTpye">{orderType}</span>
+            <span className="OrderCheck amount">{orderAmount}</span>
+            <span className="OrderCheck unitPrice">NT$ {orderUnitprice}</span>
+            <span className="OrderCheck subtotal">NT$ {orderAmount * orderUnitprice}</span>
           </div>
           <div className="OrderCheckLine"></div>
         </div>
