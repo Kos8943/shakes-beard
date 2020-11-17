@@ -1,0 +1,88 @@
+@media (max-width: 768px){}
+
+.form-group{
+  margin-top: 2rem;
+  width: 10vw;
+  
+}
+.sort{
+  font-size:small;
+  margin-top: 2rem;
+  border-bottom: 2px solid #a69981;
+  
+}
+.menu{
+  width: 20vw;
+}
+
+#product-menu{
+  padding-left: 10%;  
+}
+
+.hsuanul{
+  padding-left: 5%;
+  line-height: 2rem;
+}
+
+.searchicon{
+  width: 1.5rem;
+  position:absolute;
+  top:5.5rem; 
+  margin-left: 11% ;
+ }
+ .ui-state-disabled{
+   margin: 10px 10px 10px 10px ;
+   font-family: Adobe clean;
+   font-size: 16px;
+ }
+ .original{
+  width:100%;
+  height: 100%;
+     
+ }
+ .hsuancarousel{
+  margin-top:10%; 
+ }
+ .Form.Control{
+   width: 400px;
+ }
+ .text-muted{
+   color:#a69981 ;
+   position: absolute;
+    z-index: 1;
+    text-indent: 135px ;
+    margin-top : 30%;
+    cursor: pointer;
+    top: 0;
+    left: 8px;
+    content: '';
+    display:block;
+    width: 16px;
+    height: 16px;
+    background: no-repeat;
+ }
+ .searchFont{
+   color:#a69981 ;
+ }
+ .hsuanh3{
+  letter-spacing:10px;
+  margin-left: 2rem;
+  
+ }
+ #searchForm{
+  margin-top:23%;
+  margin-left: 10%;
+  
+ }
+
+ .brand-SectionCover__main img,
+ .brand-SectionCover__title ._wrap,
+ .brand-SectionCover__title ._card:before{
+   width: 90%;
+   height: 90%;
+ }
+
+ .brand-SectionCover{
+   padding-top: 80px;
+   padding-bottom: 80px;
+ }
