@@ -94,7 +94,7 @@ function CartOrderCheck(props) {
               {orderName}
             </div>
             <div className="OrderTableCss OrderTableWidth OrderCheckPrice2">
-              NT$ {orderAmount * orderUnitprice}
+              NT$ {orderAmount * orderUnitprice +150 -300}
             </div>
             <div className="OrderTableCss OrderTableWidth OrderCheckPayment2">
               信用卡

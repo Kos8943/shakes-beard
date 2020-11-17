@@ -13,7 +13,7 @@ function PaymentForm(props) {
   const [payment, setPayment] = useState([]);
   //價格變數
   const [total, setTotal] = useState();
-  const [priceOff, setPriceOff] = useState(300);
+  const [priceOff, setPriceOff] = useState(-300);
   const [shipping, setShipping] = useState(150);
 
   //會員資訊
@@ -171,7 +171,7 @@ function PaymentForm(props) {
             <div className="priceArea font totalPrice">
               <div>NT$ {priceOff}</div>
               <div>NT$ {shipping}</div>
-              <div>NT$ {total + shipping - priceOff}</div>
+              <div>NT$ {total + shipping + priceOff}</div>
             </div>
           </div>
 
