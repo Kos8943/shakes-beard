@@ -4,10 +4,11 @@ import { Table, Button, Form, Col, Row, Modal } from 'react-bootstrap'
 import Datetime from 'react-datetime'
 
 function Reservation(props) {
-  console.log('Reservation', props)
+    console.log('Reservation', props)
   const sid = props.match.params.sid
-  console.log('props.match.params',props.match.params)
-  console.log('sid',sid)
+    console.log('props.match.params',props.match.params)
+    console.log('sid',sid)
+  const {addReservation,setAddReservation}=props;
 
   const [reserveNum, setReserveNum] = useState('RV0123')
   const [reserveShopName, setReserveShopName] = useState('')
@@ -59,6 +60,25 @@ function Reservation(props) {
     // setShopIntro(data[i].shop_intro)
   }
 
+  const [reservation, setReservation] = useState([]);
+  
+  function updateReservationToLocalStorage(value) {
+    console.log('reservation1:',reservation)
+  const currentReservation = localStorage.getItem("reservation") || "[]";
+  const newReservation = [...JSON.parse(currentReservation), value];
+    console.log('currentReservation:',currentReservation)
+    console.log('newReservation:',newReservation)
+    console.log('setLocalstorage:',JSON.stringify(newReservation))
+  localStorage.setItem("reservation", JSON.stringify(newReservation));
+
+  setReservation(newReservation);
+    console.log("reservation:", reservation);
+    console.log("AddReservation:", {addReservation})
+  // setAddReservation(newCart.length)
+  // +setAddReservation(cart.length + 1)
+  }
+  // useEffect(() => {}, [cart]);
+
   useEffect(()=>{
     getShopFromServer()
   },[])
@@ -108,8 +128,22 @@ function Reservation(props) {
         </Table>
         </div>
         <div className="mt-5 py-5 text-center">
-          <Button type="submit" className="reserveBtn" onClick={() =>
-              props.history.push('/reservationperson')}>
+          <Button
+            className="cancelBtn"
+            onClick={() => props.history.goBack()}>
+            上一頁
+          </Button> 
+          <Button type="submit" className="reserveBtn ml-2" onClick={() =>{
+                props.history.push('/reservationperson')
+                updateReservationToLocalStorage({
+                  reserveNum: `${reserveNum}`,
+                  reserveShopName: `${reserveShopName}`,
+                  reserveShopId: `${reserveShopId}`,
+                  reserveServiceName: `${reserveServiceName}`,
+                  reserveServiceId: `${reserveServiceId}`,
+                  reserveServiceTime: `${reserveServiceTime}`,
+                });
+              }}>
             下一步
           </Button>
         </div>

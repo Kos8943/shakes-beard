@@ -5,12 +5,10 @@ import '../styles/reservations.scss'
 
 function ReservationCheck(props) {
   console.log('ReservationCheck', props)
-
   const [modalShow, setModalShow] = useState(false)
 
   function MyVerticallyCenteredModal(props) {
     console.log('model-props',props)
-    
     return (
       <Modal
         {...props}
@@ -37,6 +35,22 @@ function ReservationCheck(props) {
     );
   }
 
+  const [myReservation, setMyReservation] = useState([]);
+
+  function getLocalStorage() {
+    const newReservation = localStorage.getItem("reservation") || "[]";
+
+    console.log("newReservation",JSON.parse(newReservation));
+
+    setMyReservation(JSON.parse(newReservation));
+  }
+
+  console.log(myReservation)
+
+  useEffect(() => {
+    getLocalStorage();
+  }, []);
+
   return (
     <>
       <div className="container mb-5">
@@ -51,19 +65,19 @@ function ReservationCheck(props) {
           <tbody className="text-start">
             <tr>
               <td>預約編號</td>
-              <td colSpan="2">RV0123</td>
+              <td colSpan="2">{myReservation.reserveNum}</td>
             </tr>
             <tr>
               <td>商家名稱</td>
-              <td>ST001 Sculptor Barber</td>
+              <td>{myReservation.reserveShopId} {myReservation.reserveShopName}</td>
             </tr>
             <tr>
               <td>預約服務</td>
-              <td>ST00101 男士理髮</td>
+              <td>{myReservation.reserveServiceId} {myReservation.reserveServiceName}</td>
             </tr>
             <tr>
               <td>預約時間</td>
-              <td>12:00~13:00</td>
+              <td>{myReservation.reserveServiceTime} 12:00~13:00</td>
             </tr>
             {/* <tr>
               <td>服務說明</td>
@@ -76,32 +90,37 @@ function ReservationCheck(props) {
           <tbody className="text-start">
             <tr>
               <td>訂購人姓名</td>
-              <td colSpan="3">XX3</td>
+              <td colSpan="3">{myReservation.reservePerson}</td>
             </tr>
             <tr>
               <td>連絡電話1</td>
-              <td>XXXX</td>
+              <td>{myReservation.reserveMobile1}</td>
               <td>連絡電話2</td>
-              <td>XXXX</td>
+              <td>{myReservation.reserveMobile2}</td>
             </tr>
             <tr>
               <td>連絡信箱</td>
-              <td colSpan="3">XXXXX</td>
+              <td colSpan="3">{myReservation.reserveEmail}</td>
             </tr>
             <tr>
               <td>連絡地址</td>
-              <td colSpan="3">XXXXX</td>
+              <td colSpan="3">{myReservation.reserveAddress}</td>
             </tr>
           </tbody>
         </Table>
         </div>
         <div className="mt-5 py-5 text-center">
+          <Button
+            className="cancelBtn"
+            onClick={() => props.history.push('/shoplist')}>
+            取消預約
+          </Button>
           <Button 
-            className="reserveBtn"
+            className="reserveBtn ml-2 mr-2"
             onClick={() => props.history.goBack()}>
             上一步
-          </Button>
-          <Button type="submit" className="ml-2 reserveBtn" onClick={() =>
+          </Button> 
+          <Button type="submit" className="reserveBtn" onClick={() =>
             setModalShow(true)}>
             送出
           </Button>
