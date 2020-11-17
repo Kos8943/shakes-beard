@@ -27,7 +27,7 @@ function ShopList(props) {
           <div className="sorting row">
             <div className="col pl-1">
               <ButtonToolbar
-                className="justify-content-between"
+                className="justify-content-even"
                 aria-label="Toolbar with Button groups">
                 <ButtonGroup aria-label="First group" size="sm" className="py-1 cate-btns">
                   <Button 
@@ -47,6 +47,11 @@ function ShopList(props) {
                     className={`${currentCate==='男士修容'?'active':''}`}
                     onClick={()=>setCurrentCate('男士修容')}>男士修容</Button>
                 </ButtonGroup>
+                <a src="" 
+                className="moreSorts d-flex align-items-center" 
+                onClick={()=>console.log('hi')}>
+                  更多
+                </a>
                 {/* <InputGroup>
                   <InputGroup.Prepend>
                     <InputGroup.Text id="btnGroupAddon2">@</InputGroup.Text>

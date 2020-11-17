@@ -150,6 +150,22 @@
     padding: 3px;;
   }
 
+  .moreSorts{
+    // margin-top: 3px;
+    margin-right: 6px;
+    margin-left: 6px;
+    color:#44494a;
+    font-size: medium;
+  }
+
+  .moreSorts:hover{
+    border: none;
+    background-color: transparent;
+    text-decoration: underline;
+    color:#44494a;
+    cursor: pointer;
+  }
+
   // 商家列表: 商家卡片
   .shopcard {
     margin-top: 15px;
