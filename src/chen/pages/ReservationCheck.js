@@ -6,6 +6,7 @@ import '../styles/reservations.scss'
 function ReservationCheck(props) {
   console.log('ReservationCheck', props)
   const [modalShow, setModalShow] = useState(false)
+  const [delectCartCard, setDelectCartCard] = useState(0)
 
   function MyVerticallyCenteredModal(props) {
     console.log('model-props',props)
@@ -50,6 +51,11 @@ function ReservationCheck(props) {
   useEffect(() => {
     getLocalStorage();
   }, []);
+
+  function DeleteLocalReservation() {
+    // const currentReservation = localStorage.getItem("reservation") || "[]";
+    localStorage.setItem("reservation", "[]");
+  }
 
   return (
     <>
@@ -112,7 +118,10 @@ function ReservationCheck(props) {
         <div className="mt-5 py-5 text-center">
           <Button
             className="cancelBtn"
-            onClick={() => props.history.push('/shoplist')}>
+            onClick={() => {
+              props.history.push('/shoplist')
+              DeleteLocalReservation()
+            }}>
             取消預約
           </Button>
           <Button 
