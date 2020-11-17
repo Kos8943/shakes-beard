@@ -60,6 +60,7 @@ function App() {
   const [password, setPassword] = useState();
   const [addCartCount, setAddCartCount] = useState(0)
   const [isSignedIn, setIsSignedIn] = useState(false);
+  const [addReserve, setAddReserve] = useState()
 
   return (
     <Router>
@@ -256,9 +257,9 @@ function App() {
             </Route>
 
             <Route path="/shopdetail/:sid?">
-              <ShakesBeardNavbar isAuth={isAuth} setIsAuth={setIsAuth}/>
+              <ShakesBeardNavbar isAuth={isAuth} setIsAuth={setIsAuth} setAddCartCount={setAddCartCount} addCartCount={addCartCount}/>
               <div className="footerFix KosPadding">
-                <ShopDetail isAuth={isAuth} setIsAuth={setIsAuth} />
+                <ShopDetail addReserve={addReserve} setAddReserve={setAddReserve}/>
               </div>
               <MyFooter />
             </Route>
@@ -288,7 +289,7 @@ function App() {
             <Route path="/reservation/:sid?">
               <ShakesBeardNavbar isAuth={isAuth} setIsAuth={setIsAuth} setAddCartCount={setAddCartCount} addCartCount={addCartCount}/>
               <div className="footerFix">
-                <Reservation isAuth={isAuth} setIsAuth={setIsAuth}/>
+                <Reservation isAuth={isAuth} setIsAuth={setIsAuth} addReserve={addReserve} setAddReserve={setAddReserve}/>
               </div>
               <MyFooter />
             </Route>
@@ -296,7 +297,7 @@ function App() {
             <Route path="/reservationperson">
               <ShakesBeardNavbar isAuth={isAuth} setIsAuth={setIsAuth} setAddCartCount={setAddCartCount} addCartCount={addCartCount}/>
               <div className="footerFix">
-                <ReservationPerson isAuth={isAuth} setIsAuth={setIsAuth}/>
+                <ReservationPerson isAuth={isAuth} setIsAuth={setIsAuth} addReserve={addReserve} setAddReserve={setAddReserve}/>
               </div>
               <MyFooter />
             </Route>
@@ -304,7 +305,7 @@ function App() {
             <Route path="/reservationcheck">
               <ShakesBeardNavbar isAuth={isAuth} setIsAuth={setIsAuth} setAddCartCount={setAddCartCount} addCartCount={addCartCount}/>
               <div className="footerFix">
-                <ReservationCheck isAuth={isAuth} setIsAuth={setIsAuth}/>
+                <ReservationCheck isAuth={isAuth} setIsAuth={setIsAuth} addReserve={addReserve} setAddReserve={setAddReserve}/>
               </div>
               <MyFooter />
             </Route>

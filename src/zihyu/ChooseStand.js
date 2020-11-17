@@ -1,9 +1,8 @@
 import React from 'react'
-import './Style/ChooseStandCSS.css';
 import './Style/CommonCSS.css';
 import { Button } from 'react-bootstrap'
 
-import './StandData.js';
+import './GiftBoxData.js';
 const Data = global.StandData;
 
 let queryString = window.location.search;

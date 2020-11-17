@@ -10,6 +10,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  padding: 30px;
 }
 
 .blueBox1 {
@@ -21,6 +22,16 @@
   display: block;
   justify-content: center;
   align-items: center;
+  position: inherit;
+}
+
+@media (max-width: 750px) {
+  .blueBox1 {
+    width: 95%;
+  }
+}
+
+@media (max-width: 736px) {
 }
 
 .startButton {
@@ -115,7 +126,6 @@
   text-align: center;
 }
 
-#ChangeLabel
-{
+#ChangeLabel {
   display: contents;
 }

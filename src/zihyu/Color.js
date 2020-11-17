@@ -112,7 +112,8 @@ class Class_Color extends React.Component
                     }></button>
                   </div>
                   <div className="message_title">留言小卡內容：</div>
-                  <input type="text" className="message" value={text} onChange={this.onChangeText} />
+                  {/* <input type="text" className="message" value={text} onChange={this.onChangeText} /> */}
+                  <textarea className="message" rows="2" cols="20" required value={text} onChange={this.onChangeText} ></textarea>
 
                   <div style={{margin: "19px auto"}}>
                       <Button className="separate backButton" onClick=
@@ -141,11 +142,11 @@ class Class_Color extends React.Component
 
                             switch (SelectColorIndex)
                             {
-                            case "0":   goodsImg = imgGiftBox_1;  goodsColor = "褐色";  break;
-                            case "1":   goodsImg = imgGiftBox_2;  goodsColor = "藍綠色";  break;
-                            case "2":   goodsImg = imgGiftBox_3;  goodsColor = "咖啡色";  break;
-                            case "3":   goodsImg = imgGiftBox_4;  goodsColor = "綠色";  break;
-                            case "4":   goodsImg = imgGiftBox_5;  goodsColor = "靛色";  break;
+                            case "0":   goodsImg = "box1.png";  goodsColor = "楓葉橘";  break;
+                            case "1":   goodsImg = "box2.png";  goodsColor = "深林綠";  break;
+                            case "2":   goodsImg = "box3.png";  goodsColor = "年輪棕";  break;
+                            case "3":   goodsImg = "box4.png";  goodsColor = "抹茶綠";  break;
+                            case "4":   goodsImg = "box5.png";  goodsColor = "紳士藍";  break;
                             }
 
                             var goodsName = "";
@@ -163,6 +164,14 @@ class Class_Color extends React.Component
                             var razorData = global.RazorData[razorIndex];
                             goodsPrice += razorData.Price;
                             // goodsPrice = goodsPrice + razorData.Price;
+
+                            var brushIndex = Number(SelectBrushIndex);
+                            var brushData = global.BrushData[brushIndex];
+                            goodsPrice += brushData.Price;
+
+                            var standIndex = Number(SelectStandIndex);
+                            var standData = global.StandData[standIndex];
+                            goodsPrice += standData.Price;
 
                             updateCartToLocalStorage(
                             {

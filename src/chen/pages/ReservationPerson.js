@@ -1,14 +1,43 @@
 import React, { useState, useEffect } from 'react'
 import { withRouter, useHistory } from 'react-router-dom';
 import { Table, Button, Form, Col, Row, Modal } from 'react-bootstrap'
+import { FaCommentDollar } from 'react-icons/fa';
 
 function ReservationPerson(props) {
   console.log('ReservationPerson', props)
-  const [reservePerson, setReservePersion] = useState()
-  const [reserveMobile1, setReserveMobile1] = useState()
-  const [reserveMobile2, setReserveMobile2] = useState()
-  const [reserveEmail, setReserveEmail] = useState()
-  const [reserveAddress, setReserveAddress] = useState()
+  const [reservePerson, setReservePersion] = useState('')
+  const [reserveMobile1, setReserveMobile1] = useState('')
+  const [reserveMobile2, setReserveMobile2] = useState('')
+  const [reserveEmail, setReserveEmail] = useState('')
+  const [reserveAddress, setReserveAddress] = useState('')
+
+  const [myReservation, setMyReservation] = useState([]);
+
+  function getLocalStorage() {
+    const newReservation = localStorage.getItem("reservation") || "[]";
+
+    console.log("newReservation",JSON.parse(newReservation));
+
+    setMyReservation(JSON.parse(newReservation));
+  }
+
+  useEffect(() => {
+    getLocalStorage();
+  }, []);
+
+  console.log('myReservation',myReservation)
+
+  function updateReservationDataToLocalStorage(value) {
+    console.log('value',value)
+    const currentReservation = JSON.parse(localStorage.getItem('reservation')) || []
+      console.log('currentReservation[0]',currentReservation[0])
+    const newReservation = Object.assign({},currentReservation[0],value)
+      console.log('newReservation',newReservation)
+    localStorage.setItem("reservation", JSON.stringify(newReservation));
+    // 設定資料
+    setMyReservation(newReservation)
+  }
+  useEffect(() => {}, [myReservation]);
 
   return (
     <>
@@ -96,8 +125,16 @@ function ReservationPerson(props) {
             onClick={() => props.history.goBack()}>
             上一步
           </Button> 
-          <Button type="submit" className="ml-2 reserveBtn" onClick={() =>
-              props.history.push('/reservationcheck')}>
+          <Button type="submit" className="ml-2 reserveBtn" onClick={() =>{
+              props.history.push('/reservationcheck')
+              updateReservationDataToLocalStorage({
+                reservePerson: `${reservePerson}`,
+                reserveMobile1: `${reserveMobile1}`,
+                reserveMobile2: `${reserveMobile2}`,
+                reserveEmail: `${reserveEmail}`,
+                reserveAddress: `${reserveAddress}`,
+                });
+              }}>
             下一步
           </Button>
         </div>

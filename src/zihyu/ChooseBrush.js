@@ -1,9 +1,8 @@
 import React from 'react'
-import './Style/ChooseBrushCSS.css';
 import './Style/CommonCSS.css';
 import { Button } from 'react-bootstrap'
 
-import './BrushData.js';
+import './GiftBoxData.js';
 const Data = global.BrushData;
 
 let queryString = window.location.search;
