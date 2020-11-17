@@ -1,5 +1,4 @@
 import React from 'react'
-import './Style/ChooseRazorCSS.css';
 import './Style/CommonCSS.css';
 import { Button } from 'react-bootstrap'
 
