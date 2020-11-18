@@ -200,7 +200,7 @@ function Description(props) {
                   <Badge pill variant="secondary" className="mr-1">台北市</Badge>
                 </p>
                 <h6 className="mb-1">Muse Barber Shop</h6>
-                <Link to='/shopdetail/2' className="learnMore">查看店家</Link>
+                <Link to='/shopdetail/4' className="learnMore">查看店家</Link>
               </div>
             </div>
             {/* <div className="card recommend">
