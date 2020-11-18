@@ -50,7 +50,7 @@ class Product extends React.Component {
               data-anime-trigger=".brand-SectionCover__main">
               <img
                 src={require("../icon/women6.jpg")}
-                className="card-img-top"
+                className="fit"
                 alt="..."
               ></img>
             </div>
@@ -90,7 +90,7 @@ class Product extends React.Component {
           </Breadcrumb.Item>
 
         </Breadcrumb>
-        
+        <div class="product_wrap clearfix">
     <div class="unit">
       <Link to="/project1">
       <ScrollAnimation animateIn='fadeIn'>
@@ -155,7 +155,7 @@ class Product extends React.Component {
         </ScrollAnimation>
       </Link>
     </div>
-      
+    </div>
     
     
     </div>
