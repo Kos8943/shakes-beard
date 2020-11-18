@@ -235,7 +235,7 @@ function App() {
             <Route path="/paycomplete">
               <ShakesBeardNavbar isAuth={isAuth} setIsAuth={setIsAuth} setAddCartCount={setAddCartCount} addCartCount={addCartCount}/>
               <div className="footerFix KosPadding">
-                <Paycomplete />
+                <Paycomplete setAddCartCount={setAddCartCount} addCartCount={addCartCount}/>
               </div>
               <MyFooter />
             </Route>

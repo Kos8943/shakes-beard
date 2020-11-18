@@ -4,13 +4,19 @@ import Complete from "../styles/Complete.scss";
 import { Link } from "react-router-dom";
 import CardBuyStep from "../components/CartBuyStep";
 
-function Paycomplete() {
+function Paycomplete(props) {
 const [member, setMember] = useState([]);
   const [orderCheck, setOrderCheck] = useState([]);
   const [name, setName] = useState();
   const [orderSid, setOrderSid] = useState();
   const [orderPrice, setOrderPrice] =useState();
   const [orderAmount, setOrderAmount] = useState();
+
+  const {
+    setAddCartCount,
+    addCartCount
+
+  } = props
 
 
   async function getMemberData() {
@@ -30,6 +36,7 @@ const [member, setMember] = useState([]);
     const data = await response.json();
     setMember(data)
     setName(data[0].name)
+    setAddCartCount(0)
   }
 
   //進入頁面就抓取會員資料

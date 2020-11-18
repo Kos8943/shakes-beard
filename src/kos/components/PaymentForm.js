@@ -140,6 +140,8 @@ function PaymentForm(props) {
           "Content-Type": "application/json",
         }),
       });
+
+      localStorage.removeItem("cart")
       
     }
   }
