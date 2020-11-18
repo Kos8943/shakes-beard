@@ -9,6 +9,9 @@ import TWZipCode from "./TWZipCode";
 import PaymentCardMap from "./PayMentCardMap";
 
 function PaymentForm(props) {
+
+
+
   //Localstorage陣列
   const [payment, setPayment] = useState([]);
   //價格變數
@@ -18,7 +21,7 @@ function PaymentForm(props) {
 
   //會員資訊
   const [memberData, setMemberData] = useState([]);
-  
+
   //會員資訊變數
   const [userSid, setUserSid] = useState();
   const [recipient, setRecipient] = useState();
@@ -38,30 +41,30 @@ function PaymentForm(props) {
   // 抓購物車LocalStorage
   function getLocalStorage() {
     const newCart = localStorage.getItem("cart") || "[]";
-    
+
     // console.log(JSON.parse(newCart));
     // console.log("newMember",JSON.parse(newMember).sid);
-    
+
     setPayment(JSON.parse(newCart));
   }
 
   //進入頁面就抓取購物車的LocalStorage
   useEffect(() => {
     getLocalStorage();
-    
+
   }, []);
 
   // 抓會員SIDLocalStorage
   function getUserSidLocalStorage() {
-    
+
     const newMember = localStorage.getItem("data");
-    
+
 
     setUserSid(JSON.parse(newMember).sid)
-    console.log("userSid:",userSid);
+    console.log("userSid:", userSid);
   }
 
-// 進入頁面就抓取LocalStorage的會員Sid
+  // 進入頁面就抓取LocalStorage的會員Sid
   useEffect(() => {
     getUserSidLocalStorage();
   }, []);
@@ -69,7 +72,7 @@ function PaymentForm(props) {
   // 發送Fetch,從後端撈會員紀錄.
   async function getMemberData() {
     const url = "http://localhost:3000/try-member";
-    const dataSid = {sid: JSON.parse(localStorage.getItem('data')).sid}
+    const dataSid = { sid: JSON.parse(localStorage.getItem('data')).sid }
     const request = new Request(url, {
       method: "post",
       body: JSON.stringify(dataSid),
@@ -80,22 +83,22 @@ function PaymentForm(props) {
     });
 
     const response = await fetch(request);
-    console.log("response:",response)
+    console.log("response:", response)
     const data = await response.json();
-    console.log("data:",data)
-    console.log("userSid:",userSid)
-     setMemberData(data);
-     setRecipient(data[0].name)
-     setPhoneNumber(data[0].phone)
-     setAddress(data[0].address)
-     setCountry(data[0].country)
-     setTownship(data[0].township)
-     setCreditCardNumber(data[0].card)
-     setCreditCardPassword(data[0].cvc)
-     setCreditCardMonth(data[0].cardDate.slice(0,2))
+    console.log("data:", data)
+    console.log("userSid:", userSid)
+    setMemberData(data);
+    setRecipient(data[0].name)
+    setPhoneNumber(data[0].phone)
+    setAddress(data[0].address)
+    setCountry(data[0].country)
+    setTownship(data[0].township)
+    setCreditCardNumber(data[0].card)
+    setCreditCardPassword(data[0].cvc)
+    setCreditCardMonth(data[0].cardDate.slice(0, 2))
     //  console.log("data[1].cardDate.slice(2):",data[1].cardDate.slice(0,2))
-     setCreditCardYear(data[0].cardDate.slice(3))
-    
+    setCreditCardYear(data[0].cardDate.slice(3))
+
   }
 
   //進入頁面就抓取會員資料
@@ -139,18 +142,18 @@ function PaymentForm(props) {
           "Content-Type": "application/json",
         }),
       });
-      
+
     }
   }
 
   if (nextPage === true) {
     return <Redirect to="/Paycomplete" />;
-}
+  }
 
 
   return (
     <>
-    
+
       <form
         name="form1"
         method="post"
@@ -196,7 +199,7 @@ function PaymentForm(props) {
                 value={recipient}
                 onChange={(e) => {
                   setRecipient(e.target.value);
-               
+
                 }}
               ></input>
               <p>
@@ -305,8 +308,8 @@ function PaymentForm(props) {
                     {/* <Creaditcard
                       creditCardNumber={creditCardNumber}
                       setCreditCardNumber={setCreditCardNumber}
-                      creditCardUser={creditCardUser}
-                      setCreditCardUser={setCreditCardUser}
+                      // creditCardUser={creditCardUser}
+                      // setCreditCardUser={setCreditCardUser}
                       creditCardYear={creditCardYear}
                       setCreditCardYear={setCreditCardYear}
                       creditCardMonth={creditCardMonth}
@@ -349,7 +352,7 @@ function PaymentForm(props) {
                             </small>
                           </p>
                           <input
-                          value={creditCardYear}
+                            value={creditCardYear}
                             onChange={(e) => {
                               setCreditCardYear(e.target.value);
                             }}
@@ -379,7 +382,7 @@ function PaymentForm(props) {
                             </small>
                           </p>
                           <input
-                          value={creditCardPassword}
+                            value={creditCardPassword}
                             onChange={(e) => {
                               setCreditCardPassword(e.target.value);
                             }}

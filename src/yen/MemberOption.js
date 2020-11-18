@@ -76,6 +76,8 @@ function MemberOption(props) {
           setCard(o[0].card);
           setCardDate(o[0].cardDate);
           setBarCode(o[0].barCode);
+          // localStorage.setItem('creditcard', o[0].card)
+
 
           if (o[0].country !== "") {
             setCountry(o[0].country);
@@ -102,7 +104,7 @@ function MemberOption(props) {
   if (localStorage.getItem("google")) {
     setName(localStorage.getItem("googleName"));
   }
-  
+
   if (localStorage.getItem("google")) {
     setAuthAccount(localStorage.getItem("googleUid"));
   }
@@ -126,9 +128,8 @@ function MemberOption(props) {
                 }}
               ></img>
               <div
-                className={`option ${
-                  pageTitle === "資料修改" ? "thisPage" : ""
-                }`}
+                className={`option ${pageTitle === "資料修改" ? "thisPage" : ""
+                  }`}
                 onClick={() => {
                   setPageTitle("資料修改");
                 }}
@@ -147,9 +148,8 @@ function MemberOption(props) {
                 }}
               ></img>
               <div
-                className={`option ${
-                  pageTitle === "密碼修改" ? "thisPage" : ""
-                }`}
+                className={`option ${pageTitle === "密碼修改" ? "thisPage" : ""
+                  }`}
                 onClick={() => {
                   setPageTitle("密碼修改");
                 }}
@@ -167,9 +167,8 @@ function MemberOption(props) {
                 }}
               ></img>
               <div
-                className={`option ${
-                  pageTitle === "偏好設定" ? "thisPage" : ""
-                }`}
+                className={`option ${pageTitle === "偏好設定" ? "thisPage" : ""
+                  }`}
                 onClick={() => {
                   setPageTitle("偏好設定");
                 }}
@@ -187,9 +186,8 @@ function MemberOption(props) {
                 }}
               ></img>
               <div
-                className={`option ${
-                  pageTitle === "追蹤清單" ? "thisPage" : ""
-                }`}
+                className={`option ${pageTitle === "追蹤清單" ? "thisPage" : ""
+                  }`}
                 onClick={() => {
                   setPageTitle("追蹤清單");
                 }}
@@ -207,9 +205,8 @@ function MemberOption(props) {
                 }}
               ></img>
               <div
-                className={`option ${
-                  pageTitle === "訂單查詢" ? "thisPage" : ""
-                }`}
+                className={`option ${pageTitle === "訂單查詢" ? "thisPage" : ""
+                  }`}
                 onClick={() => {
                   setPageTitle("訂單查詢");
                 }}
@@ -227,9 +224,8 @@ function MemberOption(props) {
                 }}
               ></img>
               <div
-                className={`option ${
-                  pageTitle === "預約查詢" ? "thisPage" : ""
-                }`}
+                className={`option ${pageTitle === "預約查詢" ? "thisPage" : ""
+                  }`}
                 onClick={() => {
                   setPageTitle("預約查詢");
                 }}
@@ -270,14 +266,14 @@ function MemberOption(props) {
               title="資料修改"
             />
           ) : (
-            ""
-          )}
+              ""
+            )}
 
           {pageTitle === "密碼修改" ? (
             <MemberPasswordUpdateTable title="密碼修改" />
           ) : (
-            ""
-          )}
+              ""
+            )}
 
           {pageTitle === "偏好設定" ? (
             <MemberPreferenceSetting
@@ -296,15 +292,15 @@ function MemberOption(props) {
               title="偏好設定"
             />
           ) : (
-            ""
-          )}
+              ""
+            )}
           {pageTitle === "追蹤清單" ? <MemberFavorites title="追蹤清單" /> : ""}
           {pageTitle === "訂單查詢" ? <CartOrderCheck title="訂單查詢" /> : ""}
           {pageTitle === "預約查詢" ? (
             <ReservationOrderCheck title="預約查詢" />
           ) : (
-            ""
-          )}
+              ""
+            )}
         </div>
       </div>
 

@@ -3,7 +3,7 @@ import "animate.css/animate.min.css";
 import ScrollAnimation from "react-animate-on-scroll";
 import "../styles/custom.scss";
 import { Button, Carousel, Card, CarouselItem } from "react-bootstrap";
-import { Link} from "react-router-dom";
+import { Link } from "react-router-dom";
 
 function HotProduct(props) {
   const [dataLoading, setDataLoading] = useState(false);
@@ -30,9 +30,9 @@ function HotProduct(props) {
     console.log(data);
 
     // setTotal(data.total)
-   
+
     setHotProductList(data);
-    
+
   }
 
   // componentDidMount，一開始會載入資料(在元件初始化完成後)
@@ -61,23 +61,23 @@ function HotProduct(props) {
         </ScrollAnimation>
 
         <div className="hot-card-area">
-        {hotProductList.map((value, index)=>{
-          return(
-            <Card id="cardborder" style={{ width: "20rem" }}>
-            <Card.Img id="cardhover" variant="top" src={"./imgs/" + `${hotProductList[index].image_name}`} />
-            <Card.Body id="cardbody">
-              <Card.Title>{hotProductList[index].hotname}</Card.Title>
-              <Card.Text id="price">NT${hotProductList[index].hotprice}</Card.Text>
-              <a href="/project">
-              <Button variant="primary" id="chadbuy">
-                立即購買
+          {hotProductList.map((value, index) => {
+            return (
+              <Card id="cardborder" style={{ width: "20rem" }}>
+                <Card.Img id="cardhover" variant="top" src={"./imgs/" + `${hotProductList[index].image_name}`} />
+                <Card.Body id="cardbody">
+                  <Card.Title>{hotProductList[index].hotname}</Card.Title>
+                  <Card.Text id="price">NT${hotProductList[index].hotprice}</Card.Text>
+                  <a href="/project/8">
+                    <Button variant="primary" id="chadbuy">
+                      立即購買
               </Button>
-              </a>
-            </Card.Body>
-          </Card>
-          )
-        })}
-         
+                  </a>
+                </Card.Body>
+              </Card>
+            )
+          })}
+
         </div>
 
         {/* 熱門商品手機板 */}
@@ -108,31 +108,31 @@ function HotProduct(props) {
             </Carousel>
             <Card.Body id="card-body-mobile">
 
-  
-    <Carousel>
-              <CarouselItem>
-              <Card.Title>機械質感袖扣</Card.Title>
-              <Card.Text>NT$1200</Card.Text>
-              </CarouselItem>
-              <CarouselItem>
-              <Card.Title>純獾毛刮鬍刷</Card.Title>
-              <Card.Text>NT$1280</Card.Text>
-              </CarouselItem>
-              <CarouselItem>
-              <Card.Title>木質調刮鬍刀架</Card.Title>
-              <Card.Text>NT$1300</Card.Text>
-              </CarouselItem>
-            </Carousel>     
+
+              <Carousel>
+                <CarouselItem>
+                  <Card.Title>機械質感袖扣</Card.Title>
+                  <Card.Text>NT$1200</Card.Text>
+                </CarouselItem>
+                <CarouselItem>
+                  <Card.Title>純獾毛刮鬍刷</Card.Title>
+                  <Card.Text>NT$1280</Card.Text>
+                </CarouselItem>
+                <CarouselItem>
+                  <Card.Title>木質調刮鬍刀架</Card.Title>
+                  <Card.Text>NT$1300</Card.Text>
+                </CarouselItem>
+              </Carousel>
               <Link as={Link} to="/project">
-              <Button variant="primary" id="chadbuy">
-                立即購買
+                <Button variant="primary" id="chadbuy">
+                  立即購買
               </Button>
               </Link>
             </Card.Body>
           </Card>
         </div>
       </div>
-     
+
     </>
   );
 }
