@@ -106,11 +106,11 @@ function InfoSection(props) {
             src={`/imgs/shops/${shopAvatar}`}
           />
         <div className="mt-1 d-flex">
-          <img
+          {/* <img
             className="test3 selectedImg p-0" 
             value="0"
             src={`/imgs/shops/${shopAvatar}`}
-          />
+          /> */}
           <img
             className="test3" 
             value="1"
