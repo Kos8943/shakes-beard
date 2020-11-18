@@ -8,7 +8,7 @@ import MemberPreferenceSetting from "./components/MemberPreferenceSetting";
 import MemberFavorites from "./components/MemberFavorites";
 import CartOrderCheck from "../kos/components/CartOrderCheck";
 import ReservationOrderCheck from "../chen/components/ReservationOrderCheck";
-import { Router, Route, Link, Switch, Redirect } from "react-router-dom";
+import { Redirect } from "react-router-dom";
 import membericon from "../yen/img/phone/icons8-user-90.png";
 import pass from "../yen/img/phone/icons8-password-48.png";
 import crediticon from "../yen/img/phone/icons8-credit-card-100.png";
@@ -29,9 +29,11 @@ function MemberOption(props) {
     setAuthAccount,
     authPassword,
     setAuthPassword,
+    name,
+    setName,
   } = props;
 
-  const [name, setName] = useState("");
+  // const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [phone, setPhone] = useState("");
   const [birth, setBirth] = useState("");
@@ -95,230 +97,225 @@ function MemberOption(props) {
 
   // console.log(isAuth)
 
-  if (isAuth === false || isAuth === null) return <Redirect to="/login" />;
+  if (isAuth === false || isAuth === null) return <Redirect to="/login2" />;
+
+  if (localStorage.getItem("google")) {
+    setName(localStorage.getItem("googleName"));
+  }
+  
+  if (localStorage.getItem("google")) {
+    setAuthAccount(localStorage.getItem("googleUid"));
+  }
 
   return (
-      <>
-        <div className="container-fluid changeLinkColor">
-          <div className="row justify-content-between">
-            <div className="userName d-lg-none">{name}</div>
-            <div className="decLine  d-lg-none"></div>
-            <div className="leftArea col-12 col-sm-2 col-md-2">
-              <div className="userName d-none d-lg-block">{name}</div>
-              <div className="decLine d-none d-lg-block"></div>
+    <>
+      <div className="container-fluid changeLinkColor">
+        <div className="row justify-content-between">
+          <div className="userName d-lg-none">{name}</div>
+          <div className="decLine  d-lg-none"></div>
+          <div className="leftArea col-12 col-sm-2 col-md-2">
+            <div className="userName d-none d-lg-block">{name}</div>
+            <div className="decLine d-none d-lg-block"></div>
 
-              <div className="d-flex flex-column">
-                <img
-                  src={membericon}
-                  className="PhoneIcon"
-                  onClick={() => {
-                    setPageTitle("資料修改");
-                  }}
-                ></img>
-                <div
-                  className={`option ${
-                    pageTitle === "資料修改" ? "thisPage" : ""
-                  }`}
-                  onClick={() => {
-                    setPageTitle("資料修改");
-                  }}
-                >
-                  資料修改
-                </div>
-              </div>
-
-              {/* <Link to="memberoption/password" className="changeLinkColor"> */}
-                <div className="d-flex flex-column">
-                  <img
-                    src={pass}
-                    className="PhoneIcon"
-                    onClick={() => {
-                      setPageTitle("密碼修改");
-                    }}
-                  ></img>
-                  <div
-                    className={`option ${
-                      pageTitle === "密碼修改" ? "thisPage" : ""
-                    }`}
-                    onClick={() => {
-                      setPageTitle("密碼修改");
-                    }}
-                  >
-                    密碼修改
-                  </div>
-                </div>
-              {/* </Link> */}
-              <div className="d-flex flex-column">
-                <img
-                  src={crediticon}
-                  className="PhoneIcon"
-                  onClick={() => {
-                    setPageTitle("偏好設定");
-                  }}
-                ></img>
-                <div
-                  className={`option ${
-                    pageTitle === "偏好設定" ? "thisPage" : ""
-                  }`}
-                  onClick={() => {
-                    setPageTitle("偏好設定");
-                  }}
-                >
-                  偏好設定
-                </div>
-              </div>
-
-              <div className="d-flex flex-column">
-                <img
-                  src={heart}
-                  className="PhoneIcon"
-                  onClick={() => {
-                    setPageTitle("追蹤清單");
-                  }}
-                ></img>
-                <div
-                  className={`option ${
-                    pageTitle === "追蹤清單" ? "thisPage" : ""
-                  }`}
-                  onClick={() => {
-                    setPageTitle("追蹤清單");
-                  }}
-                >
-                  追蹤清單
-                </div>
-              </div>
-
-              <div className="d-flex flex-column">
-                <img
-                  src={list}
-                  className="PhoneIcon"
-                  onClick={() => {
-                    setPageTitle("訂單查詢");
-                  }}
-                ></img>
-                <div
-                  className={`option ${
-                    pageTitle === "訂單查詢" ? "thisPage" : ""
-                  }`}
-                  onClick={() => {
-                    setPageTitle("訂單查詢");
-                  }}
-                >
-                  訂單查詢
-                </div>
-              </div>
-
-              <div className="d-flex flex-column">
-                <img
-                  src={shop}
-                  className="PhoneIcon"
-                  onClick={() => {
-                    setPageTitle("預約查詢");
-                  }}
-                ></img>
-                <div
-                  className={`option ${
-                    pageTitle === "預約查詢" ? "thisPage" : ""
-                  }`}
-                  onClick={() => {
-                    setPageTitle("預約查詢");
-                  }}
-                >
-                  預約查詢
-                </div>
+            <div className="d-flex flex-column">
+              <img
+                src={membericon}
+                className="PhoneIcon"
+                onClick={() => {
+                  setPageTitle("資料修改");
+                }}
+              ></img>
+              <div
+                className={`option ${
+                  pageTitle === "資料修改" ? "thisPage" : ""
+                }`}
+                onClick={() => {
+                  setPageTitle("資料修改");
+                }}
+              >
+                資料修改
               </div>
             </div>
 
-            <div className="decLine  d-lg-none"></div>
-                    
-                {pageTitle === "資料修改" ? (
-                  <MemberDataUpdateTable
-                    isAuth={isAuth}
-                    setIsAuth={setIsAuth}
-                    authAccount={authAccount}
-                    setAuthAccount={setAuthAccount}
-                    authPassword={authPassword}
-                    setAuthPassword={setAuthPassword}
-                    account={account}
-                    setAccount={setAccount}
-                    password={password}
-                    setPassword={setPassword}
-                    name={name}
-                    setName={setName}
-                    email={email}
-                    setEmail={setEmail}
-                    birth={birth}
-                    setBirth={setBirth}
-                    phone={phone}
-                    setPhone={setPhone}
-                    address={address}
-                    setAddress={setAddress}
-                    country={country}
-                    setCountry={setCountry}
-                    township={township}
-                    setTownship={setTownship}
-                    title="資料修改"
-                  />
-                ) : (
-                  ""
-                )}
-            
+            {/* <Link to="memberoption/password" className="changeLinkColor"> */}
+            <div className="d-flex flex-column">
+              <img
+                src={pass}
+                className="PhoneIcon"
+                onClick={() => {
+                  setPageTitle("密碼修改");
+                }}
+              ></img>
+              <div
+                className={`option ${
+                  pageTitle === "密碼修改" ? "thisPage" : ""
+                }`}
+                onClick={() => {
+                  setPageTitle("密碼修改");
+                }}
+              >
+                密碼修改
+              </div>
+            </div>
+            {/* </Link> */}
+            <div className="d-flex flex-column">
+              <img
+                src={crediticon}
+                className="PhoneIcon"
+                onClick={() => {
+                  setPageTitle("偏好設定");
+                }}
+              ></img>
+              <div
+                className={`option ${
+                  pageTitle === "偏好設定" ? "thisPage" : ""
+                }`}
+                onClick={() => {
+                  setPageTitle("偏好設定");
+                }}
+              >
+                偏好設定
+              </div>
+            </div>
 
-             
-                {pageTitle === "密碼修改" ? (
-                  <MemberPasswordUpdateTable title="密碼修改" />
-                ) : (
-                  ""
-                )}{" "}
-          
+            <div className="d-flex flex-column">
+              <img
+                src={heart}
+                className="PhoneIcon"
+                onClick={() => {
+                  setPageTitle("追蹤清單");
+                }}
+              ></img>
+              <div
+                className={`option ${
+                  pageTitle === "追蹤清單" ? "thisPage" : ""
+                }`}
+                onClick={() => {
+                  setPageTitle("追蹤清單");
+                }}
+              >
+                追蹤清單
+              </div>
+            </div>
 
-              {pageTitle === "偏好設定" ? (
-                <MemberPreferenceSetting
-                  isAuth={isAuth}
-                  setIsAuth={setIsAuth}
-                  card={card}
-                  setCard={setCard}
-                  cardDate={cardDate}
-                  setCardDate={setCardDate}
-                  cvc={cvc}
-                  setCvc={setCvc}
-                  invoice={invoice}
-                  setInvoice={setInvoice}
-                  barCode={barCode}
-                  setBarCode={setBarCode}
-                  title="偏好設定"
-                />
-              ) : (
-                ""
-              )}
-              {pageTitle === "追蹤清單" ? (
-                <MemberFavorites title="追蹤清單" />
-              ) : (
-                ""
-              )}
-              {pageTitle === "訂單查詢" ? (
-                <CartOrderCheck title="訂單查詢" />
-              ) : (
-                ""
-              )}
-              {pageTitle === "預約查詢" ? (
-                <ReservationOrderCheck title="預約查詢" />
-              ) : (
-                ""
-              )}
-          
+            <div className="d-flex flex-column">
+              <img
+                src={list}
+                className="PhoneIcon"
+                onClick={() => {
+                  setPageTitle("訂單查詢");
+                }}
+              ></img>
+              <div
+                className={`option ${
+                  pageTitle === "訂單查詢" ? "thisPage" : ""
+                }`}
+                onClick={() => {
+                  setPageTitle("訂單查詢");
+                }}
+              >
+                訂單查詢
+              </div>
+            </div>
+
+            <div className="d-flex flex-column">
+              <img
+                src={shop}
+                className="PhoneIcon"
+                onClick={() => {
+                  setPageTitle("預約查詢");
+                }}
+              ></img>
+              <div
+                className={`option ${
+                  pageTitle === "預約查詢" ? "thisPage" : ""
+                }`}
+                onClick={() => {
+                  setPageTitle("預約查詢");
+                }}
+              >
+                預約查詢
+              </div>
+            </div>
           </div>
-        </div>
 
-        {/* <div className="rightArea col-9">
+          <div className="decLine  d-lg-none"></div>
+
+          {pageTitle === "資料修改" ? (
+            <MemberDataUpdateTable
+              isAuth={isAuth}
+              setIsAuth={setIsAuth}
+              authAccount={authAccount}
+              setAuthAccount={setAuthAccount}
+              authPassword={authPassword}
+              setAuthPassword={setAuthPassword}
+              account={account}
+              setAccount={setAccount}
+              password={password}
+              setPassword={setPassword}
+              name={name}
+              setName={setName}
+              email={email}
+              setEmail={setEmail}
+              birth={birth}
+              setBirth={setBirth}
+              phone={phone}
+              setPhone={setPhone}
+              address={address}
+              setAddress={setAddress}
+              country={country}
+              setCountry={setCountry}
+              township={township}
+              setTownship={setTownship}
+              title="資料修改"
+            />
+          ) : (
+            ""
+          )}
+
+          {pageTitle === "密碼修改" ? (
+            <MemberPasswordUpdateTable title="密碼修改" />
+          ) : (
+            ""
+          )}
+
+          {pageTitle === "偏好設定" ? (
+            <MemberPreferenceSetting
+              isAuth={isAuth}
+              setIsAuth={setIsAuth}
+              card={card}
+              setCard={setCard}
+              cardDate={cardDate}
+              setCardDate={setCardDate}
+              cvc={cvc}
+              setCvc={setCvc}
+              invoice={invoice}
+              setInvoice={setInvoice}
+              barCode={barCode}
+              setBarCode={setBarCode}
+              title="偏好設定"
+            />
+          ) : (
+            ""
+          )}
+          {pageTitle === "追蹤清單" ? <MemberFavorites title="追蹤清單" /> : ""}
+          {pageTitle === "訂單查詢" ? <CartOrderCheck title="訂單查詢" /> : ""}
+          {pageTitle === "預約查詢" ? (
+            <ReservationOrderCheck title="預約查詢" />
+          ) : (
+            ""
+          )}
+        </div>
+      </div>
+
+      {/* <div className="rightArea col-9">
             <div className="optionTittle">資料修改</div>
             <div className="decLine"></div>
             <div className="">
                 {}
             </div>
         </div> */}
-      </>
-   
+    </>
   );
 }
 

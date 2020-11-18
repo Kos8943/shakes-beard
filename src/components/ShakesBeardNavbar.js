@@ -13,31 +13,41 @@ import {
   Form,
   FormControl,
 } from "react-bootstrap";
-import { NavLink,Router, Route, Link, Switch, Redirect } from "react-router-dom";
+import {
+  NavLink,
+  Router,
+  Route,
+  Link,
+  Switch,
+  Redirect,
+} from "react-router-dom";
 
 function ShakesBeardNavbar(props) {
-  const { isAuth, setIsAuth,addCartCount } = props;
-  
-
+  const { isAuth, setIsAuth, addCartCount,setName } = props;
+if(localStorage.getItem("google")){
+  setIsAuth(true)
+}
+ if (localStorage.getItem('google')){
+  setName(localStorage.getItem('googleName'))
+ }
   return (
     <>
       <Headroom>
-      <Navbar expand="lg" className="navBarcolor logoset position">
+        <Navbar expand="lg" className="navBarcolor logoset position">
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
           <Navbar.Collapse id="basic-navbar-nav">
             <Nav className="navbarFlex d-flex justify-content-between">
-              <Nav.Link
-                as={NavLink}
-                to="/homepage"
-
-                className="navBarFontSize"
-              >
+              <Nav.Link as={NavLink} to="/homepage" className="navBarFontSize">
                 首頁
               </Nav.Link>
               <Nav.Link as={NavLink} to="/product" className="navBarFontSize">
                 產品列表
               </Nav.Link>
-              <Nav.Link as={NavLink} to="/Path_GiftBox" className="navBarFontSize">
+              <Nav.Link
+                as={NavLink}
+                to="/Path_GiftBox"
+                className="navBarFontSize"
+              >
                 客製化禮盒
               </Nav.Link>
               <Navbar.Brand as={NavLink} to="/homepage" className="logoFont">
@@ -63,24 +73,44 @@ function ShakesBeardNavbar(props) {
                 {/* <button className="loginBtn" href="lognin">登入</button>
       <button className="cartBtn"><img src={Cart} style={{width:"30px", height:'30px'}}/></button> */}
                 <Nav.Link
-                  href="/login"
+                  href="/login2"
                   className="navBarFontSize"
-                  onClick={() =>{
-                  if(isAuth === true){
-                    setIsAuth(false);
-                    localStorage.removeItem("data")
-                    localStorage.removeItem("auth")
-                  } }}
+                  onClick={() => {
+                    if (isAuth === true ) {
+                      setIsAuth(false);
+                      localStorage.removeItem("data");
+                      localStorage.removeItem("auth"); 
+                    }
+                    if(localStorage.getItem("google")){
+                      localStorage.removeItem("google");
+                      localStorage.removeItem("googleName");
+                      localStorage.removeItem("googleUid");
+                    }
+                  }}
                 >
-                  {isAuth ? "登出" : "登入"}
+                  {isAuth || localStorage.getItem("google") ? "登出" : "登入"}
                 </Nav.Link>
                 {/* <Nav.Link as={NavLink} to="/login" className="navBarFontSize" >登入</Nav.Link> */}
                 <Nav.Link as={NavLink} to="/cart" className="navBarFontSize">
                   <img src={Cart} style={{ width: "30px", height: "30px" }} />
                 </Nav.Link>
               </div>
-              <div className="addCartCount" style={{borderRadius:"50%",backgroundColor:'#f25d50',height:'20px',width:'20px',textAlign:'center',paddingTop:"1px",fontSize:".5rem",position:'absolute',left:'82.5%',color:'#ffffff'}}>
-              {addCartCount}
+              <div
+                className="addCartCount"
+                style={{
+                  borderRadius: "50%",
+                  backgroundColor: "#f25d50",
+                  height: "20px",
+                  width: "20px",
+                  textAlign: "center",
+                  paddingTop: "1px",
+                  fontSize: ".5rem",
+                  position: "absolute",
+                  left: "82.5%",
+                  color: "#ffffff",
+                }}
+              >
+                {addCartCount}
               </div>
               {/* </div> */}
             </Nav>

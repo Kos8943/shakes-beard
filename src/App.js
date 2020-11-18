@@ -65,6 +65,7 @@ function App() {
   const [authPassword, setAuthPassword] = useState();
   const [account, setAccount] = useState();
   const [password, setPassword] = useState();
+  const [name, setName] = useState();
   const [addCartCount, setAddCartCount] = useState(cartCount)
   const [isSignedIn, setIsSignedIn] = useState(false);
   const [addReserve, setAddReserve] = useState()
@@ -83,31 +84,31 @@ function App() {
             </Route>
 
             <Route exact path="/homepage">
-              <ShakesBeardNavbar isAuth={isAuth} setIsAuth={setIsAuth} setAddCartCount={setAddCartCount} addCartCount={addCartCount}/>
+              <ShakesBeardNavbar isAuth={isAuth} setIsAuth={setIsAuth} setAddCartCount={setAddCartCount} addCartCount={addCartCount} name={name} setName={setName}/>
               <HomePage isAuth={isAuth} />
               <MyFooter />
             </Route>
 
             <Route path="/Path_GiftBox">
-              <ShakesBeardNavbar isAuth={isAuth} setIsAuth={setIsAuth} setAddCartCount={setAddCartCount} addCartCount={addCartCount}/>
+              <ShakesBeardNavbar isAuth={isAuth} setIsAuth={setIsAuth} setAddCartCount={setAddCartCount} addCartCount={addCartCount} name={name} setName={setName}/>
               <Func_GiftBox isAuth={isAuth} />
               <MyFooter />
             </Route>
 
             <Route path="/Path_Budget">
-              <ShakesBeardNavbar isAuth={isAuth} setIsAuth={setIsAuth} setAddCartCount={setAddCartCount} addCartCount={addCartCount}/>
+              <ShakesBeardNavbar isAuth={isAuth} setIsAuth={setIsAuth} setAddCartCount={setAddCartCount} addCartCount={addCartCount} name={name} setName={setName}/>
               <Func_Budget isAuth={isAuth} />
               <MyFooter />
             </Route>
 
             <Route path="/Path_ChooseRazor">
-              <ShakesBeardNavbar isAuth={isAuth} setIsAuth={setIsAuth} setAddCartCount={setAddCartCount} addCartCount={addCartCount}/>
+              <ShakesBeardNavbar isAuth={isAuth} setIsAuth={setIsAuth} setAddCartCount={setAddCartCount} addCartCount={addCartCount} name={name} setName={setName}/>
               <Func_ChooseRazor isAuth={isAuth} />
               <MyFooter />
             </Route>
 
             <Route path="/Path_ChooseBrush">
-              <ShakesBeardNavbar isAuth={isAuth} setIsAuth={setIsAuth} setAddCartCount={setAddCartCount} addCartCount={addCartCount}/>
+              <ShakesBeardNavbar isAuth={isAuth} setIsAuth={setIsAuth} setAddCartCount={setAddCartCount} addCartCount={addCartCount} name={name} setName={setName}/>
               <Func_ChooseBrush />
               <MyFooter />
             </Route>
@@ -131,7 +132,7 @@ function App() {
             </Route>
 
             <Route path="/login">
-              <ShakesBeardNavbar isAuth={isAuth} setIsAuth={setIsAuth} setAddCartCount={setAddCartCount} addCartCount={addCartCount}/>
+              <ShakesBeardNavbar isAuth={isAuth} setIsAuth={setIsAuth} setAddCartCount={setAddCartCount} addCartCount={addCartCount} name={name} setName={setName}/>
               <LogIn
                 isAuth={isAuth}
                 setIsAuth={setIsAuth}
@@ -147,7 +148,7 @@ function App() {
 
 
             <Route path="/login2">
-            <ShakesBeardNavbar isAuth={isAuth} setIsAuth={setIsAuth} setAddCartCount={setAddCartCount} addCartCount={addCartCount}/>
+            <ShakesBeardNavbar isAuth={isAuth} setIsAuth={setIsAuth} setAddCartCount={setAddCartCount} addCartCount={addCartCount} name={name} setName={setName}/>
               <LogIn2
                 isAuth={isAuth}
                 setIsAuth={setIsAuth}
@@ -170,7 +171,7 @@ function App() {
 
 
             <Route path="/signup">
-              <ShakesBeardNavbar isAuth={isAuth} setIsAuth={setIsAuth} setAddCartCount={setAddCartCount} addCartCount={addCartCount}/>
+              <ShakesBeardNavbar isAuth={isAuth} setIsAuth={setIsAuth} setAddCartCount={setAddCartCount} addCartCount={addCartCount} name={name} setName={setName}/>
               <SignUp isAuth={isAuth} setIsAuth={setIsAuth} setAddCartCount={setAddCartCount} addCartCount={addCartCount}/>
               <MyFooter />
             </Route>
@@ -280,7 +281,7 @@ function App() {
             </Route>
 
             <Route path="/memberoption">
-              <ShakesBeardNavbar isAuth={isAuth} setIsAuth={setIsAuth} setAddCartCount={setAddCartCount} addCartCount={addCartCount}/>
+              <ShakesBeardNavbar isAuth={isAuth} setIsAuth={setIsAuth} setAddCartCount={setAddCartCount} addCartCount={addCartCount} name={name} setName={setName}/>
               <div className="memFooterFix ">
                 <MemberOption
                   isAuth={isAuth}
@@ -293,6 +294,7 @@ function App() {
                   setAccount={setAccount}
                   password={password}
                   setPassword={setPassword}
+                  name={name} setName={setName}
                 />
               </div>
               <MyFooter />

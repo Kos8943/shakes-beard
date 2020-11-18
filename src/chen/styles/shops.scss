@@ -225,6 +225,23 @@
   //   font-size: 16px;
   // }
 
+  div.d-flex.justofy-content-center.mb-5.scrollRight.recommends{
+    justify-content: center;
+  }
+
+  div.card.recommend{
+    border: transparent;
+    margin: 10px;
+  }
+
+  .card-img>img.card-img-top{
+    border-radius: 0%;
+  }
+
+  // a.learnMore:hover{
+  //   text-decoration: underline;
+  // } 
+
   // 商家列表: 分頁
   .page-link {
     background-color: #44494a;
@@ -352,13 +369,13 @@
   // }
 
   .info {
-    margin-left: 10px;
+    // margin-left: 10px;
     font-size: 1rem;
   }
 
   .info-title{
-    font-size: 1.25rem;
-    font-weight: bold;
+    font-size: 2rem;
+    font-weight: bolder;
   }
 
   .info-head>.col-3>p{
@@ -373,6 +390,7 @@
     font-size: 1rem;
     line-height: 2;
     margin-top: auto;
+    // margin-top: 25%;
     min-width: 500px;
   }
 
@@ -401,8 +419,8 @@
     // width: 50px;
     // height: 50px;
     // border: 1px solid #6c757d;
-    width: 60px;
-    height: 60px;
+    width: 65px;
+    height: 65px;
     margin: 5px;
     display: flex;
     justify-self: space-evenly;
