@@ -1,0 +1,484 @@
+  // @-ms-viewport {
+  //   width: device-width;
+  // }
+
+  // 商家列表 RWD
+  @media screen and (max-width: 750px) { 
+    .searchForm{
+      display: flex;
+      flex-direction: column;
+    }
+
+    .sorting nav{
+      display: none;
+    }
+
+    .sorts{
+      margin: 10px;
+      justify-content: center;
+    }
+
+    .banner{
+      display: none;
+    }
+
+    .cardGroup{
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .page{
+      display: none;
+    }
+
+    // 商家詳細 RWD
+    .media{
+      flex-direction: column;
+    }
+    
+    .media img{
+      margin-bottom: 16px;
+    }
+
+    .media-body{
+      margin-bottom: 30px;
+    }
+
+    .goReserve{
+      vertical-align: middle;
+      width: 60%;
+    }
+
+    .recommends.card{
+      display: flex;
+      justify-content: center;
+      // border: none;
+    }
+
+    .recommend {
+      min-width: 150px;
+      margin: auto;
+    }
+
+    // .recommend h6{
+    //   font-size: 13.5px;
+    // }
+
+    // .recommend a{
+    //   font-size: 10px;
+    // }
+
+    .scrollRight{
+      overflow: auto;
+      white-space: nowrap;  
+    }
+
+    .scrollRight a {
+      display: inline-block;
+      color: white;
+      text-align: center;
+      padding: 14px;  
+      text-decoration: none;
+    }
+  }
+
+  // 商家列表: 分類
+  .sorting{
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 6px;
+  }
+
+  .breadcrumb-item,
+  .cates-item{
+    font-size: 1rem;
+  }
+
+  // 沒成功
+  .cates-btns>.button-secondary{
+    background-color: #44494a;
+  }
+  
+  .cate-btns button:hover{
+    // background-color: #a69981;
+    border: none;
+  }
+
+  .btn-group > .btn.active{
+    z-index: -1;
+  }
+
+  // .btn-group{
+  //   height: 20px;
+  // }
+
+  .btn-secondary:not(:disabled):not(.disabled).active{
+    border: none;
+    background-color: #a69981;
+  }  
+  // .btn-secondary:not(:disabled):not(.disabled).active
+  // .btn-group > .btn.active{
+  //   background-color: #a69981;
+  //   // border: none;
+  // }
+
+  .btn-toolbar{
+    margin: 4px;
+  }
+
+  .breadcrumb-item a,
+  .sort>option,
+  // .openDay>.dropdown>.dropdown-menu>.dropdown-item,
+  .openDay>.opendaySelect{
+    color: #44494a;
+    text-decoration: none;
+  }
+
+  .breadcrumb-item a:hover,
+  .sort>option:hover,
+  .openDay>.opendaySelect:hover{
+    color: #fff;
+    background-color: #3f61be;
+  }
+  
+  .sorts{
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+  }
+
+  .sorts>.dropdown>button{
+    margin-top: 0;
+  }
+
+  .sort,
+  .opendaySelect {
+    border: 1px solid #a69981;
+    background-color: #fffffd;
+    padding: 3px;;
+  }
+
+  .moreSorts{
+    // margin-top: 3px;
+    margin-right: 6px;
+    margin-left: 6px;
+    color:#44494a;
+    font-size: medium;
+  }
+
+  .moreSorts:hover{
+    border: none;
+    background-color: transparent;
+    text-decoration: underline;
+    color:#44494a;
+    cursor: pointer;
+  }
+
+  .faTh:hover,
+  .faThList:hover{
+    color: #a69981;
+    cursor: pointer;
+  }
+
+  // 商家列表: 商家卡片
+  .shopcard {
+    margin-top: 15px;
+    margin-bottom: 15px;
+    margin-right: 10px;
+    // box-shadow: 5px 5px 0 rgba(0,0,0,0.2);
+  }
+
+  // .shopcard>.shopcard-top>a>.card-img-top{
+  .shopcard>a>.card-img-top{
+    border-radius: 0;
+    min-height: 300px;
+  }
+
+  // .shopcard>.todetail:hover .card-img-top{
+  //   filter: grayscale(100%);
+  // }
+
+  .cardGroup {
+    flex-wrap: wrap;
+    display: inline-flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+  }
+
+  .card-title{
+    font-size: 1.25rem;
+  }
+
+  .card-body>a{
+    color: #44494a;
+    text-decoration:none;
+  }
+
+  .card-body>a:hover{
+    text-decoration:underline;
+  }
+
+  .card-text{
+    font-size: 1rem;
+  }
+
+  .dislike{
+    color: #44494a
+  }
+  .like{
+    color: #be3f3f; 
+    // position: relative;
+    // top: -30px;
+    // left: 90%;
+  }
+  .like:hover,.dislike:hover{
+    cursor: pointer;
+  }
+
+  // .heartsValue{
+  //   font-size: 16px;
+  // }
+
+  .hotshop {
+    margin: 80px auto;
+    width: 300px;
+  }
+  
+  .hotshop>p {
+    font-size: 85%;
+    position: relative;
+    padding: 5px 10px;
+    color: #fff;
+    text-align: center;
+    // background: #01ADEF;
+    // background: rgb(242, 93, 80);
+    background: #595452;
+    margin-bottom: -50px;
+    margin-left: -7px;
+    width: 30%;
+  }
+  
+  .hotshop>p:before {
+    content: '';
+    position: absolute;
+    height: 0;
+    width: 0;
+    bottom: 100%;
+    left: 0;
+    // border-bottom: 5px solid #0299d2;
+    // border-bottom: 5px solid rgb(242, 93, 80);
+    border-bottom: 5px solid #595452;
+    border-left: 7px solid transparent;
+  }
+
+  div.d-flex.justofy-content-center.mb-5.scrollRight.recommends{
+    justify-content: center;
+  }
+
+  div.card.recommend{
+    border: transparent;
+    margin: 10px;
+  }
+
+  .card-img>img.card-img-top{
+    border-radius: 0%;
+  }
+
+  // a.learnMore:hover{
+  //   text-decoration: underline;
+  // } 
+
+  // 商家列表: 分頁
+  .page-link {
+    background-color: #44494a;
+    color: #ffffff;
+    font-family: Adobe clean;
+    margin: 1px;
+    border: none;
+    text-decoration: none;
+    font-size: 1rem;
+  }
+
+  .page-item.active .page-link {
+    background-color: #a69981;
+  }
+
+  .page-item {
+    margin: 2px;
+  }
+
+  .pagination {
+    margin: 12px;
+  }  
+
+  .page-item>a:link, .page-item>a:visited {
+    color: #ffffff;
+  }
+
+  .page-link:hover {
+    background-color: #545b62;
+  }
+
+  // .Page>.pagination>.page-item.disabled .page-link{
+  //   text-decoration: underline;
+  // }
+  
+  // 商家詳細: 預約按鈕
+  .goReserve {
+    background-color: #2d3b72;
+    border: none;
+    width: 6rem;
+    // display: inline;
+    text-decoration: none;
+  }
+
+  .goReserve:hover {
+    background-color: #007bff;
+    color: white;
+  }
+
+  .goReserve:link, 
+  .goReserve:visited{
+    color: white;
+  }
+
+  // 商品詳細: 推薦
+  .recommend {
+    width: 15rem;
+    margin: 5px;
+  }
+
+  .recommend>.card-body{
+    padding: 10px;
+  }
+
+  .recommend>.card-body p{
+    margin-bottom: 4px;
+  }
+
+  .recommend>.card-body>a{ 
+    font-size: 0.6rem;
+    text-decoration: none;
+  }
+
+   // 共用: 側欄選項
+   .sideNav a {
+    color: #232d2f;
+    font-size: 1rem;
+    text-decoration: none;
+  }
+
+  .sideNav a.active,
+  .sideNav>.selected {
+    color: #3f61be;
+  }
+
+  .sideNav a:hover,
+  .sideNav a.active:hover {
+    // color: #3f61be;
+    background-color: #3f61be;
+    color: #ffff;
+  }
+
+  .searchForm input{
+    border: 1px solid #a69981;
+  }
+
+  // 共用: 麵包削
+  .breadcrumb {
+    background-color: transparent;
+    padding-left: .5rem;
+    margin-bottom: 12px;
+  }
+
+  // 共用: 標籤
+  .badge{
+    font-weight: normal;
+    // font-size: 0.6rem;
+  }
+
+  .cate-tag{
+    // background-color: #232d2f;
+    background-color: #848686
+  }
+  // // 共用: 客服
+  // .helpdesk a {
+  //   font-size: 10px;
+  //   color: #fff;
+  // }
+
+  // .helpdesk{
+  //   position: fixed;
+  //   right: 24px;
+  //   bottom: 120px;
+  //   background-color: #3f61be;
+  //   padding: 20px;
+  //   border-radius: 50%;
+  // }
+
+  .info {
+    // margin-left: 10px;
+    font-size: 1rem;
+  }
+
+  .info-title{
+    font-size: 2rem;
+    font-weight: bolder;
+  }
+
+  .info-head>.col-3>p{
+    color: #6c757d;
+  }
+
+  .info-head>.col-9>.rdt{
+    width: 80%;
+  }
+
+  .media-body{
+    font-size: 1rem;
+    line-height: 2;
+    margin-top: auto;
+    // margin-top: 25%;
+    min-width: 500px;
+  }
+
+  .media-body h5{
+    font-weight: bold;
+    font-size: 1.25rem;
+    letter-spacing: 1px;
+    line-height: 1.2;
+  }
+
+  .test1 {
+    width: 300px;
+    height: 300px;
+  }
+  
+
+  .test2 {
+    background-color: #6c757d;
+    width: 80px;
+    height: 80px;
+    margin-left: 10px;
+  }
+
+  .test3 {
+    // background-color: #6c757d;
+    // width: 50px;
+    // height: 50px;
+    // border: 1px solid #6c757d;
+    width: 65px;
+    height: 65px;
+    margin: 5px;
+    display: flex;
+    justify-self: space-evenly;
+  }
+
+  .selectedImg{
+    border: 3px solid #be3f3f;
+  }
+
+  .testImg {
+    width: 200px;
+  }
