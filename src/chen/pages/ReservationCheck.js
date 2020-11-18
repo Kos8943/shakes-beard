@@ -8,6 +8,65 @@ function ReservationCheck(props) {
   const [modalShow, setModalShow] = useState(false)
   const [delectCartCard, setDelectCartCard] = useState(0)
 
+  //預約資訊 
+  const [myReservation, setMyReservation] = useState([]);
+  const [reserveNum, setReserveNum] = useState('RV0123')
+  const [reserveShopId, setReserveShopId] = useState('')
+  const [reserveShopName, setReserveShopName] = useState('')
+  const [reserveServiceId, setReserveServiceId] = useState('ST00101')
+  const [reserveServiceName, setReserveServiceName] = useState('男士理髮')
+  const [reserveServiceDescrip, setReserveServiceDescrip] = useState('XXXXXXX')
+  const [reserveServiceTime, setReserveServiceTime] = useState('12/25')
+  const [reservePerson, setReservePersion] = useState('')
+  const [reserveMobile1, setReserveMobile1] = useState('')
+  const [reserveMobile2, setReserveMobile2] = useState('')
+  const [reserveEmail, setReserveEmail] = useState('')
+  const [reserveAddress, setReserveAddress] = useState('')
+
+  function getLocalStorage() {
+    const newReservation = localStorage.getItem("reservation") || "[]";
+    console.log("newReservation",JSON.parse(newReservation));
+    setMyReservation(JSON.parse(newReservation));
+  }
+
+  useEffect(() => {
+    getLocalStorage();
+  }, []);
+
+  function DeleteLocalReservation() {
+    localStorage.setItem("reservation", "[]");
+  }
+
+  function ReservationData() {
+    // 0日期、、0預約日期、0總價、0取消預約
+    // 編號++預約商家、預約項目、預約狀態
+
+    const d = {
+      reserveNum: reserveNum,
+      reserveShopId: reserveShopId,
+      reserveShopName: reserveShopName,
+      reserveServiceId: reserveServiceId,
+      reserveServiceName: reserveServiceName,
+      reserveServiceTime: reserveServiceTime,
+      reservePerson: reservePerson,
+      reserveMobile1: reserveMobile1,
+      reserveMobile2: reserveMobile2,
+      reserveEmail: reserveEmail,
+    };
+
+    console.log(d)
+
+    const url = "http://localhost:3000/try-reservation";
+
+    fetch(url, {
+      method: "POST",
+      body: JSON.stringify(d),
+      headers: new Headers({
+        "Content-Type": "application/json",
+      }),
+    });
+  }
+
   function MyVerticallyCenteredModal(props) {
     console.log('model-props',props)
     return (
@@ -24,37 +83,21 @@ function ReservationCheck(props) {
         </Modal.Header>
         <Modal.Body>
           <p>您的預約已完成！</p>
+          <p>會員頁面中可查詢預約紀錄</p>
           <p>確認OK，回首頁</p>
         </Modal.Body>
         <Modal.Footer>
-          <Link to="/homepage">
+          <Link to="/homepage" onClick={()=>{
+            console.log('hi')
+            ReservationData()
+            DeleteLocalReservation()
+            }}>
             <Button className="reserveBtn">OK</Button>
             {/* <button onClick={props.onHide} className="reserveBtn">OK</button> */}
           </Link>
         </Modal.Footer>
       </Modal>
     );
-  }
-
-  const [myReservation, setMyReservation] = useState([]);
-
-  function getLocalStorage() {
-    const newReservation = localStorage.getItem("reservation") || "[]";
-
-    console.log("newReservation",JSON.parse(newReservation));
-
-    setMyReservation(JSON.parse(newReservation));
-  }
-
-  console.log(myReservation)
-
-  useEffect(() => {
-    getLocalStorage();
-  }, []);
-
-  function DeleteLocalReservation() {
-    // const currentReservation = localStorage.getItem("reservation") || "[]";
-    localStorage.setItem("reservation", "[]");
   }
 
   return (
