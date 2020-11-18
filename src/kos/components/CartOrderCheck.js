@@ -50,16 +50,16 @@ function CartOrderCheck(props) {
   }, []);
 
   function displayChange1() {
-    if(displayChange === "orderCheckDisplay") {
+    if (displayChange === "orderCheckDisplay") {
       setDisplayChange("")
       setArrowChange("turnSvg")
-    } 
+    }
 
-    if(displayChange === "") {
+    if (displayChange === "") {
       setDisplayChange("orderCheckDisplay")
       setArrowChange("")
     }
-    
+
   }
 
   return (
@@ -68,7 +68,7 @@ function CartOrderCheck(props) {
         <div className="optionTittle">訂單查詢</div>
         <div className="decLine"></div>
         <div className="orderArea">
-          <p className="OrderCheckSid" onClick={(e) => {console.log(new Date().Format("yyyy-MM-dd"));}}>訂單編號：{orderSid}</p>
+          <p className="OrderCheckSid" onClick={(e) => { console.log(new Date().Format("yyyy-MM-dd")); }}>訂單編號：{orderSid}</p>
           <div className="d-lg-flex">
             <div className="OrderTableCss OrderCheckDate">日期</div>
             <div className="OrderTableCss OrderTableWidth OrderCheckStatus">
@@ -89,7 +89,7 @@ function CartOrderCheck(props) {
           </div>
 
           <div className="d-lg-flex">
-            <div className="OrderTableCss OrderCheckDate2">2020/11/19</div>
+            <div className="OrderTableCss OrderCheckDate2">2020/11/20</div>
             <div className="OrderTableCss OrderTableWidth OrderCheckStatus2">
               訂單成立
             </div>
@@ -97,7 +97,7 @@ function CartOrderCheck(props) {
               {orderName}
             </div>
             <div className="OrderTableCss OrderTableWidth OrderCheckPrice2">
-              NT$ {orderAmount * orderUnitprice +150 -300}
+              NT$ {orderAmount * orderUnitprice + 150 - 300}
             </div>
             <div className="OrderTableCss OrderTableWidth OrderCheckPayment2">
               信用卡
