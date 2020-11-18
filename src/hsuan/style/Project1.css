@@ -421,7 +421,7 @@ padding-left: 8.5rem;
 }
 /* 禮盒hover */
  .brand-BrandCardItems .brand-BrandCardItems__card:before {
-    box-shadow: 7px 7px 1px rgba(201, 177, 181, 0.055), -2px -2px 7px #A232D2F;;
+    box-shadow: 7px 7px 1px rgba(201, 177, 181, 0.055), -2px -2px 7px #232D2F;;
 } 
 
 .brand-BrandCardItems .brand-BrandCardItems__card:after {

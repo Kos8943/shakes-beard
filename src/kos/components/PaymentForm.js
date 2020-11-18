@@ -109,9 +109,10 @@ function PaymentForm(props) {
 
   // 發送Fetch,送訂單到後端.
   function paymentData() {
+    const phonePattern = /^09\d{2}\d{3}\d{3}$/;
     let correct = true;
 
-    if (!recipient) {
+    if (!phonePattern.test(phoneNumber)) {
       correct = false;
       setSmallDisplay(0);
     }
@@ -142,6 +143,8 @@ function PaymentForm(props) {
           "Content-Type": "application/json",
         }),
       });
+
+      localStorage.removeItem("cart")
 
     }
   }
@@ -186,12 +189,12 @@ function PaymentForm(props) {
             <div>
               <p>
                 收件人：
-                <small
+                {/* <small
                   style={{ color: "red" }}
                   className={smallDisplay === 1 ? "smallDisplay" : ""}
                 >
                   *請輸入姓名
-                </small>
+                </small> */}
               </p>
               <input
                 placeholder="王大明"
@@ -229,12 +232,12 @@ function PaymentForm(props) {
               ></input>
               <p>
                 地址：
-                <small
+                {/* <small
                   style={{ color: "red" }}
                   className={smallDisplay === 1 ? "smallDisplay" : ""}
                 >
                   *請輸入地址
-                </small>
+                </small> */}
               </p>
 
               <TWZipCode
@@ -323,12 +326,12 @@ function PaymentForm(props) {
                   <div>
                     <p className="">
                       信用卡卡號：
-                      <small
+                      {/* <small
                         style={{ color: "red" }}
                         className={smallDisplay === 1 ? "smallDisplay" : ""}
                       >
                         *請輸入卡號
-                      </small>
+                      </small> */}
                     </p>
                     <input
                       className="PhoneCreditCardInput"
@@ -342,14 +345,14 @@ function PaymentForm(props) {
                         <div className="PhoneCreditCardDate">
                           <p>
                             有效期限：
-                            <small
+                            {/* <small
                               style={{ color: "red" }}
                               className={
                                 smallDisplay === 1 ? "smallDisplay" : ""
                               }
                             >
                               *請輸入日期
-                            </small>
+                            </small> */}
                           </p>
                           <input
                             value={creditCardYear}
@@ -372,14 +375,14 @@ function PaymentForm(props) {
                         <div className="PhoneCreditCardDate1">
                           <p>
                             檢核碼：
-                            <small
+                            {/* <small
                               style={{ color: "red" }}
                               className={
                                 smallDisplay === 1 ? "smallDisplay" : ""
                               }
                             >
                               *請輸入檢核碼
-                            </small>
+                            </small> */}
                           </p>
                           <input
                             value={creditCardPassword}

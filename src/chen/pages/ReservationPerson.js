@@ -6,19 +6,29 @@ import '../styles/reservations.scss'
 
 function ReservationPerson(props) {
   console.log('ReservationPerson', props)
+  //預約資訊 
+  const [myReservation, setMyReservation] = useState([]);
   const [reservePerson, setReservePersion] = useState('')
   const [reserveMobile1, setReserveMobile1] = useState('')
   const [reserveMobile2, setReserveMobile2] = useState('')
   const [reserveEmail, setReserveEmail] = useState('')
   const [reserveAddress, setReserveAddress] = useState('')
+  
+  //會員資訊 // email
+  const [memberData, setMemberData] = useState([]);
+  const [memberName, setMemberName] = useState()
+  const [phoneNumber, setPhoneNumber] = useState();
+  const [email, setEmail] = useState();
+  const [address, setAddress] = useState();
+  const [country, setCountry] = useState(-1);
+  const [township, setTownship] = useState(-1);
+  const [smallDisplay, setSmallDisplay] = useState(1);
 
-  const [myReservation, setMyReservation] = useState([]);
 
+  // 1、進入頁面就抓LocalStorage
   function getLocalStorage() {
     const newReservation = localStorage.getItem("reservation") || "[]";
-
     console.log("newReservation",JSON.parse(newReservation));
-
     setMyReservation(JSON.parse(newReservation));
   }
 
@@ -28,10 +38,58 @@ function ReservationPerson(props) {
 
   console.log('myReservation',myReservation)
 
-  function DeleteLocalReservation() {
-    localStorage.setItem("reservation", "[]");
+  // 一、
+  function getUserSidLocalStorage() {
+    const newMember = localStorage.getItem("data");
+    // console.log('getMember::',newMember)
+    // console.log("jsonMember",JSON.parse(newMember));
+    // console.log('memberName',test.name)
+    const test = JSON.parse(newMember)
+    const mem = test.name
   }
 
+  // 二、
+  async function getMemberData() {
+    const url = "http://localhost:3000/try-member";
+    const dataSid = {sid: JSON.parse(localStorage.getItem('data')).sid}
+    const request = new Request(url, {
+      method: "post",
+      body: JSON.stringify(dataSid),
+      headers: new Headers({
+        Accept: "application/json",
+        "Content-Type": "application/json",
+      }),
+    });
+
+    const response = await fetch(request);
+    console.log("response:",response)
+    const data = await response.json();
+    console.log("data:",data)
+     setMemberData(data[0]);
+     setMemberName(data[0].name)
+     setPhoneNumber(data[0].phone)
+     setEmail(data[0].email)
+     setAddress(data[0].address)
+     setCountry(data[0].country)
+     setTownship(data[0].township)
+  }
+
+  //進入頁面就抓取會員資料
+  useEffect(() => {
+    getMemberData();
+  }, []);
+
+  // 三、
+  function updateMemberDataToLocalStorage(value) {
+    console.log('Membervalue',value)
+    console.log('Membervalue',value.reservePerson)
+    setReservePersion(value.reservePerson)
+    setReserveMobile1(value.reserveMobile1)
+    setReserveEmail(value.reserveEmail)
+    setReserveAddress(value.reserveAddress)
+  }
+
+  // 3、
   function updateReservationDataToLocalStorage(value) {
     console.log('value',value)
     const currentReservation = JSON.parse(localStorage.getItem('reservation')) || []
@@ -44,6 +102,11 @@ function ReservationPerson(props) {
   }
   useEffect(() => {}, [myReservation]);
 
+  // 3、
+  function DeleteLocalReservation() {
+    localStorage.setItem("reservation", "[]");
+  }
+  
   return (
     <>
       <div className="container mb-5">
@@ -116,11 +179,30 @@ function ReservationPerson(props) {
 
           <Form.Row>
           <Form.Group as={Col} id="formGrid CheckboxYes">
-            <Form.Check type="checkbox" label="訂購人就是參加者" />
+            <Form.Check 
+              type="checkbox" 
+              label="訂購人就是參加者" 
+              defaultChecked='checked' />
           </Form.Group>
-          {/* <Form.Group as={Col} id="formGridCheckboxNo">
-            <Form.Check type="checkbox" label="訂購人不是參加者" />
-          </Form.Group> */}
+          </Form.Row>
+          <Form.Row>
+            <Form.Group as={Col} id="formGrid CheckboxYes">
+              <Form.Check type="checkbox" label="訂購人是會員" 
+              onChange={()=>{
+                console.log('hihi')
+                if('checked'){
+                  getUserSidLocalStorage()
+                  updateMemberDataToLocalStorage({
+                    reservePerson: `${memberName}`,
+                    reserveMobile1: `${phoneNumber}`,
+                    reserveEmail: `${email}`,
+                    reserveAddress: `${smallDisplay+township+country+address}`,
+                  })
+                  console.log('memberData::',memberData)
+                  // setTestMember('會員資料')
+                }
+              }}/>
+            </Form.Group>
           </Form.Row>
         </Form>
         </div>

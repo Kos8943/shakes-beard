@@ -11,6 +11,13 @@ function WebCartCard(props) {
   const [shiping, setShiping] = useState(150);
   const [priceOff, setPriceOff] = useState(0)
 
+  const {
+    addCartCount, 
+    setAddCartCount
+
+  } =props
+
+
   function getLocalStorage() {
     const newCart = localStorage.getItem("cart") || "[]";
 
@@ -37,7 +44,7 @@ function WebCartCard(props) {
 
   return (
     <>
-      <CartCardMap total={total} setTotal={setTotal}/>
+      <CartCardMap total={total} setTotal={setTotal} addCartCount={addCartCount} setAddCartCount={setAddCartCount}/>
 
       <div className="priceArea ml-auto d-flex">
           <div className="priceArea font">

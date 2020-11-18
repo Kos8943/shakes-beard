@@ -15,6 +15,7 @@ function CartOrderCheck(props) {
   const [orderName, setOrderName] = useState();
   const [orderDate, setOrderDate] = useState();
   const [displayChange, setDisplayChange] = useState("orderCheckDisplay");
+  const [arrowChange, setArrowChange] = useState("")
 
   // 發送Fetch,從後端撈訂單紀錄.
   async function getMemberData() {
@@ -51,10 +52,12 @@ function CartOrderCheck(props) {
   function displayChange1() {
     if(displayChange === "orderCheckDisplay") {
       setDisplayChange("")
+      setArrowChange("turnSvg")
     } 
 
     if(displayChange === "") {
       setDisplayChange("orderCheckDisplay")
+      setArrowChange("")
     }
     
   }
@@ -105,9 +108,9 @@ function CartOrderCheck(props) {
           </div>
           <div className="d-lg-flex mt-3" onClick={(e) => displayChange1()}>
             <div className="OrderCheckDetailsText" >明細</div>
-            <div className="OrderCheckDetails">
+            <div className={`OrderCheckDetails ${arrowChange}`}>
               <img
-                src="./imgs/upload.svg"
+                src="./imgs/upload.svg "
                 className="OrderCheckDetailsUpArrow"
               ></img>
             </div>
