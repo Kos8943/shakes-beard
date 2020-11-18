@@ -83,6 +83,26 @@ sum(myCart)
   }
 
 
+  const PhoneAmountAdd = (item, isAdded = true) => {
+    console.log(item, isAdded)
+    const currentCart = JSON.parse(localStorage.getItem('cart')) || []
+
+    // find if the product in the localstorage with its id
+    const index = currentCart.findIndex((v) => v.id === item.id)
+    console.log("v.id:", "item.id", item.id)
+    console.log('index', index)
+    // found: index! == -1
+    if (index > -1) {
+      isAdded ? currentCart[index].amount++ : currentCart[index].amount--
+    }
+
+    localStorage.setItem('cart', JSON.stringify(currentCart))
+
+    // 設定資料
+    setMyCart(currentCart)
+  }
+
+
   
   
   return (
@@ -127,11 +147,17 @@ sum(myCart)
 
             {/* mobile qty select */}
             <div className="d-flex counterArea d-block d-lg-none">
-              <div className="cartMinus" onClick={function () {}}>
+              <div className="cartMinus" onClick={() => {
+                  if (v.amount === 1) return
+                  PhoneAmountAdd(v, false)
+                }}>
                 -
               </div>
               <div className="cartQty" value="">{v.amount}</div>
-              <div className="cartAdd" onClick="">+</div>
+              <div className="cartAdd" onClick={() => {
+                  if (v.amount === 5) return
+                  PhoneAmountAdd(v, true)
+                }}>+</div>
               <img src={Trash} className="CartTarsh"></img>
               <div className="subtotal">NT$ {v.price}</div>
             </div>
