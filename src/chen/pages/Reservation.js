@@ -114,7 +114,7 @@ function Reservation(props) {
                 <Form.Group as={Col} controlId="formGridState" className="p-0">
                   <Form.Control as="select" defaultValue="Choose...">
                     <option>{reserveServiceId} {reserveServiceName}</option>
-                    <option>修容</option>
+                    <option>ST00102 男士修容</option>
                   </Form.Control>
                 </Form.Group>
               </td>

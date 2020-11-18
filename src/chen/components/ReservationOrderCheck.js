@@ -9,7 +9,7 @@ function ReservationOrderCheck(props) {
         <div className="decLine"></div>
 
         <div className="orderArea">
-          <p className="ReservationOrderCheckSid">預約編號：12345678</p>
+          <p className="ReservationOrderCheckSid">預約編號：RV0123</p>
           <div className="d-lg-flex">
             <div className="ReservationOrderTableCss ReservationOrderTableWidth ReservationOrderCheckShop">
               預約商家
@@ -18,9 +18,9 @@ function ReservationOrderCheck(props) {
               預約項目
             </div>
             <div className="ReservationOrderTableCss ReservationOrderCheckDate">預約日期</div>
-            <div className="ReservationOrderTableCss ReservationOrderTableWidth ReservationOrderCheckPrice">
+            {/* <div className="ReservationOrderTableCss ReservationOrderTableWidth ReservationOrderCheckPrice">
               總價
-            </div>
+            </div> */}
             <div className="ReservationOrderTableCss ReservationOrderTableWidth ReservationOrderCheckStatus">
               預約狀態
             </div>
@@ -34,17 +34,17 @@ function ReservationOrderCheck(props) {
               Sculptor Barber	
             </div>
             <div className="ReservationOrderTableCss ReservationOrderTableWidth ReservationOrderCheckService2">
-              男士理髮
+              ST00101男士理髮
             </div>
-            <div className="ReservationOrderTableCss ReservationOrderCheckDate2">2020/02/20</div>
-            <div className="ReservationOrderTableCss ReservationOrderTableWidth ReservationOrderCheckPrice2">
+            <div className="ReservationOrderTableCss ReservationOrderCheckDate2">2020/11/20</div>
+            {/* <div className="ReservationOrderTableCss ReservationOrderTableWidth ReservationOrderCheckPrice2">
               NT$8,796
-            </div>
+            </div> */}
             <div className="ReservationOrderTableCss ReservationOrderTableWidth ReservationOrderCheckStatus2">
               預約成立
             </div>
             <div className="ReservationOrderTableCss ReservationOrderTableWidth ReservationOrderCheckCancel2">
-              確認中
+              預約成功
             </div>
           </div>
 
@@ -61,7 +61,7 @@ function ReservationOrderCheck(props) {
         </div>
 
         <div className="orderArea">
-          <p className="ReservationOrderCheckSid">預約編號：12345678</p>
+          <p className="ReservationOrderCheckSid">預約編號：RV0124</p>
           <div className="d-lg-flex">
             <div className="ReservationOrderTableCss ReservationOrderTableWidth ReservationOrderCheckShop">
               預約商家
@@ -70,11 +70,11 @@ function ReservationOrderCheck(props) {
               預約項目
             </div>
             <div className="ReservationOrderTableCss ReservationOrderCheckDate">預約日期</div>
-            <div className="ReservationOrderTableCss ReservationOrderTableWidth ReservationOrderCheckPrice">
+            {/* <div className="ReservationOrderTableCss ReservationOrderTableWidth ReservationOrderCheckPrice">
               總價
-            </div>
+            </div> */}
             <div className="ReservationOrderTableCss ReservationOrderTableWidth ReservationOrderCheckStatus">
-                預約狀態
+              預約狀態
             </div>
             <div className="ReservationOrderTableCss ReservationOrderTableWidth ReservationOrderCheckCancel">
               取消預約
@@ -83,20 +83,21 @@ function ReservationOrderCheck(props) {
 
           <div className="d-lg-flex">
             <div className="ReservationOrderTableCss ReservationOrderTableWidth ReservationOrderCheckShop2">
-              Sculptor Barber
+            One Hand Made Barber
             </div>
             <div className="ReservationOrderTableCss ReservationOrderTableWidth ReservationOrderCheckService2">
-              男士修容
+            ST00102男士修容
             </div>
-            <div className="ReservationOrderTableCss ReservationOrderCheckDate2">2020/02/20</div>
-            <div className="ReservationOrderTableCss ReservationOrderTableWidth ReservationOrderCheckPrice2">
+            <div className="ReservationOrderTableCss ReservationOrderCheckDate2">2020/11/20</div>
+            {/* <div className="ReservationOrderTableCss ReservationOrderTableWidth ReservationOrderCheckPrice2">
               NT$8,796
-            </div>
+            </div> */}
             <div className="ReservationOrderTableCss ReservationOrderTableWidth ReservationOrderCheckStatus2">
               預約成立
             </div>
             <div className="ReservationOrderTableCss ReservationOrderTableWidth ReservationOrderCheckCancel2">
-              已取消
+              {/* 已取消 */}
+              預約成功
             </div>
           </div>
           {/* <div className="d-lg-flex mt-3">
