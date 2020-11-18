@@ -10,10 +10,14 @@ import CartBuyStep from '../components/CartBuyStep'
 
 function Cart(props) { 
     // const [total, setTotal] = useState(1)
+
+    const {addCartCount, setAddCartCount
+
+    } =props
         return (
             <>
                 <CartBuyStep step="1"/>
-                <WebCartCard />
+                <WebCartCard addCartCount={addCartCount} setAddCartCount={setAddCartCount}/>
                 {/* <PhoneCartCard /> */}
              
 

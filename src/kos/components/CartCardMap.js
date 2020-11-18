@@ -6,11 +6,17 @@ import { FaSun } from "react-icons/fa";
 function CartCardMap(props) {
   const [myCart, setMyCart] = useState([]);
   const [delectCartCard, setDelectCartCard] = useState(0)
+  const [cartLocalStorage, setCartLocalStorage] = useState([]);
 
   const {
     total,
-    setTotal
+    setTotal,
+    setAddCartCount,
+    addCartCount
+
   } = props
+
+
 
 
   function getLocalStorage() {
@@ -72,6 +78,7 @@ sum(myCart)
     // console.log("currentCart1:",currentCart1)
     // console.log("currentCart1.length:",currentCart1.length)
     localStorage.setItem('cart', JSON.stringify(currentCart1))
+    setAddCartCount(addCartCount -1)
     setDelectCartCard(delectCartCard+1)
   }
 
