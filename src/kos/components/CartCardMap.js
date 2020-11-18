@@ -158,8 +158,8 @@ sum(myCart)
                   if (v.amount === 5) return
                   PhoneAmountAdd(v, true)
                 }}>+</div>
-              <img src={Trash} className="CartTarsh"></img>
-              <div className="subtotal">NT$ {v.price}</div>
+              <img src={Trash} className="CartTarsh" onClick={() => { DeleteCartLocal(v.id)}}></img>
+              <div className="subtotal" >NT$ {v.price}</div>
             </div>
           </div>
 
